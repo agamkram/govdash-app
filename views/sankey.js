@@ -12,6 +12,7 @@ import {
   MAP_FIELD,
   atlasRail,
   placeMapTip,
+  brightenHex,
 } from "../shared.js";
 
 const CONST_ID = "constitution";
@@ -60,59 +61,6 @@ function hexAlpha(hex, a) {
   const g = parseInt(h.slice(2, 4), 16);
   const b = parseInt(h.slice(4, 6), 16);
   return `rgba(${r},${g},${b},${a})`;
-}
-
-function brightenHex(hex) {
-  const h = hex.replace("#", "");
-  let r = parseInt(h.slice(0, 2), 16) / 255;
-  let g = parseInt(h.slice(2, 4), 16) / 255;
-  let b = parseInt(h.slice(4, 6), 16) / 255;
-  const max = Math.max(r, g, b);
-  const min = Math.min(r, g, b);
-  let hue = 0;
-  let sat = 0;
-  const lit = (max + min) / 2;
-  const d = max - min;
-  if (d > 1e-6) {
-    sat = d / (1 - Math.abs(2 * lit - 1));
-    if (max === r) hue = ((g - b) / d) % 6;
-    else if (max === g) hue = (b - r) / d + 2;
-    else hue = (r - g) / d + 4;
-    hue *= 60;
-    if (hue < 0) hue += 360;
-  }
-  sat = Math.min(1, sat * 1.85 + 0.18);
-  const L = Math.min(0.52, Math.max(0.38, lit * 1.08 + 0.06));
-  const c = (1 - Math.abs(2 * L - 1)) * sat;
-  const x = c * (1 - Math.abs(((hue / 60) % 2) - 1));
-  const m = L - c / 2;
-  let rp = 0;
-  let gp = 0;
-  let bp = 0;
-  if (hue < 60) {
-    rp = c;
-    gp = x;
-  } else if (hue < 120) {
-    rp = x;
-    gp = c;
-  } else if (hue < 180) {
-    gp = c;
-    bp = x;
-  } else if (hue < 240) {
-    gp = x;
-    bp = c;
-  } else if (hue < 300) {
-    rp = x;
-    bp = c;
-  } else {
-    rp = c;
-    bp = x;
-  }
-  const to = (n) =>
-    Math.round((n + m) * 255)
-      .toString(16)
-      .padStart(2, "0");
-  return `#${to(rp)}${to(gp)}${to(bp)}`;
 }
 
 function buildGraph(tree) {

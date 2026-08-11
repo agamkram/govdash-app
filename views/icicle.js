@@ -16,6 +16,7 @@ import {
   INK,
   atlasRail,
   placeMapTip,
+  isTouchTipUi,
 } from "../shared.js";
 
 const CONST_W = 20;
@@ -37,6 +38,7 @@ export function createIcicleView(
   let fullRoot = null;
   let focus = null;
   let selectedId = null;
+  let hoverId = null;
   let orient = orientation === "top" ? "top" : "side";
   const byId = new Map();
 
@@ -48,8 +50,6 @@ export function createIcicleView(
   const focusRailG = viewport.append("g").attr("class", "icicle-focus-rail");
   const g = viewport.append("g").attr("class", "icicle-g");
 
-  let panX = 0;
-  let panY = 0;
   let panFocusId = null;
   let armedId = null;
   let scrubId = null; // live highlight while scrubbing
@@ -57,42 +57,88 @@ export function createIcicleView(
   let longTimer = 0;
   /** @type {{ id:string, x0:number, y0:number, x1:number, y1:number, node:* }[]} */
   let layoutCells = [];
-  /** @type {{ pointerId:number, pointerType:string, startX:number, startY:number, x:number, y:number, cellNode:*, moved:boolean, scrubbing:boolean, pan0x:number, pan0y:number, originX:number, originY:number } | null} */
+  /** @type {{ pointerId:number, pointerType:string, startX:number, startY:number, x:number, y:number, cellNode:*, moved:boolean, scrubbing:boolean, panning:boolean, pinching:boolean, lastSX:number, lastSY:number } | null} */
   let gesture = null;
+  let cam = { k: 1, x: 0, y: 0 };
+  const pointers = new Map();
+  let pinch = null;
+  const CAM_MIN = 1;
+  const CAM_MAX = 5;
 
   const LONG_MS = 400;
   const SLOP = 12;
+  // Solid black hairline everywhere (Mac included).
+  const cellStroke = "#000000";
+  const cellStrokeW = 0.35;
 
   function isTop() {
     return orient === "top";
   }
 
-  function applyPan() {
-    viewport.attr("transform", `translate(${panX},${panY})`);
+  function applyCam() {
+    viewport.attr(
+      "transform",
+      `translate(${cam.x},${cam.y}) scale(${cam.k})`
+    );
+    // Keep hairlines screen-constant while zoomed
+    g.selectAll("rect.icicle-rect").attr("stroke-width", cellStrokeW / cam.k);
   }
 
-  function clampPan() {
+  function resetCam() {
+    cam = { k: 1, x: 0, y: 0 };
+    pinch = null;
+    applyCam();
+  }
+
+  function clampCam() {
     if (!width || !height) return;
-    // Keep most of the chart on-screen (no stepping off into empty space)
-    const maxX = width * 0.35;
-    const maxY = height * 0.35;
-    panX = Math.max(-maxX, Math.min(maxX, panX));
-    panY = Math.max(-maxY, Math.min(maxY, panY));
+    if (cam.k <= CAM_MIN + 0.001) {
+      cam.k = CAM_MIN;
+      cam.x = 0;
+      cam.y = 0;
+      return;
+    }
+    cam.k = Math.min(CAM_MAX, Math.max(CAM_MIN, cam.k));
+    cam.x = Math.min(0, Math.max(width - width * cam.k, cam.x));
+    cam.y = Math.min(0, Math.max(height - height * cam.k, cam.y));
   }
 
-  function resetPan() {
-    panX = 0;
-    panY = 0;
-    applyPan();
+  function zoomAt(sx, sy, factor) {
+    const k1 = cam.k;
+    const k2 = Math.min(CAM_MAX, Math.max(CAM_MIN, k1 * factor));
+    cam.x = sx - ((sx - cam.x) * k2) / k1;
+    cam.y = sy - ((sy - cam.y) * k2) / k1;
+    cam.k = k2;
+    clampCam();
   }
 
-  function maybeResetPanForFocus() {
+  function screenXY(clientX, clientY) {
+    const svgNode = svg.node();
+    if (!svgNode) return { sx: 0, sy: 0 };
+    const ctm = svgNode.getScreenCTM();
+    if (!ctm) return { sx: 0, sy: 0 };
+    const pt = svgNode.createSVGPoint();
+    pt.x = clientX;
+    pt.y = clientY;
+    const loc = pt.matrixTransform(ctm.inverse());
+    return { sx: loc.x, sy: loc.y };
+  }
+
+  function worldXY(clientX, clientY) {
+    const { sx, sy } = screenXY(clientX, clientY);
+    return {
+      mx: (sx - cam.x) / cam.k,
+      my: (sy - cam.y) / cam.k,
+    };
+  }
+
+  function maybeResetCamForFocus() {
     const id = focus?.data?.id ?? null;
     if (id !== panFocusId) {
       panFocusId = id;
-      resetPan();
+      resetCam();
     } else {
-      applyPan();
+      applyCam();
     }
   }
 
@@ -112,20 +158,15 @@ export function createIcicleView(
   }
 
   function highlightId() {
-    return scrubId || armedId || selectedId;
-  }
-
-  function liveTouchId() {
-    return scrubId || armedId;
+    return scrubId || armedId || hoverId || selectedId;
   }
 
   function paintArmedStroke() {
     const hid = highlightId();
-    const live = liveTouchId();
     g.selectAll("rect.icicle-rect")
       .attr("fill", (d) => cellFill(d, d.data.id === hid))
-      .attr("stroke", (d) => (d.data.id === live ? INK : "rgba(0,0,0,0.22)"))
-      .attr("stroke-width", (d) => (d.data.id === live ? 2.5 : 1));
+      .attr("stroke", cellStroke)
+      .attr("stroke-width", cellStrokeW / cam.k);
   }
 
   function previewUnderFinger(clientX, clientY, footer) {
@@ -163,16 +204,8 @@ export function createIcicleView(
   }
 
   function nodeAtClient(clientX, clientY) {
-    const svgNode = svg.node();
-    if (!svgNode || !layoutCells.length) return null;
-    const ctm = svgNode.getScreenCTM();
-    if (!ctm) return null;
-    const pt = svgNode.createSVGPoint();
-    pt.x = clientX;
-    pt.y = clientY;
-    const loc = pt.matrixTransform(ctm.inverse());
-    const x = loc.x - panX;
-    const y = loc.y - panY;
+    if (!layoutCells.length) return null;
+    const { mx: x, my: y } = worldXY(clientX, clientY);
     let best = null;
     let bestArea = Infinity;
     for (const c of layoutCells) {
@@ -187,11 +220,37 @@ export function createIcicleView(
     return best?.node || null;
   }
 
+  function initPinch() {
+    const pts = [...pointers.values()];
+    if (pts.length < 2) return;
+    const a = screenXY(pts[0].x, pts[0].y);
+    const b = screenXY(pts[1].x, pts[1].y);
+    pinch = {
+      d0: Math.hypot(b.sx - a.sx, b.sy - a.sy) || 1,
+      k0: cam.k,
+      wx: ((a.sx + b.sx) / 2 - cam.x) / cam.k,
+      wy: ((a.sy + b.sy) / 2 - cam.y) / cam.k,
+    };
+  }
+
+  function updatePinch() {
+    if (!pinch || pointers.size < 2) return;
+    const pts = [...pointers.values()];
+    const a = screenXY(pts[0].x, pts[0].y);
+    const b = screenXY(pts[1].x, pts[1].y);
+    const d = Math.hypot(b.sx - a.sx, b.sy - a.sy) || 1;
+    const cx = (a.sx + b.sx) / 2;
+    const cy = (a.sy + b.sy) / 2;
+    cam.k = Math.min(CAM_MAX, Math.max(CAM_MIN, pinch.k0 * (d / pinch.d0)));
+    cam.x = cx - pinch.wx * cam.k;
+    cam.y = cy - pinch.wy * cam.k;
+    clampCam();
+    applyCam();
+  }
+
   function beginScrub() {
     if (!gesture) return;
     gesture.scrubbing = true;
-    // Lock chart in place for scrub (discard any leftover pan)
-    resetPan();
     hapticPulse();
     el.classList.add("is-scrubbing");
     previewUnderFinger(gesture.x, gesture.y, "Slide to a box · lift to arm");
@@ -200,7 +259,27 @@ export function createIcicleView(
   function onPointerDown(event) {
     if (event.button != null && event.button !== 0) return;
     clearLongTimer();
+    pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+
+    if (pointers.size >= 2) {
+      clearLongTimer();
+      try {
+        svg.node().setPointerCapture(event.pointerId);
+      } catch {
+        /* ignore */
+      }
+      if (gesture) {
+        gesture.pinching = true;
+        gesture.moved = true;
+        gesture.scrubbing = false;
+        el.classList.remove("is-scrubbing");
+      }
+      initPinch();
+      return;
+    }
+
     const cellNode = nodeFromEventTarget(event.target);
+    const { sx, sy } = screenXY(event.clientX, event.clientY);
     gesture = {
       pointerId: event.pointerId,
       pointerType: event.pointerType || "mouse",
@@ -208,13 +287,13 @@ export function createIcicleView(
       startY: event.clientY,
       x: event.clientX,
       y: event.clientY,
+      lastSX: sx,
+      lastSY: sy,
       cellNode,
       moved: false,
       scrubbing: false,
-      pan0x: panX,
-      pan0y: panY,
-      originX: event.clientX,
-      originY: event.clientY,
+      panning: false,
+      pinching: false,
     };
 
     try {
@@ -237,10 +316,53 @@ export function createIcicleView(
   }
 
   function onPointerMove(event) {
+    if (pointers.has(event.pointerId)) {
+      pointers.set(event.pointerId, { x: event.clientX, y: event.clientY });
+    }
+
+    if (pointers.size >= 2) {
+      if (!pinch) initPinch();
+      if (gesture) {
+        gesture.pinching = true;
+        gesture.moved = true;
+        gesture.scrubbing = false;
+        el.classList.remove("is-scrubbing");
+      }
+      updatePinch();
+      event.preventDefault();
+      return;
+    }
+
     if (!gesture || event.pointerId !== gesture.pointerId) return;
     gesture.x = event.clientX;
     gesture.y = event.clientY;
+    const { sx, sy } = screenXY(event.clientX, event.clientY);
     const dist = Math.hypot(gesture.x - gesture.startX, gesture.y - gesture.startY);
+
+    if (gesture.scrubbing) {
+      previewUnderFinger(gesture.x, gesture.y, "Slide to a box · lift to arm");
+      event.preventDefault();
+      return;
+    }
+
+    if (
+      gesture.panning ||
+      (dist > SLOP && cam.k > 1.001 && !gesture.scrubbing)
+    ) {
+      if (!gesture.panning) {
+        gesture.panning = true;
+        gesture.moved = true;
+        clearLongTimer();
+      }
+      cam.x += sx - gesture.lastSX;
+      cam.y += sy - gesture.lastSY;
+      gesture.lastSX = sx;
+      gesture.lastSY = sy;
+      clampCam();
+      applyCam();
+      event.preventDefault();
+      return;
+    }
 
     if (gesture.pointerType === "mouse") {
       if (dist > SLOP) {
@@ -251,29 +373,35 @@ export function createIcicleView(
     }
 
     // Touch before scrub: slip cancels long-press
-    if (!gesture.scrubbing) {
-      if (dist > SLOP) {
-        gesture.moved = true;
-        clearLongTimer();
-      }
-      return;
+    if (dist > SLOP) {
+      gesture.moved = true;
+      clearLongTimer();
     }
-
-    // Scrub: chart stays put — only the selection outline follows the finger
-    previewUnderFinger(gesture.x, gesture.y, "Slide to a box · lift to arm");
-    event.preventDefault();
   }
 
   function onPointerUp(event) {
-    if (!gesture || event.pointerId !== gesture.pointerId) return;
-    clearLongTimer();
-    const g0 = gesture;
-    gesture = null;
-    el.classList.remove("is-scrubbing");
+    pointers.delete(event.pointerId);
     try {
       svg.node().releasePointerCapture(event.pointerId);
     } catch {
       /* ignore */
+    }
+    if (pointers.size < 2) pinch = null;
+
+    if (!gesture) return;
+    if (event.pointerId !== gesture.pointerId) {
+      if (gesture.pinching) gesture.moved = true;
+      return;
+    }
+
+    clearLongTimer();
+    const g0 = gesture;
+    gesture = null;
+    el.classList.remove("is-scrubbing");
+
+    if (g0.pinching || g0.panning) {
+      ignoreClicksUntil = performance.now() + 300;
+      return;
     }
 
     if (g0.scrubbing) {
@@ -287,7 +415,6 @@ export function createIcicleView(
         paintArmedStroke();
         hideTip();
       }
-      // Kill the ghost click that would open the wrong detail
       ignoreClicksUntil = performance.now() + 500;
       return;
     }
@@ -305,6 +432,19 @@ export function createIcicleView(
     }
   }
 
+  function onWheel(event) {
+    event.preventDefault();
+    const { sx, sy } = screenXY(event.clientX, event.clientY);
+    zoomAt(sx, sy, Math.exp(-event.deltaY * 0.0016));
+    applyCam();
+  }
+
+  function onDblClick(event) {
+    if (cam.k <= 1.001) return;
+    event.preventDefault();
+    resetCam();
+  }
+
   function onContextMenu(event) {
     event.preventDefault();
   }
@@ -318,6 +458,7 @@ export function createIcicleView(
     .on("pointermove", onPointerMove)
     .on("pointerup", onPointerUp)
     .on("pointercancel", onPointerUp)
+    .on("dblclick", onDblClick)
     .on("click", (event) => {
       if (shouldIgnoreClick()) return;
       if (!armedId) return;
@@ -329,6 +470,7 @@ export function createIcicleView(
   const svgDom = svg.node();
   if (svgDom) {
     svgDom.setAttribute("draggable", "false");
+    svgDom.addEventListener("wheel", onWheel, { passive: false });
   }
 
   function measure() {
@@ -408,6 +550,7 @@ export function createIcicleView(
     if (!fullRoot) return;
     const revealRoot = focus === fullRoot;
     armedId = null;
+    hoverId = null;
     focus = fullRoot;
     selectedId = fullRoot.data.id;
     onSelect?.(fullRoot.data, fullRoot, { revealRoot });
@@ -422,6 +565,7 @@ export function createIcicleView(
     if (!node) return;
     scrubId = null;
     armedId = null;
+    hoverId = null;
     selectedId = node.data.id;
     onSelect?.(node.data, node);
     if (node.children?.length) {
@@ -572,8 +716,8 @@ export function createIcicleView(
           .attr("width", width)
           .attr("height", stripe)
           .attr("fill", fill)
-          .attr("stroke", "rgba(0,0,0,0.22)")
-          .attr("stroke-width", 1)
+          .attr("stroke", cellStroke)
+          .attr("stroke-width", cellStrokeW)
           .style("cursor", "pointer")
           .on("click", (event) => activateHierarchyNode(node, event))
           .on("pointermove", (event) => {
@@ -612,8 +756,8 @@ export function createIcicleView(
         .attr("width", stripe)
         .attr("height", height)
         .attr("fill", fill)
-        .attr("stroke", "rgba(0,0,0,0.22)")
-        .attr("stroke-width", 1)
+        .attr("stroke", cellStroke)
+        .attr("stroke-width", cellStrokeW)
         .style("cursor", "pointer")
         .on("click", (event) => activateHierarchyNode(node, event))
         .on("pointermove", (event) => {
@@ -638,7 +782,7 @@ export function createIcicleView(
     if (!focus) return;
     measure();
     el.dataset.orient = orient;
-    maybeResetPanForFocus();
+    maybeResetCamForFocus();
     drawConstitutionRail();
     drawFocusRail();
 
@@ -728,6 +872,10 @@ export function createIcicleView(
         });
         e.on("pointermove", (event, d) => {
           if (event.pointerType === "touch") return;
+          if (hoverId !== d.data.id) {
+            hoverId = d.data.id;
+            paintArmedStroke();
+          }
           showTip(
             d.data,
             event.clientX,
@@ -735,7 +883,13 @@ export function createIcicleView(
             armedId === d.data.id ? "Armed · tap box for details" : "Click for details"
           );
         });
-        e.on("pointerleave", hideTip);
+        e.on("pointerleave", () => {
+          if (hoverId) {
+            hoverId = null;
+            paintArmedStroke();
+          }
+          hideTip();
+        });
         return e;
       });
 
@@ -869,10 +1023,8 @@ export function createIcicleView(
       .select("rect")
       .attr("fill", (d) => cellFill(d, d.data.id === highlightId()))
       .attr("fill-opacity", 1)
-      .attr("stroke", (d) =>
-        d.data.id === liveTouchId() ? INK : "rgba(0,0,0,0.22)"
-      )
-      .attr("stroke-width", (d) => (d.data.id === liveTouchId() ? 2.5 : 1));
+      .attr("stroke", cellStroke)
+      .attr("stroke-width", cellStrokeW / cam.k);
   }
 
   function styleSelected() {
@@ -924,6 +1076,7 @@ export function createIcicleView(
 
   function setOrientation(next) {
     orient = next === "top" ? "top" : "side";
+    resetCam();
     paint();
   }
 
@@ -962,11 +1115,17 @@ export function createIcicleView(
     clearLongTimer();
     hideTip();
     el.classList.remove("is-scrubbing");
+    pointers.clear();
+    pinch = null;
+    const node = svg.node();
+    if (node) node.removeEventListener("wheel", onWheel);
     svg
       .on("pointerdown", null)
       .on("pointermove", null)
       .on("pointerup", null)
       .on("pointercancel", null)
+      .on("dblclick", null)
+      .on("click", null)
       .on("contextmenu", null);
     svg.remove();
     el.replaceChildren();

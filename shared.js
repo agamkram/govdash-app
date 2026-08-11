@@ -182,9 +182,62 @@ export function paintFill(nodeOrData) {
   return mixHex(base, MAP_FIELD, t);
 }
 
-/** Clicked-org fill — deepen the segment color (no outline box). */
+/** Push saturation/lightness so selected / hover / scrub stands out (Sankey-style). */
+export function brightenHex(color) {
+  const rgb = parseColorRgb(color);
+  if (!rgb) return color;
+  let [r, g, b] = rgb.map((n) => n / 255);
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  let hue = 0;
+  let sat = 0;
+  const lit = (max + min) / 2;
+  const d = max - min;
+  if (d > 1e-6) {
+    sat = d / (1 - Math.abs(2 * lit - 1));
+    if (max === r) hue = ((g - b) / d) % 6;
+    else if (max === g) hue = (b - r) / d + 2;
+    else hue = (r - g) / d + 4;
+    hue *= 60;
+    if (hue < 0) hue += 360;
+  }
+  sat = Math.min(1, sat * 1.85 + 0.18);
+  const L = Math.min(0.52, Math.max(0.38, lit * 1.08 + 0.06));
+  const c = (1 - Math.abs(2 * L - 1)) * sat;
+  const x = c * (1 - Math.abs(((hue / 60) % 2) - 1));
+  const m = L - c / 2;
+  let rp = 0;
+  let gp = 0;
+  let bp = 0;
+  if (hue < 60) {
+    rp = c;
+    gp = x;
+  } else if (hue < 120) {
+    rp = x;
+    gp = c;
+  } else if (hue < 180) {
+    gp = c;
+    bp = x;
+  } else if (hue < 240) {
+    gp = x;
+    bp = c;
+  } else if (hue < 300) {
+    rp = x;
+    bp = c;
+  } else {
+    rp = c;
+    bp = x;
+  }
+  const to = (n) =>
+    Math.round((n + m) * 255)
+      .toString(16)
+      .padStart(2, "0");
+  return `#${to(rp)}${to(gp)}${to(bp)}`;
+}
+
+/** Clicked / hovered org fill — brighten the segment color (no outline box). */
 export function selectionFill(nodeOrData) {
-  return mixHex(paintFill(nodeOrData), "#2a3035", 0.42);
+  return brightenHex(paintFill(nodeOrData));
 }
 
 export function cellFill(nodeOrData, selected) {
@@ -199,10 +252,23 @@ function mixHex(a, b, t) {
   return `rgb(${m(0)},${m(1)},${m(2)})`;
 }
 
+function parseColorRgb(color) {
+  const s = String(color || "").trim();
+  const hex = s.replace("#", "");
+  if (hex.length === 6 && /^[0-9a-fA-F]+$/.test(hex)) {
+    return [
+      parseInt(hex.slice(0, 2), 16),
+      parseInt(hex.slice(2, 4), 16),
+      parseInt(hex.slice(4, 6), 16),
+    ];
+  }
+  const m = s.match(/^rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/i);
+  if (m) return [Number(m[1]), Number(m[2]), Number(m[3])];
+  return null;
+}
+
 function hexRgb(hex) {
-  const h = String(hex).replace("#", "");
-  if (h.length !== 6) return null;
-  return [parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16)];
+  return parseColorRgb(hex);
 }
 
 export function formatMoney(n) {
