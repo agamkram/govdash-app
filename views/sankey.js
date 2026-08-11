@@ -218,7 +218,7 @@ export function createSankeyView(
     typeof window.matchMedia === "function" &&
     window.matchMedia("(pointer: coarse)").matches;
   const LINE_W = isIPad ? 1.5 : 0.6;
-  const LINE_SEL = isIPad ? 1.7 : isPhone ? 0.75 : 0.7;
+  const LINE_SEL = isIPad ? 1.7 : isPhone ? 0.8 : 0.7;
 
   const LONG_MS = 400;
   const SLOP = 12;
