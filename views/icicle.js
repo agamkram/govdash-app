@@ -414,10 +414,11 @@ export function createIcicleView(
     event.stopPropagation();
     hideTip();
     if (!fullRoot) return;
+    const revealRoot = focus === fullRoot;
     armedId = null;
     focus = fullRoot;
     selectedId = fullRoot.data.id;
-    onSelect?.(fullRoot.data, fullRoot);
+    onSelect?.(fullRoot.data, fullRoot, { revealRoot });
     onFocusChange?.(focus);
     paint();
   }

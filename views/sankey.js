@@ -844,11 +844,13 @@ export function createSankeyView(
     scrubId = null;
     armedId = null;
     const hier = hit.id === CONST_ID ? fullRoot : byId.get(hit.id);
+    const revealRoot =
+      hit.id === CONST_ID && (focus === fullRoot || !focus?.parent);
     if (hier) {
       focus = hier;
       onFocusChange?.(focus);
     }
-    if (openDetail) onSelect?.(data, hier || focus);
+    if (openDetail) onSelect?.(data, hier || focus, { revealRoot });
     paint();
   }
 

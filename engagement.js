@@ -65,8 +65,11 @@ export function engagementActions(node, optsOrById) {
     });
   }
 
-  // Constitution / sovereign root
-  if (kind === "sovereign" || node.id === "usa" || node.id === "constitution") {
+  // Constitution / sovereign root (not the ∞ Beyond map)
+  if (
+    node.id !== "beyond" &&
+    (kind === "sovereign" || node.id === "usa" || node.id === "constitution")
+  ) {
     add({
       id: "read-constitution",
       label: "Read the U.S. Constitution",
@@ -74,10 +77,34 @@ export function engagementActions(node, optsOrById) {
       href: "https://constitution.congress.gov/constitution/",
     });
     add({
+      id: "constitution-annotated",
+      label: "Browse the Constitution Annotated",
+      detail: "Article-by-article analysis — constitution.congress.gov",
+      href: "https://constitution.congress.gov/",
+    });
+    add({
       id: "archives-constitution",
       label: "See the original at the National Archives",
       detail: "Founding documents — archives.gov",
       href: "https://www.archives.gov/founding-docs/constitution",
+    });
+    add({
+      id: "archives-transcript",
+      label: "Read the official transcript",
+      detail: "National Archives — Constitution of the United States",
+      href: "https://www.archives.gov/founding-docs/constitution-transcript",
+    });
+    add({
+      id: "bill-of-rights",
+      label: "Read the Bill of Rights",
+      detail: "First ten amendments — archives.gov",
+      href: "https://www.archives.gov/founding-docs/bill-of-rights",
+    });
+    add({
+      id: "usa-constitution",
+      label: "Plain-language Constitution guide",
+      detail: "USA.gov — how the Constitution works",
+      href: "https://www.usa.gov/constitution",
     });
     add({
       id: "usa-gov",

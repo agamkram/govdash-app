@@ -235,15 +235,30 @@ function renderEngage(node) {
   dEngage.hidden = !actions.length;
 }
 
-function isConstitutionNode(node) {
-  return !!(node && (node.id === "usa" || node.id === "constitution" || node.kind === "sovereign"));
+function isAtlasRoot(node) {
+  return !!(
+    node &&
+    (node.id === "usa" ||
+      node.id === "beyond" ||
+      node.id === "constitution" ||
+      node.kind === "sovereign")
+  );
 }
 
-function showDetail(node) {
+function isConstitutionNode(node) {
+  return !!(node && (node.id === "usa" || node.id === "constitution") && node.id !== "beyond");
+}
+
+const CONSTITUTION_BLURB = [
+  "The Constitution is the supreme law of the United States. It establishes the national government, defines the powers of its three branches, and protects fundamental rights.",
+  "Ratified in 1788 and amended since (including the Bill of Rights), it is the charter that organizes the federal structure you explore in this map — Legislative, Executive, and Judicial — with independent agencies operating under statutes Congress passes within that framework.",
+];
+
+function showDetail(node, opts = {}) {
   if (!node) return;
 
-  // Root / Constitution: keep the map clear (same as startup). Tap a branch org for detail.
-  if (isConstitutionNode(node)) {
+  // Going back to the root keeps the map clear. Already there + tap again opens it.
+  if (isAtlasRoot(node) && opts.revealRoot !== true) {
     selectedNode = node;
     detailEl.hidden = true;
     return;
@@ -253,11 +268,21 @@ function showDetail(node) {
   detailEl.hidden = false;
   closeAppPage();
 
-  const ctx = enrichmentContext(node, nodeById);
+  const asConstitution = isConstitutionNode(node);
+  const ctx = asConstitution ? null : enrichmentContext(node, nodeById);
+  const rail = isAtlasRoot(node) ? atlasRail(node) : null;
 
-  dKind.textContent = node.kind || "org";
-  dTitle.textContent = node.name;
-  dShort.textContent = node.short ? `Short: ${node.short}` : "";
+  dKind.textContent = asConstitution
+    ? "constitution"
+    : rail?.kind || node.kind || "org";
+  dTitle.textContent = asConstitution
+    ? "The Constitution"
+    : rail?.name || node.name;
+  dShort.textContent = asConstitution
+    ? "Supreme law of the United States"
+    : !rail && node.short
+      ? `Short: ${node.short}`
+      : "";
   dCodes.replaceChildren();
   dMissionBody.replaceChildren();
   dLeadersList.replaceChildren();
@@ -266,7 +291,15 @@ function showDetail(node) {
   const sam = node.sources?.sam;
   const usgm = node.sources?.usgm;
 
-  if (ctx?.mission?.length) {
+  if (asConstitution) {
+    dMission.hidden = false;
+    dMission.querySelector("h3").textContent = "About";
+    for (const para of CONSTITUTION_BLURB) {
+      const p = document.createElement("p");
+      p.textContent = para;
+      dMissionBody.append(p);
+    }
+  } else if (ctx?.mission?.length) {
     dMission.hidden = false;
     dMission.querySelector("h3").textContent = usgm?.mission?.length ? "Mission" : "About";
     if (ctx.missionNote) {
@@ -285,7 +318,7 @@ function showDetail(node) {
     dMission.querySelector("h3").textContent = "Mission";
   }
 
-  if (ctx?.leadership?.length) {
+  if (!asConstitution && ctx?.leadership?.length) {
     dLeaders.hidden = false;
     for (const person of ctx.leadership.slice(0, 12)) {
       const title = (person.title || "").trim();
@@ -303,17 +336,23 @@ function showDetail(node) {
 
   renderEngage(node);
 
-  const rows = [
-    ["children", String((node.children || []).length)],
-    ["descendants", String(childCount(node))],
-  ];
-  if (usgm) {
+  const rows = asConstitution
+    ? [
+        ["branches in map", String((node.children || []).length)],
+        ["orgs nested under map", String(childCount(node))],
+        ["primary source", "constitution.congress.gov"],
+      ]
+    : [
+        ["children", String((node.children || []).length)],
+        ["descendants", String(childCount(node))],
+      ];
+  if (!asConstitution && usgm) {
     rows.push(
       ["Manual edition", usgm.edition ?? "—"],
       ["Manual web", usgm.web ?? "—"],
       ["Manual phone", usgm.phone ?? "—"]
     );
-  } else if (ctx?.ancestorUsgm?.sources?.usgm) {
+  } else if (!asConstitution && ctx?.ancestorUsgm?.sources?.usgm) {
     const p = ctx.ancestorUsgm;
     rows.push(
       ["Parent Manual", p.short || p.name],
@@ -321,16 +360,16 @@ function showDetail(node) {
       ["Parent phone", p.sources.usgm.phone ?? "—"]
     );
   }
-  if (sam) {
+  if (!asConstitution && sam) {
     rows.push(["SAM status", sam.status ?? "—"], ["SAM name", sam.fhorgname ?? "—"]);
-  } else if (ctx?.ancestorSam?.sources?.sam) {
+  } else if (!asConstitution && ctx?.ancestorSam?.sources?.sam) {
     const p = ctx.ancestorSam;
     rows.push(
       ["Parent SAM", p.short || p.name],
       ["Parent SAM status", p.sources.sam.status ?? "—"]
     );
   }
-  if (cw) {
+  if (!asConstitution && cw) {
     rows.push(["GSA key", cw.gsaSfpKey ?? "—"], ["entity type", cw.gsaSfpEntityType ?? "—"]);
   }
 
@@ -338,7 +377,14 @@ function showDetail(node) {
     const dt = document.createElement("dt");
     dt.textContent = k;
     const dd = document.createElement("dd");
-    if (
+    if (k === "primary source") {
+      const a = document.createElement("a");
+      a.href = "https://constitution.congress.gov/constitution/";
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.textContent = "U.S. Constitution (Congress.gov)";
+      dd.append(a);
+    } else if (
       (k === "Manual web" || k === "Parent web") &&
       v &&
       String(v).startsWith("http")
@@ -355,19 +401,20 @@ function showDetail(node) {
     dCodes.append(dt, dd);
   }
 
-  dNote.textContent = usgm
-    ? `U.S. Government Manual ${usgm.edition || ""} · SAM.gov · GSA Crosswalk`
-    : ctx?.template || ctx?.ancestorUsgm || ctx?.ancestorSam
-      ? "GSA Crosswalk · parent / type context"
-      : "GSA Crosswalk · SAM.gov";
+  dNote.textContent = asConstitution
+    ? "Congress.gov Constitution Annotated · National Archives founding documents"
+    : usgm
+      ? `U.S. Government Manual ${usgm.edition || ""} · SAM.gov · GSA Crosswalk`
+      : ctx?.template || ctx?.ancestorUsgm || ctx?.ancestorSam
+        ? "GSA Crosswalk · parent / type context"
+        : "GSA Crosswalk · SAM.gov";
 
   const canEnter = !!(node.children && node.children.length);
   const focusNow = viewApi?.getFocus?.();
   const alreadyHere = !!(focusNow && focusNow.data?.id === node.id);
-  // Hide when redundant (leaf, or already viewing this level)
   btnEnter.hidden = !canEnter || alreadyHere || mode === "sankey";
   btnEnter.disabled = btnEnter.hidden;
-  btnEnter.textContent = "Enter this level";
+  btnEnter.textContent = asConstitution ? "Enter the government map" : "Enter this level";
   const actions = document.querySelector(".detail-actions");
   if (actions) actions.hidden = btnEnter.hidden;
 }
@@ -390,8 +437,10 @@ function renderBreadcrumbs() {
         ? atlasRail(d.data).short
         : displayName(d.data);
     btn.addEventListener("click", () => {
+      const revealRoot =
+        isConstitutionNode(d.data) && isConstitutionNode(selectedNode);
       viewApi.zoomToId(d.data.id);
-      showDetail(d.data);
+      showDetail(d.data, { revealRoot });
     });
     breadcrumbsEl.append(btn);
   });
@@ -472,13 +521,18 @@ function mountView(nextMode, { preserve = true } = {}) {
   setModeChrome();
 
   const opts = {
-    onSelect: (node) => {
+    onSelect: (node, _hier, selectOpts) => {
       if (suppressSelect) return;
-      showDetail(node);
+      showDetail(node, selectOpts);
     },
     onFocusChange: () => {
       renderBreadcrumbs();
-      if (!suppressSelect && selectedNode && !detailEl.hidden) {
+      if (
+        !suppressSelect &&
+        selectedNode &&
+        !detailEl.hidden &&
+        !isConstitutionNode(selectedNode)
+      ) {
         showDetail(selectedNode);
       }
     },

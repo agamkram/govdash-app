@@ -74,7 +74,9 @@ export function createTreeView(container, { onSelect, onFocusChange }) {
     label.addEventListener("click", (e) => {
       e.stopPropagation();
       selectedId = data.id;
-      onSelect?.(data, node);
+      onSelect?.(data, node, {
+        revealRoot: node === fullRoot && node === focus,
+      });
       // Drill: set focus when node has children
       if (hasKids && node !== focus) {
         focus = node;

@@ -285,7 +285,7 @@ export function createPackView(container, { onSelect, onFocusChange }) {
       if (focus.parent) goUp();
       else {
         selectedId = d.data.id;
-        onSelect?.(d.data, d);
+        onSelect?.(d.data, d, { revealRoot: true });
         paintStyles();
       }
       return;
