@@ -574,7 +574,7 @@ a.btn.linkish {
   z-index: 6;
   max-width: min(320px, 70vw);
   padding: 0.4rem 0.55rem;
-  background: var(--panel);
+  background: var(--bg);
   border: 1px solid rgba(26, 34, 32, 0.2);
   box-shadow: 0 6px 18px rgba(26, 34, 32, 0.12);
   font-size: 0.82rem;
@@ -716,7 +716,7 @@ a.btn.linkish {
   overflow-y: auto;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
-  background: var(--panel);
+  background: var(--bg);
   border: 1px solid var(--line);
   padding: 0.85rem 0.9rem 0.45rem;
   z-index: 5;
