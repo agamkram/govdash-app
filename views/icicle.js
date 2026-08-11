@@ -15,6 +15,7 @@ import {
   CONSTITUTION_FILL,
   INK,
   atlasRail,
+  placeMapTip,
 } from "../shared.js";
 
 const CONST_W = 20;
@@ -132,7 +133,7 @@ export function createIcicleView(
     if (node) {
       scrubId = node.data.id;
       paintArmedStroke();
-      showTip(node.data, clientX, clientY, footer);
+      showTip(node.data, clientX, clientY, footer, true);
       return node;
     }
     scrubId = null;
@@ -148,7 +149,7 @@ export function createIcicleView(
     selectedId = node.data.id;
     paintArmedStroke();
     hapticPulse();
-    showTip(node.data, clientX, clientY, "Armed · tap box for details");
+    showTip(node.data, clientX, clientY, "Armed · tap box for details", true);
   }
 
   function nodeFromEventTarget(target) {
@@ -380,7 +381,7 @@ export function createIcicleView(
     if (tipEl) tipEl.hidden = true;
   }
 
-  function showTip(data, clientX, clientY, footer = "Click for details") {
+  function showTip(data, clientX, clientY, footer = "Click for details", fromTouch = false) {
     if (!tipEl || !data) {
       hideTip();
       return;
@@ -397,16 +398,7 @@ export function createIcicleView(
       <p class="tip-meta">${footer}</p>
     `;
     tipEl.hidden = false;
-    tipEl.style.left = "0px";
-    tipEl.style.top = "0px";
-    const pad = 14;
-    let left = clientX + pad;
-    let top = clientY + pad;
-    const tipRect = tipEl.getBoundingClientRect();
-    if (left + tipRect.width > window.innerWidth - 8) left = clientX - tipRect.width - pad;
-    if (top + tipRect.height > window.innerHeight - 8) top = clientY - tipRect.height - pad;
-    tipEl.style.left = `${Math.max(8, left)}px`;
-    tipEl.style.top = `${Math.max(8, top)}px`;
+    placeMapTip(tipEl, clientX, clientY, { fromTouch: !!fromTouch });
   }
 
   function goHome(event) {

@@ -639,6 +639,8 @@ async function main() {
   });
   detailClose.addEventListener("click", () => {
     detailEl.hidden = true;
+    selectedNode = null;
+    viewApi?.setSelected?.(null);
   });
   searchInput.addEventListener("input", () => updateSearch(searchInput.value));
   searchInput.addEventListener("keydown", (e) => {

@@ -1,15 +1,17 @@
 /**
- * Zoomable circle pack — size / bulk. Nested children + grandchildren.
+ * Zoomable circle pack — size / bulk. Nested children, grandchildren,
+ * and great-grandchildren. Circle labels are short names only; hover
+ * and the detail pane carry the full title.
  * Phone: tap only a labeled (resolvable) node; long-press scrub unlabeled
  * like Icicle/Sankey. Tap the outer ring (or empty map) to go back.
  */
 import * as d3 from "../vendor/d3.js";
 import {
-  displayName,
   paintFill,
   selectionFill,
   hierarchySort,
   MAP_FIELD,
+  placeMapTip,
 } from "../shared.js";
 
 export function createPackView(container, { onSelect, onFocusChange }) {
@@ -51,7 +53,7 @@ export function createPackView(container, { onSelect, onFocusChange }) {
   let labelSel = null;
 
   const VIEW_PAD = 2.18;
-  const NEST_DEPTH = 2;
+  const NEST_DEPTH = 3;
   const LABEL_R = 14;
   const LONG_MS = 400;
   const SLOP = 12;
@@ -97,8 +99,14 @@ export function createPackView(container, { onSelect, onFocusChange }) {
     };
   }
 
+  function packAbbrev(d) {
+    const s = (d?.data?.short || "").trim();
+    return s.length >= 2 ? s : "";
+  }
+
   function isLabeled(d) {
     if (!d || !focus || d.parent !== focus) return false;
+    if (!packAbbrev(d)) return false;
     return placed(d).r > LABEL_R;
   }
 
@@ -218,6 +226,15 @@ export function createPackView(container, { onSelect, onFocusChange }) {
     return null;
   }
 
+  /** Ancestor that is a direct child of focus — first click expands the door, not a nested dept. */
+  function focusChildTarget(d) {
+    if (!d || !focus) return null;
+    if (d === focus) return focus;
+    let cur = d;
+    while (cur && cur.parent !== focus) cur = cur.parent;
+    return cur && cur.parent === focus ? cur : null;
+  }
+
   function hideTip() {
     if (tipEl) tipEl.hidden = true;
   }
@@ -239,19 +256,7 @@ export function createPackView(container, { onSelect, onFocusChange }) {
       <p class="tip-meta">${footer}</p>
     `;
     tipEl.hidden = false;
-    tipEl.style.left = "0px";
-    tipEl.style.top = "0px";
-    const pad = fromTouch ? 56 : 14;
-    const tipRect = tipEl.getBoundingClientRect();
-    let left = clientX + pad;
-    let top = fromTouch ? clientY - tipRect.height - pad : clientY + pad;
-    if (left + tipRect.width > window.innerWidth - 8) left = clientX - tipRect.width - pad;
-    if (top < 8) top = clientY + pad;
-    if (top + tipRect.height > window.innerHeight - 8) {
-      top = Math.max(8, window.innerHeight - tipRect.height - 8);
-    }
-    tipEl.style.left = `${Math.max(8, left)}px`;
-    tipEl.style.top = `${Math.max(8, top)}px`;
+    placeMapTip(tipEl, clientX, clientY, { fromTouch: !!fromTouch });
   }
 
   function hapticPulse() {
@@ -426,16 +431,22 @@ export function createPackView(container, { onSelect, onFocusChange }) {
     }
 
     const smallest = smallestAt(g0.x, g0.y);
+    // Only activate a direct child of the current focus (or go up). Nested
+    // hits under Executive / Legislative / Judicial / Agencies expand the
+    // door first — same on Mac, phone, and pad.
+    const target = focusChildTarget(smallest);
     if (touch) {
       const labeled = labeledTarget(smallest);
       if (labeled) activate(labeled);
+      else if (target && target !== focus) activate(target);
       else if (!smallest && focus?.parent) goUp();
       else hideTip();
       return;
     }
 
-    if (smallest) activate(smallest);
-    else if (focus?.parent) goUp();
+    if (target && target !== focus) activate(target);
+    else if (target === focus && focus?.parent) goUp();
+    else if (!smallest && focus?.parent) goUp();
     else hideTip();
   }
 
@@ -459,14 +470,14 @@ export function createPackView(container, { onSelect, onFocusChange }) {
     labelSel = labelG
       .selectAll("text")
       .data(
-        nodes.filter((d) => d.parent === focus),
+        nodes.filter((d) => d.parent === focus && packAbbrev(d)),
         (d) => d.data.id
       )
       .join("text")
       .attr("class", "map-label")
       .attr("text-anchor", "middle")
       .attr("dy", "0.35em")
-      .text((d) => displayName(d));
+      .text((d) => packAbbrev(d));
 
     paintStyles();
     renderFrame(view);

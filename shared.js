@@ -143,6 +143,37 @@ export function displayName(nodeOrData) {
   return name.slice(0, 30) + "…";
 }
 
+/** Phone + iPad tip placement — iPad often reports pointer:fine, so don't rely on coarse alone. */
+export function isTouchTipUi() {
+  if (typeof navigator === "undefined") return false;
+  if (/iPad|iPhone|iPod/i.test(navigator.userAgent || "")) return true;
+  if (navigator.platform === "MacIntel" && (navigator.maxTouchPoints || 0) > 1) return true;
+  return (
+    typeof window.matchMedia === "function" &&
+    window.matchMedia("(pointer: coarse)").matches
+  );
+}
+
+/** Position #map-tip: above the finger on phone/iPad; below the cursor on Mac. */
+export function placeMapTip(tipEl, clientX, clientY, { fromTouch = false } = {}) {
+  if (!tipEl) return;
+  const above = fromTouch || isTouchTipUi();
+  const pad = above ? 56 : 14;
+  tipEl.style.left = "0px";
+  tipEl.style.top = "0px";
+  const tipRect = tipEl.getBoundingClientRect();
+  let left = clientX + pad;
+  let top = above ? clientY - tipRect.height - pad : clientY + pad;
+  if (left + tipRect.width > window.innerWidth - 8) left = clientX - tipRect.width - pad;
+  if (above) {
+    if (top < 8) top = 8;
+  } else if (top + tipRect.height > window.innerHeight - 8) {
+    top = Math.max(8, clientY - tipRect.height - pad);
+  }
+  tipEl.style.left = `${Math.max(8, left)}px`;
+  tipEl.style.top = `${Math.max(8, top)}px`;
+}
+
 export function paintFill(nodeOrData) {
   const base = kindFill(nodeOrData);
   const depth = nodeOrData?.depth;

@@ -11,6 +11,7 @@ import {
   INK,
   MAP_FIELD,
   atlasRail,
+  placeMapTip,
 } from "../shared.js";
 
 const CONST_ID = "constitution";
@@ -218,7 +219,7 @@ export function createSankeyView(
     typeof window.matchMedia === "function" &&
     window.matchMedia("(pointer: coarse)").matches;
   const LINE_W = isIPad ? 1.5 : 0.6;
-  const LINE_SEL = isIPad ? 1.7 : isPhone ? 0.8 : 0.7;
+  const LINE_SEL = isIPad ? 1.7 : isPhone ? 1.75 : 0.7;
 
   const LONG_MS = 400;
   const SLOP = 12;
@@ -238,7 +239,7 @@ export function createSankeyView(
   }
 
   function activeHighlightId() {
-    return scrubId || armedId || selectedId || hoverId;
+    return scrubId || armedId || hoverId || selectedId;
   }
 
   function isHotId(id) {
@@ -335,20 +336,7 @@ export function createSankeyView(
       <p class="tip-meta">${footer}</p>
     `;
     tipEl.hidden = false;
-    tipEl.style.left = "0px";
-    tipEl.style.top = "0px";
-    // Keep clear of a fingertip (~44px) plus a little breathing room
-    const pad = 56;
-    const tipRect = tipEl.getBoundingClientRect();
-    let left = clientX + pad;
-    let top = clientY - tipRect.height - pad;
-    if (left + tipRect.width > window.innerWidth - 8) left = clientX - tipRect.width - pad;
-    if (top < 8) top = clientY + pad;
-    if (top + tipRect.height > window.innerHeight - 8) {
-      top = Math.max(8, window.innerHeight - tipRect.height - 8);
-    }
-    tipEl.style.left = `${Math.max(8, left)}px`;
-    tipEl.style.top = `${Math.max(8, top)}px`;
+    placeMapTip(tipEl, clientX, clientY);
   }
 
   function resolveDataNode(hit) {
