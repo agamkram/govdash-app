@@ -61,6 +61,59 @@ function hexAlpha(hex, a) {
   return `rgba(${r},${g},${b},${a})`;
 }
 
+function brightenHex(hex) {
+  const h = hex.replace("#", "");
+  let r = parseInt(h.slice(0, 2), 16) / 255;
+  let g = parseInt(h.slice(2, 4), 16) / 255;
+  let b = parseInt(h.slice(4, 6), 16) / 255;
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  let hue = 0;
+  let sat = 0;
+  const lit = (max + min) / 2;
+  const d = max - min;
+  if (d > 1e-6) {
+    sat = d / (1 - Math.abs(2 * lit - 1));
+    if (max === r) hue = ((g - b) / d) % 6;
+    else if (max === g) hue = (b - r) / d + 2;
+    else hue = (r - g) / d + 4;
+    hue *= 60;
+    if (hue < 0) hue += 360;
+  }
+  sat = Math.min(1, sat * 1.85 + 0.18);
+  const L = Math.min(0.52, Math.max(0.38, lit * 1.08 + 0.06));
+  const c = (1 - Math.abs(2 * L - 1)) * sat;
+  const x = c * (1 - Math.abs(((hue / 60) % 2) - 1));
+  const m = L - c / 2;
+  let rp = 0;
+  let gp = 0;
+  let bp = 0;
+  if (hue < 60) {
+    rp = c;
+    gp = x;
+  } else if (hue < 120) {
+    rp = x;
+    gp = c;
+  } else if (hue < 180) {
+    gp = c;
+    bp = x;
+  } else if (hue < 240) {
+    gp = x;
+    bp = c;
+  } else if (hue < 300) {
+    rp = x;
+    bp = c;
+  } else {
+    rp = c;
+    bp = x;
+  }
+  const to = (n) =>
+    Math.round((n + m) * 255)
+      .toString(16)
+      .padStart(2, "0");
+  return `#${to(rp)}${to(gp)}${to(bp)}`;
+}
+
 function buildGraph(tree) {
   const nodes = [];
   const links = [];
@@ -151,6 +204,17 @@ export function createSankeyView(
   let stage1Meta = [];
   let constGeom = null;
   let linkPaths = [];
+  let deepLayoutSig = "";
+  let cam = { k: 1, x: 0, y: 0 };
+  const pointers = new Map();
+  let pinch = null;
+  const CAM_MIN = 1;
+  const CAM_MAX = 5;
+  const isIPad =
+    /iPad/i.test(navigator.userAgent || "") ||
+    (navigator.platform === "MacIntel" && (navigator.maxTouchPoints || 0) > 1);
+  const LINE_W = isIPad ? 1.5 : 0.6;
+  const LINE_SEL = isIPad ? 1.7 : 0.7;
 
   const LONG_MS = 400;
   const SLOP = 12;
@@ -173,6 +237,10 @@ export function createSankeyView(
     return scrubId || armedId || selectedId || hoverId;
   }
 
+  function isHotId(id) {
+    return !!(id && id === activeHighlightId());
+  }
+
   function hapticPulse() {
     try {
       navigator.vibrate?.(16);
@@ -192,12 +260,48 @@ export function createSankeyView(
     return performance.now() < ignoreClicksUntil;
   }
 
-  function canvasXY(clientX, clientY) {
+  function screenXY(clientX, clientY) {
     const rect = canvas.getBoundingClientRect();
     return {
-      mx: ((clientX - rect.left) / rect.width) * cssSize.w,
-      my: ((clientY - rect.top) / rect.height) * cssSize.h,
+      sx: ((clientX - rect.left) / rect.width) * cssSize.w,
+      sy: ((clientY - rect.top) / rect.height) * cssSize.h,
     };
+  }
+
+  function worldXY(clientX, clientY) {
+    const { sx, sy } = screenXY(clientX, clientY);
+    return {
+      mx: (sx - cam.x) / cam.k,
+      my: (sy - cam.y) / cam.k,
+    };
+  }
+
+  function resetCam() {
+    cam = { k: 1, x: 0, y: 0 };
+    pinch = null;
+  }
+
+  function clampCam() {
+    const w = cssSize.w;
+    const h = cssSize.h;
+    if (cam.k <= CAM_MIN + 0.001) {
+      cam.k = CAM_MIN;
+      cam.x = 0;
+      cam.y = 0;
+      return;
+    }
+    cam.k = Math.min(CAM_MAX, Math.max(CAM_MIN, cam.k));
+    cam.x = Math.min(0, Math.max(w - w * cam.k, cam.x));
+    cam.y = Math.min(0, Math.max(h - h * cam.k, cam.y));
+  }
+
+  function zoomAt(sx, sy, factor) {
+    const k1 = cam.k;
+    const k2 = Math.min(CAM_MAX, Math.max(CAM_MIN, k1 * factor));
+    cam.x = sx - ((sx - cam.x) * k2) / k1;
+    cam.y = sy - ((sy - cam.y) * k2) / k1;
+    cam.k = k2;
+    clampCam();
   }
 
   function indexTree(node) {
@@ -262,6 +366,14 @@ export function createSankeyView(
     ctx.fillStyle = MAP_FIELD;
     ctx.fillRect(0, 0, width, height);
     el.dataset.orient = orient;
+    ctx.setTransform(
+      dpr * cam.k,
+      0,
+      0,
+      dpr * cam.k,
+      dpr * cam.x,
+      dpr * cam.y
+    );
 
     if (isTop()) paintTop(width, height);
     else paintSide(width, height);
@@ -325,13 +437,11 @@ export function createSankeyView(
     ctx.restore();
 
     for (const s of stage1Meta) {
-      const doorActive =
-        s.door &&
-        (s.door.id === activeHighlightId() || selectedId === CONST_ID);
-      ctx.fillStyle = colorFor(s.branch);
-      ctx.globalAlpha = doorActive || (!selectedId && !hoverId) ? 1 : 0.55;
+      const doorActive = s.door && isHotId(s.door.id);
+      ctx.fillStyle = doorActive
+        ? brightenHex(colorFor(s.branch))
+        : colorFor(s.branch);
       ctx.fillRect(doorLeft, s.y0, doorW, segH);
-      ctx.globalAlpha = 1;
 
       ctx.save();
       ctx.translate(doorMidX, s.midY);
@@ -404,13 +514,11 @@ export function createSankeyView(
         midX,
       });
 
-      const doorActive =
-        door &&
-        (door.id === activeHighlightId() || selectedId === CONST_ID);
-      ctx.fillStyle = colorFor(branch);
-      ctx.globalAlpha = doorActive || (!selectedId && !hoverId) ? 1 : 0.55;
+      const doorActive = door && isHotId(door.id);
+      ctx.fillStyle = doorActive
+        ? brightenHex(colorFor(branch))
+        : colorFor(branch);
       ctx.fillRect(x0, doorY, segW, doorH);
-      ctx.globalAlpha = 1;
 
       ctx.font = "400 0.78rem 'IBM Plex Sans', system-ui, sans-serif";
       ctx.textAlign = "center";
@@ -429,21 +537,27 @@ export function createSankeyView(
     });
   }
 
-  function drawDeepGraph({ vertical, deep0, deep1, cross0, cross1, doorAnchor }) {
+  function drawDeepGraph(opts) {
+    ensureDeepLayout(opts);
+    paintDeepGraph();
+  }
+
+  function ensureDeepLayout({ vertical, deep0, deep1, cross0, cross1, doorAnchor }) {
+    const sig = `${orient}|${cssSize.w}|${cssSize.h}|${treeData?.id}|${graphRef.nodes.length}`;
+    if (deepLayoutSig === sig && linkPaths.length) return;
+
     const deepNodes = graphRef.nodes.filter((n) => n.id !== CONST_ID);
     const deepLinks = graphRef.links.filter((l) => l.source !== CONST_ID);
-
-    const extent = [
-      [deep0, cross0],
-      [deep1, cross1],
-    ];
 
     const layout = d3Sankey()
       .nodeId((d) => d.id)
       .nodeWidth(1)
       .nodePadding(0.7)
       .nodeAlign(sankeyLeft)
-      .extent(extent)
+      .extent([
+        [deep0, cross0],
+        [deep1, cross1],
+      ])
       .iterations(40);
 
     const { nodes, links } = layout({
@@ -467,7 +581,6 @@ export function createSankeyView(
         n.y0 = seg.y0;
         n.y1 = seg.y1;
       } else {
-        // Pin door nodes to the segment’s right edge so flows leave the band, not its middle
         n.x0 = seg.x1;
         n.x1 = seg.x1;
         n.y0 = seg.y0;
@@ -477,10 +590,7 @@ export function createSankeyView(
 
     layoutNodes = nodes;
     linkPaths = [];
-    const activeId = activeHighlightId();
     links.sort((a, b) => b.value - a.value);
-    ctx.lineCap = "round";
-    ctx.lineJoin = "round";
 
     for (const L of links) {
       const branch = L.branch || L.source.branch || L.target.branch;
@@ -532,6 +642,9 @@ export function createSankeyView(
       const pad = 16;
       linkPaths.push({
         link: L,
+        col,
+        sourceId: L.source.id,
+        targetId: L.target.id,
         path2d: new Path2D(pathStr),
         target: L.target,
         bbox: {
@@ -541,39 +654,72 @@ export function createSankeyView(
           maxY: Math.max(y0, y1) + pad,
         },
       });
-      const onPath =
-        activeId && (L.source.id === activeId || L.target.id === activeId);
-      const dimmed = activeId && !onPath;
-      ctx.strokeStyle = hexAlpha(col, onPath ? 0.95 : dimmed ? 0.28 : 0.4);
-      ctx.lineWidth = onPath ? 1.6 : 0.6;
-      ctx.stroke(new Path2D(pathStr));
+    }
+    deepLayoutSig = sig;
+  }
+
+  function paintDeepGraph() {
+    const doorIds = new Set(
+      stage1Meta.filter((s) => s.door).map((s) => s.door.id)
+    );
+    const lw = (w) => w / cam.k;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+
+    const restLinks = [];
+    const hotLinks = [];
+    for (const rec of linkPaths) {
+      const isSelPath = isHotId(rec.sourceId) || isHotId(rec.targetId);
+      (isSelPath ? hotLinks : restLinks).push(rec);
     }
 
-    for (const n of nodes) {
-      if (doorIdToSeg.has(n.id)) continue;
+    const strokeLink = (rec, isSelPath) => {
+      if (isSelPath) {
+        ctx.strokeStyle = brightenHex(rec.col);
+        ctx.lineWidth = lw(LINE_SEL);
+        ctx.stroke(rec.path2d);
+        return;
+      }
+      ctx.strokeStyle = hexAlpha(rec.col, 0.4);
+      ctx.lineWidth = lw(LINE_W);
+      ctx.stroke(rec.path2d);
+    };
+    for (const rec of restLinks) strokeLink(rec, false);
+    for (const rec of hotLinks) strokeLink(rec, true);
+
+    const restNodes = [];
+    const hotNodes = [];
+    for (const n of layoutNodes) {
+      if (doorIds.has(n.id)) continue;
+      (isHotId(n.id) ? hotNodes : restNodes).push(n);
+    }
+    const paintNode = (n, isSel) => {
       const x = (n.x0 + n.x1) / 2;
       const y = (n.y0 + n.y1) / 2;
-      const isSel = n.id === selectedId || n.id === armedId || n.id === scrubId;
-      const isHov = n.id === hoverId;
-      const dimmed = activeId && !isSel && !isHov;
-      ctx.beginPath();
-      ctx.arc(x, y, isSel ? 3.4 : isHov ? 2.6 : 1.15, 0, Math.PI * 2);
-      ctx.fillStyle = colorFor(n.branch);
-      ctx.globalAlpha = dimmed ? 0.48 : 1;
-      ctx.fill();
-      ctx.globalAlpha = 1;
+      const col = colorFor(n.branch);
       if (isSel) {
+        ctx.beginPath();
+        ctx.arc(x, y, 3.4, 0, Math.PI * 2);
+        ctx.fillStyle = brightenHex(col);
+        ctx.fill();
         ctx.strokeStyle = INK;
-        ctx.lineWidth = 1.2;
+        ctx.lineWidth = lw(1.2);
         ctx.stroke();
+        return;
       }
-    }
+      ctx.beginPath();
+      ctx.arc(x, y, 1.15, 0, Math.PI * 2);
+      ctx.fillStyle = col;
+      ctx.fill();
+    };
+    for (const n of restNodes) paintNode(n, false);
+    for (const n of hotNodes) paintNode(n, true);
   }
 
   function hitTestLink(mx, my) {
     ctx.save();
     ctx.setTransform(1, 0, 0, 1, 0, 0);
-    ctx.lineWidth = 14;
+    ctx.lineWidth = 14 / cam.k;
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
 
@@ -663,7 +809,7 @@ export function createSankeyView(
       const x = (n.x0 + n.x1) / 2;
       const y = (n.y0 + n.y1) / 2;
       const d = Math.hypot(mx - x, my - y);
-      if (d <= 14 && d < bestDist) {
+      if (d <= 14 / cam.k && d < bestDist) {
         bestDist = d;
         best = n;
       }
@@ -729,19 +875,81 @@ export function createSankeyView(
     showTip(hit, clientX, clientY, "Armed · tap for details");
   }
 
+  function initPinch() {
+    const pts = [...pointers.values()];
+    if (pts.length < 2) return;
+    const a = screenXY(pts[0].x, pts[0].y);
+    const b = screenXY(pts[1].x, pts[1].y);
+    pinch = {
+      d0: Math.hypot(b.sx - a.sx, b.sy - a.sy) || 1,
+      k0: cam.k,
+      wx: ((a.sx + b.sx) / 2 - cam.x) / cam.k,
+      wy: ((a.sy + b.sy) / 2 - cam.y) / cam.k,
+    };
+  }
+
+  function updatePinch() {
+    if (!pinch || pointers.size < 2) return;
+    const pts = [...pointers.values()];
+    const a = screenXY(pts[0].x, pts[0].y);
+    const b = screenXY(pts[1].x, pts[1].y);
+    const d = Math.hypot(b.sx - a.sx, b.sy - a.sy) || 1;
+    const cx = (a.sx + b.sx) / 2;
+    const cy = (a.sy + b.sy) / 2;
+    cam.k = Math.min(CAM_MAX, Math.max(CAM_MIN, pinch.k0 * (d / pinch.d0)));
+    cam.x = cx - pinch.wx * cam.k;
+    cam.y = cy - pinch.wy * cam.k;
+    clampCam();
+    paint();
+  }
+
+  function onWheel(e) {
+    e.preventDefault();
+    const { sx, sy } = screenXY(e.clientX, e.clientY);
+    const factor = Math.exp(-e.deltaY * 0.0016);
+    zoomAt(sx, sy, factor);
+    paint();
+  }
+
+  function onDblClick(e) {
+    if (cam.k <= 1.001) return;
+    e.preventDefault();
+    resetCam();
+    paint();
+  }
+
   function beginScrub() {
     if (!gesture) return;
     gesture.scrubbing = true;
     hapticPulse();
     el.classList.add("is-scrubbing");
-    const { mx, my } = canvasXY(gesture.x, gesture.y);
+    const { mx, my } = worldXY(gesture.x, gesture.y);
     previewScrub(hitTest(mx, my), gesture.x, gesture.y);
   }
 
   function onPointerDown(e) {
     if (e.button != null && e.button !== 0) return;
     clearLongTimer();
-    const { mx, my } = canvasXY(e.clientX, e.clientY);
+    pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (pointers.size >= 2) {
+      clearLongTimer();
+      try {
+        canvas.setPointerCapture(e.pointerId);
+      } catch {
+        /* ignore */
+      }
+      if (gesture) {
+        gesture.pinching = true;
+        gesture.moved = true;
+        gesture.scrubbing = false;
+        el.classList.remove("is-scrubbing");
+      }
+      initPinch();
+      return;
+    }
+
+    const { mx, my } = worldXY(e.clientX, e.clientY);
+    const { sx, sy } = screenXY(e.clientX, e.clientY);
     gesture = {
       pointerId: e.pointerId,
       pointerType: e.pointerType || "mouse",
@@ -749,8 +957,12 @@ export function createSankeyView(
       startY: e.clientY,
       x: e.clientX,
       y: e.clientY,
+      lastSX: sx,
+      lastSY: sy,
       moved: false,
       scrubbing: false,
+      panning: false,
+      pinching: false,
       hit0: hitTest(mx, my),
     };
     try {
@@ -771,14 +983,51 @@ export function createSankeyView(
   }
 
   function onPointerMove(e) {
+    if (pointers.has(e.pointerId)) {
+      pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    }
+
+    if (pointers.size >= 2) {
+      if (!pinch) initPinch();
+      if (gesture) {
+        gesture.pinching = true;
+        gesture.moved = true;
+        gesture.scrubbing = false;
+        el.classList.remove("is-scrubbing");
+      }
+      updatePinch();
+      e.preventDefault();
+      return;
+    }
+
     if (gesture && e.pointerId === gesture.pointerId) {
       gesture.x = e.clientX;
       gesture.y = e.clientY;
+      const { sx, sy } = screenXY(e.clientX, e.clientY);
       const dist = Math.hypot(gesture.x - gesture.startX, gesture.y - gesture.startY);
 
       if (gesture.scrubbing) {
-        const { mx, my } = canvasXY(e.clientX, e.clientY);
+        const { mx, my } = worldXY(e.clientX, e.clientY);
         previewScrub(hitTest(mx, my), e.clientX, e.clientY);
+        e.preventDefault();
+        return;
+      }
+
+      if (
+        gesture.panning ||
+        (dist > SLOP && cam.k > 1.001 && !gesture.scrubbing)
+      ) {
+        if (!gesture.panning) {
+          gesture.panning = true;
+          gesture.moved = true;
+          clearLongTimer();
+        }
+        cam.x += sx - gesture.lastSX;
+        cam.y += sy - gesture.lastSY;
+        gesture.lastSX = sx;
+        gesture.lastSY = sy;
+        clampCam();
+        paint();
         e.preventDefault();
         return;
       }
@@ -792,10 +1041,9 @@ export function createSankeyView(
       }
     }
 
-    // Mouse hover (not scrubbing)
     if (e.pointerType === "touch") return;
-    if (gesture?.scrubbing) return;
-    const { mx, my } = canvasXY(e.clientX, e.clientY);
+    if (gesture?.scrubbing || gesture?.panning) return;
+    const { mx, my } = worldXY(e.clientX, e.clientY);
     const hit = hitTest(mx, my);
     const nextId = hit?.id || null;
     if (nextId !== hoverId) {
@@ -810,23 +1058,37 @@ export function createSankeyView(
         hit ? "Click for details" : undefined
       );
     }
-    canvas.style.cursor = hit ? "pointer" : "default";
+    canvas.style.cursor =
+      cam.k > 1 ? (gesture?.panning ? "grabbing" : "grab") : hit ? "pointer" : "default";
   }
 
   function onPointerUp(e) {
-    if (!gesture || e.pointerId !== gesture.pointerId) return;
-    clearLongTimer();
-    const g0 = gesture;
-    gesture = null;
-    el.classList.remove("is-scrubbing");
+    pointers.delete(e.pointerId);
     try {
       canvas.releasePointerCapture(e.pointerId);
     } catch {
       /* ignore */
     }
+    if (pointers.size < 2) pinch = null;
+
+    if (!gesture) return;
+    if (e.pointerId !== gesture.pointerId) {
+      if (gesture.pinching) gesture.moved = true;
+      return;
+    }
+
+    clearLongTimer();
+    const g0 = gesture;
+    gesture = null;
+    el.classList.remove("is-scrubbing");
+
+    if (g0.pinching || g0.panning) {
+      ignoreClicksUntil = performance.now() + 300;
+      return;
+    }
 
     if (g0.scrubbing) {
-      const { mx, my } = canvasXY(g0.x, g0.y);
+      const { mx, my } = worldXY(g0.x, g0.y);
       armHit(hitTest(mx, my) || (scrubId ? { id: scrubId } : null), g0.x, g0.y);
       ignoreClicksUntil = performance.now() + 500;
       return;
@@ -890,7 +1152,7 @@ export function createSankeyView(
       return;
     }
 
-    const { mx, my } = canvasXY(e.clientX, e.clientY);
+    const { mx, my } = worldXY(e.clientX, e.clientY);
     const hit = hitTest(mx, my);
     if (hit) selectHit(hit);
   }
@@ -910,6 +1172,9 @@ export function createSankeyView(
     selectedId = null;
     armedId = null;
     scrubId = null;
+    deepLayoutSig = "";
+    resetCam();
+    pointers.clear();
     measure();
     paint();
     onFocusChange?.(focus);
@@ -959,6 +1224,8 @@ export function createSankeyView(
 
   function setOrientation(next) {
     orient = next === "top" ? "top" : "side";
+    deepLayoutSig = "";
+    resetCam();
     paint();
   }
 
@@ -983,6 +1250,7 @@ export function createSankeyView(
   function resize() {
     if (!treeData) return;
     measure();
+    clampCam();
     paint();
   }
 
@@ -997,6 +1265,10 @@ export function createSankeyView(
     canvas.removeEventListener("pointerleave", onPointerLeave);
     canvas.removeEventListener("click", onClick);
     canvas.removeEventListener("contextmenu", onContextMenu);
+    canvas.removeEventListener("wheel", onWheel);
+    canvas.removeEventListener("dblclick", onDblClick);
+    pointers.clear();
+    pinch = null;
     ro.disconnect();
     el.replaceChildren();
     delete el.dataset.orient;
@@ -1010,12 +1282,14 @@ export function createSankeyView(
   ro.observe(el);
 
   canvas.addEventListener("pointerdown", onPointerDown);
-  canvas.addEventListener("pointermove", onPointerMove);
+  canvas.addEventListener("pointermove", onPointerMove, { passive: false });
   canvas.addEventListener("pointerup", onPointerUp);
   canvas.addEventListener("pointercancel", onPointerUp);
   canvas.addEventListener("pointerleave", onPointerLeave);
   canvas.addEventListener("click", onClick);
   canvas.addEventListener("contextmenu", onContextMenu);
+  canvas.addEventListener("wheel", onWheel, { passive: false });
+  canvas.addEventListener("dblclick", onDblClick);
   canvas.setAttribute("draggable", "false");
 
   return {

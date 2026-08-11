@@ -93,7 +93,7 @@ export function atlasRail(rootOrData) {
 
 export const CONSTITUTION_FILL = "#8a9399";
 export const INK = "#2a3035";
-export const MAP_FIELD = "#e6e8eb";
+export const MAP_FIELD = "#c8cbd0";
 
 /** Stamp each data node with its constitutional door (Legislative / Executive / …). */
 export function stampDoorColors(root) {
