@@ -20,10 +20,10 @@
     "enrich:sam": "node scripts/enrich-sam.mjs",
     "enrich:usgm": "node scripts/enrich-usgm.mjs",
     "curate": "node scripts/curate-product-tree.mjs",
-    "build": "npm run fetch && npm run build:tree && npm run enrich:sam && npm run enrich:usgm && npm run fetch:heat && npm run enrich:heat && npm run curate",
+    "pipeline": "npm run fetch && npm run build:tree && npm run enrich:sam && npm run enrich:usgm && npm run fetch:heat && npm run enrich:heat && npm run curate",
     "serve": "python3 serve-https.py"
   },
   "engines": {
-    "node": ">=18"
+    "node": "20.x"
   }
 }

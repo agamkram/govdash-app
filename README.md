@@ -6,7 +6,7 @@ Citizen map of the **U.S. federal government** — cascading / pinch-to-zoom hie
 
 ```bash
 cd govdash-app
-npm run build:tree    # or full: npm run build
+npm run build:tree    # or full: npm run pipeline
 npm run serve         # or existing preview on :8799
 ```
 

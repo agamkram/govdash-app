@@ -45,6 +45,7 @@ Synthetic root: `id: "usa"` — Crosswalk has no single USA node; branches use `
 npm run fetch        # download Crosswalk JSON + CSV → data/raw/
 npm run build:tree   # nest → data/nested/gov-tree.json + samples/
 npm run curate       # full nest → gov-tree-full.json + gov-tree-product.json (map UI)
+npm run pipeline     # fetch + nest + enrich + curate (local; Vercel serves committed trees)
 npm run serve        # local HTTPS preview
 ```
 
