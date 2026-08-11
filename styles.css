@@ -27,6 +27,7 @@ body {
   overflow-x: hidden;
   overscroll-behavior: none;
   background: var(--bg);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .sr-only {
@@ -534,6 +535,7 @@ a.btn.linkish {
   -webkit-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .map[data-mode="tree"] {
@@ -563,6 +565,7 @@ a.btn.linkish {
   user-select: none;
   -webkit-touch-callout: none;
   -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .map.is-scrubbing {

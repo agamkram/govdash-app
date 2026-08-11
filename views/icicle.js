@@ -114,12 +114,17 @@ export function createIcicleView(
     return scrubId || armedId || selectedId;
   }
 
+  function liveTouchId() {
+    return scrubId || armedId;
+  }
+
   function paintArmedStroke() {
     const hid = highlightId();
+    const live = liveTouchId();
     g.selectAll("rect.icicle-rect")
       .attr("fill", (d) => cellFill(d, d.data.id === hid))
-      .attr("stroke", (d) => (d.data.id === hid ? INK : "rgba(0,0,0,0.22)"))
-      .attr("stroke-width", (d) => (d.data.id === hid ? 2.5 : 1));
+      .attr("stroke", (d) => (d.data.id === live ? INK : "rgba(0,0,0,0.22)"))
+      .attr("stroke-width", (d) => (d.data.id === live ? 2.5 : 1));
   }
 
   function previewUnderFinger(clientX, clientY, footer) {
@@ -236,15 +241,10 @@ export function createIcicleView(
     gesture.y = event.clientY;
     const dist = Math.hypot(gesture.x - gesture.startX, gesture.y - gesture.startY);
 
-    // Desktop: drag pans (no scrub)
     if (gesture.pointerType === "mouse") {
       if (dist > SLOP) {
         gesture.moved = true;
         ignoreClicksUntil = performance.now() + 100;
-        panX = gesture.pan0x + (gesture.x - gesture.startX);
-        panY = gesture.pan0y + (gesture.y - gesture.startY);
-        clampPan();
-        applyPan();
       }
       return;
     }
@@ -722,7 +722,11 @@ export function createIcicleView(
       .selectAll("g.icicle-cell")
       .data(visible, (d) => d.data.id)
       .join((enter) => {
-        const e = enter.append("g").attr("class", "icicle-cell").style("cursor", "pointer");
+        const e = enter
+          .append("g")
+          .attr("class", "icicle-cell")
+          .style("cursor", "pointer")
+          .style("-webkit-tap-highlight-color", "transparent");
         e.append("rect").attr("class", "icicle-rect");
         e.append("text").attr("class", "icicle-label").attr("dy", "0.35em");
         e.on("click", (event, d) => {
@@ -873,9 +877,9 @@ export function createIcicleView(
       .attr("fill", (d) => cellFill(d, d.data.id === highlightId()))
       .attr("fill-opacity", 1)
       .attr("stroke", (d) =>
-        d.data.id === highlightId() ? INK : "rgba(0,0,0,0.22)"
+        d.data.id === liveTouchId() ? INK : "rgba(0,0,0,0.22)"
       )
-      .attr("stroke-width", (d) => (d.data.id === highlightId() ? 2.5 : 1));
+      .attr("stroke-width", (d) => (d.data.id === liveTouchId() ? 2.5 : 1));
   }
 
   function styleSelected() {
