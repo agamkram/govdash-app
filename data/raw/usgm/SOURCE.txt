@@ -1,0 +1,6 @@
+U.S. Government Manual (GOVMAN) — govinfo bulk XML
+Source: https://www.govinfo.gov/bulkdata/GOVMAN
+Refresh: npm run fetch:usgm
+Parse:   npm run parse:usgm  → entities.json
+Enrich:  npm run enrich:usgm → sources.usgm on gov-tree.json
+Edition currently used: see manifest.json (latest year folder).

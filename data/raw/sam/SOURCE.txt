@@ -1,0 +1,7 @@
+SAM.gov Federal Hierarchy Public API
+Endpoint: https://api.sam.gov/prod/federalorganizations/v1/orgs
+Docs: https://open.gsa.gov/api/fh-public-api/
+Auth: SAM_API_KEY in project .env (Public API Key from sam.gov Account Details)
+Cached: departments-active.json — active Department/Ind. Agency records
+Refresh: npm run fetch:sam -- --force
+Note: Non-federal accounts ~10 requests/day; prefer cache.

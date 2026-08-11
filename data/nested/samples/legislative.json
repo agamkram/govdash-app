@@ -1,0 +1,1901 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-10T04:26:36.884Z",
+    "source": "GSA/FederalHierarchy-Crosswalk",
+    "recordCount": 1601,
+    "nodeCount": 1599,
+    "orphanCount": 1,
+    "orphans": [
+      {
+        "name": "US Alaskan Command (ALCOM)",
+        "parentName": "US Northern Command (NORTHCOM)"
+      }
+    ],
+    "sam": {
+      "enrichedAt": "2026-08-10T04:26:39.804Z",
+      "sourceFile": "data/raw/sam/departments-active.json",
+      "samFetchedAt": "2026-08-10T04:23:58.065Z",
+      "samOrgCount": 169,
+      "matched": 149,
+      "missed": 20,
+      "missedNames": [
+        "400 YEARS OF AFRICAN AMERICAN HISTORY COMMISSION",
+        "Congressional Office for International Leadership",
+        "FEDERAL HOME LOAN BANK BOARD",
+        "FEDERAL HOUSING FINANCE BOARD",
+        "FEDERAL PERMITTING IMPROVEMENT STEERING COUNCIL",
+        "GULF COAST ECOSYSTEM RESTORATION COUNCIL",
+        "INSTITUTE OF AMERICAN INDIAN AND ALASKA NATIVE CULTURE AND ARTS DEVELOPMENT",
+        "INTELLIGENCE COMMUNITY MANAGEMENT ACCOUNT",
+        "INTERAGENCY COUNCIL ON THE HOMELESS",
+        "INTERAGENCY COUNCIL ON THE HOMELESS",
+        "INTERSTATE COMMERCE COMMISSION",
+        "NATIONAL BIPARTISAN COMMISSION ON THE FUTURE OF MEDICARE",
+        "NATIONAL RAILROAD PASSENGER CORPORATION OFFICE OF INSPECTOR GENERAL",
+        "PUBLIC BUILDINGS REFORM BOARD",
+        "PUBLIC DEFENDER SERVICE FOR THE DISTRICT OF COLUMBIA (PDSDC)",
+        "SOUTHEAST CRESCENT REGIONAL COMMISSION",
+        "SOUTHWEST BORDER REGIONAL COMMISSION",
+        "Testing DEPT",
+        "THE LEGISLATIVE BRANCH",
+        "UNITED MINE WORKERS OF AMERICA BENEFIT FUNDS"
+      ]
+    },
+    "usgm": {
+      "enrichedAt": "2026-08-10T04:33:25.852Z",
+      "edition": "GOVMAN-2025-12-31",
+      "sourceFile": "data/raw/usgm/2025/GOVMAN-2025-12-31.xml",
+      "entityCount": 231,
+      "matched": 204,
+      "missed": 27,
+      "missedNames": [
+        "United States Agency for Global Media",
+        "African Development Bank",
+        "Inter-American Investment Corporation",
+        "World Bank Group",
+        "Congressional Research Service",
+        "Veterans' Employment and Training Service",
+        "Women's Bureau",
+        "The President",
+        "The Vice President",
+        "National Foundation on the Arts and the Humanities",
+        "Defense Agencies",
+        "United States Naval Academy",
+        "Defense Counterintelligence and Security Agency",
+        "Joint Service Schools",
+        "National Intelligence University",
+        "Federally Aided Corporations",
+        "National Technical Institute for the Deaf / Rochester Institute of Technology",
+        "Centers for Medicare and Medicaid Services",
+        "Bureaus",
+        "Offices / Boards",
+        "Bureau of Prisons",
+        "Foreign Claims Settlement Commission of the United States",
+        "Great Lakes Saint Lawrence Seaway Development Corporation",
+        "United States Geological Survey",
+        "International Centre for Settlement of Investment Disputes",
+        "Lower Courts",
+        "Special Courts"
+      ]
+    },
+    "heat": {
+      "enrichedAt": "2026-08-10T04:49:18.338Z",
+      "spendingMatched": 99,
+      "federalRegisterMatched": 60,
+      "nodesWithHeat": 379,
+      "formula": "0.55·logNorm(USAspending obligated) + 0.30·logNorm(FR docs since period) + 0.15·logNorm(descendants); parent roll-up = max(own, 0.92·max child)",
+      "sources": {
+        "usaspending": "data/raw/heat/usaspending-toptier.json",
+        "federalRegister": "data/raw/heat/federal-register-counts.json"
+      }
+    },
+    "sample": "Federal Legislative Branch"
+  },
+  "tree": {
+    "id": "gsa-1",
+    "name": "Federal Legislative Branch",
+    "short": null,
+    "kind": "branch",
+    "parentId": "usa",
+    "sources": {
+      "crosswalk": {
+        "gsaSfpKey": "1",
+        "gsaSfpName": "Federal Legislative Branch",
+        "gsaSfpEntityType": "Agency",
+        "parentName": "[Branch]",
+        "ombAgencyCode": null,
+        "ombBureauCode": null,
+        "treasuryAgencyCode": null,
+        "treasuryBureauCode": null,
+        "nistAgencyCode": "00",
+        "nistBureauCode": "00",
+        "cgacAgencyCode": null
+      },
+      "sam": null,
+      "usgm": null
+    },
+    "heat": {
+      "score": 0.4549,
+      "period": {
+        "spending": "2026-08-10T04:49:07.619Z",
+        "federalRegister": "2025-01-01"
+      },
+      "signals": {
+        "obligatedAmount": null,
+        "outlayAmount": null,
+        "spendingAgency": null,
+        "federalRegisterDocs": null,
+        "federalRegisterAgency": null,
+        "descendantCount": 22
+      },
+      "rolledUp": true
+    },
+    "children": [
+      {
+        "id": "gsa-1337",
+        "name": "Congressional Award Board",
+        "short": null,
+        "kind": "agency",
+        "parentId": "gsa-1",
+        "sources": {
+          "crosswalk": {
+            "gsaSfpKey": "1337",
+            "gsaSfpName": "Congressional Award Board",
+            "gsaSfpEntityType": "Agency",
+            "parentName": "Federal Legislative Branch",
+            "ombAgencyCode": null,
+            "ombBureauCode": null,
+            "treasuryAgencyCode": null,
+            "treasuryBureauCode": null,
+            "nistAgencyCode": "00",
+            "nistBureauCode": null,
+            "cgacAgencyCode": "009"
+          },
+          "sam": null,
+          "usgm": null
+        },
+        "heat": null,
+        "children": []
+      },
+      {
+        "id": "gsa-14",
+        "name": "Federal Library & Information Center Committee",
+        "short": null,
+        "kind": "bureau",
+        "parentId": "gsa-1",
+        "sources": {
+          "crosswalk": {
+            "gsaSfpKey": "14",
+            "gsaSfpName": "Federal Library & Information Center Committee",
+            "gsaSfpEntityType": "Bureau",
+            "parentName": "Federal Legislative Branch",
+            "ombAgencyCode": null,
+            "ombBureauCode": null,
+            "treasuryAgencyCode": null,
+            "treasuryBureauCode": null,
+            "nistAgencyCode": "03",
+            "nistBureauCode": "63",
+            "cgacAgencyCode": null
+          },
+          "sam": null,
+          "usgm": null
+        },
+        "heat": null,
+        "children": []
+      },
+      {
+        "id": "gsa-19",
+        "name": "John C. Stennis Center for Public Service Training and Development",
+        "short": null,
+        "kind": "agency",
+        "parentId": "gsa-1",
+        "sources": {
+          "crosswalk": {
+            "gsaSfpKey": "19",
+            "gsaSfpName": "John C. Stennis Center for Public Service Training and Development",
+            "gsaSfpEntityType": "Agency",
+            "parentName": "Federal Legislative Branch",
+            "ombAgencyCode": null,
+            "ombBureauCode": null,
+            "treasuryAgencyCode": null,
+            "treasuryBureauCode": null,
+            "nistAgencyCode": "09",
+            "nistBureauCode": "14",
+            "cgacAgencyCode": "009"
+          },
+          "sam": {
+            "matchedHow": "cgac-best",
+            "fhorgid": 300000702,
+            "fhorgname": "JOHN C. STENNIS CENTER FOR PUBLIC DEVELOPMENT",
+            "status": "ACTIVE",
+            "fhorgtype": "Department/Ind. Agency",
+            "agencycode": "0914",
+            "cgaclist": [
+              "009"
+            ],
+            "fhagencyorgname": "JOHN C STENNIS CENTER FOR PUBLIC DEVELOPMENT",
+            "lastupdateddate": "2019-11-21 23:04",
+            "createddate": "2017-12-11 15:45",
+            "fhfullparentpathname": "JOHN C STENNIS CENTER FOR PUBLIC DEVELOPMENT"
+          },
+          "usgm": null
+        },
+        "heat": null,
+        "children": []
+      },
+      {
+        "id": "gsa-21",
+        "name": "Permanent Committee for the Oliver Wendell Holmes Devise",
+        "short": null,
+        "kind": "agency",
+        "parentId": "gsa-1",
+        "sources": {
+          "crosswalk": {
+            "gsaSfpKey": "21",
+            "gsaSfpName": "Permanent Committee for the Oliver Wendell Holmes Devise",
+            "gsaSfpEntityType": "Agency",
+            "parentName": "Federal Legislative Branch",
+            "ombAgencyCode": null,
+            "ombBureauCode": null,
+            "treasuryAgencyCode": null,
+            "treasuryBureauCode": null,
+            "nistAgencyCode": "09",
+            "nistBureauCode": "62",
+            "cgacAgencyCode": null
+          },
+          "sam": null,
+          "usgm": null
+        },
+        "heat": null,
+        "children": []
+      },
+      {
+        "id": "gsa-6",
+        "name": "US Architect of the Capitol",
+        "short": null,
+        "kind": "agency",
+        "parentId": "gsa-1",
+        "sources": {
+          "crosswalk": {
+            "gsaSfpKey": "6",
+            "gsaSfpName": "US Architect of the Capitol",
+            "gsaSfpEntityType": "Agency",
+            "parentName": "Federal Legislative Branch",
+            "ombAgencyCode": 1,
+            "ombBureauCode": 15,
+            "treasuryAgencyCode": 1,
+            "treasuryBureauCode": null,
+            "nistAgencyCode": "01",
+            "nistBureauCode": "00",
+            "cgacAgencyCode": "001"
+          },
+          "sam": {
+            "matchedHow": "name",
+            "fhorgid": 300000004,
+            "fhorgname": "ARCHITECT OF THE CAPITOL",
+            "status": "ACTIVE",
+            "fhorgtype": "Department/Ind. Agency",
+            "agencycode": "0100",
+            "cgaclist": [
+              "001"
+            ],
+            "fhagencyorgname": "ARCHITECT OF THE CAPITOL",
+            "lastupdateddate": "2019-09-14 18:41",
+            "createddate": "2017-10-05 12:35",
+            "fhfullparentpathname": "ARCHITECT OF THE CAPITOL"
+          },
+          "usgm": {
+            "matchedHow": "name",
+            "edition": "GOVMAN-2025-12-31",
+            "entityId": "73",
+            "name": "Architect of the Capitol",
+            "category": "Legislative Branch",
+            "missionSummary": "The Architect of the Capitol maintains the U.S. Capitol and the buildings and grounds of the Capitol campus.",
+            "mission": [
+              "The Architect of the Capitol maintains the U.S. Capitol and the buildings and grounds of the Capitol campus."
+            ],
+            "organization": [],
+            "legalAuthority": [],
+            "leadership": [
+              {
+                "name": "Thomas J. Carroll III, Acting",
+                "title": "ARCHITECT OF THE CAPITOL",
+                "section": null
+              },
+              {
+                "name": "(vacancy)",
+                "title": "Deputy Architect of the Capitol",
+                "section": null
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": null
+              },
+              {
+                "name": null,
+                "title": "DIRECTORS",
+                "section": null
+              },
+              {
+                "name": "Erin Courtney, Acting",
+                "title": "Communications and Congressional Relations",
+                "section": null
+              },
+              {
+                "name": "Patricia Williams",
+                "title": "Safety, Fire and Environmental Programs",
+                "section": null
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": null
+              },
+              {
+                "name": "Jason Baltimore",
+                "title": "General Counsel",
+                "section": null
+              },
+              {
+                "name": null,
+                "title": "CHIEF EXECUTIVE OFFICER FOR VISITOR SERVICES",
+                "section": "Jurisdictions Reporting to the Architect"
+              },
+              {
+                "name": "Beth Plemmons",
+                "title": "U.S. Capitol Visitor Center",
+                "section": "Jurisdictions Reporting to the Architect"
+              },
+              {
+                "name": null,
+                "title": "EXECUTIVE DIRECTOR",
+                "section": null
+              },
+              {
+                "name": "Saharah Moon Chapotin",
+                "title": "U.S. Botanic Garden",
+                "section": null
+              },
+              {
+                "name": "(vacancy)",
+                "title": "CHIEF OPERATING OFFICER",
+                "section": "OPERATIONS"
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": "OPERATIONS"
+              },
+              {
+                "name": null,
+                "title": "CHIEF OFFICERS",
+                "section": "OPERATIONS"
+              },
+              {
+                "name": "William R. O'Donnell",
+                "title": "Administrative",
+                "section": "OPERATIONS"
+              },
+              {
+                "name": "Jonathan Kraft, Acting",
+                "title": "Financial",
+                "section": "OPERATIONS"
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": "OPERATIONS"
+              },
+              {
+                "name": null,
+                "title": "DIRECTOR",
+                "section": "OPERATIONS"
+              },
+              {
+                "name": "Peter W. Mueller",
+                "title": "Planning and Project Management",
+                "section": "OPERATIONS"
+              }
+            ],
+            "web": "http://www.aoc.gov",
+            "phone": "202-228-1793",
+            "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
+          }
+        },
+        "heat": {
+          "score": 0,
+          "period": {
+            "spending": "2026-08-10T04:49:07.619Z",
+            "federalRegister": "2025-01-01"
+          },
+          "signals": {
+            "obligatedAmount": null,
+            "outlayAmount": null,
+            "spendingAgency": null,
+            "federalRegisterDocs": 0,
+            "federalRegisterAgency": "Architect of the Capitol",
+            "descendantCount": 0
+          },
+          "rolledUp": false
+        },
+        "children": []
+      },
+      {
+        "id": "gsa-17",
+        "name": "US Botanic Garden",
+        "short": null,
+        "kind": "agency",
+        "parentId": "gsa-1",
+        "sources": {
+          "crosswalk": {
+            "gsaSfpKey": "17",
+            "gsaSfpName": "US Botanic Garden",
+            "gsaSfpEntityType": "Agency",
+            "parentName": "Federal Legislative Branch",
+            "ombAgencyCode": 1,
+            "ombBureauCode": 18,
+            "treasuryAgencyCode": 9,
+            "treasuryBureauCode": null,
+            "nistAgencyCode": "09",
+            "nistBureauCode": "02",
+            "cgacAgencyCode": "009"
+          },
+          "sam": {
+            "matchedHow": "name",
+            "fhorgid": 300000008,
+            "fhorgname": "BOTANIC GARDEN",
+            "status": "ACTIVE",
+            "fhorgtype": "Department/Ind. Agency",
+            "agencycode": "0902",
+            "cgaclist": [
+              "009"
+            ],
+            "fhagencyorgname": "BOTANIC GARDEN",
+            "lastupdateddate": "2019-11-21 23:04",
+            "createddate": "2017-10-05 12:35",
+            "fhfullparentpathname": "BOTANIC GARDEN"
+          },
+          "usgm": {
+            "matchedHow": "name",
+            "edition": "GOVMAN-2025-12-31",
+            "entityId": "74",
+            "name": "United States Botanic Garden",
+            "category": "Legislative Branch",
+            "missionSummary": "The United States Botanic Garden demonstrates the essential contribution that plants make aesthetically, culturally, ecologically, economically, and therapeutically, to the well-being of humankind, and it supports partnerships, nationally and internationally, by fostering exchanges of information and ideas.",
+            "mission": [
+              "The United States Botanic Garden demonstrates the essential contribution that plants make aesthetically, culturally, ecologically, economically, and therapeutically, to the well-being of humankind, and it supports partnerships, nationally and internationally, by fostering exchanges of information and ideas."
+            ],
+            "organization": [],
+            "legalAuthority": [],
+            "leadership": [
+              {
+                "name": null,
+                "title": "(vacancy)",
+                "section": "ACTING DIRECTOR"
+              },
+              {
+                "name": null,
+                "title": "Saharah Moon Chapotin",
+                "section": "EXECUTIVE DIRECTOR"
+              }
+            ],
+            "web": "http://www.usbg.gov",
+            "phone": "202-226-8333",
+            "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
+          }
+        },
+        "heat": null,
+        "children": []
+      },
+      {
+        "id": "gsa-1358",
+        "name": "US Capitol Police",
+        "short": null,
+        "kind": "bureau",
+        "parentId": "gsa-1",
+        "sources": {
+          "crosswalk": {
+            "gsaSfpKey": "1358",
+            "gsaSfpName": "US Capitol Police",
+            "gsaSfpEntityType": "Bureau",
+            "parentName": "Federal Legislative Branch",
+            "ombAgencyCode": 1,
+            "ombBureauCode": 13,
+            "treasuryAgencyCode": 2,
+            "treasuryBureauCode": null,
+            "nistAgencyCode": "00",
+            "nistBureauCode": null,
+            "cgacAgencyCode": "002"
+          },
+          "sam": null,
+          "usgm": null
+        },
+        "heat": null,
+        "children": []
+      },
+      {
+        "id": "gsa-22",
+        "name": "US Capitol Preservation Commission",
+        "short": null,
+        "kind": "agency",
+        "parentId": "gsa-1",
+        "sources": {
+          "crosswalk": {
+            "gsaSfpKey": "22",
+            "gsaSfpName": "US Capitol Preservation Commission",
+            "gsaSfpEntityType": "Agency",
+            "parentName": "Federal Legislative Branch",
+            "ombAgencyCode": null,
+            "ombBureauCode": null,
+            "treasuryAgencyCode": null,
+            "treasuryBureauCode": null,
+            "nistAgencyCode": "09",
+            "nistBureauCode": "29",
+            "cgacAgencyCode": "009"
+          },
+          "sam": null,
+          "usgm": null
+        },
+        "heat": null,
+        "children": []
+      },
+      {
+        "id": "gsa-18",
+        "name": "US Commission on Security and Cooperation in Europe (CSCE)",
+        "short": "CSCE",
+        "kind": "agency",
+        "parentId": "gsa-1",
+        "sources": {
+          "crosswalk": {
+            "gsaSfpKey": "18",
+            "gsaSfpName": "US Commission on Security and Cooperation in Europe (CSCE)",
+            "gsaSfpEntityType": "Agency",
+            "parentName": "Federal Legislative Branch",
+            "ombAgencyCode": null,
+            "ombBureauCode": null,
+            "treasuryAgencyCode": null,
+            "treasuryBureauCode": null,
+            "nistAgencyCode": "09",
+            "nistBureauCode": "01",
+            "cgacAgencyCode": "009"
+          },
+          "sam": {
+            "matchedHow": "name",
+            "fhorgid": 300000695,
+            "fhorgname": "COMMISSION ON SECURITY AND COOPERATION IN EUROPE",
+            "status": "ACTIVE",
+            "fhorgtype": "Department/Ind. Agency",
+            "agencycode": "0901",
+            "cgaclist": [
+              "009"
+            ],
+            "fhagencyorgname": "COMMISSION ON SECURITY AND COOPERATION IN EUROPE",
+            "lastupdateddate": "2019-11-21 23:04",
+            "createddate": "2017-12-19 13:16",
+            "fhfullparentpathname": "COMMISSION ON SECURITY AND COOPERATION IN EUROPE"
+          },
+          "usgm": null
+        },
+        "heat": null,
+        "children": []
+      },
+      {
+        "id": "gsa-2",
+        "name": "US Congress",
+        "short": "CONGRESS",
+        "kind": "agency",
+        "parentId": "gsa-1",
+        "sources": {
+          "crosswalk": {
+            "gsaSfpKey": "2",
+            "gsaSfpName": "US Congress",
+            "gsaSfpEntityType": "Agency",
+            "parentName": "Federal Legislative Branch",
+            "ombAgencyCode": null,
+            "ombBureauCode": null,
+            "treasuryAgencyCode": null,
+            "treasuryBureauCode": null,
+            "nistAgencyCode": "00",
+            "nistBureauCode": "01",
+            "cgacAgencyCode": "000"
+          },
+          "sam": null,
+          "usgm": {
+            "matchedHow": "alias",
+            "edition": "GOVMAN-2025-12-31",
+            "entityId": "70",
+            "name": "Congress",
+            "category": "Legislative Branch",
+            "missionSummary": "The Congress of the United States was created by Article I, section 1, of the Constitution, adopted by the Constitutional Convention on September 17, 1787, providing that “All legislative Powers herein granted shall be vested in a Congress of the United States, which shall consist of a Senate and House of Representatives.\"",
+            "mission": [
+              "The Congress of the United States was created by Article I, section 1, of the Constitution, adopted by the Constitutional Convention on September 17, 1787, providing that “All legislative Powers herein granted shall be vested in a Congress of the United States, which shall consist of a Senate and House of Representatives.\"",
+              "The first Congress under the Constitution met on March 4, 1789, in the Federal Hall in New York City. The membership then consisted of 20 Senators and 59 Representatives.*"
+            ],
+            "organization": [],
+            "legalAuthority": [],
+            "leadership": [
+              {
+                "name": "J.D. Vance",
+                "title": "President of the Senate / Vice President of the United States",
+                "section": "Constitutionally Mandated Officers"
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": "Constitutionally Mandated Officers"
+              },
+              {
+                "name": "Charles Grassley",
+                "title": "President pro tempore",
+                "section": "Constitutionally Mandated Officers"
+              },
+              {
+                "name": "Charles E. Schumer",
+                "title": "Majority Leader—Democrat",
+                "section": "Political Party Leaders"
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": "Political Party Leaders"
+              },
+              {
+                "name": "A. Mitchell McConnell",
+                "title": "Minority Leader—Republican",
+                "section": "Political Party Leaders"
+              },
+              {
+                "name": "Barry C. Black",
+                "title": "Chaplain",
+                "section": "Senate-Elected Officers and Officials"
+              },
+              {
+                "name": "Elizabeth C. MacDonough",
+                "title": "Parliamentarian",
+                "section": "Senate-Elected Officers and Officials"
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": "Senate-Elected Officers and Officials"
+              },
+              {
+                "name": null,
+                "title": "SECRETARIES",
+                "section": "Senate-Elected Officers and Officials"
+              },
+              {
+                "name": "Gary B. Myrick",
+                "title": "for the Majority",
+                "section": "Senate-Elected Officers and Officials"
+              },
+              {
+                "name": "Robert M. Duncan",
+                "title": "for the Minority",
+                "section": "Senate-Elected Officers and Officials"
+              },
+              {
+                "name": "Sonceria Berry",
+                "title": "for the Senate",
+                "section": "Senate-Elected Officers and Officials"
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": "Senate-Elected Officers and Officials"
+              },
+              {
+                "name": "Jennifer A. Hemingway, Acting",
+                "title": "Sergeant at Arms",
+                "section": "Senate-Elected Officers and Officials"
+              },
+              {
+                "name": "Mike Johnson",
+                "title": "Speaker of the House",
+                "section": "CONSTITUTIONALLY MANDATED OFFICER"
+              },
+              {
+                "name": "Steve Scalise",
+                "title": "Majority Leader",
+                "section": "POLITICAL PARTY LEADERS"
+              },
+              {
+                "name": "Hakeem Jeffries",
+                "title": "Minority Leader",
+                "section": "POLITICAL PARTY LEADERS"
+              },
+              {
+                "name": "Matthew Berry",
+                "title": "General Counsel",
+                "section": "Appointed Officials"
+              },
+              {
+                "name": "Matthew A. Wasniewski",
+                "title": "Historian",
+                "section": "Appointed Officials"
+              }
+            ],
+            "web": "http://www.congress.gov",
+            "phone": "202-224-3121",
+            "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
+          }
+        },
+        "heat": {
+          "score": 0.094,
+          "period": {
+            "spending": "2026-08-10T04:49:07.619Z",
+            "federalRegister": "2025-01-01"
+          },
+          "signals": {
+            "obligatedAmount": null,
+            "outlayAmount": null,
+            "spendingAgency": null,
+            "federalRegisterDocs": null,
+            "federalRegisterAgency": null,
+            "descendantCount": 3
+          },
+          "rolledUp": false
+        },
+        "children": [
+          {
+            "id": "gsa-5",
+            "name": "Joint House and Senate Entities",
+            "short": null,
+            "kind": "carrier",
+            "parentId": "gsa-2",
+            "sources": {
+              "crosswalk": {
+                "gsaSfpKey": "5",
+                "gsaSfpName": "Joint House and Senate Entities",
+                "gsaSfpEntityType": "Carrier",
+                "parentName": "US Congress",
+                "ombAgencyCode": null,
+                "ombBureauCode": null,
+                "treasuryAgencyCode": null,
+                "treasuryBureauCode": null,
+                "nistAgencyCode": "00",
+                "nistBureauCode": "99",
+                "cgacAgencyCode": "000"
+              },
+              "sam": null,
+              "usgm": null
+            },
+            "heat": null,
+            "children": []
+          },
+          {
+            "id": "gsa-4",
+            "name": "US House of Representatives",
+            "short": null,
+            "kind": "agency",
+            "parentId": "gsa-2",
+            "sources": {
+              "crosswalk": {
+                "gsaSfpKey": "4",
+                "gsaSfpName": "US House of Representatives",
+                "gsaSfpEntityType": "Agency",
+                "parentName": "US Congress",
+                "ombAgencyCode": 1,
+                "ombBureauCode": 10,
+                "treasuryAgencyCode": null,
+                "treasuryBureauCode": 5,
+                "nistAgencyCode": "00",
+                "nistBureauCode": "50",
+                "cgacAgencyCode": "000"
+              },
+              "sam": {
+                "matchedHow": "name",
+                "fhorgid": 300000003,
+                "fhorgname": "HOUSE OF REPRESENTATIVES, THE",
+                "status": "ACTIVE",
+                "fhorgtype": "Department/Ind. Agency",
+                "agencycode": "0050",
+                "cgaclist": [
+                  "000"
+                ],
+                "fhagencyorgname": "HOUSE OF REPRESENTATIVES, THE",
+                "lastupdateddate": "2020-07-20 22:16",
+                "createddate": "2017-10-05 12:35",
+                "fhfullparentpathname": "HOUSE OF REPRESENTATIVES, THE"
+              },
+              "usgm": {
+                "matchedHow": "alias",
+                "edition": "GOVMAN-2025-12-31",
+                "entityId": "72",
+                "name": "The House of Representatives",
+                "category": "Legislative Branch",
+                "missionSummary": null,
+                "mission": [],
+                "organization": [],
+                "legalAuthority": [],
+                "leadership": [
+                  {
+                    "name": "Mike Johnson",
+                    "title": "Speaker of the House",
+                    "section": "CONSTITUTIONALLY MANDATED OFFICER"
+                  },
+                  {
+                    "name": "Steve Scalise",
+                    "title": "Majority Leader",
+                    "section": "POLITICAL PARTY LEADERS"
+                  },
+                  {
+                    "name": "Hakeem Jeffries",
+                    "title": "Minority Leader",
+                    "section": "POLITICAL PARTY LEADERS"
+                  },
+                  {
+                    "name": "Matthew Berry",
+                    "title": "General Counsel",
+                    "section": "Appointed Officials"
+                  },
+                  {
+                    "name": "Matthew A. Wasniewski",
+                    "title": "Historian",
+                    "section": "Appointed Officials"
+                  },
+                  {
+                    "name": "Michael Ptasienski",
+                    "title": "Inspector General",
+                    "section": "Appointed Officials"
+                  },
+                  {
+                    "name": "Jason A. Smith",
+                    "title": "Parliamentarian",
+                    "section": "Appointed Officials"
+                  },
+                  {
+                    "name": "Margaret G. Kibben",
+                    "title": "Chaplain",
+                    "section": "Elected Officers"
+                  },
+                  {
+                    "name": "Catherine L. Szpindor",
+                    "title": "Chief Administrative Officer",
+                    "section": "Elected Officers"
+                  },
+                  {
+                    "name": "Kevin F. McCumber",
+                    "title": "Clerk",
+                    "section": "Elected Officers"
+                  },
+                  {
+                    "name": "William McFarland",
+                    "title": "Sergeant at Arms",
+                    "section": "Elected Officers"
+                  }
+                ],
+                "web": "http://www.house.gov",
+                "phone": "202-225-3121",
+                "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
+              }
+            },
+            "heat": null,
+            "children": []
+          },
+          {
+            "id": "gsa-3",
+            "name": "US Senate",
+            "short": null,
+            "kind": "agency",
+            "parentId": "gsa-2",
+            "sources": {
+              "crosswalk": {
+                "gsaSfpKey": "3",
+                "gsaSfpName": "US Senate",
+                "gsaSfpEntityType": "Agency",
+                "parentName": "US Congress",
+                "ombAgencyCode": 1,
+                "ombBureauCode": 5,
+                "treasuryAgencyCode": null,
+                "treasuryBureauCode": 19,
+                "nistAgencyCode": "00",
+                "nistBureauCode": "10",
+                "cgacAgencyCode": "000"
+              },
+              "sam": {
+                "matchedHow": "name",
+                "fhorgid": 300000002,
+                "fhorgname": "SENATE, THE",
+                "status": "ACTIVE",
+                "fhorgtype": "Department/Ind. Agency",
+                "agencycode": "0010",
+                "cgaclist": [
+                  "000"
+                ],
+                "fhagencyorgname": "SENATE, THE",
+                "lastupdateddate": "2019-11-21 23:04",
+                "createddate": "2017-10-05 12:35",
+                "fhfullparentpathname": "SENATE, THE"
+              },
+              "usgm": {
+                "matchedHow": "alias",
+                "edition": "GOVMAN-2025-12-31",
+                "entityId": "202",
+                "name": "The Senate",
+                "category": "Legislative Branch",
+                "missionSummary": null,
+                "mission": [],
+                "organization": [],
+                "legalAuthority": [],
+                "leadership": [
+                  {
+                    "name": "J.D. Vance",
+                    "title": "President of the Senate / Vice President of the United States",
+                    "section": "Constitutionally Mandated Officers"
+                  },
+                  {
+                    "name": null,
+                    "title": "-----------------------------",
+                    "section": "Constitutionally Mandated Officers"
+                  },
+                  {
+                    "name": "Charles Grassley",
+                    "title": "President pro tempore",
+                    "section": "Constitutionally Mandated Officers"
+                  },
+                  {
+                    "name": "Charles E. Schumer",
+                    "title": "Majority Leader—Democrat",
+                    "section": "Political Party Leaders"
+                  },
+                  {
+                    "name": null,
+                    "title": "-----------------------------",
+                    "section": "Political Party Leaders"
+                  },
+                  {
+                    "name": "A. Mitchell McConnell",
+                    "title": "Minority Leader—Republican",
+                    "section": "Political Party Leaders"
+                  },
+                  {
+                    "name": "Barry C. Black",
+                    "title": "Chaplain",
+                    "section": "Senate-Elected Officers and Officials"
+                  },
+                  {
+                    "name": "Elizabeth C. MacDonough",
+                    "title": "Parliamentarian",
+                    "section": "Senate-Elected Officers and Officials"
+                  },
+                  {
+                    "name": null,
+                    "title": "-----------------------------",
+                    "section": "Senate-Elected Officers and Officials"
+                  },
+                  {
+                    "name": null,
+                    "title": "SECRETARIES",
+                    "section": "Senate-Elected Officers and Officials"
+                  },
+                  {
+                    "name": "Gary B. Myrick",
+                    "title": "for the Majority",
+                    "section": "Senate-Elected Officers and Officials"
+                  },
+                  {
+                    "name": "Robert M. Duncan",
+                    "title": "for the Minority",
+                    "section": "Senate-Elected Officers and Officials"
+                  },
+                  {
+                    "name": "Sonceria Berry",
+                    "title": "for the Senate",
+                    "section": "Senate-Elected Officers and Officials"
+                  },
+                  {
+                    "name": null,
+                    "title": "-----------------------------",
+                    "section": "Senate-Elected Officers and Officials"
+                  },
+                  {
+                    "name": "Jennifer A. Hemingway, Acting",
+                    "title": "Sergeant at Arms",
+                    "section": "Senate-Elected Officers and Officials"
+                  }
+                ],
+                "web": "http://www.senate.gov",
+                "phone": "202-224-3121",
+                "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
+              }
+            },
+            "heat": null,
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "gsa-7",
+        "name": "US Congressional Budget Office (CBO)",
+        "short": "CBO",
+        "kind": "agency",
+        "parentId": "gsa-1",
+        "sources": {
+          "crosswalk": {
+            "gsaSfpKey": "7",
+            "gsaSfpName": "US Congressional Budget Office (CBO)",
+            "gsaSfpEntityType": "Agency",
+            "parentName": "Federal Legislative Branch",
+            "ombAgencyCode": 1,
+            "ombBureauCode": 14,
+            "treasuryAgencyCode": 8,
+            "treasuryBureauCode": null,
+            "nistAgencyCode": "08",
+            "nistBureauCode": "00",
+            "cgacAgencyCode": "008"
+          },
+          "sam": {
+            "matchedHow": "name",
+            "fhorgid": 300000007,
+            "fhorgname": "CONGRESSIONAL BUDGET OFFICE",
+            "status": "ACTIVE",
+            "fhorgtype": "Department/Ind. Agency",
+            "agencycode": "0800",
+            "cgaclist": [
+              "008"
+            ],
+            "fhagencyorgname": "CONGRESSIONAL BUDGET OFFICE",
+            "lastupdateddate": "2019-11-21 23:04",
+            "createddate": "2017-10-05 12:35",
+            "fhfullparentpathname": "CONGRESSIONAL BUDGET OFFICE"
+          },
+          "usgm": {
+            "matchedHow": "name",
+            "edition": "GOVMAN-2025-12-31",
+            "entityId": "79",
+            "name": "Congressional Budget Office",
+            "category": "Legislative Branch",
+            "missionSummary": "The Congressional Budget Office independently analyzes budgetary and economic issues to support the congressional budget process.",
+            "mission": [
+              "The Congressional Budget Office independently analyzes budgetary and economic issues to support the congressional budget process."
+            ],
+            "organization": [],
+            "legalAuthority": [],
+            "leadership": [
+              {
+                "name": "Phillip L. Swagel",
+                "title": "DIRECTOR",
+                "section": "Office of the Director"
+              },
+              {
+                "name": "Mark P. Hadley",
+                "title": "Deputy Director",
+                "section": "Office of the Director"
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": "Office of the Director"
+              },
+              {
+                "name": "(vacancy)",
+                "title": "General Counsel",
+                "section": "Office of the Director"
+              },
+              {
+                "name": "Robert A. Sunshine",
+                "title": "Senior Advisor",
+                "section": "Office of the Director"
+              },
+              {
+                "name": null,
+                "title": "ASSOCIATE DIRECTORS",
+                "section": null
+              },
+              {
+                "name": "Deborah Kilroe",
+                "title": "Communications",
+                "section": null
+              },
+              {
+                "name": "Wendy Edelberg",
+                "title": "Economic Analysis",
+                "section": null
+              },
+              {
+                "name": "Jeffrey Kling",
+                "title": null,
+                "section": null
+              },
+              {
+                "name": "Leigh Angres",
+                "title": "Legislative Affairs",
+                "section": null
+              },
+              {
+                "name": null,
+                "title": "ASSISTANT DIRECTORS",
+                "section": "Other Divisions"
+              },
+              {
+                "name": "Theresa A. Gullo",
+                "title": "Budget Analysis",
+                "section": "Other Divisions"
+              },
+              {
+                "name": "Sebastien Gay",
+                "title": "Financial Analysis",
+                "section": "Other Divisions"
+              },
+              {
+                "name": "David Weaver",
+                "title": "Health, Retirement, and Long-Term Analysis",
+                "section": "Other Divisions"
+              },
+              {
+                "name": "Jeffrey F. Werling",
+                "title": "Macroeconomic Analysis",
+                "section": "Other Divisions"
+              },
+              {
+                "name": "Joseph Kile",
+                "title": "Assistant Director, Microeconomic Studies",
+                "section": "Other Divisions"
+              },
+              {
+                "name": "David E. Mosher",
+                "title": "National Security",
+                "section": "Other Divisions"
+              },
+              {
+                "name": "John McClelland",
+                "title": "Tax Analysis",
+                "section": "Other Divisions"
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": "Other Divisions"
+              },
+              {
+                "name": null,
+                "title": "CHIEF ADMINISTRATIVE OFFICER",
+                "section": "Other Divisions"
+              }
+            ],
+            "web": "http://www.cbo.gov",
+            "phone": "202-226-2600",
+            "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
+          }
+        },
+        "heat": {
+          "score": 0,
+          "period": {
+            "spending": "2026-08-10T04:49:07.619Z",
+            "federalRegister": "2025-01-01"
+          },
+          "signals": {
+            "obligatedAmount": null,
+            "outlayAmount": null,
+            "spendingAgency": null,
+            "federalRegisterDocs": 0,
+            "federalRegisterAgency": "Congressional Budget Office",
+            "descendantCount": 0
+          },
+          "rolledUp": false
+        },
+        "children": []
+      },
+      {
+        "id": "gsa-1359",
+        "name": "US Congressional Office of Compliance (OOC)",
+        "short": "OOC",
+        "kind": "bureau",
+        "parentId": "gsa-1",
+        "sources": {
+          "crosswalk": {
+            "gsaSfpKey": "1359",
+            "gsaSfpName": "US Congressional Office of Compliance (OOC)",
+            "gsaSfpEntityType": "Bureau",
+            "parentName": "Federal Legislative Branch",
+            "ombAgencyCode": 1,
+            "ombBureauCode": 12,
+            "treasuryAgencyCode": 9,
+            "treasuryBureauCode": null,
+            "nistAgencyCode": "00",
+            "nistBureauCode": null,
+            "cgacAgencyCode": "009"
+          },
+          "sam": null,
+          "usgm": null
+        },
+        "heat": null,
+        "children": []
+      },
+      {
+        "id": "gsa-16",
+        "name": "US Court of Appeals for Veterans Claims (CAVC)",
+        "short": "CAVC",
+        "kind": "agency",
+        "parentId": "gsa-1",
+        "sources": {
+          "crosswalk": {
+            "gsaSfpKey": "16",
+            "gsaSfpName": "US Court of Appeals for Veterans Claims (CAVC)",
+            "gsaSfpEntityType": "Agency",
+            "parentName": "Federal Legislative Branch",
+            "ombAgencyCode": 345,
+            "ombBureauCode": null,
+            "treasuryAgencyCode": 95,
+            "treasuryBureauCode": 39,
+            "nistAgencyCode": "95",
+            "nistBureauCode": "93",
+            "cgacAgencyCode": "345"
+          },
+          "sam": {
+            "matchedHow": "cgac-agency",
+            "fhorgid": 300000083,
+            "fhorgname": "U.S. COURT OF VETERAN APPEALS",
+            "status": "ACTIVE",
+            "fhorgtype": "Department/Ind. Agency",
+            "agencycode": "9593",
+            "cgaclist": [
+              "345"
+            ],
+            "fhagencyorgname": "US COURT OF VETERAN APPEALS",
+            "lastupdateddate": "2019-11-21 23:04",
+            "createddate": "2017-10-05 12:35",
+            "fhfullparentpathname": "US COURT OF VETERAN APPEALS"
+          },
+          "usgm": {
+            "matchedHow": "name",
+            "edition": "GOVMAN-2025-12-31",
+            "entityId": "92",
+            "name": "United States Court of Appeals for Veterans Claims",
+            "category": "Judicial Branch",
+            "missionSummary": null,
+            "mission": [],
+            "organization": [],
+            "legalAuthority": [],
+            "leadership": [],
+            "web": "http://www.uscourts.cavc.gov",
+            "phone": "202-501-5970",
+            "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
+          }
+        },
+        "heat": {
+          "score": 0.4802,
+          "period": {
+            "spending": "2026-08-10T04:49:07.619Z",
+            "federalRegister": "2025-01-01"
+          },
+          "signals": {
+            "obligatedAmount": 35139395.03,
+            "outlayAmount": 33000606.14,
+            "spendingAgency": "United States Court of Appeals for Veterans Claims",
+            "federalRegisterDocs": null,
+            "federalRegisterAgency": null,
+            "descendantCount": 0
+          },
+          "rolledUp": false
+        },
+        "children": []
+      },
+      {
+        "id": "gsa-8",
+        "name": "US Government Accountability Office (GAO)",
+        "short": "GAO",
+        "kind": "agency",
+        "parentId": "gsa-1",
+        "sources": {
+          "crosswalk": {
+            "gsaSfpKey": "8",
+            "gsaSfpName": "US Government Accountability Office (GAO)",
+            "gsaSfpEntityType": "Agency",
+            "parentName": "Federal Legislative Branch",
+            "ombAgencyCode": 1,
+            "ombBureauCode": 35,
+            "treasuryAgencyCode": 5,
+            "treasuryBureauCode": null,
+            "nistAgencyCode": "05",
+            "nistBureauCode": "00",
+            "cgacAgencyCode": "005"
+          },
+          "sam": {
+            "matchedHow": "name",
+            "fhorgid": 300000006,
+            "fhorgname": "GOVERNMENT ACCOUNTABILITY OFFICE",
+            "status": "ACTIVE",
+            "fhorgtype": "Department/Ind. Agency",
+            "agencycode": "0500",
+            "cgaclist": [
+              "005"
+            ],
+            "fhagencyorgname": "GOVERNMENT ACCOUNTABILITY OFFICE",
+            "lastupdateddate": "2021-08-02 06:17",
+            "createddate": "2017-10-05 12:35",
+            "fhfullparentpathname": "GOVERNMENT ACCOUNTABILITY OFFICE"
+          },
+          "usgm": {
+            "matchedHow": "name",
+            "edition": "GOVMAN-2025-12-31",
+            "entityId": "75",
+            "name": "Government Accountability Office",
+            "category": "Legislative Branch",
+            "missionSummary": "The Government Accountability Office helps the Congress fulfill its constitutional responsibilities and heightens the Federal Government's accountability and performance.",
+            "mission": [
+              "The Government Accountability Office helps the Congress fulfill its constitutional responsibilities and heightens the Federal Government's accountability and performance."
+            ],
+            "organization": [],
+            "legalAuthority": [],
+            "leadership": [
+              {
+                "name": "Gene L. Dodaro",
+                "title": "COMPTROLLER GENERAL OF THE UNITED STATES",
+                "section": null
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": null
+              },
+              {
+                "name": null,
+                "title": "STAFF OFFICES—Managing Directors",
+                "section": null
+              },
+              {
+                "name": "Orice Williams Brown",
+                "title": "Congressional Relations",
+                "section": null
+              },
+              {
+                "name": "Edda Emmanuelli-Perez",
+                "title": "Opportunity and Inclusiveness",
+                "section": null
+              },
+              {
+                "name": "Charles Young",
+                "title": "Public Affairs",
+                "section": null
+              },
+              {
+                "name": "James-Christian Blockwood",
+                "title": "Strategic Planning and External Liaison",
+                "section": null
+              },
+              {
+                "name": "Katherine A. Siggerud",
+                "title": "CHIEF OPERATING OFFICER",
+                "section": null
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": null
+              },
+              {
+                "name": "Timothy P. Bowling",
+                "title": "Chief Quality Officer",
+                "section": null
+              },
+              {
+                "name": "Patricia McClure",
+                "title": "Managing Director of the Continuous Process Improvement Office",
+                "section": null
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": null
+              },
+              {
+                "name": null,
+                "title": "MISSION TEAMS—Managing Directors",
+                "section": null
+              },
+              {
+                "name": "Nancy Kingsbury",
+                "title": "Applied Research and Methods",
+                "section": null
+              },
+              {
+                "name": "Michele Mackin",
+                "title": "Contracting and National Security Acquisitions",
+                "section": null
+              },
+              {
+                "name": "Cathleen A. Berrick",
+                "title": "Defense Capabilities and Management",
+                "section": null
+              },
+              {
+                "name": "Barbara D. Bovbjerg",
+                "title": "Education, Workforce, and Income Security",
+                "section": null
+              },
+              {
+                "name": "J. Lawrence Malenich",
+                "title": "Financial Management and Assurance",
+                "section": null
+              },
+              {
+                "name": "Lawrance Evans, Jr.",
+                "title": "Financial Markets and Community Investment",
+                "section": null
+              },
+              {
+                "name": "Johana R. Ayers",
+                "title": "Forensic Audits and Investigative Service",
+                "section": null
+              }
+            ],
+            "web": "http://www.gao.gov",
+            "phone": "202-512-3000",
+            "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
+          }
+        },
+        "heat": {
+          "score": 0.4945,
+          "period": {
+            "spending": "2026-08-10T04:49:07.619Z",
+            "federalRegister": "2025-01-01"
+          },
+          "signals": {
+            "obligatedAmount": 662462140.19,
+            "outlayAmount": 649726259.39,
+            "spendingAgency": "Government Accountability Office",
+            "federalRegisterDocs": 8,
+            "federalRegisterAgency": "Government Accountability Office",
+            "descendantCount": 2
+          },
+          "rolledUp": false
+        },
+        "children": [
+          {
+            "id": "gsa-9",
+            "name": "Comptroller General of the United States",
+            "short": null,
+            "kind": "bureau",
+            "parentId": "gsa-8",
+            "sources": {
+              "crosswalk": {
+                "gsaSfpKey": "9",
+                "gsaSfpName": "Comptroller General of the United States",
+                "gsaSfpEntityType": "Bureau",
+                "parentName": "US Government Accountability Office (GAO)",
+                "ombAgencyCode": 1,
+                "ombBureauCode": 35,
+                "treasuryAgencyCode": 5,
+                "treasuryBureauCode": null,
+                "nistAgencyCode": "05",
+                "nistBureauCode": "01",
+                "cgacAgencyCode": "005"
+              },
+              "sam": null,
+              "usgm": null
+            },
+            "heat": null,
+            "children": []
+          },
+          {
+            "id": "gsa-10",
+            "name": "GAO, except Comptroller General",
+            "short": null,
+            "kind": "carrier",
+            "parentId": "gsa-8",
+            "sources": {
+              "crosswalk": {
+                "gsaSfpKey": "10",
+                "gsaSfpName": "GAO, except Comptroller General",
+                "gsaSfpEntityType": "Carrier",
+                "parentName": "US Government Accountability Office (GAO)",
+                "ombAgencyCode": 1,
+                "ombBureauCode": 35,
+                "treasuryAgencyCode": 5,
+                "treasuryBureauCode": null,
+                "nistAgencyCode": "05",
+                "nistBureauCode": "59",
+                "cgacAgencyCode": "005"
+              },
+              "sam": null,
+              "usgm": null
+            },
+            "heat": null,
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "gsa-11",
+        "name": "US Government Printing Office (GPO)",
+        "short": "GPO",
+        "kind": "agency",
+        "parentId": "gsa-1",
+        "sources": {
+          "crosswalk": {
+            "gsaSfpKey": "11",
+            "gsaSfpName": "US Government Printing Office (GPO)",
+            "gsaSfpEntityType": "Agency",
+            "parentName": "Federal Legislative Branch",
+            "ombAgencyCode": 1,
+            "ombBureauCode": 30,
+            "treasuryAgencyCode": 4,
+            "treasuryBureauCode": null,
+            "nistAgencyCode": "04",
+            "nistBureauCode": "00",
+            "cgacAgencyCode": "004"
+          },
+          "sam": {
+            "matchedHow": "cgac-agency",
+            "fhorgid": 300000005,
+            "fhorgname": "UNITED STATES GOVERNMENT PUBLISHING OFFICE",
+            "status": "ACTIVE",
+            "fhorgtype": "Department/Ind. Agency",
+            "agencycode": "0400",
+            "cgaclist": [
+              "004"
+            ],
+            "fhagencyorgname": "UNITED STATES GOVERNMENT PUBLISHING OFFICE",
+            "lastupdateddate": "2019-12-11 19:40",
+            "createddate": "2017-10-05 12:35",
+            "fhfullparentpathname": "UNITED STATES GOVERNMENT PUBLISHING OFFICE"
+          },
+          "usgm": {
+            "matchedHow": "alias",
+            "edition": "GOVMAN-2025-12-31",
+            "entityId": "76",
+            "name": "Government Publishing Office",
+            "category": "Legislative Branch",
+            "missionSummary": "The Government Publishing Office produces, procures, and disseminates printed and electronic publications of the Congress, executive departments, and Federal agencies and establishments",
+            "mission": [
+              "The Government Publishing Office produces, procures, and disseminates printed and electronic publications of the Congress, executive departments, and Federal agencies and establishments"
+            ],
+            "organization": [],
+            "legalAuthority": [],
+            "leadership": [
+              {
+                "name": "Hugh N. Halpern",
+                "title": "DIRECTOR",
+                "section": null
+              },
+              {
+                "name": "Patricia Collins",
+                "title": "Deputy Director",
+                "section": null
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": null
+              },
+              {
+                "name": "S. Denise Hendricks",
+                "title": "Equal Employment Opportunity Managing Director",
+                "section": null
+              },
+              {
+                "name": "(vacancy)",
+                "title": "CHIEF ADMINISTRATIVE OFFICER",
+                "section": "Administration"
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": "Administration"
+              },
+              {
+                "name": null,
+                "title": "CHIEF OFFICERS",
+                "section": "Administration"
+              },
+              {
+                "name": "Timothy J. Matthews",
+                "title": "Acquisition",
+                "section": "Administration"
+              },
+              {
+                "name": "Dan M. Mielke",
+                "title": "Human Capital",
+                "section": "Administration"
+              },
+              {
+                "name": "Wesam Musa",
+                "title": "Information",
+                "section": "Administration"
+              },
+              {
+                "name": "William L. Boesch, Jr.",
+                "title": "CHIEF FINANCIAL OFFICER",
+                "section": "Finance"
+              },
+              {
+                "name": "Kerry L. Miller",
+                "title": "GENERAL COUNSEL",
+                "section": "Legal"
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": "Legal"
+              },
+              {
+                "name": "Melissa Hatfield",
+                "title": "Associate General Counsel—Labor Relations",
+                "section": "Legal"
+              },
+              {
+                "name": "Patricia Collins",
+                "title": "DEPUTY DIRECTOR",
+                "section": "Operations"
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": "Operations"
+              },
+              {
+                "name": null,
+                "title": "MANAGING DIRECTORS",
+                "section": "Operations"
+              },
+              {
+                "name": "Gregory Estep, Acting",
+                "title": "Official Journals of Government",
+                "section": "Operations"
+              },
+              {
+                "name": "John W. Crawford",
+                "title": "Plant Operations",
+                "section": "Operations"
+              },
+              {
+                "name": "Stephen G. LeBlanc",
+                "title": "Security and Intelligent Documents",
+                "section": "Operations"
+              }
+            ],
+            "web": "http://www.gpo.gov",
+            "phone": "202-512-1800",
+            "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
+          }
+        },
+        "heat": {
+          "score": 0.088,
+          "period": {
+            "spending": "2026-08-10T04:49:07.619Z",
+            "federalRegister": "2025-01-01"
+          },
+          "signals": {
+            "obligatedAmount": null,
+            "outlayAmount": null,
+            "spendingAgency": null,
+            "federalRegisterDocs": 2,
+            "federalRegisterAgency": "Government Publishing Office",
+            "descendantCount": 0
+          },
+          "rolledUp": false
+        },
+        "children": []
+      },
+      {
+        "id": "gsa-12",
+        "name": "US Library of Congress",
+        "short": null,
+        "kind": "agency",
+        "parentId": "gsa-1",
+        "sources": {
+          "crosswalk": {
+            "gsaSfpKey": "12",
+            "gsaSfpName": "US Library of Congress",
+            "gsaSfpEntityType": "Agency",
+            "parentName": "Federal Legislative Branch",
+            "ombAgencyCode": 1,
+            "ombBureauCode": 25,
+            "treasuryAgencyCode": 3,
+            "treasuryBureauCode": null,
+            "nistAgencyCode": "03",
+            "nistBureauCode": "00",
+            "cgacAgencyCode": "003"
+          },
+          "sam": {
+            "matchedHow": "name",
+            "fhorgid": 100094131,
+            "fhorgname": "LIBRARY OF CONGRESS",
+            "status": "ACTIVE",
+            "fhorgtype": "Department/Ind. Agency",
+            "agencycode": "0300",
+            "cgaclist": [
+              "003"
+            ],
+            "fhagencyorgname": "LIBRARY OF CONGRESS",
+            "lastupdateddate": "2019-11-21 23:04",
+            "createddate": "2004-11-17 00:00",
+            "fhfullparentpathname": "LIBRARY OF CONGRESS"
+          },
+          "usgm": {
+            "matchedHow": "name",
+            "edition": "GOVMAN-2025-12-31",
+            "entityId": "77",
+            "name": "Library of Congress",
+            "category": "Legislative Branch",
+            "missionSummary": "The Library of Congress is the national library of the United States, offering diverse materials for research, including the world's most extensive collections in areas such as American history, music, and law.",
+            "mission": [
+              "The Library of Congress is the national library of the United States, offering diverse materials for research, including the world's most extensive collections in areas such as American history, music, and law."
+            ],
+            "organization": [],
+            "legalAuthority": [],
+            "leadership": [
+              {
+                "name": "Carla D. Hayden",
+                "title": "LIBRARIAN OF CONGRESS",
+                "section": null
+              },
+              {
+                "name": "Robert R. Newlen",
+                "title": "Deputy Librarian for Institutional Advancement",
+                "section": null
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": null
+              },
+              {
+                "name": "Elizabeth C. Morrison",
+                "title": "Chief of Staff",
+                "section": null
+              },
+              {
+                "name": "Edward R. Jablonski",
+                "title": "Chief Operating Officer",
+                "section": null
+              },
+              {
+                "name": "Elizabeth Pugh",
+                "title": "General Counsel",
+                "section": null
+              },
+              {
+                "name": "Kurt W. Hyde",
+                "title": "Inspector General",
+                "section": null
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": null
+              },
+              {
+                "name": "Roswell M. Encina",
+                "title": "Chief Communications Officer",
+                "section": null
+              },
+              {
+                "name": "Rachel Bouman",
+                "title": "Director of Human Resources Services",
+                "section": null
+              },
+              {
+                "name": "Mary B. Mazanec",
+                "title": "Director of Congressional Research Service",
+                "section": null
+              },
+              {
+                "name": "J. Mark Sweeney",
+                "title": "Associate Librarian for Library Services",
+                "section": null
+              },
+              {
+                "name": "Jane McAuliffe",
+                "title": "Director of National International Outreach",
+                "section": null
+              },
+              {
+                "name": "Jane F. Sánchez",
+                "title": "Law Librarian of Congress",
+                "section": null
+              },
+              {
+                "name": "Karyn A. Temple Claggett",
+                "title": "Acting Register of Copyrights",
+                "section": null
+              },
+              {
+                "name": "Carla D. Hayden",
+                "title": "CHAIR (Librarian of Congress)",
+                "section": "Library of Congress Trust Fund Board"
+              },
+              {
+                "name": null,
+                "title": "-----------------------------",
+                "section": "Library of Congress Trust Fund Board"
+              },
+              {
+                "name": "David A. Lebryk",
+                "title": "(Fiscal Assistant Secretary of the Treasury)",
+                "section": "Library of Congress Trust Fund Board"
+              },
+              {
+                "name": "Gregg Harper",
+                "title": "(Chair, Joint Committee on the Library)",
+                "section": "Library of Congress Trust Fund Board"
+              },
+              {
+                "name": "Richard Shelby",
+                "title": "( Vice Chair, Joint Committee on the Library)",
+                "section": "Library of Congress Trust Fund Board"
+              }
+            ],
+            "web": "http://www.loc.gov",
+            "phone": "202-707-5000",
+            "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
+          }
+        },
+        "heat": {
+          "score": 0.2892,
+          "period": {
+            "spending": "2026-08-10T04:49:07.619Z",
+            "federalRegister": "2025-01-01"
+          },
+          "signals": {
+            "obligatedAmount": null,
+            "outlayAmount": null,
+            "spendingAgency": null,
+            "federalRegisterDocs": 36,
+            "federalRegisterAgency": "Library of Congress",
+            "descendantCount": 0
+          },
+          "rolledUp": false
+        },
+        "children": []
+      },
+      {
+        "id": "gsa-15",
+        "name": "US Tax Court",
+        "short": "USTAXCT",
+        "kind": "agency",
+        "parentId": "gsa-1",
+        "sources": {
+          "crosswalk": {
+            "gsaSfpKey": "15",
+            "gsaSfpName": "US Tax Court",
+            "gsaSfpEntityType": "Agency",
+            "parentName": "Federal Legislative Branch",
+            "ombAgencyCode": 1,
+            "ombBureauCode": 40,
+            "treasuryAgencyCode": 23,
+            "treasuryBureauCode": null,
+            "nistAgencyCode": "23",
+            "nistBureauCode": "00",
+            "cgacAgencyCode": "023"
+          },
+          "sam": {
+            "matchedHow": "name",
+            "fhorgid": 300000019,
+            "fhorgname": "U.S. TAX COURT",
+            "status": "ACTIVE",
+            "fhorgtype": "Department/Ind. Agency",
+            "agencycode": "2300",
+            "cgaclist": [
+              "023"
+            ],
+            "fhagencyorgname": "US TAX COURT",
+            "lastupdateddate": "2019-11-21 23:04",
+            "createddate": "2017-10-05 12:35",
+            "fhfullparentpathname": "US TAX COURT"
+          },
+          "usgm": {
+            "matchedHow": "name",
+            "edition": "GOVMAN-2025-12-31",
+            "entityId": "91",
+            "name": "United States Tax Court",
+            "category": "Judicial Branch",
+            "missionSummary": null,
+            "mission": [],
+            "organization": [],
+            "legalAuthority": [],
+            "leadership": [],
+            "web": "http://www.ustaxcourt.gov",
+            "phone": "202-521-0700",
+            "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
+          }
+        },
+        "heat": null,
+        "children": []
+      }
+    ]
+  }
+}
