@@ -1,7 +1,8 @@
 {
   "framework": null,
   "installCommand": "echo skip",
-  "buildCommand": "echo skip",
+  "buildCommand": "node scripts/vercel-export.mjs",
+  "outputDirectory": "public",
   "headers": [
     {
       "source": "/(.*)\\.(png|svg|ico|webmanifest)",
