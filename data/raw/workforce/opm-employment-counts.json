@@ -1,0 +1,4924 @@
+{
+  "source": "OPM Federal Workforce Data (EHRI Status)",
+  "asOf": "202606",
+  "rowCount": 1953300,
+  "departments": [
+    {
+      "code": "DOD",
+      "name": "DEPARTMENT OF DEFENSE",
+      "count": 610624
+    },
+    {
+      "code": "VA",
+      "name": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 445351
+    },
+    {
+      "code": "HS",
+      "name": "DEPARTMENT OF HOMELAND SECURITY",
+      "count": 225568
+    },
+    {
+      "code": "DJ",
+      "name": "DEPARTMENT OF JUSTICE",
+      "count": 107082
+    },
+    {
+      "code": "TR",
+      "name": "DEPARTMENT OF THE TREASURY",
+      "count": 83812
+    },
+    {
+      "code": "AG",
+      "name": "DEPARTMENT OF AGRICULTURE",
+      "count": 78075
+    },
+    {
+      "code": "HE",
+      "name": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 72919
+    },
+    {
+      "code": "IN",
+      "name": "DEPARTMENT OF THE INTERIOR",
+      "count": 59853
+    },
+    {
+      "code": "TD",
+      "name": "DEPARTMENT OF TRANSPORTATION",
+      "count": 52923
+    },
+    {
+      "code": "SZ",
+      "name": "SOCIAL SECURITY ADMINISTRATION",
+      "count": 49439
+    },
+    {
+      "code": "CM",
+      "name": "DEPARTMENT OF COMMERCE",
+      "count": 41007
+    },
+    {
+      "code": "NN",
+      "name": "NATIONAL AERONAUTICS AND SPACE ADMINISTRATION",
+      "count": 14248
+    },
+    {
+      "code": "DN",
+      "name": "DEPARTMENT OF ENERGY",
+      "count": 13339
+    },
+    {
+      "code": "EP",
+      "name": "ENVIRONMENTAL PROTECTION AGENCY",
+      "count": 12513
+    },
+    {
+      "code": "ST",
+      "name": "DEPARTMENT OF STATE",
+      "count": 11354
+    },
+    {
+      "code": "DL",
+      "name": "DEPARTMENT OF LABOR",
+      "count": 11041
+    },
+    {
+      "code": "GS",
+      "name": "GENERAL SERVICES ADMINISTRATION",
+      "count": 8282
+    },
+    {
+      "code": "HU",
+      "name": "DEPARTMENT OF HOUSING AND URBAN DEVELOPMENT",
+      "count": 5859
+    },
+    {
+      "code": "SB",
+      "name": "SMALL BUSINESS ADMINISTRATION",
+      "count": 5086
+    },
+    {
+      "code": "FD",
+      "name": "FEDERAL DEPOSIT INSURANCE CORPORATION",
+      "count": 5009
+    },
+    {
+      "code": "SM",
+      "name": "SMITHSONIAN INSTITUTION",
+      "count": 4109
+    },
+    {
+      "code": "SE",
+      "name": "SECURITIES AND EXCHANGE COMMISSION",
+      "count": 3927
+    },
+    {
+      "code": "NU",
+      "name": "NUCLEAR REGULATORY COMMISSION",
+      "count": 2477
+    },
+    {
+      "code": "NQ",
+      "name": "NATIONAL ARCHIVES AND RECORDS ADMINISTRATION",
+      "count": 2349
+    },
+    {
+      "code": "ED",
+      "name": "DEPARTMENT OF EDUCATION",
+      "count": 2279
+    },
+    {
+      "code": "OM",
+      "name": "OFFICE OF PERSONNEL MANAGEMENT",
+      "count": 1984
+    },
+    {
+      "code": "EE",
+      "name": "EQUAL EMPLOYMENT OPPORTUNITY COMMISSION",
+      "count": 1677
+    },
+    {
+      "code": "LP",
+      "name": "GOVERNMENT PUBLISHING OFFICE",
+      "count": 1625
+    },
+    {
+      "code": "FC",
+      "name": "FEDERAL COMMUNICATIONS COMMISSION",
+      "count": 1187
+    },
+    {
+      "code": "NF",
+      "name": "NATIONAL SCIENCE FOUNDATION",
+      "count": 1104
+    },
+    {
+      "code": "FR",
+      "name": "FEDERAL RESERVE SYSTEM",
+      "count": 1082
+    },
+    {
+      "code": "NL",
+      "name": "NATIONAL LABOR RELATIONS BOARD",
+      "count": 1041
+    },
+    {
+      "code": "FT",
+      "name": "FEDERAL TRADE COMMISSION",
+      "count": 1029
+    },
+    {
+      "code": "CU",
+      "name": "NATIONAL CREDIT UNION ADMINISTRATION",
+      "count": 926
+    },
+    {
+      "code": "FQ",
+      "name": "COURT SERVICES AND OFFENDER SUPERVISION AGENCY FOR THE DISTRICT OF COLUMBIA",
+      "count": 912
+    },
+    {
+      "code": "IB",
+      "name": "U.S. AGENCY FOR GLOBAL MEDIA",
+      "count": 802
+    },
+    {
+      "code": "BG",
+      "name": "PENSION BENEFIT GUARANTY CORPORATION",
+      "count": 733
+    },
+    {
+      "code": "RR",
+      "name": "RAILROAD RETIREMENT BOARD",
+      "count": 684
+    },
+    {
+      "code": "PU",
+      "name": "PEACE CORPS",
+      "count": 610
+    },
+    {
+      "code": "HF",
+      "name": "FEDERAL HOUSING FINANCE AGENCY",
+      "count": 598
+    },
+    {
+      "code": "CT",
+      "name": "COMMODITY FUTURES TRADING COMMISSION",
+      "count": 579
+    },
+    {
+      "code": "GB",
+      "name": "DEVELOPMENT FINANCE CORPORATION",
+      "count": 532
+    },
+    {
+      "code": "BO",
+      "name": "OFFICE OF MANAGEMENT AND BUDGET",
+      "count": 514
+    },
+    {
+      "code": "SK",
+      "name": "CONSUMER PRODUCT SAFETY COMMISSION",
+      "count": 425
+    },
+    {
+      "code": "TB",
+      "name": "NATIONAL TRANSPORTATION SAFETY BOARD",
+      "count": 406
+    },
+    {
+      "code": "TC",
+      "name": "U.S. INTERNATIONAL TRADE COMMISSION",
+      "count": 402
+    },
+    {
+      "code": "KS",
+      "name": "CORPORATION FOR NATIONAL AND COMMUNITY SERVICE",
+      "count": 376
+    },
+    {
+      "code": "EB",
+      "name": "EXPORT-IMPORT BANK OF THE UNITED STATES",
+      "count": 344
+    },
+    {
+      "code": "GJ",
+      "name": "PRESIDIO TRUST",
+      "count": 324
+    },
+    {
+      "code": "FL",
+      "name": "FARM CREDIT ADMINISTRATION",
+      "count": 319
+    },
+    {
+      "code": "RH",
+      "name": "ARMED FORCES RETIREMENT HOME",
+      "count": 275
+    },
+    {
+      "code": "LF",
+      "name": "FEDERAL ELECTION COMMISSION",
+      "count": 256
+    },
+    {
+      "code": "EC",
+      "name": "OFFICE OF ADMINISTRATION",
+      "count": 256
+    },
+    {
+      "code": "GW",
+      "name": "INTERNATIONAL BOUNDARY AND WATER COMMISSION, U.S. SECTION",
+      "count": 245
+    },
+    {
+      "code": "AM",
+      "name": "U.S. AGENCY FOR INTERNATIONAL DEVELOPMENT",
+      "count": 234
+    },
+    {
+      "code": "RF",
+      "name": "FEDERAL RETIREMENT THRIFT INVESTMENT BOARD",
+      "count": 233
+    },
+    {
+      "code": "MI",
+      "name": "MILLENNIUM CHALLENGE CORPORATION",
+      "count": 229
+    },
+    {
+      "code": "AH",
+      "name": "NATIONAL FOUNDATION ON THE ARTS AND THE HUMANITIES",
+      "count": 222
+    },
+    {
+      "code": "TN",
+      "name": "OFFICE OF THE U.S. TRADE REPRESENTATIVE",
+      "count": 220
+    },
+    {
+      "code": "JL",
+      "name": "JUDICIAL BRANCH",
+      "count": 170
+    },
+    {
+      "code": "BD",
+      "name": "MERIT SYSTEMS PROTECTION BOARD",
+      "count": 155
+    },
+    {
+      "code": "FW",
+      "name": "OFFICE OF SPECIAL COUNSEL",
+      "count": 127
+    },
+    {
+      "code": "SS",
+      "name": "SELECTIVE SERVICE SYSTEM",
+      "count": 126
+    },
+    {
+      "code": "TW",
+      "name": "SURFACE TRANSPORTATION BOARD",
+      "count": 110
+    },
+    {
+      "code": "MC",
+      "name": "FEDERAL MARITIME COMMISSION",
+      "count": 109
+    },
+    {
+      "code": "BF",
+      "name": "DEFENSE NUCLEAR FACILITIES SAFETY BOARD",
+      "count": 102
+    },
+    {
+      "code": "FM",
+      "name": "FEDERAL MEDIATION AND CONCILIATION SERVICE",
+      "count": 94
+    },
+    {
+      "code": "HD",
+      "name": "U.S. HOLOCAUST MEMORIAL MUSEUM",
+      "count": 90
+    },
+    {
+      "code": "AB",
+      "name": "AMERICAN BATTLE MONUMENTS COMMISSION",
+      "count": 77
+    },
+    {
+      "code": "AU",
+      "name": "FEDERAL LABOR RELATIONS AUTHORITY",
+      "count": 76
+    },
+    {
+      "code": "GQ",
+      "name": "ELECTION ASSISTANCE COMMISSION",
+      "count": 64
+    },
+    {
+      "code": "GG",
+      "name": "OFFICE OF GOVERNMENT ETHICS",
+      "count": 58
+    },
+    {
+      "code": "CC",
+      "name": "COMMISSION ON CIVIL RIGHTS",
+      "count": 50
+    },
+    {
+      "code": "EW",
+      "name": "TRADE AND DEVELOPMENT AGENCY",
+      "count": 49
+    },
+    {
+      "code": "RO",
+      "name": "MEDICAID AND CHIP PAYMENT AND ACCESS COMMISSION",
+      "count": 48
+    },
+    {
+      "code": "OS",
+      "name": "OCCUPATIONAL SAFETY AND HEALTH REVIEW COMMISSION",
+      "count": 44
+    },
+    {
+      "code": "FJ",
+      "name": "CHEMICAL SAFETY AND HAZARD INVESTIGATION BOARD",
+      "count": 42
+    },
+    {
+      "code": "RS",
+      "name": "FEDERAL MINE SAFETY AND HEALTH REVIEW COMMISSION",
+      "count": 40
+    },
+    {
+      "code": "HP",
+      "name": "ADVISORY COUNCIL ON HISTORIC PRESERVATION",
+      "count": 36
+    },
+    {
+      "code": "HB",
+      "name": "COMMITTEE FOR PURCHASE FROM PEOPLE WHO ARE BLIND OR SE VERELY DISABLED",
+      "count": 34
+    },
+    {
+      "code": "NP",
+      "name": "NATIONAL CAPITAL PLANNING COMMISSION",
+      "count": 33
+    },
+    {
+      "code": "BT",
+      "name": "ARCHITECTURAL AND TRANSPORTATION BARRIERS COMPLIANCE BOARD",
+      "count": 33
+    },
+    {
+      "code": "NM",
+      "name": "NATIONAL MEDIATION BOARD",
+      "count": 33
+    },
+    {
+      "code": "EO",
+      "name": "MORRIS K. UDALL AND STEWART L. UDALL FOUNDATION",
+      "count": 33
+    },
+    {
+      "code": "ZS",
+      "name": "UNITED STATES-CHINA ECONOMIC AND SECURITY REVIEW COMMISSION",
+      "count": 31
+    },
+    {
+      "code": "DO",
+      "name": "OFFICE OF THE CYBER DIRECTOR",
+      "count": 30
+    },
+    {
+      "code": "ZP",
+      "name": "U.S. COMMISSION ON INTERNATIONAL RELIGIOUS FREEDOM",
+      "count": 28
+    },
+    {
+      "code": "NS",
+      "name": "NATIONAL SECURITY COUNCIL",
+      "count": 27
+    },
+    {
+      "code": "CE",
+      "name": "COUNCIL OF ECONOMIC ADVISERS",
+      "count": 27
+    },
+    {
+      "code": "IG",
+      "name": "COUNCIL OF THE INSPECTORS GENERAL ON INTEGRITY AND EFFICIENCY",
+      "count": 24
+    },
+    {
+      "code": "VD",
+      "name": "PRIVACY AND CIVIL LIBERTIES OVERSIGHT BOARD",
+      "count": 24
+    },
+    {
+      "code": "MA",
+      "name": "MARINE MAMMAL COMMISSION",
+      "count": 24
+    },
+    {
+      "code": "IF",
+      "name": "INTER-AMERICAN FOUNDATION",
+      "count": 22
+    },
+    {
+      "code": "GX",
+      "name": "INTERNATIONAL BOUNDARY COMMISSION:  UNITED STATES AND CANADA",
+      "count": 22
+    },
+    {
+      "code": "GC",
+      "name": "GULF COAST ECOSYSTEM RESTORATION COUNCIL",
+      "count": 21
+    },
+    {
+      "code": "AN",
+      "name": "AFRICAN DEVELOPMENT FOUNDATION",
+      "count": 21
+    },
+    {
+      "code": "WK",
+      "name": "FEDERAL PERMITTING IMPROVEMENT STEERING COUNCIL",
+      "count": 20
+    },
+    {
+      "code": "EQ",
+      "name": "COUNCIL ON ENVIRONMENTAL QUALITY/OFFICE OF ENVIRONMENTAL QUALITY",
+      "count": 20
+    },
+    {
+      "code": "NK",
+      "name": "NATIONAL COUNCIL ON DISABILITY",
+      "count": 19
+    },
+    {
+      "code": "BH",
+      "name": "COMMISSION FOR THE PRESERVATION OF AMERICA'S HERITAGE ABROAD",
+      "count": 18
+    },
+    {
+      "code": "CX",
+      "name": "NATIONAL COMMISSION ON LIBRARIES AND INFORMATION SCIENCE",
+      "count": 17
+    },
+    {
+      "code": "GY",
+      "name": "INTERNATIONAL JOINT COMMISSION:  UNITED STATES AND CANADA",
+      "count": 14
+    },
+    {
+      "code": "DQ",
+      "name": "DENALI COMMISSION",
+      "count": 11
+    },
+    {
+      "code": "UT",
+      "name": "UTAH RECLAMATION MITIGATION AND CONSERVATION COMMISSION",
+      "count": 11
+    },
+    {
+      "code": "BW",
+      "name": "NUCLEAR WASTE TECHNICAL REVIEW BOARD",
+      "count": 11
+    },
+    {
+      "code": "FI",
+      "name": "FEDERAL FINANCIAL INSTITUTIONS EXAMINATION COUNCIL",
+      "count": 11
+    },
+    {
+      "code": "FK",
+      "name": "FARM CREDIT SYSTEM INSURANCE CORPORATION",
+      "count": 10
+    },
+    {
+      "code": "AA",
+      "name": "ADMINISTRATIVE CONFERENCE OF THE UNITED STATES",
+      "count": 10
+    },
+    {
+      "code": "RJ",
+      "name": "CIVIL RIGHTS COLD CASE REVIEW BOARD (CRCCRB)",
+      "count": 10
+    },
+    {
+      "code": "HW",
+      "name": "U.S. INTERAGENCY COUNCIL ON HOMELESSNESS",
+      "count": 10
+    },
+    {
+      "code": "DB",
+      "name": "PUBLIC INTEREST DECLASSIFICATION BOARD",
+      "count": 9
+    },
+    {
+      "code": "UJ",
+      "name": "JAPAN-UNITED STATES FRIENDSHIP COMMISSION",
+      "count": 9
+    },
+    {
+      "code": "CF",
+      "name": "COMMISSION OF FINE ARTS",
+      "count": 8
+    },
+    {
+      "code": "GU",
+      "name": "THE US SEMIQUINCENTENNIAL COMMISSION",
+      "count": 8
+    },
+    {
+      "code": "KY",
+      "name": "PUBLIC BUILDINGS REFORM BOARD",
+      "count": 7
+    },
+    {
+      "code": "AP",
+      "name": "APPALACHIAN REGIONAL COMMISSION",
+      "count": 5
+    },
+    {
+      "code": "BK",
+      "name": "JAMES MADISON MEMORIAL FELLOWSHIP FOUNDATION",
+      "count": 5
+    },
+    {
+      "code": "HT",
+      "name": "HARRY S. TRUMAN SCHOLARSHIP FOUNDATION",
+      "count": 5
+    },
+    {
+      "code": "GE",
+      "name": "BARRY GOLDWATER SCHOLARSHIP AND EXCELLENCE IN EDUCATION FOUNDATION",
+      "count": 2
+    },
+    {
+      "code": "AW",
+      "name": "ARCTIC RESEARCH COMMISSION",
+      "count": 2
+    },
+    {
+      "code": "DG",
+      "name": "NORTHERN BORDER REGIONAL COMMISSION",
+      "count": 2
+    },
+    {
+      "code": "DA",
+      "name": "DELTA REGIONAL AUTHORITY",
+      "count": 1
+    },
+    {
+      "code": "WU",
+      "name": "SOUTHWEST BORDER REGIONAL COMMISSION",
+      "count": 1
+    }
+  ],
+  "agencies": [
+    {
+      "code": "VA",
+      "name": "DEPARTMENT OF VETERANS AFFAIRS",
+      "departmentCode": "VA",
+      "department": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 445351
+    },
+    {
+      "code": "HS",
+      "name": "DEPARTMENT OF HOMELAND SECURITY",
+      "departmentCode": "HS",
+      "department": "DEPARTMENT OF HOMELAND SECURITY",
+      "count": 225568
+    },
+    {
+      "code": "NV",
+      "name": "DEPARTMENT OF THE NAVY",
+      "departmentCode": "DOD",
+      "department": "DEPARTMENT OF DEFENSE",
+      "count": 201061
+    },
+    {
+      "code": "AR",
+      "name": "DEPARTMENT OF THE ARMY",
+      "departmentCode": "DOD",
+      "department": "DEPARTMENT OF DEFENSE",
+      "count": 187785
+    },
+    {
+      "code": "AF",
+      "name": "DEPARTMENT OF THE AIR FORCE",
+      "departmentCode": "DOD",
+      "department": "DEPARTMENT OF DEFENSE",
+      "count": 151285
+    },
+    {
+      "code": "DJ",
+      "name": "DEPARTMENT OF JUSTICE",
+      "departmentCode": "DJ",
+      "department": "DEPARTMENT OF JUSTICE",
+      "count": 107082
+    },
+    {
+      "code": "TR",
+      "name": "DEPARTMENT OF TREASURY",
+      "departmentCode": "TR",
+      "department": "DEPARTMENT OF THE TREASURY",
+      "count": 83812
+    },
+    {
+      "code": "AG",
+      "name": "DEPARTMENT OF AGRICULTURE",
+      "departmentCode": "AG",
+      "department": "DEPARTMENT OF AGRICULTURE",
+      "count": 78075
+    },
+    {
+      "code": "HE",
+      "name": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "departmentCode": "HE",
+      "department": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 72919
+    },
+    {
+      "code": "DD",
+      "name": "DEPARTMENT OF DEFENSE",
+      "departmentCode": "DOD",
+      "department": "DEPARTMENT OF DEFENSE",
+      "count": 70493
+    },
+    {
+      "code": "IN",
+      "name": "DEPARTMENT OF INTERIOR",
+      "departmentCode": "IN",
+      "department": "DEPARTMENT OF THE INTERIOR",
+      "count": 59853
+    },
+    {
+      "code": "TD",
+      "name": "DEPARTMENT OF TRANSPORTATION",
+      "departmentCode": "TD",
+      "department": "DEPARTMENT OF TRANSPORTATION",
+      "count": 52923
+    },
+    {
+      "code": "SZ",
+      "name": "SOCIAL SECURITY ADMINISTRATION",
+      "departmentCode": "SZ",
+      "department": "SOCIAL SECURITY ADMINISTRATION",
+      "count": 49439
+    },
+    {
+      "code": "CM",
+      "name": "DEPARTMENT OF COMMERCE",
+      "departmentCode": "CM",
+      "department": "DEPARTMENT OF COMMERCE",
+      "count": 41007
+    },
+    {
+      "code": "NN",
+      "name": "NAT AERONAUTICS AND SPACE ADMINISTRATION",
+      "departmentCode": "NN",
+      "department": "NATIONAL AERONAUTICS AND SPACE ADMINISTRATION",
+      "count": 14248
+    },
+    {
+      "code": "DN",
+      "name": "DEPARTMENT OF ENERGY",
+      "departmentCode": "DN",
+      "department": "DEPARTMENT OF ENERGY",
+      "count": 13339
+    },
+    {
+      "code": "EP",
+      "name": "ENVIRONMENTAL PROTECTION AGENCY",
+      "departmentCode": "EP",
+      "department": "ENVIRONMENTAL PROTECTION AGENCY",
+      "count": 12513
+    },
+    {
+      "code": "ST",
+      "name": "DEPARTMENT OF STATE",
+      "departmentCode": "ST",
+      "department": "DEPARTMENT OF STATE",
+      "count": 11354
+    },
+    {
+      "code": "DL",
+      "name": "DEPARTMENT OF LABOR",
+      "departmentCode": "DL",
+      "department": "DEPARTMENT OF LABOR",
+      "count": 11041
+    },
+    {
+      "code": "GS",
+      "name": "GENERAL SERVICES ADMINISTRATION",
+      "departmentCode": "GS",
+      "department": "GENERAL SERVICES ADMINISTRATION",
+      "count": 8282
+    },
+    {
+      "code": "HU",
+      "name": "DEPARTMENT OF HOUSING AND URBAN DEVELOPM",
+      "departmentCode": "HU",
+      "department": "DEPARTMENT OF HOUSING AND URBAN DEVELOPMENT",
+      "count": 5859
+    },
+    {
+      "code": "SB",
+      "name": "SMALL BUSINESS ADMINISTRATION",
+      "departmentCode": "SB",
+      "department": "SMALL BUSINESS ADMINISTRATION",
+      "count": 5086
+    },
+    {
+      "code": "FD",
+      "name": "FEDERAL DEPOSIT INSURANCE CORPORATION",
+      "departmentCode": "FD",
+      "department": "FEDERAL DEPOSIT INSURANCE CORPORATION",
+      "count": 5009
+    },
+    {
+      "code": "SM",
+      "name": "SMITHSONIAN INSTITUTION",
+      "departmentCode": "SM",
+      "department": "SMITHSONIAN INSTITUTION",
+      "count": 4109
+    },
+    {
+      "code": "SE",
+      "name": "SECURITIES AND EXCHANGE COMMISSION",
+      "departmentCode": "SE",
+      "department": "SECURITIES AND EXCHANGE COMMISSION",
+      "count": 3927
+    },
+    {
+      "code": "NU",
+      "name": "NUCLEAR REGULATORY COMMISSION",
+      "departmentCode": "NU",
+      "department": "NUCLEAR REGULATORY COMMISSION",
+      "count": 2477
+    },
+    {
+      "code": "NQ",
+      "name": "NAT ARCHIVES AND RECORDS ADMINISTRATION",
+      "departmentCode": "NQ",
+      "department": "NATIONAL ARCHIVES AND RECORDS ADMINISTRATION",
+      "count": 2349
+    },
+    {
+      "code": "ED",
+      "name": "DEPARTMENT OF EDUCATION",
+      "departmentCode": "ED",
+      "department": "DEPARTMENT OF EDUCATION",
+      "count": 2279
+    },
+    {
+      "code": "OM",
+      "name": "OFFICE OF PERSONNEL MANAGEMENT",
+      "departmentCode": "OM",
+      "department": "OFFICE OF PERSONNEL MANAGEMENT",
+      "count": 1984
+    },
+    {
+      "code": "EE",
+      "name": "EQUAL EMPLOYMENT OPPORTUNITY COMMISSION",
+      "departmentCode": "EE",
+      "department": "EQUAL EMPLOYMENT OPPORTUNITY COMMISSION",
+      "count": 1677
+    },
+    {
+      "code": "LP",
+      "name": "GOVERNMENT PUBLISHING OFFICE",
+      "departmentCode": "LP",
+      "department": "GOVERNMENT PUBLISHING OFFICE",
+      "count": 1625
+    },
+    {
+      "code": "FC",
+      "name": "FEDERAL COMMUNICATIONS COMMISSION",
+      "departmentCode": "FC",
+      "department": "FEDERAL COMMUNICATIONS COMMISSION",
+      "count": 1187
+    },
+    {
+      "code": "NF",
+      "name": "NATIONAL SCIENCE FOUNDATION",
+      "departmentCode": "NF",
+      "department": "NATIONAL SCIENCE FOUNDATION",
+      "count": 1104
+    },
+    {
+      "code": "FR",
+      "name": "FEDERAL RESERVE SYSTEM",
+      "departmentCode": "FR",
+      "department": "FEDERAL RESERVE SYSTEM",
+      "count": 1082
+    },
+    {
+      "code": "NL",
+      "name": "NATIONAL LABOR RELATIONS BOARD",
+      "departmentCode": "NL",
+      "department": "NATIONAL LABOR RELATIONS BOARD",
+      "count": 1041
+    },
+    {
+      "code": "FT",
+      "name": "FEDERAL TRADE COMMISSION",
+      "departmentCode": "FT",
+      "department": "FEDERAL TRADE COMMISSION",
+      "count": 1029
+    },
+    {
+      "code": "CU",
+      "name": "NATIONAL CREDIT UNION ADMINISTRATION",
+      "departmentCode": "CU",
+      "department": "NATIONAL CREDIT UNION ADMINISTRATION",
+      "count": 926
+    },
+    {
+      "code": "FQ",
+      "name": "COURT SERVICES AND OFFENDR SUPERVSN AGY",
+      "departmentCode": "FQ",
+      "department": "COURT SERVICES AND OFFENDER SUPERVISION AGENCY FOR THE DISTRICT OF COLUMBIA",
+      "count": 912
+    },
+    {
+      "code": "IB",
+      "name": "U.S.AGENCY FOR GLOBAL MEDIA",
+      "departmentCode": "IB",
+      "department": "U.S. AGENCY FOR GLOBAL MEDIA",
+      "count": 802
+    },
+    {
+      "code": "BG",
+      "name": "PENSION BENEFIT GUARANTY CORPORATION",
+      "departmentCode": "BG",
+      "department": "PENSION BENEFIT GUARANTY CORPORATION",
+      "count": 733
+    },
+    {
+      "code": "RR",
+      "name": "RAILROAD RETIREMENT BOARD",
+      "departmentCode": "RR",
+      "department": "RAILROAD RETIREMENT BOARD",
+      "count": 684
+    },
+    {
+      "code": "PU",
+      "name": "PEACE CORPS",
+      "departmentCode": "PU",
+      "department": "PEACE CORPS",
+      "count": 610
+    },
+    {
+      "code": "HF",
+      "name": "FEDERAL HOUSING FINANCE AGENCY",
+      "departmentCode": "HF",
+      "department": "FEDERAL HOUSING FINANCE AGENCY",
+      "count": 598
+    },
+    {
+      "code": "CT",
+      "name": "COMMODITY FUTURES TRADING COMMISSION",
+      "departmentCode": "CT",
+      "department": "COMMODITY FUTURES TRADING COMMISSION",
+      "count": 579
+    },
+    {
+      "code": "GB",
+      "name": "DFC",
+      "departmentCode": "GB",
+      "department": "DEVELOPMENT FINANCE CORPORATION",
+      "count": 532
+    },
+    {
+      "code": "BO",
+      "name": "OFFICE OF MANAGEMENT AND BUDGET",
+      "departmentCode": "BO",
+      "department": "OFFICE OF MANAGEMENT AND BUDGET",
+      "count": 514
+    },
+    {
+      "code": "SK",
+      "name": "CONSUMER PRODUCT SAFETY COMMISSION",
+      "departmentCode": "SK",
+      "department": "CONSUMER PRODUCT SAFETY COMMISSION",
+      "count": 425
+    },
+    {
+      "code": "TB",
+      "name": "NATIONAL TRANSPORTATION SAFETY BOARD",
+      "departmentCode": "TB",
+      "department": "NATIONAL TRANSPORTATION SAFETY BOARD",
+      "count": 406
+    },
+    {
+      "code": "TC",
+      "name": "U.S. INTERNATIONAL TRADE COMMISSION",
+      "departmentCode": "TC",
+      "department": "U.S. INTERNATIONAL TRADE COMMISSION",
+      "count": 402
+    },
+    {
+      "code": "KS",
+      "name": "CORP FOR NATIONAL AND COMMUNITY SERVICE",
+      "departmentCode": "KS",
+      "department": "CORPORATION FOR NATIONAL AND COMMUNITY SERVICE",
+      "count": 376
+    },
+    {
+      "code": "EB",
+      "name": "EXPORT-IMPORT BANK OF THE UNITED STATES",
+      "departmentCode": "EB",
+      "department": "EXPORT-IMPORT BANK OF THE UNITED STATES",
+      "count": 344
+    },
+    {
+      "code": "GJ",
+      "name": "PRESIDIO TRUST",
+      "departmentCode": "GJ",
+      "department": "PRESIDIO TRUST",
+      "count": 324
+    },
+    {
+      "code": "FL",
+      "name": "FARM CREDIT ADMINISTRATION",
+      "departmentCode": "FL",
+      "department": "FARM CREDIT ADMINISTRATION",
+      "count": 319
+    },
+    {
+      "code": "RH",
+      "name": "ARMED FORCES RETIREMENT HOME",
+      "departmentCode": "RH",
+      "department": "ARMED FORCES RETIREMENT HOME",
+      "count": 275
+    },
+    {
+      "code": "LF",
+      "name": "FEDERAL ELECTION COMMISSION",
+      "departmentCode": "LF",
+      "department": "FEDERAL ELECTION COMMISSION",
+      "count": 256
+    },
+    {
+      "code": "EC",
+      "name": "OFFICE OF ADMINISTRATION",
+      "departmentCode": "EC",
+      "department": "OFFICE OF ADMINISTRATION",
+      "count": 256
+    },
+    {
+      "code": "GW",
+      "name": "INTER BOUND AND WATER COMM U.S. SECTION",
+      "departmentCode": "GW",
+      "department": "INTERNATIONAL BOUNDARY AND WATER COMMISSION, U.S. SECTION",
+      "count": 245
+    },
+    {
+      "code": "AM",
+      "name": "U.S. AGENCY FOR INTERNATIONAL DEV",
+      "departmentCode": "AM",
+      "department": "U.S. AGENCY FOR INTERNATIONAL DEVELOPMENT",
+      "count": 234
+    },
+    {
+      "code": "RF",
+      "name": "FED RETIREMENT THRIFT INVESTMENT BOARD",
+      "departmentCode": "RF",
+      "department": "FEDERAL RETIREMENT THRIFT INVESTMENT BOARD",
+      "count": 233
+    },
+    {
+      "code": "MI",
+      "name": "MILLENNIUM CHALLENGE CORPORATION",
+      "departmentCode": "MI",
+      "department": "MILLENNIUM CHALLENGE CORPORATION",
+      "count": 229
+    },
+    {
+      "code": "AH",
+      "name": "NAT FOUNDATION ON ARTS AND HUMANITIES",
+      "departmentCode": "AH",
+      "department": "NATIONAL FOUNDATION ON THE ARTS AND THE HUMANITIES",
+      "count": 222
+    },
+    {
+      "code": "TN",
+      "name": "OFFICE OF THE U.S. TRADE REPRESENTATIVE",
+      "departmentCode": "TN",
+      "department": "OFFICE OF THE U.S. TRADE REPRESENTATIVE",
+      "count": 220
+    },
+    {
+      "code": "JL",
+      "name": "JUDICIAL BRANCH",
+      "departmentCode": "JL",
+      "department": "JUDICIAL BRANCH",
+      "count": 170
+    },
+    {
+      "code": "BD",
+      "name": "MERIT SYSTEMS PROTECTION BOARD",
+      "departmentCode": "BD",
+      "department": "MERIT SYSTEMS PROTECTION BOARD",
+      "count": 155
+    },
+    {
+      "code": "FW",
+      "name": "OFFICE OF SPECIAL COUNSEL",
+      "departmentCode": "FW",
+      "department": "OFFICE OF SPECIAL COUNSEL",
+      "count": 127
+    },
+    {
+      "code": "SS",
+      "name": "SELECTIVE SERVICE SYSTEM",
+      "departmentCode": "SS",
+      "department": "SELECTIVE SERVICE SYSTEM",
+      "count": 126
+    },
+    {
+      "code": "TW",
+      "name": "SURFACE TRANSPORTATION BOARD",
+      "departmentCode": "TW",
+      "department": "SURFACE TRANSPORTATION BOARD",
+      "count": 110
+    },
+    {
+      "code": "MC",
+      "name": "FEDERAL MARITIME COMMISSION",
+      "departmentCode": "MC",
+      "department": "FEDERAL MARITIME COMMISSION",
+      "count": 109
+    },
+    {
+      "code": "BF",
+      "name": "DEFENSE NUCLEAR FACILITIES SAFETY BOARD",
+      "departmentCode": "BF",
+      "department": "DEFENSE NUCLEAR FACILITIES SAFETY BOARD",
+      "count": 102
+    },
+    {
+      "code": "FM",
+      "name": "FED MEDIATION AND CONCILIATION SERVICE",
+      "departmentCode": "FM",
+      "department": "FEDERAL MEDIATION AND CONCILIATION SERVICE",
+      "count": 94
+    },
+    {
+      "code": "HD",
+      "name": "U.S. HOLOCAUST MEMORIAL MUSEUM",
+      "departmentCode": "HD",
+      "department": "U.S. HOLOCAUST MEMORIAL MUSEUM",
+      "count": 90
+    },
+    {
+      "code": "AB",
+      "name": "AMERICAN BATTLE MONUMENTS COMMISSION",
+      "departmentCode": "AB",
+      "department": "AMERICAN BATTLE MONUMENTS COMMISSION",
+      "count": 77
+    },
+    {
+      "code": "AU",
+      "name": "FEDERAL LABOR RELATIONS AUTHORITY",
+      "departmentCode": "AU",
+      "department": "FEDERAL LABOR RELATIONS AUTHORITY",
+      "count": 76
+    },
+    {
+      "code": "GQ",
+      "name": "ELECTION ASSISTANCE COMMISSION",
+      "departmentCode": "GQ",
+      "department": "ELECTION ASSISTANCE COMMISSION",
+      "count": 64
+    },
+    {
+      "code": "GG",
+      "name": "OFFICE OF GOVERNMENT ETHICS",
+      "departmentCode": "GG",
+      "department": "OFFICE OF GOVERNMENT ETHICS",
+      "count": 58
+    },
+    {
+      "code": "CC",
+      "name": "COMMISSION ON CIVIL RIGHTS",
+      "departmentCode": "CC",
+      "department": "COMMISSION ON CIVIL RIGHTS",
+      "count": 50
+    },
+    {
+      "code": "EW",
+      "name": "TRADE AND DEVELOPMENT AGENCY",
+      "departmentCode": "EW",
+      "department": "TRADE AND DEVELOPMENT AGENCY",
+      "count": 49
+    },
+    {
+      "code": "RO",
+      "name": "MEDICAID & CHIP PAYMENT & ACCESS COMM",
+      "departmentCode": "RO",
+      "department": "MEDICAID AND CHIP PAYMENT AND ACCESS COMMISSION",
+      "count": 48
+    },
+    {
+      "code": "OS",
+      "name": "OCCUPATIONAL SAFETY & HEALTH REVIEW CMSN",
+      "departmentCode": "OS",
+      "department": "OCCUPATIONAL SAFETY AND HEALTH REVIEW COMMISSION",
+      "count": 44
+    },
+    {
+      "code": "FJ",
+      "name": "CHEMICAL SAFETY/HAZARD INVESTIGATION BD",
+      "departmentCode": "FJ",
+      "department": "CHEMICAL SAFETY AND HAZARD INVESTIGATION BOARD",
+      "count": 42
+    },
+    {
+      "code": "RS",
+      "name": "FED MINE SAFETY AND HEALTH REVIEW CMSN",
+      "departmentCode": "RS",
+      "department": "FEDERAL MINE SAFETY AND HEALTH REVIEW COMMISSION",
+      "count": 40
+    },
+    {
+      "code": "HP",
+      "name": "ADV COUNCIL ON HISTORIC PRESERVATION",
+      "departmentCode": "HP",
+      "department": "ADVISORY COUNCIL ON HISTORIC PRESERVATION",
+      "count": 36
+    },
+    {
+      "code": "HB",
+      "name": "CMTE FOR PURCH FRM PPLE BLIND OR SEV DIS",
+      "departmentCode": "HB",
+      "department": "COMMITTEE FOR PURCHASE FROM PEOPLE WHO ARE BLIND OR SE VERELY DISABLED",
+      "count": 34
+    },
+    {
+      "code": "NP",
+      "name": "NATIONAL CAPITAL PLANNING COMMISSION",
+      "departmentCode": "NP",
+      "department": "NATIONAL CAPITAL PLANNING COMMISSION",
+      "count": 33
+    },
+    {
+      "code": "BT",
+      "name": "ARCHITECTL & TRANS BARRIER COMPLIANCE BD",
+      "departmentCode": "BT",
+      "department": "ARCHITECTURAL AND TRANSPORTATION BARRIERS COMPLIANCE BOARD",
+      "count": 33
+    },
+    {
+      "code": "NM",
+      "name": "NATIONAL MEDIATION BOARD",
+      "departmentCode": "NM",
+      "department": "NATIONAL MEDIATION BOARD",
+      "count": 33
+    },
+    {
+      "code": "EO",
+      "name": "MORRIS K. UDALL & STEWART L. UDALL FOUND",
+      "departmentCode": "EO",
+      "department": "MORRIS K. UDALL AND STEWART L. UDALL FOUNDATION",
+      "count": 33
+    },
+    {
+      "code": "ZS",
+      "name": "U.S.-CHINA ECONOMIC & SECURITY REV CMSN",
+      "departmentCode": "ZS",
+      "department": "UNITED STATES-CHINA ECONOMIC AND SECURITY REVIEW COMMISSION",
+      "count": 31
+    },
+    {
+      "code": "DO",
+      "name": "OFC OF THE NAT CYBER DIRECTOR",
+      "departmentCode": "DO",
+      "department": "OFFICE OF THE CYBER DIRECTOR",
+      "count": 30
+    },
+    {
+      "code": "ZP",
+      "name": "U.S. CMSN ON INTERNATL RELIGIOUS FREEDOM",
+      "departmentCode": "ZP",
+      "department": "U.S. COMMISSION ON INTERNATIONAL RELIGIOUS FREEDOM",
+      "count": 28
+    },
+    {
+      "code": "NS",
+      "name": "NATIONAL SECURITY COUNCIL",
+      "departmentCode": "NS",
+      "department": "NATIONAL SECURITY COUNCIL",
+      "count": 27
+    },
+    {
+      "code": "CE",
+      "name": "COUNCIL OF ECONOMIC ADVISERS",
+      "departmentCode": "CE",
+      "department": "COUNCIL OF ECONOMIC ADVISERS",
+      "count": 27
+    },
+    {
+      "code": "IG",
+      "name": "COUNCIL OF INSP. GEN. ON INTEG.& EFFIC.",
+      "departmentCode": "IG",
+      "department": "COUNCIL OF THE INSPECTORS GENERAL ON INTEGRITY AND EFFICIENCY",
+      "count": 24
+    },
+    {
+      "code": "VD",
+      "name": "PRIVACY AND CIVIL LIBERTIES OVERSIGHT",
+      "departmentCode": "VD",
+      "department": "PRIVACY AND CIVIL LIBERTIES OVERSIGHT BOARD",
+      "count": 24
+    },
+    {
+      "code": "MA",
+      "name": "MARINE MAMMAL COMMISSION",
+      "departmentCode": "MA",
+      "department": "MARINE MAMMAL COMMISSION",
+      "count": 24
+    },
+    {
+      "code": "IF",
+      "name": "INTER-AMERICAN FOUNDATION",
+      "departmentCode": "IF",
+      "department": "INTER-AMERICAN FOUNDATION",
+      "count": 22
+    },
+    {
+      "code": "GX",
+      "name": "INTERNAT BOUNDARY CMSN: U.S. AND CANADA",
+      "departmentCode": "GX",
+      "department": "INTERNATIONAL BOUNDARY COMMISSION:  UNITED STATES AND CANADA",
+      "count": 22
+    },
+    {
+      "code": "GC",
+      "name": "GULF COAST ECOSYSTEM RESTORATION COUNCIL",
+      "departmentCode": "GC",
+      "department": "GULF COAST ECOSYSTEM RESTORATION COUNCIL",
+      "count": 21
+    },
+    {
+      "code": "AN",
+      "name": "AFRICAN DEVELOPMENT FOUNDATION",
+      "departmentCode": "AN",
+      "department": "AFRICAN DEVELOPMENT FOUNDATION",
+      "count": 21
+    },
+    {
+      "code": "WK",
+      "name": "FEDERAL PERMITTING IMPROVEMENT STEER",
+      "departmentCode": "WK",
+      "department": "FEDERAL PERMITTING IMPROVEMENT STEERING COUNCIL",
+      "count": 20
+    },
+    {
+      "code": "EQ",
+      "name": "COUNCIL ON ENVIR QUAL/OFC OF ENVIR QUAL",
+      "departmentCode": "EQ",
+      "department": "COUNCIL ON ENVIRONMENTAL QUALITY/OFFICE OF ENVIRONMENTAL QUALITY",
+      "count": 20
+    },
+    {
+      "code": "NK",
+      "name": "NATIONAL COUNCIL ON DISABILITY",
+      "departmentCode": "NK",
+      "department": "NATIONAL COUNCIL ON DISABILITY",
+      "count": 19
+    },
+    {
+      "code": "BH",
+      "name": "CMSN FOR PRES OF AMERICA'S HERITAGE ABRD",
+      "departmentCode": "BH",
+      "department": "COMMISSION FOR THE PRESERVATION OF AMERICA'S HERITAGE ABROAD",
+      "count": 18
+    },
+    {
+      "code": "CX",
+      "name": "NAT CMSN ON LIBRARIES AND INFO SCIENCE",
+      "departmentCode": "CX",
+      "department": "NATIONAL COMMISSION ON LIBRARIES AND INFORMATION SCIENCE",
+      "count": 17
+    },
+    {
+      "code": "GY",
+      "name": "INTERNATIONAL JOINT CMSN: U.S. & CANADA",
+      "departmentCode": "GY",
+      "department": "INTERNATIONAL JOINT COMMISSION:  UNITED STATES AND CANADA",
+      "count": 14
+    },
+    {
+      "code": "DQ",
+      "name": "DENALI COMMISSION",
+      "departmentCode": "DQ",
+      "department": "DENALI COMMISSION",
+      "count": 11
+    },
+    {
+      "code": "UT",
+      "name": "UTAH RECLAMATN MITIGATN & CONSERVTN CMSN",
+      "departmentCode": "UT",
+      "department": "UTAH RECLAMATION MITIGATION AND CONSERVATION COMMISSION",
+      "count": 11
+    },
+    {
+      "code": "BW",
+      "name": "NUCLEAR WASTE TECHNICAL REVIEW BOARD",
+      "departmentCode": "BW",
+      "department": "NUCLEAR WASTE TECHNICAL REVIEW BOARD",
+      "count": 11
+    },
+    {
+      "code": "FI",
+      "name": "FEDERAL FINANCIAL INST. EXAM. COUNCIL",
+      "departmentCode": "FI",
+      "department": "FEDERAL FINANCIAL INSTITUTIONS EXAMINATION COUNCIL",
+      "count": 11
+    },
+    {
+      "code": "FK",
+      "name": "FARM CREDIT SYSTEM INSURANCE CORPORATION",
+      "departmentCode": "FK",
+      "department": "FARM CREDIT SYSTEM INSURANCE CORPORATION",
+      "count": 10
+    },
+    {
+      "code": "AA",
+      "name": "ADMIN CONFERENCE OF THE UNITED STATES",
+      "departmentCode": "AA",
+      "department": "ADMINISTRATIVE CONFERENCE OF THE UNITED STATES",
+      "count": 10
+    },
+    {
+      "code": "RJ",
+      "name": "CIVIL RIGHTS COLD CASE REVIEW BOARD",
+      "departmentCode": "RJ",
+      "department": "CIVIL RIGHTS COLD CASE REVIEW BOARD (CRCCRB)",
+      "count": 10
+    },
+    {
+      "code": "HW",
+      "name": "U.S. INTERAGENCY COUNCIL ON HOMELESSNESS",
+      "departmentCode": "HW",
+      "department": "U.S. INTERAGENCY COUNCIL ON HOMELESSNESS",
+      "count": 10
+    },
+    {
+      "code": "DB",
+      "name": "PUBLIC INTEREST DECLASSIFICATION BOARD",
+      "departmentCode": "DB",
+      "department": "PUBLIC INTEREST DECLASSIFICATION BOARD",
+      "count": 9
+    },
+    {
+      "code": "UJ",
+      "name": "JAPAN-UNITED STATES FRIENDSHIP CMSN",
+      "departmentCode": "UJ",
+      "department": "JAPAN-UNITED STATES FRIENDSHIP COMMISSION",
+      "count": 9
+    },
+    {
+      "code": "CF",
+      "name": "COMMISSION OF FINE ARTS",
+      "departmentCode": "CF",
+      "department": "COMMISSION OF FINE ARTS",
+      "count": 8
+    },
+    {
+      "code": "GU",
+      "name": "THE US SEMIQUINCENTENNIAL COMMISSION",
+      "departmentCode": "GU",
+      "department": "THE US SEMIQUINCENTENNIAL COMMISSION",
+      "count": 8
+    },
+    {
+      "code": "KY",
+      "name": "PUBLIC BUILDINGS REFORM BOARD",
+      "departmentCode": "KY",
+      "department": "PUBLIC BUILDINGS REFORM BOARD",
+      "count": 7
+    },
+    {
+      "code": "AP",
+      "name": "APPALACHIAN REGIONAL COMMISSION",
+      "departmentCode": "AP",
+      "department": "APPALACHIAN REGIONAL COMMISSION",
+      "count": 5
+    },
+    {
+      "code": "BK",
+      "name": "JAMES MADISON MEMORIAL FELLOWSHIP FOUND",
+      "departmentCode": "BK",
+      "department": "JAMES MADISON MEMORIAL FELLOWSHIP FOUNDATION",
+      "count": 5
+    },
+    {
+      "code": "HT",
+      "name": "HARRY S. TRUMAN SCHOLARSHIP FOUNDATION",
+      "departmentCode": "HT",
+      "department": "HARRY S. TRUMAN SCHOLARSHIP FOUNDATION",
+      "count": 5
+    },
+    {
+      "code": "GE",
+      "name": "BARRY GOLDWATER SCHOL & EXCEL IN ED FOUN",
+      "departmentCode": "GE",
+      "department": "BARRY GOLDWATER SCHOLARSHIP AND EXCELLENCE IN EDUCATION FOUNDATION",
+      "count": 2
+    },
+    {
+      "code": "AW",
+      "name": "ARCTIC RESEARCH COMMISSION",
+      "departmentCode": "AW",
+      "department": "ARCTIC RESEARCH COMMISSION",
+      "count": 2
+    },
+    {
+      "code": "DG",
+      "name": "NORTHERN BORDER REGIONAL COMMISSION",
+      "departmentCode": "DG",
+      "department": "NORTHERN BORDER REGIONAL COMMISSION",
+      "count": 2
+    },
+    {
+      "code": "DA",
+      "name": "DELTA REGIONAL AUTHORITY",
+      "departmentCode": "DA",
+      "department": "DELTA REGIONAL AUTHORITY",
+      "count": 1
+    },
+    {
+      "code": "WU",
+      "name": "SOUTHWEST BORDER REGIONAL COMMISSION",
+      "departmentCode": "WU",
+      "department": "SOUTHWEST BORDER REGIONAL COMMISSION",
+      "count": 1
+    }
+  ],
+  "subelements": [
+    {
+      "code": "VATA",
+      "name": "VETERANS HEALTH ADMINISTRATION",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 396770
+    },
+    {
+      "code": "TR93",
+      "name": "INTERNAL REVENUE SERVICE",
+      "agencyCode": "TR",
+      "agency": "DEPARTMENT OF TREASURY",
+      "count": 72163
+    },
+    {
+      "code": "HSBD",
+      "name": "CUSTOMS AND BORDER PROTECTION",
+      "agencyCode": "HS",
+      "agency": "DEPARTMENT OF HOMELAND SECURITY",
+      "count": 69958
+    },
+    {
+      "code": "AF1M",
+      "name": "AIR FORCE MATERIEL COMMAND",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 64805
+    },
+    {
+      "code": "HSBC",
+      "name": "TRANSPORTATION SECURITY ADMINISTRATION",
+      "agencyCode": "HS",
+      "agency": "DEPARTMENT OF HOMELAND SECURITY",
+      "count": 59977
+    },
+    {
+      "code": "SZ00",
+      "name": "SOCIAL SECURITY ADMINISTRATION",
+      "agencyCode": "SZ",
+      "agency": "SOCIAL SECURITY ADMINISTRATION",
+      "count": 49439
+    },
+    {
+      "code": "TD03",
+      "name": "FEDERAL AVIATION ADMINISTRATION",
+      "agencyCode": "TD",
+      "agency": "DEPARTMENT OF TRANSPORTATION",
+      "count": 44660
+    },
+    {
+      "code": "DD83",
+      "name": "MILITARY TREATMENT FACILITIES UNDER DHA",
+      "agencyCode": "DD",
+      "agency": "DEPARTMENT OF DEFENSE",
+      "count": 41014
+    },
+    {
+      "code": "DJ02",
+      "name": "FEDERAL BUREAU OF INVESTIGATION",
+      "agencyCode": "DJ",
+      "agency": "DEPARTMENT OF JUSTICE",
+      "count": 35334
+    },
+    {
+      "code": "ARCE",
+      "name": "U.S. ARMY CORPS OF ENGINEERS",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 34291
+    },
+    {
+      "code": "DJ03",
+      "name": "BUREAU OF PRISONS/FEDERAL PRISON SYSTEM",
+      "agencyCode": "DJ",
+      "agency": "DEPARTMENT OF JUSTICE",
+      "count": 33786
+    },
+    {
+      "code": "AG11",
+      "name": "FOREST SERVICE",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 33576
+    },
+    {
+      "code": "NV24",
+      "name": "NAVAL SEA SYSTEMS COMMAND",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 33567
+    },
+    {
+      "code": "NV60",
+      "name": "UNITED STATES FLEET FORCES COMMAND",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 33354
+    },
+    {
+      "code": "VALA",
+      "name": "VETERANS BENEFITS ADMINISTRATION",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 29504
+    },
+    {
+      "code": "HSBB",
+      "name": "IMMIGRATION AND CUSTOMS ENFORCEMENT",
+      "agencyCode": "HS",
+      "agency": "DEPARTMENT OF HOMELAND SECURITY",
+      "count": 29065
+    },
+    {
+      "code": "NV19",
+      "name": "NAVAL AIR SYSTEMS COMMAND",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 26730
+    },
+    {
+      "code": "NV70",
+      "name": "U.S. PACIFIC FLEET, COMMANDER IN CHIEF",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 25393
+    },
+    {
+      "code": "ARNG",
+      "name": "ARMY NATIONAL GUARD UNITS",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 24052
+    },
+    {
+      "code": "HSCB",
+      "name": "FEDERAL EMERGENCY MANAGEMENT AGENCY",
+      "agencyCode": "HS",
+      "agency": "DEPARTMENT OF HOMELAND SECURITY",
+      "count": 20262
+    },
+    {
+      "code": "HSAB",
+      "name": "CITIZENSHIP AND IMMIGRATION SERVICES",
+      "agencyCode": "HS",
+      "agency": "DEPARTMENT OF HOMELAND SECURITY",
+      "count": 20241
+    },
+    {
+      "code": "ARXA",
+      "name": "UNITED STATES ARMY INSTALLATION MANAGEMENT COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 19719
+    },
+    {
+      "code": "IN10",
+      "name": "NATIONAL PARK SERVICE",
+      "agencyCode": "IN",
+      "agency": "DEPARTMENT OF INTERIOR",
+      "count": 18888
+    },
+    {
+      "code": "HE38",
+      "name": "NATIONAL INSTITUTES OF HEALTH",
+      "agencyCode": "HE",
+      "agency": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 16460
+    },
+    {
+      "code": "HE36",
+      "name": "FOOD AND DRUG ADMINISTRATION",
+      "agencyCode": "HE",
+      "agency": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 16240
+    },
+    {
+      "code": "NV27",
+      "name": "U.S. MARINE CORPS",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 16170
+    },
+    {
+      "code": "NV25",
+      "name": "NAVAL FACILITIES ENGINEERING COMMAND",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 13619
+    },
+    {
+      "code": "CM56",
+      "name": "PATENT AND TRADEMARK OFFICE",
+      "agencyCode": "CM",
+      "agency": "DEPARTMENT OF COMMERCE",
+      "count": 13529
+    },
+    {
+      "code": "ARAF",
+      "name": "UNITED STATES ARMY FUTURES COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 13462
+    },
+    {
+      "code": "AF0J",
+      "name": "AIR EDUCATION AND TRAINING COMMAND",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 13086
+    },
+    {
+      "code": "AFNG",
+      "name": "AIR NATIONAL GUARD UNITS",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 12597
+    },
+    {
+      "code": "EP00",
+      "name": "ENVIRONMENTAL PROTECTION AGENCY",
+      "agencyCode": "EP",
+      "agency": "ENVIRONMENTAL PROTECTION AGENCY",
+      "count": 12513
+    },
+    {
+      "code": "NV52",
+      "name": "COMMANDER, NAVY INSTALLATIONS COMMAND",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 12453
+    },
+    {
+      "code": "HE37",
+      "name": "INDIAN HEALTH SERVICE",
+      "agencyCode": "HE",
+      "agency": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 12248
+    },
+    {
+      "code": "DN00",
+      "name": "DEPARTMENT OF ENERGY",
+      "agencyCode": "DN",
+      "agency": "DEPARTMENT OF ENERGY",
+      "count": 11999
+    },
+    {
+      "code": "IN01",
+      "name": "OFFICE OF THE SECRETARY OF THE INTERIOR",
+      "agencyCode": "IN",
+      "agency": "DEPARTMENT OF INTERIOR",
+      "count": 11685
+    },
+    {
+      "code": "ST00",
+      "name": "DEPARTMENT OF STATE",
+      "agencyCode": "ST",
+      "agency": "DEPARTMENT OF STATE",
+      "count": 11354
+    },
+    {
+      "code": "CM63",
+      "name": "U.S. CENSUS BUREAU",
+      "agencyCode": "CM",
+      "agency": "DEPARTMENT OF COMMERCE",
+      "count": 10764
+    },
+    {
+      "code": "AF1C",
+      "name": "AIR COMBAT COMMAND",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 10498
+    },
+    {
+      "code": "DJ09",
+      "name": "EXECUTIVE OFFICE FOR U.S. ATTORNEYS AND THE OFFICES OF THE U.S. ATTORNEYS",
+      "agencyCode": "DJ",
+      "agency": "DEPARTMENT OF JUSTICE",
+      "count": 10292
+    },
+    {
+      "code": "DD34",
+      "name": "DEFENSE COMMISSARY AGENCY",
+      "agencyCode": "DD",
+      "agency": "DEPARTMENT OF DEFENSE",
+      "count": 10184
+    },
+    {
+      "code": "CM54",
+      "name": "NATIONAL OCEANIC AND ATMOSPHERIC ADMINISTRATION",
+      "agencyCode": "CM",
+      "agency": "DEPARTMENT OF COMMERCE",
+      "count": 9811
+    },
+    {
+      "code": "NV39",
+      "name": "COMMANDER, NAVAL INFORMATION WARFARE SYSTEMS COMMAND (NAVWARSYSCOM)",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 9529
+    },
+    {
+      "code": "DD16",
+      "name": "DEPARTMENT OF WAR EDUCATION ACTIVITY",
+      "agencyCode": "DD",
+      "agency": "DEPARTMENT OF DEFENSE",
+      "count": 9424
+    },
+    {
+      "code": "HE39",
+      "name": "CENTERS FOR DISEASE CONTROL AND PREVENTION",
+      "agencyCode": "HE",
+      "agency": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 9152
+    },
+    {
+      "code": "ARTC",
+      "name": "U.S. ARMY TRAINING AND DOCTRINE COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 8972
+    },
+    {
+      "code": "AG16",
+      "name": "NATURAL RESOURCES CONSERVATION SERVICE",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 8882
+    },
+    {
+      "code": "ARX7",
+      "name": "U.S. ARMY TANK-AUTOMOTIVE AND ARMAMENT COMMAND (TACOM)",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 8782
+    },
+    {
+      "code": "AF0M",
+      "name": "HEADQUARTERS, AIR FORCE RESERVE COMMAND",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 8770
+    },
+    {
+      "code": "HSAC",
+      "name": "U.S. COAST GUARD",
+      "agencyCode": "HS",
+      "agency": "DEPARTMENT OF HOMELAND SECURITY",
+      "count": 8723
+    },
+    {
+      "code": "DJ06",
+      "name": "DRUG ENFORCEMENT ADMINISTRATION",
+      "agencyCode": "DJ",
+      "agency": "DEPARTMENT OF JUSTICE",
+      "count": 8488
+    },
+    {
+      "code": "HSAD",
+      "name": "U.S. SECRET SERVICE",
+      "agencyCode": "HS",
+      "agency": "DEPARTMENT OF HOMELAND SECURITY",
+      "count": 8465
+    },
+    {
+      "code": "ARHR",
+      "name": "U.S. ARMY RESERVE COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 7585
+    },
+    {
+      "code": "AG37",
+      "name": "FOOD SAFETY AND INSPECTION SERVICE",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 7313
+    },
+    {
+      "code": "AG34",
+      "name": "ANIMAL AND PLANT HEALTH INSPECTION SERVICE",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 6856
+    },
+    {
+      "code": "AF1L",
+      "name": "AIR MOBILITY COMMAND",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 6809
+    },
+    {
+      "code": "VAEB",
+      "name": "DEPUTY ASSISTANT SECRETARY FOR INFORMATION AND TECHNOLOGY",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 6699
+    },
+    {
+      "code": "IN15",
+      "name": "U.S. FISH AND WILDLIFE SERVICE",
+      "agencyCode": "IN",
+      "agency": "DEPARTMENT OF INTERIOR",
+      "count": 6312
+    },
+    {
+      "code": "NV23",
+      "name": "NAVAL SUPPLY SYSTEMS COMMAND",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 6053
+    },
+    {
+      "code": "IN08",
+      "name": "GEOLOGICAL SURVEY",
+      "agencyCode": "IN",
+      "agency": "DEPARTMENT OF INTERIOR",
+      "count": 5867
+    },
+    {
+      "code": "ARX6",
+      "name": "U.S. ARMY AVIATION AND MISSILE COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 5811
+    },
+    {
+      "code": "IN05",
+      "name": "BUREAU OF LAND MANAGEMENT",
+      "agencyCode": "IN",
+      "agency": "DEPARTMENT OF INTERIOR",
+      "count": 5803
+    },
+    {
+      "code": "HE70",
+      "name": "CENTERS FOR MEDICARE & MEDICAID SERVICES",
+      "agencyCode": "HE",
+      "agency": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 5631
+    },
+    {
+      "code": "DD60",
+      "name": "DEFENSE HEALTH AGENCY",
+      "agencyCode": "DD",
+      "agency": "DEPARTMENT OF DEFENSE",
+      "count": 5584
+    },
+    {
+      "code": "DJ08",
+      "name": "U.S. MARSHALS SERVICE",
+      "agencyCode": "DJ",
+      "agency": "DEPARTMENT OF JUSTICE",
+      "count": 5398
+    },
+    {
+      "code": "DJ01",
+      "name": "OFFICES, BOARDS AND DIVISIONS",
+      "agencyCode": "DJ",
+      "agency": "DEPARTMENT OF JUSTICE",
+      "count": 5250
+    },
+    {
+      "code": "SB00",
+      "name": "SMALL BUSINESS ADMINISTRATION",
+      "agencyCode": "SB",
+      "agency": "SMALL BUSINESS ADMINISTRATION",
+      "count": 5086
+    },
+    {
+      "code": "FD00",
+      "name": "FEDERAL DEPOSIT INSURANCE CORPORATION",
+      "agencyCode": "FD",
+      "agency": "FEDERAL DEPOSIT INSURANCE CORPORATION",
+      "count": 5009
+    },
+    {
+      "code": "ARX8",
+      "name": "U.S. ARMY COMMUNICATIONS ELECTRONICS COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 4992
+    },
+    {
+      "code": "AG03",
+      "name": "AGRICULTURAL RESEARCH SERVICE",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 4780
+    },
+    {
+      "code": "NV12",
+      "name": "DIRECTORATE FOR ADMINISTRATIONS, LOGISTICS, AND OPERATIONS (DALO)",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 4760
+    },
+    {
+      "code": "HE60",
+      "name": "ADMINISTRATION FOR STRATEGIC PREPAREDNESS AND RESPONSE",
+      "agencyCode": "HE",
+      "agency": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 4515
+    },
+    {
+      "code": "ARAE",
+      "name": "U.S. ARMY ACQUISITION SUPPORT CENTER",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 4507
+    },
+    {
+      "code": "DJ15",
+      "name": "BUREAU OF ALCOHOL, TOBACCO, FIREARMS AND EXPLOSIVES",
+      "agencyCode": "DJ",
+      "agency": "DEPARTMENT OF JUSTICE",
+      "count": 4504
+    },
+    {
+      "code": "ARXD",
+      "name": "U. S. ARMY CONTRACTING COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 4399
+    },
+    {
+      "code": "HSAA",
+      "name": "DHS HEADQUARTERS",
+      "agencyCode": "HS",
+      "agency": "DEPARTMENT OF HOMELAND SECURITY",
+      "count": 4180
+    },
+    {
+      "code": "ARXQ",
+      "name": "U.S. ARMY JOINT MUNITIONS COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 4102
+    },
+    {
+      "code": "SE00",
+      "name": "SECURITIES AND EXCHANGE COMMISSION",
+      "agencyCode": "SE",
+      "agency": "SECURITIES AND EXCHANGE COMMISSION",
+      "count": 3927
+    },
+    {
+      "code": "NV22",
+      "name": "BUREAU OF NAVAL PERSONNEL",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 3763
+    },
+    {
+      "code": "AR2A",
+      "name": "UNITED STATES ARMY CYBER COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 3733
+    },
+    {
+      "code": "AG02",
+      "name": "AGRICULTURAL MARKETING SERVICE",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 3697
+    },
+    {
+      "code": "ARXC",
+      "name": "U.S. ARMY SUSTAINMENT COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 3694
+    },
+    {
+      "code": "NV76",
+      "name": "NAVAL EDUCATION AND TRAINING COMMAND",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 3663
+    },
+    {
+      "code": "IN07",
+      "name": "BUREAU OF RECLAMATION",
+      "agencyCode": "IN",
+      "agency": "DEPARTMENT OF INTERIOR",
+      "count": 3609
+    },
+    {
+      "code": "AFGS",
+      "name": "AIR FORCE GLOBAL STRIKE COMMAND",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 3481
+    },
+    {
+      "code": "SM03",
+      "name": "SMITHSONIAN INSTITUTION (EXCEPT UNITS ADMINISTERED UNDER SEPARATE BOARDS OF TRUSTEES)",
+      "agencyCode": "SM",
+      "agency": "SMITHSONIAN INSTITUTION",
+      "count": 3447
+    },
+    {
+      "code": "ARAT",
+      "name": "U.S. ARMY TEST AND EVALUATION COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 3305
+    },
+    {
+      "code": "ARCH",
+      "name": "US ARMY CIVILIAN HUMAN RESOURCES AGENCY",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 3273
+    },
+    {
+      "code": "GS30",
+      "name": "FEDERAL ACQUISITION SERVICE",
+      "agencyCode": "GS",
+      "agency": "GENERAL SERVICES ADMINISTRATION",
+      "count": 3261
+    },
+    {
+      "code": "VADG",
+      "name": "EXECUTIVE DIRECTOR, OFFICE OF ACQUISITION, LOGISTICS AND CONSTRUCTION",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 3200
+    },
+    {
+      "code": "GS03",
+      "name": "PUBLIC BUILDINGS SERVICE",
+      "agencyCode": "GS",
+      "agency": "GENERAL SERVICES ADMINISTRATION",
+      "count": 3159
+    },
+    {
+      "code": "AF0R",
+      "name": "PACIFIC AIR FORCES",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 3158
+    },
+    {
+      "code": "CM57",
+      "name": "NATIONAL INSTITUTE OF STANDARDS AND TECHNOLOGY",
+      "agencyCode": "CM",
+      "agency": "DEPARTMENT OF COMMERCE",
+      "count": 3150
+    },
+    {
+      "code": "ARAS",
+      "name": "U.S. ARMY INTELLIGENCE AND SECURITY COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 3093
+    },
+    {
+      "code": "AG07",
+      "name": "RURAL DEVELOPMENT",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 3023
+    },
+    {
+      "code": "TR91",
+      "name": "DEPARTMENTAL OFFICES",
+      "agencyCode": "TR",
+      "agency": "DEPARTMENT OF TREASURY",
+      "count": 2937
+    },
+    {
+      "code": "IN28",
+      "name": "BUREAU OF INDIAN EDUCATION",
+      "agencyCode": "IN",
+      "agency": "DEPARTMENT OF INTERIOR",
+      "count": 2775
+    },
+    {
+      "code": "AGFA",
+      "name": "FARM SERVICE AGENCY",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 2752
+    },
+    {
+      "code": "IN06",
+      "name": "INDIAN AFFAIRS",
+      "agencyCode": "IN",
+      "agency": "DEPARTMENT OF INTERIOR",
+      "count": 2732
+    },
+    {
+      "code": "AF1Y",
+      "name": "AIR FORCE CIVILIAN CAREER TRAINING",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 2715
+    },
+    {
+      "code": "NN72",
+      "name": "LYNDON B. JOHNSON SPACE CENTER",
+      "agencyCode": "NN",
+      "agency": "NAT AERONAUTICS AND SPACE ADMINISTRATION",
+      "count": 2687
+    },
+    {
+      "code": "ARMC",
+      "name": "U.S. ARMY MEDICAL COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 2682
+    },
+    {
+      "code": "TRAJ",
+      "name": "OFFICE OF THE COMPTROLLER OF THE CURRENCY",
+      "agencyCode": "TR",
+      "agency": "DEPARTMENT OF TREASURY",
+      "count": 2622
+    },
+    {
+      "code": "AF6S",
+      "name": "SPACE SYSTEMS COMMAND",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 2592
+    },
+    {
+      "code": "NV14",
+      "name": "OFFICE OF NAVAL RESEARCH",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 2582
+    },
+    {
+      "code": "HE10",
+      "name": "OFFICE OF THE SECRETARY OF HEALTH AND HUMAN SERVICES",
+      "agencyCode": "HE",
+      "agency": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 2578
+    },
+    {
+      "code": "DD01",
+      "name": "OFFICE OF THE SECRETARY OF DEFENSE",
+      "agencyCode": "DD",
+      "agency": "DEPARTMENT OF DEFENSE",
+      "count": 2512
+    },
+    {
+      "code": "ARJA",
+      "name": "JOINT ACTIVITIES",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 2485
+    },
+    {
+      "code": "NU00",
+      "name": "NUCLEAR REGULATORY COMMISSION",
+      "agencyCode": "NU",
+      "agency": "NUCLEAR REGULATORY COMMISSION",
+      "count": 2477
+    },
+    {
+      "code": "NQ00",
+      "name": "NATIONAL ARCHIVES AND RECORDS ADMINISTRATION",
+      "agencyCode": "NQ",
+      "agency": "NAT ARCHIVES AND RECORDS ADMINISTRATION",
+      "count": 2349
+    },
+    {
+      "code": "ARAP",
+      "name": "U. S. MILITARY ENTRANCE PROCESSING COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 2326
+    },
+    {
+      "code": "DJ12",
+      "name": "EXECUTIVE OFFICE FOR IMMIGRATION REVIEW",
+      "agencyCode": "DJ",
+      "agency": "DEPARTMENT OF JUSTICE",
+      "count": 2230
+    },
+    {
+      "code": "HSCA",
+      "name": "CYBERSECURITY AND INFRASTRUCTURE SECURITY AGENCY",
+      "agencyCode": "HS",
+      "agency": "DEPARTMENT OF HOMELAND SECURITY",
+      "count": 2216
+    },
+    {
+      "code": "ARFC",
+      "name": "U.S. ARMY FORCES COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 2211
+    },
+    {
+      "code": "AF4G",
+      "name": "UNITED STATES SPACE FORCE",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 2171
+    },
+    {
+      "code": "AF13",
+      "name": "HQ USAF AND SUPPORT ELEMENTS",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 2135
+    },
+    {
+      "code": "ARTA",
+      "name": "U.S. ARMY RECRUITING COMMAND AND U.S. ARMY CADET COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 2098
+    },
+    {
+      "code": "VAPA",
+      "name": "NATIONAL CEMETERY ADMINISTRATION",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 2093
+    },
+    {
+      "code": "NN51",
+      "name": "GODDARD SPACE FLIGHT CENTER",
+      "agencyCode": "NN",
+      "agency": "NAT AERONAUTICS AND SPACE ADMINISTRATION",
+      "count": 2009
+    },
+    {
+      "code": "TD04",
+      "name": "FEDERAL HIGHWAY ADMINISTRATION",
+      "agencyCode": "TD",
+      "agency": "DEPARTMENT OF TRANSPORTATION",
+      "count": 1994
+    },
+    {
+      "code": "OM00",
+      "name": "OFFICE OF PERSONNEL MANAGEMENT",
+      "agencyCode": "OM",
+      "agency": "OFFICE OF PERSONNEL MANAGEMENT",
+      "count": 1984
+    },
+    {
+      "code": "TRFD",
+      "name": "BUREAU OF THE FISCAL SERVICE",
+      "agencyCode": "TR",
+      "agency": "DEPARTMENT OF TREASURY",
+      "count": 1927
+    },
+    {
+      "code": "NV11",
+      "name": "IMMEDIATE OFFICE OF THE CHIEF OF NAVAL OPERATIONS",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 1917
+    },
+    {
+      "code": "NN62",
+      "name": "GEORGE C. MARSHALL SPACE FLIGHT CENTER",
+      "agencyCode": "NN",
+      "agency": "NAT AERONAUTICS AND SPACE ADMINISTRATION",
+      "count": 1915
+    },
+    {
+      "code": "HUCC",
+      "name": "OFFICE OF GENERAL COUNSEL",
+      "agencyCode": "HU",
+      "agency": "DEPARTMENT OF HOUSING AND URBAN DEVELOPM",
+      "count": 1913
+    },
+    {
+      "code": "NN76",
+      "name": "JOHN F. KENNEDY SPACE CENTER",
+      "agencyCode": "NN",
+      "agency": "NAT AERONAUTICS AND SPACE ADMINISTRATION",
+      "count": 1889
+    },
+    {
+      "code": "DLLS",
+      "name": "BUREAU OF LABOR STATISTICS",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 1865
+    },
+    {
+      "code": "NV18",
+      "name": "NAVAL MEDICAL COMMAND",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 1775
+    },
+    {
+      "code": "EE00",
+      "name": "EQUAL EMPLOYMENT OPPORTUNITY COMMISSION",
+      "agencyCode": "EE",
+      "agency": "EQUAL EMPLOYMENT OPPORTUNITY COMMISSION",
+      "count": 1677
+    },
+    {
+      "code": "NV30",
+      "name": "STRATEGIC SYSTEMS PROGRAMS (SSP)",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 1677
+    },
+    {
+      "code": "HE34",
+      "name": "HEALTH RESOURCES AND SERVICES ADMINISTRATION",
+      "agencyCode": "HE",
+      "agency": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 1664
+    },
+    {
+      "code": "ARSP",
+      "name": "U.S. SPECIAL OPERATIONS COMMAND (ARMY)",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 1657
+    },
+    {
+      "code": "NN10",
+      "name": "HEADQUARTERS, NASA",
+      "agencyCode": "NN",
+      "agency": "NAT AERONAUTICS AND SPACE ADMINISTRATION",
+      "count": 1652
+    },
+    {
+      "code": "LP00",
+      "name": "GOVERNMENT PUBLISHING OFFICE",
+      "agencyCode": "LP",
+      "agency": "GOVERNMENT PUBLISHING OFFICE",
+      "count": 1625
+    },
+    {
+      "code": "VADD",
+      "name": "DEPUTY ASSISTANT SECRETARY FOR FINANCE",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 1568
+    },
+    {
+      "code": "TD01",
+      "name": "OFFICE OF THE SECRETARY OF TRANSPORTATION",
+      "agencyCode": "TD",
+      "agency": "DEPARTMENT OF TRANSPORTATION",
+      "count": 1544
+    },
+    {
+      "code": "HE90",
+      "name": "ADMINISTRATION FOR CHILDREN AND FAMILIES",
+      "agencyCode": "HE",
+      "agency": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 1500
+    },
+    {
+      "code": "DLSH",
+      "name": "OCCUPATIONAL SAFETY AND HEALTH ADMINISTRATION",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 1488
+    },
+    {
+      "code": "TRAI",
+      "name": "BUREAU OF ENGRAVING AND PRINTING",
+      "agencyCode": "TR",
+      "agency": "DEPARTMENT OF TREASURY",
+      "count": 1483
+    },
+    {
+      "code": "ARCB",
+      "name": "U.S. ARMY CRIMINAL INVESTIGATION COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 1442
+    },
+    {
+      "code": "HSBE",
+      "name": "FEDERAL LAW ENFORCEMENT TRAINING CENTERS",
+      "agencyCode": "HS",
+      "agency": "DEPARTMENT OF HOMELAND SECURITY",
+      "count": 1412
+    },
+    {
+      "code": "NV15",
+      "name": "NAVAL INTELLIGENCE ACTIVITY",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 1408
+    },
+    {
+      "code": "AF0D",
+      "name": "U.S. AIR FORCES, EUROPE",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 1401
+    },
+    {
+      "code": "AF0V",
+      "name": "AIR FORCE SPECIAL OPERATIONS COMMAND",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 1394
+    },
+    {
+      "code": "DLMS",
+      "name": "MINE SAFETY AND HEALTH ADMINISTRATION",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 1367
+    },
+    {
+      "code": "AF09",
+      "name": "AIR FORCE PERSONNEL CENTER",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 1351
+    },
+    {
+      "code": "DNFE",
+      "name": "FEDERAL ENERGY REGULATORY COMMISSION",
+      "agencyCode": "DN",
+      "agency": "DEPARTMENT OF ENERGY",
+      "count": 1340
+    },
+    {
+      "code": "NN23",
+      "name": "LANGLEY RESEARCH CENTER",
+      "agencyCode": "NN",
+      "agency": "NAT AERONAUTICS AND SPACE ADMINISTRATION",
+      "count": 1336
+    },
+    {
+      "code": "HE13",
+      "name": "OFFICE OF INSPECTOR GENERAL",
+      "agencyCode": "HE",
+      "agency": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 1313
+    },
+    {
+      "code": "ARP1",
+      "name": "U.S. ARMY, PACIFIC",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 1307
+    },
+    {
+      "code": "AF6F",
+      "name": "UNITED STATES SPACE FORCE FORCES",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 1292
+    },
+    {
+      "code": "HUBB",
+      "name": "OFFICE OF THE CHIEF HUMAN CAPITAL OFFICER",
+      "agencyCode": "HU",
+      "agency": "DEPARTMENT OF HOUSING AND URBAN DEVELOPM",
+      "count": 1286
+    },
+    {
+      "code": "VAAD",
+      "name": "BOARD OF VETERANS APPEALS",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 1269
+    },
+    {
+      "code": "TRAD",
+      "name": "U.S. MINT",
+      "agencyCode": "TR",
+      "agency": "DEPARTMENT OF TREASURY",
+      "count": 1246
+    },
+    {
+      "code": "AF3Q",
+      "name": "AIR FORCE ELEMENTS, U.S. STRATEGIC COMMAND",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 1241
+    },
+    {
+      "code": "ARHC",
+      "name": "US ARMY HUMAN RESOURCES COMMAND (DRU)",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 1202
+    },
+    {
+      "code": "DLWH",
+      "name": "WAGE AND HOUR DIVISION",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 1195
+    },
+    {
+      "code": "FC00",
+      "name": "FEDERAL COMMUNICATIONS COMMISSION",
+      "agencyCode": "FC",
+      "agency": "FEDERAL COMMUNICATIONS COMMISSION",
+      "count": 1187
+    },
+    {
+      "code": "NV41",
+      "name": "NAVY SYSTEMS MANAGEMENT ACTIVITY",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 1183
+    },
+    {
+      "code": "AGIT",
+      "name": "OFFICE OF THE CHIEF INFORMATION OFFICER",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 1164
+    },
+    {
+      "code": "AG30",
+      "name": "FOOD AND NUTRITION SERVICE",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 1146
+    },
+    {
+      "code": "AF40",
+      "name": "NATIONAL AIR AND SPACE INTELLIGENCE CENTER",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 1146
+    },
+    {
+      "code": "NN22",
+      "name": "JOHN GLENN RESEARCH CENTER AT LEWIS FIELD",
+      "agencyCode": "NN",
+      "agency": "NAT AERONAUTICS AND SPACE ADMINISTRATION",
+      "count": 1136
+    },
+    {
+      "code": "ARXT",
+      "name": "ARMY TRANSPORTATION COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 1132
+    },
+    {
+      "code": "CM55",
+      "name": "INTERNATIONAL TRADE ADMINISTRATION",
+      "agencyCode": "CM",
+      "agency": "DEPARTMENT OF COMMERCE",
+      "count": 1125
+    },
+    {
+      "code": "DD06",
+      "name": "DEFENSE SECURITY COOPERATION AGENCY",
+      "agencyCode": "DD",
+      "agency": "DEPARTMENT OF DEFENSE",
+      "count": 1117
+    },
+    {
+      "code": "AF0B",
+      "name": "U.S. AIR FORCE ACADEMY",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 1105
+    },
+    {
+      "code": "NF00",
+      "name": "NATIONAL SCIENCE FOUNDATION",
+      "agencyCode": "NF",
+      "agency": "NATIONAL SCIENCE FOUNDATION",
+      "count": 1104
+    },
+    {
+      "code": "AF4W",
+      "name": "AIR FORCE DISTRICT OF WASHINGTON",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 1089
+    },
+    {
+      "code": "FRFT",
+      "name": "CONSUMER FINANCIAL PROTECTION BUREAU",
+      "agencyCode": "FR",
+      "agency": "FEDERAL RESERVE SYSTEM",
+      "count": 1082
+    },
+    {
+      "code": "NV74",
+      "name": "NAVAL SPECIAL WARFARE COMMAND",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 1078
+    },
+    {
+      "code": "ARSE",
+      "name": "HQDA FIELD OPERATING AGENCIES AND STAFF SUPPORT AGENCIES AND STAFF SUPPORT AGENCIES",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 1061
+    },
+    {
+      "code": "AF07",
+      "name": "AIR FORCE OFFICE OF SPECIAL INVESTIGATIONS",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 1059
+    },
+    {
+      "code": "DLOW",
+      "name": "OFFICE OF WORKERS' COMPENSATION PROGRAMS",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 1056
+    },
+    {
+      "code": "NL00",
+      "name": "NATIONAL LABOR RELATIONS BOARD",
+      "agencyCode": "NL",
+      "agency": "NATIONAL LABOR RELATIONS BOARD",
+      "count": 1041
+    },
+    {
+      "code": "FT00",
+      "name": "FEDERAL TRADE COMMISSION",
+      "agencyCode": "FT",
+      "agency": "FEDERAL TRADE COMMISSION",
+      "count": 1029
+    },
+    {
+      "code": "TD17",
+      "name": "FEDERAL MOTOR CARRIER SAFETY ADMINISTRATION",
+      "agencyCode": "TD",
+      "agency": "DEPARTMENT OF TRANSPORTATION",
+      "count": 1019
+    },
+    {
+      "code": "AG99",
+      "name": "FPAC BUSINESS CENTER",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 1000
+    },
+    {
+      "code": "NN21",
+      "name": "AMES RESEARCH CENTER",
+      "agencyCode": "NN",
+      "agency": "NAT AERONAUTICS AND SPACE ADMINISTRATION",
+      "count": 995
+    },
+    {
+      "code": "ARSB",
+      "name": "FIELD OPERATING OFFICES OF THE OFFICE OF THE SECRETARY OF THE ARMY",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 993
+    },
+    {
+      "code": "AF3D",
+      "name": "AIR FORCE ELEMENTS, U.S. SPECIAL OPERATIONS COMMAND",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 984
+    },
+    {
+      "code": "VAAF",
+      "name": "INSPECTOR GENERAL",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 953
+    },
+    {
+      "code": "TD05",
+      "name": "FEDERAL RAILROAD ADMINISTRATION",
+      "agencyCode": "TD",
+      "agency": "DEPARTMENT OF TRANSPORTATION",
+      "count": 952
+    },
+    {
+      "code": "VAAA",
+      "name": "OFFICE OF THE SECRETARY",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 948
+    },
+    {
+      "code": "CU00",
+      "name": "NATIONAL CREDIT UNION ADMINISTRATION",
+      "agencyCode": "CU",
+      "agency": "NATIONAL CREDIT UNION ADMINISTRATION",
+      "count": 926
+    },
+    {
+      "code": "DLAM",
+      "name": "OFFICE OF THE ASSISTANT SECRETARY FOR ADMINISTRATION AND MANAGEMENT",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 914
+    },
+    {
+      "code": "DLET",
+      "name": "EMPLOYMENT AND TRAINING ADMINISTRATION",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 894
+    },
+    {
+      "code": "ARCS",
+      "name": "IMMEDIATE OFFICE OF THE CHIEF OF STAFF OF THE ARMY",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 889
+    },
+    {
+      "code": "CM51",
+      "name": "OFFICE OF THE SECRETARY",
+      "agencyCode": "CM",
+      "agency": "DEPARTMENT OF COMMERCE",
+      "count": 886
+    },
+    {
+      "code": "ARXF",
+      "name": "UNITED STATES ARMY FINANCIAL MANAGEMENT COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 829
+    },
+    {
+      "code": "ARE1",
+      "name": "IMMEDIATE OFFICE OF THE COMMANDER-IN-CHIEF OF THE U.S. ARMY EUROPE AND SEVENTH ARMY",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 811
+    },
+    {
+      "code": "AF4V",
+      "name": "NON-DOD AND OTHER SUPPORT",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 805
+    },
+    {
+      "code": "IB00",
+      "name": "U.S. AGENCY FOR GLOBAL MEDIA",
+      "agencyCode": "IB",
+      "agency": "U.S.AGENCY FOR GLOBAL MEDIA",
+      "count": 802
+    },
+    {
+      "code": "ARSA",
+      "name": "OFFICE OF THE SECRETARY OF THE ARMY",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 796
+    },
+    {
+      "code": "EDEN",
+      "name": "FEDERAL STUDENT AID",
+      "agencyCode": "ED",
+      "agency": "DEPARTMENT OF EDUCATION",
+      "count": 771
+    },
+    {
+      "code": "BG00",
+      "name": "PENSION BENEFIT GUARANTY CORPORATION",
+      "agencyCode": "BG",
+      "agency": "PENSION BENEFIT GUARANTY CORPORATION",
+      "count": 733
+    },
+    {
+      "code": "AG90",
+      "name": "OFFICE OF THE CHIEF FINANCIAL OFFICER",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 725
+    },
+    {
+      "code": "TD13",
+      "name": "MARITIME ADMINISTRATION",
+      "agencyCode": "TD",
+      "agency": "DEPARTMENT OF TRANSPORTATION",
+      "count": 714
+    },
+    {
+      "code": "ARMA",
+      "name": "U.S. MILITARY ACADEMY",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 698
+    },
+    {
+      "code": "RR00",
+      "name": "RAILROAD RETIREMENT BOARD",
+      "agencyCode": "RR",
+      "agency": "RAILROAD RETIREMENT BOARD",
+      "count": 684
+    },
+    {
+      "code": "VAAE",
+      "name": "GENERAL COUNSEL",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 679
+    },
+    {
+      "code": "DJ11",
+      "name": "U.S. TRUSTEE PROGRAM",
+      "agencyCode": "DJ",
+      "agency": "DEPARTMENT OF JUSTICE",
+      "count": 671
+    },
+    {
+      "code": "ARX2",
+      "name": "HEADQUARTERS, AMC",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 670
+    },
+    {
+      "code": "HSAE",
+      "name": "OFFICE OF THE INSPECTOR GENERAL",
+      "agencyCode": "HS",
+      "agency": "DEPARTMENT OF HOMELAND SECURITY",
+      "count": 661
+    },
+    {
+      "code": "DD15",
+      "name": "UNIFORMED SERVICES UNIVERSITY OF THE HEALTH SCIENCES",
+      "agencyCode": "DD",
+      "agency": "DEPARTMENT OF DEFENSE",
+      "count": 658
+    },
+    {
+      "code": "DJ07",
+      "name": "OFFICE OF JUSTICE PROGRAMS",
+      "agencyCode": "DJ",
+      "agency": "DEPARTMENT OF JUSTICE",
+      "count": 651
+    },
+    {
+      "code": "ARGB",
+      "name": "OFFICE OF THE CHIEF OF THE NATIONAL GUARD BUREAU",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 636
+    },
+    {
+      "code": "TRTG",
+      "name": "OFFICE OF THE INSPECTOR GENERAL FOR TAX ADMINISTRATION",
+      "agencyCode": "TR",
+      "agency": "DEPARTMENT OF TREASURY",
+      "count": 632
+    },
+    {
+      "code": "DLPW",
+      "name": "EMPLOYEE BENEFITS SECURITY ADMINISTRATION",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 614
+    },
+    {
+      "code": "SM01",
+      "name": "NATIONAL GALLERY OF ART",
+      "agencyCode": "SM",
+      "agency": "SMITHSONIAN INSTITUTION",
+      "count": 613
+    },
+    {
+      "code": "AF4D",
+      "name": "U.S. NORTHERN COMMAND",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 613
+    },
+    {
+      "code": "PU00",
+      "name": "PEACE CORPS",
+      "agencyCode": "PU",
+      "agency": "PEACE CORPS",
+      "count": 610
+    },
+    {
+      "code": "AF2I",
+      "name": "AIR NATIONAL GUARD SUPPORT CENTER",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 596
+    },
+    {
+      "code": "FQ01",
+      "name": "OFFICE OF THE DIRECTOR",
+      "agencyCode": "FQ",
+      "agency": "COURT SERVICES AND OFFENDR SUPERVSN AGY",
+      "count": 586
+    },
+    {
+      "code": "CT00",
+      "name": "COMMODITY FUTURES TRADING COMMISSION",
+      "agencyCode": "CT",
+      "agency": "COMMODITY FUTURES TRADING COMMISSION",
+      "count": 579
+    },
+    {
+      "code": "ARSC",
+      "name": "U. S. ARMY SPACE AND MISSILE DEFENSE COMMAND/U. S. ARMY FORCES STRATEGIC COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 576
+    },
+    {
+      "code": "HUGG",
+      "name": "OFFICE OF INSPECTOR GENERAL",
+      "agencyCode": "HU",
+      "agency": "DEPARTMENT OF HOUSING AND URBAN DEVELOPM",
+      "count": 560
+    },
+    {
+      "code": "TD16",
+      "name": "PIPELINE AND HAZARDOUS MATERIALS SAFETY ADMINISTRATION",
+      "agencyCode": "TD",
+      "agency": "DEPARTMENT OF TRANSPORTATION",
+      "count": 548
+    },
+    {
+      "code": "TD10",
+      "name": "NATIONAL HIGHWAY TRAFFIC SAFETY ADMINISTRATION",
+      "agencyCode": "TD",
+      "agency": "DEPARTMENT OF TRANSPORTATION",
+      "count": 542
+    },
+    {
+      "code": "AF4S",
+      "name": "AFELM US SPACE COMMAND",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 541
+    },
+    {
+      "code": "AG10",
+      "name": "FOREIGN AGRICULTURAL SERVICE",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 534
+    },
+    {
+      "code": "GB00",
+      "name": "DEVELOPMENT FINANCE CORPORATION",
+      "agencyCode": "GB",
+      "agency": "DFC",
+      "count": 532
+    },
+    {
+      "code": "IN26",
+      "name": "BUREAU OF SAFETY AND ENVIRONMENTAL ENFORCEMENT",
+      "agencyCode": "IN",
+      "agency": "DEPARTMENT OF INTERIOR",
+      "count": 531
+    },
+    {
+      "code": "CM61",
+      "name": "NATIONAL TELECOMMUNICATIONS AND INFORMATION ADMINISTRATION",
+      "agencyCode": "CM",
+      "agency": "DEPARTMENT OF COMMERCE",
+      "count": 530
+    },
+    {
+      "code": "HE32",
+      "name": "SUBSTANCE ABUSE AND MENTAL HEALTH SERVICES ADMINISTRATION",
+      "agencyCode": "HE",
+      "agency": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 522
+    },
+    {
+      "code": "BO00",
+      "name": "OFFICE OF MANAGEMENT AND BUDGET",
+      "agencyCode": "BO",
+      "agency": "OFFICE OF MANAGEMENT AND BUDGET",
+      "count": 514
+    },
+    {
+      "code": "TD09",
+      "name": "FEDERAL TRANSIT ADMINISTRATION",
+      "agencyCode": "TD",
+      "agency": "DEPARTMENT OF TRANSPORTATION",
+      "count": 510
+    },
+    {
+      "code": "HFHA",
+      "name": "FEDERAL HOUSING FINANCE AGENCY",
+      "agencyCode": "HF",
+      "agency": "FEDERAL HOUSING FINANCE AGENCY",
+      "count": 502
+    },
+    {
+      "code": "HE50",
+      "name": "OFFICE OF MEDICARE HEARINGS AND APPEALS",
+      "agencyCode": "HE",
+      "agency": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 497
+    },
+    {
+      "code": "GS11",
+      "name": "OFFICE OF THE CHIEF FINANCIAL OFFICER",
+      "agencyCode": "GS",
+      "agency": "GENERAL SERVICES ADMINISTRATION",
+      "count": 486
+    },
+    {
+      "code": "AG20",
+      "name": "NATIONAL AGRICULTURAL STATISTICS SERVICE",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 479
+    },
+    {
+      "code": "DJ10",
+      "name": "OFFICE OF THE INSPECTOR GENERAL",
+      "agencyCode": "DJ",
+      "agency": "DEPARTMENT OF JUSTICE",
+      "count": 478
+    },
+    {
+      "code": "IN27",
+      "name": "BUREAU OF OCEAN ENERGY MANAGEMENT",
+      "agencyCode": "IN",
+      "agency": "DEPARTMENT OF INTERIOR",
+      "count": 458
+    },
+    {
+      "code": "HUEE",
+      "name": "ASSISTANT SECRETARY FOR FAIR HOUSING AND EQUAL OPPORTUNITY",
+      "agencyCode": "HU",
+      "agency": "DEPARTMENT OF HOUSING AND URBAN DEVELOPM",
+      "count": 456
+    },
+    {
+      "code": "DLSL",
+      "name": "OFFICE OF THE SOLICITOR",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 450
+    },
+    {
+      "code": "CM67",
+      "name": "BUREAU OF INDUSTRY AND SECURITY",
+      "agencyCode": "CM",
+      "agency": "DEPARTMENT OF COMMERCE",
+      "count": 433
+    },
+    {
+      "code": "HUDD",
+      "name": "ASSISTANT SECRETARY FOR COMMUNITY PLANNING AND DEVELOPMENT",
+      "agencyCode": "HU",
+      "agency": "DEPARTMENT OF HOUSING AND URBAN DEVELOPM",
+      "count": 427
+    },
+    {
+      "code": "SK00",
+      "name": "CONSUMER PRODUCT SAFETY COMMISSION",
+      "agencyCode": "SK",
+      "agency": "CONSUMER PRODUCT SAFETY COMMISSION",
+      "count": 425
+    },
+    {
+      "code": "AF2L",
+      "name": "AIR FORCE TECHNICAL APPLICATIONS CENTER",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 425
+    },
+    {
+      "code": "HUAA",
+      "name": "OFFICE OF THE SECRETARY OF HOUSING AND URBAN DEVELOPMENT",
+      "agencyCode": "HU",
+      "agency": "DEPARTMENT OF HOUSING AND URBAN DEVELOPM",
+      "count": 424
+    },
+    {
+      "code": "NN24",
+      "name": "NEIL A. ARMSTRONG FLIGHT RESEARCH CENTER",
+      "agencyCode": "NN",
+      "agency": "NAT AERONAUTICS AND SPACE ADMINISTRATION",
+      "count": 424
+    },
+    {
+      "code": "TR40",
+      "name": "ALCOHOL AND TOBACCO TAX AND TRADE BUREAU",
+      "agencyCode": "TR",
+      "agency": "DEPARTMENT OF TREASURY",
+      "count": 421
+    },
+    {
+      "code": "ARXP",
+      "name": "U.S. ARMY SECURITY ASSISTANCE COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 421
+    },
+    {
+      "code": "IN21",
+      "name": "OFFICE OF THE SOLICITOR",
+      "agencyCode": "IN",
+      "agency": "DEPARTMENT OF INTERIOR",
+      "count": 412
+    },
+    {
+      "code": "HSFA",
+      "name": "SCIENCE AND TECHNOLOGY DIRECTORATE",
+      "agencyCode": "HS",
+      "agency": "DEPARTMENT OF HOMELAND SECURITY",
+      "count": 407
+    },
+    {
+      "code": "TB00",
+      "name": "NATIONAL TRANSPORTATION SAFETY BOARD",
+      "agencyCode": "TB",
+      "agency": "NATIONAL TRANSPORTATION SAFETY BOARD",
+      "count": 406
+    },
+    {
+      "code": "AF06",
+      "name": "AIR FORCE AUDIT AGENCY",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 406
+    },
+    {
+      "code": "TC00",
+      "name": "U.S. INTERNATIONAL TRADE COMMISSION",
+      "agencyCode": "TC",
+      "agency": "U.S. INTERNATIONAL TRADE COMMISSION",
+      "count": 402
+    },
+    {
+      "code": "NV72",
+      "name": "NAVY RESERVE FORCE",
+      "agencyCode": "NV",
+      "agency": "DEPARTMENT OF THE NAVY",
+      "count": 387
+    },
+    {
+      "code": "KS00",
+      "name": "CORPORATION FOR NATIONAL AND COMMUNITY SERVICE",
+      "agencyCode": "KS",
+      "agency": "CORP FOR NATIONAL AND COMMUNITY SERVICE",
+      "count": 376
+    },
+    {
+      "code": "CM53",
+      "name": "BUREAU OF ECONOMIC ANALYSIS",
+      "agencyCode": "CM",
+      "agency": "DEPARTMENT OF COMMERCE",
+      "count": 374
+    },
+    {
+      "code": "ARE2",
+      "name": "21ST THEATER SUSTAINMENT COMMAND (TSC)",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 358
+    },
+    {
+      "code": "AG23",
+      "name": "OFFICE OF THE INSPECTOR GENERAL",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 356
+    },
+    {
+      "code": "AG08",
+      "name": "RISK MANAGEMENT AGENCY",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 352
+    },
+    {
+      "code": "AF3C",
+      "name": "AIR FORCE ELEMENTS, U.S. CENTRAL COMMAND",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 350
+    },
+    {
+      "code": "EB00",
+      "name": "EXPORT-IMPORT BANK OF THE UNITED STATES",
+      "agencyCode": "EB",
+      "agency": "EXPORT-IMPORT BANK OF THE UNITED STATES",
+      "count": 344
+    },
+    {
+      "code": "AF6N",
+      "name": "NATIONAL SPACE INTELLIGENCE CENTER",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 340
+    },
+    {
+      "code": "FQ02",
+      "name": "PRETRIAL SERVICES AGENCY",
+      "agencyCode": "FQ",
+      "agency": "COURT SERVICES AND OFFENDR SUPERVSN AGY",
+      "count": 326
+    },
+    {
+      "code": "AGDA",
+      "name": "DEPARTMENTAL ADMINISTRATION",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 325
+    },
+    {
+      "code": "GJ00",
+      "name": "PRESIDIO TRUST",
+      "agencyCode": "GJ",
+      "agency": "PRESIDIO TRUST",
+      "count": 324
+    },
+    {
+      "code": "TD12",
+      "name": "OFFICE OF INSPECTOR GENERAL",
+      "agencyCode": "TD",
+      "agency": "DEPARTMENT OF TRANSPORTATION",
+      "count": 323
+    },
+    {
+      "code": "HU**",
+      "name": "INVALID",
+      "agencyCode": "HU",
+      "agency": "DEPARTMENT OF HOUSING AND URBAN DEVELOPM",
+      "count": 320
+    },
+    {
+      "code": "FL00",
+      "name": "FARM CREDIT ADMINISTRATION",
+      "agencyCode": "FL",
+      "agency": "FARM CREDIT ADMINISTRATION",
+      "count": 319
+    },
+    {
+      "code": "EDEK",
+      "name": "OFFICE OF FINANCE AND OPERATIONS",
+      "agencyCode": "ED",
+      "agency": "DEPARTMENT OF EDUCATION",
+      "count": 317
+    },
+    {
+      "code": "EDEC",
+      "name": "OFFICE FOR CIVIL RIGHTS",
+      "agencyCode": "ED",
+      "agency": "DEPARTMENT OF EDUCATION",
+      "count": 300
+    },
+    {
+      "code": "ARMW",
+      "name": "U.S. ARMY MILITARY DISTRICT OF WASHINGTON",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 300
+    },
+    {
+      "code": "VADA",
+      "name": "IMMEDIATE OFFICE OF THE ASSISTANT SECRETARY FOR MANAGEMENT",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 291
+    },
+    {
+      "code": "GS28",
+      "name": "OFFICE OF GSA IT",
+      "agencyCode": "GS",
+      "agency": "GENERAL SERVICES ADMINISTRATION",
+      "count": 289
+    },
+    {
+      "code": "IN29",
+      "name": "BUREAU OF TRUST FUNDS ADMINISTRATION",
+      "agencyCode": "IN",
+      "agency": "DEPARTMENT OF INTERIOR",
+      "count": 288
+    },
+    {
+      "code": "AG22",
+      "name": "NATIONAL INSTITUTE OF FOOD AND AGRICULTURE",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 286
+    },
+    {
+      "code": "ARTW",
+      "name": "U.S. ARMY WAR COLLEGE",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 285
+    },
+    {
+      "code": "HUFF",
+      "name": "OFFICE OF THE CHIEF FINANCIAL OFFICER",
+      "agencyCode": "HU",
+      "agency": "DEPARTMENT OF HOUSING AND URBAN DEVELOPM",
+      "count": 284
+    },
+    {
+      "code": "AREN",
+      "name": "SEVENTH ARMY TRAINING COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 284
+    },
+    {
+      "code": "AF6T",
+      "name": "SPACE TRAINING AND READINESS COMMAND",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 279
+    },
+    {
+      "code": "RH00",
+      "name": "ARMED FORCES RETIREMENT HOME",
+      "agencyCode": "RH",
+      "agency": "ARMED FORCES RETIREMENT HOME",
+      "count": 275
+    },
+    {
+      "code": "AF4F",
+      "name": "HQ US SPACE FORCE",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 271
+    },
+    {
+      "code": "HE11",
+      "name": "PROGRAM SUPPORT CENTER",
+      "agencyCode": "HE",
+      "agency": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 268
+    },
+    {
+      "code": "IN22",
+      "name": "OFFICE OF SURFACE MINING, RECLAMATION AND ENFORCEMENT",
+      "agencyCode": "IN",
+      "agency": "DEPARTMENT OF INTERIOR",
+      "count": 265
+    },
+    {
+      "code": "AR3A",
+      "name": "U.S. ARMY CENTRAL",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 263
+    },
+    {
+      "code": "VABC",
+      "name": "CHIEF HUMAN CAPITAL OFFICER",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 260
+    },
+    {
+      "code": "LF00",
+      "name": "FEDERAL ELECTION COMMISSION",
+      "agencyCode": "LF",
+      "agency": "FEDERAL ELECTION COMMISSION",
+      "count": 256
+    },
+    {
+      "code": "EC00",
+      "name": "OFFICE OF ADMINISTRATION",
+      "agencyCode": "EC",
+      "agency": "OFFICE OF ADMINISTRATION",
+      "count": 256
+    },
+    {
+      "code": "ART2",
+      "name": "ARMY TRANSFORMATION AND TRAINING COMMAND (T2COM)",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 249
+    },
+    {
+      "code": "DLIG",
+      "name": "OFFICE OF THE INSPECTOR GENERAL",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 248
+    },
+    {
+      "code": "GW00",
+      "name": "INTERNATIONAL BOUNDARY AND WATER COMMISSION, U.S. SECTION",
+      "agencyCode": "GW",
+      "agency": "INTER BOUND AND WATER COMM U.S. SECTION",
+      "count": 245
+    },
+    {
+      "code": "VAHG",
+      "name": "VET CUSTOMER EXPER (VCE)",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 238
+    },
+    {
+      "code": "AM00",
+      "name": "U.S. AGENCY FOR INTERNATIONAL DEVELOPMENT",
+      "agencyCode": "AM",
+      "agency": "U.S. AGENCY FOR INTERNATIONAL DEV",
+      "count": 234
+    },
+    {
+      "code": "RF00",
+      "name": "FEDERAL RETIREMENT THRIFT INVESTMENT BOARD",
+      "agencyCode": "RF",
+      "agency": "FED RETIREMENT THRIFT INVESTMENT BOARD",
+      "count": 233
+    },
+    {
+      "code": "GS15",
+      "name": "OFFICE OF INSPECTOR GENERAL",
+      "agencyCode": "GS",
+      "agency": "GENERAL SERVICES ADMINISTRATION",
+      "count": 233
+    },
+    {
+      "code": "TRAF",
+      "name": "FINANCIAL CRIMES ENFORCEMENT NETWORK",
+      "agencyCode": "TR",
+      "agency": "DEPARTMENT OF TREASURY",
+      "count": 231
+    },
+    {
+      "code": "MI00",
+      "name": "MILLENNIUM CHALLENGE CORPORATION",
+      "agencyCode": "MI",
+      "agency": "MILLENNIUM CHALLENGE CORPORATION",
+      "count": 229
+    },
+    {
+      "code": "IN24",
+      "name": "OFFICE OF THE INSPECTOR GENERAL",
+      "agencyCode": "IN",
+      "agency": "DEPARTMENT OF INTERIOR",
+      "count": 228
+    },
+    {
+      "code": "TN00",
+      "name": "OFFICE OF THE U.S. TRADE REPRESENTATIVE",
+      "agencyCode": "TN",
+      "agency": "OFFICE OF THE U.S. TRADE REPRESENTATIVE",
+      "count": 220
+    },
+    {
+      "code": "DLAA",
+      "name": "OFFICE OF THE SECRETARY OF LABOR",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 212
+    },
+    {
+      "code": "AG14",
+      "name": "OFFICE OF THE GENERAL COUNSEL",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 206
+    },
+    {
+      "code": "VAGB",
+      "name": "EXECUTIVE DIRECTOR FOR SECURITY AND LAW ENFORCEMENT",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 206
+    },
+    {
+      "code": "NN64",
+      "name": "JOHN C. STENNIS SPACE CENTER",
+      "agencyCode": "NN",
+      "agency": "NAT AERONAUTICS AND SPACE ADMINISTRATION",
+      "count": 205
+    },
+    {
+      "code": "GS14",
+      "name": "OFFICE OF THE HUMAN RESOURCES MANAGEMENT",
+      "agencyCode": "GS",
+      "agency": "GENERAL SERVICES ADMINISTRATION",
+      "count": 203
+    },
+    {
+      "code": "CM64",
+      "name": "OFFICE OF THE INSPECTOR GENERAL",
+      "agencyCode": "CM",
+      "agency": "DEPARTMENT OF COMMERCE",
+      "count": 197
+    },
+    {
+      "code": "ARE3",
+      "name": "UNITED STATES ARMY EUROPE AND AFRICA",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 197
+    },
+    {
+      "code": "ARAN",
+      "name": "U.S. ARMY NATIONAL MILITARY CEMETERIES",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 194
+    },
+    {
+      "code": "AG18",
+      "name": "ECONOMIC RESEARCH SERVICE",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 191
+    },
+    {
+      "code": "CM52",
+      "name": "ECONOMIC DEVELOPMENT ADMINISTRATION",
+      "agencyCode": "CM",
+      "agency": "DEPARTMENT OF COMMERCE",
+      "count": 190
+    },
+    {
+      "code": "AF03",
+      "name": "AIR FORCE OPERATIONAL TEST AND EVALUATION CENTER",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 188
+    },
+    {
+      "code": "GS26",
+      "name": "OFFICE OF GOVERNMENTWIDE POLICY",
+      "agencyCode": "GS",
+      "agency": "GENERAL SERVICES ADMINISTRATION",
+      "count": 186
+    },
+    {
+      "code": "AR5A",
+      "name": "U.S. ARMY NORTH",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 181
+    },
+    {
+      "code": "VAAI",
+      "name": "ELECTRONIC HEALTH RECORD MODERNIZATION",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 174
+    },
+    {
+      "code": "JL03",
+      "name": "U.S. TAX COURT",
+      "agencyCode": "JL",
+      "agency": "JUDICIAL BRANCH",
+      "count": 170
+    },
+    {
+      "code": "DLOL",
+      "name": "OFFICE OF LABOR-MANAGEMENT STANDARDS",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 168
+    },
+    {
+      "code": "AF2E",
+      "name": "AIR FORCE LEGAL OPERATIONS AGENCY",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 168
+    },
+    {
+      "code": "ARJ1",
+      "name": "U.S. ARMY ELEMENT SHAPE",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 168
+    },
+    {
+      "code": "EDES",
+      "name": "OFFICE OF ELEMENTARY AND SECONDARY EDUCATION",
+      "agencyCode": "ED",
+      "agency": "DEPARTMENT OF EDUCATION",
+      "count": 163
+    },
+    {
+      "code": "DLVE",
+      "name": "VETERANS EMPLOYMENT AND TRAINING SERVICES",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 160
+    },
+    {
+      "code": "AF2Z",
+      "name": "AIR FORCE MEDICAL COMMAND",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 158
+    },
+    {
+      "code": "BD00",
+      "name": "MERIT SYSTEMS PROTECTION BOARD",
+      "agencyCode": "BD",
+      "agency": "MERIT SYSTEMS PROTECTION BOARD",
+      "count": 155
+    },
+    {
+      "code": "TR95",
+      "name": "OFFICE OF INSPECTOR GENERAL",
+      "agencyCode": "TR",
+      "agency": "DEPARTMENT OF TREASURY",
+      "count": 150
+    },
+    {
+      "code": "EDEF",
+      "name": "OFFICE OF INSPECTOR GENERAL",
+      "agencyCode": "ED",
+      "agency": "DEPARTMENT OF EDUCATION",
+      "count": 146
+    },
+    {
+      "code": "AF3V",
+      "name": "AIR FORCE ELEMENTS",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 146
+    },
+    {
+      "code": "ARXB",
+      "name": "U.S. ARMY CHEMICAL MATERIALS ACTIVITY",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 138
+    },
+    {
+      "code": "FW00",
+      "name": "OFFICE OF SPECIAL COUNSEL",
+      "agencyCode": "FW",
+      "agency": "OFFICE OF SPECIAL COUNSEL",
+      "count": 127
+    },
+    {
+      "code": "EDEP",
+      "name": "OFFICE OF POSTSECONDARY EDUCATION",
+      "agencyCode": "ED",
+      "agency": "DEPARTMENT OF EDUCATION",
+      "count": 127
+    },
+    {
+      "code": "SS00",
+      "name": "SELECTIVE SERVICE SYSTEM",
+      "agencyCode": "SS",
+      "agency": "SELECTIVE SERVICE SYSTEM",
+      "count": 126
+    },
+    {
+      "code": "HE35",
+      "name": "AGENCY FOR TOXIC SUBSTANCES AND DISEASE REGISTRY",
+      "agencyCode": "HE",
+      "agency": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 124
+    },
+    {
+      "code": "EDEH",
+      "name": "OFFICE OF SPECIAL EDUCATION AND REHABILITATIVE SERVICES",
+      "agencyCode": "ED",
+      "agency": "DEPARTMENT OF EDUCATION",
+      "count": 121
+    },
+    {
+      "code": "AG01",
+      "name": "OFFICE OF THE SECRETARY OF AGRICULTURE",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 120
+    },
+    {
+      "code": "VAAJ",
+      "name": "OFFICE OF ACCOUNTABILITY AND WHISTLEBLOWER PROTECTION",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 120
+    },
+    {
+      "code": "ARSO",
+      "name": "U.S. ARMY SOUTH",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 120
+    },
+    {
+      "code": "HE12",
+      "name": "ADMINISTRATION FOR COMMUNITY LIVING",
+      "agencyCode": "HE",
+      "agency": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 119
+    },
+    {
+      "code": "AF1B",
+      "name": "AIR FORCE MANPOWER ANALYSIS AGENCY",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 118
+    },
+    {
+      "code": "TD06",
+      "name": "GREAT LAKES SAINT LAWRENCE SEAWAY DEVELOPMENT CORPORATION",
+      "agencyCode": "TD",
+      "agency": "DEPARTMENT OF TRANSPORTATION",
+      "count": 117
+    },
+    {
+      "code": "GS12",
+      "name": "OFFICE OF GENERAL COUNSEL",
+      "agencyCode": "GS",
+      "agency": "GENERAL SERVICES ADMINISTRATION",
+      "count": 115
+    },
+    {
+      "code": "AH01",
+      "name": "NATIONAL ENDOWMENT FOR THE ARTS",
+      "agencyCode": "AH",
+      "agency": "NAT FOUNDATION ON ARTS AND HUMANITIES",
+      "count": 114
+    },
+    {
+      "code": "TW00",
+      "name": "SURFACE TRANSPORTATION BOARD",
+      "agencyCode": "TW",
+      "agency": "SURFACE TRANSPORTATION BOARD",
+      "count": 110
+    },
+    {
+      "code": "MC00",
+      "name": "FEDERAL MARITIME COMMISSION",
+      "agencyCode": "MC",
+      "agency": "FEDERAL MARITIME COMMISSION",
+      "count": 109
+    },
+    {
+      "code": "ARCC",
+      "name": "U.S. ARMY CORRECTIONS COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 104
+    },
+    {
+      "code": "BF00",
+      "name": "DEFENSE NUCLEAR FACILITIES SAFETY BOARD",
+      "agencyCode": "BF",
+      "agency": "DEFENSE NUCLEAR FACILITIES SAFETY BOARD",
+      "count": 102
+    },
+    {
+      "code": "AFSN",
+      "name": "AIR FORCES SOUTHERN",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 98
+    },
+    {
+      "code": "AF5D",
+      "name": "DEFENSE CYBER CRIME CENTER",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 97
+    },
+    {
+      "code": "HFHI",
+      "name": "OFFICE OF INSPECTOR GENERAL",
+      "agencyCode": "HF",
+      "agency": "FEDERAL HOUSING FINANCE AGENCY",
+      "count": 96
+    },
+    {
+      "code": "FM00",
+      "name": "FEDERAL MEDIATION AND CONCILIATION SERVICE",
+      "agencyCode": "FM",
+      "agency": "FED MEDIATION AND CONCILIATION SERVICE",
+      "count": 94
+    },
+    {
+      "code": "AGCR",
+      "name": "CIVIL RIGHTS",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 94
+    },
+    {
+      "code": "DLBL",
+      "name": "BUREAU OF INTERNATIONAL LABOR AFFAIRS",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 93
+    },
+    {
+      "code": "HD00",
+      "name": "U.S. HOLOCAUST MEMORIAL MUSEUM",
+      "agencyCode": "HD",
+      "agency": "U.S. HOLOCAUST MEMORIAL MUSEUM",
+      "count": 90
+    },
+    {
+      "code": "AF2S",
+      "name": "AIR FORCE ELEMENTS NORAD",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 85
+    },
+    {
+      "code": "AFZG",
+      "name": "U.S. SPECIAL OPERATIONS COMMAND (ANG)",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 84
+    },
+    {
+      "code": "HE33",
+      "name": "AGENCY FOR HEALTHCARE RESEARCH AND QUALITY",
+      "agencyCode": "HE",
+      "agency": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 83
+    },
+    {
+      "code": "DLCF",
+      "name": "OFFICE OF THE CHIEF FINANCIAL OFFICER",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 82
+    },
+    {
+      "code": "GS31",
+      "name": "OFFICE OF MISSION ASSURANCE",
+      "agencyCode": "GS",
+      "agency": "GENERAL SERVICES ADMINISTRATION",
+      "count": 82
+    },
+    {
+      "code": "AF2M",
+      "name": "AIR FORCE REVIEW BOARDS AGENCY",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 82
+    },
+    {
+      "code": "AB00",
+      "name": "AMERICAN BATTLE MONUMENTS COMMISSION",
+      "agencyCode": "AB",
+      "agency": "AMERICAN BATTLE MONUMENTS COMMISSION",
+      "count": 77
+    },
+    {
+      "code": "DLOF",
+      "name": "OFFICE OF FEDERAL CONTRACT COMPLIANCE PROGRAMS",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 76
+    },
+    {
+      "code": "AU00",
+      "name": "FEDERAL LABOR RELATIONS AUTHORITY",
+      "agencyCode": "AU",
+      "agency": "FEDERAL LABOR RELATIONS AUTHORITY",
+      "count": 76
+    },
+    {
+      "code": "AF2A",
+      "name": "AIR FORCE COST ANALYSIS AGENCY",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 75
+    },
+    {
+      "code": "EDED",
+      "name": "OFFICE OF PLANNING, EVALUATION AND POLICY DEVELOPMENT",
+      "agencyCode": "ED",
+      "agency": "DEPARTMENT OF EDUCATION",
+      "count": 73
+    },
+    {
+      "code": "AF6K",
+      "name": "UNITED STATES SPACE FORCE COMPONENTS",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 72
+    },
+    {
+      "code": "AF2T",
+      "name": "AIR FORCE SAFETY CENTER",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 70
+    },
+    {
+      "code": "AH02",
+      "name": "NATIONAL ENDOWMENT FOR THE HUMANITIES",
+      "agencyCode": "AH",
+      "agency": "NAT FOUNDATION ON ARTS AND HUMANITIES",
+      "count": 69
+    },
+    {
+      "code": "AF6E",
+      "name": "SPACE FORCE SERVICE WIDE SUPPORT ACTIVITIES",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 68
+    },
+    {
+      "code": "GQ00",
+      "name": "ELECTION ASSISTANCE COMMISSION",
+      "agencyCode": "GQ",
+      "agency": "ELECTION ASSISTANCE COMMISSION",
+      "count": 64
+    },
+    {
+      "code": "GS02",
+      "name": "OFFICE OF ADMINISTRATIVE SERVICES",
+      "agencyCode": "GS",
+      "agency": "GENERAL SERVICES ADMINISTRATION",
+      "count": 64
+    },
+    {
+      "code": "HUKK",
+      "name": "OFFICE OF FIELD POLICY AND MANAGEMENT",
+      "agencyCode": "HU",
+      "agency": "DEPARTMENT OF HOUSING AND URBAN DEVELOPM",
+      "count": 60
+    },
+    {
+      "code": "ARSJ",
+      "name": "JOINT SERVICES AND ACTIVITIES SUPPORTED BY THE OFFICE, SECRETARY OF THE ARMY",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 60
+    },
+    {
+      "code": "EDEA",
+      "name": "IMMEDIATE OFFICE OF THE SECRETARY OF EDUCATION",
+      "agencyCode": "ED",
+      "agency": "DEPARTMENT OF EDUCATION",
+      "count": 59
+    },
+    {
+      "code": "GS32",
+      "name": "OFFICE OF STRATEGIC COMMUNICATION",
+      "agencyCode": "GS",
+      "agency": "GENERAL SERVICES ADMINISTRATION",
+      "count": 59
+    },
+    {
+      "code": "GG00",
+      "name": "OFFICE OF GOVERNMENT ETHICS",
+      "agencyCode": "GG",
+      "agency": "OFFICE OF GOVERNMENT ETHICS",
+      "count": 58
+    },
+    {
+      "code": "ARE5",
+      "name": "U.S. ARMY V CORPS",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 55
+    },
+    {
+      "code": "CC00",
+      "name": "COMMISSION ON CIVIL RIGHTS",
+      "agencyCode": "CC",
+      "agency": "COMMISSION ON CIVIL RIGHTS",
+      "count": 50
+    },
+    {
+      "code": "DLPE",
+      "name": "OFFICE OF THE ASSISTANT SECRETARY FOR POLICY",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 50
+    },
+    {
+      "code": "VABE",
+      "name": "DEPUTY ASSISTANT SECRETARY FOR ADMINISTRATION",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 50
+    },
+    {
+      "code": "AG38",
+      "name": "OFFICE OF THE CHIEF ECONOMIST",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 49
+    },
+    {
+      "code": "SM04",
+      "name": "THE DONALD J. TRUMP AND JOHN F. KENNEDY MEMORIAL CENTER FOR THE PERFORMING ARTS",
+      "agencyCode": "SM",
+      "agency": "SMITHSONIAN INSTITUTION",
+      "count": 49
+    },
+    {
+      "code": "EW00",
+      "name": "TRADE AND DEVELOPMENT AGENCY",
+      "agencyCode": "EW",
+      "agency": "TRADE AND DEVELOPMENT AGENCY",
+      "count": 49
+    },
+    {
+      "code": "ARXK",
+      "name": "MATERIEL ACQUISITION ACTIVITIES",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 49
+    },
+    {
+      "code": "HUII",
+      "name": "OFFICE OF DEPARTMENTAL OPERATIONS AND COORDINATION",
+      "agencyCode": "HU",
+      "agency": "DEPARTMENT OF HOUSING AND URBAN DEVELOPM",
+      "count": 48
+    },
+    {
+      "code": "AGHL",
+      "name": "HOMELAND SECURITY STAFF",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 48
+    },
+    {
+      "code": "RO00",
+      "name": "MEDICAID AND CHIP PAYMENT AND ACCESS COMMISSION",
+      "agencyCode": "RO",
+      "agency": "MEDICAID & CHIP PAYMENT & ACCESS COMM",
+      "count": 48
+    },
+    {
+      "code": "AF1Q",
+      "name": "HQ AF FLIGHT STANDARDS AGENCY",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 48
+    },
+    {
+      "code": "HUJJ",
+      "name": "ASSISTANT SECRETARY FOR CONGRESSIONAL AND INTERGOVERNMENTAL RELATIONS",
+      "agencyCode": "HU",
+      "agency": "DEPARTMENT OF HOUSING AND URBAN DEVELOPM",
+      "count": 47
+    },
+    {
+      "code": "DLEH",
+      "name": "OFFICE OF DISABILITY EMPLOYMENT POLICY",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 45
+    },
+    {
+      "code": "AGNA",
+      "name": "NATIONAL APPEALS DIVISION",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 45
+    },
+    {
+      "code": "OS00",
+      "name": "OCCUPATIONAL SAFETY AND HEALTH REVIEW COMMISSION",
+      "agencyCode": "OS",
+      "agency": "OCCUPATIONAL SAFETY & HEALTH REVIEW CMSN",
+      "count": 44
+    },
+    {
+      "code": "VAKB",
+      "name": "DEPUTY ASSISTANT SECRETARY FOR CONGRESSIONAL AFFAIRS",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 43
+    },
+    {
+      "code": "FJ00",
+      "name": "CHEMICAL SAFETY AND HAZARD INVESTIGATION BOARD",
+      "agencyCode": "FJ",
+      "agency": "CHEMICAL SAFETY/HAZARD INVESTIGATION BD",
+      "count": 42
+    },
+    {
+      "code": "ARXG",
+      "name": "UNITED STATES ARMY PRINT AND MEDIA DISTRIBUTION CENTER",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 41
+    },
+    {
+      "code": "RS00",
+      "name": "FEDERAL MINE SAFETY AND HEALTH REVIEW COMMISSION",
+      "agencyCode": "RS",
+      "agency": "FED MINE SAFETY AND HEALTH REVIEW CMSN",
+      "count": 40
+    },
+    {
+      "code": "EDEG",
+      "name": "OFFICE OF THE GENERAL COUNSEL",
+      "agencyCode": "ED",
+      "agency": "DEPARTMENT OF EDUCATION",
+      "count": 40
+    },
+    {
+      "code": "AH03",
+      "name": "INSTITUTE OF MUSEUM AND LIBRARY SERVICES",
+      "agencyCode": "AH",
+      "agency": "NAT FOUNDATION ON ARTS AND HUMANITIES",
+      "count": 39
+    },
+    {
+      "code": "VAGA",
+      "name": "IMMEDIATE OFFICE OF THE ASSISTANT SECRETARY FOR OPERATIONS, SECURITY, AND PREPAREDNESS",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 38
+    },
+    {
+      "code": "AF2K",
+      "name": "AIR FORCE HISTORICAL RESEARCH AGENCY",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 38
+    },
+    {
+      "code": "HP00",
+      "name": "ADVISORY COUNCIL ON HISTORIC PRESERVATION",
+      "agencyCode": "HP",
+      "agency": "ADV COUNCIL ON HISTORIC PRESERVATION",
+      "count": 36
+    },
+    {
+      "code": "AF12",
+      "name": "AIR FORCE PUBLIC AFFAIRS AGENCY",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 36
+    },
+    {
+      "code": "AG42",
+      "name": "OFFICE OF BUDGET AND PROGRAM ANALYSIS",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 35
+    },
+    {
+      "code": "NP00",
+      "name": "NATIONAL CAPITAL PLANNING COMMISSION",
+      "agencyCode": "NP",
+      "agency": "NATIONAL CAPITAL PLANNING COMMISSION",
+      "count": 33
+    },
+    {
+      "code": "BT00",
+      "name": "ARCHITECTURAL AND TRANSPORTATION BARRIERS COMPLIANCE BOARD",
+      "agencyCode": "BT",
+      "agency": "ARCHITECTL & TRANS BARRIER COMPLIANCE BD",
+      "count": 33
+    },
+    {
+      "code": "NM00",
+      "name": "NATIONAL MEDIATION BOARD",
+      "agencyCode": "NM",
+      "agency": "NATIONAL MEDIATION BOARD",
+      "count": 33
+    },
+    {
+      "code": "VABA",
+      "name": "IMMEDIATE OFFICE OF THE ASSISTANT SECRETARY FOR HUMAN RESOURCES AND ADMINISTRATION",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 33
+    },
+    {
+      "code": "GS01",
+      "name": "IMMEDIATE OFFICE OF THE ADMINISTRATOR",
+      "agencyCode": "GS",
+      "agency": "GENERAL SERVICES ADMINISTRATION",
+      "count": 33
+    },
+    {
+      "code": "EO00",
+      "name": "MORRIS K. UDALL AND STEWART L. UDALL FOUNDATION",
+      "agencyCode": "EO",
+      "agency": "MORRIS K. UDALL & STEWART L. UDALL FOUND",
+      "count": 33
+    },
+    {
+      "code": "AF02",
+      "name": "AIR FORCE INSPECTION AGENCY (FO)",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 32
+    },
+    {
+      "code": "DLPA",
+      "name": "OFFICE OF PUBLIC AFFAIRS",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 31
+    },
+    {
+      "code": "EDEZ",
+      "name": "NATIONAL ASSESSMENT GOVERNING BOARD",
+      "agencyCode": "ED",
+      "agency": "DEPARTMENT OF EDUCATION",
+      "count": 31
+    },
+    {
+      "code": "GS10",
+      "name": "OFFICE OF SMALL BUSINESS UTILIZATION",
+      "agencyCode": "GS",
+      "agency": "GENERAL SERVICES ADMINISTRATION",
+      "count": 31
+    },
+    {
+      "code": "ZS00",
+      "name": "UNITED STATES-CHINA ECONOMIC AND SECURITY REVIEW COMMISSION",
+      "agencyCode": "ZS",
+      "agency": "U.S.-CHINA ECONOMIC & SECURITY REV CMSN",
+      "count": 31
+    },
+    {
+      "code": "GS13",
+      "name": "CIVILIAN BOARD OF CONTRACT APPEALS",
+      "agencyCode": "GS",
+      "agency": "GENERAL SERVICES ADMINISTRATION",
+      "count": 31
+    },
+    {
+      "code": "EDER",
+      "name": "INSTITUTE OF EDUCATION SCIENCES",
+      "agencyCode": "ED",
+      "agency": "DEPARTMENT OF EDUCATION",
+      "count": 30
+    },
+    {
+      "code": "DO00",
+      "name": "OFFICE OF THE CYBER DIRECTOR",
+      "agencyCode": "DO",
+      "agency": "OFC OF THE NAT CYBER DIRECTOR",
+      "count": 30
+    },
+    {
+      "code": "AF16",
+      "name": "AIR FORCE MORTUARY AFFAIRS OPERATIONS",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 30
+    },
+    {
+      "code": "AF2R",
+      "name": "AIR FORCE PROGRAM EXECUTIVE OFFICE",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 30
+    },
+    {
+      "code": "AG13",
+      "name": "OFFICE OF COMMUNICATIONS",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 29
+    },
+    {
+      "code": "VAJA",
+      "name": "OFFICE OF THE ASSISTANT SECRETARY FOR PUBLIC AND INTERGOVERNMENTAL AFFAIRS",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 28
+    },
+    {
+      "code": "ZP00",
+      "name": "U.S. COMMISSION ON INTERNATIONAL RELIGIOUS FREEDOM",
+      "agencyCode": "ZP",
+      "agency": "U.S. CMSN ON INTERNATL RELIGIOUS FREEDOM",
+      "count": 28
+    },
+    {
+      "code": "VADC",
+      "name": "DEPUTY ASSISTANT SECRETARY FOR BUDGET",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 27
+    },
+    {
+      "code": "NS00",
+      "name": "NATIONAL SECURITY COUNCIL",
+      "agencyCode": "NS",
+      "agency": "NATIONAL SECURITY COUNCIL",
+      "count": 27
+    },
+    {
+      "code": "CE00",
+      "name": "COUNCIL OF ECONOMIC ADVISERS",
+      "agencyCode": "CE",
+      "agency": "COUNCIL OF ECONOMIC ADVISERS",
+      "count": 27
+    },
+    {
+      "code": "VAJC",
+      "name": "DEPUTY ASSISTANT SECRETARY FOR PUBLIC AFFAIRS",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 26
+    },
+    {
+      "code": "HB01",
+      "name": "OFFICE OF THE COMMITTEE FOR PURCHASE FROM PEOPLE WHO A RE BLIND OR SEVERELY DISABLED",
+      "agencyCode": "HB",
+      "agency": "CMTE FOR PURCH FRM PPLE BLIND OR SEV DIS",
+      "count": 26
+    },
+    {
+      "code": "EDEB",
+      "name": "OFFICE OF THE DUTY SECRETARY OF EDUCATION",
+      "agencyCode": "ED",
+      "agency": "DEPARTMENT OF EDUCATION",
+      "count": 25
+    },
+    {
+      "code": "IG00",
+      "name": "COUNCIL OF THE INSPECTORS GENERAL ON INTEGRITY AND EFFICIENCY",
+      "agencyCode": "IG",
+      "agency": "COUNCIL OF INSP. GEN. ON INTEG.& EFFIC.",
+      "count": 24
+    },
+    {
+      "code": "VD00",
+      "name": "PRIVACY AND CIVIL LIBERTIES OVERSIGHT BOARD",
+      "agencyCode": "VD",
+      "agency": "PRIVACY AND CIVIL LIBERTIES OVERSIGHT",
+      "count": 24
+    },
+    {
+      "code": "MA00",
+      "name": "MARINE MAMMAL COMMISSION",
+      "agencyCode": "MA",
+      "agency": "MARINE MAMMAL COMMISSION",
+      "count": 24
+    },
+    {
+      "code": "EDEO",
+      "name": "OFFICE OF COMMUNICATIONS AND OUTREACH",
+      "agencyCode": "ED",
+      "agency": "DEPARTMENT OF EDUCATION",
+      "count": 23
+    },
+    {
+      "code": "ARJC",
+      "name": "U.S. JOINT COUNTER",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 23
+    },
+    {
+      "code": "IF00",
+      "name": "INTER-AMERICAN FOUNDATION",
+      "agencyCode": "IF",
+      "agency": "INTER-AMERICAN FOUNDATION",
+      "count": 22
+    },
+    {
+      "code": "GX00",
+      "name": "INTERNATIONAL BOUNDARY COMMISSION:  UNITED STATES AND CANADA",
+      "agencyCode": "GX",
+      "agency": "INTERNAT BOUNDARY CMSN: U.S. AND CANADA",
+      "count": 22
+    },
+    {
+      "code": "GC00",
+      "name": "GULF COAST ECOSYSTEM RESTORATION COUNCIL",
+      "agencyCode": "GC",
+      "agency": "GULF COAST ECOSYSTEM RESTORATION COUNCIL",
+      "count": 21
+    },
+    {
+      "code": "HULL",
+      "name": "OFFICE OF HEALTHY HOMES AND LEAD HAZARD CONTROL",
+      "agencyCode": "HU",
+      "agency": "DEPARTMENT OF HOUSING AND URBAN DEVELOPM",
+      "count": 21
+    },
+    {
+      "code": "VAGD",
+      "name": "EXECUTIVE DIRECTOR FOR IDENTITY, CREDENTIAL, AND ACCESSMANAGEMENT",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 21
+    },
+    {
+      "code": "AN00",
+      "name": "AFRICAN DEVELOPMENT FOUNDATION",
+      "agencyCode": "AN",
+      "agency": "AFRICAN DEVELOPMENT FOUNDATION",
+      "count": 21
+    },
+    {
+      "code": "EDEJ",
+      "name": "OFFICE OF LEGISLATION AND CONGRESSIONAL AFFAIRS",
+      "agencyCode": "ED",
+      "agency": "DEPARTMENT OF EDUCATION",
+      "count": 21
+    },
+    {
+      "code": "GS20",
+      "name": "OFFICE OF CONGRESSIONAL AND INTERGOVERNMENTAL AFFAIRS",
+      "agencyCode": "GS",
+      "agency": "GENERAL SERVICES ADMINISTRATION",
+      "count": 21
+    },
+    {
+      "code": "VABK",
+      "name": "OFFICE OF ENTERPRISE OPERATIONS",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 20
+    },
+    {
+      "code": "VABG",
+      "name": "DEPUTY ASSISTANT SECRETARY FOR CORPORATE SENIOR EXECUTIVE MANAGEMENT",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 20
+    },
+    {
+      "code": "VADE",
+      "name": "DEPUTY ASSISTANT SECRETARY FOR FMBTS",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 20
+    },
+    {
+      "code": "WK00",
+      "name": "FEDERAL PERMITTING IMPROVEMENT STEERING COUNCIL",
+      "agencyCode": "WK",
+      "agency": "FEDERAL PERMITTING IMPROVEMENT STEER",
+      "count": 20
+    },
+    {
+      "code": "EQ00",
+      "name": "COUNCIL ON ENVIRONMENTAL QUALITY/OFFICE OF ENVIRONMENTAL QUALITY",
+      "agencyCode": "EQ",
+      "agency": "COUNCIL ON ENVIR QUAL/OFC OF ENVIR QUAL",
+      "count": 20
+    },
+    {
+      "code": "DLWB",
+      "name": "WOMEN'S BUREAU",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 19
+    },
+    {
+      "code": "EDEV",
+      "name": "OFFICE OF CAREER, TECHNICAL, AND ADULT EDUCATION",
+      "agencyCode": "ED",
+      "agency": "DEPARTMENT OF EDUCATION",
+      "count": 19
+    },
+    {
+      "code": "NK00",
+      "name": "NATIONAL COUNCIL ON DISABILITY",
+      "agencyCode": "NK",
+      "agency": "NATIONAL COUNCIL ON DISABILITY",
+      "count": 19
+    },
+    {
+      "code": "AF2H",
+      "name": "AIR FORCE OPERATIONS GROUP",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 19
+    },
+    {
+      "code": "AF20",
+      "name": "AIR FORCE AGENCY FOR MODELING/SIMULATION",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 19
+    },
+    {
+      "code": "CM59",
+      "name": "MINORITY BUSINESS DEVELOPMENT AGENCY",
+      "agencyCode": "CM",
+      "agency": "DEPARTMENT OF COMMERCE",
+      "count": 18
+    },
+    {
+      "code": "BH00",
+      "name": "COMMISSION FOR THE PRESERVATION OF AMERICA'S HERITAGE ABROAD",
+      "agencyCode": "BH",
+      "agency": "CMSN FOR PRES OF AMERICA'S HERITAGE ABRD",
+      "count": 18
+    },
+    {
+      "code": "CX00",
+      "name": "NATIONAL COMMISSION ON LIBRARIES AND INFORMATION SCIENCE",
+      "agencyCode": "CX",
+      "agency": "NAT CMSN ON LIBRARIES AND INFO SCIENCE",
+      "count": 17
+    },
+    {
+      "code": "GS22",
+      "name": "OFFICES OF THE REGIONAL ADMINISTRATORS",
+      "agencyCode": "GS",
+      "agency": "GENERAL SERVICES ADMINISTRATION",
+      "count": 17
+    },
+    {
+      "code": "AF38",
+      "name": "AFELM JCS",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 16
+    },
+    {
+      "code": "DLCA",
+      "name": "OFFICE OF CONGRESSIONAL AND INTERGOVERNMENTAL AFFAIRS",
+      "agencyCode": "DL",
+      "agency": "DEPARTMENT OF LABOR",
+      "count": 14
+    },
+    {
+      "code": "VABH",
+      "name": "DEPUTY ASSISTANT SECRETARY FOR LABOR MANAGEMENT RELATIONS",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 14
+    },
+    {
+      "code": "GY00",
+      "name": "INTERNATIONAL JOINT COMMISSION:  UNITED STATES AND CANADA",
+      "agencyCode": "GY",
+      "agency": "INTERNATIONAL JOINT CMSN: U.S. & CANADA",
+      "count": 14
+    },
+    {
+      "code": "ARPS",
+      "name": "MILITARY POSTAL SERVICE AGENCY",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 14
+    },
+    {
+      "code": "HUMM",
+      "name": "ASSISTANT SECRETARY FOR HOUSING--FEDERAL HOUSING COMMISSIONER",
+      "agencyCode": "HU",
+      "agency": "DEPARTMENT OF HOUSING AND URBAN DEVELOPM",
+      "count": 13
+    },
+    {
+      "code": "VAEA",
+      "name": "IMMEDIATE OFFICE OF THE ASSISTANT SECRETARY FOR INFORMATION AND TECHNOLOGY",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 12
+    },
+    {
+      "code": "VAKA",
+      "name": "IMMEDIATE OFFICE OF THE ASSISTANT SECRETARY FOR CONGRESSIONAL AND LEGISLATIVE AFFAIRS",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 12
+    },
+    {
+      "code": "GS04",
+      "name": "OFFICE OF CIVIL RIGHTS",
+      "agencyCode": "GS",
+      "agency": "GENERAL SERVICES ADMINISTRATION",
+      "count": 12
+    },
+    {
+      "code": "DQ00",
+      "name": "DENALI COMMISSION",
+      "agencyCode": "DQ",
+      "agency": "DENALI COMMISSION",
+      "count": 11
+    },
+    {
+      "code": "AGAO",
+      "name": "OFFICE OF PARTNERSHIPS AND PUBLIC ENGAGEMENT",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 11
+    },
+    {
+      "code": "UT00",
+      "name": "UTAH RECLAMATION MITIGATION AND CONSERVATION COMMISSION",
+      "agencyCode": "UT",
+      "agency": "UTAH RECLAMATN MITIGATN & CONSERVTN CMSN",
+      "count": 11
+    },
+    {
+      "code": "BW00",
+      "name": "NUCLEAR WASTE TECHNICAL REVIEW BOARD",
+      "agencyCode": "BW",
+      "agency": "NUCLEAR WASTE TECHNICAL REVIEW BOARD",
+      "count": 11
+    },
+    {
+      "code": "FI00",
+      "name": "FEDERAL FINANCIAL INSTITUTIONS EXAMINATION COUNCIL",
+      "agencyCode": "FI",
+      "agency": "FEDERAL FINANCIAL INST. EXAM. COUNCIL",
+      "count": 11
+    },
+    {
+      "code": "FK00",
+      "name": "FARM CREDIT SYSTEM INSURANCE CORPORATION",
+      "agencyCode": "FK",
+      "agency": "FARM CREDIT SYSTEM INSURANCE CORPORATION",
+      "count": 10
+    },
+    {
+      "code": "EDEE",
+      "name": "OFFICE OF THE UNDER SECRETARY",
+      "agencyCode": "ED",
+      "agency": "DEPARTMENT OF EDUCATION",
+      "count": 10
+    },
+    {
+      "code": "AA00",
+      "name": "ADMINISTRATIVE CONFERENCE OF THE UNITED STATES",
+      "agencyCode": "AA",
+      "agency": "ADMIN CONFERENCE OF THE UNITED STATES",
+      "count": 10
+    },
+    {
+      "code": "RJ00",
+      "name": "CIVIL RIGHTS COLD CASE REVIEW BOARD (CRCCRB)",
+      "agencyCode": "RJ",
+      "agency": "CIVIL RIGHTS COLD CASE REVIEW BOARD",
+      "count": 10
+    },
+    {
+      "code": "HW00",
+      "name": "U.S. INTERAGENCY COUNCIL ON HOMELESSNESS",
+      "agencyCode": "HW",
+      "agency": "U.S. INTERAGENCY COUNCIL ON HOMELESSNESS",
+      "count": 10
+    },
+    {
+      "code": "DB00",
+      "name": "PUBLIC INTEREST DECLASSIFICATION BOARD",
+      "agencyCode": "DB",
+      "agency": "PUBLIC INTEREST DECLASSIFICATION BOARD",
+      "count": 9
+    },
+    {
+      "code": "UJ00",
+      "name": "JAPAN-UNITED STATES FRIENDSHIP COMMISSION",
+      "agencyCode": "UJ",
+      "agency": "JAPAN-UNITED STATES FRIENDSHIP CMSN",
+      "count": 9
+    },
+    {
+      "code": "VAGC",
+      "name": "DEP ASST SEC FOR EMERGENCY MGT & RESILIENCE",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 8
+    },
+    {
+      "code": "CF00",
+      "name": "COMMISSION OF FINE ARTS",
+      "agencyCode": "CF",
+      "agency": "COMMISSION OF FINE ARTS",
+      "count": 8
+    },
+    {
+      "code": "HB02",
+      "name": "OFFICE OF INSPECTOR GENERAL",
+      "agencyCode": "HB",
+      "agency": "CMTE FOR PURCH FRM PPLE BLIND OR SEV DIS",
+      "count": 8
+    },
+    {
+      "code": "GU00",
+      "name": "THE US SEMIQUINCENTENNIAL COMMISSION",
+      "agencyCode": "GU",
+      "agency": "THE US SEMIQUINCENTENNIAL COMMISSION",
+      "count": 8
+    },
+    {
+      "code": "VAJB",
+      "name": "DEPUTY ASSISTANCE SECRETARY FOR INTERGOVERNMENTAL AFFAIRS",
+      "agencyCode": "VA",
+      "agency": "DEPARTMENT OF VETERANS AFFAIRS",
+      "count": 7
+    },
+    {
+      "code": "KY00",
+      "name": "PUBLIC BUILDINGS REFORM BOARD",
+      "agencyCode": "KY",
+      "agency": "PUBLIC BUILDINGS REFORM BOARD",
+      "count": 7
+    },
+    {
+      "code": "ARBA",
+      "name": "U.S. ARMY INSTALLATION MANAGEMENT COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 6
+    },
+    {
+      "code": "AP00",
+      "name": "APPALACHIAN REGIONAL COMMISSION",
+      "agencyCode": "AP",
+      "agency": "APPALACHIAN REGIONAL COMMISSION",
+      "count": 5
+    },
+    {
+      "code": "BK00",
+      "name": "JAMES MADISON MEMORIAL FELLOWSHIP FOUNDATION",
+      "agencyCode": "BK",
+      "agency": "JAMES MADISON MEMORIAL FELLOWSHIP FOUND",
+      "count": 5
+    },
+    {
+      "code": "HT00",
+      "name": "HARRY S. TRUMAN SCHOLARSHIP FOUNDATION",
+      "agencyCode": "HT",
+      "agency": "HARRY S. TRUMAN SCHOLARSHIP FOUNDATION",
+      "count": 5
+    },
+    {
+      "code": "HE31",
+      "name": "OFFICE OF THE ASSISTANT SECRETARY FOR HEALTH",
+      "agencyCode": "HE",
+      "agency": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+      "count": 5
+    },
+    {
+      "code": "EDEI",
+      "name": "OFFICE OF THE CHIEF INFORMATION OFFICER",
+      "agencyCode": "ED",
+      "agency": "DEPARTMENT OF EDUCATION",
+      "count": 3
+    },
+    {
+      "code": "GE00",
+      "name": "BARRY GOLDWATER SCHOLARSHIP AND EXCELLENCE IN EDUCATION FOUNDATION",
+      "agencyCode": "GE",
+      "agency": "BARRY GOLDWATER SCHOL & EXCEL IN ED FOUN",
+      "count": 2
+    },
+    {
+      "code": "AW00",
+      "name": "ARCTIC RESEARCH COMMISSION",
+      "agencyCode": "AW",
+      "agency": "ARCTIC RESEARCH COMMISSION",
+      "count": 2
+    },
+    {
+      "code": "DG00",
+      "name": "NORTHERN BORDER REGIONAL COMMISSION",
+      "agencyCode": "DG",
+      "agency": "NORTHERN BORDER REGIONAL COMMISSION",
+      "count": 2
+    },
+    {
+      "code": "AF0U",
+      "name": "25 AF",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 2
+    },
+    {
+      "code": "AG32",
+      "name": "RURAL BUSINESS-COOPERATIVE SERVICE",
+      "agencyCode": "AG",
+      "agency": "DEPARTMENT OF AGRICULTURE",
+      "count": 1
+    },
+    {
+      "code": "HSDA",
+      "name": "DOMESTIC NUCLEAR DETECTION OFFICE",
+      "agencyCode": "HS",
+      "agency": "DEPARTMENT OF HOMELAND SECURITY",
+      "count": 1
+    },
+    {
+      "code": "DA00",
+      "name": "DELTA REGIONAL AUTHORITY",
+      "agencyCode": "DA",
+      "agency": "DELTA REGIONAL AUTHORITY",
+      "count": 1
+    },
+    {
+      "code": "WU00",
+      "name": "SOUTHWEST BORDER REGIONAL COMMISSION",
+      "agencyCode": "WU",
+      "agency": "SOUTHWEST BORDER REGIONAL COMMISSION",
+      "count": 1
+    },
+    {
+      "code": "AF2F",
+      "name": "AIR FORCE MEDICAL SUPPORT AGENCY",
+      "agencyCode": "AF",
+      "agency": "DEPARTMENT OF THE AIR FORCE",
+      "count": 1
+    },
+    {
+      "code": "ARX9",
+      "name": "UNITED STATES ARMY MEDICAL LOGISTICS COMMAND",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 1
+    },
+    {
+      "code": "ARXX",
+      "name": "MATERIEL READINESS ACTIVITIES",
+      "agencyCode": "AR",
+      "agency": "DEPARTMENT OF THE ARMY",
+      "count": 1
+    }
+  ]
+}

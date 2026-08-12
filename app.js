@@ -336,16 +336,25 @@ function showDetail(node, opts = {}) {
 
   renderEngage(node);
 
+  const formatCount = (n) =>
+    typeof n === "number" && Number.isFinite(n) ? n.toLocaleString("en-US") : "—";
+
   const rows = asConstitution
     ? [
         ["branches in map", String((node.children || []).length)],
         ["orgs nested under map", String(childCount(node))],
         ["primary source", "constitution.congress.gov"],
       ]
-    : [
-        ["children", String((node.children || []).length)],
-        ["descendants", String(childCount(node))],
-      ];
+    : [];
+  if (!asConstitution && node.workforce?.count != null) {
+    rows.push(["civilian employees", formatCount(node.workforce.count)]);
+  }
+  if (!asConstitution) {
+    rows.push(
+      ["children", String((node.children || []).length)],
+      ["descendants", String(childCount(node))]
+    );
+  }
   if (!asConstitution && usgm) {
     rows.push(
       ["Manual edition", usgm.edition ?? "—"],
@@ -377,6 +386,11 @@ function showDetail(node, opts = {}) {
     const dt = document.createElement("dt");
     dt.textContent = k;
     const dd = document.createElement("dd");
+    const isWorkforce = k === "civilian employees";
+    if (isWorkforce) {
+      dt.className = "workforce-label";
+      dd.className = "workforce-count";
+    }
     if (k === "primary source") {
       const a = document.createElement("a");
       a.href = "https://constitution.congress.gov/constitution/";
@@ -403,11 +417,26 @@ function showDetail(node, opts = {}) {
 
   dNote.textContent = asConstitution
     ? "Congress.gov Constitution Annotated · National Archives founding documents"
-    : usgm
-      ? `U.S. Government Manual ${usgm.edition || ""} · SAM.gov · GSA Crosswalk`
-      : ctx?.template || ctx?.ancestorUsgm || ctx?.ancestorSam
-        ? "GSA Crosswalk · parent / type context"
-        : "GSA Crosswalk · SAM.gov";
+    : (() => {
+        const parts = [];
+        if (node.workforce?.count != null) {
+          const raw = String(node.workforce.asOf || "");
+          const label =
+            raw.length === 6
+              ? `${["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][Number(raw.slice(4, 6)) - 1] || raw.slice(4, 6)} ${raw.slice(0, 4)}`
+              : raw;
+          parts.push(
+            `OPM civilian employees${label ? ` · ${label}` : ""}${
+              node.workforce.rolledUp ? " (rolled up)" : ""
+            }`
+          );
+        }
+        if (usgm) parts.push(`U.S. Government Manual ${usgm.edition || ""} · SAM.gov · GSA Crosswalk`);
+        else if (ctx?.template || ctx?.ancestorUsgm || ctx?.ancestorSam) {
+          parts.push("GSA Crosswalk · parent / type context");
+        } else parts.push("GSA Crosswalk · SAM.gov");
+        return parts.join(" · ");
+      })();
 
   const canEnter = !!(node.children && node.children.length);
   const focusNow = viewApi?.getFocus?.();

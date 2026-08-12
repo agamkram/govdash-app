@@ -15,6 +15,17 @@
       "excluded": [
         "State and Local Governments"
       ]
+    },
+    "workforce": {
+      "asOf": "202606",
+      "source": "OPM Federal Workforce Data (EHRI Status)",
+      "matched": {
+        "subelement": 7,
+        "agency": 0,
+        "department": 0
+      },
+      "nodesWithCount": 10,
+      "enrichedAt": "2026-08-12T00:51:07.721Z"
     }
   },
   "tree": {
@@ -227,7 +238,17 @@
               },
               "rolledUp": false
             },
-            "children": []
+            "children": [],
+            "workforce": {
+              "count": 2,
+              "asOf": "202606",
+              "source": "OPM Federal Workforce Data (EHRI Status)",
+              "level": "subelement",
+              "opmCode": "GE00",
+              "opmName": "BARRY GOLDWATER SCHOLARSHIP AND EXCELLENCE IN EDUCATION FOUNDATION",
+              "matchedHow": "name",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-922",
@@ -973,7 +994,17 @@
               }
             },
             "heat": null,
-            "children": []
+            "children": [],
+            "workforce": {
+              "count": 613,
+              "asOf": "202606",
+              "source": "OPM Federal Workforce Data (EHRI Status)",
+              "level": "subelement",
+              "opmCode": "SM01",
+              "opmName": "NATIONAL GALLERY OF ART",
+              "matchedHow": "name",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-447",
@@ -1428,7 +1459,17 @@
               },
               "rolledUp": false
             },
-            "children": []
+            "children": [],
+            "workforce": {
+              "count": 21,
+              "asOf": "202606",
+              "source": "OPM Federal Workforce Data (EHRI Status)",
+              "level": "subelement",
+              "opmCode": "AN00",
+              "opmName": "AFRICAN DEVELOPMENT FOUNDATION",
+              "matchedHow": "name",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-1796",
@@ -1626,7 +1667,17 @@
               },
               "rolledUp": false
             },
-            "children": []
+            "children": [],
+            "workforce": {
+              "count": 376,
+              "asOf": "202606",
+              "source": "OPM Federal Workforce Data (EHRI Status)",
+              "level": "subelement",
+              "opmCode": "KS00",
+              "opmName": "CORPORATION FOR NATIONAL AND COMMUNITY SERVICE",
+              "matchedHow": "name",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-1125",
@@ -1783,7 +1834,17 @@
               }
             },
             "heat": null,
-            "children": []
+            "children": [],
+            "workforce": {
+              "count": 90,
+              "asOf": "202606",
+              "source": "OPM Federal Workforce Data (EHRI Status)",
+              "level": "subelement",
+              "opmCode": "HD00",
+              "opmName": "U.S. HOLOCAUST MEMORIAL MUSEUM",
+              "matchedHow": "name",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-1126",
@@ -2019,7 +2080,17 @@
             "heat": null,
             "children": []
           }
-        ]
+        ],
+        "workforce": {
+          "count": 1102,
+          "asOf": "202606",
+          "source": "OPM Federal Workforce Data (EHRI Status)",
+          "level": "rollup",
+          "opmCode": null,
+          "opmName": null,
+          "matchedHow": "sum-children",
+          "rolledUp": true
+        }
       },
       {
         "id": "product-international",
@@ -5260,7 +5331,17 @@
               "usgm": null
             },
             "heat": null,
-            "children": []
+            "children": [],
+            "workforce": {
+              "count": 22,
+              "asOf": "202606",
+              "source": "OPM Federal Workforce Data (EHRI Status)",
+              "level": "subelement",
+              "opmCode": "GX00",
+              "opmName": "INTERNATIONAL BOUNDARY COMMISSION:  UNITED STATES AND CANADA",
+              "matchedHow": "name",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-793",
@@ -5286,7 +5367,17 @@
               "usgm": null
             },
             "heat": null,
-            "children": []
+            "children": [],
+            "workforce": {
+              "count": 14,
+              "asOf": "202606",
+              "source": "OPM Federal Workforce Data (EHRI Status)",
+              "level": "subelement",
+              "opmCode": "GY00",
+              "opmName": "INTERNATIONAL JOINT COMMISSION:  UNITED STATES AND CANADA",
+              "matchedHow": "name",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-794",
@@ -5473,8 +5564,28 @@
             "heat": null,
             "children": []
           }
-        ]
+        ],
+        "workforce": {
+          "count": 36,
+          "asOf": "202606",
+          "source": "OPM Federal Workforce Data (EHRI Status)",
+          "level": "rollup",
+          "opmCode": null,
+          "opmName": null,
+          "matchedHow": "sum-children",
+          "rolledUp": true
+        }
       }
-    ]
+    ],
+    "workforce": {
+      "count": 1138,
+      "asOf": "202606",
+      "source": "OPM Federal Workforce Data (EHRI Status)",
+      "level": "rollup",
+      "opmCode": null,
+      "opmName": null,
+      "matchedHow": "sum-children",
+      "rolledUp": true
+    }
   }
 }
