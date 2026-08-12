@@ -1,12 +1,20 @@
 /**
  * In-app Treasury page — same shell as the map, not a separate site.
- * Official monthly interest + daily debt; per-person uses a dated population vintage.
+ * Official monthly interest + daily debt; per-person uses Census population.
  */
 
 const FISCAL_BASE =
   "https://api.fiscaldata.treasury.gov/services/api/fiscal_service";
 
-const POP_FALLBACK = { pop: 341784857, year: "2025", source: "World Bank (fallback)" };
+/** Last-resort Census PEP figure if us-population.json cannot be loaded. */
+const POP_FALLBACK = {
+  pop: 340110988,
+  year: "2024",
+  asOf: "2024-07-01",
+  source: "U.S. Census Bureau PEP (bundled fallback)",
+};
+
+const POP_URL = "./data/raw/census/us-population.json";
 
 function fiscalUrl(path, params) {
   const u = new URL(`${FISCAL_BASE}${path}`);
@@ -109,13 +117,14 @@ async function loadDebt() {
 
 async function loadPopulation() {
   try {
-    const json = await fetchJson(
-      "https://api.worldbank.org/v2/country/USA/indicator/SP.POP.TOTL?format=json&per_page=1&mrnev=1"
-    );
-    const row = json?.[1]?.[0];
-    const pop = Number(row?.value);
+    const json = await fetchJson(POP_URL);
+    const pop = Number(json?.pop);
     if (!Number.isFinite(pop) || pop < 1e8) throw new Error("bad pop");
-    return { pop, year: String(row.date), source: "World Bank population, United States" };
+    return {
+      pop,
+      year: String(json.year || json.asOf || ""),
+      source: json.source || "U.S. Census Bureau",
+    };
   } catch {
     return POP_FALLBACK;
   }
@@ -138,26 +147,28 @@ export function createFiscalPage(el) {
     const { debt, interest, pop } = data;
     const per = interest.total / pop.pop;
     const scope = interest.publicOnly
-      ? "Interest on debt held as public issues (not intragovernmental GAS)"
-      : "Interest (all categories in the Treasury table for this month)";
+      ? "Paid to outside holders; excludes interest credited inside the government."
+      : "All categories in the Treasury table for this month.";
     el.querySelector("#fiscal-body").innerHTML = `
       <section class="fiscal-block">
-        <h3>Interest, ${monthLabel(interest.recordDate)}</h3>
-        <p class="fiscal-hero">${formatUsd(interest.total, { compact: true })}</p>
-        <p class="fiscal-sub">${formatUsd(interest.total, { digits: 0 })} total</p>
-        <p class="fiscal-hero fiscal-hero-2">${formatUsd(per, { digits: 2 })}</p>
-        <p class="fiscal-sub">per U.S. resident · pop. ${pop.pop.toLocaleString("en-US")} (${pop.year})</p>
-        <p class="fiscal-note">${scope}. Monthly Treasury release — not a live clock. Population: ${pop.source}.</p>
+        <h3>What we owe</h3>
+        <p class="fiscal-hero fiscal-debt">${formatUsd(debt.total, { digits: 0 })}</p>
+        <p class="fiscal-sub">total public debt · as of ${debt.recordDate}</p>
+        <dl class="fiscal-dl fiscal-dl-debt">
+          <dt>Held by the public</dt><dd>${formatUsd(debt.publicHeld, { digits: 0 })}</dd>
+          <dt>Intragovernmental</dt><dd>${formatUsd(debt.intragov, { digits: 0 })}</dd>
+          <dt>Total</dt><dd>${formatUsd(debt.total, { digits: 0 })}</dd>
+        </dl>
+        <p class="fiscal-note">Held by the public is debt owned outside the government. Intragovernmental is one part of government owing another (for example Social Security trust funds). Source: Treasury Debt to the Penny.</p>
       </section>
       <section class="fiscal-block">
-        <h3>Debt to the Penny</h3>
-        <dl class="fiscal-dl">
-          <dt>As of</dt><dd>${debt.recordDate}</dd>
-          <dt>Held by the public</dt><dd>${formatUsd(debt.publicHeld, { compact: true })}</dd>
-          <dt>Intragovernmental</dt><dd>${formatUsd(debt.intragov, { compact: true })}</dd>
-          <dt>Total public debt</dt><dd>${formatUsd(debt.total, { compact: true })}</dd>
-        </dl>
-        <p class="fiscal-note">The carrying-cost conversation is about debt held by the public, plus the interest line above — not the summed total alone.</p>
+        <h3>Interest last month</h3>
+        <p class="fiscal-sub">${monthLabel(interest.recordDate)}</p>
+        <p class="fiscal-hero fiscal-debt">${formatUsd(interest.total, { digits: 0 })}</p>
+        <p class="fiscal-sub">total interest expense</p>
+        <p class="fiscal-hero fiscal-hero-2 fiscal-debt">${formatUsd(per, { digits: 2 })}</p>
+        <p class="fiscal-sub">per U.S. resident · pop. ${pop.pop.toLocaleString("en-US")} (${pop.year})</p>
+        <p class="fiscal-note">${scope} Monthly release — not live. Pop.: ${pop.source}. Interest mainly tracks debt held by the public.</p>
       </section>
     `;
   }

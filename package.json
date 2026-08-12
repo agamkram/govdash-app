@@ -15,6 +15,7 @@
     "parse:usgm": "python3 scripts/parse-usgm.py",
     "fetch:heat": "node scripts/fetch-heat.mjs",
     "enrich:heat": "node scripts/enrich-heat.mjs",
+    "fetch:population": "node scripts/fetch-census-population.mjs",
     "fetch:workforce": "node scripts/fetch-workforce.mjs",
     "enrich:workforce": "node scripts/enrich-workforce.mjs",
     "build:tree": "node scripts/build-hierarchy.mjs",
@@ -22,7 +23,7 @@
     "enrich:sam": "node scripts/enrich-sam.mjs",
     "enrich:usgm": "node scripts/enrich-usgm.mjs",
     "curate": "node scripts/curate-product-tree.mjs",
-    "pipeline": "npm run fetch && npm run build:tree && npm run enrich:sam && npm run enrich:usgm && npm run fetch:heat && npm run enrich:heat && npm run fetch:workforce && npm run enrich:workforce && npm run curate",
+    "pipeline": "npm run fetch && npm run build:tree && npm run enrich:sam && npm run enrich:usgm && npm run fetch:heat && npm run enrich:heat && npm run fetch:workforce && npm run enrich:workforce && npm run fetch:population && npm run curate",
     "serve": "python3 serve-https.py"
   },
   "engines": {

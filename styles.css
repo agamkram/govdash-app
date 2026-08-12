@@ -336,6 +336,8 @@ a.mode-btn.mode-link:hover {
   font-weight: 500;
   letter-spacing: -0.03em;
   line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
 }
 
 .fiscal-hero-2 {
@@ -371,6 +373,14 @@ a.mode-btn.mode-link:hover {
 .fiscal-dl dd {
   margin: 0;
   font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+.fiscal-hero.fiscal-debt,
+.fiscal-dl-debt dd {
+  color: #c41212;
+  font-weight: 700;
 }
 
 .fiscal-actions {
@@ -1026,6 +1036,6 @@ a.engage-label:hover {
   }
 
   .fiscal-hero {
-    font-size: 1.4rem;
+    font-size: 1.15rem;
   }
 }
