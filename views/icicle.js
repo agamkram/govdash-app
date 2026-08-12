@@ -1,8 +1,4 @@
-/**
- * Zoomable icicle with Sankey-style Constitution rail.
- * Orientations: side (L→R columns) · top (T→B rows) — phone-friendly.
- * Three levels from focus: children · grandchildren · great-grandchildren.
- */
+/** Zoomable icicle — side / top orientation, depth 1–11 from focus. */
 import * as d3 from "../vendor/d3.js";
 import {
   displayName,
@@ -14,23 +10,24 @@ import {
   branchOrderKey,
   CONSTITUTION_FILL,
   INK,
+  LABEL_ON_BRANCH,
   atlasRail,
   placeMapTip,
-  isTouchTipUi,
   noteScrubSuccess,
 } from "../shared.js";
 
 const CONST_W = 20;
-const BLACK_W = 2.5;
 const FOCUS_W = 20;
 const CONST_H = 22;
-const BLACK_H = 2.5;
 const FOCUS_H = 22;
+const BLACK_W = 2.5;
+const BLACK_H = 2.5;
 const RAIL_GAP = 0;
+const ICICLE_MAX_LEVELS = 11;
 
 export function createIcicleView(
   container,
-  { onSelect, onFocusChange, orientation = "side" }
+  { onSelect, onFocusChange, orientation = "top", nestLevels = 11 } = {}
 ) {
   const el = typeof container === "string" ? document.querySelector(container) : container;
   let width = 0;
@@ -41,7 +38,18 @@ export function createIcicleView(
   let selectedId = null;
   let hoverId = null;
   let orient = orientation === "top" ? "top" : "side";
+  let nestDepth = clampNestLevels(nestLevels);
   const byId = new Map();
+
+  function clampNestLevels(n) {
+    const v = Math.round(Number(n));
+    if (!Number.isFinite(v)) return 3;
+    return Math.min(ICICLE_MAX_LEVELS, Math.max(1, v));
+  }
+
+  function sliceDepthLeft() {
+    return Math.max(0, nestDepth - 1);
+  }
 
   const tipEl = document.getElementById("map-tip");
 
@@ -64,13 +72,17 @@ export function createIcicleView(
   const pointers = new Map();
   let pinch = null;
   const CAM_MIN = 1;
-  const CAM_MAX = 5;
+  const CAM_MAX = 40;
 
   const LONG_MS = 400;
   const SLOP = 12;
-  // Solid black hairline everywhere (Mac included).
+  // Solid black hairline (matches production); slightly finer on phone.
   const cellStroke = "#000000";
-  const cellStrokeW = 0.35;
+  const cellStrokeW =
+    typeof window.matchMedia === "function" &&
+    window.matchMedia("(max-width: 720px)").matches
+      ? 0.11
+      : 0.35;
 
   function isTop() {
     return orient === "top";
@@ -81,7 +93,6 @@ export function createIcicleView(
       "transform",
       `translate(${cam.x},${cam.y}) scale(${cam.k})`
     );
-    // Keep hairlines screen-constant while zoomed
     g.selectAll("rect.icicle-rect").attr("stroke-width", cellStrokeW / cam.k);
   }
 
@@ -818,7 +829,7 @@ export function createIcicleView(
     const sliced = {
       id: "__icicle_virtual__",
       name: "",
-      children: orderedKids.map((c) => sliceTree(c, 2)),
+      children: orderedKids.map((c) => sliceTree(c, sliceDepthLeft())),
     };
     const layoutRoot = d3
       .hierarchy(sliced)
@@ -922,63 +933,227 @@ export function createIcicleView(
 
     const atConstitution = focus === fullRoot;
 
-    /** Top-down only: stack Leg/Exec/Jud as upright letters. Sideways stays horizontal. */
-    function stackUprightBranch(d) {
-      if (!isTop() || !atConstitution || d.depth !== 1) return false;
-      const key = branchOrderKey(d);
-      return key === "Legislative" || key === "Executive" || key === "Judicial";
+    /** Layout box for a partition cell (user units). */
+    function cellBox(d) {
+      if (isTop()) {
+        return { w: Math.max(0, d.x1 - d.x0), h: Math.max(0, d.y1 - d.y0) };
+      }
+      return { w: Math.max(0, d.y1 - d.y0), h: Math.max(0, d.x1 - d.x0) };
     }
 
-    function cellLabelText(d) {
-      // Constitution root: only name the 4 branches — no OPM / GSA / etc.
-      if (atConstitution && d.depth !== 1) return "";
-      if (isTop()) {
-        const h = d.y1 - d.y0;
-        const w = d.x1 - d.x0;
-        if (stackUprightBranch(d)) {
-          if (h < 48 || w < 16) return "";
-          return displayName(d);
-        }
-        if (atConstitution && d.depth === 1) {
-          if (h < 12 || w < 40) return "";
-          return displayName(d);
-        }
-        if (h < 14 || w < 36) return "";
-        return displayName(d);
+    function stackLeading(fs) {
+      if (fs < 6) return 0.78;
+      if (fs < 8) return 0.82;
+      if (fs < 10) return 0.88;
+      return 0.94;
+    }
+
+    function applyStackSpans(node, text, fs) {
+      const chars = [...text];
+      const leading = stackLeading(fs);
+      const x = node.attr("x");
+      // Stack downward from the text y; centerInkInCell recenters the whole ink box
+      node
+        .selectAll("tspan")
+        .data(chars)
+        .join("tspan")
+        .attr("x", x)
+        .attr("dy", (_, i) => `${i === 0 ? 0 : leading}em`)
+        .text((c) => c);
+    }
+
+    /** Branch door labels: full name, fill cell; paint sizes via getBBox. */
+    function branchLabelPlan(d) {
+      if (!atConstitution || d.depth !== 1) return null;
+      if (!branchOrderKey(d)) return null;
+      const text = displayName(d);
+      if (!text) {
+        return { text: "", mode: "hide", fill: LABEL_ON_BRANCH, fs: null };
       }
-      const h = d.x1 - d.x0;
-      const w = d.y1 - d.y0;
-      if (atConstitution && d.depth === 1) {
-        if (h < 12 || w < 40) return "";
-        return displayName(d);
+
+      const { w, h } = cellBox(d);
+      if (w < 2 || h < 2) {
+        return { text: "", mode: "hide", fill: LABEL_ON_BRANCH, fs: null };
       }
-      if (h < 14 || w < 44) return "";
-      return displayName(d);
+      const availW = w;
+      const availH = h;
+      const floor = 3.1;
+      // Hard caps by device (binary-search still fills up to this)
+      const isPhone =
+        typeof window.matchMedia === "function" &&
+        window.matchMedia("(max-width: 720px)").matches;
+      const isIPad =
+        /iPad/i.test(navigator.userAgent || "") ||
+        (navigator.platform === "MacIntel" && (navigator.maxTouchPoints || 0) > 1);
+      const ceilingCap = isPhone ? 11 : isIPad ? 22 : 14;
+      const ceiling = Math.min(ceilingCap, Math.max(availW, availH) * 0.98);
+
+      const maxFsHoriz = Math.min(
+        availW / Math.max(1, text.length * 0.4),
+        availH / 0.85
+      );
+      const maxFsStack = isTop()
+        ? Math.min(availW / 0.45, availH / Math.max(1, text.length * 0.76))
+        : 0;
+
+      const useStack = isTop() && maxFsStack > maxFsHoriz;
+      const mode = useStack ? "stack" : "horizontal";
+      let fs = useStack ? maxFsStack : maxFsHoriz;
+      fs = Math.min(ceiling, Math.max(fs, floor * 0.85));
+      if (!(fs > 0)) {
+        return { text: "", mode: "hide", fill: LABEL_ON_BRANCH, fs: null };
+      }
+
+      return {
+        text,
+        mode,
+        fill: LABEL_ON_BRANCH,
+        fs: Math.round(fs * 100) / 100,
+        availW,
+        availH,
+        ceiling,
+        floor,
+        clip: true,
+      };
+    }
+
+    function cellLabelPlan(d) {
+      const branch = branchLabelPlan(d);
+      if (branch) return branch;
+
+      if (atConstitution) {
+        return { text: "", mode: "hide", fill: INK, fs: null };
+      }
+
+      const { w, h } = cellBox(d);
+      if (h < 14 || w < 36) return { text: "", mode: "hide", fill: INK, fs: null };
+      const text = displayName(d);
+      if (!text) return { text: "", mode: "hide", fill: INK, fs: null };
+      if (w < text.length * 6.2 + 12) {
+        return { text: "", mode: "hide", fill: INK, fs: null };
+      }
+      return { text, mode: "horizontal", fill: INK, fs: null };
+    }
+
+    /** Snap ink box to true cell center (Safari stack+baseline is biased high). */
+    function centerInkInCell(node, el, cellW, cellH) {
+      let bb;
+      try {
+        bb = el.getBBox();
+      } catch {
+        return;
+      }
+      if (!(bb.width > 0 && bb.height > 0)) return;
+      const x = (+node.attr("x") || 0) + (cellW / 2 - (bb.x + bb.width / 2));
+      const y = (+node.attr("y") || 0) + (cellH / 2 - (bb.y + bb.height / 2));
+      node.attr("x", x).attr("y", y);
+      node.selectAll("tspan").attr("x", x);
     }
 
     function paintCellLabel(selection) {
       selection.each(function (d) {
         const node = d3.select(this);
-        const label = cellLabelText(d);
+        const el = this;
+        const plan = cellLabelPlan(d);
+        const box = cellBox(d);
         node.selectAll("tspan").remove();
         node.text(null);
-        node.attr("opacity", label ? 1 : 0);
-        if (!label) return;
+        node.attr("fill", null);
+        node.style("fill", plan.fill);
+        node.attr("opacity", plan.text ? 1 : 0);
+        if (!plan.text) return;
 
-        if (stackUprightBranch(d)) {
-          // Upright letters stacked top→bottom (top-down icicle only)
-          const chars = [...label];
-          const startDy = -((chars.length - 1) / 2) * 1.05;
-          const x = node.attr("x");
-          node
-            .selectAll("tspan")
-            .data(chars)
-            .join("tspan")
-            .attr("x", x)
-            .attr("dy", (_, i) => `${i === 0 ? startDy : 1.05}em`)
-            .text((c) => c);
+        const tracking = (fs) =>
+          fs < 7 ? "-0.07em" : fs < 9 ? "-0.05em" : fs < 11 ? "-0.03em" : "-0.015em";
+
+        const applyFs = (fs) => {
+          node.style("font-size", `${Math.round(fs * 100) / 100}px`);
+          node.style("letter-spacing", tracking(fs));
+          if (plan.mode === "stack") {
+            node.attr("dominant-baseline", "alphabetic");
+            applyStackSpans(node, plan.text, fs);
+          } else {
+            node.attr("dominant-baseline", "middle");
+            if (!node.text()) node.text(plan.text);
+          }
+        };
+
+        if (plan.mode === "stack") {
+          node.attr("dominant-baseline", "alphabetic");
+          applyStackSpans(node, plan.text, plan.fs ?? 12);
         } else {
-          node.text(label);
+          node.attr("dominant-baseline", "middle");
+          node.text(plan.text);
+        }
+
+        if (plan.fs == null || plan.availW == null) {
+          if (plan.fs != null) applyFs(plan.fs);
+          centerInkInCell(node, el, box.w, box.h);
+          return;
+        }
+
+        const floor = plan.floor ?? 3.1;
+        const ceiling = plan.ceiling ?? 22;
+        const readBb = () => {
+          try {
+            return el.getBBox();
+          } catch {
+            return null;
+          }
+        };
+
+        // Binary search: largest font whose ink box still fits the cell
+        let lo = floor;
+        let hi = ceiling;
+        let best = floor;
+        applyFs(lo);
+        for (let i = 0; i < 16; i++) {
+          const mid = (lo + hi) / 2;
+          applyFs(mid);
+          const bb = readBb();
+          if (!bb || !(bb.width > 0 && bb.height > 0)) {
+            hi = mid;
+            continue;
+          }
+          if (bb.width <= plan.availW && bb.height <= plan.availH) {
+            best = mid;
+            lo = mid;
+          } else {
+            hi = mid;
+          }
+        }
+        applyFs(best);
+        centerInkInCell(node, el, box.w, box.h);
+
+        // One last nudge if centering exposed unused room on the long axis
+        const bb2 = readBb();
+        if (bb2 && bb2.width > 0 && bb2.height > 0) {
+          const room = Math.min(
+            plan.availW / bb2.width,
+            plan.availH / bb2.height
+          );
+          if (room > 1.01 && best * room <= ceiling + 0.01) {
+            best = Math.min(ceiling, best * room);
+            applyFs(best);
+            centerInkInCell(node, el, box.w, box.h);
+          }
+        }
+
+        if (plan.clip) {
+          const g = d3.select(el.parentNode);
+          const safe = String(d.data.id).replace(/[^a-zA-Z0-9_-]/g, "_");
+          const cid = `door-clip-${safe}`;
+          let cp = g.select("clipPath.door-clip");
+          if (cp.empty()) {
+            cp = g.insert("clipPath", "text").attr("class", "door-clip").attr("id", cid);
+            cp.append("rect");
+            node.attr("clip-path", `url(#${cid})`);
+          }
+          cp.select("rect")
+            .attr("x", 0)
+            .attr("y", 0)
+            .attr("width", box.w)
+            .attr("height", box.h);
         }
       });
     }
@@ -1010,10 +1185,12 @@ export function createIcicleView(
         .attr("transform", "")
         .attr("dominant-baseline", "middle")
         .attr("text-anchor", (d) =>
-          atConstitution && d.depth === 1 ? "middle" : "start"
+          atConstitution && d.depth === 1 && branchOrderKey(d)
+            ? "middle"
+            : "start"
         )
         .attr("x", (d) =>
-          atConstitution && d.depth === 1
+          atConstitution && d.depth === 1 && branchOrderKey(d)
             ? Math.max(0, d.y1 - d.y0) / 2
             : 8
         )
@@ -1082,6 +1259,16 @@ export function createIcicleView(
     paint();
   }
 
+  function setNestLevels(next) {
+    nestDepth = clampNestLevels(next);
+    resetCam();
+    paint();
+  }
+
+  function getNestLevels() {
+    return nestDepth;
+  }
+
   function pathToFocus() {
     if (!focus) return [];
     return focus.ancestors().reverse().map((d) => {
@@ -1113,6 +1300,7 @@ export function createIcicleView(
     }
   }
 
+
   function destroy() {
     clearLongTimer();
     hideTip();
@@ -1141,6 +1329,8 @@ export function createIcicleView(
     setSelected,
     setOrientation,
     getOrientation: () => orient,
+    setNestLevels,
+    getNestLevels,
     pathToFocus,
     resize,
     destroy,

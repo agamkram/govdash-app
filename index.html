@@ -7,12 +7,45 @@
     content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
   />
   <meta name="theme-color" content="#e6e8eb" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <script>
+    /* PWA: layout viewport is often shorter than screen — set fill height before paint. */
+    (function () {
+      var n = window.navigator;
+      var standalone =
+        n.standalone === true ||
+        window.matchMedia("(display-mode: standalone)").matches ||
+        window.matchMedia("(display-mode: fullscreen)").matches;
+      if (!standalone) return;
+      var root = document.documentElement;
+      root.classList.add("pwa-standalone");
+      root.classList.add("app-fill");
+      var iw = window.innerWidth || 0;
+      var ih = window.innerHeight || 0;
+      var sw = window.screen.width || 0;
+      var sh = window.screen.height || 0;
+      var screenMax = Math.max(sw, sh);
+      var screenMin = Math.min(sw, sh);
+      var portrait =
+        window.matchMedia("(orientation: portrait)").matches ||
+        (!window.matchMedia("(orientation: landscape)").matches && ih >= iw);
+      var fillH = Math.max(ih, portrait ? screenMax : screenMin);
+      var extra = 0;
+      if (Math.min(iw, ih) >= 600 && screenMax < ih - 10) {
+        extra = 20;
+      }
+      root.style.setProperty("--app-fill-h", fillH + "px");
+      root.style.setProperty("--app-extra-b", extra + "px");
+    })();
+  </script>
   <title>GovDash</title>
   <link rel="icon" type="image/png" href="icon-192.png" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Michroma&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2211" />
+  <link rel="stylesheet" href="styles.css?v=2297" />
 </head>
 <body>
   <div class="shell">
@@ -71,7 +104,6 @@
     <nav id="breadcrumbs" class="breadcrumbs" aria-label="Hierarchy path"></nav>
     <div class="chrome-subline">
       <p id="atlas-sub" class="atlas-sub" hidden></p>
-      <p id="meta" class="meta" aria-live="polite"></p>
     </div>
 
     <main class="stage">
@@ -87,6 +119,7 @@
         <div class="detail-body">
           <p class="detail-kind" id="d-kind"></p>
           <h2 id="d-title"></h2>
+          <p class="detail-workforce" id="d-workforce" hidden></p>
           <p class="detail-short" id="d-short"></p>
           <div class="detail-mission" id="d-mission" hidden>
             <h3>Mission</h3>
@@ -146,8 +179,24 @@
         </div>
       </section>
     </main>
+
+    <footer class="chrome-bottom" id="chrome-bottom" hidden>
+      <label class="icicle-depth" id="icicle-depth" hidden>
+        <span class="icicle-depth-label">Depth</span>
+        <input
+          type="range"
+          id="icicle-depth-range"
+          min="1"
+          max="11"
+          step="1"
+          value="11"
+          aria-valuetext="11 levels from here"
+        />
+        <output id="icicle-depth-out" for="icicle-depth-range">11</output>
+      </label>
+    </footer>
   </div>
-  <script type="module" src="app.js?v=2211"></script>
+  <script type="module" src="app.js?v=2297"></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>

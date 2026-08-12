@@ -2,8 +2,8 @@
 
 /** Constitutional order for top doors (matches Sankey). Independent last. */
 export const BRANCH_ORDER = [
-  "Legislative",
   "Executive",
+  "Legislative",
   "Judicial",
   "Independent",
   "Chartered",
@@ -94,6 +94,8 @@ export function atlasRail(rootOrData) {
 export const CONSTITUTION_FILL = "#8a9399";
 export const INK = "#2a3035";
 export const MAP_FIELD = "#c8cbd0";
+/** Branch door labels on stone fills (icicle). */
+export const LABEL_ON_BRANCH = "#f0eeea";
 
 /** Stamp each data node with its constitutional door (Legislative / Executive / …). */
 export function stampDoorColors(root) {
@@ -357,15 +359,6 @@ function parseColorRgb(color) {
 
 function hexRgb(hex) {
   return parseColorRgb(hex);
-}
-
-export function formatMoney(n) {
-  if (n == null || Number.isNaN(n)) return "—";
-  const abs = Math.abs(n);
-  if (abs >= 1e12) return `$${(n / 1e12).toFixed(2)}T`;
-  if (abs >= 1e9) return `$${(n / 1e9).toFixed(1)}B`;
-  if (abs >= 1e6) return `$${(n / 1e6).toFixed(0)}M`;
-  return `$${Math.round(n).toLocaleString()}`;
 }
 
 export function childCount(node) {

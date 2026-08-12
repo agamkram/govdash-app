@@ -18,7 +18,7 @@ import {
 
 const CONST_ID = "constitution";
 
-const DOOR_ORDER = ["Legislative", "Executive", "Judicial", "Independent"];
+const DOOR_ORDER = ["Executive", "Legislative", "Judicial", "Independent"];
 
 const DOOR_LABEL = {
   Legislative: "Legislative",
@@ -1222,7 +1222,11 @@ export function createSankeyView(
     e.preventDefault();
   }
 
-  const ro = new ResizeObserver(() => resize());
+  let roTimer = 0;
+  const ro = new ResizeObserver(() => {
+    clearTimeout(roTimer);
+    roTimer = setTimeout(() => resize(), 100);
+  });
   ro.observe(el);
 
   canvas.addEventListener("pointerdown", onPointerDown);

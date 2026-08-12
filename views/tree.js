@@ -1,5 +1,6 @@
 /**
- * Tap-to-expand org tree — HTML list, only expanded nodes in the DOM.
+ * Org tree — HTML list under the current focus.
+ * Opens at the constitutional branches; expand one level at a time.
  */
 import * as d3 from "../vendor/d3.js";
 import { displayName, paintFill, selectionFill, hierarchySort } from "../shared.js";
@@ -30,6 +31,13 @@ export function createTreeView(container, { onSelect, onFocusChange }) {
       expanded.add(cur.data.id);
       cur = cur.parent;
     }
+  }
+
+  /** Expand focus (and ancestors) so its children — the next tier — are listed. */
+  function expandFocusLevel(node) {
+    if (!node) return;
+    ensureAncestorsExpanded(node);
+    expanded.add(node.data.id);
   }
 
   function renderNode(node, into, depth) {
@@ -81,7 +89,7 @@ export function createTreeView(container, { onSelect, onFocusChange }) {
       if (hasKids && node !== focus) {
         focus = node;
         ensureAncestorsExpanded(focus);
-        expanded.add(focus.data.id);
+        expandFocusLevel(focus);
         onFocusChange?.(focus);
       }
       paint();
@@ -121,7 +129,7 @@ export function createTreeView(container, { onSelect, onFocusChange }) {
     indexTree(fullRoot);
     focus = fullRoot;
     selectedId = fullRoot.data.id;
-    expanded.add(fullRoot.data.id);
+    expandFocusLevel(focus);
     el.replaceChildren(wrap);
     paint();
     onFocusChange?.(focus);
@@ -134,7 +142,7 @@ export function createTreeView(container, { onSelect, onFocusChange }) {
     onSelect?.(d.data, d);
     focus = d.children?.length ? d : d.parent || d;
     ensureAncestorsExpanded(d);
-    expanded.add(focus.data.id);
+    expandFocusLevel(focus);
     onFocusChange?.(focus);
     paint();
     const row = list.querySelector(`[data-id="${CSS.escape(id)}"]`);
@@ -147,6 +155,7 @@ export function createTreeView(container, { onSelect, onFocusChange }) {
     focus = focus.parent;
     selectedId = null;
     onSelect?.(focus.data, focus);
+    expandFocusLevel(focus);
     onFocusChange?.(focus);
     paint();
   }

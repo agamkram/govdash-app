@@ -24,7 +24,6 @@ const factories = {
   sankey: createSankeyView,
 };
 
-const metaEl = document.getElementById("meta");
 const searchInput = document.getElementById("search");
 const searchResults = document.getElementById("search-results");
 const breadcrumbsEl = document.getElementById("breadcrumbs");
@@ -32,6 +31,7 @@ const atlasSubEl = document.getElementById("atlas-sub");
 const detailEl = document.getElementById("detail");
 const dKind = document.getElementById("d-kind");
 const dTitle = document.getElementById("d-title");
+const dWorkforce = document.getElementById("d-workforce");
 const dShort = document.getElementById("d-short");
 const dCodes = document.getElementById("d-codes");
 const dMission = document.getElementById("d-mission");
@@ -52,7 +52,98 @@ const youPageEl = document.getElementById("page-you");
 const youBack = document.getElementById("you-back");
 const mapEl = document.getElementById("map");
 const orientToggle = document.getElementById("orient-toggle");
+const icicleDepthEl = document.getElementById("icicle-depth");
+const icicleDepthRange = document.getElementById("icicle-depth-range");
+const icicleDepthOut = document.getElementById("icicle-depth-out");
 const shellEl = document.querySelector(".shell");
+
+let layoutResizeTimer = null;
+let lastFillKey = "";
+
+function isPortrait() {
+  if (window.matchMedia("(orientation: portrait)").matches) return true;
+  if (window.matchMedia("(orientation: landscape)").matches) return false;
+  return (window.innerHeight || 0) >= (window.innerWidth || 0);
+}
+
+function isMobileTouch() {
+  return window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+}
+
+function readSafeInsetBottom() {
+  const probe = document.createElement("div");
+  probe.style.cssText =
+    "position:fixed;visibility:hidden;pointer-events:none;padding-bottom:env(safe-area-inset-bottom,0px)";
+  document.body.appendChild(probe);
+  const px = parseFloat(getComputedStyle(probe).paddingBottom) || 0;
+  probe.remove();
+  return px;
+}
+
+function appFillHeightPx() {
+  const ih = window.innerHeight || 0;
+  const vv = Math.round(window.visualViewport?.height || 0);
+  const sw = window.screen.width || 0;
+  const sh = window.screen.height || 0;
+  const screenMax = Math.max(sw, sh);
+  const screenMin = Math.min(sw, sh);
+  const screenH = isPortrait() ? screenMax : screenMin;
+  if (document.documentElement.classList.contains("pwa-standalone")) {
+    return Math.max(ih, vv, screenH);
+  }
+  return Math.max(ih, vv);
+}
+
+function appExtraBottomPx() {
+  if (!document.documentElement.classList.contains("pwa-standalone")) return 0;
+  const iw = window.innerWidth || 0;
+  const ih = window.innerHeight || 0;
+  const screenMax = Math.max(window.screen.width || 0, window.screen.height || 0);
+  if (Math.min(iw, ih) < 600) return 0;
+  if (screenMax >= ih - 10) return 0;
+  return Math.max(readSafeInsetBottom(), 20);
+}
+
+function syncAppFillHeight() {
+  const root = document.documentElement;
+  const useFill =
+    root.classList.contains("pwa-standalone") || isMobileTouch();
+  if (!useFill) {
+    root.classList.remove("app-fill");
+    root.style.removeProperty("--app-fill-h");
+    root.style.removeProperty("--app-extra-b");
+    return 0;
+  }
+  root.classList.add("app-fill");
+  const fillH = appFillHeightPx();
+  const extra = appExtraBottomPx();
+  const key = `${fillH}+${extra}`;
+  if (key !== lastFillKey) {
+    lastFillKey = key;
+    root.style.setProperty("--app-fill-h", `${fillH}px`);
+    root.style.setProperty("--app-extra-b", `${extra}px`);
+  }
+  return fillH + extra;
+}
+
+/** Sync fill height; CSS flex sizes the stage/map. */
+function layoutMapBox() {
+  syncAppFillHeight();
+}
+
+function scheduleViewResize() {
+  clearTimeout(layoutResizeTimer);
+  layoutResizeTimer = setTimeout(() => {
+    layoutMapBox();
+    requestAnimationFrame(() => viewApi?.resize());
+  }, 100);
+}
+
+function onViewportChange() {
+  layoutMapBox();
+  scheduleViewResize();
+}
+
 const fiscalPage = createFiscalPage(fiscalPageEl);
 const youPage = createYouPage(youPageEl, {
   onMap: (chamber) => showYouOnMap(chamber),
@@ -127,8 +218,6 @@ function syncPageFromHash() {
 let rootNode = null;
 let usaRoot = null;
 let beyondRoot = null;
-let usaMeta = {};
-let beyondMeta = {};
 let atlas = "usa";
 let nodeById = new Map();
 let selectedNode = null;
@@ -137,19 +226,8 @@ let searchable = [];
 let searchableAll = [];
 let viewApi = null;
 let mode = "icicle";
-let orientation = "side";
-
-function writeMeta() {
-  const m = atlas === "beyond" ? beyondMeta : usaMeta;
-  metaEl.textContent = [
-    atlas === "beyond" ? "∞" : null,
-    `${m.nodeCount?.toLocaleString?.() ?? "?"} nodes`,
-    m.sam ? `SAM ${m.sam.matched}` : null,
-    m.usgm ? `Manual ${m.usgm.matched}` : null,
-  ]
-    .filter(Boolean)
-    .join(" · ");
-}
+let orientation = "top";
+let icicleNestLevels = 11;
 
 function flattenTagged(node, atlasId, out = []) {
   out.push({
@@ -170,7 +248,6 @@ function applyAtlas({ preserve = false } = {}) {
   searchable = flattenSearch(rootNode);
   btnBeyond?.classList.toggle("is-active", atlas === "beyond");
   shellEl.dataset.atlas = atlas;
-  writeMeta();
   selectedNode = null;
   detailEl.hidden = true;
   mountView(mode, { preserve });
@@ -184,10 +261,11 @@ function setAtlas(next) {
 }
 
 function defaultOrientation() {
-  const saved = localStorage.getItem("govdash-orient");
-  if (saved === "top" || saved === "side") return saved;
-  // Portrait / phone: prefer top-down
-  return window.innerHeight > window.innerWidth * 1.05 ? "top" : "side";
+  return "top";
+}
+
+function defaultIcicleNestLevels() {
+  return 11;
 }
 
 function syncOrientChrome() {
@@ -201,6 +279,23 @@ function syncOrientChrome() {
   orientToggle.querySelectorAll(".orient-btn").forEach((btn) => {
     btn.classList.toggle("is-active", btn.dataset.orient === orientation);
   });
+}
+
+function syncIcicleDepthChrome() {
+  if (!icicleDepthEl || !icicleDepthRange || !icicleDepthOut) return;
+  const show = mode === "icicle";
+  const bottom = document.getElementById("chrome-bottom");
+  icicleDepthEl.hidden = !show;
+  if (bottom) bottom.hidden = !show;
+  if (show) {
+    icicleDepthRange.value = String(icicleNestLevels);
+    icicleDepthOut.textContent = String(icicleNestLevels);
+    icicleDepthRange.setAttribute(
+      "aria-valuetext",
+      `${icicleNestLevels} level${icicleNestLevels === 1 ? "" : "s"} from here`
+    );
+  }
+  layoutMapBox();
 }
 
 function flattenSearch(node, out = []) {
@@ -279,6 +374,18 @@ function showDetail(node, opts = {}) {
   dTitle.textContent = asConstitution
     ? "The Constitution"
     : rail?.name || node.name;
+
+  const formatCount = (n) =>
+    typeof n === "number" && Number.isFinite(n) ? n.toLocaleString("en-US") : "—";
+
+  if (!asConstitution && node.workforce?.count != null) {
+    dWorkforce.hidden = false;
+    dWorkforce.textContent = `${formatCount(node.workforce.count)} civilian employees`;
+  } else {
+    dWorkforce.hidden = true;
+    dWorkforce.textContent = "";
+  }
+
   dShort.textContent = asConstitution
     ? "Supreme law of the United States"
     : !rail && node.short
@@ -337,9 +444,6 @@ function showDetail(node, opts = {}) {
 
   renderEngage(node);
 
-  const formatCount = (n) =>
-    typeof n === "number" && Number.isFinite(n) ? n.toLocaleString("en-US") : "—";
-
   const rows = asConstitution
     ? [
         ["branches in map", String((node.children || []).length)],
@@ -347,9 +451,6 @@ function showDetail(node, opts = {}) {
         ["primary source", "constitution.congress.gov"],
       ]
     : [];
-  if (!asConstitution && node.workforce?.count != null) {
-    rows.push(["civilian employees", formatCount(node.workforce.count)]);
-  }
   if (!asConstitution) {
     rows.push(
       ["children", String((node.children || []).length)],
@@ -387,11 +488,6 @@ function showDetail(node, opts = {}) {
     const dt = document.createElement("dt");
     dt.textContent = k;
     const dd = document.createElement("dd");
-    const isWorkforce = k === "civilian employees";
-    if (isWorkforce) {
-      dt.className = "workforce-label";
-      dd.className = "workforce-count";
-    }
     if (k === "primary source") {
       const a = document.createElement("a");
       a.href = "https://constitution.congress.gov/constitution/";
@@ -538,6 +634,7 @@ function setModeChrome() {
   });
   mapEl.dataset.mode = mode;
   syncOrientChrome();
+  syncIcicleDepthChrome();
 }
 
 function mountView(nextMode, { preserve = true } = {}) {
@@ -568,8 +665,10 @@ function mountView(nextMode, { preserve = true } = {}) {
     },
   };
   if (mode === "icicle" || mode === "sankey") opts.orientation = orientation;
+  if (mode === "icicle") opts.nestLevels = icicleNestLevels;
 
   viewApi = factories[mode](mapEl, opts);
+  layoutMapBox();
   viewApi.build(rootNode);
 
   if (keepFocus) viewApi.zoomToId(keepFocus);
@@ -588,7 +687,10 @@ function mountView(nextMode, { preserve = true } = {}) {
 }
 
 async function main() {
-  metaEl.textContent = "Loading…";
+  if (atlasSubEl) {
+    atlasSubEl.hidden = false;
+    atlasSubEl.textContent = "Loading…";
+  }
   const [usaRes, beyondRes] = await Promise.all([fetch(TREE_URL), fetch(BEYOND_URL)]);
   if (!usaRes.ok) throw new Error(`Failed to load ${TREE_URL}`);
   if (!beyondRes.ok) throw new Error(`Failed to load ${BEYOND_URL}`);
@@ -596,8 +698,6 @@ async function main() {
   const beyondData = await beyondRes.json();
   usaRoot = usaData.tree;
   beyondRoot = beyondData.tree;
-  usaMeta = usaData.meta || {};
-  beyondMeta = beyondData.meta || {};
   stampDoorColors(usaRoot);
   stampDoorColors(beyondRoot);
   searchableAll = [
@@ -605,9 +705,10 @@ async function main() {
     ...flattenTagged(beyondRoot, "beyond"),
   ];
 
-  const saved = localStorage.getItem("govdash-mode");
-  if (saved && factories[saved]) mode = saved;
+  // Fresh every load — no map memory
+  mode = "icicle";
   orientation = defaultOrientation();
+  icicleNestLevels = defaultIcicleNestLevels();
 
   atlas = location.hash.replace(/^#/, "") === "beyond" ? "beyond" : "usa";
   applyAtlas({ preserve: false });
@@ -616,7 +717,6 @@ async function main() {
   document.querySelectorAll(".mode-btn[data-mode]").forEach((btn) => {
     btn.addEventListener("click", () => {
       if (btn.dataset.mode === mode) return;
-      localStorage.setItem("govdash-mode", btn.dataset.mode);
       closeAppPage();
       mountView(btn.dataset.mode);
     });
@@ -628,7 +728,6 @@ async function main() {
       if (next !== "top" && next !== "side") return;
       if (next === orientation) return;
       orientation = next;
-      localStorage.setItem("govdash-orient", orientation);
       syncOrientChrome();
       if (
         (mode === "icicle" || mode === "sankey") &&
@@ -637,6 +736,13 @@ async function main() {
         viewApi.setOrientation(orientation);
       }
     });
+  });
+
+  icicleDepthRange?.addEventListener("input", () => {
+    const next = Math.min(11, Math.max(1, Math.round(Number(icicleDepthRange.value) || 11)));
+    icicleNestLevels = next;
+    syncIcicleDepthChrome();
+    viewApi?.setNestLevels?.(next);
   });
 
   btnFiscal?.addEventListener("click", () => {
@@ -686,14 +792,26 @@ async function main() {
     }
   });
 
-  let resizeTimer = null;
-  window.addEventListener("resize", () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => viewApi?.resize(), 150);
+  layoutMapBox();
+  window.addEventListener("resize", onViewportChange);
+  window.addEventListener("pageshow", onViewportChange);
+  window.addEventListener("orientationchange", () => {
+    clearTimeout(layoutResizeTimer);
+    layoutResizeTimer = setTimeout(onViewportChange, 350);
   });
+  window.screen?.orientation?.addEventListener?.("change", () => {
+    clearTimeout(layoutResizeTimer);
+    layoutResizeTimer = setTimeout(onViewportChange, 350);
+  });
+  window.matchMedia("(orientation: portrait)").addEventListener("change", onViewportChange);
+  window.visualViewport?.addEventListener("resize", onViewportChange);
+
 }
 
 main().catch((err) => {
-  metaEl.textContent = String(err.message || err);
+  if (atlasSubEl) {
+    atlasSubEl.hidden = false;
+    atlasSubEl.textContent = String(err.message || err);
+  }
   console.error(err);
 });
