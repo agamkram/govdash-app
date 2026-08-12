@@ -13,6 +13,7 @@ mkdirSync(dest, { recursive: true });
 
 const files = [
   "index.html",
+  "about.html",
   "styles.css",
   "app.js",
   "shared.js",
