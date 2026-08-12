@@ -45,11 +45,14 @@ const detailClose = document.getElementById("detail-close");
 const btnEnter = document.getElementById("btn-enter");
 const btnFiscal = document.getElementById("btn-fiscal");
 const btnYou = document.getElementById("btn-you");
+const btnAbout = document.getElementById("btn-about");
 const btnBeyond = document.getElementById("btn-beyond");
 const fiscalPageEl = document.getElementById("page-fiscal");
 const fiscalBack = document.getElementById("fiscal-back");
 const youPageEl = document.getElementById("page-you");
 const youBack = document.getElementById("you-back");
+const aboutPageEl = document.getElementById("page-about");
+const aboutBack = document.getElementById("about-back");
 const mapEl = document.getElementById("map");
 const orientToggle = document.getElementById("orient-toggle");
 const icicleDepthEl = document.getElementById("icicle-depth");
@@ -151,15 +154,17 @@ const youPage = createYouPage(youPageEl, {
 
 function pageName() {
   const h = location.hash.replace(/^#/, "");
-  if (h === "fiscal" || h === "you") return h;
+  if (h === "fiscal" || h === "you" || h === "about") return h;
   return "map";
 }
 
 function hideAppPages() {
   fiscalPageEl.hidden = true;
   youPageEl.hidden = true;
+  if (aboutPageEl) aboutPageEl.hidden = true;
   btnFiscal?.classList.remove("is-active");
   btnYou?.classList.remove("is-active");
+  btnAbout?.classList.remove("is-active");
 }
 
 function openFiscalPage() {
@@ -182,15 +187,30 @@ function openYouPage() {
   youPage.prepare();
 }
 
+function openAboutPage() {
+  detailEl.hidden = true;
+  hideAppPages();
+  if (location.hash !== "#about") location.hash = "about";
+  shellEl.dataset.page = "about";
+  if (aboutPageEl) aboutPageEl.hidden = false;
+  btnAbout?.classList.add("is-active");
+}
+
 function closeAppPage() {
   const leaving =
     shellEl.dataset.page === "fiscal" ||
     shellEl.dataset.page === "you" ||
+    shellEl.dataset.page === "about" ||
     pageName() === "fiscal" ||
-    pageName() === "you";
+    pageName() === "you" ||
+    pageName() === "about";
   hideAppPages();
   shellEl.dataset.page = "map";
-  if (location.hash === "#fiscal" || location.hash === "#you") {
+  if (
+    location.hash === "#fiscal" ||
+    location.hash === "#you" ||
+    location.hash === "#about"
+  ) {
     if (atlas === "beyond") location.hash = "beyond";
     else history.pushState("", document.title, location.pathname + location.search);
   }
@@ -208,6 +228,7 @@ function syncPageFromHash() {
   const p = pageName();
   if (p === "fiscal") openFiscalPage();
   else if (p === "you") openYouPage();
+  else if (p === "about") openAboutPage();
   else {
     closeAppPage();
     const want = location.hash.replace(/^#/, "") === "beyond" ? "beyond" : "usa";
@@ -753,6 +774,10 @@ async function main() {
     if (pageName() === "you") closeAppPage();
     else openYouPage();
   });
+  btnAbout?.addEventListener("click", () => {
+    if (pageName() === "about") closeAppPage();
+    else openAboutPage();
+  });
   btnBeyond?.addEventListener("click", () => {
     closeAppPage();
     if (atlas === "beyond") {
@@ -769,6 +794,7 @@ async function main() {
   });
   fiscalBack?.addEventListener("click", () => closeAppPage());
   youBack?.addEventListener("click", () => closeAppPage());
+  aboutBack?.addEventListener("click", () => closeAppPage());
   window.addEventListener("hashchange", () => syncPageFromHash());
   btnEnter.addEventListener("click", () => {
     if (!selectedNode?.children?.length) return;

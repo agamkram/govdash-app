@@ -45,7 +45,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Michroma&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2297" />
+  <link rel="stylesheet" href="styles.css?v=2298" />
 </head>
 <body>
   <div class="shell">
@@ -64,6 +64,15 @@
             <button type="button" class="orient-btn" data-orient="top" title="Top down" aria-label="Top down">↓</button>
           </div>
           <div class="chrome-aside">
+            <button
+              type="button"
+              id="btn-about"
+              class="btn btn-fiscal"
+              title="About &amp; how to use"
+              aria-label="About and how to use"
+            >
+              i
+            </button>
             <button
               type="button"
               id="btn-you"
@@ -141,6 +150,19 @@
         </div>
       </aside>
 
+      <section class="app-page page-about" id="page-about" hidden>
+        <div class="about-bar">
+          <button type="button" id="about-back" class="btn">Map</button>
+          <span class="about-bar-title">About</span>
+        </div>
+        <iframe
+          class="about-frame"
+          id="about-frame"
+          src="about.html"
+          title="About GovDash — how to use and data sources"
+        ></iframe>
+      </section>
+
       <section class="app-page" id="page-you" hidden>
         <div class="app-page-inner">
           <p class="detail-kind">You</p>
@@ -196,7 +218,7 @@
       </label>
     </footer>
   </div>
-  <script type="module" src="app.js?v=2297"></script>
+  <script type="module" src="app.js?v=2298"></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>

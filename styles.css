@@ -348,7 +348,15 @@ html.pwa-standalone .shell {
 .shell[data-page="you"] .map,
 .shell[data-page="you"] .map-tip,
 .shell[data-page="you"] .scrub-coach,
-.shell[data-page="you"] .detail-pane {
+.shell[data-page="you"] .detail-pane,
+.shell[data-page="about"] .search-wrap,
+.shell[data-page="about"] .breadcrumbs,
+.shell[data-page="about"] .chrome-subline,
+.shell[data-page="about"] .chrome-bottom,
+.shell[data-page="about"] .map,
+.shell[data-page="about"] .map-tip,
+.shell[data-page="about"] .scrub-coach,
+.shell[data-page="about"] .detail-pane {
   display: none !important;
 }
 
@@ -365,6 +373,41 @@ html.pwa-standalone .shell {
 
 .app-page[hidden] {
   display: none !important;
+}
+
+.page-about {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+
+.page-about[hidden] {
+  display: none !important;
+}
+
+.about-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex: 0 0 auto;
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.about-bar-title {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.about-frame {
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+  border: 0;
+  background: var(--bg);
 }
 
 .app-page-inner {
