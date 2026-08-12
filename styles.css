@@ -380,6 +380,8 @@ html.pwa-standalone .shell {
   flex-direction: column;
   padding: 0;
   overflow: hidden;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 .page-about[hidden] {
@@ -405,9 +407,12 @@ html.pwa-standalone .shell {
 .about-frame {
   flex: 1 1 auto;
   width: 100%;
+  max-width: 100%;
   min-height: 0;
   border: 0;
   background: var(--bg);
+  overflow: hidden;
+  overscroll-behavior-x: none;
 }
 
 .app-page-inner {
