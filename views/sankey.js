@@ -13,6 +13,7 @@ import {
   atlasRail,
   placeMapTip,
   brightenHex,
+  noteScrubSuccess,
 } from "../shared.js";
 
 const CONST_ID = "constitution";
@@ -814,6 +815,7 @@ export function createSankeyView(
     selectedId = armedId;
     hapticPulse();
     paint();
+    noteScrubSuccess();
     showTip(hit, clientX, clientY, "Armed · tap for details");
   }
 

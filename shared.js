@@ -174,6 +174,94 @@ export function placeMapTip(tipEl, clientX, clientY, { fromTouch = false } = {})
   tipEl.style.top = `${Math.max(8, top)}px`;
 }
 
+const SCRUB_COACH_KEY = "govdash-scrub-coach";
+const SCRUB_NUDGE_KEY = "govdash-scrub-nudge";
+let scrubNudgeTimer = 0;
+
+function coachEl() {
+  return document.getElementById("scrub-coach");
+}
+
+function scrubCoachDismissed() {
+  try {
+    return localStorage.getItem(SCRUB_COACH_KEY) === "1";
+  } catch {
+    return true;
+  }
+}
+
+/** Hide and remember — Got it, or first successful long-press scrub. */
+export function dismissScrubCoach() {
+  try {
+    localStorage.setItem(SCRUB_COACH_KEY, "1");
+  } catch {
+    /* ignore */
+  }
+  const el = coachEl();
+  if (el) {
+    el.hidden = true;
+    el.classList.remove("is-nudge");
+  }
+}
+
+/** Call when a long-press scrub arms a node — teaches by doing. */
+export function noteScrubSuccess() {
+  try {
+    localStorage.setItem(SCRUB_NUDGE_KEY, "1");
+  } catch {
+    /* ignore */
+  }
+  dismissScrubCoach();
+}
+
+/**
+ * Phone/iPad only. Show once until Got it or a successful scrub.
+ * Hidden on Tree (no scrub) and when already dismissed.
+ */
+export function syncScrubCoach(mode) {
+  const el = coachEl();
+  if (!el) return;
+  if (!isTouchTipUi() || scrubCoachDismissed() || mode === "tree") {
+    if (!el.classList.contains("is-nudge")) el.hidden = true;
+    return;
+  }
+  el.classList.remove("is-nudge");
+  const copy = el.querySelector(".scrub-coach-copy");
+  if (copy) {
+    copy.textContent = "Press and hold, then slide to pick a place.";
+  }
+  el.hidden = false;
+  const btn = el.querySelector("[data-dismiss-coach]");
+  if (btn && !btn.dataset.bound) {
+    btn.dataset.bound = "1";
+    btn.addEventListener("click", () => dismissScrubCoach());
+  }
+}
+
+/** One-shot toast after a dead tap on unlabeled Circles (coach already gone). */
+export function nudgeScrubHint() {
+  if (!isTouchTipUi()) return;
+  if (!scrubCoachDismissed()) return;
+  try {
+    if (localStorage.getItem(SCRUB_NUDGE_KEY) === "1") return;
+    localStorage.setItem(SCRUB_NUDGE_KEY, "1");
+  } catch {
+    return;
+  }
+  const el = coachEl();
+  if (!el) return;
+  const copy = el.querySelector(".scrub-coach-copy");
+  if (copy) copy.textContent = "Press and hold to choose.";
+  el.classList.add("is-nudge");
+  el.hidden = false;
+  if (scrubNudgeTimer) clearTimeout(scrubNudgeTimer);
+  scrubNudgeTimer = window.setTimeout(() => {
+    scrubNudgeTimer = 0;
+    el.hidden = true;
+    el.classList.remove("is-nudge");
+  }, 2800);
+}
+
 export function paintFill(nodeOrData) {
   const base = kindFill(nodeOrData);
   const depth = nodeOrData?.depth;

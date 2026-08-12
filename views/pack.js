@@ -14,6 +14,8 @@ import {
   placeMapTip,
   atlasRail,
   INK,
+  noteScrubSuccess,
+  nudgeScrubHint,
 } from "../shared.js";
 
 export function createPackView(container, { onSelect, onFocusChange }) {
@@ -377,6 +379,7 @@ export function createPackView(container, { onSelect, onFocusChange }) {
     selectedId = armedId;
     hapticPulse();
     paintStyles();
+    noteScrubSuccess();
     showTip(node.data, clientX, clientY, "Armed · tap for details", true);
   }
 
@@ -491,7 +494,10 @@ export function createPackView(container, { onSelect, onFocusChange }) {
       if (labeled) activate(labeled);
       else if (target && target !== focus) activate(target);
       else if (!smallest && focus?.parent) goUp();
-      else hideTip();
+      else {
+        hideTip();
+        nudgeScrubHint();
+      }
       return;
     }
 

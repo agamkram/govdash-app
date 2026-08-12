@@ -17,6 +17,7 @@ import {
   atlasRail,
   placeMapTip,
   isTouchTipUi,
+  noteScrubSuccess,
 } from "../shared.js";
 
 const CONST_W = 20;
@@ -190,6 +191,7 @@ export function createIcicleView(
     selectedId = node.data.id;
     paintArmedStroke();
     hapticPulse();
+    noteScrubSuccess();
     showTip(node.data, clientX, clientY, "Armed · tap box for details", true);
   }
 

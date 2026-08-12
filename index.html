@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Michroma&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2203" />
+  <link rel="stylesheet" href="styles.css?v=2205" />
 </head>
 <body>
   <div class="shell">
@@ -77,6 +77,10 @@
     <main class="stage">
       <div id="map" class="map" aria-label="Government hierarchy"></div>
       <div id="map-tip" class="map-tip" hidden></div>
+      <div id="scrub-coach" class="scrub-coach" hidden role="status">
+        <p class="scrub-coach-copy">Press and hold, then slide to pick a place.</p>
+        <button type="button" class="scrub-coach-dismiss" data-dismiss-coach>Got it</button>
+      </div>
 
       <aside class="detail-pane" id="detail" aria-label="Selected organization" hidden>
         <button type="button" class="detail-close" id="detail-close" aria-label="Close">×</button>
@@ -143,7 +147,7 @@
       </section>
     </main>
   </div>
-  <script type="module" src="app.js?v=2203"></script>
+  <script type="module" src="app.js?v=2205"></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>

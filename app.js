@@ -5,6 +5,7 @@ import {
   displayName,
   stampDoorColors,
   atlasRail,
+  syncScrubCoach,
 } from "./shared.js";
 import { createIcicleView } from "./views/icicle.js";
 import { createTreeView } from "./views/tree.js";
@@ -583,6 +584,7 @@ function mountView(nextMode, { preserve = true } = {}) {
     viewApi.setSelected?.(null);
   }
   renderBreadcrumbs();
+  syncScrubCoach(mode);
 }
 
 async function main() {

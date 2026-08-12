@@ -270,12 +270,14 @@ a.mode-btn.mode-link:hover {
 .shell[data-page="fiscal"] .chrome-subline,
 .shell[data-page="fiscal"] .map,
 .shell[data-page="fiscal"] .map-tip,
+.shell[data-page="fiscal"] .scrub-coach,
 .shell[data-page="fiscal"] .detail-pane,
 .shell[data-page="you"] .search-wrap,
 .shell[data-page="you"] .breadcrumbs,
 .shell[data-page="you"] .chrome-subline,
 .shell[data-page="you"] .map,
 .shell[data-page="you"] .map-tip,
+.shell[data-page="you"] .scrub-coach,
 .shell[data-page="you"] .detail-pane {
   display: none !important;
 }
@@ -589,6 +591,56 @@ a.btn.linkish {
 
 .map-tip[hidden] {
   display: none;
+}
+
+.scrub-coach {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  bottom: max(0.75rem, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  max-width: min(22rem, calc(100% - 1.5rem));
+  padding: 0.55rem 0.65rem 0.55rem 0.75rem;
+  background: var(--bg);
+  border: 1px solid #1b6b3a;
+  color: #1b6b3a;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  pointer-events: auto;
+}
+
+.scrub-coach[hidden] {
+  display: none;
+}
+
+.scrub-coach-copy {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.scrub-coach-dismiss {
+  flex: none;
+  margin: 0;
+  padding: 0.28rem 0.55rem;
+  border: 1px solid #1b6b3a;
+  background: transparent;
+  color: #1b6b3a;
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.scrub-coach.is-nudge .scrub-coach-dismiss {
+  display: none;
+}
+
+.scrub-coach.is-nudge {
+  pointer-events: none;
 }
 
 .map-tip .tip-kind {
