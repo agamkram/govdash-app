@@ -612,12 +612,18 @@ a.btn.linkish {
 }
 
 .map-label,
-.focus-rail-label {
+.focus-rail-label,
+.pack-focus-caption {
   fill: var(--ink);
   font-family: "IBM Plex Sans", system-ui, sans-serif;
   font-weight: 400;
   font-size: 0.78rem;
   pointer-events: none;
+}
+
+.pack-focus-caption {
+  font-weight: 500;
+  font-size: 0.82rem;
 }
 
 /* Branch / cell labels — same type as breadcrumb “Constitution” */

@@ -12,6 +12,8 @@ import {
   hierarchySort,
   MAP_FIELD,
   placeMapTip,
+  atlasRail,
+  INK,
 } from "../shared.js";
 
 export function createPackView(container, { onSelect, onFocusChange }) {
@@ -48,6 +50,22 @@ export function createPackView(container, { onSelect, onFocusChange }) {
     .attr("stroke", "rgba(42,48,53,0.92)")
     .attr("stroke-width", 2);
   const labelG = svg.append("g").attr("class", "labels").style("pointer-events", "none");
+  const focusChrome = svg
+    .append("g")
+    .attr("class", "pack-focus-chrome")
+    .style("pointer-events", "none");
+  const focusRim = focusChrome
+    .append("circle")
+    .attr("class", "pack-focus-rim")
+    .attr("fill", "none")
+    .attr("stroke", INK)
+    .attr("stroke-width", 2.5);
+  const focusCaption = focusChrome
+    .append("text")
+    .attr("class", "pack-focus-caption")
+    .attr("text-anchor", "middle")
+    .attr("dominant-baseline", "middle")
+    .attr("fill", INK);
 
   let nodeSel = null;
   let labelSel = null;
@@ -114,6 +132,39 @@ export function createPackView(container, { onSelect, onFocusChange }) {
     return scrubId || armedId || selectedId;
   }
 
+  function focusCaptionText(d = focus) {
+    if (!d?.data) return "";
+    const data = d.data;
+    if (
+      data.id === "usa" ||
+      data.id === "beyond" ||
+      data.kind === "sovereign"
+    ) {
+      return atlasRail(data).name;
+    }
+    return packAbbrev(d) || data.short || data.name || "";
+  }
+
+  function placeFocusChrome(v = view) {
+    if (!focus) {
+      focusChrome.attr("display", "none");
+      return;
+    }
+    const p = placed(focus, v);
+    focusChrome.attr("display", null);
+    focusRim
+      .attr("cx", p.x)
+      .attr("cy", p.y)
+      .attr("r", Math.max(p.r + 3, 12));
+    // Caption sits in the gutter above the focus ring (VIEW_PAD leaves room).
+    const captionY = Math.max(16, p.y - p.r - 18);
+    focusCaption
+      .attr("x", p.x)
+      .attr("y", captionY)
+      .style("font-size", "0.82rem")
+      .text(focusCaptionText(focus));
+  }
+
   function renderFrame(v) {
     if (!nodeSel) return;
     const k = scaleK(v);
@@ -127,6 +178,7 @@ export function createPackView(container, { onSelect, onFocusChange }) {
       .style("font-size", (d) => `${Math.min(17, Math.max(10, d.r * k * 0.22))}px`)
       .attr("opacity", (d) => (d.r * k > LABEL_R ? 1 : 0));
     placeHalo(v);
+    placeFocusChrome(v);
   }
 
   function haloTarget() {
@@ -162,15 +214,14 @@ export function createPackView(container, { onSelect, onFocusChange }) {
         return paintFill(d);
       })
       .attr("fill-opacity", (d) => {
-        if (d === focus) return 0.07;
+        if (d === focus) return 0.1;
         if (d.children) return 0.34;
         return 0.94;
       })
-      .attr("stroke", (d) =>
-        d === focus ? "rgba(0,0,0,0.22)" : "rgba(0,0,0,0.28)"
-      )
-      .attr("stroke-width", (d) => (d === focus ? 1.4 : 1));
+      .attr("stroke", (d) => (d === focus ? INK : "rgba(0,0,0,0.28)"))
+      .attr("stroke-width", (d) => (d === focus ? 2.25 : 1));
     placeHalo();
+    placeFocusChrome();
   }
 
   function clientToSvg(clientX, clientY) {
