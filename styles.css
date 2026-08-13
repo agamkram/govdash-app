@@ -372,8 +372,14 @@ html.pwa-standalone .shell {
 }
 
 .app-page {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0.35rem;
+  right: 1rem;
+  bottom: 0.35rem;
+  left: 1rem;
+  width: auto;
+  height: auto;
+  min-width: 0;
   min-height: 0;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -727,10 +733,23 @@ html.pwa-standalone .shell {
   bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
 }
 
+/* App pages (i / Z / $) never share the depth bar — always clear the home swipe. */
+.shell[data-page="fiscal"] .app-page,
+.shell[data-page="you"] .app-page,
+.shell[data-page="about"] .app-page {
+  bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
+}
+
 /* Phone PWA: when the depth bar is hidden, keep the same home-swipe clearance
    Icicle gets via .chrome-bottom margin — do not change Icicle’s bar. */
 @media (max-width: 720px) {
   html.pwa-standalone .shell:not(:has(#chrome-bottom:not([hidden]))) .map {
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 1.2rem + 0.28rem);
+  }
+
+  html.pwa-standalone .shell[data-page="fiscal"] .app-page,
+  html.pwa-standalone .shell[data-page="you"] .app-page,
+  html.pwa-standalone .shell[data-page="about"] .app-page {
     bottom: calc(env(safe-area-inset-bottom, 0px) + 1.2rem + 0.28rem);
   }
 }
@@ -1334,7 +1353,8 @@ a.engage-label:hover {
     padding: 0;
   }
 
-  .map {
+  .map,
+  .app-page {
     top: 0.28rem;
     right: 0.65rem;
     bottom: 0.28rem;

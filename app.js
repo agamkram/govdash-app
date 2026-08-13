@@ -201,6 +201,8 @@ function openFiscalPage() {
   shellEl.dataset.page = "fiscal";
   fiscalPageEl.hidden = false;
   btnFiscal?.classList.add("is-active");
+  const bottom = document.getElementById("chrome-bottom");
+  if (bottom) bottom.hidden = true;
   fiscalPage.load().catch(() => {});
 }
 
@@ -211,6 +213,8 @@ function openYouPage() {
   shellEl.dataset.page = "you";
   youPageEl.hidden = false;
   btnYou?.classList.add("is-active");
+  const bottom = document.getElementById("chrome-bottom");
+  if (bottom) bottom.hidden = true;
   youPage.prepare();
 }
 
@@ -221,6 +225,8 @@ function openAboutPage() {
   shellEl.dataset.page = "about";
   if (aboutPageEl) aboutPageEl.hidden = false;
   btnAbout?.classList.add("is-active");
+  const bottom = document.getElementById("chrome-bottom");
+  if (bottom) bottom.hidden = true;
   syncAboutTheme();
 }
 
@@ -241,7 +247,10 @@ function closeAppPage() {
   ) {
     history.pushState("", document.title, location.pathname + location.search);
   }
-  if (leaving) viewApi?.resize();
+  if (leaving) {
+    syncIcicleDepthChrome();
+    viewApi?.resize();
+  }
 }
 
 function showYouOnMap(chamber) {
