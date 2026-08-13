@@ -97,7 +97,6 @@ export function createYouPage(root, { onMap }) {
       setNote("Five digits.");
       return;
     }
-    localStorage.setItem("govdash-zip", z);
     input.value = z;
     const n = ++seq;
     setNote("Looking up…");
@@ -124,10 +123,8 @@ export function createYouPage(root, { onMap }) {
   });
 
   function prepare() {
-    const saved = localStorage.getItem("govdash-zip") || "";
-    input.value = saved;
-    if (/^\d{5}$/.test(saved)) lookup(saved);
-    else setNote("Five digits. House seat and both senators.");
+    input.value = "";
+    setNote("Five digits. House seat and both senators.");
     setTimeout(() => input.focus(), 40);
   }
 

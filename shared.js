@@ -104,10 +104,8 @@ export const BRANCH_COLOR = {
   default: "#8a9299",
 };
 
-/** Cycle order: Dark ↔ Light (dark is default). */
+/** Cycle order: Dark ↔ Light (dark is default; not persisted). */
 export const THEME_ORDER = ["dark", "light"];
-
-const THEME_KEY = "govdash-color-theme";
 
 const THEME_PRESETS = {
   light: {
@@ -177,11 +175,6 @@ export function applyColorTheme(id) {
     /* ignore */
   }
   try {
-    localStorage.setItem(THEME_KEY, next);
-  } catch {
-    /* ignore */
-  }
-  try {
     window.dispatchEvent(
       new CustomEvent("govdash-theme", { detail: { theme: next } })
     );
@@ -198,14 +191,16 @@ export function cycleColorTheme() {
 }
 
 export function initColorTheme() {
-  let saved = null;
   try {
-    saved = localStorage.getItem(THEME_KEY);
+    localStorage.removeItem("govdash-color-theme");
+    localStorage.removeItem("govdash-scrub-coach");
+    localStorage.removeItem("govdash-scrub-nudge");
+    localStorage.removeItem("govdash-zip");
+    // Keep govdash-chart-mode — chart view only.
   } catch {
-    saved = null;
+    /* ignore */
   }
-  if (saved === "classic") saved = "dark";
-  return applyColorTheme(THEME_ORDER.includes(saved) ? saved : "dark");
+  return applyColorTheme("dark");
 }
 
 export function atlasRail(rootOrData) {
@@ -336,29 +331,21 @@ export function placeMapTip(tipEl, clientX, clientY, { fromTouch = false } = {})
   tipEl.style.top = `${Math.max(8, top)}px`;
 }
 
-const SCRUB_COACH_KEY = "govdash-scrub-coach";
-const SCRUB_NUDGE_KEY = "govdash-scrub-nudge";
 let scrubNudgeTimer = 0;
+let scrubCoachDismissedSession = false;
+let scrubNudgeShownSession = false;
 
 function coachEl() {
   return document.getElementById("scrub-coach");
 }
 
 function scrubCoachDismissed() {
-  try {
-    return localStorage.getItem(SCRUB_COACH_KEY) === "1";
-  } catch {
-    return true;
-  }
+  return scrubCoachDismissedSession;
 }
 
-/** Hide and remember — Got it, or first successful long-press scrub. */
+/** Hide for this session — Got it, or first successful long-press scrub. */
 export function dismissScrubCoach() {
-  try {
-    localStorage.setItem(SCRUB_COACH_KEY, "1");
-  } catch {
-    /* ignore */
-  }
+  scrubCoachDismissedSession = true;
   const el = coachEl();
   if (el) {
     el.hidden = true;
@@ -368,16 +355,12 @@ export function dismissScrubCoach() {
 
 /** Call when a long-press scrub arms a node — teaches by doing. */
 export function noteScrubSuccess() {
-  try {
-    localStorage.setItem(SCRUB_NUDGE_KEY, "1");
-  } catch {
-    /* ignore */
-  }
+  scrubNudgeShownSession = true;
   dismissScrubCoach();
 }
 
 /**
- * Phone/iPad only. Show once until Got it or a successful scrub.
+ * Phone/iPad only. Show until Got it or a successful scrub (this session).
  * Hidden on Tree (no scrub) and when already dismissed.
  */
 export function syncScrubCoach(mode) {
@@ -404,12 +387,8 @@ export function syncScrubCoach(mode) {
 export function nudgeScrubHint() {
   if (!isTouchTipUi()) return;
   if (!scrubCoachDismissed()) return;
-  try {
-    if (localStorage.getItem(SCRUB_NUDGE_KEY) === "1") return;
-    localStorage.setItem(SCRUB_NUDGE_KEY, "1");
-  } catch {
-    return;
-  }
+  if (scrubNudgeShownSession) return;
+  scrubNudgeShownSession = true;
   const el = coachEl();
   if (!el) return;
   const copy = el.querySelector(".scrub-coach-copy");

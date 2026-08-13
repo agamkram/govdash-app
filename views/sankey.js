@@ -33,9 +33,12 @@ const DOOR_LABEL = {
   Executive: "Executive",
   Judicial: "Judicial",
   Independent: "Agencies",
-  Chartered: "Chartered",
-  International: "International",
+  Chartered: "Chart",
+  International: "Int",
 };
+
+const DOOR_LABEL_FONT = "400 0.78rem 'IBM Plex Sans', system-ui, sans-serif";
+const BEYOND_BRANCHES = new Set(["Chartered", "International"]);
 
 function branchKey(door) {
   if (door.short && BRANCH_COLOR[door.short]) return door.short;
@@ -54,6 +57,48 @@ function doorOrderFromTree(tree) {
     .map((d) => branchKey(d))
     .filter((k) => k && k !== "default");
   return keys.length ? keys : DOOR_ORDER;
+}
+
+function countLeaves(n) {
+  const kids = n?.children || [];
+  if (!kids.length) return 1;
+  let sum = 0;
+  for (const c of kids) sum += countLeaves(c);
+  return sum;
+}
+
+/**
+ * C/I equal bands sized to fit "Chart"; leftover split equally among L/E/J/A.
+ */
+function weightedDoorBands(order, doors, cross0, cross1, makeSeg, measureCtx) {
+  const span = cross1 - cross0;
+  const beyondN = order.filter((b) => BEYOND_BRANCHES.has(b)).length;
+  const mainN = order.length - beyondN;
+
+  let beyondEach = 0;
+  if (beyondN > 0 && measureCtx) {
+    measureCtx.font = DOOR_LABEL_FONT;
+    // Side: rotated label width must fit in band height. Top: same for band width.
+    beyondEach = measureCtx.measureText("Chart").width + 10;
+  }
+  // Never let Beyond eat more than ~28% combined — rest stays with the old four.
+  const maxBeyondTotal = span * 0.28;
+  if (beyondN > 0 && beyondEach * beyondN > maxBeyondTotal) {
+    beyondEach = maxBeyondTotal / beyondN;
+  }
+  beyondEach = Math.max(beyondEach, beyondN ? 12 : 0);
+
+  const mainSpan = Math.max(0, span - beyondEach * beyondN);
+  const mainEach = mainN > 0 ? mainSpan / mainN : 0;
+
+  let cursor = cross0;
+  return order.map((branch, i) => {
+    const size = BEYOND_BRANCHES.has(branch) ? beyondEach : mainEach;
+    const a = cursor;
+    const b = i === order.length - 1 ? cross1 : cursor + size;
+    cursor = b;
+    return makeSeg(branch, a, b, doors[branch]);
+  });
 }
 
 function railCaption(tree) {
@@ -98,11 +143,17 @@ function buildGraph(tree) {
     });
   }
 
+  /** Per-leaf unit links; each door is laid out inside its own band later. */
   function walk(n, branch) {
     addNode(n, branch);
     for (const c of n.children || []) {
       walk(c, branch);
-      links.push({ source: n.id, target: c.id, value: 1, branch });
+      links.push({
+        source: n.id,
+        target: c.id,
+        value: countLeaves(c),
+        branch,
+      });
     }
   }
 
@@ -113,7 +164,7 @@ function buildGraph(tree) {
     links.push({
       source: CONST_ID,
       target: door.id,
-      value: 1,
+      value: countLeaves(door),
       branch: b,
     });
   }
@@ -167,7 +218,7 @@ export function createSankeyView(
   const pointers = new Map();
   let pinch = null;
   const CAM_MIN = 1;
-  const CAM_MAX = 5;
+  const CAM_MAX = 12;
   const isIPad =
     /iPad/i.test(navigator.userAgent || "") ||
     (navigator.platform === "MacIntel" && (navigator.maxTouchPoints || 0) > 1);
@@ -348,23 +399,24 @@ export function createSankeyView(
     };
 
     const order = doorOrderFromTree(treeData);
-    const segH = height / Math.max(1, order.length);
-    stage1Meta = [];
-    order.forEach((branch, i) => {
-      const y0 = i * segH;
-      const y1 = (i + 1) * segH;
-      stage1Meta.push({
+    stage1Meta = weightedDoorBands(
+      order,
+      graphRef.doors,
+      0,
+      height,
+      (branch, y0, y1, door) => ({
         mode: "side",
         branch,
-        door: graphRef.doors[branch],
+        door,
         x: doorMidX,
         x0: doorLeft,
         x1: doorRight,
         y0,
         y1,
         midY: (y0 + y1) / 2,
-      });
-    });
+      }),
+      ctx
+    );
 
     ctx.fillStyle = CONSTITUTION_FILL;
     ctx.fillRect(0, 0, constW, height);
@@ -390,12 +442,12 @@ export function createSankeyView(
       ctx.fillStyle = doorActive
         ? brightenHex(colorFor(s.branch))
         : colorFor(s.branch);
-      ctx.fillRect(doorLeft, s.y0, doorW, segH);
+      ctx.fillRect(doorLeft, s.y0, doorW, s.y1 - s.y0);
 
       ctx.save();
       ctx.translate(doorMidX, s.midY);
       ctx.rotate(-Math.PI / 2);
-      ctx.font = "400 0.78rem 'IBM Plex Sans', system-ui, sans-serif";
+      ctx.font = DOOR_LABEL_FONT;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
       ctx.fillStyle = INK;
@@ -444,14 +496,12 @@ export function createSankeyView(
     ctx.fillText(railCaption(treeData), width / 2, constY + constH / 2);
 
     const order = doorOrderFromTree(treeData);
-    const segW = width / Math.max(1, order.length);
-    stage1Meta = [];
-    order.forEach((branch, i) => {
-      const x0 = i * segW;
-      const x1 = (i + 1) * segW;
-      const midX = (x0 + x1) / 2;
-      const door = graphRef.doors[branch];
-      stage1Meta.push({
+    stage1Meta = weightedDoorBands(
+      order,
+      graphRef.doors,
+      0,
+      width,
+      (branch, x0, x1, door) => ({
         mode: "top",
         branch,
         door,
@@ -460,21 +510,24 @@ export function createSankeyView(
         y: doorY + doorH / 2,
         y0: doorY,
         y1: doorY + doorH,
-        midX,
-      });
+        midX: (x0 + x1) / 2,
+      }),
+      ctx
+    );
 
-      const doorActive = door && isHotId(door.id);
+    for (const s of stage1Meta) {
+      const doorActive = s.door && isHotId(s.door.id);
       ctx.fillStyle = doorActive
-        ? brightenHex(colorFor(branch))
-        : colorFor(branch);
-      ctx.fillRect(x0, doorY, segW, doorH);
+        ? brightenHex(colorFor(s.branch))
+        : colorFor(s.branch);
+      ctx.fillRect(s.x0, doorY, s.x1 - s.x0, doorH);
 
-      ctx.font = "400 0.78rem 'IBM Plex Sans', system-ui, sans-serif";
+      ctx.font = DOOR_LABEL_FONT;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
       ctx.fillStyle = INK;
-      ctx.fillText(DOOR_LABEL[branch] || branch, midX, doorY + doorH / 2);
-    });
+      ctx.fillText(DOOR_LABEL[s.branch] || s.branch, s.midX, doorY + doorH / 2);
+    }
 
     drawDeepGraph({
       vertical: true,
@@ -492,66 +545,89 @@ export function createSankeyView(
   }
 
   function ensureDeepLayout({ vertical, deep0, deep1, cross0, cross1, doorAnchor }) {
-    const sig = `${orient}|${cssSize.w}|${cssSize.h}|${treeData?.id}|${graphRef.nodes.length}`;
+    const sig = `${orient}|${cssSize.w}|${cssSize.h}|${treeData?.id}|${graphRef.nodes.length}|band`;
     if (deepLayoutSig === sig && linkPaths.length) return;
 
-    const deepNodes = graphRef.nodes.filter((n) => n.id !== CONST_ID);
-    const deepLinks = graphRef.links.filter((l) => l.source !== CONST_ID);
-
-    const layout = d3Sankey()
-      .nodeId((d) => d.id)
-      .nodeWidth(1)
-      .nodePadding(0.7)
-      .nodeAlign(sankeyLeft)
-      .extent([
-        [deep0, cross0],
-        [deep1, cross1],
-      ])
-      .iterations(40);
-
-    const { nodes, links } = layout({
-      nodes: deepNodes.map((d) => ({ ...d })),
-      links: deepLinks.map((d) => ({ ...d })),
-    });
-
-    if (vertical) transposeSankey(nodes);
-
-    const doorIdToSeg = new Map();
-    for (const s of stage1Meta) {
-      if (s.door) doorIdToSeg.set(s.door.id, s);
-    }
-
-    for (const n of nodes) {
-      const seg = doorIdToSeg.get(n.id);
-      if (!seg) continue;
-      if (vertical) {
-        n.x0 = seg.x0;
-        n.x1 = seg.x1;
-        n.y0 = seg.y0;
-        n.y1 = seg.y1;
-      } else {
-        n.x0 = seg.x1;
-        n.x1 = seg.x1;
-        n.y0 = seg.y0;
-        n.y1 = seg.y1;
-      }
-    }
-
-    layoutNodes = nodes;
+    layoutNodes = [];
     linkPaths = [];
-    links.sort((a, b) => b.value - a.value);
+    const allLinks = [];
 
-    for (const L of links) {
+    // Each door owns its cross-axis band — C/I dots/lines cannot steal space from L/E/J/A.
+    for (const seg of stage1Meta) {
+      if (!seg.door) continue;
+      const branch = seg.branch;
+      const band0 = (vertical ? seg.x0 : seg.y0) + 1;
+      const band1 = (vertical ? seg.x1 : seg.y1) - 1;
+      if (!(band1 > band0)) continue;
+
+      const branchNodes = graphRef.nodes.filter((n) => n.branch === branch);
+      if (!branchNodes.length) continue;
+      const idSet = new Set(branchNodes.map((n) => n.id));
+      const branchLinks = graphRef.links.filter(
+        (l) =>
+          l.branch === branch &&
+          l.source !== CONST_ID &&
+          idSet.has(l.source) &&
+          idSet.has(l.target)
+      );
+
+      // Padding scales with band height so dense Beyond doors stay inside their strip.
+      const nGuess = Math.max(branchNodes.length, 2);
+      const nodePad = Math.min(
+        0.7,
+        Math.max(0.04, ((band1 - band0) * 0.85) / (nGuess - 1))
+      );
+
+      const layout = d3Sankey()
+        .nodeId((d) => d.id)
+        .nodeWidth(1)
+        .nodePadding(nodePad)
+        .nodeAlign(sankeyLeft)
+        .extent([
+          [deep0, band0],
+          [deep1, band1],
+        ])
+        .iterations(36);
+
+      const { nodes, links } = layout({
+        nodes: branchNodes.map((d) => ({ ...d })),
+        links: branchLinks.map((d) => ({ ...d })),
+      });
+
+      if (vertical) transposeSankey(nodes);
+
+      const door = nodes.find((n) => n.id === seg.door.id);
+      if (door) {
+        if (vertical) {
+          door.x0 = seg.x0;
+          door.x1 = seg.x1;
+          door.y0 = seg.y0;
+          door.y1 = seg.y1;
+        } else {
+          door.x0 = seg.x1;
+          door.x1 = seg.x1;
+          door.y0 = seg.y0;
+          door.y1 = seg.y1;
+        }
+      }
+
+      layoutNodes.push(...nodes);
+      allLinks.push(...links);
+    }
+
+    allLinks.sort((a, b) => b.value - a.value);
+
+    for (const L of allLinks) {
       const branch = L.branch || L.source.branch || L.target.branch;
       const col = colorFor(branch);
-      const srcIsDoor = doorIdToSeg.has(L.source.id);
+      const srcIsDoor = stage1Meta.some((s) => s.door && s.door.id === L.source.id);
       let pathStr;
       let x0;
       let y0;
       let x1;
       let y1;
       if (srcIsDoor) {
-        const seg = doorIdToSeg.get(L.source.id);
+        const seg = stage1Meta.find((s) => s.door && s.door.id === L.source.id);
         if (vertical) {
           const sx = seg.midX;
           const sy = doorAnchor;
@@ -646,18 +722,20 @@ export function createSankeyView(
       const x = (n.x0 + n.x1) / 2;
       const y = (n.y0 + n.y1) / 2;
       const col = colorFor(n.branch);
+      // Screen-constant radius so dense bands don’t blob together; still readable when zoomed.
+      const r = lw(isSel ? 2.2 : 0.7);
       if (isSel) {
         ctx.beginPath();
-        ctx.arc(x, y, 3.4, 0, Math.PI * 2);
+        ctx.arc(x, y, r, 0, Math.PI * 2);
         ctx.fillStyle = brightenHex(col);
         ctx.fill();
         ctx.strokeStyle = INK;
-        ctx.lineWidth = lw(1.2);
+        ctx.lineWidth = lw(1.1);
         ctx.stroke();
         return;
       }
       ctx.beginPath();
-      ctx.arc(x, y, 1.15, 0, Math.PI * 2);
+      ctx.arc(x, y, r, 0, Math.PI * 2);
       ctx.fillStyle = col;
       ctx.fill();
     };
