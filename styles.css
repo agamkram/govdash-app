@@ -727,6 +727,14 @@ html.pwa-standalone .shell {
   bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
 }
 
+/* Phone PWA: when the depth bar is hidden, keep the same home-swipe clearance
+   Icicle gets via .chrome-bottom margin — do not change Icicle’s bar. */
+@media (max-width: 720px) {
+  html.pwa-standalone .shell:not(:has(#chrome-bottom:not([hidden]))) .map {
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 1.2rem + 0.28rem);
+  }
+}
+
 .map {
   position: absolute;
   top: 0.35rem;

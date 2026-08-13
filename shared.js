@@ -361,12 +361,17 @@ export function noteScrubSuccess() {
 
 /**
  * Phone/iPad only. Show until Got it or a successful scrub (this session).
- * Hidden on Tree (no scrub) and when already dismissed.
+ * Hidden on Tree / Circles (tap-to-enter) and when already dismissed.
  */
 export function syncScrubCoach(mode) {
   const el = coachEl();
   if (!el) return;
-  if (!isTouchTipUi() || scrubCoachDismissed() || mode === "tree") {
+  if (
+    !isTouchTipUi() ||
+    scrubCoachDismissed() ||
+    mode === "tree" ||
+    mode === "pack"
+  ) {
     if (!el.classList.contains("is-nudge")) el.hidden = true;
     return;
   }

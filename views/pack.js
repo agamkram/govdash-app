@@ -16,7 +16,6 @@ import {
   atlasRail,
   INK,
   noteScrubSuccess,
-  nudgeScrubHint,
 } from "../shared.js";
 
 export function createPackView(container, { onSelect, onFocusChange }) {
@@ -495,10 +494,7 @@ export function createPackView(container, { onSelect, onFocusChange }) {
       if (labeled) activate(labeled);
       else if (target && target !== focus) activate(target);
       else if (!smallest && focus?.parent) goUp();
-      else {
-        hideTip();
-        nudgeScrubHint();
-      }
+      else hideTip();
       return;
     }
 
