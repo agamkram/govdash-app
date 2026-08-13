@@ -1,14 +1,25 @@
-:root {
-  --bg: #e6e8eb;
-  --ink: #2a3035;
-  --muted: #6a737a;
-  --line: #c4c9ce;
-  --panel: #c8cbd0;
-  --accent: #3d6f68;
-  --accent-soft: #dfe8e6;
+:root,
+html[data-theme="dark"] {
+  --bg: #121518;
+  --ink: #e8eaed;
+  --muted: #9aa3ab;
+  --line: #2e343a;
+  --panel: #1a1d21;
+  --accent: #5a8eb0;
+  --accent-soft: #1e2a32;
   font-family: "IBM Plex Sans", system-ui, sans-serif;
   color: var(--ink);
   background: var(--bg);
+}
+
+html[data-theme="light"] {
+  --bg: #e8eaed;
+  --ink: #1f2428;
+  --muted: #5c656c;
+  --line: #b8bec4;
+  --panel: #cfd3d7;
+  --accent: #3a6d94;
+  --accent-soft: #dce6ef;
 }
 
 *,
@@ -219,7 +230,7 @@ html.pwa-standalone .shell {
 
 .orient-btn.is-active {
   background: var(--ink);
-  color: #fff;
+  color: var(--bg);
 }
 
 .mode-btn {
@@ -239,7 +250,7 @@ html.pwa-standalone .shell {
 
 .mode-btn.is-active {
   background: var(--ink);
-  color: #fff;
+  color: var(--bg);
 }
 
 #search {
@@ -309,7 +320,7 @@ html.pwa-standalone .shell {
 
 .btn.primary {
   background: var(--ink);
-  color: #fff;
+  color: var(--bg);
   border-color: var(--ink);
 }
 
@@ -329,7 +340,7 @@ html.pwa-standalone .shell {
 
 .btn-fiscal.is-active {
   background: var(--ink);
-  color: #fff;
+  color: var(--bg);
   border-color: var(--ink);
 }
 

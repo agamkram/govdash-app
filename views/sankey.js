@@ -14,11 +14,19 @@ import {
   placeMapTip,
   brightenHex,
   noteScrubSuccess,
+  leafLayoutWeight,
 } from "../shared.js";
 
 const CONST_ID = "constitution";
 
-const DOOR_ORDER = ["Executive", "Legislative", "Judicial", "Independent"];
+const DOOR_ORDER = [
+  "Legislative",
+  "Executive",
+  "Judicial",
+  "Independent",
+  "Chartered",
+  "International",
+];
 
 const DOOR_LABEL = {
   Legislative: "Legislative",
@@ -1108,7 +1116,7 @@ export function createSankeyView(
     byId.clear();
     fullRoot = d3
       .hierarchy(data)
-      .sum((d) => (d.children && d.children.length ? 0 : 1))
+      .sum((d) => leafLayoutWeight(d))
       .sort(hierarchySort);
     indexTree(fullRoot);
     graphRef = buildGraph(data);

@@ -8,16 +8,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Michroma&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --bg: #e6e8eb;
-      --ink: #2a3035;
-      --muted: #6a737a;
-      --line: #c5c9ce;
+    :root,
+    html[data-theme="light"] {
+      --bg: #e8eaed;
+      --ink: #1f2428;
+      --muted: #5c656c;
+      --line: #b8bec4;
       --card: #f3f4f6;
       --ok: #1b6b3a;
       --warn: #8a5a00;
       --info: #1a4f7a;
       --wf: #c41212;
+      --bar-track: #d5d8dc;
+    }
+    html[data-theme="dark"] {
+      --bg: #121518;
+      --ink: #e8eaed;
+      --muted: #9aa3ab;
+      --line: #2e343a;
+      --card: #1a1d21;
+      --ok: #5fa87a;
+      --warn: #d4a017;
+      --info: #5a8eb0;
+      --wf: #e07070;
+      --bar-track: #2e343a;
     }
     * { box-sizing: border-box; }
     html {
@@ -150,13 +164,13 @@
     .bar {
       display: flex;
       height: 10px;
-      background: #d5d8dc;
+      background: var(--bar-track);
       margin: 8px 0 4px;
       overflow: hidden;
     }
     .bar i { display: block; height: 100%; }
-    .bar .direct { width: 28%; background: #2f8a4e; }
-    .bar .rollup { width: 8.9%; background: #3a6ea5; }
+    .bar .direct { width: 25.8%; background: #2f8a4e; }
+    .bar .rollup { width: 8.2%; background: #3a6ea5; }
     .note { color: var(--muted); font-size: 0.8rem; margin-bottom: 1rem; }
     table {
       width: 100%;
@@ -232,9 +246,9 @@
     <h2>How to use the map</h2>
     <ol class="steps">
       <li><strong>Pick a layout</strong> — Icicle (default), Tree, Circles, or Sankey. Direction arrows flip Icicle/Sankey between top-down and sideways.</li>
-      <li><strong>Depth slider</strong> (Icicle) — each step adds another generation under where you are. Depth 1 is the four doors; 11 is the full remaining tree.</li>
+      <li><strong>Depth slider</strong> (Icicle) — each step adds another generation under where you are. Depth 1 is the six doors; 11 is the full remaining tree.</li>
       <li><strong>Open a place</strong> — tap or click a cell to select it and open the detail pane. Use <em>Enter</em> or drill in the map to go deeper; breadcrumbs and Up go back.</li>
-      <li><strong>Find</strong> — search by name. <strong>Z</strong> looks up House/Senate by ZIP. <strong>$</strong> shows Treasury debt figures. <strong>∞</strong> opens Beyond (chartered &amp; international). <strong>i</strong> opens About.</li>
+      <li><strong>Find</strong> — search by name. <strong>Z</strong> looks up House/Senate by ZIP. <strong>$</strong> shows Treasury debt figures. <strong>i</strong> opens About. Chartered and International sit on the main map after Agencies.</li>
     </ol>
 
     <div class="callout touch">
@@ -253,47 +267,49 @@
     <p class="note">If employees are blank, that usually means OPM doesn’t publish a count for that org in this file — not that we hid one.</p>
 
     <h2>What’s on the main map</h2>
-    <p class="sub">Product tree · 1,447 nodes including the root · OPM workforce as of 202606</p>
+    <p class="sub">Merged product tree · 1,598 nodes including the root · Chartered + International included · OPM workforce as of 202606</p>
 
     <div class="stats">
-      <div class="stat"><b>1,447</b><span>Nodes (main map)</span></div>
-      <div class="stat info"><b>1,142</b><span>Leaves (78.9%)</span></div>
-      <div class="stat"><b>305</b><span>Parents</span></div>
+      <div class="stat"><b>1,598</b><span>Nodes (main map)</span></div>
+      <div class="stat info"><b>1,291</b><span>Leaves (80.8%)</span></div>
+      <div class="stat"><b>307</b><span>Parents</span></div>
       <div class="stat"><b>18</b><span>Departments</span></div>
     </div>
     <div class="stats">
-      <div class="stat ok"><b class="wf-num">534</b><span class="wf-label">Workforce shown</span></div>
-      <div class="stat warn"><b>913</b><span>Workforce blank</span></div>
-      <div class="stat"><b>36.9%</b><span>Workforce coverage</span></div>
-      <div class="stat"><b>108</b><span>Mission summaries</span></div>
+      <div class="stat ok"><b class="wf-num">543</b><span class="wf-label">Workforce shown</span></div>
+      <div class="stat warn"><b>1,055</b><span>Workforce blank</span></div>
+      <div class="stat"><b>34.0%</b><span>Workforce coverage</span></div>
+      <div class="stat"><b>120</b><span>Mission summaries</span></div>
     </div>
 
     <div class="bar" title="Workforce coverage" aria-hidden="true"><i class="direct"></i><i class="rollup"></i></div>
-    <p class="note">Green = direct OPM match (405) · Blue = rolled up from children (129) · Rest unenriched (913). Red employee line in detail sits under the title.</p>
+    <p class="note">Green = direct OPM match (412) · Blue = rolled up from children (131) · Rest unenriched (1,055). Red employee line in detail sits under the title.</p>
 
-    <p class="note">Every org is a node. Leaves end a branch. Circle size is leaf count (each leaf = 1), not OPM headcount. Max depth 11 · Short labels 880 · Independents 102.</p>
+    <p class="note">Every org is a node. Leaves end a branch. Circle / icicle size uses layout-weighted leaves (Leg/Jud boosted; Chartered/International reduced) — not OPM headcount. Max depth 11 · Short labels 1,010 · Independents 102.</p>
 
     <div class="grid2">
       <table>
         <thead><tr><th>Kind</th><th class="num">Count</th></tr></thead>
         <tbody>
           <tr><td>bureau</td><td class="num">1,174</td></tr>
+          <tr><td>igo</td><td class="num">116</td></tr>
           <tr><td>independent</td><td class="num">102</td></tr>
-          <tr><td>unknown</td><td class="num">62</td></tr>
+          <tr><td>unknown</td><td class="num">63</td></tr>
           <tr><td>agency</td><td class="num">45</td></tr>
+          <tr><td>nonprofit</td><td class="num">33</td></tr>
           <tr><td>gse</td><td class="num">31</td></tr>
           <tr><td>department</td><td class="num">18</td></tr>
           <tr><td>carrier</td><td class="num">8</td></tr>
-          <tr><td>branch</td><td class="num">4</td></tr>
-          <tr><td>bucket / nonprofit / sovereign</td><td class="num">1 / 1 / 1</td></tr>
+          <tr><td>branch</td><td class="num">6</td></tr>
+          <tr><td>bucket / sovereign</td><td class="num">1 / 1</td></tr>
         </tbody>
       </table>
       <table>
         <thead><tr><th>Depth</th><th class="num">Nodes</th></tr></thead>
         <tbody>
           <tr><td>0 (root)</td><td class="num">1</td></tr>
-          <tr><td>1</td><td class="num">4</td></tr>
-          <tr><td>2</td><td class="num">161</td></tr>
+          <tr><td>1 (six doors)</td><td class="num">6</td></tr>
+          <tr><td>2</td><td class="num">310</td></tr>
           <tr><td>3</td><td class="num">129</td></tr>
           <tr><td>4</td><td class="num">131</td></tr>
           <tr><td>5</td><td class="num">352</td></tr>
@@ -311,11 +327,11 @@
     <table>
       <thead><tr><th>Children</th><th class="num">Nodes</th></tr></thead>
       <tbody>
-        <tr><td>0 (leaf)</td><td class="num">1,142</td></tr>
+        <tr><td>0 (leaf)</td><td class="num">1,291</td></tr>
         <tr><td>1</td><td class="num">138</td></tr>
-        <tr><td>2–5</td><td class="num">106</td></tr>
-        <tr><td>6–20</td><td class="num">47</td></tr>
-        <tr><td>21+</td><td class="num">14</td></tr>
+        <tr><td>2–5</td><td class="num">105</td></tr>
+        <tr><td>6–20</td><td class="num">48</td></tr>
+        <tr><td>21+</td><td class="num">16</td></tr>
       </tbody>
     </table>
 
@@ -327,8 +343,8 @@
         <table>
           <thead><tr><th>Match type</th><th class="num">Nodes</th></tr></thead>
           <tbody>
-            <tr><td>subelement</td><td class="num">375</td></tr>
-            <tr><td>rollup</td><td class="num">129</td></tr>
+            <tr><td>subelement</td><td class="num">382</td></tr>
+            <tr><td>rollup</td><td class="num">131</td></tr>
             <tr><td>agency</td><td class="num">23</td></tr>
             <tr><td>department</td><td class="num">7</td></tr>
           </tbody>
@@ -339,22 +355,22 @@
         <table>
           <thead><tr><th>Field</th><th class="num">With</th><th class="num">Blank</th></tr></thead>
           <tbody>
-            <tr><td>Crosswalk identity</td><td class="num">1,444</td><td class="num">3</td></tr>
-            <tr><td>Heat score</td><td class="num">378</td><td class="num">1,069</td></tr>
-            <tr><td>USGM Manual entry</td><td class="num">179</td><td class="num">1,268</td></tr>
-            <tr><td>SAM.gov status</td><td class="num">135</td><td class="num">1,312</td></tr>
-            <tr><td>Mission summary</td><td class="num">108</td><td class="num">1,339</td></tr>
-            <tr><td>Leadership list</td><td class="num">169</td><td class="num">1,278</td></tr>
-            <tr><td>Manual web</td><td class="num">178</td><td class="num">1,269</td></tr>
-            <tr><td>Manual phone</td><td class="num">171</td><td class="num">1,276</td></tr>
-            <tr><td>Short label</td><td class="num">880</td><td class="num">567</td></tr>
+            <tr><td>Crosswalk identity</td><td class="num">1,593</td><td class="num">5</td></tr>
+            <tr><td>Heat score</td><td class="num">385</td><td class="num">1,213</td></tr>
+            <tr><td>USGM Manual entry</td><td class="num">204</td><td class="num">1,394</td></tr>
+            <tr><td>SAM.gov status</td><td class="num">149</td><td class="num">1,449</td></tr>
+            <tr><td>Mission summary</td><td class="num">120</td><td class="num">1,478</td></tr>
+            <tr><td>Leadership list</td><td class="num">192</td><td class="num">1,406</td></tr>
+            <tr><td>Manual web</td><td class="num">203</td><td class="num">1,395</td></tr>
+            <tr><td>Manual phone</td><td class="num">194</td><td class="num">1,404</td></tr>
+            <tr><td>Short label</td><td class="num">1,010</td><td class="num">588</td></tr>
           </tbody>
         </table>
       </div>
     </div>
 
     <h2>By door</h2>
-    <p class="note">Map order: Executive · Legislative · Judicial · Agencies. Headcount is the door node’s workforce value (own match or roll-up).</p>
+    <p class="note">Map order: Legislative · Executive · Judicial · Agencies · Chartered · International. Headcount is the door node’s workforce value (own match or roll-up).</p>
     <table>
       <thead>
         <tr>
@@ -366,10 +382,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td>Executive</td><td class="num">1,087</td><td class="num">822</td><td class="num">402</td><td class="num"><span class="wf-num">1,280,403</span></td></tr>
         <tr><td>Legislative</td><td class="num">23</td><td class="num">20</td><td class="num">3</td><td class="num"><span class="wf-num">213</span></td></tr>
+        <tr><td>Executive</td><td class="num">1,087</td><td class="num">822</td><td class="num">402</td><td class="num"><span class="wf-num">1,280,403</span></td></tr>
         <tr><td>Judicial</td><td class="num">38</td><td class="num">30</td><td class="num">4</td><td class="num"><span class="wf-num">170</span></td></tr>
         <tr><td>Agencies</td><td class="num">298</td><td class="num">270</td><td class="num">124</td><td class="num"><span class="wf-num">127,219</span></td></tr>
+        <tr><td>Chartered</td><td class="num">34</td><td class="num">33</td><td class="num">6</td><td class="num"><span class="wf-num">1,102</span></td></tr>
+        <tr><td>International</td><td class="num">117</td><td class="num">116</td><td class="num">3</td><td class="num"><span class="wf-num">36</span></td></tr>
       </tbody>
     </table>
 
@@ -405,17 +423,15 @@
       </tbody>
     </table>
 
-    <h2>Other atlases</h2>
+    <h2>Other doors on the main map</h2>
     <div class="grid2">
       <div class="card">
-        <h3>Beyond (∞)</h3>
-        <p>152 nodes · 149 leaves · 10 with employees · 142 blank</p>
-        <p class="note">Chartered + International · mostly IGOs — little EHRI coverage.</p>
+        <h3>Chartered</h3>
+        <p>34 nodes · 33 leaves · ~1,100 civilians where OPM matches. Weighted narrower than Legislative for readability.</p>
       </div>
       <div class="card">
-        <h3>Full nest (pre-curation)</h3>
-        <p>1,599 nodes + root · 1,295 leaves · 542 with employees · 1,058 blank</p>
-        <p class="note">Includes Industry / IGO / State-local buckets kept off the citizen map.</p>
+        <h3>International</h3>
+        <p>117 nodes · 116 leaves · almost no OPM coverage. Leaf-heavy; layout-weighted down so it doesn’t swamp the constitutional doors.</p>
       </div>
     </div>
 
@@ -428,7 +444,26 @@
       <li><strong>Workforce shown</strong> — civilian employees under the title (direct OPM match or sum of children).</li>
       <li><strong>Depth</strong> — generations under your current focus on the Icicle slider.</li>
     </ul>
-    <p class="note">Counts verified against local product tree JSON · not a live OPM query · Jun 2026 workforce snapshot.</p>
+    <p class="note">Counts verified against merged product + Beyond doors · not a live OPM query · Jun 2026 workforce snapshot.</p>
   </main>
+  <script>
+    (function () {
+      const KEY = "govdash-color-theme";
+      function apply(id) {
+        const theme = id === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = theme;
+      }
+      try {
+        apply(localStorage.getItem(KEY) || "dark");
+      } catch (_) {
+        apply("dark");
+      }
+      window.addEventListener("message", (e) => {
+        const d = e.data;
+        if (!d || d.type !== "govdash-theme") return;
+        apply(d.theme);
+      });
+    })();
+  </script>
 </body>
 </html>

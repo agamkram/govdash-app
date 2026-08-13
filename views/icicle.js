@@ -8,9 +8,11 @@ import {
   hierarchySort,
   BRANCH_ORDER,
   branchOrderKey,
+  leafLayoutWeight,
   CONSTITUTION_FILL,
   INK,
   LABEL_ON_BRANCH,
+  getColorTheme,
   atlasRail,
   placeMapTip,
   noteScrubSuccess,
@@ -76,13 +78,18 @@ export function createIcicleView(
 
   const LONG_MS = 400;
   const SLOP = 12;
-  // Solid black hairline (matches production); slightly finer on phone.
-  const cellStroke = "#000000";
-  const cellStrokeW =
-    typeof window.matchMedia === "function" &&
-    window.matchMedia("(max-width: 720px)").matches
-      ? 0.11
-      : 0.35;
+
+  function cellStroke() {
+    // Light: true black. Dark: white.
+    return getColorTheme() === "dark" ? "#ffffff" : "#000000";
+  }
+
+  function cellStrokeW() {
+    const phone =
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(max-width: 720px)").matches;
+    return phone ? 0.1 : 0.15;
+  }
 
   function isTop() {
     return orient === "top";
@@ -93,7 +100,7 @@ export function createIcicleView(
       "transform",
       `translate(${cam.x},${cam.y}) scale(${cam.k})`
     );
-    g.selectAll("rect.icicle-rect").attr("stroke-width", cellStrokeW / cam.k);
+    g.selectAll("rect.icicle-rect").attr("stroke-width", cellStrokeW() / cam.k);
   }
 
   function resetCam() {
@@ -177,8 +184,8 @@ export function createIcicleView(
     const hid = highlightId();
     g.selectAll("rect.icicle-rect")
       .attr("fill", (d) => cellFill(d, d.data.id === hid))
-      .attr("stroke", cellStroke)
-      .attr("stroke-width", cellStrokeW / cam.k);
+      .attr("stroke", cellStroke())
+      .attr("stroke-width", cellStrokeW() / cam.k);
   }
 
   function previewUnderFinger(clientX, clientY, footer) {
@@ -729,8 +736,8 @@ export function createIcicleView(
           .attr("width", width)
           .attr("height", stripe)
           .attr("fill", fill)
-          .attr("stroke", cellStroke)
-          .attr("stroke-width", cellStrokeW)
+          .attr("stroke", cellStroke())
+          .attr("stroke-width", cellStrokeW())
           .style("cursor", "pointer")
           .on("click", (event) => activateHierarchyNode(node, event))
           .on("pointermove", (event) => {
@@ -769,8 +776,8 @@ export function createIcicleView(
         .attr("width", stripe)
         .attr("height", height)
         .attr("fill", fill)
-        .attr("stroke", cellStroke)
-        .attr("stroke-width", cellStrokeW)
+        .attr("stroke", cellStroke())
+        .attr("stroke-width", cellStrokeW())
         .style("cursor", "pointer")
         .on("click", (event) => activateHierarchyNode(node, event))
         .on("pointermove", (event) => {
@@ -833,7 +840,7 @@ export function createIcicleView(
     };
     const layoutRoot = d3
       .hierarchy(sliced)
-      .sum((d) => (d.children && d.children.length ? 0 : 1))
+      .sum((d) => leafLayoutWeight(d))
       .sort(hierarchySort);
 
     // side: x=vertical breadth, y=depth columns
@@ -1202,8 +1209,8 @@ export function createIcicleView(
       .select("rect")
       .attr("fill", (d) => cellFill(d, d.data.id === highlightId()))
       .attr("fill-opacity", 1)
-      .attr("stroke", cellStroke)
-      .attr("stroke-width", cellStrokeW / cam.k);
+      .attr("stroke", cellStroke())
+      .attr("stroke-width", cellStrokeW() / cam.k);
   }
 
   function styleSelected() {
@@ -1219,7 +1226,7 @@ export function createIcicleView(
     byId.clear();
     fullRoot = d3
       .hierarchy(data)
-      .sum((d) => (d.children && d.children.length ? 0 : 1))
+      .sum((d) => leafLayoutWeight(d))
       .sort(hierarchySort);
     indexTree(fullRoot);
     focus = fullRoot;

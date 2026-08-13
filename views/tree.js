@@ -3,7 +3,7 @@
  * Opens at the constitutional branches; expand one level at a time.
  */
 import * as d3 from "../vendor/d3.js";
-import { displayName, paintFill, selectionFill, hierarchySort } from "../shared.js";
+import { displayName, paintFill, selectionFill, hierarchySort, leafLayoutWeight } from "../shared.js";
 
 export function createTreeView(container, { onSelect, onFocusChange }) {
   const el = typeof container === "string" ? document.querySelector(container) : container;
@@ -124,7 +124,7 @@ export function createTreeView(container, { onSelect, onFocusChange }) {
     expanded.clear();
     fullRoot = d3
       .hierarchy(data)
-      .sum((d) => (d.children && d.children.length ? 0 : 1))
+      .sum((d) => leafLayoutWeight(d))
       .sort(hierarchySort);
     indexTree(fullRoot);
     focus = fullRoot;

@@ -4,8 +4,13 @@ import {
   childCount,
   displayName,
   stampDoorColors,
+  attachBeyondDoors,
   atlasRail,
   syncScrubCoach,
+  initColorTheme,
+  cycleColorTheme,
+  themeMeta,
+  getColorTheme,
 } from "./shared.js";
 import { createIcicleView } from "./views/icicle.js";
 import { createTreeView } from "./views/tree.js";
@@ -46,7 +51,7 @@ const btnEnter = document.getElementById("btn-enter");
 const btnFiscal = document.getElementById("btn-fiscal");
 const btnYou = document.getElementById("btn-you");
 const btnAbout = document.getElementById("btn-about");
-const btnBeyond = document.getElementById("btn-beyond");
+const btnTheme = document.getElementById("btn-theme");
 const fiscalPageEl = document.getElementById("page-fiscal");
 const fiscalBack = document.getElementById("fiscal-back");
 const youPageEl = document.getElementById("page-you");
@@ -194,6 +199,7 @@ function openAboutPage() {
   shellEl.dataset.page = "about";
   if (aboutPageEl) aboutPageEl.hidden = false;
   btnAbout?.classList.add("is-active");
+  syncAboutTheme();
 }
 
 function closeAppPage() {
@@ -211,8 +217,7 @@ function closeAppPage() {
     location.hash === "#you" ||
     location.hash === "#about"
   ) {
-    if (atlas === "beyond") location.hash = "beyond";
-    else history.pushState("", document.title, location.pathname + location.search);
+    history.pushState("", document.title, location.pathname + location.search);
   }
   if (leaving) viewApi?.resize();
 }
@@ -220,7 +225,6 @@ function closeAppPage() {
 function showYouOnMap(chamber) {
   const id = YOU_NODES[chamber] || YOU_NODES.legislative;
   closeAppPage();
-  if (atlas !== "usa") setAtlas("usa");
   viewApi?.zoomToId(id);
 }
 
@@ -231,54 +235,92 @@ function syncPageFromHash() {
   else if (p === "about") openAboutPage();
   else {
     closeAppPage();
-    const want = location.hash.replace(/^#/, "") === "beyond" ? "beyond" : "usa";
-    if (want !== atlas) setAtlas(want);
+    if (location.hash.replace(/^#/, "") === "beyond") {
+      requestAnimationFrame(() => goBeyondDoor());
+    }
   }
 }
 
 let rootNode = null;
 let usaRoot = null;
-let beyondRoot = null;
-let atlas = "usa";
 let nodeById = new Map();
 let selectedNode = null;
 let focusId = null;
-let searchable = [];
 let searchableAll = [];
 let viewApi = null;
 let mode = "icicle";
 let orientation = "top";
 let icicleNestLevels = 11;
 
-function flattenTagged(node, atlasId, out = []) {
+function flattenTagged(node, atlasId = "usa", out = []) {
   out.push({
     id: node.id,
     name: node.name,
     short: node.short,
     kind: node.kind,
     atlas: atlasId,
+    door: node.door,
   });
-  for (const c of node.children || []) flattenTagged(c, atlasId, out);
+  for (const c of node.children || []) {
+    const next =
+      atlasId === "beyond" ||
+      c.door === "Chartered" ||
+      c.door === "International"
+        ? "beyond"
+        : "usa";
+    flattenTagged(c, next, out);
+  }
   return out;
 }
 
-function applyAtlas({ preserve = false } = {}) {
-  rootNode = atlas === "beyond" ? beyondRoot : usaRoot;
+function applyRoot({ preserve = false } = {}) {
+  rootNode = usaRoot;
   stampDoorColors(rootNode);
   nodeById = indexById(rootNode);
-  searchable = flattenSearch(rootNode);
-  btnBeyond?.classList.toggle("is-active", atlas === "beyond");
-  shellEl.dataset.atlas = atlas;
+  searchableAll = flattenTagged(rootNode, "usa");
   selectedNode = null;
   detailEl.hidden = true;
   mountView(mode, { preserve });
 }
 
-function setAtlas(next) {
-  if (next !== "usa" && next !== "beyond") return;
-  if (next === atlas && rootNode) return;
-  atlas = next;
-  applyAtlas({ preserve: false });
+const BEYOND_DOOR_ID = "product-chartered";
+
+function goBeyondDoor() {
+  closeAppPage();
+  const id = nodeById.has(BEYOND_DOOR_ID)
+    ? BEYOND_DOOR_ID
+    : nodeById.has("product-international")
+      ? "product-international"
+      : null;
+  if (!id) return;
+  viewApi?.zoomToId(id);
+  const node = nodeById.get(id);
+  if (node) showDetail(node);
+}
+
+function syncThemeChrome() {
+  if (!btnTheme) return;
+  const cur = themeMeta(getColorTheme());
+  const nextId = getColorTheme() === "dark" ? "light" : "dark";
+  const next = themeMeta(nextId);
+  btnTheme.textContent = next.short;
+  btnTheme.title = `Switch to ${next.label}`;
+  btnTheme.setAttribute(
+    "aria-label",
+    `Color is ${cur.label}. Tap for ${next.label}.`
+  );
+  syncAboutTheme();
+}
+
+function syncAboutTheme() {
+  const frame = document.getElementById("about-frame");
+  const win = frame?.contentWindow;
+  if (!win) return;
+  try {
+    win.postMessage({ type: "govdash-theme", theme: getColorTheme() }, "*");
+  } catch {
+    /* ignore */
+  }
 }
 
 function defaultOrientation() {
@@ -317,12 +359,6 @@ function syncIcicleDepthChrome() {
     );
   }
   layoutMapBox();
-}
-
-function flattenSearch(node, out = []) {
-  out.push({ id: node.id, name: node.name, short: node.short, kind: node.kind });
-  for (const c of node.children || []) flattenSearch(c, out);
-  return out;
 }
 
 function renderEngage(node) {
@@ -597,19 +633,27 @@ function renderBreadcrumbs() {
 
 function renderAtlasSub(path) {
   if (!atlasSubEl) return;
-  if (atlas !== "beyond") {
+  const doors = new Set((path || []).map((d) => d.data?.door));
+  const shorts = new Set((path || []).map((d) => d.data?.short));
+  const ids = new Set((path || []).map((d) => d.data?.id));
+  let line = "";
+  if (
+    doors.has("International") ||
+    shorts.has("International") ||
+    ids.has("product-international")
+  ) {
+    line = "Organizations the United States sits at — not U.S. agencies.";
+  } else if (
+    doors.has("Chartered") ||
+    shorts.has("Chartered") ||
+    ids.has("product-chartered")
+  ) {
+    line = "Federally created, not Cabinet or independent agencies.";
+  }
+  if (!line) {
     atlasSubEl.hidden = true;
     atlasSubEl.textContent = "";
     return;
-  }
-  const ids = new Set((path || []).map((d) => d.data?.id || d.data?.short));
-  const shorts = new Set((path || []).map((d) => d.data?.short));
-  let line =
-    "Chartered U.S. bodies and international orgs.";
-  if (shorts.has("International") || ids.has("product-international")) {
-    line = "Organizations the United States sits at — not U.S. agencies.";
-  } else if (shorts.has("Chartered") || ids.has("product-chartered")) {
-    line = "Federally created, not Cabinet or independent agencies.";
   }
   atlasSubEl.textContent = line;
   atlasSubEl.hidden = false;
@@ -633,13 +677,13 @@ function updateSearch(q) {
   for (const hit of hits) {
     const li = document.createElement("li");
     const btn = document.createElement("button");
-    const mark = hit.atlas === "beyond" && atlas !== "beyond" ? "∞ " : "";
+    const mark = hit.atlas === "beyond" ? "∞ " : "";
     btn.type = "button";
     btn.innerHTML = `<span class="sr-kind">${hit.kind || ""}</span> ${mark}${hit.name}`;
     btn.addEventListener("click", () => {
       closeAppPage();
-      if (hit.atlas && hit.atlas !== atlas) setAtlas(hit.atlas);
       viewApi.zoomToId(hit.id);
+      showDetail(nodeById.get(hit.id));
       searchResults.hidden = true;
       searchInput.value = hit.name;
     });
@@ -712,27 +756,26 @@ async function main() {
     atlasSubEl.hidden = false;
     atlasSubEl.textContent = "Loading…";
   }
+  initColorTheme();
+  syncThemeChrome();
+  window.addEventListener("govdash-theme", () => {
+    syncThemeChrome();
+    viewApi?.resize?.();
+  });
   const [usaRes, beyondRes] = await Promise.all([fetch(TREE_URL), fetch(BEYOND_URL)]);
   if (!usaRes.ok) throw new Error(`Failed to load ${TREE_URL}`);
   if (!beyondRes.ok) throw new Error(`Failed to load ${BEYOND_URL}`);
   const usaData = await usaRes.json();
   const beyondData = await beyondRes.json();
   usaRoot = usaData.tree;
-  beyondRoot = beyondData.tree;
-  stampDoorColors(usaRoot);
-  stampDoorColors(beyondRoot);
-  searchableAll = [
-    ...flattenTagged(usaRoot, "usa"),
-    ...flattenTagged(beyondRoot, "beyond"),
-  ];
+  attachBeyondDoors(usaRoot, beyondData.tree);
 
   // Fresh every load — no map memory
   mode = "icicle";
   orientation = defaultOrientation();
   icicleNestLevels = defaultIcicleNestLevels();
 
-  atlas = location.hash.replace(/^#/, "") === "beyond" ? "beyond" : "usa";
-  applyAtlas({ preserve: false });
+  applyRoot({ preserve: false });
   syncPageFromHash();
 
   document.querySelectorAll(".mode-btn[data-mode]").forEach((btn) => {
@@ -778,23 +821,15 @@ async function main() {
     if (pageName() === "about") closeAppPage();
     else openAboutPage();
   });
-  btnBeyond?.addEventListener("click", () => {
-    closeAppPage();
-    if (atlas === "beyond") {
-      atlas = "usa";
-      if (location.hash === "#beyond") {
-        history.pushState("", document.title, location.pathname + location.search);
-      }
-      applyAtlas({ preserve: false });
-    } else {
-      atlas = "beyond";
-      if (location.hash !== "#beyond") location.hash = "beyond";
-      applyAtlas({ preserve: false });
-    }
+  btnTheme?.addEventListener("click", () => {
+    cycleColorTheme();
   });
   fiscalBack?.addEventListener("click", () => closeAppPage());
   youBack?.addEventListener("click", () => closeAppPage());
   aboutBack?.addEventListener("click", () => closeAppPage());
+  document.getElementById("about-frame")?.addEventListener("load", () => {
+    syncAboutTheme();
+  });
   window.addEventListener("hashchange", () => syncPageFromHash());
   btnEnter.addEventListener("click", () => {
     if (!selectedNode?.children?.length) return;

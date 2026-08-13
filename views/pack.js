@@ -10,6 +10,7 @@ import {
   paintFill,
   selectionFill,
   hierarchySort,
+  leafLayoutWeight,
   MAP_FIELD,
   placeMapTip,
   atlasRail,
@@ -583,7 +584,7 @@ export function createPackView(container, { onSelect, onFocusChange }) {
     treeData = data;
     const hierarchyRoot = d3
       .hierarchy(data)
-      .sum((d) => (d.children && d.children.length ? 0 : 1))
+      .sum((d) => leafLayoutWeight(d))
       .sort(hierarchySort);
     hierarchyRoot.each((d) => byId.set(d.data.id, d));
     const side = Math.min(width, height);

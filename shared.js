@@ -2,8 +2,8 @@
 
 /** Constitutional order for top doors (matches Sankey). Independent last. */
 export const BRANCH_ORDER = [
-  "Executive",
   "Legislative",
+  "Executive",
   "Judicial",
   "Independent",
   "Chartered",
@@ -46,6 +46,32 @@ export function hierarchySort(a, b) {
   );
 }
 
+/**
+ * Layout weight for map views (parents with visible children contribute 0 via d3.sum).
+ * Leg/Jud leaves are boosted (DOOR_LEAF_WEIGHT). Each node stores layoutWeight =
+ * full subtree sum so truncated slices (depth 1, etc.) stay proportional.
+ */
+export const DOOR_LEAF_WEIGHT = {
+  Legislative: 4,
+  Judicial: 4,
+  // Beyond doors: narrower than Leg (20×4 = 80). Chartered 33×1=33; International 116×0.5=58.
+  Chartered: 1,
+  International: 0.5,
+};
+
+function doorLeafUnit(data) {
+  const door = data?.door;
+  const w = door != null ? DOOR_LEAF_WEIGHT[door] : null;
+  return w > 0 ? w : 1;
+}
+
+/** d3.hierarchy.sum callback — works for true leaves and depth-truncated parents. */
+export function leafLayoutWeight(data) {
+  if (data?.children?.length) return 0;
+  if (data?.layoutWeight > 0) return data.layoutWeight;
+  return doorLeafUnit(data);
+}
+
 /** Stone / mineral fills — quiet, NDS-adjacent, readable on cool gray field. */
 export const KIND_FILL = {
   sovereign: "#7e878e",
@@ -67,16 +93,120 @@ export const KIND_FILL = {
   unknown: "#868e96",
 };
 
-/** Constitutional door colors (Sankey + any branch chrome). */
+/** Constitutional door colors — mutated by applyColorTheme (live bindings). */
 export const BRANCH_COLOR = {
-  Legislative: "#4a5f73",
-  Executive: "#8f5a52",
-  Judicial: "#5a6e62",
-  Independent: "#d4b45c",
-  Chartered: "#7a6e72",
-  International: "#4d6b7a",
-  default: "#6a737a",
+  Legislative: "#5a8eb0",
+  Executive: "#d47868",
+  Judicial: "#5fa87a",
+  Independent: "#e0c04a",
+  Chartered: "#a8888c",
+  International: "#5a8fa0",
+  default: "#8a9299",
 };
+
+/** Cycle order: Dark ↔ Light (dark is default). */
+export const THEME_ORDER = ["dark", "light"];
+
+const THEME_KEY = "govdash-color-theme";
+
+const THEME_PRESETS = {
+  light: {
+    label: "Light",
+    short: "L",
+    branch: {
+      Legislative: "#3a6d94",
+      Executive: "#b85a4a",
+      Judicial: "#3f7a58",
+      Independent: "#c9a12a",
+      Chartered: "#8a6e72",
+      International: "#3d6f82",
+      default: "#6a737a",
+    },
+    mapField: "#c8cbd0",
+    constitution: "#8a9399",
+    labelOnBranch: "#f0eeea",
+    ink: "#2a3035",
+  },
+  dark: {
+    label: "Dark",
+    short: "D",
+    branch: {
+      Legislative: "#5a8eb0",
+      Executive: "#d47868",
+      Judicial: "#5fa87a",
+      Independent: "#e0c04a",
+      Chartered: "#a8888c",
+      International: "#5a8fa0",
+      default: "#8a9299",
+    },
+    mapField: "#1a1d21",
+    constitution: "#6a737a",
+    labelOnBranch: "#0f1214",
+    ink: "#e8eaed",
+  },
+};
+
+export let MAP_FIELD = THEME_PRESETS.dark.mapField;
+export let CONSTITUTION_FILL = THEME_PRESETS.dark.constitution;
+export let LABEL_ON_BRANCH = THEME_PRESETS.dark.labelOnBranch;
+export let INK = THEME_PRESETS.dark.ink;
+
+let activeThemeId = "dark";
+
+export function getColorTheme() {
+  return activeThemeId;
+}
+
+export function themeMeta(id = activeThemeId) {
+  return THEME_PRESETS[id] || THEME_PRESETS.dark;
+}
+
+export function applyColorTheme(id) {
+  const raw = id === "classic" ? "dark" : id;
+  const next = THEME_ORDER.includes(raw) ? raw : "dark";
+  const preset = THEME_PRESETS[next];
+  activeThemeId = next;
+  Object.assign(BRANCH_COLOR, preset.branch);
+  MAP_FIELD = preset.mapField;
+  CONSTITUTION_FILL = preset.constitution;
+  LABEL_ON_BRANCH = preset.labelOnBranch;
+  INK = preset.ink;
+  try {
+    document.documentElement.dataset.theme = next;
+  } catch {
+    /* ignore */
+  }
+  try {
+    localStorage.setItem(THEME_KEY, next);
+  } catch {
+    /* ignore */
+  }
+  try {
+    window.dispatchEvent(
+      new CustomEvent("govdash-theme", { detail: { theme: next } })
+    );
+  } catch {
+    /* ignore */
+  }
+  return next;
+}
+
+export function cycleColorTheme() {
+  const i = THEME_ORDER.indexOf(activeThemeId);
+  const next = THEME_ORDER[(i < 0 ? 0 : i + 1) % THEME_ORDER.length];
+  return applyColorTheme(next);
+}
+
+export function initColorTheme() {
+  let saved = null;
+  try {
+    saved = localStorage.getItem(THEME_KEY);
+  } catch {
+    saved = null;
+  }
+  if (saved === "classic") saved = "dark";
+  return applyColorTheme(THEME_ORDER.includes(saved) ? saved : "dark");
+}
 
 export function atlasRail(rootOrData) {
   const n = rootOrData?.data ?? rootOrData;
@@ -91,21 +221,51 @@ export function atlasRail(rootOrData) {
   };
 }
 
-export const CONSTITUTION_FILL = "#8a9399";
-export const INK = "#2a3035";
-export const MAP_FIELD = "#c8cbd0";
-/** Branch door labels on stone fills (icicle). */
-export const LABEL_ON_BRANCH = "#f0eeea";
-
 /** Stamp each data node with its constitutional door (Legislative / Executive / …). */
 export function stampDoorColors(root) {
-  function walk(node, door) {
+  function walkDoor(node, door) {
     if (!node) return;
     const here = branchOrderKey(node) || door || null;
     if (here) node.door = here;
-    for (const c of node.children || []) walk(c, here);
+    for (const c of node.children || []) walkDoor(c, here);
   }
-  walk(root, null);
+  walkDoor(root, null);
+
+  // Subtree layout weights (boosted Leg/Jud leaves) so depth-sliced maps stay proportional.
+  function walkWeight(node) {
+    if (!node) return 0;
+    const kids = node.children || [];
+    if (!kids.length) {
+      node.layoutWeight = doorLeafUnit(node);
+      return node.layoutWeight;
+    }
+    let sum = 0;
+    for (const c of kids) sum += walkWeight(c);
+    node.layoutWeight = sum;
+    return sum;
+  }
+  walkWeight(root);
+}
+
+/** Append Chartered + International after Agencies (mutates usa root). */
+export function attachBeyondDoors(usaRoot, beyondRoot) {
+  if (!usaRoot || !beyondRoot?.children?.length) return usaRoot;
+  const kids = [...(usaRoot.children || [])];
+  for (const door of beyondRoot.children) {
+    if (!door?.id) continue;
+    if (kids.some((k) => k.id === door.id)) continue;
+    kids.push(door);
+  }
+  kids.sort((a, b) => {
+    const ka = branchOrderKey(a);
+    const kb = branchOrderKey(b);
+    const ia = ka ? BRANCH_ORDER.indexOf(ka) : 99;
+    const ib = kb ? BRANCH_ORDER.indexOf(kb) : 99;
+    if (ia !== ib) return ia - ib;
+    return String(a.name || "").localeCompare(String(b.name || ""));
+  });
+  usaRoot.children = kids;
+  return usaRoot;
 }
 
 export function doorKey(nodeOrData) {
@@ -380,6 +540,7 @@ export function sliceTree(node, depthLeft) {
     kind: node.kind,
     heat: node.heat,
     door: node.door,
+    layoutWeight: node.layoutWeight,
     children: kids,
   };
 }
