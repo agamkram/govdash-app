@@ -1,0 +1,522 @@
+{
+  "generatedAt": "2026-08-14T22:04:43.607Z",
+  "nodes": 1598,
+  "leaves": 1291,
+  "leafPct": "80.8",
+  "parents": 307,
+  "departments": 18,
+  "independents": 102,
+  "shorts": 1010,
+  "maxDepth": 11,
+  "opmAsOf": "202606",
+  "opmAsOfLabel": "Jun 2026",
+  "spendPeriod": "FY2026 Q3",
+  "spendPeriodNote": "FY2026 Q3 + sub-agency FY2026",
+  "wfShown": 543,
+  "wfBlank": 1055,
+  "wfPct": "34.0",
+  "wfDirect": 412,
+  "wfRoll": 131,
+  "wfLevel": {
+    "subelement": 382,
+    "agency": 23,
+    "department": 7
+  },
+  "mission": 120,
+  "spendShown": 279,
+  "spendBlank": 1319,
+  "spendPct": "17.5",
+  "spendTop": 99,
+  "spendSub": 120,
+  "spendRoll": 60,
+  "spendDirect": 219,
+  "kinds": [
+    {
+      "label": "bureau",
+      "count": 1174
+    },
+    {
+      "label": "igo",
+      "count": 116
+    },
+    {
+      "label": "independent",
+      "count": 102
+    },
+    {
+      "label": "unknown",
+      "count": 63
+    },
+    {
+      "label": "agency",
+      "count": 45
+    },
+    {
+      "label": "nonprofit",
+      "count": 33
+    },
+    {
+      "label": "gse",
+      "count": 31
+    },
+    {
+      "label": "department",
+      "count": 18
+    },
+    {
+      "label": "carrier",
+      "count": 8
+    },
+    {
+      "label": "branch",
+      "count": 6
+    },
+    {
+      "label": "bucket / sovereign",
+      "countLabel": "1 / 1",
+      "count": null
+    }
+  ],
+  "depth": [
+    {
+      "label": "0 (root)",
+      "count": 1
+    },
+    {
+      "label": "1 (six doors)",
+      "count": 6
+    },
+    {
+      "label": "2",
+      "count": 310
+    },
+    {
+      "label": "3",
+      "count": 129
+    },
+    {
+      "label": "4",
+      "count": 131
+    },
+    {
+      "label": "5",
+      "count": 352
+    },
+    {
+      "label": "6",
+      "count": 248
+    },
+    {
+      "label": "7",
+      "count": 218
+    },
+    {
+      "label": "8",
+      "count": 103
+    },
+    {
+      "label": "9",
+      "count": 50
+    },
+    {
+      "label": "10",
+      "count": 41
+    },
+    {
+      "label": "11",
+      "count": 9
+    }
+  ],
+  "fan": [
+    {
+      "label": "0 (leaf)",
+      "count": 1291
+    },
+    {
+      "label": "1",
+      "count": 138
+    },
+    {
+      "label": "2–5",
+      "count": 105
+    },
+    {
+      "label": "6–20",
+      "count": 48
+    },
+    {
+      "label": "21+",
+      "count": 16
+    }
+  ],
+  "identity": [
+    {
+      "label": "Crosswalk identity",
+      "with": 1593,
+      "blank": 5
+    },
+    {
+      "label": "Spending (toptier + subtier)",
+      "with": 279,
+      "blank": 1319
+    },
+    {
+      "label": "USGM Manual entry",
+      "with": 204,
+      "blank": 1394
+    },
+    {
+      "label": "SAM.gov status",
+      "with": 149,
+      "blank": 1449
+    },
+    {
+      "label": "Mission summary",
+      "with": 120,
+      "blank": 1478
+    },
+    {
+      "label": "Leadership list",
+      "with": 192,
+      "blank": 1406
+    },
+    {
+      "label": "Manual web",
+      "with": 203,
+      "blank": 1395
+    },
+    {
+      "label": "Manual phone",
+      "with": 194,
+      "blank": 1404
+    },
+    {
+      "label": "Short label",
+      "with": 1010,
+      "blank": 588
+    }
+  ],
+  "wfMatchRows": [
+    {
+      "label": "subelement",
+      "count": 382
+    },
+    {
+      "label": "rollup",
+      "count": 131
+    },
+    {
+      "label": "agency",
+      "count": 23
+    },
+    {
+      "label": "department",
+      "count": 7
+    }
+  ],
+  "spendMatchRows": [
+    {
+      "label": "direct toptier",
+      "count": 99
+    },
+    {
+      "label": "sub-agency",
+      "count": 120
+    },
+    {
+      "label": "rollup",
+      "count": 60
+    },
+    {
+      "label": "blank",
+      "count": 1319
+    }
+  ],
+  "doors": [
+    {
+      "short": "Legislative",
+      "name": "Federal Legislative Branch",
+      "nodes": 23,
+      "leaves": 20,
+      "withSpend": 4,
+      "wf": 213,
+      "wfFmt": "213",
+      "obligated": 697601535.22,
+      "obligatedFmt": "$698M"
+    },
+    {
+      "short": "Executive",
+      "name": "Federal Executive Branch",
+      "nodes": 1087,
+      "leaves": 822,
+      "withSpend": 186,
+      "wf": 1280403,
+      "wfFmt": "1,280,403",
+      "obligated": 6541821540873.569,
+      "obligatedFmt": "$6.54T"
+    },
+    {
+      "short": "Judicial",
+      "name": "Federal Judicial Branch",
+      "nodes": 38,
+      "leaves": 30,
+      "withSpend": 0,
+      "wf": 170,
+      "wfFmt": "170",
+      "obligated": null,
+      "obligatedFmt": "—"
+    },
+    {
+      "short": "Agencies",
+      "name": "Independent & Regulatory Agencies",
+      "nodes": 298,
+      "leaves": 270,
+      "withSpend": 83,
+      "wf": 127219,
+      "wfFmt": "127,219",
+      "obligated": 1642195338697.67,
+      "obligatedFmt": "$1.64T"
+    },
+    {
+      "short": "Chartered",
+      "name": "Federally Chartered",
+      "nodes": 34,
+      "leaves": 33,
+      "withSpend": 5,
+      "wf": 1102,
+      "wfFmt": "1,102",
+      "obligated": 996219059.31,
+      "obligatedFmt": "$996M"
+    },
+    {
+      "short": "International",
+      "name": "International Organizations",
+      "nodes": 117,
+      "leaves": 116,
+      "withSpend": 0,
+      "wf": 36,
+      "wfFmt": "36",
+      "obligated": null,
+      "obligatedFmt": "—"
+    }
+  ],
+  "cabinets": [
+    {
+      "label": "VA",
+      "name": "US Department of Veterans Affairs (VA)",
+      "wf": 445351,
+      "wfFmt": "445,351",
+      "obligated": 333932040708.53,
+      "obligatedFmt": "$333.9B",
+      "grain": "toptier",
+      "beneath": 56
+    },
+    {
+      "label": "DHS",
+      "name": "US Department of Homeland Security (DHS)",
+      "wf": 225568,
+      "wfFmt": "225,568",
+      "obligated": 343433469352.11,
+      "obligatedFmt": "$343.4B",
+      "grain": "toptier",
+      "beneath": 62
+    },
+    {
+      "label": "USN",
+      "name": "US Department of the Navy (USN)",
+      "wf": 201061,
+      "wfFmt": "201,061",
+      "obligated": 91526841252.21,
+      "obligatedFmt": "$91.5B",
+      "grain": "subtier",
+      "beneath": 74
+    },
+    {
+      "label": "Army (USA)",
+      "name": "US Department of the Army (USA)",
+      "wf": 187785,
+      "wfFmt": "187,785",
+      "obligated": 68410528392.5,
+      "obligatedFmt": "$68.4B",
+      "grain": "subtier",
+      "beneath": 94
+    },
+    {
+      "label": "USAF",
+      "name": "US Department of the Air Force (USAF)",
+      "wf": 151285,
+      "wfFmt": "151,285",
+      "obligated": 67730311071.08,
+      "obligatedFmt": "$67.7B",
+      "grain": "subtier",
+      "beneath": 83
+    },
+    {
+      "label": "DOJ",
+      "name": "US Department of Justice (DOJ)",
+      "wf": 107082,
+      "wfFmt": "107,082",
+      "obligated": 41817732831.82,
+      "obligatedFmt": "$41.8B",
+      "grain": "toptier",
+      "beneath": 49
+    },
+    {
+      "label": "TD",
+      "name": "US Department of the Treasury (TD)",
+      "wf": 83812,
+      "wfFmt": "83,812",
+      "obligated": 1697183126709.08,
+      "obligatedFmt": "$1.70T",
+      "grain": "toptier",
+      "beneath": 43
+    },
+    {
+      "label": "USDA",
+      "name": "US Department of Agriculture (USDA)",
+      "wf": 78075,
+      "wfFmt": "78,075",
+      "obligated": 184247778864.11,
+      "obligatedFmt": "$184.2B",
+      "grain": "toptier",
+      "beneath": 61
+    },
+    {
+      "label": "HHS",
+      "name": "US Department of Health and Human Services (HHS)",
+      "wf": 72919,
+      "wfFmt": "72,919",
+      "obligated": 2220752284024.05,
+      "obligatedFmt": "$2.22T",
+      "grain": "toptier",
+      "beneath": 40
+    },
+    {
+      "label": "DOD",
+      "name": "US Department of Defense (DOD)",
+      "wf": 70493,
+      "wfFmt": "70,493",
+      "obligated": 1285021806246.13,
+      "obligatedFmt": "$1.29T",
+      "grain": "toptier",
+      "beneath": 329
+    },
+    {
+      "label": "DOI",
+      "name": "US Department of the Interior (DOI)",
+      "wf": 59853,
+      "wfFmt": "59,853",
+      "obligated": 27388590442.89,
+      "obligatedFmt": "$27.4B",
+      "grain": "toptier",
+      "beneath": 42
+    },
+    {
+      "label": "DOT",
+      "name": "US Department of Transportation (DOT)",
+      "wf": 52923,
+      "wfFmt": "52,923",
+      "obligated": 99763049749.85,
+      "obligatedFmt": "$99.8B",
+      "grain": "toptier",
+      "beneath": 33
+    },
+    {
+      "label": "DOC",
+      "name": "US Department of Commerce (DOC)",
+      "wf": 41007,
+      "wfFmt": "41,007",
+      "obligated": 14125533232.38,
+      "obligatedFmt": "$14.1B",
+      "grain": "toptier",
+      "beneath": 40
+    },
+    {
+      "label": "DOE",
+      "name": "US Department of Energy (DOE)",
+      "wf": 11999,
+      "wfFmt": "11,999",
+      "obligated": 57957437429.46,
+      "obligatedFmt": "$58.0B",
+      "grain": "toptier",
+      "beneath": 93
+    },
+    {
+      "label": "DOS",
+      "name": "US Department of State (DOS)",
+      "wf": 11354,
+      "wfFmt": "11,354",
+      "obligated": 25748657742.43,
+      "obligatedFmt": "$25.7B",
+      "grain": "toptier",
+      "beneath": 67
+    },
+    {
+      "label": "DOL",
+      "name": "US Department of Labor (DOL)",
+      "wf": 11041,
+      "wfFmt": "11,041",
+      "obligated": 51690322896.24,
+      "obligatedFmt": "$51.7B",
+      "grain": "toptier",
+      "beneath": 43
+    },
+    {
+      "label": "HUD",
+      "name": "US Department of Housing and Urban Development (HUD)",
+      "wf": 5859,
+      "wfFmt": "5,859",
+      "obligated": 71314359385.02,
+      "obligatedFmt": "$71.3B",
+      "grain": "toptier",
+      "beneath": 48
+    },
+    {
+      "label": "ED",
+      "name": "US Department of Education (ED)",
+      "wf": 2279,
+      "wfFmt": "2,279",
+      "obligated": 86921868148.44,
+      "obligatedFmt": "$86.9B",
+      "grain": "toptier",
+      "beneath": 49
+    }
+  ],
+  "chartered": {
+    "nodes": 34,
+    "leaves": 33,
+    "wf": 1102,
+    "obligatedFmt": "$996M"
+  },
+  "international": {
+    "nodes": 117,
+    "leaves": 116,
+    "wf": 36,
+    "obligatedFmt": "—"
+  },
+  "bar": {
+    "spendDirectPct": "13.7",
+    "spendRollPct": "3.8",
+    "wfDirectPct": "25.8",
+    "wfRollPct": "8.2"
+  },
+  "fmt": {
+    "nodes": "1,598",
+    "leaves": "1,291",
+    "parents": "307",
+    "departments": "18",
+    "wfShown": "543",
+    "wfBlank": "1,055",
+    "mission": "120",
+    "spendShown": "279",
+    "spendBlank": "1,319",
+    "spendDirect": "219",
+    "spendTop": "99",
+    "spendSub": "120",
+    "spendRoll": "60",
+    "wfDirect": "412",
+    "wfRoll": "131",
+    "shorts": "1,010",
+    "independents": "102"
+  }
+}

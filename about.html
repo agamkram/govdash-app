@@ -246,8 +246,8 @@
     .spend-num { color: #1b6b3a; font-weight: 700; }
     html[data-theme="dark"] .spend-label,
     html[data-theme="dark"] .spend-num { color: #3f9a5c; }
-    .bar .spend-direct { width: 6.9%; background: #1b6b3a; }
-    .bar .spend-rollup { width: 0.7%; background: #3f9a5c; }
+    .bar .spend-direct { width: 13.7%; background: #1b6b3a; }
+    .bar .spend-rollup { width: 3.8%; background: #3f9a5c; }
   </style>
 </head>
 <body>
@@ -272,90 +272,43 @@
     <p>Structure is built from official sources and refreshed offline into this app — not guessed.</p>
     <ul class="sources">
       <li><strong>GSA Federal Hierarchy Crosswalk</strong> — skeleton of orgs and parent links (main map identity).</li>
-      <li><strong>OPM Federal Workforce Data (EHRI Status)</strong> — civilian employee counts when we can match a node. Snapshot <strong>Jun 2026</strong>. Civilian only — not military end strength, USPS, or contractors. Legislative / most Judicial orgs often have no OPM row.</li>
+      <li><strong>OPM Federal Workforce Data (EHRI Status)</strong> — civilian employee counts when we can match a node. Snapshot <strong id="st-opm-asof">Jun 2026</strong>. Civilian only — not military end strength, USPS, or contractors. Legislative / most Judicial orgs often have no OPM row.</li>
       <li><strong>U.S. Government Manual</strong> — mission and leadership when available.</li>
       <li><strong>SAM.gov</strong> — status overlays where matched.</li>
       <li><strong>Treasury Fiscal Data</strong> — public debt, interest expense, and Monthly Treasury Statement receipts/outlays on the $ page (live).</li>
-      <li><strong>USAspending.gov</strong> — toptier agency obligated amounts on matched nodes (Cabinet / independent grain). Children are often blank; some parents roll up from matched children. The $ page also lists top obligators and ZIP place-of-performance awards.</li>
+      <li><strong>USAspending.gov</strong> — toptier obligated amounts on matched Cabinet / independent nodes, plus sub-agency (subtier) amounts on children when the name matches (CBP, FEMA, IRS, Army, …). Unmatched boxes stay blank. The $ page lists top obligators and ZIP place-of-performance awards.</li>
     </ul>
-    <p class="note">If employees are blank, that usually means OPM doesn’t publish a count for that org in this file — not that we hid one. Spending blanks are normal below toptier (bureau) grain.</p>
+    <p class="note">If employees are blank, that usually means OPM doesn’t publish a count for that org in this file — not that we hid one. Spending blanks mean no honest toptier or subtier name match — not a hidden number.</p>
 
     <h2>What’s on the main map</h2>
-    <p class="sub">Merged product tree · 1,598 nodes including the root · Chartered + International included · OPM workforce as of 202606 · USAspending toptier FY2026 Q3</p>
+    <p class="sub" id="st-sub">Merged product tree · counts load from the same tree as the map.</p>
 
-    <div class="stats">
-      <div class="stat"><b>1,598</b><span>Nodes (main map)</span></div>
-      <div class="stat info"><b>1,291</b><span>Leaves (80.8%)</span></div>
-      <div class="stat"><b>307</b><span>Parents</span></div>
-      <div class="stat"><b>18</b><span>Departments</span></div>
-    </div>
-    <div class="stats">
-      <div class="stat ok"><b class="wf-num">543</b><span class="wf-label">Workforce shown</span></div>
-      <div class="stat warn"><b>1,055</b><span>Workforce blank</span></div>
-      <div class="stat"><b>34.0%</b><span>Workforce coverage</span></div>
-      <div class="stat"><b>120</b><span>Mission summaries</span></div>
-    </div>
+    <div class="stats" id="st-map"></div>
+    <div class="stats" id="st-wf"></div>
+    <div class="bar" id="st-wf-bar" title="Workforce coverage" aria-hidden="true"><i class="direct"></i><i class="rollup"></i></div>
+    <p class="note" id="st-wf-note"></p>
 
-    <div class="bar" title="Workforce coverage" aria-hidden="true"><i class="direct"></i><i class="rollup"></i></div>
-    <p class="note">Green = direct OPM match (412) · Blue = rolled up from children (131) · Rest unenriched (1,055). Red employee line in detail sits under the title.</p>
+    <div class="stats" id="st-spend"></div>
+    <div class="bar" id="st-spend-bar" title="Spending coverage" aria-hidden="true"><i class="spend-direct"></i><i class="spend-rollup"></i></div>
+    <p class="note" id="st-spend-note"></p>
 
-    <div class="stats">
-      <div class="stat ok"><b class="spend-num">121</b><span class="spend-label">Spending shown</span></div>
-      <div class="stat warn"><b>1,477</b><span>Spending blank</span></div>
-      <div class="stat"><b>7.6%</b><span>Toptier coverage</span></div>
-      <div class="stat"><b>110</b><span>Direct USAspending matches</span></div>
-    </div>
-    <div class="bar" title="Spending coverage" aria-hidden="true"><i class="spend-direct"></i><i class="spend-rollup"></i></div>
-    <p class="note">Forest green = direct toptier match (110) · Lighter green = rolled up from children (11) · Rest blank (1,477). Green obligated line in detail sits under employees. Low % is expected: USASpending toptier ≈ Cabinet / independent, not every bureau.</p>
-
-    <p class="note">Every org is a node. Leaves end a branch. <strong>Icicle / Circles</strong> size uses layout-weighted leaves (Leg/Jud boosted; Chartered/International reduced) — not OPM headcount. <strong>Sankey</strong> gives the four constitutional doors equal bands and keeps Chart/Int compact so they don’t crowd the flow. Max depth 11 · Short labels 1,010 · Independents 102.</p>
+    <p class="note" id="st-layout-note"></p>
 
     <div class="grid2">
       <table>
         <thead><tr><th>Kind</th><th class="num">Count</th></tr></thead>
-        <tbody>
-          <tr><td>bureau</td><td class="num">1,174</td></tr>
-          <tr><td>igo</td><td class="num">116</td></tr>
-          <tr><td>independent</td><td class="num">102</td></tr>
-          <tr><td>unknown</td><td class="num">63</td></tr>
-          <tr><td>agency</td><td class="num">45</td></tr>
-          <tr><td>nonprofit</td><td class="num">33</td></tr>
-          <tr><td>gse</td><td class="num">31</td></tr>
-          <tr><td>department</td><td class="num">18</td></tr>
-          <tr><td>carrier</td><td class="num">8</td></tr>
-          <tr><td>branch</td><td class="num">6</td></tr>
-          <tr><td>bucket / sovereign</td><td class="num">1 / 1</td></tr>
-        </tbody>
+        <tbody id="st-kinds"></tbody>
       </table>
       <table>
         <thead><tr><th>Depth</th><th class="num">Nodes</th></tr></thead>
-        <tbody>
-          <tr><td>0 (root)</td><td class="num">1</td></tr>
-          <tr><td>1 (six doors)</td><td class="num">6</td></tr>
-          <tr><td>2</td><td class="num">310</td></tr>
-          <tr><td>3</td><td class="num">129</td></tr>
-          <tr><td>4</td><td class="num">131</td></tr>
-          <tr><td>5</td><td class="num">352</td></tr>
-          <tr><td>6</td><td class="num">248</td></tr>
-          <tr><td>7</td><td class="num">218</td></tr>
-          <tr><td>8</td><td class="num">103</td></tr>
-          <tr><td>9</td><td class="num">50</td></tr>
-          <tr><td>10</td><td class="num">41</td></tr>
-          <tr><td>11</td><td class="num">9</td></tr>
-        </tbody>
+        <tbody id="st-depth"></tbody>
       </table>
     </div>
 
     <h3>Fan-out (children per node)</h3>
     <table>
       <thead><tr><th>Children</th><th class="num">Nodes</th></tr></thead>
-      <tbody>
-        <tr><td>0 (leaf)</td><td class="num">1,291</td></tr>
-        <tr><td>1</td><td class="num">138</td></tr>
-        <tr><td>2–5</td><td class="num">105</td></tr>
-        <tr><td>6–20</td><td class="num">48</td></tr>
-        <tr><td>21+</td><td class="num">16</td></tr>
-      </tbody>
+      <tbody id="st-fan"></tbody>
     </table>
 
     <h2>Enrichment coverage</h2>
@@ -365,24 +318,15 @@
         <p class="note">Shown under the org title in the detail pane.</p>
         <table>
           <thead><tr><th>Match type</th><th class="num">Nodes</th></tr></thead>
-          <tbody>
-            <tr><td>subelement</td><td class="num">382</td></tr>
-            <tr><td>rollup</td><td class="num">131</td></tr>
-            <tr><td>agency</td><td class="num">23</td></tr>
-            <tr><td>department</td><td class="num">7</td></tr>
-          </tbody>
+          <tbody id="st-wf-match"></tbody>
         </table>
       </div>
       <div class="card">
         <h3><span class="spend-label">Federal spending</span> (USAspending)</h3>
-        <p class="note">Obligated dollars under the title · toptier grain · FY2026 Q3 snapshot.</p>
+        <p class="note" id="st-spend-card-note">Obligated dollars under the title · toptier + sub-agency.</p>
         <table>
           <thead><tr><th>Match type</th><th class="num">Nodes</th></tr></thead>
-          <tbody>
-            <tr><td>direct toptier</td><td class="num">110</td></tr>
-            <tr><td>rollup</td><td class="num">11</td></tr>
-            <tr><td>blank</td><td class="num">1,477</td></tr>
-          </tbody>
+          <tbody id="st-spend-match"></tbody>
         </table>
       </div>
     </div>
@@ -391,17 +335,7 @@
         <h3>Identity &amp; narrative</h3>
         <table>
           <thead><tr><th>Field</th><th class="num">With</th><th class="num">Blank</th></tr></thead>
-          <tbody>
-            <tr><td>Crosswalk identity</td><td class="num">1,593</td><td class="num">5</td></tr>
-            <tr><td>Spending (toptier)</td><td class="num">121</td><td class="num">1,477</td></tr>
-            <tr><td>USGM Manual entry</td><td class="num">204</td><td class="num">1,394</td></tr>
-            <tr><td>SAM.gov status</td><td class="num">149</td><td class="num">1,449</td></tr>
-            <tr><td>Mission summary</td><td class="num">120</td><td class="num">1,478</td></tr>
-            <tr><td>Leadership list</td><td class="num">192</td><td class="num">1,406</td></tr>
-            <tr><td>Manual web</td><td class="num">203</td><td class="num">1,395</td></tr>
-            <tr><td>Manual phone</td><td class="num">194</td><td class="num">1,404</td></tr>
-            <tr><td>Short label</td><td class="num">1,010</td><td class="num">588</td></tr>
-          </tbody>
+          <tbody id="st-identity"></tbody>
         </table>
       </div>
     </div>
@@ -418,18 +352,11 @@
           <th class="num"><span class="spend-label">Obligated</span></th>
         </tr>
       </thead>
-      <tbody>
-        <tr><td>Legislative</td><td class="num">23</td><td class="num">3</td><td class="num"><span class="wf-num">213</span></td><td class="num"><span class="spend-num">$698M</span></td></tr>
-        <tr><td>Executive</td><td class="num">1,087</td><td class="num">23</td><td class="num"><span class="wf-num">1,280,403</span></td><td class="num"><span class="spend-num">$6.54T</span></td></tr>
-        <tr><td>Judicial</td><td class="num">38</td><td class="num">0</td><td class="num"><span class="wf-num">170</span></td><td class="num">—</td></tr>
-        <tr><td>Agencies</td><td class="num">298</td><td class="num">77</td><td class="num"><span class="wf-num">127,219</span></td><td class="num"><span class="spend-num">$1.64T</span></td></tr>
-        <tr><td>Chartered</td><td class="num">34</td><td class="num">9</td><td class="num"><span class="wf-num">1,102</span></td><td class="num"><span class="spend-num">$213B</span></td></tr>
-        <tr><td>International</td><td class="num">117</td><td class="num">8</td><td class="num"><span class="wf-num">36</span></td><td class="num"><span class="spend-num">$587B</span></td></tr>
-      </tbody>
+      <tbody id="st-doors"></tbody>
     </table>
 
-    <h2>Cabinet-style departments (18)</h2>
-    <p class="note">Employees from OPM. Obligated from USAspending toptier when matched (military departments under DOD often blank at this grain).</p>
+    <h2 id="st-cabinet-h">Cabinet-style departments</h2>
+    <p class="note">Employees from OPM. Cabinet dollars are USAspending toptier. Army / Navy / USAF are sub-agency rows under DOD (not a second toptier). USMC has no separate subtier row — blank is honest.</p>
     <table>
       <thead>
         <tr>
@@ -439,37 +366,18 @@
           <th class="num">Beneath</th>
         </tr>
       </thead>
-      <tbody>
-        <tr><td>VA</td><td class="num"><span class="wf-num">445,351</span></td><td class="num"><span class="spend-num">$333.9B</span></td><td class="num">56</td></tr>
-        <tr><td>DHS</td><td class="num"><span class="wf-num">225,568</span></td><td class="num"><span class="spend-num">$343.4B</span></td><td class="num">62</td></tr>
-        <tr><td>USN</td><td class="num"><span class="wf-num">201,061</span></td><td class="num">—</td><td class="num">74</td></tr>
-        <tr><td>Army (USA)</td><td class="num"><span class="wf-num">187,785</span></td><td class="num">—</td><td class="num">94</td></tr>
-        <tr><td>USAF</td><td class="num"><span class="wf-num">151,285</span></td><td class="num">—</td><td class="num">83</td></tr>
-        <tr><td>DOJ</td><td class="num"><span class="wf-num">107,082</span></td><td class="num"><span class="spend-num">$41.8B</span></td><td class="num">49</td></tr>
-        <tr><td>Treasury (TD)</td><td class="num"><span class="wf-num">83,812</span></td><td class="num"><span class="spend-num">$1.70T</span></td><td class="num">43</td></tr>
-        <tr><td>USDA</td><td class="num"><span class="wf-num">78,075</span></td><td class="num"><span class="spend-num">$184.2B</span></td><td class="num">61</td></tr>
-        <tr><td>HHS</td><td class="num"><span class="wf-num">72,919</span></td><td class="num"><span class="spend-num">$2.22T</span></td><td class="num">40</td></tr>
-        <tr><td>DOD</td><td class="num"><span class="wf-num">70,493</span></td><td class="num"><span class="spend-num">$1.29T</span></td><td class="num">329</td></tr>
-        <tr><td>DOI</td><td class="num"><span class="wf-num">59,853</span></td><td class="num"><span class="spend-num">$27.4B</span></td><td class="num">42</td></tr>
-        <tr><td>DOT</td><td class="num"><span class="wf-num">52,923</span></td><td class="num"><span class="spend-num">$99.8B</span></td><td class="num">33</td></tr>
-        <tr><td>DOC</td><td class="num"><span class="wf-num">41,007</span></td><td class="num"><span class="spend-num">$14.1B</span></td><td class="num">40</td></tr>
-        <tr><td>DOE</td><td class="num"><span class="wf-num">11,999</span></td><td class="num"><span class="spend-num">$58.0B</span></td><td class="num">93</td></tr>
-        <tr><td>DOS</td><td class="num"><span class="wf-num">11,354</span></td><td class="num"><span class="spend-num">$25.7B</span></td><td class="num">67</td></tr>
-        <tr><td>DOL</td><td class="num"><span class="wf-num">11,041</span></td><td class="num"><span class="spend-num">$51.7B</span></td><td class="num">43</td></tr>
-        <tr><td>HUD</td><td class="num"><span class="wf-num">5,859</span></td><td class="num"><span class="spend-num">$71.3B</span></td><td class="num">48</td></tr>
-        <tr><td>ED</td><td class="num"><span class="wf-num">2,279</span></td><td class="num"><span class="spend-num">$86.9B</span></td><td class="num">49</td></tr>
-      </tbody>
+      <tbody id="st-cabinets"></tbody>
     </table>
 
     <h2>Other doors on the main map</h2>
     <div class="grid2">
       <div class="card">
         <h3>Chartered</h3>
-        <p>34 nodes · 33 leaves · ~1,100 civilians where OPM matches. Federally chartered corporations, GSEs, and similar — on the main map after Agencies. Icicle/Circles weight them narrower than Legislative; Sankey labels the door <em>Chart</em>.</p>
+        <p id="st-chartered"></p>
       </div>
       <div class="card">
         <h3>International</h3>
-        <p>117 nodes · 116 leaves · almost no OPM coverage. International organizations (IGOs) the U.S. participates in. Leaf-heavy; Icicle/Circles weight them down; Sankey labels the door <em>Int</em>.</p>
+        <p id="st-international"></p>
       </div>
     </div>
 
@@ -480,14 +388,14 @@
       <li><strong>Department</strong> — kind=department (18 Cabinet-style orgs under Executive).</li>
       <li><strong>Beneath</strong> — how many nodes sit under that department in this map (not just direct children).</li>
       <li><strong>Workforce shown</strong> — civilian employees under the title (direct OPM match or sum of children).</li>
-      <li><strong>Obligated</strong> — USASpending toptier dollars for the fiscal period shown (direct match or roll-up).</li>
+      <li><strong>Obligated</strong> — USAspending dollars for the fiscal period shown (toptier, sub-agency, or roll-up). Blank means no honest match.</li>
       <li><strong>Outlay</strong> — a dollar that actually left the Treasury (Monthly Treasury Statement / USAspending).</li>
       <li><strong>Debt</strong> — what is still owed from borrowing over time (Debt to the Penny).</li>
       <li><strong>Deficit</strong> — this year’s gap: outlays minus receipts. Adds to the debt.</li>
       <li><strong>Depth</strong> — generations under your current focus on the Icicle slider.</li>
       <li><strong>Chart / Int</strong> — Sankey short labels for Chartered and International.</li>
     </ul>
-    <p class="note">Counts verified against merged product + Beyond doors · not a live OPM or USAspending query · Jun 2026 workforce · USAspending toptier FY snapshot in tree.</p>
+    <p class="note" id="st-foot">Counts from the merged product + Beyond tree — same files as the map, not a live OPM or USAspending query.</p>
   </main>
   <script>
     (function () {
@@ -501,6 +409,163 @@
         if (!d || d.type !== "govdash-theme") return;
         apply(d.theme);
       });
+
+      function esc(s) {
+        return String(s ?? "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+      }
+      function set(id, html) {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = html;
+      }
+      function text(id, s) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = s;
+      }
+      function stat(html, extra) {
+        return `<div class="stat${extra ? " " + extra : ""}">${html}</div>`;
+      }
+      function rows(items, cells) {
+        return items
+          .map((item) => `<tr>${cells(item)}</tr>`)
+          .join("");
+      }
+
+      fetch("./data/nested/about-stats.json")
+        .then((r) => {
+          if (!r.ok) throw new Error(r.status);
+          return r.json();
+        })
+        .then((s) => {
+          const f = s.fmt || {};
+          text(
+            "st-sub",
+            `Merged product tree · ${f.nodes} nodes including the root · Chartered + International included · OPM workforce as of ${s.opmAsOfLabel} · USAspending ${s.spendPeriod} + sub-agency`
+          );
+          text("st-opm-asof", s.opmAsOfLabel);
+          set(
+            "st-map",
+            stat(`<b>${esc(f.nodes)}</b><span>Nodes (main map)</span>`) +
+              stat(`<b>${esc(f.leaves)}</b><span>Leaves (${esc(s.leafPct)}%)</span>`, "info") +
+              stat(`<b>${esc(f.parents)}</b><span>Parents</span>`) +
+              stat(`<b>${esc(f.departments)}</b><span>Departments</span>`)
+          );
+          set(
+            "st-wf",
+            stat(`<b class="wf-num">${esc(f.wfShown)}</b><span class="wf-label">Workforce shown</span>`, "ok") +
+              stat(`<b>${esc(f.wfBlank)}</b><span>Workforce blank</span>`, "warn") +
+              stat(`<b>${esc(s.wfPct)}%</b><span>Workforce coverage</span>`) +
+              stat(`<b>${esc(f.mission)}</b><span>Mission summaries</span>`)
+          );
+          const wfBar = document.getElementById("st-wf-bar");
+          if (wfBar) {
+            const a = wfBar.querySelector(".direct");
+            const b = wfBar.querySelector(".rollup");
+            if (a) a.style.width = s.bar.wfDirectPct + "%";
+            if (b) b.style.width = s.bar.wfRollPct + "%";
+          }
+          text(
+            "st-wf-note",
+            `Green = direct OPM match (${f.wfDirect}) · Blue = rolled up from children (${f.wfRoll}) · Rest unenriched (${f.wfBlank}). Red employee line in detail sits under the title.`
+          );
+          set(
+            "st-spend",
+            stat(`<b class="spend-num">${esc(f.spendShown)}</b><span class="spend-label">Spending shown</span>`, "ok") +
+              stat(`<b>${esc(f.spendBlank)}</b><span>Spending blank</span>`, "warn") +
+              stat(`<b>${esc(s.spendPct)}%</b><span>Spending coverage</span>`) +
+              stat(`<b>${esc(f.spendDirect)}</b><span>Direct USAspending matches</span>`)
+          );
+          const spBar = document.getElementById("st-spend-bar");
+          if (spBar) {
+            const a = spBar.querySelector(".spend-direct");
+            const b = spBar.querySelector(".spend-rollup");
+            if (a) a.style.width = s.bar.spendDirectPct + "%";
+            if (b) b.style.width = s.bar.spendRollPct + "%";
+          }
+          text(
+            "st-spend-note",
+            `Forest green = direct match (${f.spendTop} toptier + ${f.spendSub} sub-agency) · Lighter green = rolled up from children (${f.spendRoll}) · Rest blank (${f.spendBlank}). Green obligated line in detail sits under employees. Blanks are honest: no name match at toptier or subtier.`
+          );
+          text(
+            "st-layout-note",
+            `Every org is a node. Leaves end a branch. Icicle / Circles size uses layout-weighted leaves (Leg/Jud boosted; Chartered/International reduced) — not OPM headcount. Sankey gives the four constitutional doors equal bands and keeps Chart/Int compact so they don’t crowd the flow. Max depth ${s.maxDepth} · Short labels ${f.shorts} · Independents ${f.independents}.`
+          );
+          set(
+            "st-kinds",
+            rows(s.kinds, (k) =>
+              `<td>${esc(k.label)}</td><td class="num">${esc(k.countLabel || (k.count == null ? "—" : k.count.toLocaleString("en-US")))}</td>`
+            )
+          );
+          set(
+            "st-depth",
+            rows(s.depth, (d) =>
+              `<td>${esc(d.label)}</td><td class="num">${esc(d.count.toLocaleString("en-US"))}</td>`
+            )
+          );
+          set(
+            "st-fan",
+            rows(s.fan, (d) =>
+              `<td>${esc(d.label)}</td><td class="num">${esc(d.count.toLocaleString("en-US"))}</td>`
+            )
+          );
+          set(
+            "st-wf-match",
+            rows(s.wfMatchRows, (d) =>
+              `<td>${esc(d.label)}</td><td class="num">${esc(d.count.toLocaleString("en-US"))}</td>`
+            )
+          );
+          text(
+            "st-spend-card-note",
+            `Obligated dollars under the title · toptier + sub-agency · ${s.spendPeriod} snapshot.`
+          );
+          set(
+            "st-spend-match",
+            rows(s.spendMatchRows, (d) =>
+              `<td>${esc(d.label)}</td><td class="num">${esc(d.count.toLocaleString("en-US"))}</td>`
+            )
+          );
+          set(
+            "st-identity",
+            rows(s.identity, (d) =>
+              `<td>${esc(d.label)}</td><td class="num">${esc(d.with.toLocaleString("en-US"))}</td><td class="num">${esc(d.blank.toLocaleString("en-US"))}</td>`
+            )
+          );
+          set(
+            "st-doors",
+            rows(s.doors, (d) =>
+              `<td>${esc(d.short)}</td><td class="num">${esc(d.nodes.toLocaleString("en-US"))}</td><td class="num">${esc(d.withSpend.toLocaleString("en-US"))}</td><td class="num"><span class="wf-num">${esc(d.wfFmt)}</span></td><td class="num">${d.obligatedFmt && d.obligatedFmt !== "—" ? `<span class="spend-num">${esc(d.obligatedFmt)}</span>` : "—"}</td>`
+            )
+          );
+          text("st-cabinet-h", `Cabinet-style departments (${s.departments})`);
+          set(
+            "st-cabinets",
+            rows(s.cabinets, (d) =>
+              `<td>${esc(d.label)}</td><td class="num"><span class="wf-num">${esc(d.wfFmt)}</span></td><td class="num">${d.obligatedFmt && d.obligatedFmt !== "—" ? `<span class="spend-num">${esc(d.obligatedFmt)}</span>` : "—"}</td><td class="num">${esc(String(d.beneath))}</td>`
+            )
+          );
+          const ch = s.chartered || {};
+          const ig = s.international || {};
+          text(
+            "st-chartered",
+            `${(ch.nodes || 0).toLocaleString("en-US")} nodes · ${(ch.leaves || 0).toLocaleString("en-US")} leaves · civilians where OPM matches: ${(ch.wf || 0).toLocaleString("en-US")}. Federally chartered corporations, GSEs, and similar — on the main map after Agencies. Spending here is only orgs USAspending actually lists — ${ch.obligatedFmt || "—"}, not Cabinet money glued to a short acronym. Icicle/Circles weight them narrower than Legislative; Sankey labels the door Chart.`
+          );
+          text(
+            "st-international",
+            `${(ig.nodes || 0).toLocaleString("en-US")} nodes · ${(ig.leaves || 0).toLocaleString("en-US")} leaves. International organizations (IGOs) the U.S. participates in. Door obligated ${ig.obligatedFmt || "—"}. Leaf-heavy; Icicle/Circles weight them down; Sankey labels the door Int.`
+          );
+          text(
+            "st-foot",
+            `Counts from the merged product + Beyond tree · ${s.opmAsOfLabel} workforce · USAspending ${s.spendPeriod} + sub-agency · generated ${String(s.generatedAt || "").slice(0, 10)}.`
+          );
+        })
+        .catch(() => {
+          const sub = document.getElementById("st-sub");
+          if (sub && !sub.textContent.includes("nodes including")) {
+            sub.textContent = "Could not load coverage stats (about-stats.json). Run npm run stats:about.";
+          }
+        });
     })();
   </script>
 </body>

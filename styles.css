@@ -255,12 +255,41 @@ html.pwa-standalone .shell {
 
 #search {
   width: 100%;
-  padding: 0.4rem 0.55rem;
+  padding: 0.4rem 2rem 0.4rem 0.55rem;
   border: 1px solid var(--line);
   background: var(--panel);
   color: var(--ink);
   font: inherit;
   font-size: 0.9rem;
+}
+
+#search::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+.search-refresh {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2.15rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.search-refresh:hover,
+.search-refresh:focus-visible {
+  color: var(--ink);
 }
 
 #search:focus {

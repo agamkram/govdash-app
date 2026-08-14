@@ -512,7 +512,11 @@ function showDetail(node, opts = {}) {
     dSpending.append(
       document.createTextNode(`${formatDollars(amt)} ${label}${when}`)
     );
-    if (node.spending.agencySlug && !node.spending.rolledUp) {
+    if (
+      node.spending.agencySlug &&
+      !node.spending.rolledUp &&
+      node.spending.grain !== "subtier"
+    ) {
       dSpending.append(document.createTextNode(" · "));
       const a = document.createElement("a");
       a.href = `https://www.usaspending.gov/agency/${node.spending.agencySlug}`;
@@ -670,11 +674,13 @@ function showDetail(node, opts = {}) {
           );
         }
         if (node.spending?.obligatedAmount != null || node.spending?.outlayAmount != null) {
-          parts.push(
-            `USAspending toptier${
-              node.spending.asOf ? ` · ${node.spending.asOf}` : ""
-            }${node.spending.rolledUp ? " (rolled up)" : ""}`
-          );
+          const grain =
+            node.spending.rolledUp
+              ? "USAspending (rolled up)"
+              : node.spending.grain === "subtier"
+                ? "USAspending sub-agency"
+                : "USAspending toptier";
+          parts.push(`${grain}${node.spending.asOf ? ` · ${node.spending.asOf}` : ""}`);
         }
         if (usgm) parts.push(`U.S. Government Manual ${usgm.edition || ""} · SAM.gov · GSA Crosswalk`);
         else if (ctx?.template || ctx?.ancestorUsgm || ctx?.ancestorSam) {
@@ -938,6 +944,11 @@ async function main() {
       searchResults.hidden = true;
       searchInput.blur();
     }
+  });
+  document.getElementById("search-refresh")?.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    location.reload();
   });
   document.addEventListener("click", (e) => {
     if (!searchResults.contains(e.target) && e.target !== searchInput) {

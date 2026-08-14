@@ -1,12 +1,21 @@
 /**
  * Copy the static app into public/ for Vercel. API routes stay at /api.
  */
+import { spawnSync } from "node:child_process";
 import { cpSync, mkdirSync, rmSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const dest = join(root, "public");
+
+const stats = spawnSync(process.execPath, [join(root, "scripts", "stats-about.mjs")], {
+  cwd: root,
+  stdio: "inherit",
+});
+if (stats.status !== 0) {
+  process.exit(stats.status || 1);
+}
 
 rmSync(dest, { recursive: true, force: true });
 mkdirSync(dest, { recursive: true });
