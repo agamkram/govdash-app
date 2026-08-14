@@ -26,6 +26,14 @@
       },
       "nodesWithCount": 10,
       "enrichedAt": "2026-08-12T00:51:07.721Z"
+    },
+    "spending": {
+      "source": "USAspending.gov toptier agencies",
+      "fetchedAt": "2026-08-10T04:49:07.619Z",
+      "matchedDirect": 15,
+      "nodesWithSpending": 18,
+      "enrichedAt": "2026-08-14T03:44:26.018Z",
+      "note": "Toptier grain (~Cabinet / independent). Children often blank; parents may roll up sums."
     }
   },
   "tree": {
@@ -248,6 +256,21 @@
               "opmName": "BARRY GOLDWATER SCHOLARSHIP AND EXCELLENCE IN EDUCATION FOUNDATION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 736067.78,
+              "outlayAmount": 1579642.34,
+              "budgetAuthorityAmount": 41525134.33,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Barry Goldwater Scholarship and Excellence In Education Foundation",
+              "agencySlug": "barry-goldwater-scholarship-and-excellence-in-education-foundation",
+              "toptierCode": "313",
+              "abbreviation": "GOLDWATER",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -352,7 +375,22 @@
               "usgm": null
             },
             "heat": null,
-            "children": []
+            "children": [],
+            "spending": {
+              "obligatedAmount": 27388590442.89,
+              "outlayAmount": 27149802820.46,
+              "budgetAuthorityAmount": 92197495628.22,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of the Interior",
+              "agencySlug": "department-of-the-interior",
+              "toptierCode": "014",
+              "abbreviation": "DOI",
+              "matchedHow": "jaccard-0.82",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-789",
@@ -721,7 +759,22 @@
               },
               "rolledUp": false
             },
-            "children": []
+            "children": [],
+            "spending": {
+              "obligatedAmount": 0,
+              "outlayAmount": 0,
+              "budgetAuthorityAmount": 0,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "John F. Kennedy Center for the Performing Arts",
+              "agencySlug": "john-f-kennedy-center-for-the-performing-arts",
+              "toptierCode": "3301",
+              "abbreviation": "KENNEDY CENTER",
+              "matchedHow": "name",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-1013",
@@ -1082,7 +1135,22 @@
               "usgm": null
             },
             "heat": null,
-            "children": []
+            "children": [],
+            "spending": {
+              "obligatedAmount": 669105825.62,
+              "outlayAmount": 659117029.6,
+              "budgetAuthorityAmount": 1113505007.24,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Nuclear Regulatory Commission",
+              "agencySlug": "nuclear-regulatory-commission",
+              "toptierCode": "031",
+              "abbreviation": "NRC",
+              "matchedHow": "name",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-1383",
@@ -1469,6 +1537,21 @@
               "opmName": "AFRICAN DEVELOPMENT FOUNDATION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 7067400.26,
+              "outlayAmount": 6131581.42,
+              "budgetAuthorityAmount": 34442577.9,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "African Development Foundation",
+              "agencySlug": "african-development-foundation",
+              "toptierCode": "166",
+              "abbreviation": "USADF",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -1675,6 +1758,21 @@
               "level": "subelement",
               "opmCode": "KS00",
               "opmName": "CORPORATION FOR NATIONAL AND COMMUNITY SERVICE",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 988415591.27,
+              "outlayAmount": 924074869.61,
+              "budgetAuthorityAmount": 2743435670.06,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Corporation for National and Community Service",
+              "agencySlug": "corporation-for-national-and-community-service",
+              "toptierCode": "485",
+              "abbreviation": "CNCS",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -2001,7 +2099,22 @@
               }
             },
             "heat": null,
-            "children": []
+            "children": [],
+            "spending": {
+              "obligatedAmount": 60225676.64,
+              "outlayAmount": 48884363.7,
+              "budgetAuthorityAmount": 75650579.35,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Election Assistance Commission",
+              "agencySlug": "election-assistance-commission",
+              "toptierCode": "525",
+              "abbreviation": "EAC",
+              "matchedHow": "jaccard-0.84",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-1727",
@@ -2027,7 +2140,22 @@
               "usgm": null
             },
             "heat": null,
-            "children": []
+            "children": [],
+            "spending": {
+              "obligatedAmount": 184247778864.11,
+              "outlayAmount": 186239870857.79,
+              "budgetAuthorityAmount": 477289700104.5,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of Agriculture",
+              "agencySlug": "department-of-agriculture",
+              "toptierCode": "012",
+              "abbreviation": "USDA",
+              "matchedHow": "jaccard-0.83",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-1106",
@@ -2088,6 +2216,21 @@
           "level": "rollup",
           "opmCode": null,
           "opmName": null,
+          "matchedHow": "sum-children",
+          "rolledUp": true
+        },
+        "spending": {
+          "obligatedAmount": 213361919868.56998,
+          "outlayAmount": 215029461164.92,
+          "budgetAuthorityAmount": 573495754701.6,
+          "fiscalYear": null,
+          "fiscalQuarter": null,
+          "asOf": "FY2026 Q3",
+          "source": "USAspending.gov (toptier agencies)",
+          "agencyName": null,
+          "agencySlug": null,
+          "toptierCode": null,
+          "abbreviation": null,
           "matchedHow": "sum-children",
           "rolledUp": true
         }
@@ -2204,7 +2347,22 @@
               }
             },
             "heat": null,
-            "children": []
+            "children": [],
+            "spending": {
+              "obligatedAmount": 164663181711.36,
+              "outlayAmount": 163409097443.49,
+              "budgetAuthorityAmount": 386326357617.23,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Office of Personnel Management",
+              "agencySlug": "office-of-personnel-management",
+              "toptierCode": "024",
+              "abbreviation": "OPM",
+              "matchedHow": "jaccard-0.83",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-1251",
@@ -2538,7 +2696,22 @@
               "usgm": null
             },
             "heat": null,
-            "children": []
+            "children": [],
+            "spending": {
+              "obligatedAmount": 333932040708.53,
+              "outlayAmount": 326248415091.18,
+              "budgetAuthorityAmount": 525429228986.12,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of Veterans Affairs",
+              "agencySlug": "department-of-veterans-affairs",
+              "toptierCode": "036",
+              "abbreviation": "VA",
+              "matchedHow": "jaccard-0.82",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-1214",
@@ -2734,7 +2907,22 @@
               "usgm": null
             },
             "heat": null,
-            "children": []
+            "children": [],
+            "spending": {
+              "obligatedAmount": 0,
+              "outlayAmount": 0,
+              "budgetAuthorityAmount": 19284563.01,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Overseas Private Investment Corporation",
+              "agencySlug": "overseas-private-investment-corporation",
+              "toptierCode": "071",
+              "abbreviation": "OPIC",
+              "matchedHow": "jaccard-0.83",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-1219",
@@ -2786,7 +2974,22 @@
               "usgm": null
             },
             "heat": null,
-            "children": []
+            "children": [],
+            "spending": {
+              "obligatedAmount": 5755842,
+              "outlayAmount": 10406602.61,
+              "budgetAuthorityAmount": 14224242.43,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Appalachian Regional Commission",
+              "agencySlug": "appalachian-regional-commission",
+              "toptierCode": "309",
+              "abbreviation": "ARC",
+              "matchedHow": "jaccard-0.83",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-1232",
@@ -3370,7 +3573,22 @@
               },
               "rolledUp": false
             },
-            "children": []
+            "children": [],
+            "spending": {
+              "obligatedAmount": 1148497461.41,
+              "outlayAmount": 1215233427.27,
+              "budgetAuthorityAmount": 9966260871.23,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "U.S. International Development Finance Corporation",
+              "agencySlug": "us-international-development-finance-corporation",
+              "toptierCode": "077",
+              "abbreviation": "DFC",
+              "matchedHow": "jaccard-0.75",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-1176",
@@ -4260,7 +4478,22 @@
               "usgm": null
             },
             "heat": null,
-            "children": []
+            "children": [],
+            "spending": {
+              "obligatedAmount": 523483111.03,
+              "outlayAmount": 686814200.97,
+              "budgetAuthorityAmount": 1536450312.82,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Executive Office of the President",
+              "agencySlug": "executive-office-of-the-president",
+              "toptierCode": "1100",
+              "abbreviation": "EOP",
+              "matchedHow": "jaccard-0.83",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-1242",
@@ -5227,7 +5460,22 @@
               }
             },
             "heat": null,
-            "children": []
+            "children": [],
+            "spending": {
+              "obligatedAmount": 86921868148.44,
+              "outlayAmount": 119013985904.43,
+              "budgetAuthorityAmount": 168988257445.92,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of Education",
+              "agencySlug": "department-of-education",
+              "toptierCode": "091",
+              "abbreviation": "ED",
+              "matchedHow": "jaccard-0.83",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-1195",
@@ -5574,6 +5822,21 @@
           "opmName": null,
           "matchedHow": "sum-children",
           "rolledUp": true
+        },
+        "spending": {
+          "obligatedAmount": 587194826982.77,
+          "outlayAmount": 610583952669.95,
+          "budgetAuthorityAmount": 1092280064038.76,
+          "fiscalYear": null,
+          "fiscalQuarter": null,
+          "asOf": "FY2026 Q3",
+          "source": "USAspending.gov (toptier agencies)",
+          "agencyName": null,
+          "agencySlug": null,
+          "toptierCode": null,
+          "abbreviation": null,
+          "matchedHow": "sum-children",
+          "rolledUp": true
         }
       }
     ],
@@ -5584,6 +5847,21 @@
       "level": "rollup",
       "opmCode": null,
       "opmName": null,
+      "matchedHow": "sum-children",
+      "rolledUp": true
+    },
+    "spending": {
+      "obligatedAmount": 800556746851.34,
+      "outlayAmount": 825613413834.87,
+      "budgetAuthorityAmount": 1665775818740.3599,
+      "fiscalYear": null,
+      "fiscalQuarter": null,
+      "asOf": "FY2026 Q3",
+      "source": "USAspending.gov (toptier agencies)",
+      "agencyName": null,
+      "agencySlug": null,
+      "toptierCode": null,
+      "abbreviation": null,
       "matchedHow": "sum-children",
       "rolledUp": true
     }

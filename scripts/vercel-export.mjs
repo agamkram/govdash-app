@@ -34,4 +34,9 @@ for (const d of dirs) {
   cpSync(join(root, d), join(dest, d), { recursive: true });
 }
 
+const popSrc = join(root, "data", "raw", "census", "us-population.json");
+const popDest = join(dest, "data", "raw", "census", "us-population.json");
+mkdirSync(join(dest, "data", "raw", "census"), { recursive: true });
+cpSync(popSrc, popDest);
+
 console.log("Vercel static export →", dest);

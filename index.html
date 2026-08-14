@@ -45,7 +45,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Michroma&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2341" />
+  <link rel="stylesheet" href="styles.css?v=2350" />
 </head>
 <body>
   <div class="shell">
@@ -77,8 +77,8 @@
               type="button"
               id="btn-fiscal"
               class="btn btn-fiscal"
-              title="Treasury fiscal streams"
-              aria-label="Treasury fiscal streams"
+              title="Federal money"
+              aria-label="Federal money"
             >
               $
             </button>
@@ -129,6 +129,7 @@
           <p class="detail-kind" id="d-kind"></p>
           <h2 id="d-title"></h2>
           <p class="detail-workforce" id="d-workforce" hidden></p>
+          <p class="detail-spending" id="d-spending" hidden></p>
           <p class="detail-short" id="d-short"></p>
           <div class="detail-mission" id="d-mission" hidden>
             <h3>Mission</h3>
@@ -158,7 +159,7 @@
         <iframe
           class="about-frame"
           id="about-frame"
-          src="about.html?v=2341"
+          src="about.html?v=2350"
           title="About GovDash — how to use and data sources"
         ></iframe>
       </section>
@@ -191,9 +192,9 @@
 
       <section class="app-page" id="page-fiscal" hidden>
         <div class="app-page-inner">
-          <p class="detail-kind">Treasury</p>
-          <h2>Public debt</h2>
-          <p class="fiscal-lede">What the United States owes, and what interest cost last month. Official Treasury figures.</p>
+          <p class="detail-kind">Federal money</p>
+          <h2>What the dollars are doing</h2>
+          <p class="fiscal-lede">Debt, interest, money in and out, which agencies are moving it, and — if you want — awards where you live. Official Treasury and USAspending figures.</p>
           <div id="fiscal-body"></div>
           <p class="fiscal-actions">
             <button type="button" id="fiscal-back" class="btn">Map</button>
@@ -218,7 +219,7 @@
       </label>
     </footer>
   </div>
-  <script type="module" src="app.js?v=2341"></script>
+  <script type="module" src="app.js?v=2350"></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>

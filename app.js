@@ -59,6 +59,7 @@ const detailEl = document.getElementById("detail");
 const dKind = document.getElementById("d-kind");
 const dTitle = document.getElementById("d-title");
 const dWorkforce = document.getElementById("d-workforce");
+const dSpending = document.getElementById("d-spending");
 const dShort = document.getElementById("d-short");
 const dCodes = document.getElementById("d-codes");
 const dMission = document.getElementById("d-mission");
@@ -174,7 +175,16 @@ function onViewportChange() {
   scheduleViewResize();
 }
 
-const fiscalPage = createFiscalPage(fiscalPageEl);
+const fiscalPage = createFiscalPage(fiscalPageEl, {
+  getRoot: () => usaRoot,
+  onMap: (id) => {
+    if (!id) return;
+    closeAppPage();
+    viewApi?.zoomToId(id);
+    const node = nodeById.get(id);
+    if (node) showDetail(node, { revealRoot: true });
+  },
+});
 const youPage = createYouPage(youPageEl, {
   onMap: (chamber) => showYouOnMap(chamber),
 });
@@ -249,7 +259,7 @@ function closeAppPage() {
   }
   if (leaving) {
     syncIcicleDepthChrome();
-    viewApi?.resize();
+    requestAnimationFrame(() => viewApi?.resize());
   }
 }
 
@@ -466,12 +476,55 @@ function showDetail(node, opts = {}) {
   const formatCount = (n) =>
     typeof n === "number" && Number.isFinite(n) ? n.toLocaleString("en-US") : "—";
 
+  const formatDollars = (n) => {
+    if (typeof n !== "number" || !Number.isFinite(n)) return "—";
+    const sign = n < 0 ? "-" : "";
+    const abs = Math.abs(n);
+    if (abs >= 1e12) return `${sign}$${(abs / 1e12).toFixed(2)}T`;
+    if (abs >= 1e9) return `${sign}$${(abs / 1e9).toFixed(1)}B`;
+    if (abs >= 1e6) return `${sign}$${(abs / 1e6).toFixed(1)}M`;
+    if (abs >= 1e3) return `${sign}$${(abs / 1e3).toFixed(0)}K`;
+    return `${sign}$${abs.toLocaleString("en-US", { maximumFractionDigits: 0 })}`;
+  };
+
   if (!asConstitution && node.workforce?.count != null) {
     dWorkforce.hidden = false;
     dWorkforce.textContent = `${formatCount(node.workforce.count)} civilian employees`;
   } else {
     dWorkforce.hidden = true;
     dWorkforce.textContent = "";
+  }
+
+  if (
+    !asConstitution &&
+    dSpending &&
+    (node.spending?.obligatedAmount != null || node.spending?.outlayAmount != null)
+  ) {
+    const amt =
+      node.spending.obligatedAmount != null
+        ? node.spending.obligatedAmount
+        : node.spending.outlayAmount;
+    const label =
+      node.spending.obligatedAmount != null ? "obligated" : "outlay";
+    const when = node.spending.asOf ? ` · ${node.spending.asOf}` : "";
+    dSpending.hidden = false;
+    dSpending.replaceChildren();
+    dSpending.append(
+      document.createTextNode(`${formatDollars(amt)} ${label}${when}`)
+    );
+    if (node.spending.agencySlug && !node.spending.rolledUp) {
+      dSpending.append(document.createTextNode(" · "));
+      const a = document.createElement("a");
+      a.href = `https://www.usaspending.gov/agency/${node.spending.agencySlug}`;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.textContent = "USAspending";
+      a.title = "Open this agency on USAspending.gov";
+      dSpending.append(a);
+    }
+  } else if (dSpending) {
+    dSpending.hidden = true;
+    dSpending.replaceChildren();
   }
 
   dShort.textContent = asConstitution
@@ -614,6 +667,13 @@ function showDetail(node, opts = {}) {
             `OPM civilian employees${label ? ` · ${label}` : ""}${
               node.workforce.rolledUp ? " (rolled up)" : ""
             }`
+          );
+        }
+        if (node.spending?.obligatedAmount != null || node.spending?.outlayAmount != null) {
+          parts.push(
+            `USAspending toptier${
+              node.spending.asOf ? ` · ${node.spending.asOf}` : ""
+            }${node.spending.rolledUp ? " (rolled up)" : ""}`
           );
         }
         if (usgm) parts.push(`U.S. Government Manual ${usgm.edition || ""} · SAM.gov · GSA Crosswalk`);

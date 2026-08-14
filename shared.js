@@ -523,6 +523,7 @@ export function sliceTree(node, depthLeft) {
     short: node.short,
     kind: node.kind,
     heat: node.heat,
+    spending: node.spending,
     door: node.door,
     layoutWeight: node.layoutWeight,
     children: kids,

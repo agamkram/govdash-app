@@ -8,6 +8,8 @@ const BASE =
 const DATASETS = {
   debt_to_penny: "/v2/accounting/od/debt_to_penny",
   interest_expense: "/v2/accounting/od/interest_expense",
+  mts_table_1: "/v1/accounting/mts/mts_table_1",
+  mts_table_4: "/v1/accounting/mts/mts_table_4",
 };
 
 const PASS = new Set(["sort", "page[size]", "page[number]", "fields", "filter"]);

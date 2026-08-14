@@ -215,9 +215,13 @@ export function engagementActions(node, optsOrById) {
     });
     add({
       id: "spending",
-      label: "See related federal spending",
-      detail: "USAspending.gov (search by name)",
-      href: `https://www.usaspending.gov/search/?hash=false&query=${encodeQuery(name)}`,
+      label: "See federal spending",
+      href: node.spending?.agencySlug && !node.spending.rolledUp
+        ? `https://www.usaspending.gov/agency/${node.spending.agencySlug}`
+        : `https://www.usaspending.gov/search/?hash=false&query=${encodeQuery(name)}`,
+      detail: node.spending?.agencySlug && !node.spending.rolledUp
+        ? "USAspending.gov agency profile"
+        : "USAspending.gov (search by name)",
     });
   }
 

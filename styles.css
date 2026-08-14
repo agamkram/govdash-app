@@ -518,6 +518,245 @@ html.pwa-standalone .shell {
   font-weight: 700;
 }
 
+.fiscal-hero.fiscal-in,
+.fiscal-flow-v.fiscal-in {
+  color: #1b6b3a;
+  font-weight: 700;
+}
+
+html[data-theme="dark"] .fiscal-hero.fiscal-in,
+html[data-theme="dark"] .fiscal-flow-v.fiscal-in {
+  color: #3f9a5c;
+}
+
+.fiscal-flow-v.fiscal-out,
+.fiscal-flow-v.fiscal-debt {
+  color: #c41212;
+  font-weight: 700;
+}
+
+.fiscal-inline-per {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 0.78em;
+}
+
+.fiscal-spark {
+  display: block;
+  width: 100%;
+  height: 2.6rem;
+  margin: 0.65rem 0 0.15rem;
+}
+
+.fiscal-spark-debt {
+  color: #c41212;
+}
+
+.fiscal-spark-ends {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 0;
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.fiscal-flow-row {
+  display: grid;
+  grid-template-columns: 5.2rem 1fr auto;
+  gap: 0.25rem 0.65rem;
+  align-items: baseline;
+  font-size: 0.92rem;
+  margin: 0.2rem 0;
+}
+
+.fiscal-flow-k {
+  color: var(--muted);
+}
+
+.fiscal-flow-v {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.fiscal-flow-p {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.fiscal-flow-bars {
+  margin: 0.35rem 0 0.55rem;
+  display: grid;
+  gap: 0.28rem;
+}
+
+.fiscal-flow-bar {
+  height: 0.45rem;
+  background: var(--line);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.fiscal-flow-bar > span {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+}
+
+.fiscal-in-bar {
+  background: #1b6b3a;
+}
+
+html[data-theme="dark"] .fiscal-in-bar {
+  background: #3f9a5c;
+}
+
+.fiscal-out-bar {
+  background: #c41212;
+}
+
+.fiscal-stack {
+  display: flex;
+  height: 0.7rem;
+  border-radius: 99px;
+  overflow: hidden;
+  margin: 0.55rem 0 0.45rem;
+  background: var(--line);
+}
+
+.fiscal-seg {
+  display: block;
+  height: 100%;
+  min-width: 0;
+}
+
+.fiscal-legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.fiscal-legend li {
+  display: flex;
+  gap: 0.45rem;
+  align-items: flex-start;
+  margin: 0.28rem 0 0;
+}
+
+.fiscal-swatch {
+  flex: 0 0 0.55rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 2px;
+  margin-top: 0.2rem;
+}
+
+.fiscal-seg-income,
+.fiscal-seg-income.fiscal-swatch { background: #3a6d94; }
+.fiscal-seg-ss,
+.fiscal-seg-ss.fiscal-swatch { background: #1b6b3a; }
+.fiscal-seg-medicare,
+.fiscal-seg-medicare.fiscal-swatch { background: #3f9a5c; }
+.fiscal-seg-corp,
+.fiscal-seg-corp.fiscal-swatch { background: #8a5a00; }
+.fiscal-seg-other,
+.fiscal-seg-other.fiscal-swatch { background: #7a848c; }
+.fiscal-seg-public,
+.fiscal-seg-public.fiscal-swatch { background: #c41212; }
+.fiscal-seg-intra,
+.fiscal-seg-intra.fiscal-swatch { background: #8a5a00; }
+
+html[data-theme="dark"] .fiscal-seg-income,
+html[data-theme="dark"] .fiscal-seg-income.fiscal-swatch { background: #5a8eb0; }
+
+.fiscal-agency-list,
+.fiscal-agency + .fiscal-agency,
+#fiscal-local .fiscal-agency {
+  width: 100%;
+}
+
+.fiscal-agency {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.35rem 0.75rem;
+  align-items: baseline;
+  width: 100%;
+  margin: 0 0 0.4rem;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: inherit;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+button.fiscal-agency:hover,
+a.fiscal-agency:hover {
+  border-color: var(--ink);
+}
+
+.fiscal-agency.is-static {
+  cursor: default;
+}
+
+.fiscal-agency-name {
+  font-size: 0.88rem;
+}
+
+.fiscal-agency-amt {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.82rem;
+  color: #1b6b3a;
+  font-weight: 700;
+}
+
+html[data-theme="dark"] .fiscal-agency-amt {
+  color: #3f9a5c;
+}
+
+.fiscal-sub-gap {
+  margin-top: 0.85rem;
+}
+
+.fiscal-gloss {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 6.2rem 1fr;
+  gap: 0.4rem 0.85rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.fiscal-gloss dt {
+  font-weight: 600;
+}
+
+.fiscal-gloss dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+.fiscal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.85rem;
+  margin: 0.35rem 0 0;
+  font-size: 0.82rem;
+}
+
+.fiscal-links a {
+  color: var(--accent);
+}
+
 .fiscal-actions {
   margin: 1.25rem 0 0;
 }
@@ -529,7 +768,8 @@ html.pwa-standalone .shell {
   margin: 0 0 1.1rem;
 }
 
-#you-zip {
+#you-zip,
+#fiscal-zip {
   width: 7.5rem;
   padding: 0.4rem 0.55rem;
   border: 1px solid var(--line);
@@ -540,7 +780,8 @@ html.pwa-standalone .shell {
   letter-spacing: 0.12em;
 }
 
-#you-zip:focus {
+#you-zip:focus,
+#fiscal-zip:focus {
   outline: 2px solid var(--ink);
   outline-offset: 1px;
 }
@@ -844,11 +1085,16 @@ html.pwa-standalone .shell {
   max-width: min(22rem, calc(100% - 1.5rem));
   padding: 0.55rem 0.65rem 0.55rem 0.75rem;
   background: var(--bg);
-  border: 1px solid #1b6b3a;
-  color: #1b6b3a;
+  border: 1px solid #8a5a00;
+  color: #8a5a00;
   font-size: 0.82rem;
   line-height: 1.35;
   pointer-events: auto;
+}
+
+html[data-theme="dark"] .scrub-coach {
+  border-color: #e0b84a;
+  color: #e0b84a;
 }
 
 .scrub-coach[hidden] {
@@ -865,13 +1111,18 @@ html.pwa-standalone .shell {
   flex: none;
   margin: 0;
   padding: 0.28rem 0.55rem;
-  border: 1px solid #1b6b3a;
+  border: 1px solid #8a5a00;
   background: transparent;
-  color: #1b6b3a;
+  color: #8a5a00;
   font: inherit;
   font-size: 0.75rem;
   font-weight: 500;
   cursor: pointer;
+}
+
+html[data-theme="dark"] .scrub-coach-dismiss {
+  border-color: #e0b84a;
+  color: #e0b84a;
 }
 
 .scrub-coach.is-nudge .scrub-coach-dismiss {
@@ -1066,6 +1317,31 @@ html.pwa-standalone .shell {
 
 .detail-workforce[hidden] {
   display: none;
+}
+
+.detail-spending {
+  margin: 0 0 0.45rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #1b6b3a;
+  padding-right: 1.5rem;
+}
+
+html[data-theme="dark"] .detail-spending {
+  /* Same forest hue as #1b6b3a, lifted for dark pane — not mint/captcha. */
+  color: #3f9a5c;
+}
+
+.detail-spending[hidden] {
+  display: none;
+}
+
+.detail-spending a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
 }
 
 .detail-short {

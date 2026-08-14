@@ -188,6 +188,14 @@
       },
       "nodesWithCount": 534,
       "enrichedAt": "2026-08-12T00:50:57.753Z"
+    },
+    "spending": {
+      "source": "USAspending.gov toptier agencies",
+      "fetchedAt": "2026-08-10T04:49:07.619Z",
+      "matchedDirect": 95,
+      "nodesWithSpending": 104,
+      "enrichedAt": "2026-08-14T03:44:23.535Z",
+      "note": "Toptier grain (~Cabinet / independent). Children often blank; parents may roll up sums."
     }
   },
   "tree": {
@@ -1394,7 +1402,22 @@
               },
               "rolledUp": false
             },
-            "children": []
+            "children": [],
+            "spending": {
+              "obligatedAmount": 35139395.03,
+              "outlayAmount": 33000606.14,
+              "budgetAuthorityAmount": 133553314.96,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "United States Court of Appeals for Veterans Claims",
+              "agencySlug": "united-states-court-of-appeals-for-veterans-claims",
+              "toptierCode": "345",
+              "abbreviation": "CAVC",
+              "matchedHow": "name",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-8",
@@ -1619,7 +1642,22 @@
                 "heat": null,
                 "children": []
               }
-            ]
+            ],
+            "spending": {
+              "obligatedAmount": 662462140.19,
+              "outlayAmount": 649726259.39,
+              "budgetAuthorityAmount": 985405713.55,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Government Accountability Office",
+              "agencySlug": "government-accountability-office",
+              "toptierCode": "005",
+              "abbreviation": "GAO",
+              "matchedHow": "name",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-11",
@@ -2037,6 +2075,21 @@
           "level": "rollup",
           "opmCode": null,
           "opmName": null,
+          "matchedHow": "sum-children",
+          "rolledUp": true
+        },
+        "spending": {
+          "obligatedAmount": 697601535.22,
+          "outlayAmount": 682726865.53,
+          "budgetAuthorityAmount": 1118959028.51,
+          "fiscalYear": null,
+          "fiscalQuarter": null,
+          "asOf": "FY2026 Q3",
+          "source": "USAspending.gov (toptier agencies)",
+          "agencyName": null,
+          "agencySlug": null,
+          "toptierCode": null,
+          "abbreviation": null,
           "matchedHow": "sum-children",
           "rolledUp": true
         }
@@ -2631,6 +2684,21 @@
                   "opmName": null,
                   "matchedHow": "sum-children",
                   "rolledUp": true
+                },
+                "spending": {
+                  "obligatedAmount": 523483111.03,
+                  "outlayAmount": 686814200.97,
+                  "budgetAuthorityAmount": 1536450312.82,
+                  "fiscalYear": "2026",
+                  "fiscalQuarter": "3",
+                  "asOf": "FY2026 Q3",
+                  "source": "USAspending.gov (toptier agencies)",
+                  "agencyName": "Executive Office of the President",
+                  "agencySlug": "executive-office-of-the-president",
+                  "toptierCode": "1100",
+                  "abbreviation": "EOP",
+                  "matchedHow": "name",
+                  "rolledUp": false
                 }
               }
             ],
@@ -2641,6 +2709,21 @@
               "level": "rollup",
               "opmCode": null,
               "opmName": null,
+              "matchedHow": "sum-children",
+              "rolledUp": true
+            },
+            "spending": {
+              "obligatedAmount": 523483111.03,
+              "outlayAmount": 686814200.97,
+              "budgetAuthorityAmount": 1536450312.82,
+              "fiscalYear": null,
+              "fiscalQuarter": null,
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": null,
+              "agencySlug": null,
+              "toptierCode": null,
+              "abbreviation": null,
               "matchedHow": "sum-children",
               "rolledUp": true
             }
@@ -4935,6 +5018,21 @@
               "opmName": "DEPARTMENT OF AGRICULTURE",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 184247778864.11,
+              "outlayAmount": 186239870857.79,
+              "budgetAuthorityAmount": 477289700104.5,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of Agriculture",
+              "agencySlug": "department-of-agriculture",
+              "toptierCode": "012",
+              "abbreviation": "USDA",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -7071,6 +7169,21 @@
               "level": "agency",
               "opmCode": "CM",
               "opmName": "DEPARTMENT OF COMMERCE",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 14125533232.38,
+              "outlayAmount": 16100536099.99,
+              "budgetAuthorityAmount": 51571458865.98,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of Commerce",
+              "agencySlug": "department-of-commerce",
+              "toptierCode": "013",
+              "abbreviation": "DOC",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -19765,6 +19878,21 @@
               "opmName": "DEPARTMENT OF DEFENSE",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 1285021806246.13,
+              "outlayAmount": 1145176594768.8,
+              "budgetAuthorityAmount": 2575166024522.84,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of Defense",
+              "agencySlug": "department-of-defense",
+              "toptierCode": "097",
+              "abbreviation": "DOD",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -21508,6 +21636,21 @@
               "level": "agency",
               "opmCode": "ED",
               "opmName": "DEPARTMENT OF EDUCATION",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 86921868148.44,
+              "outlayAmount": 119013985904.43,
+              "budgetAuthorityAmount": 168988257445.92,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of Education",
+              "agencySlug": "department-of-education",
+              "toptierCode": "091",
+              "abbreviation": "ED",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -24506,6 +24649,21 @@
               "opmName": "DEPARTMENT OF ENERGY",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 57957437429.46,
+              "outlayAmount": 50152137865.01,
+              "budgetAuthorityAmount": 138659933490.05,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of Energy",
+              "agencySlug": "department-of-energy",
+              "toptierCode": "089",
+              "abbreviation": "DOE",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -26272,6 +26430,21 @@
               "level": "agency",
               "opmCode": "HE",
               "opmName": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 2220752284024.05,
+              "outlayAmount": 2183919370120.56,
+              "budgetAuthorityAmount": 3436168425359.96,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of Health and Human Services",
+              "agencySlug": "department-of-health-and-human-services",
+              "toptierCode": "075",
+              "abbreviation": "HHS",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -28407,6 +28580,21 @@
               "opmName": "DEPARTMENT OF HOMELAND SECURITY",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 343433469352.11,
+              "outlayAmount": 181663421023.58,
+              "budgetAuthorityAmount": 641666420209.82,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of Homeland Security",
+              "agencySlug": "department-of-homeland-security",
+              "toptierCode": "070",
+              "abbreviation": "DHS",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -30083,6 +30271,21 @@
               "opmCode": "HU",
               "opmName": "DEPARTMENT OF HOUSING AND URBAN DEVELOPM",
               "matchedHow": "jaccard-0.91",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 71314359385.02,
+              "outlayAmount": 65276467812.5,
+              "budgetAuthorityAmount": 338774595018.83,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of Housing and Urban Development",
+              "agencySlug": "department-of-housing-and-urban-development",
+              "toptierCode": "086",
+              "abbreviation": "HUD",
+              "matchedHow": "name",
               "rolledUp": false
             }
           },
@@ -31988,6 +32191,21 @@
               "level": "agency",
               "opmCode": "DJ",
               "opmName": "DEPARTMENT OF JUSTICE",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 41817732831.82,
+              "outlayAmount": 42261067051.92,
+              "budgetAuthorityAmount": 87469856666.22,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of Justice",
+              "agencySlug": "department-of-justice",
+              "toptierCode": "015",
+              "abbreviation": "DOJ",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -33954,6 +34172,21 @@
                           "opmName": "PENSION BENEFIT GUARANTY CORPORATION",
                           "matchedHow": "name",
                           "rolledUp": false
+                        },
+                        "spending": {
+                          "obligatedAmount": 9154064713.06,
+                          "outlayAmount": 9286591919.55,
+                          "budgetAuthorityAmount": 91079786740.79,
+                          "fiscalYear": "2026",
+                          "fiscalQuarter": "3",
+                          "asOf": "FY2026 Q3",
+                          "source": "USAspending.gov (toptier agencies)",
+                          "agencyName": "Pension Benefit Guaranty Corporation",
+                          "agencySlug": "pension-benefit-guaranty-corporation",
+                          "toptierCode": "1602",
+                          "abbreviation": "PBGC",
+                          "matchedHow": "name",
+                          "rolledUp": false
                         }
                       }
                     ],
@@ -33964,6 +34197,21 @@
                       "level": "rollup",
                       "opmCode": null,
                       "opmName": null,
+                      "matchedHow": "sum-children",
+                      "rolledUp": true
+                    },
+                    "spending": {
+                      "obligatedAmount": 9154064713.06,
+                      "outlayAmount": 9286591919.55,
+                      "budgetAuthorityAmount": 91079786740.79,
+                      "fiscalYear": null,
+                      "fiscalQuarter": null,
+                      "asOf": "FY2026 Q3",
+                      "source": "USAspending.gov (toptier agencies)",
+                      "agencyName": null,
+                      "agencySlug": null,
+                      "toptierCode": null,
+                      "abbreviation": null,
                       "matchedHow": "sum-children",
                       "rolledUp": true
                     }
@@ -34014,6 +34262,21 @@
                   "opmName": null,
                   "matchedHow": "sum-children",
                   "rolledUp": true
+                },
+                "spending": {
+                  "obligatedAmount": 9154064713.06,
+                  "outlayAmount": 9286591919.55,
+                  "budgetAuthorityAmount": 91079786740.79,
+                  "fiscalYear": null,
+                  "fiscalQuarter": null,
+                  "asOf": "FY2026 Q3",
+                  "source": "USAspending.gov (toptier agencies)",
+                  "agencyName": null,
+                  "agencySlug": null,
+                  "toptierCode": null,
+                  "abbreviation": null,
+                  "matchedHow": "sum-children",
+                  "rolledUp": true
                 }
               }
             ],
@@ -34024,6 +34287,21 @@
               "level": "agency",
               "opmCode": "DL",
               "opmName": "DEPARTMENT OF LABOR",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 51690322896.24,
+              "outlayAmount": 50755618225.7,
+              "budgetAuthorityAmount": 86942544516.73,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of Labor",
+              "agencySlug": "department-of-labor",
+              "toptierCode": "1601",
+              "abbreviation": "DOL",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -36177,6 +36455,21 @@
               "opmName": "DEPARTMENT OF STATE",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 25748657742.43,
+              "outlayAmount": 30406259870.47,
+              "budgetAuthorityAmount": 94923907963.89,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of State",
+              "agencySlug": "department-of-state",
+              "toptierCode": "019",
+              "abbreviation": "DOS",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -38049,6 +38342,21 @@
               "level": "agency",
               "opmCode": "IN",
               "opmName": "DEPARTMENT OF INTERIOR",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 27388590442.89,
+              "outlayAmount": 27149802820.46,
+              "budgetAuthorityAmount": 92197495628.22,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of the Interior",
+              "agencySlug": "department-of-the-interior",
+              "toptierCode": "014",
+              "abbreviation": "DOI",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -39926,6 +40234,21 @@
               "opmName": "DEPARTMENT OF TREASURY",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 1697183126709.08,
+              "outlayAmount": 1695745744164.61,
+              "budgetAuthorityAmount": 4514344678299.49,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of the Treasury",
+              "agencySlug": "department-of-the-treasury",
+              "toptierCode": "020",
+              "abbreviation": "TREAS",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -41516,6 +41839,21 @@
                       "opmName": "SURFACE TRANSPORTATION BOARD",
                       "matchedHow": "jaccard-0.91",
                       "rolledUp": false
+                    },
+                    "spending": {
+                      "obligatedAmount": 26537746.47,
+                      "outlayAmount": 32290127.53,
+                      "budgetAuthorityAmount": 48481498.01,
+                      "fiscalYear": "2026",
+                      "fiscalQuarter": "3",
+                      "asOf": "FY2026 Q3",
+                      "source": "USAspending.gov (toptier agencies)",
+                      "agencyName": "Surface Transportation Board",
+                      "agencySlug": "surface-transportation-board",
+                      "toptierCode": "472",
+                      "abbreviation": "STB",
+                      "matchedHow": "name",
+                      "rolledUp": false
                     }
                   }
                 ],
@@ -41528,6 +41866,21 @@
                   "opmName": null,
                   "matchedHow": "sum-children",
                   "rolledUp": true
+                },
+                "spending": {
+                  "obligatedAmount": 26537746.47,
+                  "outlayAmount": 32290127.53,
+                  "budgetAuthorityAmount": 48481498.01,
+                  "fiscalYear": null,
+                  "fiscalQuarter": null,
+                  "asOf": "FY2026 Q3",
+                  "source": "USAspending.gov (toptier agencies)",
+                  "agencyName": null,
+                  "agencySlug": null,
+                  "toptierCode": null,
+                  "abbreviation": null,
+                  "matchedHow": "sum-children",
+                  "rolledUp": true
                 }
               }
             ],
@@ -41538,6 +41891,21 @@
               "level": "agency",
               "opmCode": "TD",
               "opmName": "DEPARTMENT OF TRANSPORTATION",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 99763049749.85,
+              "outlayAmount": 96958667329.89,
+              "budgetAuthorityAmount": 302601873313.91,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of Transportation",
+              "agencySlug": "department-of-transportation",
+              "toptierCode": "069",
+              "abbreviation": "DOT",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -43561,6 +43929,21 @@
               "opmName": "DEPARTMENT OF VETERANS AFFAIRS",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 333932040708.53,
+              "outlayAmount": 326248415091.18,
+              "budgetAuthorityAmount": 525429228986.12,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Department of Veterans Affairs",
+              "agencySlug": "department-of-veterans-affairs",
+              "toptierCode": "036",
+              "abbreviation": "VA",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           }
         ],
@@ -43571,6 +43954,21 @@
           "level": "rollup",
           "opmCode": null,
           "opmName": null,
+          "matchedHow": "sum-children",
+          "rolledUp": true
+        },
+        "spending": {
+          "obligatedAmount": 6541821540873.569,
+          "outlayAmount": 6217754773207.859,
+          "budgetAuthorityAmount": 13533730850705.299,
+          "fiscalYear": null,
+          "fiscalQuarter": null,
+          "asOf": "FY2026 Q3",
+          "source": "USAspending.gov (toptier agencies)",
+          "agencyName": null,
+          "agencySlug": null,
+          "toptierCode": null,
+          "abbreviation": null,
           "matchedHow": "sum-children",
           "rolledUp": true
         }
@@ -45567,6 +45965,21 @@
               "opmName": "ADMINISTRATIVE CONFERENCE OF THE UNITED STATES",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 2422761.52,
+              "outlayAmount": 2391393.46,
+              "budgetAuthorityAmount": 3502154.18,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Administrative Conference of the U.S.",
+              "agencySlug": "administrative-conference-of-the-us",
+              "toptierCode": "302",
+              "abbreviation": "ACUS",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -45632,6 +46045,21 @@
               "opmName": "AMERICAN BATTLE MONUMENTS COMMISSION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 122982702.44,
+              "outlayAmount": 84813378.77,
+              "budgetAuthorityAmount": 257134458.04,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "American Battle Monuments Commission",
+              "agencySlug": "american-battle-monuments-commission",
+              "toptierCode": "074",
+              "abbreviation": "ABMC",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -45695,6 +46123,21 @@
               "level": "subelement",
               "opmCode": "AP00",
               "opmName": "APPALACHIAN REGIONAL COMMISSION",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 5755842,
+              "outlayAmount": 10406602.61,
+              "budgetAuthorityAmount": 14224242.43,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Appalachian Regional Commission",
+              "agencySlug": "appalachian-regional-commission",
+              "toptierCode": "309",
+              "abbreviation": "ARC",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -45827,6 +46270,21 @@
               "opmName": "ARMED FORCES RETIREMENT HOME",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 93399211.6,
+              "outlayAmount": 98442585.94,
+              "budgetAuthorityAmount": 262889979.53,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Armed Forces Retirement Home",
+              "agencySlug": "armed-forces-retirement-home",
+              "toptierCode": "084",
+              "abbreviation": "AFRH",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -45931,6 +46389,21 @@
               "opmCode": "HB",
               "opmName": "COMMITTEE FOR PURCHASE FROM PEOPLE WHO ARE BLIND OR SE VERELY DISABLED",
               "matchedHow": "jaccard-0.77",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 8328535.59,
+              "outlayAmount": 8243074.15,
+              "budgetAuthorityAmount": 17639665.77,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Committee for Purchase from People Who Are Blind or Severely Disabled",
+              "agencySlug": "committee-for-purchase-from-people-who-are-blind-or-severely-disabled",
+              "toptierCode": "338",
+              "abbreviation": "ABILITYONE",
+              "matchedHow": "name",
               "rolledUp": false
             }
           },
@@ -46100,6 +46573,21 @@
               "opmName": null,
               "matchedHow": "sum-children",
               "rolledUp": true
+            },
+            "spending": {
+              "obligatedAmount": 184573558.4,
+              "outlayAmount": 192901876.89,
+              "budgetAuthorityAmount": 385531619.11,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Court Services and Offender Supervision Agency",
+              "agencySlug": "court-services-and-offender-supervision-agency",
+              "toptierCode": "9553",
+              "abbreviation": "CSOSA",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -46165,6 +46653,21 @@
               "opmName": "DELTA REGIONAL AUTHORITY",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 72015937.14,
+              "outlayAmount": 59521368.95,
+              "budgetAuthorityAmount": 103942247.54,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Delta Regional Authority",
+              "agencySlug": "delta-regional-authority",
+              "toptierCode": "517",
+              "abbreviation": "DRA",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -46228,6 +46731,21 @@
               "level": "subelement",
               "opmCode": "DQ00",
               "opmName": "DENALI COMMISSION",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 13434661.81,
+              "outlayAmount": 39163303.48,
+              "budgetAuthorityAmount": 216795236.95,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Denali Commission",
+              "agencySlug": "denali-commission",
+              "toptierCode": "513",
+              "abbreviation": "DENALI",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -46321,7 +46839,22 @@
               },
               "rolledUp": false
             },
-            "children": []
+            "children": [],
+            "spending": {
+              "obligatedAmount": 262903969.37,
+              "outlayAmount": 239922448.07,
+              "budgetAuthorityAmount": 413213330.12,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "District of Columbia Courts",
+              "agencySlug": "district-of-columbia-courts",
+              "toptierCode": "349",
+              "abbreviation": "DC COURTS",
+              "matchedHow": "name",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-1340",
@@ -46669,6 +47202,21 @@
               "opmName": "FEDERAL COMMUNICATIONS COMMISSION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 7507868936.16,
+              "outlayAmount": 8178221444.1,
+              "budgetAuthorityAmount": -8344792249.5,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Federal Communications Commission",
+              "agencySlug": "federal-communications-commission",
+              "toptierCode": "027",
+              "abbreviation": "FCC",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -46801,6 +47349,21 @@
               "opmName": "FEDERAL ELECTION COMMISSION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 53919213.08,
+              "outlayAmount": 56231314.61,
+              "budgetAuthorityAmount": 87621920.47,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Federal Election Commission",
+              "agencySlug": "federal-election-commission",
+              "toptierCode": "360",
+              "abbreviation": "FEC",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -46864,6 +47427,21 @@
               "level": "subelement",
               "opmCode": "FI00",
               "opmName": "FEDERAL FINANCIAL INSTITUTIONS EXAMINATION COUNCIL",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 0,
+              "outlayAmount": 0,
+              "budgetAuthorityAmount": 0,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Federal Financial Institutions Examination Council",
+              "agencySlug": "federal-financial-institutions-examination-council",
+              "toptierCode": "362",
+              "abbreviation": "FFIEC",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -47250,6 +47828,21 @@
               "opmName": "FEDERAL LABOR RELATIONS AUTHORITY",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 17090010.04,
+              "outlayAmount": 17650288.37,
+              "budgetAuthorityAmount": 30071924.3,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Federal Labor Relations Authority",
+              "agencySlug": "federal-labor-relations-authority",
+              "toptierCode": "054",
+              "abbreviation": "FLRA",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -47432,6 +48025,21 @@
               "opmName": "FEDERAL MARITIME COMMISSION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 24052953.55,
+              "outlayAmount": 29473673.2,
+              "budgetAuthorityAmount": 47394674.54,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Federal Maritime Commission",
+              "agencySlug": "federal-maritime-commission",
+              "toptierCode": "065",
+              "abbreviation": "FMC",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -47574,6 +48182,21 @@
               "opmName": "FEDERAL MEDIATION AND CONCILIATION SERVICE",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 21575078.45,
+              "outlayAmount": 20852701.94,
+              "budgetAuthorityAmount": 79301508.94,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Federal Mediation and Conciliation Service",
+              "agencySlug": "federal-mediation-and-conciliation-service",
+              "toptierCode": "093",
+              "abbreviation": "FMCS",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -47709,6 +48332,21 @@
               "level": "subelement",
               "opmCode": "RS00",
               "opmName": "FEDERAL MINE SAFETY AND HEALTH REVIEW COMMISSION",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 11567950.86,
+              "outlayAmount": 10711623.03,
+              "budgetAuthorityAmount": 25255009.77,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Federal Mine Safety and Health Review Commission",
+              "agencySlug": "federal-mine-safety-and-health-review-commission",
+              "toptierCode": "368",
+              "abbreviation": "FMSHRC",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -48294,6 +48932,21 @@
               "opmName": "FEDERAL TRADE COMMISSION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 286032608.33,
+              "outlayAmount": 291147075.12,
+              "budgetAuthorityAmount": 456875025.03,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Federal Trade Commission",
+              "agencySlug": "federal-trade-commission",
+              "toptierCode": "029",
+              "abbreviation": "FTC",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -48542,6 +49195,21 @@
                   "opmName": "EXPORT-IMPORT BANK OF THE UNITED STATES",
                   "matchedHow": "name",
                   "rolledUp": false
+                },
+                "spending": {
+                  "obligatedAmount": 361016726.58,
+                  "outlayAmount": 376372208.77,
+                  "budgetAuthorityAmount": 662387498.96,
+                  "fiscalYear": "2026",
+                  "fiscalQuarter": "3",
+                  "asOf": "FY2026 Q3",
+                  "source": "USAspending.gov (toptier agencies)",
+                  "agencyName": "Export-Import Bank of the United States",
+                  "agencySlug": "export-import-bank-of-the-united-states",
+                  "toptierCode": "083",
+                  "abbreviation": "EXIM",
+                  "matchedHow": "name",
+                  "rolledUp": false
                 }
               },
               {
@@ -48653,6 +49321,21 @@
                   "level": "subelement",
                   "opmCode": "FK00",
                   "opmName": "FARM CREDIT SYSTEM INSURANCE CORPORATION",
+                  "matchedHow": "name",
+                  "rolledUp": false
+                },
+                "spending": {
+                  "obligatedAmount": 230003639.54,
+                  "outlayAmount": 227654868.83,
+                  "budgetAuthorityAmount": 9000785050.74,
+                  "fiscalYear": "2026",
+                  "fiscalQuarter": "3",
+                  "asOf": "FY2026 Q3",
+                  "source": "USAspending.gov (toptier agencies)",
+                  "agencyName": "Farm Credit System Insurance Corporation",
+                  "agencySlug": "farm-credit-system-insurance-corporation",
+                  "toptierCode": "7802",
+                  "abbreviation": "FCSIC",
                   "matchedHow": "name",
                   "rolledUp": false
                 }
@@ -48888,6 +49571,21 @@
                   "level": "subelement",
                   "opmCode": "FD00",
                   "opmName": "FEDERAL DEPOSIT INSURANCE CORPORATION",
+                  "matchedHow": "name",
+                  "rolledUp": false
+                },
+                "spending": {
+                  "obligatedAmount": 4206245766.27,
+                  "outlayAmount": 4174550647.26,
+                  "budgetAuthorityAmount": 146115927712.14,
+                  "fiscalYear": "2026",
+                  "fiscalQuarter": "3",
+                  "asOf": "FY2026 Q3",
+                  "source": "USAspending.gov (toptier agencies)",
+                  "agencyName": "Federal Deposit Insurance Corporation",
+                  "agencySlug": "federal-deposit-insurance-corporation",
+                  "toptierCode": "051",
+                  "abbreviation": "FDIC",
                   "matchedHow": "name",
                   "rolledUp": false
                 }
@@ -49348,6 +50046,21 @@
                   "opmName": "PRESIDIO TRUST",
                   "matchedHow": "name",
                   "rolledUp": false
+                },
+                "spending": {
+                  "obligatedAmount": 266897374.32,
+                  "outlayAmount": 266640720.4,
+                  "budgetAuthorityAmount": 549916183.73,
+                  "fiscalYear": "2026",
+                  "fiscalQuarter": "3",
+                  "asOf": "FY2026 Q3",
+                  "source": "USAspending.gov (toptier agencies)",
+                  "agencyName": "Presidio Trust",
+                  "agencySlug": "presidio-trust",
+                  "toptierCode": "512",
+                  "abbreviation": "PRESIDIO",
+                  "matchedHow": "name",
+                  "rolledUp": false
                 }
               },
               {
@@ -49756,7 +50469,22 @@
                   },
                   "rolledUp": false
                 },
-                "children": []
+                "children": [],
+                "spending": {
+                  "obligatedAmount": 0,
+                  "outlayAmount": 0,
+                  "budgetAuthorityAmount": 19284563.01,
+                  "fiscalYear": "2026",
+                  "fiscalQuarter": "3",
+                  "asOf": "FY2026 Q3",
+                  "source": "USAspending.gov (toptier agencies)",
+                  "agencyName": "Overseas Private Investment Corporation",
+                  "agencySlug": "overseas-private-investment-corporation",
+                  "toptierCode": "071",
+                  "abbreviation": "OPIC",
+                  "matchedHow": "name",
+                  "rolledUp": false
+                }
               },
               {
                 "id": "gsa-1130",
@@ -50040,6 +50768,21 @@
               "opmName": null,
               "matchedHow": "sum-children",
               "rolledUp": true
+            },
+            "spending": {
+              "obligatedAmount": 5064163506.71,
+              "outlayAmount": 5045218445.26,
+              "budgetAuthorityAmount": 156348301008.58005,
+              "fiscalYear": null,
+              "fiscalQuarter": null,
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": null,
+              "agencySlug": null,
+              "toptierCode": null,
+              "abbreviation": null,
+              "matchedHow": "sum-children",
+              "rolledUp": true
             }
           },
           {
@@ -50103,6 +50846,21 @@
               "level": "subelement",
               "opmCode": "HT00",
               "opmName": "HARRY S. TRUMAN SCHOLARSHIP FOUNDATION",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 4620645.43,
+              "outlayAmount": 4579817.65,
+              "budgetAuthorityAmount": 32934804.41,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Harry S Truman Scholarship Foundation",
+              "agencySlug": "harry-s-truman-scholarship-foundation",
+              "toptierCode": "372",
+              "abbreviation": "TRUMAN",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -50270,6 +51028,21 @@
               "level": "subelement",
               "opmCode": "AH03",
               "opmName": "INSTITUTE OF MUSEUM AND LIBRARY SERVICES",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 192441317.14,
+              "outlayAmount": 157650104.68,
+              "budgetAuthorityAmount": 309281426.79,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Institute of Museum and Library Services",
+              "agencySlug": "institute-of-museum-and-library-services",
+              "toptierCode": "474",
+              "abbreviation": "IMLS",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -50454,6 +51227,21 @@
               "opmName": "INTER-AMERICAN FOUNDATION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 10962358.51,
+              "outlayAmount": 12176396.48,
+              "budgetAuthorityAmount": 57049348.57,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Inter-American Foundation",
+              "agencySlug": "inter-american-foundation",
+              "toptierCode": "164",
+              "abbreviation": "IAF",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -50519,6 +51307,21 @@
               "opmName": "JAMES MADISON MEMORIAL FELLOWSHIP FOUNDATION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 2701187.19,
+              "outlayAmount": 1355333.3,
+              "budgetAuthorityAmount": 37063890.96,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "James Madison Memorial Fellowship Foundation",
+              "agencySlug": "james-madison-memorial-fellowship-foundation",
+              "toptierCode": "381",
+              "abbreviation": "MADISON",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -50582,6 +51385,21 @@
               "level": "subelement",
               "opmCode": "UJ00",
               "opmName": "JAPAN-UNITED STATES FRIENDSHIP COMMISSION",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 0,
+              "outlayAmount": 0,
+              "budgetAuthorityAmount": 0,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Japan-United States Friendship Commission",
+              "agencySlug": "japan-united-states-friendship-commission",
+              "toptierCode": "382",
+              "abbreviation": "JUSFC",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -50755,6 +51573,21 @@
               "opmName": "MILLENNIUM CHALLENGE CORPORATION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 178671737.71,
+              "outlayAmount": 481441316.56,
+              "budgetAuthorityAmount": 3008102288.68,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Millennium Challenge Corporation",
+              "agencySlug": "millennium-challenge-corporation",
+              "toptierCode": "524",
+              "abbreviation": "MCC",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -50818,6 +51651,21 @@
               "level": "subelement",
               "opmCode": "EO00",
               "opmName": "MORRIS K. UDALL AND STEWART L. UDALL FOUNDATION",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 7865504.12,
+              "outlayAmount": 7698598.24,
+              "budgetAuthorityAmount": 28627865.8,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Morris K. Udall and Stewart L. Udall Foundation",
+              "agencySlug": "morris-k-udall-and-stewart-l-udall-foundation",
+              "toptierCode": "487",
+              "abbreviation": "UDALL",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -52435,6 +53283,21 @@
               "opmName": "NATIONAL AERONAUTICS AND SPACE ADMINISTRATION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 17949015256.39,
+              "outlayAmount": 18746274399.3,
+              "budgetAuthorityAmount": 43991652256.88,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "National Aeronautics and Space Administration",
+              "agencySlug": "national-aeronautics-and-space-administration",
+              "toptierCode": "080",
+              "abbreviation": "NASA",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -52722,6 +53585,21 @@
               "opmName": "NATIONAL ARCHIVES AND RECORDS ADMINISTRATION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 502252593.8,
+              "outlayAmount": 515248726.45,
+              "budgetAuthorityAmount": 874047519.87,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "National Archives and Records Administration",
+              "agencySlug": "national-archives-and-records-administration",
+              "toptierCode": "088",
+              "abbreviation": "NARA",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -52904,6 +53782,21 @@
               "opmName": "NATIONAL CAPITAL PLANNING COMMISSION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 10568213.35,
+              "outlayAmount": 7956494.53,
+              "budgetAuthorityAmount": 14934809.5,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "National Capital Planning Commission",
+              "agencySlug": "national-capital-planning-commission",
+              "toptierCode": "394",
+              "abbreviation": "NCPC",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -53003,6 +53896,21 @@
               "level": "subelement",
               "opmCode": "NK00",
               "opmName": "NATIONAL COUNCIL ON DISABILITY",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 0,
+              "outlayAmount": 0,
+              "budgetAuthorityAmount": 0,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "National Council on Disability",
+              "agencySlug": "national-council-on-disability",
+              "toptierCode": "413",
+              "abbreviation": "NCD",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -53185,6 +54093,21 @@
               "level": "subelement",
               "opmCode": "CU00",
               "opmName": "NATIONAL CREDIT UNION ADMINISTRATION",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 3510000,
+              "outlayAmount": 1499108.93,
+              "budgetAuthorityAmount": 20465673.68,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "National Credit Union Administration",
+              "agencySlug": "national-credit-union-administration",
+              "toptierCode": "025",
+              "abbreviation": "NCUA",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -53396,6 +54319,21 @@
               "opmName": "NATIONAL ENDOWMENT FOR THE ARTS",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 125956010.21,
+              "outlayAmount": 111066848.9,
+              "budgetAuthorityAmount": 285393828.77,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "National Endowment for the Arts",
+              "agencySlug": "national-endowment-for-the-arts",
+              "toptierCode": "417",
+              "abbreviation": "NEA",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -53558,6 +54496,21 @@
               "level": "subelement",
               "opmCode": "AH02",
               "opmName": "NATIONAL ENDOWMENT FOR THE HUMANITIES",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 167865732.5,
+              "outlayAmount": 43000321.77,
+              "budgetAuthorityAmount": 444684858.5,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "National Endowment for the Humanities",
+              "agencySlug": "national-endowment-for-the-humanities",
+              "toptierCode": "418",
+              "abbreviation": "NEH",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -53742,6 +54695,21 @@
               "opmName": "NATIONAL LABOR RELATIONS BOARD",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 193110506.78,
+              "outlayAmount": 200790087.56,
+              "budgetAuthorityAmount": 305137765.24,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "National Labor Relations Board",
+              "agencySlug": "national-labor-relations-board",
+              "toptierCode": "420",
+              "abbreviation": "NLRB",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -53882,6 +54850,21 @@
               "level": "subelement",
               "opmCode": "NM00",
               "opmName": "NATIONAL MEDIATION BOARD",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 9928459.85,
+              "outlayAmount": 10305044.72,
+              "budgetAuthorityAmount": 19731197.15,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "National Mediation Board",
+              "agencySlug": "national-mediation-board",
+              "toptierCode": "421",
+              "abbreviation": "NMB",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -54093,6 +55076,21 @@
               "opmName": "NATIONAL SCIENCE FOUNDATION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 2802516096.36,
+              "outlayAmount": 6302771857.65,
+              "budgetAuthorityAmount": 10172124519.39,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "National Science Foundation",
+              "agencySlug": "national-science-foundation",
+              "toptierCode": "049",
+              "abbreviation": "NSF",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -54275,6 +55273,21 @@
               "opmName": "NATIONAL TRANSPORTATION SAFETY BOARD",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 94445154.38,
+              "outlayAmount": 104207274.44,
+              "budgetAuthorityAmount": 170123488.72,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "National Transportation Safety Board",
+              "agencySlug": "national-transportation-safety-board",
+              "toptierCode": "424",
+              "abbreviation": "NTSB",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -54380,6 +55393,21 @@
               "opmName": "NORTHERN BORDER REGIONAL COMMISSION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 43405007.09,
+              "outlayAmount": 36876050.94,
+              "budgetAuthorityAmount": 224882300.3,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Northern Border Regional Commission",
+              "agencySlug": "northern-border-regional-commission",
+              "toptierCode": "573",
+              "abbreviation": "NBRC",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -54475,7 +55503,22 @@
               },
               "rolledUp": false
             },
-            "children": []
+            "children": [],
+            "spending": {
+              "obligatedAmount": 0,
+              "outlayAmount": 0,
+              "budgetAuthorityAmount": 0,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Office of Navajo and Hopi Indian Relocation",
+              "agencySlug": "office-of-navajo-and-hopi-indian-relocation",
+              "toptierCode": "435",
+              "abbreviation": "ONHIR",
+              "matchedHow": "name",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-1700",
@@ -54942,6 +55985,21 @@
               "opmName": "ADVISORY COUNCIL ON HISTORIC PRESERVATION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 9553718.71,
+              "outlayAmount": 6824014.3,
+              "budgetAuthorityAmount": 18380738.17,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Advisory Council on Historic Preservation",
+              "agencySlug": "advisory-council-on-historic-preservation",
+              "toptierCode": "306",
+              "abbreviation": "ACHP",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -55122,6 +56180,21 @@
               "level": "subelement",
               "opmCode": "AM00",
               "opmName": "U.S. AGENCY FOR INTERNATIONAL DEVELOPMENT",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 6654137928.28,
+              "outlayAmount": 9049638602.34,
+              "budgetAuthorityAmount": 17048703975.55,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Agency for International Development",
+              "agencySlug": "agency-for-international-development",
+              "toptierCode": "072",
+              "abbreviation": "USAID",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -55458,6 +56531,21 @@
               "opmName": "COMMISSION FOR THE PRESERVATION OF AMERICA'S HERITAGE ABROAD",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 0,
+              "outlayAmount": 0,
+              "budgetAuthorityAmount": 0,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Commission for the Preservation of America's Heritage Abroad",
+              "agencySlug": "commission-for-the-preservation-of-americas-heritage-abroad",
+              "toptierCode": "321",
+              "abbreviation": "HERITAGEABROAD",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -55521,6 +56609,21 @@
               "level": "subelement",
               "opmCode": "CF00",
               "opmName": "COMMISSION OF FINE ARTS",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 0,
+              "outlayAmount": 0,
+              "budgetAuthorityAmount": 0,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Commission of Fine Arts",
+              "agencySlug": "commission-of-fine-arts",
+              "toptierCode": "323",
+              "abbreviation": "CFA",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -55658,6 +56761,21 @@
               "level": "subelement",
               "opmCode": "CC00",
               "opmName": "COMMISSION ON CIVIL RIGHTS",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 9746144.65,
+              "outlayAmount": 9041428.6,
+              "budgetAuthorityAmount": 17057262.7,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Commission on Civil Rights",
+              "agencySlug": "commission-on-civil-rights",
+              "toptierCode": "326",
+              "abbreviation": "USCCR",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -55918,6 +57036,21 @@
               "opmName": "COMMODITY FUTURES TRADING COMMISSION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 283938510.98,
+              "outlayAmount": 260371775.47,
+              "budgetAuthorityAmount": 1470758089.6,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Commodity Futures Trading Commission",
+              "agencySlug": "commodity-futures-trading-commission",
+              "toptierCode": "339",
+              "abbreviation": "CFTC",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -56098,6 +57231,21 @@
               "level": "subelement",
               "opmCode": "FRFT",
               "opmName": "CONSUMER FINANCIAL PROTECTION BUREAU",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 339374751.65,
+              "outlayAmount": 353912242.22,
+              "budgetAuthorityAmount": 857705028.86,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Consumer Financial Protection Bureau",
+              "agencySlug": "consumer-financial-protection-bureau",
+              "toptierCode": "581",
+              "abbreviation": "CFPB",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -56282,6 +57430,21 @@
               "opmName": "CONSUMER PRODUCT SAFETY COMMISSION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 99870385.56,
+              "outlayAmount": 102997397.41,
+              "budgetAuthorityAmount": 168726767.13,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Consumer Product Safety Commission",
+              "agencySlug": "consumer-product-safety-commission",
+              "toptierCode": "061",
+              "abbreviation": "CPSC",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -56345,6 +57508,21 @@
               "level": "subelement",
               "opmCode": "IG00",
               "opmName": "COUNCIL OF THE INSPECTORS GENERAL ON INTEGRITY AND EFFICIENCY",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 0,
+              "outlayAmount": 0,
+              "budgetAuthorityAmount": 0,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Council of the Inspectors General on Integrity and Efficiency",
+              "agencySlug": "council-of-the-inspectors-general-on-integrity-and-efficiency",
+              "toptierCode": "542",
+              "abbreviation": "CIGIE",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -56509,6 +57687,21 @@
               "opmName": "DEFENSE NUCLEAR FACILITIES SAFETY BOARD",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 30204381.58,
+              "outlayAmount": 29457348.18,
+              "budgetAuthorityAmount": 51409807.94,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Defense Nuclear Facilities Safety Board",
+              "agencySlug": "defense-nuclear-facilities-safety-board",
+              "toptierCode": "347",
+              "abbreviation": "DNFSB",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -56572,6 +57765,21 @@
               "level": "subelement",
               "opmCode": "GQ00",
               "opmName": "ELECTION ASSISTANCE COMMISSION",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 60225676.64,
+              "outlayAmount": 48884363.7,
+              "budgetAuthorityAmount": 75650579.35,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Election Assistance Commission",
+              "agencySlug": "election-assistance-commission",
+              "toptierCode": "525",
+              "abbreviation": "EAC",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -57583,6 +58791,21 @@
               "opmName": "ENVIRONMENTAL PROTECTION AGENCY",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 12692737476.55,
+              "outlayAmount": 13181386573.79,
+              "budgetAuthorityAmount": 55793377700.65,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Environmental Protection Agency",
+              "agencySlug": "environmental-protection-agency",
+              "toptierCode": "068",
+              "abbreviation": "EPA",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -57763,6 +58986,21 @@
               "level": "subelement",
               "opmCode": "EE00",
               "opmName": "EQUAL EMPLOYMENT OPPORTUNITY COMMISSION",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 315738708.4,
+              "outlayAmount": 312438809.32,
+              "budgetAuthorityAmount": 469079043.1,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Equal Employment Opportunity Commission",
+              "agencySlug": "equal-employment-opportunity-commission",
+              "toptierCode": "045",
+              "abbreviation": "EEOC",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -58718,6 +59956,21 @@
               "opmName": "GENERAL SERVICES ADMINISTRATION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 30770961835.37,
+              "outlayAmount": 30923773085.34,
+              "budgetAuthorityAmount": 52601624638.98,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "General Services Administration",
+              "agencySlug": "general-services-administration",
+              "toptierCode": "047",
+              "abbreviation": "GSA",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -58807,6 +60060,21 @@
               "level": "subelement",
               "opmCode": "HW00",
               "opmName": "U.S. INTERAGENCY COUNCIL ON HOMELESSNESS",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 0,
+              "outlayAmount": 0,
+              "budgetAuthorityAmount": 0,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "U.S. Interagency Council on Homelessness",
+              "agencySlug": "us-interagency-council-on-homelessness",
+              "toptierCode": "376",
+              "abbreviation": "USICH",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -58991,6 +60259,21 @@
               "opmName": "U.S. INTERNATIONAL TRADE COMMISSION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 91028642.52,
+              "outlayAmount": 89431658.16,
+              "budgetAuthorityAmount": 126465049.73,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "International Trade Commission",
+              "agencySlug": "international-trade-commission",
+              "toptierCode": "034",
+              "abbreviation": "USITC",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -59054,6 +60337,21 @@
               "level": "subelement",
               "opmCode": "MA00",
               "opmName": "MARINE MAMMAL COMMISSION",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 2469153.12,
+              "outlayAmount": 2510463.61,
+              "budgetAuthorityAmount": 5841722.12,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Marine Mammal Commission",
+              "agencySlug": "marine-mammal-commission",
+              "toptierCode": "387",
+              "abbreviation": "MMC",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -59216,6 +60514,21 @@
               "level": "subelement",
               "opmCode": "BD00",
               "opmName": "MERIT SYSTEMS PROTECTION BOARD",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 36853769.97,
+              "outlayAmount": 36257746.23,
+              "budgetAuthorityAmount": 60742410.19,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Merit Systems Protection Board",
+              "agencySlug": "merit-systems-protection-board",
+              "toptierCode": "389",
+              "abbreviation": "MSPB",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -59426,6 +60739,21 @@
               "opmName": "NUCLEAR REGULATORY COMMISSION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 669105825.62,
+              "outlayAmount": 659117029.6,
+              "budgetAuthorityAmount": 1113505007.24,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Nuclear Regulatory Commission",
+              "agencySlug": "nuclear-regulatory-commission",
+              "toptierCode": "031",
+              "abbreviation": "NRC",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -59489,6 +60817,21 @@
               "level": "subelement",
               "opmCode": "BW00",
               "opmName": "NUCLEAR WASTE TECHNICAL REVIEW BOARD",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 3012975.36,
+              "outlayAmount": 2694570.04,
+              "budgetAuthorityAmount": 5696026.04,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Nuclear Waste Technical Review Board",
+              "agencySlug": "nuclear-waste-technical-review-board",
+              "toptierCode": "431",
+              "abbreviation": "NWTRB",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -59613,6 +60956,21 @@
               "opmName": "OCCUPATIONAL SAFETY AND HEALTH REVIEW COMMISSION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 8920033.14,
+              "outlayAmount": 9866032.71,
+              "budgetAuthorityAmount": 19695091.86,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Occupational Safety and Health Review Commission",
+              "agencySlug": "occupational-safety-and-health-review-commission",
+              "toptierCode": "432",
+              "abbreviation": "OSHRC",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -59718,6 +61076,21 @@
               "level": "subelement",
               "opmCode": "GG00",
               "opmName": "OFFICE OF GOVERNMENT ETHICS",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 16480763.65,
+              "outlayAmount": 14547344.18,
+              "budgetAuthorityAmount": 30465634.7,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Office of Government Ethics",
+              "agencySlug": "office-of-government-ethics",
+              "toptierCode": "434",
+              "abbreviation": "OGE",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -60683,6 +62056,21 @@
               "opmName": "OFFICE OF PERSONNEL MANAGEMENT",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 164663181711.36,
+              "outlayAmount": 163409097443.49,
+              "budgetAuthorityAmount": 386326357617.23,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Office of Personnel Management",
+              "agencySlug": "office-of-personnel-management",
+              "toptierCode": "024",
+              "abbreviation": "OPM",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -60865,6 +62253,21 @@
               "opmName": "OFFICE OF SPECIAL COUNSEL",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 22825352.06,
+              "outlayAmount": 21192791.55,
+              "budgetAuthorityAmount": 32573939.02,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Office of Special Counsel",
+              "agencySlug": "office-of-special-counsel",
+              "toptierCode": "062",
+              "abbreviation": "OSC",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -61045,6 +62448,21 @@
               "level": "subelement",
               "opmCode": "PU00",
               "opmName": "PEACE CORPS",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 336448162.94,
+              "outlayAmount": 314266408.35,
+              "budgetAuthorityAmount": 489262901.35,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Peace Corps",
+              "agencySlug": "peace-corps",
+              "toptierCode": "1125",
+              "abbreviation": "PC",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -61292,6 +62710,21 @@
               "opmName": "PRIVACY AND CIVIL LIBERTIES OVERSIGHT BOARD",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 11535642.55,
+              "outlayAmount": 8814915.48,
+              "budgetAuthorityAmount": 17991315.16,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Privacy and Civil Liberties Oversight Board",
+              "agencySlug": "privacy-and-civil-liberties-oversight-board",
+              "toptierCode": "535",
+              "abbreviation": "PCLOB",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -61472,6 +62905,21 @@
               "level": "subelement",
               "opmCode": "RR00",
               "opmName": "RAILROAD RETIREMENT BOARD",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 13147755582.58,
+              "outlayAmount": 13145222198.67,
+              "budgetAuthorityAmount": 18161505893.9,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Railroad Retirement Board",
+              "agencySlug": "railroad-retirement-board",
+              "toptierCode": "060",
+              "abbreviation": "RRB",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -61696,6 +63144,21 @@
               "opmName": "SECURITIES AND EXCHANGE COMMISSION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 1477205228.77,
+              "outlayAmount": 1418590003.34,
+              "budgetAuthorityAmount": 3261007284.75,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Securities and Exchange Commission",
+              "agencySlug": "securities-and-exchange-commission",
+              "toptierCode": "050",
+              "abbreviation": "SEC",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -61871,6 +63334,21 @@
               "level": "subelement",
               "opmCode": "SS00",
               "opmName": "SELECTIVE SERVICE SYSTEM",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 23086543.86,
+              "outlayAmount": 23599772.12,
+              "budgetAuthorityAmount": 39467061.86,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Selective Service System",
+              "agencySlug": "selective-service-system",
+              "toptierCode": "090",
+              "abbreviation": "SSS",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -62053,6 +63531,21 @@
               "level": "subelement",
               "opmCode": "SB00",
               "opmName": "SMALL BUSINESS ADMINISTRATION",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 14734748860.35,
+              "outlayAmount": 14753132387.02,
+              "budgetAuthorityAmount": 20315846602.57,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Small Business Administration",
+              "agencySlug": "small-business-administration",
+              "toptierCode": "073",
+              "abbreviation": "SBA",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -62732,6 +64225,21 @@
               "opmName": "SOCIAL SECURITY ADMINISTRATION",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 1359579100984.49,
+              "outlayAmount": 1350677100855.33,
+              "budgetAuthorityAmount": 1421596559431.62,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Social Security Administration",
+              "agencySlug": "social-security-administration",
+              "toptierCode": "028",
+              "abbreviation": "SSA",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -62930,6 +64438,21 @@
               "opmName": "TRADE AND DEVELOPMENT AGENCY",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "spending": {
+              "obligatedAmount": 53166729.1,
+              "outlayAmount": 43127336.52,
+              "budgetAuthorityAmount": 232375373.27,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "United States Trade and Development Agency",
+              "agencySlug": "united-states-trade-and-development-agency",
+              "toptierCode": "1133",
+              "abbreviation": "USTDA",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -63113,7 +64636,22 @@
               },
               "rolledUp": false
             },
-            "children": []
+            "children": [],
+            "spending": {
+              "obligatedAmount": 0,
+              "outlayAmount": 0,
+              "budgetAuthorityAmount": 0,
+              "fiscalYear": "2026",
+              "fiscalQuarter": "3",
+              "asOf": "FY2026 Q3",
+              "source": "USAspending.gov (toptier agencies)",
+              "agencyName": "Vietnam Education Foundation",
+              "agencySlug": "vietnam-education-foundation",
+              "toptierCode": "519",
+              "abbreviation": "VEF",
+              "matchedHow": "name",
+              "rolledUp": false
+            }
           },
           {
             "id": "gsa-1139",
@@ -63177,6 +64715,21 @@
           "opmName": null,
           "matchedHow": "sum-children",
           "rolledUp": true
+        },
+        "spending": {
+          "obligatedAmount": 1642195338697.67,
+          "outlayAmount": 1640037504977.12,
+          "budgetAuthorityAmount": 2190808971593.65,
+          "fiscalYear": null,
+          "fiscalQuarter": null,
+          "asOf": "FY2026 Q3",
+          "source": "USAspending.gov (toptier agencies)",
+          "agencyName": null,
+          "agencySlug": null,
+          "toptierCode": null,
+          "abbreviation": null,
+          "matchedHow": "sum-children",
+          "rolledUp": true
         }
       }
     ],
@@ -63189,6 +64742,21 @@
       "opmName": "GOVERNMENT PUBLISHING OFFICE",
       "matchedHow": "jaccard-0.86",
       "rolledUp": false
+    },
+    "spending": {
+      "obligatedAmount": 8184714481106.459,
+      "outlayAmount": 7858475005050.51,
+      "budgetAuthorityAmount": 15725658781327.459,
+      "fiscalYear": null,
+      "fiscalQuarter": null,
+      "asOf": "FY2026 Q3",
+      "source": "USAspending.gov (toptier agencies)",
+      "agencyName": null,
+      "agencySlug": null,
+      "toptierCode": null,
+      "abbreviation": null,
+      "matchedHow": "sum-children",
+      "rolledUp": true
     }
   }
 }

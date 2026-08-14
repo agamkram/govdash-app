@@ -5,6 +5,7 @@ from pathlib import Path
 from urllib.error import HTTPError
 from urllib.parse import parse_qs, urlencode, urlparse
 from urllib.request import Request, urlopen
+from datetime import datetime
 import json
 import ssl
 import sys
@@ -20,6 +21,8 @@ FISCAL_BASE = "https://api.fiscaldata.treasury.gov/services/api/fiscal_service"
 FISCAL_DATASETS = {
     "debt_to_penny": "/v2/accounting/od/debt_to_penny",
     "interest_expense": "/v2/accounting/od/interest_expense",
+    "mts_table_1": "/v1/accounting/mts/mts_table_1",
+    "mts_table_4": "/v1/accounting/mts/mts_table_4",
 }
 FISCAL_PARAMS = ("sort", "page[size]", "page[number]", "fields", "filter")
 
@@ -107,6 +110,73 @@ def lookup_you(zip_code):
     }
 
 
+def fy_window():
+    now = datetime.now()
+    fy = now.year + 1 if now.month >= 10 else now.year
+    return fy, "%d-10-01" % (fy - 1), now.strftime("%Y-%m-%d")
+
+
+def usaspending_agencies(location, start, end):
+    payload = json.dumps(
+        {
+            "filters": {
+                "time_period": [{"start_date": start, "end_date": end}],
+                "place_of_performance_locations": [location],
+            },
+            "limit": 8,
+        }
+    ).encode()
+    req = Request(
+        "https://api.usaspending.gov/api/v2/search/spending_by_category/awarding_agency/",
+        data=payload,
+        headers={
+            "User-Agent": "GovDash/1",
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+        },
+        method="POST",
+    )
+    with urlopen(req, timeout=25, context=fiscal_ssl()) as r:
+        data = json.loads(r.read().decode())
+    out = []
+    for row in data.get("results") or []:
+        out.append(
+            {
+                "name": row.get("name") or "",
+                "code": row.get("code") or "",
+                "agencySlug": row.get("agency_slug") or "",
+                "amount": float(row.get("amount") or 0),
+            }
+        )
+    return out
+
+
+def lookup_spend(zip_code):
+    place = _http_json("https://api.zippopotam.us/us/" + zip_code)
+    loc = (place.get("places") or [None])[0]
+    if not loc:
+        raise KeyError("Unknown ZIP")
+    state = loc.get("state abbreviation")
+    fy, start, end = fy_window()
+    zip_agencies = usaspending_agencies(
+        {"country": "USA", "zip": zip_code}, start, end
+    )
+    state_agencies = usaspending_agencies(
+        {"country": "USA", "state": state}, start, end
+    )
+    return {
+        "zip": zip_code,
+        "city": loc.get("place name"),
+        "state": state,
+        "stateName": loc.get("state") or state,
+        "fy": fy,
+        "start": start,
+        "end": end,
+        "zipAgencies": zip_agencies,
+        "stateAgencies": state_agencies,
+    }
+
+
 def fiscal_ssl():
     """Trust Sectigo R46 — missing from the macOS 12 store, required by Treasury."""
     global _fiscal_ssl
@@ -130,6 +200,9 @@ class Handler(SimpleHTTPRequestHandler):
         if parsed.path.rstrip("/") == "/api/you":
             self.proxy_you(parsed)
             return
+        if parsed.path.rstrip("/") == "/api/spend":
+            self.proxy_spend(parsed)
+            return
         super().do_GET()
 
     def proxy_fiscal(self, parsed):
@@ -148,7 +221,7 @@ class Handler(SimpleHTTPRequestHandler):
             headers={"User-Agent": "GovDash/1", "Accept": "application/json"},
         )
         try:
-            with urlopen(req, context=fiscal_ssl(), timeout=20) as r:
+            with urlopen(req, context=fiscal_ssl(), timeout=30) as r:
                 body = r.read()
                 status = r.status
                 ctype = r.headers.get("Content-Type", "application/json")
@@ -176,6 +249,34 @@ class Handler(SimpleHTTPRequestHandler):
         else:
             try:
                 payload = lookup_you(zip_code)
+                body = json.dumps(payload).encode()
+                self.send_response(200)
+            except HTTPError as e:
+                status = 404 if e.code == 404 else 502
+                msg = "Unknown ZIP" if e.code == 404 else str(e)
+                body = json.dumps({"error": msg}).encode()
+                self.send_response(status)
+            except KeyError:
+                body = json.dumps({"error": "Unknown ZIP"}).encode()
+                self.send_response(404)
+            except Exception as e:
+                body = json.dumps({"error": str(e)}).encode()
+                self.send_response(502)
+        self.send_header("Content-Type", "application/json")
+        self.send_header("Cache-Control", "no-cache")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
+    def proxy_spend(self, parsed):
+        qs = parse_qs(parsed.query, keep_blank_values=False)
+        zip_code = "".join(c for c in (qs.get("zip") or [""])[0] if c.isdigit())[:5]
+        if len(zip_code) != 5:
+            body = json.dumps({"error": "Need a 5-digit ZIP"}).encode()
+            self.send_response(400)
+        else:
+            try:
+                payload = lookup_spend(zip_code)
                 body = json.dumps(payload).encode()
                 self.send_response(200)
             except HTTPError as e:
