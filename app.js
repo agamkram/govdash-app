@@ -756,6 +756,29 @@ function renderAtlasSub(path) {
   atlasSubEl.hidden = false;
 }
 
+function searchRank(n, q) {
+  const name = (n.name || "").toLowerCase();
+  const short = (n.short || "").toLowerCase();
+  const kindRank =
+    {
+      department: 0,
+      independent: 1,
+      agency: 2,
+      branch: 3,
+      chamber: 3,
+      bureau: 4,
+    }[n.kind] ?? 8;
+  if (short === q) return [0, kindRank];
+  if (short.startsWith(q)) return [1, kindRank];
+  if (name.includes(`(${q})`)) return [2, kindRank];
+  const tokens = name.split(/[^a-z0-9]+/).filter(Boolean);
+  if (tokens.some((t) => t === q)) return [3, kindRank];
+  if (tokens.some((t) => t.startsWith(q))) return [4, kindRank];
+  if (short.includes(q)) return [5, kindRank];
+  if (name.includes(q)) return [6, kindRank];
+  return [9, kindRank];
+}
+
 function updateSearch(q) {
   const query = q.trim().toLowerCase();
   if (query.length < 2) {
@@ -766,17 +789,32 @@ function updateSearch(q) {
   const hits = searchableAll
     .filter(
       (n) =>
-        n.name.toLowerCase().includes(query) ||
+        (n.name || "").toLowerCase().includes(query) ||
         (n.short && n.short.toLowerCase().includes(query))
     )
+    .sort((a, b) => {
+      const ra = searchRank(a, query);
+      const rb = searchRank(b, query);
+      return ra[0] - rb[0] || ra[1] - rb[1] || (a.name || "").localeCompare(b.name || "");
+    })
     .slice(0, 12);
   searchResults.replaceChildren();
   for (const hit of hits) {
     const li = document.createElement("li");
     const btn = document.createElement("button");
-    const mark = hit.atlas === "beyond" ? "∞ " : "";
+    const kind = document.createElement("span");
+    kind.className = "sr-kind";
+    kind.textContent = hit.kind || "";
     btn.type = "button";
-    btn.innerHTML = `<span class="sr-kind">${hit.kind || ""}</span> ${mark}${hit.name}`;
+    btn.append(kind, " ");
+    if (hit.atlas === "beyond") btn.append("∞ ");
+    if (hit.short && hit.short.length <= 8) {
+      const sh = document.createElement("span");
+      sh.className = "sr-short";
+      sh.textContent = hit.short;
+      btn.append(sh, " ");
+    }
+    btn.append(hit.name);
     btn.addEventListener("click", () => {
       closeAppPage();
       viewApi.zoomToId(hit.id);
