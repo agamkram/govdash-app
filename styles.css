@@ -46,21 +46,29 @@ body {
  * bottom — SuperMoon Bug B) and mobile Safari tabs.
  * Desktop: leave default 100%.
  */
-/* Mobile/PWA height: one webview box. Never inflate with screen.height after paint. */
+/* PWA + mobile fill: shell fills the real screen (not the short layout box). */
 html.app-fill,
 html.app-fill body {
   height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
   min-height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
 }
 
-/* PWA: fill the real webview only (inset:0). Safe-area is shell padding-bottom. */
+/*
+ * Home-screen PWA: top/left/right + height = screen axis (JS --app-fill-h).
+ * inset:0 alone = short layout viewport → Depth floats above a black void (4316).
+ * bottom:auto so height is not crushed. Safe-area: home indicator overlays the
+ * bar; do not add a second empty band under it.
+ */
 html.pwa-standalone,
 html.pwa-standalone body {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
   width: 100%;
-  height: 100%;
-  min-height: 100%;
+  height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
+  min-height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
   overflow: hidden;
   touch-action: none;
   overscroll-behavior: none;
@@ -85,8 +93,9 @@ html.pwa-standalone body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
-    env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+  /* Top/sides only — bottom safe-area must not open a black band under Depth. */
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) 0
+    env(safe-area-inset-left, 0px);
   box-sizing: border-box;
 }
 
@@ -97,14 +106,13 @@ html.pwa-standalone body {
   flex: 0 0 auto;
 }
 
-html.app-fill .shell {
+html.app-fill .shell,
+html.pwa-standalone .shell {
   height: 100%;
   min-height: 100%;
 }
 
 html.pwa-standalone .shell {
-  height: 100%;
-  min-height: 100%;
   touch-action: none;
   overscroll-behavior: none;
 }
@@ -923,7 +931,7 @@ html[data-theme="dark"] .fiscal-agency-amt {
 }
 
 .chrome-bottom {
-  /* Flex footer in normal flow — 0.43in controls, safe-area is on .shell */
+  /* Flex footer on the shell floor. No margin-bottom safe-area (that was 4316 void). */
   --depth-bar-h: 0.43in;
   display: flex;
   align-items: center;

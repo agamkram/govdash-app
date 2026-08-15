@@ -122,9 +122,17 @@ function readSafeInsetBottom() {
 }
 
 function appFillHeightPx() {
-  /* Webview only — never screen.height (that stretched the shell and hid Depth). */
   const ih = window.innerHeight || 0;
   const vv = Math.round(window.visualViewport?.height || 0);
+  const sw = window.screen.width || 0;
+  const sh = window.screen.height || 0;
+  const screenMax = Math.max(sw, sh);
+  const screenMin = Math.min(sw, sh);
+  const screenH = isPortrait() ? screenMax : screenMin;
+  /* PWA: must reach physical screen bottom or Depth floats (4316 void). */
+  if (document.documentElement.classList.contains("pwa-standalone")) {
+    return Math.max(ih, vv, screenH);
+  }
   return Math.max(ih, vv);
 }
 
@@ -134,18 +142,9 @@ function appExtraBottomPx() {
 
 function syncAppFillHeight() {
   const root = document.documentElement;
-  /*
-   * PWA: CSS inset:0 owns height. Do not rewrite --app-fill-h after paint
-   * (4314→4315: later JS pass killed the tight bottom).
-   */
-  if (root.classList.contains("pwa-standalone")) {
-    root.classList.remove("app-fill");
-    root.style.removeProperty("--app-fill-h");
-    root.style.removeProperty("--app-extra-b");
-    lastFillKey = "pwa-inset";
-    return 0;
-  }
-  if (!isMobileTouch()) {
+  const useFill =
+    root.classList.contains("pwa-standalone") || isMobileTouch();
+  if (!useFill) {
     root.classList.remove("app-fill");
     root.style.removeProperty("--app-fill-h");
     root.style.removeProperty("--app-extra-b");

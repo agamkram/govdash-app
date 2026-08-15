@@ -10,7 +10,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <script>
-    /* PWA: class only. Size is CSS inset:0 + height:100%. No screen.height. */
+    /* PWA: fill to screen height before paint so Depth is not above a black void. */
     (function () {
       var n = window.navigator;
       var standalone =
@@ -18,7 +18,23 @@
         window.matchMedia("(display-mode: standalone)").matches ||
         window.matchMedia("(display-mode: fullscreen)").matches;
       if (!standalone) return;
-      document.documentElement.classList.add("pwa-standalone");
+      var root = document.documentElement;
+      root.classList.add("pwa-standalone");
+      root.classList.add("app-fill");
+      var iw = window.innerWidth || 0;
+      var ih = window.innerHeight || 0;
+      var vv = Math.round((window.visualViewport && window.visualViewport.height) || 0);
+      var sw = window.screen.width || 0;
+      var sh = window.screen.height || 0;
+      var screenMax = Math.max(sw, sh);
+      var screenMin = Math.min(sw, sh);
+      var portrait =
+        window.matchMedia("(orientation: portrait)").matches ||
+        (!window.matchMedia("(orientation: landscape)").matches && ih >= iw);
+      var screenH = portrait ? screenMax : screenMin;
+      var fillH = Math.max(ih, vv, screenH);
+      root.style.setProperty("--app-fill-h", fillH + "px");
+      root.style.setProperty("--app-extra-b", "0px");
     })();
   </script>
   <title>GovDash</title>
@@ -27,8 +43,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Michroma&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2410" />
-  <meta name="govdash-build" content="2410-freeze-webview" />
+  <link rel="stylesheet" href="styles.css?v=2420" />
+  <meta name="govdash-build" content="2420-screen-fill-bar-floor" />
 </head>
 <body>
   <div class="shell">
@@ -225,7 +241,7 @@
       </label>
     </footer>
   </div>
-  <script type="module" src="app.js?v=2410"></script>
+  <script type="module" src="app.js?v=2420"></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
