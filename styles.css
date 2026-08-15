@@ -49,22 +49,16 @@ html.app-fill body {
 }
 
 /*
- * PWA only: lock document so range drags don't pan the app.
- * SuperMoon Bug B (Desktop Bottom:full bleed.txt): do NOT use inset:0.
- * inset bottom pins to the *short* layout viewport and clips ~5/16″ above
- * the home indicator — that line was cutting the slider handles.
- * top/left/right + bottom:auto + fill height = paint to screen bottom.
+ * PWA: pin to the layout viewport (inset:0). Do NOT also force height to
+ * screen.height and then add safe-area margin — that double-counts and leaves
+ * the empty band under Depth (4299) / under the map on Sankey (4298).
+ * Single clearance: env(safe-area-inset-bottom) on the bar or map bottom.
  */
 html.pwa-standalone,
 html.pwa-standalone body {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: auto;
+  inset: 0;
   width: 100%;
-  height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
-  min-height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
   overflow: hidden;
   touch-action: none;
   overscroll-behavior: none;
@@ -923,7 +917,7 @@ html[data-theme="dark"] .fiscal-agency-amt {
 }
 
 .chrome-bottom {
-  --depth-bar-h: 0.43in; /* ~0.430″ Depth only — matches pre-FY production */
+  --depth-bar-h: 0.43in; /* ~0.430″ gray bar; same port + landscape (4288) */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -932,26 +926,22 @@ html[data-theme="dark"] .fiscal-agency-amt {
   min-height: var(--depth-bar-h);
   max-height: var(--depth-bar-h);
   padding: 0 1rem;
+  /* One home-indicator inset only — never stack with screen-height fill. */
   margin-bottom: env(safe-area-inset-bottom, 0px);
   box-sizing: border-box;
-  width: 100%;
-  max-width: 100%;
   min-width: 0;
   border-top: 1px solid var(--line);
   border-bottom: 0;
   background: var(--bg);
   overscroll-behavior: none;
-  overflow: visible;
 }
 
 .chrome-bottom .icicle-depth {
-  flex: 0 1 auto;
+  flex: 0 0 auto;
   justify-content: center;
-  min-width: 0;
-  max-width: 100%;
 }
 
-/* Depth range — custom thumb (Safari + PWA). */
+/* Depth range — custom thumb (Safari + PWA). Match 4288: no forced 1.7rem input box. */
 .chrome-bottom input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
@@ -959,8 +949,6 @@ html[data-theme="dark"] .fiscal-agency-amt {
   touch-action: manipulation;
   cursor: pointer;
   margin: 0;
-  height: 1.7rem;
-  min-height: 1.7rem;
   accent-color: var(--ink);
 }
 
@@ -1028,24 +1016,27 @@ html[data-theme="dark"] .fiscal-agency-amt {
   background: var(--bg);
 }
 
+/* No Depth bar (Tree / Circles / Sankey): one safe-area under the map — 4286. */
 .shell:not(:has(#chrome-bottom:not([hidden]))) .map {
-  bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
+  bottom: max(0.35rem, env(safe-area-inset-bottom, 0px));
 }
 
-/* App pages (i / Z / $) never share the depth bar — always clear the home swipe. */
+/* App pages (i / Z / $) — same single safe-area, no +1.2rem void. */
 .shell[data-page="fiscal"] .app-page,
 .shell[data-page="you"] .app-page,
 .shell[data-page="about"] .app-page {
-  bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
+  bottom: max(0.35rem, env(safe-area-inset-bottom, 0px));
 }
 
-/* Phone PWA: when the bottom bar is hidden, clear the home indicator only.
-   Do not add extra rem lift — that raised the map above the tight production layout. */
 @media (max-width: 720px) {
+  .shell:not(:has(#chrome-bottom:not([hidden]))) .map,
   html.pwa-standalone .shell:not(:has(#chrome-bottom:not([hidden]))) .map {
     bottom: max(0.28rem, env(safe-area-inset-bottom, 0px));
   }
 
+  .shell[data-page="fiscal"] .app-page,
+  .shell[data-page="you"] .app-page,
+  .shell[data-page="about"] .app-page,
   html.pwa-standalone .shell[data-page="fiscal"] .app-page,
   html.pwa-standalone .shell[data-page="you"] .app-page,
   html.pwa-standalone .shell[data-page="about"] .app-page {

@@ -124,14 +124,11 @@ function readSafeInsetBottom() {
 function appFillHeightPx() {
   const ih = window.innerHeight || 0;
   const vv = Math.round(window.visualViewport?.height || 0);
-  const sw = window.screen.width || 0;
-  const sh = window.screen.height || 0;
-  const screenMax = Math.max(sw, sh);
-  const screenMin = Math.min(sw, sh);
-  const screenH = isPortrait() ? screenMax : screenMin;
-  if (document.documentElement.classList.contains("pwa-standalone")) {
-    return Math.max(ih, vv, screenH);
-  }
+  /*
+   * Use the layout / visual viewport only. Inflating to screen.height and then
+   * also applying env(safe-area) under Depth left the empty band in 4298/4299.
+   * Home indicator clearance is CSS safe-area on the bar / map, once.
+   */
   return Math.max(ih, vv);
 }
 
