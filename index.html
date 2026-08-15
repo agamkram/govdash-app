@@ -10,8 +10,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <script>
-    /* PWA: fill the layout viewport before paint. Do not use screen.height —
-       that double-counts with env(safe-area) and opens a void under the bar. */
+    /* Home-screen PWA: class only. Size is CSS inset:0 + height:100% — do not
+       write --app-fill-h here (that caused Loading-tight → after-load float). */
     (function () {
       var n = window.navigator;
       var standalone =
@@ -19,23 +19,7 @@
         window.matchMedia("(display-mode: standalone)").matches ||
         window.matchMedia("(display-mode: fullscreen)").matches;
       if (!standalone) return;
-      var root = document.documentElement;
-      root.classList.add("pwa-standalone");
-      root.classList.add("app-fill");
-      var ih = window.innerHeight || 0;
-      var vv = Math.round((window.visualViewport && window.visualViewport.height) || 0);
-      var fillH = Math.max(ih, vv);
-      var extra = 0;
-      var iw = window.innerWidth || 0;
-      var sw = window.screen.width || 0;
-      var sh = window.screen.height || 0;
-      var screenMax = Math.max(sw, sh);
-      /* iPad only: screen metrics sometimes undershoot inner — small extra. */
-      if (Math.min(iw, ih) >= 600 && screenMax < ih - 10) {
-        extra = 20;
-      }
-      root.style.setProperty("--app-fill-h", fillH + "px");
-      root.style.setProperty("--app-extra-b", extra + "px");
+      document.documentElement.classList.add("pwa-standalone");
     })();
   </script>
   <title>GovDash</title>
@@ -44,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Michroma&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2374" />
+  <link rel="stylesheet" href="styles.css?v=2375" />
 </head>
 <body>
   <div class="shell">
@@ -241,7 +225,7 @@
       </label>
     </footer>
   </div>
-  <script type="module" src="app.js?v=2374"></script>
+  <script type="module" src="app.js?v=2375"></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>

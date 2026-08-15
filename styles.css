@@ -41,24 +41,29 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Mobile/PWA: explicit fill height (avoid max-height:100dvh). */
-html.app-fill,
-html.app-fill body {
+/*
+ * Mobile Safari (tab, not home-screen): optional JS fill height.
+ * Home-screen PWA does NOT use this — see .pwa-standalone below.
+ */
+html.app-fill:not(.pwa-standalone),
+html.app-fill:not(.pwa-standalone) body {
   height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
   min-height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
 }
 
 /*
- * PWA: pin to the layout viewport (inset:0). Do NOT also force height to
- * screen.height and then add safe-area margin — that double-counts and leaves
- * the empty band under Depth (4299) / under the map on Sankey (4298).
- * Single clearance: env(safe-area-inset-bottom) on the bar or map bottom.
+ * Home-screen PWA: fill the webview with inset:0 + height 100%.
+ * Never set --app-fill-h / screen.height here — that was the first→final
+ * paint jump (4301 tight while Loading, 4302 bar floated after JS).
+ * Home indicator = padding inside .chrome-bottom / map bottom, once.
  */
 html.pwa-standalone,
 html.pwa-standalone body {
   position: fixed;
   inset: 0;
   width: 100%;
+  height: 100%;
+  min-height: 100%;
   overflow: hidden;
   touch-action: none;
   overscroll-behavior: none;
@@ -94,12 +99,14 @@ html.pwa-standalone body {
   flex: 0 0 auto;
 }
 
-html.app-fill .shell {
+html.app-fill:not(.pwa-standalone) .shell {
   height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
   min-height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
 }
 
 html.pwa-standalone .shell {
+  height: 100%;
+  min-height: 100%;
   touch-action: none;
   overscroll-behavior: none;
 }
@@ -917,18 +924,22 @@ html[data-theme="dark"] .fiscal-agency-amt {
 }
 
 .chrome-bottom {
-  --depth-bar-h: 0.43in; /* ~0.430″ gray bar; same port + landscape (4288) */
+  /*
+   * Flush to the bottom of the shell. Home indicator is padding *inside*
+   * this bar (border-box), not margin below it — margin left the void in
+   * 4302 after the Depth bar mounted.
+   */
+  --depth-bar-h: 0.43in;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  height: var(--depth-bar-h);
-  min-height: var(--depth-bar-h);
-  max-height: var(--depth-bar-h);
-  padding: 0 1rem;
-  /* One home-indicator inset only — never stack with screen-height fill. */
-  margin-bottom: env(safe-area-inset-bottom, 0px);
   box-sizing: border-box;
+  height: calc(var(--depth-bar-h) + env(safe-area-inset-bottom, 0px));
+  min-height: calc(var(--depth-bar-h) + env(safe-area-inset-bottom, 0px));
+  max-height: calc(var(--depth-bar-h) + env(safe-area-inset-bottom, 0px));
+  padding: 0 1rem env(safe-area-inset-bottom, 0px);
+  margin-bottom: 0;
   min-width: 0;
   border-top: 1px solid var(--line);
   border-bottom: 0;

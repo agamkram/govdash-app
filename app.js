@@ -124,16 +124,12 @@ function readSafeInsetBottom() {
 function appFillHeightPx() {
   const ih = window.innerHeight || 0;
   const vv = Math.round(window.visualViewport?.height || 0);
-  /*
-   * Use the layout / visual viewport only. Inflating to screen.height and then
-   * also applying env(safe-area) under Depth left the empty band in 4298/4299.
-   * Home indicator clearance is CSS safe-area on the bar / map, once.
-   */
   return Math.max(ih, vv);
 }
 
 function appExtraBottomPx() {
-  if (!document.documentElement.classList.contains("pwa-standalone")) return 0;
+  /* PWA home-screen: never add JS extra bottom — CSS safe-area on the bar. */
+  if (document.documentElement.classList.contains("pwa-standalone")) return 0;
   const iw = window.innerWidth || 0;
   const ih = window.innerHeight || 0;
   const screenMax = Math.max(window.screen.width || 0, window.screen.height || 0);
@@ -144,9 +140,15 @@ function appExtraBottomPx() {
 
 function syncAppFillHeight() {
   const root = document.documentElement;
-  const useFill =
-    root.classList.contains("pwa-standalone") || isMobileTouch();
-  if (!useFill) {
+  /* Home-screen PWA is sized by CSS (inset:0). Do not set --app-fill-h. */
+  if (root.classList.contains("pwa-standalone")) {
+    root.classList.remove("app-fill");
+    root.style.removeProperty("--app-fill-h");
+    root.style.removeProperty("--app-extra-b");
+    lastFillKey = "pwa";
+    return 0;
+  }
+  if (!isMobileTouch()) {
     root.classList.remove("app-fill");
     root.style.removeProperty("--app-fill-h");
     root.style.removeProperty("--app-extra-b");
