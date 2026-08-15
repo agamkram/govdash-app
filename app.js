@@ -672,31 +672,36 @@ function showDetail(node, opts = {}) {
     dSpending &&
     (node.spending?.obligatedAmount != null || node.spending?.outlayAmount != null)
   ) {
-    const amt =
-      node.spending.obligatedAmount != null
-        ? node.spending.obligatedAmount
-        : node.spending.outlayAmount;
-    const label =
-      node.spending.obligatedAmount != null ? "obligated" : "outlay";
     const when = node.spending.asOf ? ` · ${node.spending.asOf}` : "";
     dSpending.hidden = false;
     dSpending.replaceChildren();
-    dSpending.append(
-      document.createTextNode(`${formatDollars(amt)} ${label}${when}`)
-    );
+    const lines = [];
+    if (node.spending.obligatedAmount != null) {
+      lines.push(`${formatDollars(node.spending.obligatedAmount)} committed`);
+    }
+    if (node.spending.outlayAmount != null) {
+      lines.push(`${formatDollars(node.spending.outlayAmount)} paid`);
+    }
+    lines.forEach((text, i) => {
+      const row = document.createElement("span");
+      row.className = "detail-spend-line";
+      row.textContent = i === lines.length - 1 ? `${text}${when}` : text;
+      dSpending.append(row);
+    });
     if (
       node.spending.agencySlug &&
       !node.spending.rolledUp &&
       node.spending.grain !== "subtier"
     ) {
-      dSpending.append(document.createTextNode(" · "));
+      const last = dSpending.querySelector(".detail-spend-line:last-child") || dSpending;
+      last.append(document.createTextNode(" · "));
       const a = document.createElement("a");
       a.href = `https://www.usaspending.gov/agency/${node.spending.agencySlug}`;
       a.target = "_blank";
       a.rel = "noopener noreferrer";
       a.textContent = "USAspending";
       a.title = "Open this agency on USAspending.gov";
-      dSpending.append(a);
+      last.append(a);
     }
   } else if (dSpending) {
     dSpending.hidden = true;

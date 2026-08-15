@@ -487,7 +487,7 @@ export function createFiscalPage(el, { getRoot, onMap } = {}) {
       ${zipList || `<p class="fiscal-note">No awards matched this ZIP for FY${esc(data.fy)} so far.</p>`}
       <p class="fiscal-sub fiscal-sub-gap">Statewide · ${esc(data.state)}</p>
       ${stateList || `<p class="fiscal-note">No statewide awards returned.</p>`}
-      <p class="fiscal-note">Place of performance — where the work happened — not the agency’s nationwide obligated total. FY${esc(data.fy)} from ${esc(data.start)} through ${esc(data.end)}. Source: USAspending.</p>
+      <p class="fiscal-note">Place of performance — where the work happened — not the agency’s nationwide committed total. FY${esc(data.fy)} from ${esc(data.start)} through ${esc(data.end)}. Source: USAspending.</p>
     `);
   }
 
@@ -612,10 +612,10 @@ export function createFiscalPage(el, { getRoot, onMap } = {}) {
     const agencyBlock = agencies.length
       ? `
       <section class="fiscal-block">
-        <h3>Where obligated dollars go</h3>
+        <h3>Where committed dollars go</h3>
         <p class="fiscal-sub">${esc(spendAsOf) || "USAspending toptier"} · tap to open on the map</p>
         <div class="fiscal-agency-list">${agencyButtons(agencies)}</div>
-        <p class="fiscal-note">Nationwide obligated amounts on matched Cabinet / independent agencies — the same snapshot as the detail pane. Not ZIP-level awards (those are below).</p>
+        <p class="fiscal-note">Nationwide committed amounts on matched Cabinet / independent agencies — the same snapshot as the detail pane. Not ZIP-level awards (those are below).</p>
       </section>`
       : "";
 
@@ -627,7 +627,7 @@ export function createFiscalPage(el, { getRoot, onMap } = {}) {
       ${agencyBlock}
       <section class="fiscal-block">
         <h3>Where you live</h3>
-        <p class="fiscal-note">Federal awards performed in a ZIP this fiscal year. Different question from obligated totals above.</p>
+        <p class="fiscal-note">Federal awards performed in a ZIP this fiscal year. Different question from committed totals above.</p>
         <form id="fiscal-zip-form" class="you-form">
           <label class="sr-only" for="fiscal-zip">ZIP code</label>
           <input id="fiscal-zip" type="text" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="ZIP" autocomplete="postal-code" enterkeyhint="search" value="${esc(youZip)}" />

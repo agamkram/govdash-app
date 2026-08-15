@@ -19,33 +19,43 @@ function rollUp(node) {
   for (const c of node.children || []) rollUp(c);
   if (node.spending && !node.spending.rolledUp) {
     return {
-      obligated: node.spending.obligatedAmount || 0,
-      outlay: node.spending.outlayAmount || 0,
+      obligated: node.spending.obligatedAmount,
+      outlay: node.spending.outlayAmount,
       asOf: node.spending.asOf,
     };
   }
 
   let obligated = 0;
   let outlay = 0;
-  let any = false;
+  let anyO = false;
+  let anyU = false;
+  let missingU = false;
   let asOf = null;
   for (const c of node.children || []) {
     if (c.spending?.obligatedAmount == null && c.spending?.outlayAmount == null) {
       continue;
     }
-    any = true;
-    obligated += c.spending.obligatedAmount || 0;
-    outlay += c.spending.outlayAmount || 0;
+    if (c.spending.obligatedAmount != null) {
+      anyO = true;
+      obligated += c.spending.obligatedAmount;
+    }
+    if (c.spending.outlayAmount != null) {
+      anyU = true;
+      outlay += c.spending.outlayAmount;
+    } else {
+      missingU = true;
+    }
     asOf = asOf || c.spending.asOf;
   }
-  if (!any) {
+  if (!anyO && !anyU) {
     if (node.spending?.rolledUp) delete node.spending;
     return null;
   }
 
   node.spending = {
-    obligatedAmount: obligated,
-    outlayAmount: outlay,
+    obligatedAmount: anyO ? obligated : null,
+    /* Partial outlay next to full obligated would lie — blank if any child lacks it. */
+    outlayAmount: anyU && !missingU ? outlay : null,
     budgetAuthorityAmount: null,
     fiscalYear: null,
     fiscalQuarter: null,
@@ -59,7 +69,11 @@ function rollUp(node) {
     matchedHow: "sum-children",
     rolledUp: true,
   };
-  return { obligated, outlay, asOf };
+  return {
+    obligated: anyO ? obligated : null,
+    outlay: anyU && !missingU ? outlay : null,
+    asOf,
+  };
 }
 
 /**

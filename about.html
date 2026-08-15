@@ -259,8 +259,8 @@
     <ol class="steps">
       <li><strong>Pick a layout</strong> — Icicle, Tree, Circles, or Sankey. The app remembers which chart you left on (only that — not depth, zoom, ZIP, or theme). Direction arrows flip Icicle/Sankey between top-down and sideways.</li>
       <li><strong>Depth slider</strong> (Icicle, bar under the map) — each step is another generation under <em>where you are</em>. At the Constitution, 1 is the six doors and 11 is the rest of the tree. After you enter a department, 1 is that place’s children.</li>
-      <li><strong>Open a place</strong> — tap or click a cell to select it and open the detail pane. <em>Enter</em> (in the pane) or drill in the map to go deeper; breadcrumbs and the Constitution rail go back. When a place has obligated dollars, a <strong>FY</strong> slider appears in the pane so you can see that place’s USAspending amount for years <strong>2018–2026</strong>. Structure, mission, and employee counts do not change — only the money line. A blank year means no honest match, not a hidden number. The open year is incomplete until Q4 lands.</li>
-      <li><strong>Find</strong> — search by name. <strong>Z</strong> looks up House/Senate by ZIP. <strong>$</strong> is federal money: debt, interest, receipts vs outlays, top obligated agencies, and awards where you live. <strong>L</strong>/<strong>D</strong> switches light and dark for this session. <strong>i</strong> opens About.</li>
+      <li><strong>Open a place</strong> — tap or click a cell to select it and open the detail pane. <em>Enter</em> (in the pane) or drill in the map to go deeper; breadcrumbs and the Constitution rail go back. When a place has dollars, a <strong>FY</strong> slider appears in the pane for years <strong>2018–2026</strong>. <strong>Committed</strong> is what they signed for; <strong>paid</strong> is what left the Treasury — both move when USAspending has them; child offices often have committed only. Structure, mission, and employee counts do not change. A blank year means no honest match, not a hidden number. The open year is incomplete until Q4 lands.</li>
+      <li><strong>Find</strong> — search by name. <strong>Z</strong> looks up House/Senate by ZIP. <strong>$</strong> is federal money: debt, interest, receipts vs outlays, top agencies by committed dollars, and awards where you live. <strong>L</strong>/<strong>D</strong> switches light and dark for this session. <strong>i</strong> opens About.</li>
       <li><strong>Six doors</strong> — Legislative · Executive · Judicial · Agencies · Chartered · International (in that order). On Sankey the last two are labeled <em>Chart</em> and <em>Int</em> so they fit; tap for the full names.</li>
     </ol>
 
@@ -276,7 +276,7 @@
       <li><strong>U.S. Government Manual</strong> — mission and leadership when available.</li>
       <li><strong>SAM.gov</strong> — status overlays where matched.</li>
       <li><strong>Treasury Fiscal Data</strong> — public debt, interest expense, and Monthly Treasury Statement receipts/outlays on the $ page (live).</li>
-      <li><strong>USAspending.gov</strong> — obligated amounts on matched Cabinet / independent agencies, plus child offices when the name matches (CBP, FEMA, IRS, Army, …). Unmatched boxes stay blank. Open a matched place and use the detail-pane <strong>FY</strong> slider for years 2018–2026. The $ page lists top obligators and ZIP place-of-performance awards.</li>
+      <li><strong>USAspending.gov</strong> — committed (obligated) amounts on matched Cabinet / independent agencies, plus child offices when the name matches (CBP, FEMA, IRS, Army, …). Unmatched boxes stay blank. Open a matched place and use the detail-pane <strong>FY</strong> slider for years 2018–2026; paid (outlay) appears when USAspending has it. The $ page lists top agencies by committed dollars and ZIP place-of-performance awards.</li>
     </ul>
     <p class="note">If employees are blank, that usually means OPM doesn’t publish a count for that org in this file — not that we hid one. Spending blanks mean no honest toptier or subtier name match — not a hidden number.</p>
 
@@ -323,7 +323,7 @@
       </div>
       <div class="card">
         <h3><span class="spend-label">Federal spending</span> (USAspending)</h3>
-        <p class="note" id="st-spend-card-note">Obligated dollars under the title · toptier + sub-agency.</p>
+        <p class="note" id="st-spend-card-note">Committed dollars under the title · toptier + sub-agency.</p>
         <table>
           <thead><tr><th>Match type</th><th class="num">Nodes</th></tr></thead>
           <tbody id="st-spend-match"></tbody>
@@ -341,7 +341,7 @@
     </div>
 
     <h2>By door</h2>
-    <p class="note">Map order: Legislative · Executive · Judicial · Agencies · Chartered · International. Headcount and obligated are each door’s roll-up (or blank).</p>
+    <p class="note">Map order: Legislative · Executive · Judicial · Agencies · Chartered · International. Headcount and committed dollars are each door’s roll-up (or blank).</p>
     <table>
       <thead>
         <tr>
@@ -349,7 +349,7 @@
           <th class="num">Nodes</th>
           <th class="num">With spend</th>
           <th class="num"><span class="wf-label">Civilian headcount</span></th>
-          <th class="num"><span class="spend-label">Obligated</span></th>
+          <th class="num"><span class="spend-label">Committed</span></th>
         </tr>
       </thead>
       <tbody id="st-doors"></tbody>
@@ -362,7 +362,7 @@
         <tr>
           <th>Department</th>
           <th class="num"><span class="wf-label">Employees</span></th>
-          <th class="num"><span class="spend-label">Obligated</span></th>
+          <th class="num"><span class="spend-label">Committed</span></th>
           <th class="num">Beneath</th>
         </tr>
       </thead>
@@ -388,8 +388,8 @@
       <li><strong>Department</strong> — kind=department (18 Cabinet-style orgs under Executive).</li>
       <li><strong>Beneath</strong> — how many nodes sit under that department in this map (not just direct children).</li>
       <li><strong>Workforce shown</strong> — civilian employees under the title (direct OPM match or sum of children).</li>
-      <li><strong>Obligated</strong> — USAspending dollars for the fiscal period shown (toptier, sub-agency, or roll-up). Blank means no honest match.</li>
-      <li><strong>Outlay</strong> — a dollar that actually left the Treasury (Monthly Treasury Statement / USAspending).</li>
+      <li><strong>Committed</strong> (obligated) — what this place signed for in the fiscal period shown. Blank means no honest match.</li>
+      <li><strong>Paid</strong> (outlay) — what actually left the Treasury. Shown in the detail pane when USAspending has it (Cabinet / independents). Child offices often have committed only.</li>
       <li><strong>Debt</strong> — what is still owed from borrowing over time (Debt to the Penny).</li>
       <li><strong>Deficit</strong> — this year’s gap: outlays minus receipts. Adds to the debt.</li>
       <li><strong>Depth</strong> — generations under your current focus on the Icicle slider.</li>
@@ -486,7 +486,7 @@
           }
           text(
             "st-spend-note",
-            `Forest green = direct match (${f.spendTop} toptier + ${f.spendSub} sub-agency) · Lighter green = rolled up from children (${f.spendRoll}) · Rest blank (${f.spendBlank}). Green obligated line in detail sits under employees. Blanks are honest: no name match at toptier or subtier.`
+            `Forest green = direct match (${f.spendTop} toptier + ${f.spendSub} sub-agency) · Lighter green = rolled up from children (${f.spendRoll}) · Rest blank (${f.spendBlank}). Green committed / paid lines in detail sit under employees. Blanks are honest: no name match at toptier or subtier.`
           );
           text(
             "st-layout-note",
@@ -518,7 +518,7 @@
           );
           text(
             "st-spend-card-note",
-            `Obligated dollars under the title · toptier + sub-agency · ${s.spendPeriod} snapshot.`
+            `Committed dollars under the title · toptier + sub-agency · ${s.spendPeriod} snapshot.`
           );
           set(
             "st-spend-match",
@@ -553,7 +553,7 @@
           );
           text(
             "st-international",
-            `${(ig.nodes || 0).toLocaleString("en-US")} nodes · ${(ig.leaves || 0).toLocaleString("en-US")} leaves. International organizations (IGOs) the U.S. participates in. Door obligated ${ig.obligatedFmt || "—"}. Leaf-heavy; Icicle/Circles weight them down; Sankey labels the door Int.`
+            `${(ig.nodes || 0).toLocaleString("en-US")} nodes · ${(ig.leaves || 0).toLocaleString("en-US")} leaves. International organizations (IGOs) the U.S. participates in. Door committed ${ig.obligatedFmt || "—"}. Leaf-heavy; Icicle/Circles weight them down; Sankey labels the door Int.`
           );
           text(
             "st-foot",
