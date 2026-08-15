@@ -46,30 +46,21 @@ body {
  * bottom — SuperMoon Bug B) and mobile Safari tabs.
  * Desktop: leave default 100%.
  */
+/* Mobile/PWA height: one webview box. Never inflate with screen.height after paint. */
 html.app-fill,
 html.app-fill body {
   height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
   min-height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
 }
 
-/*
- * Home-screen PWA (Desktop Bottom:full bleed.txt Bug B):
- * layout viewport is SHORTER than screen. inset:0 pins to that short box
- * and leaves a void above the home indicator (4302 “bar way high”).
- * Fix: top/left/right + bottom:auto + height = screen axis (set in JS).
- * Depth bar sits at the bottom of that tall shell; safe-area is padding
- * inside the bar only (never margin below).
- */
+/* PWA: fill the real webview only (inset:0). Safe-area is shell padding-bottom. */
 html.pwa-standalone,
 html.pwa-standalone body {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: auto;
+  inset: 0;
   width: 100%;
-  height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
-  min-height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
+  height: 100%;
+  min-height: 100%;
   overflow: hidden;
   touch-action: none;
   overscroll-behavior: none;
@@ -87,7 +78,6 @@ html.pwa-standalone body {
 }
 
 .shell {
-  position: relative; /* anchor for absolute Depth bar */
   height: 100%;
   min-height: 100%;
   width: 100%;
@@ -95,22 +85,21 @@ html.pwa-standalone body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) 0
-    env(safe-area-inset-left, 0px);
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+    env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+  box-sizing: border-box;
 }
 
 .shell > .chrome,
 .shell > .breadcrumbs,
-.shell > .chrome-subline {
+.shell > .chrome-subline,
+.shell > .chrome-bottom {
   flex: 0 0 auto;
 }
 
-/* Depth bar is position:absolute — not a flex item (flex footer was clipped
-   into the dead zone on PWA, leaving a black band with no visible slider). */
-
 html.app-fill .shell {
-  height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
-  min-height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
+  height: 100%;
+  min-height: 100%;
 }
 
 html.pwa-standalone .shell {
@@ -119,6 +108,7 @@ html.pwa-standalone .shell {
   touch-action: none;
   overscroll-behavior: none;
 }
+
 
 .chrome {
   display: flex;
@@ -933,17 +923,8 @@ html[data-theme="dark"] .fiscal-agency-amt {
 }
 
 .chrome-bottom {
-  /*
-   * Overlay the bottom of the shell (4311: flex footer was eaten by the
-   * PWA dead zone — black band, no Depth UI). Absolute keeps the bar in
-   * the visible frame; stage/map fill the shell underneath.
-   */
+  /* Flex footer in normal flow — 0.43in controls, safe-area is on .shell */
   --depth-bar-h: 0.43in;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 6;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -955,7 +936,7 @@ html[data-theme="dark"] .fiscal-agency-amt {
   margin: 0;
   box-sizing: border-box;
   min-width: 0;
-  width: auto;
+  width: 100%;
   border-top: 1px solid var(--line);
   border-bottom: 0;
   background: var(--bg);
@@ -973,7 +954,7 @@ html[data-theme="dark"] .fiscal-agency-amt {
   padding: 0;
 }
 
-/* Depth range — custom thumb (Safari + PWA). Match 4288: no forced 1.7rem input box. */
+/* Depth range — custom thumb (Safari + PWA). */
 .chrome-bottom input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
@@ -1048,13 +1029,13 @@ html[data-theme="dark"] .fiscal-agency-amt {
   background: var(--bg);
 }
 
-/*
- * No Depth bar (Tree / Circles / Sankey).
- * 4286 PWA: map ~14css from bottom — do NOT force full env(safe-area)
- * (~34css) or you get the 4308 black void under the map.
- */
+/* Map fills the stage; Depth footer (when shown) sits below in flex flow. */
 .shell:not(:has(#chrome-bottom:not([hidden]))) .map {
-  bottom: 0.35rem;
+  bottom: 0.28rem;
+}
+
+.shell:has(#chrome-bottom:not([hidden])) .map {
+  bottom: 0.28rem;
 }
 
 .shell[data-page="fiscal"] .app-page,
@@ -1064,12 +1045,10 @@ html[data-theme="dark"] .fiscal-agency-amt {
 }
 
 @media (max-width: 720px) {
-  .shell:not(:has(#chrome-bottom:not([hidden]))) .map {
-    bottom: 0.28rem;
-  }
-
-  /* PWA Sankey/Tree/Circles: match 4286 tight map bottom */
-  html.pwa-standalone .shell:not(:has(#chrome-bottom:not([hidden]))) .map {
+  .shell:not(:has(#chrome-bottom:not([hidden]))) .map,
+  .shell:has(#chrome-bottom:not([hidden])) .map,
+  html.pwa-standalone .shell:not(:has(#chrome-bottom:not([hidden]))) .map,
+  html.pwa-standalone .shell:has(#chrome-bottom:not([hidden])) .map {
     bottom: 0.28rem;
   }
 
@@ -1788,13 +1767,13 @@ a.engage-label:hover {
   .chrome-bottom {
     padding: 0 0.65rem !important;
     --depth-bar-h: 0.43in;
-    margin-bottom: 0 !important;
+    margin: 0 !important;
   }
 
   html.pwa-standalone .chrome-bottom {
     --depth-bar-h: 0.43in;
     padding: 0 0.65rem !important;
-    margin-bottom: 0 !important;
+    margin: 0 !important;
     align-items: center;
   }
 
