@@ -211,16 +211,22 @@ function paintLayoutDebug() {
   const extra = root.style.getPropertyValue("--app-extra-b") || "0";
   const safe = readSafeInsetBottom();
   const shortfall = screenH - ih;
+  const depth = document.getElementById("icicle-depth");
+  const dr = depth && !depth.hidden ? depth.getBoundingClientRect() : null;
   const barBot = br ? Math.round(br.bottom) : null;
+  const depthBot = dr ? Math.round(dr.bottom) : null;
   const gap = br ? Math.round(ih - br.bottom) : null;
   el.textContent = [
     `standalone=${root.classList.contains("pwa-standalone")}`,
     `ih=${ih} vv=${vv} screenH=${screenH} shortfall=${shortfall}`,
     `fillH=${fill} extraB=${extra} safeB=${safe.toFixed(1)}`,
     br
-      ? `bar top=${Math.round(br.top)} bot=${barBot} h=${Math.round(br.height)} gapBelowBar→ih=${gap}`
+      ? `bar top=${Math.round(br.top)} bot=${barBot} h=${Math.round(br.height)} gapBar→ih=${gap}`
       : "bar=hidden",
-    `target: shortfall≈0, gapBelowBar→ih≈0 (safe is inside bar)`,
+    dr
+      ? `depthRow bot=${depthBot} (must be ≤ ih-safeB≈${Math.round(ih - safe)})`
+      : "depthRow=hidden",
+    `target: depthRow above home zone; bar.bot≈ih`,
   ].join("\n");
 }
 
