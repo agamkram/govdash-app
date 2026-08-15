@@ -930,48 +930,35 @@ html[data-theme="dark"] .fiscal-agency-amt {
 }
 
 .chrome-bottom {
-  /*
-   * Two rows, always:
-   *   1) 0.43in control row — Depth track + full thumb (never in home zone)
-   *   2) safe-area spacer — empty, home indicator lives here
-   * Using border-box + flex-center put the thumb in the spacer (only the
-   * top of the handle showed above the ~5/16″ dead line).
-   */
+  /* 4288 model: 0.43in control strip + one safe-area margin under it. */
   --depth-bar-h: 0.43in;
-  display: grid;
-  grid-template-rows: var(--depth-bar-h) env(safe-area-inset-bottom, 0px);
-  grid-template-columns: 1fr;
-  align-items: stretch;
-  justify-items: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  height: var(--depth-bar-h);
+  min-height: var(--depth-bar-h);
+  max-height: var(--depth-bar-h);
+  padding: 0 1rem;
+  margin-bottom: env(safe-area-inset-bottom, 0px);
   box-sizing: border-box;
-  height: calc(var(--depth-bar-h) + env(safe-area-inset-bottom, 0px));
-  min-height: calc(var(--depth-bar-h) + env(safe-area-inset-bottom, 0px));
-  max-height: calc(var(--depth-bar-h) + env(safe-area-inset-bottom, 0px));
-  padding: 0;
-  margin: 0;
   min-width: 0;
   width: 100%;
   border-top: 1px solid var(--line);
   border-bottom: 0;
   background: var(--bg);
   overscroll-behavior: none;
-  overflow: visible;
+  overflow: visible; /* full thumb; don’t clip the handle */
 }
 
 .chrome-bottom .icicle-depth {
-  grid-row: 1;
-  grid-column: 1;
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  height: 100%;
-  min-height: 0;
-  max-height: 100%;
   margin: 0;
-  padding: 0 1rem;
-  box-sizing: border-box;
-  overflow: visible;
+  padding: 0;
 }
 
 /* Depth range — custom thumb (Safari + PWA). Match 4288: no forced 1.7rem input box. */
@@ -1049,12 +1036,15 @@ html[data-theme="dark"] .fiscal-agency-amt {
   background: var(--bg);
 }
 
-/* No Depth bar (Tree / Circles / Sankey): one safe-area under the map — 4286. */
+/*
+ * No Depth bar (Tree / Circles / Sankey).
+ * 4286 PWA: map ~14css from bottom — do NOT force full env(safe-area)
+ * (~34css) or you get the 4308 black void under the map.
+ */
 .shell:not(:has(#chrome-bottom:not([hidden]))) .map {
-  bottom: max(0.35rem, env(safe-area-inset-bottom, 0px));
+  bottom: 0.35rem;
 }
 
-/* App pages (i / Z / $) — same single safe-area, no +1.2rem void. */
 .shell[data-page="fiscal"] .app-page,
 .shell[data-page="you"] .app-page,
 .shell[data-page="about"] .app-page {
@@ -1062,9 +1052,13 @@ html[data-theme="dark"] .fiscal-agency-amt {
 }
 
 @media (max-width: 720px) {
-  .shell:not(:has(#chrome-bottom:not([hidden]))) .map,
+  .shell:not(:has(#chrome-bottom:not([hidden]))) .map {
+    bottom: 0.28rem;
+  }
+
+  /* PWA Sankey/Tree/Circles: match 4286 tight map bottom */
   html.pwa-standalone .shell:not(:has(#chrome-bottom:not([hidden]))) .map {
-    bottom: max(0.28rem, env(safe-area-inset-bottom, 0px));
+    bottom: 0.28rem;
   }
 
   .shell[data-page="fiscal"] .app-page,
@@ -1780,12 +1774,17 @@ a.engage-label:hover {
   }
 
   .chrome-bottom {
-    /* Keep grid: no padding on the footer itself (safe-area is row 2). */
-    padding: 0 !important;
+    padding: 0 0.65rem !important;
+    /* Keep 4288: 0.43in + safe-area margin only. Never +1.2rem / 0.53in. */
+    --depth-bar-h: 0.43in;
+    margin-bottom: env(safe-area-inset-bottom, 0px);
   }
 
-  .chrome-bottom .icicle-depth {
-    padding: 0 0.65rem;
+  html.pwa-standalone .chrome-bottom {
+    --depth-bar-h: 0.43in;
+    padding: 0 0.65rem !important;
+    margin-bottom: env(safe-area-inset-bottom, 0px) !important;
+    align-items: center;
   }
 
   .chrome-bottom .icicle-depth input[type="range"] {
