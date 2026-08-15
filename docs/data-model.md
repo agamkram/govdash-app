@@ -128,9 +128,16 @@ Parents get a **roll-up** = max(own, 0.92 × hottest child) so branches show act
 
 UI: amber intensity + inline meter; detail panel breaks down signals. Toggle **Heat** in the toolbar.
 
-## Time (later)
+## Time (FY scrub — spending only)
 
-Snapshot trees by date, or SAM parent-history + Manual editions — decide after the graphical map.
+Same shipped Crosswalk boxes. Mission, OPM, edges do **not** move with the year.
+
+```bash
+npm run fetch:spend-history   # multi-year USAspending → data/raw/heat/usaspending-history.json
+npm run enrich:spend-years    # → data/nested/spend-by-year.json (node id → amounts by FY)
+```
+
+Years: **FY2018–FY2026** (DATA Act quality is thin before FY2018). Toptier from `budgetary_resources`; subtier from `sub_agency?fiscal_year=`. Runtime `spend-year.js` swaps `node.spending` and re-rolls parents. Honest blanks when a year has no match.
 
 ## Design principle
 

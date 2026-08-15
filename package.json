@@ -15,9 +15,11 @@
     "parse:usgm": "python3 scripts/parse-usgm.py",
     "fetch:heat": "node scripts/fetch-heat.mjs",
     "fetch:subtier": "node scripts/fetch-subtier.mjs",
+    "fetch:spend-history": "node scripts/fetch-spend-history.mjs",
     "enrich:heat": "node scripts/enrich-heat.mjs",
     "enrich:spending": "node scripts/enrich-spending.mjs && node scripts/stats-about.mjs",
-    "test": "node --test scripts/lib/spend-match.test.mjs scripts/lib/authority.test.mjs",
+    "enrich:spend-years": "node scripts/enrich-spend-years.mjs",
+    "test": "node --test scripts/lib/spend-match.test.mjs scripts/lib/authority.test.mjs scripts/lib/spend-year.test.mjs",
     "stats:about": "node scripts/stats-about.mjs",
     "fetch:population": "node scripts/fetch-census-population.mjs",
     "fetch:workforce": "node scripts/fetch-workforce.mjs",
@@ -27,7 +29,7 @@
     "enrich:sam": "node scripts/enrich-sam.mjs",
     "enrich:usgm": "node scripts/enrich-usgm.mjs",
     "curate": "node scripts/curate-product-tree.mjs",
-    "pipeline": "npm run fetch && npm run build:tree && npm run enrich:sam && npm run enrich:usgm && npm run fetch:heat && npm run enrich:heat && npm run fetch:subtier && npm run fetch:workforce && npm run enrich:workforce && npm run fetch:population && npm run curate && npm run enrich:spending && npm run stats:about",
+    "pipeline": "npm run fetch && npm run build:tree && npm run enrich:sam && npm run enrich:usgm && npm run fetch:heat && npm run enrich:heat && npm run fetch:subtier && npm run fetch:workforce && npm run enrich:workforce && npm run fetch:population && npm run curate && npm run enrich:spending && npm run fetch:spend-history && npm run enrich:spend-years && npm run stats:about",
     "serve": "python3 serve-https.py"
   },
   "engines": {

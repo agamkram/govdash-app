@@ -45,7 +45,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Michroma&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2364" />
+  <link rel="stylesheet" href="styles.css?v=2368" />
 </head>
 <body>
   <div class="shell">
@@ -169,7 +169,7 @@
         <iframe
           class="about-frame"
           id="about-frame"
-          src="about.html?v=2364"
+          src="about.html?v=2369"
           title="About GovDash — how to use and data sources"
         ></iframe>
       </section>
@@ -214,6 +214,20 @@
     </main>
 
     <footer class="chrome-bottom" id="chrome-bottom" hidden>
+      <label class="fy-scrub" id="fy-scrub" hidden>
+        <span class="fy-scrub-label">FY</span>
+        <input
+          type="range"
+          id="fy-range"
+          min="2018"
+          max="2026"
+          step="1"
+          value="2026"
+          aria-label="Fiscal year for obligated dollars"
+          aria-valuetext="Fiscal year 2026"
+        />
+        <output id="fy-out" for="fy-range">2026</output>
+      </label>
       <label class="icicle-depth" id="icicle-depth" hidden>
         <span class="icicle-depth-label">Depth</span>
         <input
@@ -229,7 +243,7 @@
       </label>
     </footer>
   </div>
-  <script type="module" src="app.js?v=2364"></script>
+  <script type="module" src="app.js?v=2368"></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>

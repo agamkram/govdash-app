@@ -19,9 +19,11 @@ import { createSankeyView } from "./views/sankey.js";
 import { createFiscalPage } from "./views/fiscal.js";
 import { createYouPage, YOU_NODES } from "./views/you.js";
 import { authorityLine } from "./authority.js";
+import { createSpendYearController } from "./spend-year.js";
 
 const TREE_URL = "./data/nested/gov-tree-product.json";
 const BEYOND_URL = "./data/nested/gov-tree-beyond.json";
+const SPEND_YEAR_URL = "./data/nested/spend-by-year.json";
 
 const factories = {
   icicle: createIcicleView,
@@ -88,7 +90,13 @@ const orientToggle = document.getElementById("orient-toggle");
 const icicleDepthEl = document.getElementById("icicle-depth");
 const icicleDepthRange = document.getElementById("icicle-depth-range");
 const icicleDepthOut = document.getElementById("icicle-depth-out");
+const fyScrubEl = document.getElementById("fy-scrub");
+const fyRange = document.getElementById("fy-range");
+const fyOut = document.getElementById("fy-out");
 const shellEl = document.querySelector(".shell");
+
+/** @type {ReturnType<typeof createSpendYearController> | null} */
+let spendYear = null;
 
 let layoutResizeTimer = null;
 let lastFillKey = "";
@@ -387,21 +395,81 @@ function syncOrientChrome() {
   });
 }
 
-function syncIcicleDepthChrome() {
-  if (!icicleDepthEl || !icicleDepthRange || !icicleDepthOut) return;
-  const show = mode === "icicle";
-  const bottom = document.getElementById("chrome-bottom");
-  icicleDepthEl.hidden = !show;
-  if (bottom) bottom.hidden = !show;
-  if (show) {
-    icicleDepthRange.value = String(icicleNestLevels);
-    icicleDepthOut.textContent = String(icicleNestLevels);
-    icicleDepthRange.setAttribute(
-      "aria-valuetext",
-      `${icicleNestLevels} level${icicleNestLevels === 1 ? "" : "s"} from here`
-    );
+function onMapPage() {
+  return !shellEl.dataset.page || shellEl.dataset.page === "map";
+}
+
+/** Slider right-hand text: year only (left chrome already says FY). */
+function scrubYearLabel(asOf, y) {
+  const s = String(asOf || "");
+  const m = s.match(/FY(\d{2,4})(?:\s*(Q\d))?/i);
+  if (m) {
+    let year = m[1];
+    if (year.length === 2) year = `20${year}`;
+    return m[2] ? `${year} ${m[2].toUpperCase()}` : year;
   }
+  if (y != null && Number.isFinite(Number(y))) return String(y);
+  return s || "";
+}
+
+function syncBottomChrome() {
+  const bottom = document.getElementById("chrome-bottom");
+  const showBottom = onMapPage();
+  if (bottom) bottom.hidden = !showBottom;
+
+  if (icicleDepthEl && icicleDepthRange && icicleDepthOut) {
+    const showDepth = showBottom && mode === "icicle";
+    icicleDepthEl.hidden = !showDepth;
+    if (showDepth) {
+      icicleDepthRange.value = String(icicleNestLevels);
+      icicleDepthOut.textContent = String(icicleNestLevels);
+      icicleDepthRange.setAttribute(
+        "aria-valuetext",
+        `${icicleNestLevels} level${icicleNestLevels === 1 ? "" : "s"} from here`
+      );
+    }
+  }
+
+  if (fyScrubEl && fyRange && fyOut) {
+    const showFy = showBottom && spendYear?.hasPack?.();
+    fyScrubEl.hidden = !showFy;
+    if (showFy) {
+      const y = spendYear.currentYear() ?? spendYear.defaultYear();
+      const list = spendYear.years();
+      if (list.length) {
+        fyRange.min = String(list[0]);
+        fyRange.max = String(list[list.length - 1]);
+      }
+      if (y != null) {
+        fyRange.value = String(y);
+        // Left label is already "FY" — right side is year only (2026, 2026 Q3).
+        const label = scrubYearLabel(spendYear.asOfFor(y), y);
+        fyOut.textContent = label;
+        fyRange.setAttribute("aria-valuetext", `Fiscal year ${label}`);
+      }
+    }
+  }
+
   layoutMapBox();
+}
+
+/** @deprecated name kept for call sites — now drives the whole bottom bar */
+function syncIcicleDepthChrome() {
+  syncBottomChrome();
+}
+
+function applySpendYear(y, { refreshDetail = true } = {}) {
+  if (!spendYear?.hasPack?.()) return;
+  spendYear.apply(y);
+  syncBottomChrome();
+  if (
+    refreshDetail &&
+    selectedNode &&
+    !detailEl.hidden &&
+    !isConstitutionNode(selectedNode)
+  ) {
+    showDetail(selectedNode);
+  }
 }
 
 function renderEngage(node) {
@@ -852,7 +920,7 @@ function setModeChrome() {
   });
   mapEl.dataset.mode = mode;
   syncOrientChrome();
-  syncIcicleDepthChrome();
+  syncBottomChrome();
 }
 
 function mountView(nextMode, { preserve = true } = {}) {
@@ -916,7 +984,11 @@ async function main() {
     syncThemeChrome();
     viewApi?.resize?.();
   });
-  const [usaRes, beyondRes] = await Promise.all([fetch(TREE_URL), fetch(BEYOND_URL)]);
+  const [usaRes, beyondRes, spendYearRes] = await Promise.all([
+    fetch(TREE_URL),
+    fetch(BEYOND_URL),
+    fetch(SPEND_YEAR_URL).catch(() => null),
+  ]);
   if (!usaRes.ok) throw new Error(`Failed to load ${TREE_URL}`);
   if (!beyondRes.ok) throw new Error(`Failed to load ${BEYOND_URL}`);
   const usaData = await usaRes.json();
@@ -924,13 +996,24 @@ async function main() {
   usaRoot = usaData.tree;
   attachBeyondDoors(usaRoot, beyondData.tree);
 
-  // Chart mode remembered; orientation / nest / focus / pages stay fresh.
+  spendYear = createSpendYearController(usaRoot);
+  if (spendYearRes?.ok) {
+    try {
+      const pack = await spendYearRes.json();
+      spendYear.load(pack);
+    } catch {
+      /* keep tree-baked spending */
+    }
+  }
+
+  // Chart mode remembered; orientation / nest / focus / FY / pages stay fresh.
   mode = readSavedChartMode();
   orientation = defaultOrientation();
   icicleNestLevels = defaultIcicleNestLevels();
 
   applyRoot({ preserve: false });
   syncPageFromHash();
+  syncBottomChrome();
 
   document.querySelectorAll(".mode-btn[data-mode]").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -959,8 +1042,14 @@ async function main() {
   icicleDepthRange?.addEventListener("input", () => {
     const next = Math.min(11, Math.max(1, Math.round(Number(icicleDepthRange.value) || 11)));
     icicleNestLevels = next;
-    syncIcicleDepthChrome();
+    syncBottomChrome();
     viewApi?.setNestLevels?.(next);
+  });
+
+  fyRange?.addEventListener("input", () => {
+    const y = Math.round(Number(fyRange.value));
+    if (!Number.isFinite(y)) return;
+    applySpendYear(y);
   });
 
   btnFiscal?.addEventListener("click", () => {

@@ -172,13 +172,14 @@ html.pwa-standalone .shell {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  flex: 0 0 auto;
+  flex: 0 1 auto;
   padding: 0;
   border: 0;
   background: transparent;
   font-size: 0.72rem;
   color: var(--muted);
   min-width: 0;
+  max-width: 100%;
 }
 
 .icicle-depth[hidden] {
@@ -186,22 +187,23 @@ html.pwa-standalone .shell {
 }
 
 .icicle-depth-label {
-  flex: none;
+  flex: 0 0 auto;
   font-family: "IBM Plex Mono", ui-monospace, monospace;
   font-size: 0.62rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 
 .icicle-depth input[type="range"] {
+  flex: 1 1 auto;
   width: 13rem;
-  min-width: 9rem;
+  min-width: 0;
   margin: 0;
   accent-color: var(--ink);
 }
 
 .icicle-depth output {
-  flex: none;
+  flex: 0 0 auto;
   min-width: 1.1rem;
   padding-right: 0.15rem;
   font-family: "IBM Plex Mono", ui-monospace, monospace;
@@ -209,6 +211,7 @@ html.pwa-standalone .shell {
   color: var(--ink);
   text-align: left;
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 
@@ -920,16 +923,70 @@ html[data-theme="dark"] .fiscal-agency-amt {
   padding: 0 1rem;
   margin-bottom: env(safe-area-inset-bottom, 0px); /* swipe/home zone below bar, not inside it */
   box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
   min-width: 0;
   border-top: 1px solid var(--line);
   border-bottom: 0;
   background: var(--bg);
   overscroll-behavior: none;
+  /* Labels must stay on-screen; tracks absorb squeeze (phone + Depth). */
+  overflow: hidden;
 }
 
-.chrome-bottom .icicle-depth {
-  flex: 0 0 auto;
+.chrome-bottom .icicle-depth,
+.chrome-bottom .fy-scrub {
+  flex: 0 1 auto;
   justify-content: center;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.fy-scrub {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex: 0 1 auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 0.72rem;
+  color: var(--muted);
+  min-width: 0;
+  max-width: 100%;
+}
+
+.fy-scrub[hidden] {
+  display: none !important;
+}
+
+.fy-scrub-label {
+  flex: 0 0 auto;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.62rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+}
+
+.fy-scrub input[type="range"] {
+  flex: 1 1 auto;
+  width: min(42vw, 11rem);
+  min-width: 0;
+  margin: 0;
+  accent-color: var(--ink);
+}
+
+.fy-scrub output {
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.7rem;
+  color: var(--ink);
+  min-width: 2.75rem; /* "2026"; Q3 grows naturally */
+  text-align: left;
+  white-space: nowrap;
 }
 
 /* Depth range — custom thumb (Safari + PWA). */
@@ -1563,27 +1620,42 @@ a.engage-label:hover {
     padding: 0 1.25rem !important;
   }
 
-  .shell > .chrome-bottom .icicle-depth {
+  .shell > .chrome-bottom .icicle-depth,
+  .shell > .chrome-bottom .fy-scrub {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     height: 100%;
     margin: 0;
     padding: 0;
+    flex: 0 1 auto;
+    min-width: 0;
   }
 
   .shell > .chrome-bottom .icicle-depth-label,
-  .shell > .chrome-bottom .icicle-depth output {
+  .shell > .chrome-bottom .icicle-depth output,
+  .shell > .chrome-bottom .fy-scrub-label,
+  .shell > .chrome-bottom .fy-scrub output {
     line-height: 1;
     display: flex;
     align-items: center;
     height: 100%;
     margin: 0;
+    flex: 0 0 auto;
   }
 
   .shell > .chrome-bottom .icicle-depth input[type="range"] {
-    width: min(28rem, 52vw);
-    min-width: 20rem;
+    flex: 1 1 auto;
+    width: min(22rem, 38vw);
+    min-width: 0;
+    height: 100%;
+    min-height: 0 !important;
+  }
+
+  .shell > .chrome-bottom .fy-scrub input[type="range"] {
+    flex: 1 1 auto;
+    width: min(14rem, 28vw);
+    min-width: 0;
     height: 100%;
     min-height: 0 !important;
   }
@@ -1596,9 +1668,10 @@ a.engage-label:hover {
     padding: 0 0.85rem !important;
   }
 
-  .shell > .chrome-bottom .icicle-depth input[type="range"] {
-    width: min(24rem, 60vw);
-    min-width: 14rem;
+  .shell > .chrome-bottom .icicle-depth input[type="range"],
+  .shell > .chrome-bottom .fy-scrub input[type="range"] {
+    width: auto;
+    min-width: 0;
     height: 100%;
     min-height: 0 !important;
   }
@@ -1653,25 +1726,52 @@ a.engage-label:hover {
   }
 
   .chrome-bottom {
-    padding: 0 0.65rem !important;
+    /* Keep FY / year / Depth fully inside the bar (was clipping first F + last digit). */
+    padding: 0 0.75rem !important;
+    gap: 0.4rem;
+    justify-content: stretch;
+    box-sizing: border-box;
+  }
+
+  .chrome-bottom .fy-scrub,
+  .chrome-bottom .icicle-depth {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 100%;
+    gap: 0.28rem;
+  }
+
+  .chrome-bottom .fy-scrub-label,
+  .chrome-bottom .fy-scrub output,
+  .chrome-bottom .icicle-depth-label,
+  .chrome-bottom .icicle-depth output {
+    flex: 0 0 auto;
+  }
+
+  .chrome-bottom .icicle-depth input[type="range"],
+  .chrome-bottom .fy-scrub input[type="range"] {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+  }
+
+  .chrome-bottom .fy-scrub output {
+    min-width: 2.5rem;
+    font-size: 0.62rem;
   }
 
   /* Phone PWA: lift above swipe zone; 0.53in CSS ≈ 0.43″ ruler. */
   html.pwa-standalone .chrome-bottom {
     --depth-bar-h: 0.53in;
-    padding: calc(0.12rem + 10px) 0.65rem 0 !important;
+    padding: calc(0.12rem + 10px) 0.75rem 0 !important;
     margin-bottom: calc(env(safe-area-inset-bottom, 0px) + 1.2rem) !important;
     align-items: flex-start;
   }
 
-  html.pwa-standalone .chrome-bottom .icicle-depth {
+  html.pwa-standalone .chrome-bottom .icicle-depth,
+  html.pwa-standalone .chrome-bottom .fy-scrub {
     align-items: flex-start;
-  }
-
-  .chrome-bottom .icicle-depth input[type="range"] {
-    width: min(13rem, 55vw);
-    flex: none;
-    min-width: 9rem;
   }
 
   .stage {
