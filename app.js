@@ -90,7 +90,7 @@ const orientToggle = document.getElementById("orient-toggle");
 const icicleDepthEl = document.getElementById("icicle-depth");
 const icicleDepthRange = document.getElementById("icicle-depth-range");
 const icicleDepthOut = document.getElementById("icicle-depth-out");
-const fyScrubEl = document.getElementById("fy-scrub");
+const detailFyEl = document.getElementById("detail-fy");
 const fyRange = document.getElementById("fy-range");
 const fyOut = document.getElementById("fy-out");
 const shellEl = document.querySelector(".shell");
@@ -399,7 +399,7 @@ function onMapPage() {
   return !shellEl.dataset.page || shellEl.dataset.page === "map";
 }
 
-/** Slider right-hand text: year only (left chrome already says FY). */
+/** Detail-pane year readout: 2026 / 2026 Q3 (label already says FY). */
 function scrubYearLabel(asOf, y) {
   const s = String(asOf || "");
   const m = s.match(/FY(\d{2,4})(?:\s*(Q\d))?/i);
@@ -412,15 +412,44 @@ function scrubYearLabel(asOf, y) {
   return s || "";
 }
 
+/** True when this place has a multi-year $ series (or current spend to scrub). */
+function nodeHasFyScrub(node) {
+  if (!node || !spendYear?.hasPack?.()) return false;
+  if (isConstitutionNode(node)) return false;
+  if (spendYear.hasNode?.(node.id)) return true;
+  return !!(
+    node.spending &&
+    (node.spending.obligatedAmount != null || node.spending.outlayAmount != null)
+  );
+}
+
+function syncDetailFy(node) {
+  if (!detailFyEl || !fyRange || !fyOut) return;
+  const show = !detailEl.hidden && nodeHasFyScrub(node);
+  detailFyEl.hidden = !show;
+  if (!show) return;
+  const y = spendYear.currentYear() ?? spendYear.defaultYear();
+  const list = spendYear.years();
+  if (list.length) {
+    fyRange.min = String(list[0]);
+    fyRange.max = String(list[list.length - 1]);
+  }
+  if (y != null) {
+    fyRange.value = String(y);
+    const label = scrubYearLabel(spendYear.asOfFor(y), y);
+    fyOut.textContent = label;
+    fyRange.setAttribute("aria-valuetext", `Fiscal year ${label}`);
+  }
+}
+
 function syncBottomChrome() {
   const bottom = document.getElementById("chrome-bottom");
-  const showBottom = onMapPage();
+  const showBottom = onMapPage() && mode === "icicle";
   if (bottom) bottom.hidden = !showBottom;
 
   if (icicleDepthEl && icicleDepthRange && icicleDepthOut) {
-    const showDepth = showBottom && mode === "icicle";
-    icicleDepthEl.hidden = !showDepth;
-    if (showDepth) {
+    icicleDepthEl.hidden = !showBottom;
+    if (showBottom) {
       icicleDepthRange.value = String(icicleNestLevels);
       icicleDepthOut.textContent = String(icicleNestLevels);
       icicleDepthRange.setAttribute(
@@ -430,30 +459,10 @@ function syncBottomChrome() {
     }
   }
 
-  if (fyScrubEl && fyRange && fyOut) {
-    const showFy = showBottom && spendYear?.hasPack?.();
-    fyScrubEl.hidden = !showFy;
-    if (showFy) {
-      const y = spendYear.currentYear() ?? spendYear.defaultYear();
-      const list = spendYear.years();
-      if (list.length) {
-        fyRange.min = String(list[0]);
-        fyRange.max = String(list[list.length - 1]);
-      }
-      if (y != null) {
-        fyRange.value = String(y);
-        // Left label is already "FY" — right side is year only (2026, 2026 Q3).
-        const label = scrubYearLabel(spendYear.asOfFor(y), y);
-        fyOut.textContent = label;
-        fyRange.setAttribute("aria-valuetext", `Fiscal year ${label}`);
-      }
-    }
-  }
-
   layoutMapBox();
 }
 
-/** @deprecated name kept for call sites — now drives the whole bottom bar */
+/** @deprecated name kept for call sites — bottom bar is Depth-only again */
 function syncIcicleDepthChrome() {
   syncBottomChrome();
 }
@@ -461,7 +470,6 @@ function syncIcicleDepthChrome() {
 function applySpendYear(y, { refreshDetail = true } = {}) {
   if (!spendYear?.hasPack?.()) return;
   spendYear.apply(y);
-  syncBottomChrome();
   if (
     refreshDetail &&
     selectedNode &&
@@ -469,6 +477,8 @@ function applySpendYear(y, { refreshDetail = true } = {}) {
     !isConstitutionNode(selectedNode)
   ) {
     showDetail(selectedNode);
+  } else {
+    syncDetailFy(selectedNode);
   }
 }
 
@@ -525,6 +535,7 @@ function showDetail(node, opts = {}) {
   if (isAtlasRoot(node) && opts.revealRoot !== true) {
     selectedNode = node;
     detailEl.hidden = true;
+    if (detailFyEl) detailFyEl.hidden = true;
     return;
   }
 
@@ -613,6 +624,9 @@ function showDetail(node, opts = {}) {
     dSpending.hidden = true;
     dSpending.replaceChildren();
   }
+
+  // FY scrub lives only in the detail pane (affects $ line for this place).
+  syncDetailFy(asConstitution ? null : node);
 
   dShort.textContent = asConstitution
     ? "Supreme law of the United States"

@@ -177,6 +177,10 @@ export function createSpendYearController(root) {
     return !!pack?.nodes && Object.keys(pack.nodes).length > 0;
   }
 
+  function hasNode(id) {
+    return !!(id && pack?.nodes && pack.nodes[id]);
+  }
+
   return {
     load,
     apply,
@@ -185,6 +189,7 @@ export function createSpendYearController(root) {
     currentYear,
     asOfFor,
     hasPack,
+    hasNode,
     restoreBase,
   };
 }
