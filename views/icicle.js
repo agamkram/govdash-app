@@ -41,6 +41,7 @@ export function createIcicleView(
   let hoverId = null;
   let orient = orientation === "top" ? "top" : "side";
   let nestDepth = clampNestLevels(nestLevels);
+  let nestPaintRaf = 0;
   const byId = new Map();
 
   function clampNestLevels(n) {
@@ -1267,9 +1268,15 @@ export function createIcicleView(
   }
 
   function setNestLevels(next) {
-    nestDepth = clampNestLevels(next);
-    resetCam();
-    paint();
+    const v = clampNestLevels(next);
+    if (v === nestDepth) return;
+    nestDepth = v;
+    if (nestPaintRaf) return;
+    nestPaintRaf = requestAnimationFrame(() => {
+      nestPaintRaf = 0;
+      resetCam();
+      paint();
+    });
   }
 
   function getNestLevels() {

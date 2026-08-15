@@ -171,6 +171,8 @@ export function applyColorTheme(id) {
   INK = preset.ink;
   try {
     document.documentElement.dataset.theme = next;
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", next === "light" ? "#e8eaed" : "#121518");
   } catch {
     /* ignore */
   }

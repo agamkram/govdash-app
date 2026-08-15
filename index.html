@@ -6,35 +6,72 @@
     name="viewport"
     content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
   />
-  <meta name="theme-color" content="#e6e8eb" />
+  <meta name="theme-color" content="#121518" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="GovDash" />
   <script>
-    /* PWA: fill to screen height before paint so Depth is not above a black void. */
+    /* Desktop Bottom:full bleed.txt — Bug B (PWA short layout viewport).
+       PWA: fillH = max(innerHeight, screen axis) BEFORE first paint.
+       Safari tab: visualViewport only. Never stack VV height + safe-area bottom.
+       Do NOT use max-height:100dvh. */
     (function () {
-      var n = window.navigator;
-      var standalone =
-        n.standalone === true ||
-        window.matchMedia("(display-mode: standalone)").matches ||
-        window.matchMedia("(display-mode: fullscreen)").matches;
-      if (!standalone) return;
-      var root = document.documentElement;
-      root.classList.add("pwa-standalone");
-      root.classList.add("app-fill");
-      var iw = window.innerWidth || 0;
-      var ih = window.innerHeight || 0;
-      var vv = Math.round((window.visualViewport && window.visualViewport.height) || 0);
-      var sw = window.screen.width || 0;
-      var sh = window.screen.height || 0;
-      var screenMax = Math.max(sw, sh);
-      var screenMin = Math.min(sw, sh);
-      var portrait =
-        window.matchMedia("(orientation: portrait)").matches ||
-        (!window.matchMedia("(orientation: landscape)").matches && ih >= iw);
-      var screenH = portrait ? screenMax : screenMin;
-      var fillH = Math.max(ih, vv, screenH);
-      root.style.setProperty("--app-fill-h", fillH + "px");
-      root.style.setProperty("--app-extra-b", "0px");
+      try {
+        var r = document.documentElement;
+        var n = window.navigator;
+        var standalone =
+          n.standalone === true ||
+          (window.matchMedia &&
+            (window.matchMedia("(display-mode: standalone)").matches ||
+              window.matchMedia("(display-mode: fullscreen)").matches ||
+              window.matchMedia("(display-mode: minimal-ui)").matches));
+        var vv = window.visualViewport;
+        var iw = window.innerWidth || 0;
+        var ih = window.innerHeight || 0;
+        var sw = (window.screen && window.screen.width) || 0;
+        var sh = (window.screen && window.screen.height) || 0;
+        var screenMax = Math.max(sw, sh);
+        var screenMin = Math.min(sw, sh);
+        if (standalone) {
+          r.classList.add("pwa-standalone");
+          var fillH = ih >= iw ? Math.max(ih, screenMax) : Math.max(ih, screenMin);
+          var extra = 0;
+          if (Math.min(iw, ih) >= 600 && screenMax < ih - 10) extra = 20;
+          var total = fillH + extra;
+          r.style.setProperty("--pwa-fill-h", fillH + "px");
+          r.style.setProperty("--pwa-extra-b", extra + "px");
+          r.style.setProperty("--vv-top", "0px");
+          r.style.setProperty("--vv-left", "0px");
+          r.style.setProperty("--vv-w", iw + "px");
+          r.style.setProperty("--vv-h", total + "px");
+          r.style.height = total + "px";
+          r.style.minHeight = total + "px";
+        } else if (vv && vv.height > 40 && vv.width > 40) {
+          r.style.setProperty("--vv-top", Math.max(0, Math.round(vv.offsetTop) || 0) + "px");
+          r.style.setProperty("--vv-left", Math.max(0, Math.round(vv.offsetLeft) || 0) + "px");
+          r.style.setProperty("--vv-w", Math.round(vv.width) + "px");
+          r.style.setProperty("--vv-h", Math.round(vv.height) + "px");
+        } else {
+          r.style.setProperty("--vv-top", "0px");
+          r.style.setProperty("--vv-left", "0px");
+          r.style.setProperty("--vv-w", iw + "px");
+          r.style.setProperty("--vv-h", ih + "px");
+        }
+        var chart = "icicle";
+        try {
+          chart = localStorage.getItem("govdash-chart-mode") || "icicle";
+        } catch (e) {}
+        if (chart === "icicle") r.classList.add("has-depth");
+        var minSide = Math.min(iw, ih);
+        var ipad =
+          /iPad/i.test(n.userAgent || "") ||
+          (n.platform === "MacIntel" && (n.maxTouchPoints || 0) > 1);
+        var coarse =
+          window.matchMedia &&
+          (window.matchMedia("(hover: none)").matches ||
+            window.matchMedia("(pointer: coarse)").matches);
+        if (minSide >= 600 && (ipad || coarse)) r.classList.add("is-tablet");
+      } catch (e) {}
     })();
   </script>
   <title>GovDash</title>
@@ -43,8 +80,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Michroma&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2420" />
-  <meta name="govdash-build" content="2420-screen-fill-bar-floor" />
+  <link rel="stylesheet" href="styles.css?v=2426" />
+  <meta name="govdash-build" content="2427-depth-scrub" />
 </head>
 <body>
   <div class="shell">
@@ -241,7 +278,7 @@
       </label>
     </footer>
   </div>
-  <script type="module" src="app.js?v=2420"></script>
+  <script type="module" src="app.js?v=2427"></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>

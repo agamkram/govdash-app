@@ -101,14 +101,55 @@ let spendYear = null;
 let layoutResizeTimer = null;
 let lastFillKey = "";
 
-function isPortrait() {
-  if (window.matchMedia("(orientation: portrait)").matches) return true;
-  if (window.matchMedia("(orientation: landscape)").matches) return false;
-  return (window.innerHeight || 0) >= (window.innerWidth || 0);
+function isStandaloneDisplay() {
+  return (
+    window.navigator.standalone === true ||
+    window.matchMedia("(display-mode: standalone)").matches ||
+    window.matchMedia("(display-mode: fullscreen)").matches ||
+    window.matchMedia("(display-mode: minimal-ui)").matches
+  );
 }
 
-function isMobileTouch() {
+function isTouchShell() {
+  if (/iPad|iPhone|iPod/i.test(navigator.userAgent || "")) return true;
+  if (navigator.platform === "MacIntel" && (navigator.maxTouchPoints || 0) > 1) {
+    return true;
+  }
   return window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+}
+
+function isTabletShell() {
+  const minSide = Math.min(window.innerWidth || 0, window.innerHeight || 0);
+  if (minSide < 600) return false;
+  if (/iPhone|iPod/i.test(navigator.userAgent || "")) return false;
+  return isTouchShell();
+}
+
+function syncTabletClass() {
+  document.documentElement.classList.toggle("is-tablet", isTabletShell());
+}
+
+function pwaFillHeightPx() {
+  const iw = window.innerWidth || 0;
+  const ih = window.innerHeight || 0;
+  const sw = window.screen?.width || 0;
+  const sh = window.screen?.height || 0;
+  const screenMax = Math.max(sw, sh);
+  const screenMin = Math.min(sw, sh);
+  return ih >= iw ? Math.max(ih, screenMax) : Math.max(ih, screenMin);
+}
+
+function pwaExtraBottomPx() {
+  const iw = window.innerWidth || 0;
+  const ih = window.innerHeight || 0;
+  const sw = window.screen?.width || 0;
+  const sh = window.screen?.height || 0;
+  const screenMax = Math.max(sw, sh);
+  /* iPad: screen.* often undershoots inner → safe-area extra (Bug B tablet). */
+  if (Math.min(iw, ih) >= 600 && screenMax < ih - 10) {
+    return Math.max(readSafeInsetBottom(), 20);
+  }
+  return 0;
 }
 
 function readSafeInsetBottom() {
@@ -121,49 +162,78 @@ function readSafeInsetBottom() {
   return px;
 }
 
-function appFillHeightPx() {
-  const ih = window.innerHeight || 0;
-  const vv = Math.round(window.visualViewport?.height || 0);
-  const sw = window.screen.width || 0;
-  const sh = window.screen.height || 0;
-  const screenMax = Math.max(sw, sh);
-  const screenMin = Math.min(sw, sh);
-  const screenH = isPortrait() ? screenMax : screenMin;
-  /* PWA: must reach physical screen bottom or Depth floats (4316 void). */
-  if (document.documentElement.classList.contains("pwa-standalone")) {
-    return Math.max(ih, vv, screenH);
-  }
-  return Math.max(ih, vv);
-}
-
-function appExtraBottomPx() {
-  return 0;
-}
-
-function syncAppFillHeight() {
+/**
+ * Pin .shell to the visible box.
+ * PWA: screen fillH (Bug B). Safari tab: visualViewport only — never stack
+ * VV height + env(safe-area-inset-bottom). Desktop: 100%.
+ */
+function pinShellViewport() {
   const root = document.documentElement;
-  const useFill =
-    root.classList.contains("pwa-standalone") || isMobileTouch();
-  if (!useFill) {
-    root.classList.remove("app-fill");
-    root.style.removeProperty("--app-fill-h");
-    root.style.removeProperty("--app-extra-b");
-    return 0;
+  syncTabletClass();
+  const standalone =
+    isStandaloneDisplay() || root.classList.contains("pwa-standalone");
+
+  if (standalone) {
+    const fillH = pwaFillHeightPx();
+    const extra = pwaExtraBottomPx();
+    const total = fillH + extra;
+    const key = `pwa:${fillH}+${extra}`;
+    root.classList.add("pwa-standalone");
+    if (key !== lastFillKey) {
+      lastFillKey = key;
+      root.style.setProperty("--pwa-fill-h", `${fillH}px`);
+      root.style.setProperty("--pwa-extra-b", `${extra}px`);
+      root.style.setProperty("--vv-top", "0px");
+      root.style.setProperty("--vv-left", "0px");
+      root.style.setProperty("--vv-w", `${window.innerWidth || 0}px`);
+      root.style.setProperty("--vv-h", `${total}px`);
+      root.style.height = `${total}px`;
+      root.style.minHeight = `${total}px`;
+    }
+    return total;
   }
-  root.classList.add("app-fill");
-  const fillH = appFillHeightPx();
-  const key = `${fillH}+0`;
-  if (key !== lastFillKey) {
-    lastFillKey = key;
-    root.style.setProperty("--app-fill-h", `${fillH}px`);
-    root.style.setProperty("--app-extra-b", "0px");
+
+  root.classList.remove("pwa-standalone");
+  root.style.removeProperty("--pwa-fill-h");
+  root.style.removeProperty("--pwa-extra-b");
+  root.style.removeProperty("height");
+  root.style.removeProperty("min-height");
+
+  const vv = window.visualViewport;
+  const iw = window.innerWidth || 0;
+  const ih = window.innerHeight || 0;
+  let top = 0;
+  let left = 0;
+  let width = iw;
+  let height = ih;
+  if (isTouchShell() && vv && vv.height > 40 && vv.width > 40) {
+    top = Math.max(0, Math.round(vv.offsetTop) || 0);
+    left = Math.max(0, Math.round(vv.offsetLeft) || 0);
+    width = Math.round(vv.width);
+    height = Math.round(vv.height);
+  } else {
+    width = 0;
+    height = 0;
   }
-  return fillH;
+  const key = `vv:${top},${left},${width}x${height}`;
+  if (key === lastFillKey) return height || ih;
+  lastFillKey = key;
+  if (width > 0 && height > 0) {
+    root.style.setProperty("--vv-top", `${top}px`);
+    root.style.setProperty("--vv-left", `${left}px`);
+    root.style.setProperty("--vv-w", `${width}px`);
+    root.style.setProperty("--vv-h", `${height}px`);
+    return height;
+  }
+  root.style.setProperty("--vv-top", "0px");
+  root.style.setProperty("--vv-left", "0px");
+  root.style.setProperty("--vv-w", "100%");
+  root.style.setProperty("--vv-h", "100%");
+  return ih;
 }
 
-/** Sync fill height; CSS flex sizes the stage/map. */
 function layoutMapBox() {
-  syncAppFillHeight();
+  pinShellViewport();
 }
 
 function scheduleViewResize() {
@@ -215,8 +285,7 @@ function openFiscalPage() {
   shellEl.dataset.page = "fiscal";
   fiscalPageEl.hidden = false;
   btnFiscal?.classList.add("is-active");
-  const bottom = document.getElementById("chrome-bottom");
-  if (bottom) bottom.hidden = true;
+  syncBottomChrome();
   fiscalPage.load().catch(() => {});
 }
 
@@ -227,8 +296,7 @@ function openYouPage() {
   shellEl.dataset.page = "you";
   youPageEl.hidden = false;
   btnYou?.classList.add("is-active");
-  const bottom = document.getElementById("chrome-bottom");
-  if (bottom) bottom.hidden = true;
+  syncBottomChrome();
   youPage.prepare();
 }
 
@@ -239,8 +307,7 @@ function openAboutPage() {
   shellEl.dataset.page = "about";
   if (aboutPageEl) aboutPageEl.hidden = false;
   btnAbout?.classList.add("is-active");
-  const bottom = document.getElementById("chrome-bottom");
-  if (bottom) bottom.hidden = true;
+  syncBottomChrome();
   syncAboutTheme();
 }
 
@@ -437,8 +504,9 @@ function syncDetailFy(node) {
 }
 
 function syncBottomChrome() {
-  const bottom = document.getElementById("chrome-bottom");
   const showBottom = onMapPage() && mode === "icicle";
+  document.documentElement.classList.toggle("has-depth", showBottom);
+  const bottom = document.getElementById("chrome-bottom");
   if (bottom) bottom.hidden = !showBottom;
 
   if (icicleDepthEl && icicleDepthRange && icicleDepthOut) {
@@ -454,6 +522,7 @@ function syncBottomChrome() {
   }
 
   layoutMapBox();
+  requestAnimationFrame(() => viewApi?.resize());
 }
 
 /** @deprecated name kept for call sites — bottom bar is Depth-only again */
@@ -1050,7 +1119,11 @@ async function main() {
   icicleDepthRange?.addEventListener("input", () => {
     const next = Math.min(11, Math.max(1, Math.round(Number(icicleDepthRange.value) || 11)));
     icicleNestLevels = next;
-    syncBottomChrome();
+    if (icicleDepthOut) icicleDepthOut.textContent = String(next);
+    icicleDepthRange.setAttribute(
+      "aria-valuetext",
+      `${next} level${next === 1 ? "" : "s"} from here`
+    );
     viewApi?.setNestLevels?.(next);
   });
 
@@ -1122,6 +1195,7 @@ async function main() {
   });
   window.matchMedia("(orientation: portrait)").addEventListener("change", onViewportChange);
   window.visualViewport?.addEventListener("resize", onViewportChange);
+  window.visualViewport?.addEventListener("scroll", onViewportChange);
 
 }
 
