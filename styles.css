@@ -1780,7 +1780,12 @@ a.engage-label:hover {
   }
 
   .chrome-bottom {
-    padding: 0 0.65rem !important;
+    /* Keep grid: no padding on the footer itself (safe-area is row 2). */
+    padding: 0 !important;
+  }
+
+  .chrome-bottom .icicle-depth {
+    padding: 0 0.65rem;
   }
 
   .chrome-bottom .icicle-depth input[type="range"] {
