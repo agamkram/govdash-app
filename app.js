@@ -216,17 +216,19 @@ function paintLayoutDebug() {
   const barBot = br ? Math.round(br.bottom) : null;
   const depthBot = dr ? Math.round(dr.bottom) : null;
   const gap = br ? Math.round(ih - br.bottom) : null;
+  const build =
+    document.querySelector('meta[name="govdash-build"]')?.content || "?";
+  const barMb = br ? getComputedStyle(bar).marginBottom : "";
   el.textContent = [
+    `build=${build}`,
     `standalone=${root.classList.contains("pwa-standalone")}`,
     `ih=${ih} vv=${vv} screenH=${screenH} shortfall=${shortfall}`,
     `fillH=${fill} extraB=${extra} safeB=${safe.toFixed(1)}`,
     br
-      ? `bar top=${Math.round(br.top)} bot=${barBot} h=${Math.round(br.height)} gapBar→ih=${gap}`
+      ? `bar bot=${barBot} h=${Math.round(br.height)} gap→ih=${gap} marginB=${barMb}`
       : "bar=hidden",
-    dr
-      ? `depthRow bot=${depthBot} (must be ≤ ih-safeB≈${Math.round(ih - safe)})`
-      : "depthRow=hidden",
-    `target: depthRow above home zone; bar.bot≈ih`,
+    dr ? `depthRow bot=${depthBot}` : "depthRow=hidden",
+    `target: build has 2379; marginB=0px; gap→ih≈0`,
   ].join("\n");
 }
 
