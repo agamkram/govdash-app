@@ -228,7 +228,7 @@ function paintLayoutDebug() {
       ? `bar bot=${barBot} h=${Math.round(br.height)} gap→ih=${gap} marginB=${barMb}`
       : "bar=hidden",
     dr ? `depthRow bot=${depthBot}` : "depthRow=hidden",
-    `target: build has 2379; marginB=0px; gap→ih≈0`,
+    `target: build 2380-overlay-depth; bar visible; gap→ih≈0`,
   ].join("\n");
 }
 

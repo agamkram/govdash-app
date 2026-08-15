@@ -87,6 +87,7 @@ html.pwa-standalone body {
 }
 
 .shell {
+  position: relative; /* anchor for absolute Depth bar */
   height: 100%;
   min-height: 100%;
   width: 100%;
@@ -100,10 +101,12 @@ html.pwa-standalone body {
 
 .shell > .chrome,
 .shell > .breadcrumbs,
-.shell > .chrome-subline,
-.shell > .chrome-bottom {
+.shell > .chrome-subline {
   flex: 0 0 auto;
 }
+
+/* Depth bar is position:absolute — not a flex item (flex footer was clipped
+   into the dead zone on PWA, leaving a black band with no visible slider). */
 
 html.app-fill .shell {
   height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
@@ -931,12 +934,16 @@ html[data-theme="dark"] .fiscal-agency-amt {
 
 .chrome-bottom {
   /*
-   * 4286/4288 tight bottom: control strip sits on the shell floor.
-   * Do NOT add env(safe-area) as margin here — on a screen-filled PWA that
-   * creates the black band under the handle (4306/07). Home indicator
-   * overlays the bottom of the bar (same as map on 4286).
+   * Overlay the bottom of the shell (4311: flex footer was eaten by the
+   * PWA dead zone — black band, no Depth UI). Absolute keeps the bar in
+   * the visible frame; stage/map fill the shell underneath.
    */
   --depth-bar-h: 0.43in;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 6;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -945,10 +952,10 @@ html[data-theme="dark"] .fiscal-agency-amt {
   min-height: var(--depth-bar-h);
   max-height: var(--depth-bar-h);
   padding: 0 1rem;
-  margin-bottom: 0;
+  margin: 0;
   box-sizing: border-box;
   min-width: 0;
-  width: 100%;
+  width: auto;
   border-top: 1px solid var(--line);
   border-bottom: 0;
   background: var(--bg);
