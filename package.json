@@ -17,7 +17,7 @@
     "fetch:subtier": "node scripts/fetch-subtier.mjs",
     "enrich:heat": "node scripts/enrich-heat.mjs",
     "enrich:spending": "node scripts/enrich-spending.mjs && node scripts/stats-about.mjs",
-    "test": "node --test scripts/lib/spend-match.test.mjs",
+    "test": "node --test scripts/lib/spend-match.test.mjs scripts/lib/authority.test.mjs",
     "stats:about": "node scripts/stats-about.mjs",
     "fetch:population": "node scripts/fetch-census-population.mjs",
     "fetch:workforce": "node scripts/fetch-workforce.mjs",

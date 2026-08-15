@@ -28,6 +28,7 @@ const files = [
   "shared.js",
   "context.js",
   "engagement.js",
+  "authority.js",
   "sankey.html",
   "apple-touch-icon.png",
   "icon-192.png",

@@ -18,6 +18,7 @@ import { createPackView } from "./views/pack.js";
 import { createSankeyView } from "./views/sankey.js";
 import { createFiscalPage } from "./views/fiscal.js";
 import { createYouPage, YOU_NODES } from "./views/you.js";
+import { authorityLine } from "./authority.js";
 
 const TREE_URL = "./data/nested/gov-tree-product.json";
 const BEYOND_URL = "./data/nested/gov-tree-beyond.json";
@@ -58,6 +59,7 @@ const atlasSubEl = document.getElementById("atlas-sub");
 const detailEl = document.getElementById("detail");
 const dKind = document.getElementById("d-kind");
 const dTitle = document.getElementById("d-title");
+const dAuthority = document.getElementById("d-authority");
 const dWorkforce = document.getElementById("d-workforce");
 const dSpending = document.getElementById("d-spending");
 const dShort = document.getElementById("d-short");
@@ -473,6 +475,19 @@ function showDetail(node, opts = {}) {
     ? "The Constitution"
     : rail?.name || node.name;
 
+  if (dAuthority) {
+    const auth = asConstitution
+      ? authorityLine({ id: "usa", kind: "sovereign", name: "United States Government" }, nodeById)
+      : authorityLine(node, nodeById);
+    if (auth?.line) {
+      dAuthority.hidden = false;
+      dAuthority.textContent = auth.line;
+    } else {
+      dAuthority.hidden = true;
+      dAuthority.textContent = "";
+    }
+  }
+
   const formatCount = (n) =>
     typeof n === "number" && Number.isFinite(n) ? n.toLocaleString("en-US") : "—";
 
@@ -686,6 +701,9 @@ function showDetail(node, opts = {}) {
         else if (ctx?.template || ctx?.ancestorUsgm || ctx?.ancestorSam) {
           parts.push("GSA Crosswalk · parent / type context");
         } else parts.push("GSA Crosswalk · SAM.gov");
+        const auth = authorityLine(node, nodeById);
+        if (auth?.cited) parts.push("authority cite from official statute table");
+        else if (auth?.line) parts.push("authority from kind + GSA nest");
         return parts.join(" · ");
       })();
 
