@@ -1069,11 +1069,12 @@ html.has-depth #icicle-depth {
 
 /* Map fills the stage. Depth footer (when shown) sits below in flex flow. */
 .map {
+  --map-gutter: 1rem;
   position: absolute;
   top: 0.35rem;
-  right: 1rem;
+  right: var(--map-gutter);
   bottom: 0;
-  left: 1rem;
+  left: var(--map-gutter);
   width: auto;
   height: auto;
   min-width: 0;
@@ -1099,6 +1100,15 @@ html.has-depth .map {
 html.pwa-standalone:not(.has-depth) .map,
 html.pwa-standalone:not(.has-depth) .app-page {
   bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* iPad Tree/Circles/Sankey: same air under the chart as left/right. */
+html.is-tablet:not(.has-depth) .map {
+  bottom: var(--map-gutter);
+}
+
+html.pwa-standalone.is-tablet:not(.has-depth) .map {
+  bottom: calc(var(--map-gutter) + env(safe-area-inset-bottom, 0px));
 }
 
 .shell[data-page="fiscal"] .app-page,
@@ -1825,9 +1835,10 @@ a.engage-label:hover {
 
   .map,
   .app-page {
+    --map-gutter: 0.65rem;
     top: 0.28rem;
-    right: 0.65rem;
-    left: 0.65rem;
+    right: var(--map-gutter);
+    left: var(--map-gutter);
   }
 
   .mode-toggle,
@@ -1868,6 +1879,13 @@ a.engage-label:hover {
 
   .fiscal-hero {
     font-size: 1.15rem;
+  }
+}
+
+/* Phone only — ½″ taller sheet so more copy is visible on open. */
+@media (max-width: 599px) {
+  .detail-pane {
+    max-height: calc(28% + 0.5in);
   }
 }
 

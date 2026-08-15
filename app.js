@@ -100,6 +100,8 @@ let spendYear = null;
 
 let layoutResizeTimer = null;
 let lastFillKey = "";
+let lastSafeInset = { w: 0, h: 0, v: 0 };
+let lastMapBoxKey = "";
 
 function isStandaloneDisplay() {
   return (
@@ -153,12 +155,16 @@ function pwaExtraBottomPx() {
 }
 
 function readSafeInsetBottom() {
+  const w = window.innerWidth || 0;
+  const h = window.innerHeight || 0;
+  if (lastSafeInset.w === w && lastSafeInset.h === h) return lastSafeInset.v;
   const probe = document.createElement("div");
   probe.style.cssText =
     "position:fixed;visibility:hidden;pointer-events:none;padding-bottom:env(safe-area-inset-bottom,0px)";
   document.body.appendChild(probe);
   const px = parseFloat(getComputedStyle(probe).paddingBottom) || 0;
   probe.remove();
+  lastSafeInset = { w, h, v: px };
   return px;
 }
 
@@ -236,10 +242,18 @@ function layoutMapBox() {
   pinShellViewport();
 }
 
+function mapBoxKey() {
+  const box = mapEl?.getBoundingClientRect();
+  return `${Math.round(box?.width || 0)}x${Math.round(box?.height || 0)}`;
+}
+
 function scheduleViewResize() {
   clearTimeout(layoutResizeTimer);
   layoutResizeTimer = setTimeout(() => {
     layoutMapBox();
+    const key = mapBoxKey();
+    if (key === lastMapBoxKey) return;
+    lastMapBoxKey = key;
     requestAnimationFrame(() => viewApi?.resize());
   }, 100);
 }
@@ -522,6 +536,7 @@ function syncBottomChrome() {
   }
 
   layoutMapBox();
+  lastMapBoxKey = mapBoxKey();
   requestAnimationFrame(() => viewApi?.resize());
 }
 
