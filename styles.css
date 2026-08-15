@@ -923,8 +923,13 @@ html[data-theme="dark"] .fiscal-agency-amt {
 }
 
 .chrome-bottom {
-  /* Tall enough for the 1.7rem thumb; tracks flex when FY + Depth share the row. */
-  --depth-bar-h: max(0.43in, calc(1.7rem + 0.35rem));
+  /*
+   * Thumb row + home-indicator padding in ONE bar (4288 model).
+   * Safe-area is padding *inside* the bar — not margin below it.
+   * Margin-below left a void and parked the handle on the clip edge (4297).
+   */
+  --depth-thumb-row: 2.05rem; /* 1.7rem thumb + a little air */
+  --depth-bar-h: calc(var(--depth-thumb-row) + env(safe-area-inset-bottom, 0px));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -932,8 +937,8 @@ html[data-theme="dark"] .fiscal-agency-amt {
   height: var(--depth-bar-h);
   min-height: var(--depth-bar-h);
   max-height: var(--depth-bar-h);
-  padding: 0 1rem;
-  margin-bottom: env(safe-area-inset-bottom, 0px); /* home indicator below bar, not inside it */
+  padding: 0 1rem env(safe-area-inset-bottom, 0px);
+  margin-bottom: 0;
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
@@ -942,7 +947,7 @@ html[data-theme="dark"] .fiscal-agency-amt {
   border-bottom: 0;
   background: var(--bg);
   overscroll-behavior: none;
-  /* visible: WebKit paints range thumbs outside the track box — hidden clipped them. */
+  /* Thumbs must not clip; flex children stay in the thumb row above padding. */
   overflow: visible;
 }
 
@@ -1009,7 +1014,7 @@ html[data-theme="dark"] .fiscal-agency-amt {
   touch-action: manipulation;
   cursor: pointer;
   margin: 0;
-  /* Layout box must contain the thumb so nothing clips at the bar edge. */
+  /* Full thumb fits in the layout box (no flat-bottom clip). */
   height: 1.7rem;
   min-height: 1.7rem;
   accent-color: var(--ink);
@@ -1742,7 +1747,7 @@ a.engage-label:hover {
 
   .chrome-bottom {
     /* Keep FY / year / Depth fully inside the bar (was clipping first F + last digit). */
-    padding: 0 0.75rem !important;
+    padding: 0 0.75rem env(safe-area-inset-bottom, 0px) !important;
     gap: 0.4rem;
     justify-content: stretch;
     box-sizing: border-box;
@@ -1776,12 +1781,12 @@ a.engage-label:hover {
     font-size: 0.62rem;
   }
 
-  /* Phone PWA: tight bar (safe-area only). Full-bleed fill is on html/body
-     (bottom:auto + --app-fill-h) so thumbs aren't cut by the short layout edge. */
+  /* Phone / PWA: same single-bar model — thumb row + safe-area padding, no void. */
   html.pwa-standalone .chrome-bottom {
-    --depth-bar-h: max(0.43in, calc(1.7rem + 0.35rem));
-    padding: 0 0.75rem !important;
-    margin-bottom: env(safe-area-inset-bottom, 0px) !important;
+    --depth-thumb-row: 2.05rem;
+    --depth-bar-h: calc(var(--depth-thumb-row) + env(safe-area-inset-bottom, 0px));
+    padding: 0 0.75rem env(safe-area-inset-bottom, 0px) !important;
+    margin-bottom: 0 !important;
     align-items: center;
     overflow: visible;
   }
