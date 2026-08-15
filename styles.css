@@ -41,19 +41,35 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Mobile/PWA: explicit fill height (avoid max-height:100dvh). */
+/*
+ * Fill height from JS (--app-fill-h). Used for PWA (must reach screen
+ * bottom — SuperMoon Bug B) and mobile Safari tabs.
+ * Desktop: leave default 100%.
+ */
 html.app-fill,
 html.app-fill body {
   height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
   min-height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
 }
 
-/* PWA only: lock document so range drags don't pan the app. */
+/*
+ * Home-screen PWA (Desktop Bottom:full bleed.txt Bug B):
+ * layout viewport is SHORTER than screen. inset:0 pins to that short box
+ * and leaves a void above the home indicator (4302 “bar way high”).
+ * Fix: top/left/right + bottom:auto + height = screen axis (set in JS).
+ * Depth bar sits at the bottom of that tall shell; safe-area is padding
+ * inside the bar only (never margin below).
+ */
 html.pwa-standalone,
 html.pwa-standalone body {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
   width: 100%;
+  height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
+  min-height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
   overflow: hidden;
   touch-action: none;
   overscroll-behavior: none;
@@ -71,6 +87,7 @@ html.pwa-standalone body {
 }
 
 .shell {
+  position: relative; /* anchor for absolute Depth bar */
   height: 100%;
   min-height: 100%;
   width: 100%;
@@ -84,10 +101,12 @@ html.pwa-standalone body {
 
 .shell > .chrome,
 .shell > .breadcrumbs,
-.shell > .chrome-subline,
-.shell > .chrome-bottom {
+.shell > .chrome-subline {
   flex: 0 0 auto;
 }
+
+/* Depth bar is position:absolute — not a flex item (flex footer was clipped
+   into the dead zone on PWA, leaving a black band with no visible slider). */
 
 html.app-fill .shell {
   height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
@@ -95,6 +114,8 @@ html.app-fill .shell {
 }
 
 html.pwa-standalone .shell {
+  height: 100%;
+  min-height: 100%;
   touch-action: none;
   overscroll-behavior: none;
 }
@@ -912,7 +933,17 @@ html[data-theme="dark"] .fiscal-agency-amt {
 }
 
 .chrome-bottom {
-  --depth-bar-h: 0.43in; /* ~0.430″ gray bar; same port + landscape */
+  /*
+   * Overlay the bottom of the shell (4311: flex footer was eaten by the
+   * PWA dead zone — black band, no Depth UI). Absolute keeps the bar in
+   * the visible frame; stage/map fill the shell underneath.
+   */
+  --depth-bar-h: 0.43in;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 6;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -921,21 +952,28 @@ html[data-theme="dark"] .fiscal-agency-amt {
   min-height: var(--depth-bar-h);
   max-height: var(--depth-bar-h);
   padding: 0 1rem;
-  margin-bottom: env(safe-area-inset-bottom, 0px); /* swipe/home zone below bar, not inside it */
+  margin: 0;
   box-sizing: border-box;
   min-width: 0;
+  width: auto;
   border-top: 1px solid var(--line);
   border-bottom: 0;
   background: var(--bg);
   overscroll-behavior: none;
+  overflow: visible;
 }
 
 .chrome-bottom .icicle-depth {
   flex: 0 0 auto;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
 }
 
-/* Depth range — custom thumb (Safari + PWA). */
+/* Depth range — custom thumb (Safari + PWA). Match 4288: no forced 1.7rem input box. */
 .chrome-bottom input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
@@ -1010,23 +1048,34 @@ html[data-theme="dark"] .fiscal-agency-amt {
   background: var(--bg);
 }
 
+/*
+ * No Depth bar (Tree / Circles / Sankey).
+ * 4286 PWA: map ~14css from bottom — do NOT force full env(safe-area)
+ * (~34css) or you get the 4308 black void under the map.
+ */
 .shell:not(:has(#chrome-bottom:not([hidden]))) .map {
-  bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
+  bottom: 0.35rem;
 }
 
-/* App pages (i / Z / $) never share the depth bar — always clear the home swipe. */
 .shell[data-page="fiscal"] .app-page,
 .shell[data-page="you"] .app-page,
 .shell[data-page="about"] .app-page {
-  bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
+  bottom: max(0.35rem, env(safe-area-inset-bottom, 0px));
 }
 
-/* Phone PWA: when Depth is hidden, one safe-area under the map (no +1.2rem). */
 @media (max-width: 720px) {
-  html.pwa-standalone .shell:not(:has(#chrome-bottom:not([hidden]))) .map {
-    bottom: max(0.28rem, env(safe-area-inset-bottom, 0px));
+  .shell:not(:has(#chrome-bottom:not([hidden]))) .map {
+    bottom: 0.28rem;
   }
 
+  /* PWA Sankey/Tree/Circles: match 4286 tight map bottom */
+  html.pwa-standalone .shell:not(:has(#chrome-bottom:not([hidden]))) .map {
+    bottom: 0.28rem;
+  }
+
+  .shell[data-page="fiscal"] .app-page,
+  .shell[data-page="you"] .app-page,
+  .shell[data-page="about"] .app-page,
   html.pwa-standalone .shell[data-page="fiscal"] .app-page,
   html.pwa-standalone .shell[data-page="you"] .app-page,
   html.pwa-standalone .shell[data-page="about"] .app-page {
@@ -1738,19 +1787,19 @@ a.engage-label:hover {
 
   .chrome-bottom {
     padding: 0 0.65rem !important;
+    --depth-bar-h: 0.43in;
+    margin-bottom: 0 !important;
   }
 
-  /* Phone PWA: same flex footer as base — no +1.2rem / 0.53in lift. */
   html.pwa-standalone .chrome-bottom {
     --depth-bar-h: 0.43in;
     padding: 0 0.65rem !important;
-    margin-bottom: env(safe-area-inset-bottom, 0px) !important;
+    margin-bottom: 0 !important;
     align-items: center;
   }
 
   .chrome-bottom .icicle-depth input[type="range"] {
     width: min(13rem, 55vw);
-    flex: none;
     min-width: 9rem;
   }
 
