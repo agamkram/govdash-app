@@ -48,12 +48,23 @@ html.app-fill body {
   min-height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
 }
 
-/* PWA only: lock document so range drags don't pan the app. */
+/*
+ * PWA only: lock document so range drags don't pan the app.
+ * SuperMoon Bug B (Desktop Bottom:full bleed.txt): do NOT use inset:0.
+ * inset bottom pins to the *short* layout viewport and clips ~5/16″ above
+ * the home indicator — that line was cutting the slider handles.
+ * top/left/right + bottom:auto + fill height = paint to screen bottom.
+ */
 html.pwa-standalone,
 html.pwa-standalone body {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
   width: 100%;
+  height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
+  min-height: calc(var(--app-fill-h, 100%) + var(--app-extra-b, 0px));
   overflow: hidden;
   touch-action: none;
   overscroll-behavior: none;
@@ -912,7 +923,8 @@ html[data-theme="dark"] .fiscal-agency-amt {
 }
 
 .chrome-bottom {
-  --depth-bar-h: 0.43in; /* ~0.430″ gray bar; same port + landscape */
+  /* Tall enough for the 1.7rem thumb; tracks flex when FY + Depth share the row. */
+  --depth-bar-h: max(0.43in, calc(1.7rem + 0.35rem));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -921,7 +933,7 @@ html[data-theme="dark"] .fiscal-agency-amt {
   min-height: var(--depth-bar-h);
   max-height: var(--depth-bar-h);
   padding: 0 1rem;
-  margin-bottom: env(safe-area-inset-bottom, 0px); /* swipe/home zone below bar, not inside it */
+  margin-bottom: env(safe-area-inset-bottom, 0px); /* home indicator below bar, not inside it */
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
@@ -930,8 +942,8 @@ html[data-theme="dark"] .fiscal-agency-amt {
   border-bottom: 0;
   background: var(--bg);
   overscroll-behavior: none;
-  /* Labels must stay on-screen; tracks absorb squeeze (phone + Depth). */
-  overflow: hidden;
+  /* visible: WebKit paints range thumbs outside the track box — hidden clipped them. */
+  overflow: visible;
 }
 
 .chrome-bottom .icicle-depth,
@@ -989,7 +1001,7 @@ html[data-theme="dark"] .fiscal-agency-amt {
   white-space: nowrap;
 }
 
-/* Depth range — custom thumb (Safari + PWA). */
+/* Depth / FY range — custom thumb (Safari + PWA). */
 .chrome-bottom input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
@@ -997,6 +1009,9 @@ html[data-theme="dark"] .fiscal-agency-amt {
   touch-action: manipulation;
   cursor: pointer;
   margin: 0;
+  /* Layout box must contain the thumb so nothing clips at the bar edge. */
+  height: 1.7rem;
+  min-height: 1.7rem;
   accent-color: var(--ink);
 }
 
@@ -1761,14 +1776,14 @@ a.engage-label:hover {
     font-size: 0.62rem;
   }
 
-  /* Phone PWA: match the tight production bar (IMG_4288).
-     Only env(safe-area) under the bar — no +1.2rem, no taller 0.53in strip,
-     no top-align padding. Those stacked and floated the controls (IMG_4296). */
+  /* Phone PWA: tight bar (safe-area only). Full-bleed fill is on html/body
+     (bottom:auto + --app-fill-h) so thumbs aren't cut by the short layout edge. */
   html.pwa-standalone .chrome-bottom {
-    --depth-bar-h: 0.43in;
+    --depth-bar-h: max(0.43in, calc(1.7rem + 0.35rem));
     padding: 0 0.75rem !important;
     margin-bottom: env(safe-area-inset-bottom, 0px) !important;
     align-items: center;
+    overflow: visible;
   }
 
   .stage {
