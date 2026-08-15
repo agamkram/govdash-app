@@ -1075,17 +1075,17 @@ html[data-theme="dark"] .fiscal-agency-amt {
   bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
 }
 
-/* Phone PWA: when the depth bar is hidden, keep the same home-swipe clearance
-   Icicle gets via .chrome-bottom margin — do not change Icicle’s bar. */
+/* Phone PWA: when the bottom bar is hidden, clear the home indicator only.
+   Do not add extra rem lift — that raised the map above the tight production layout. */
 @media (max-width: 720px) {
   html.pwa-standalone .shell:not(:has(#chrome-bottom:not([hidden]))) .map {
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 1.2rem + 0.28rem);
+    bottom: max(0.28rem, env(safe-area-inset-bottom, 0px));
   }
 
   html.pwa-standalone .shell[data-page="fiscal"] .app-page,
   html.pwa-standalone .shell[data-page="you"] .app-page,
   html.pwa-standalone .shell[data-page="about"] .app-page {
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 1.2rem + 0.28rem);
+    bottom: max(0.28rem, env(safe-area-inset-bottom, 0px));
   }
 }
 
@@ -1761,17 +1761,14 @@ a.engage-label:hover {
     font-size: 0.62rem;
   }
 
-  /* Phone PWA: lift above swipe zone; 0.53in CSS ≈ 0.43″ ruler. */
+  /* Phone PWA: match the tight production bar (IMG_4288).
+     Only env(safe-area) under the bar — no +1.2rem, no taller 0.53in strip,
+     no top-align padding. Those stacked and floated the controls (IMG_4296). */
   html.pwa-standalone .chrome-bottom {
-    --depth-bar-h: 0.53in;
-    padding: calc(0.12rem + 10px) 0.75rem 0 !important;
-    margin-bottom: calc(env(safe-area-inset-bottom, 0px) + 1.2rem) !important;
-    align-items: flex-start;
-  }
-
-  html.pwa-standalone .chrome-bottom .icicle-depth,
-  html.pwa-standalone .chrome-bottom .fy-scrub {
-    align-items: flex-start;
+    --depth-bar-h: 0.43in;
+    padding: 0 0.75rem !important;
+    margin-bottom: env(safe-area-inset-bottom, 0px) !important;
+    align-items: center;
   }
 
   .stage {
