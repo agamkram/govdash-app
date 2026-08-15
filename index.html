@@ -10,8 +10,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <script>
-    /* PWA Bug B: layout viewport is short of screen — fill to screen axis
-       before first paint so Depth is not parked above a black void. */
+    /* PWA: layout viewport is often shorter than screen — set fill height before paint. */
     (function () {
       var n = window.navigator;
       var standalone =
@@ -24,7 +23,6 @@
       root.classList.add("app-fill");
       var iw = window.innerWidth || 0;
       var ih = window.innerHeight || 0;
-      var vv = Math.round((window.visualViewport && window.visualViewport.height) || 0);
       var sw = window.screen.width || 0;
       var sh = window.screen.height || 0;
       var screenMax = Math.max(sw, sh);
@@ -32,10 +30,8 @@
       var portrait =
         window.matchMedia("(orientation: portrait)").matches ||
         (!window.matchMedia("(orientation: landscape)").matches && ih >= iw);
-      var screenH = portrait ? screenMax : screenMin;
-      var fillH = Math.max(ih, vv, screenH);
+      var fillH = Math.max(ih, portrait ? screenMax : screenMin);
       var extra = 0;
-      /* iPad: screen metrics can undershoot inner — add a little. */
       if (Math.min(iw, ih) >= 600 && screenMax < ih - 10) {
         extra = 20;
       }
@@ -49,8 +45,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Michroma&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2380" />
-  <meta name="govdash-build" content="2380-overlay-depth" />
+  <link rel="stylesheet" href="styles.css?v=2400" />
+  <meta name="govdash-build" content="2400-restore-pre-fy-layout" />
 </head>
 <body>
   <div class="shell">
@@ -247,7 +243,7 @@
       </label>
     </footer>
   </div>
-  <script type="module" src="app.js?v=2380"></script>
+  <script type="module" src="app.js?v=2400"></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>

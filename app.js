@@ -129,7 +129,6 @@ function appFillHeightPx() {
   const screenMax = Math.max(sw, sh);
   const screenMin = Math.min(sw, sh);
   const screenH = isPortrait() ? screenMax : screenMin;
-  /* PWA: must include screen axis or the shell stops short (void under Depth). */
   if (document.documentElement.classList.contains("pwa-standalone")) {
     return Math.max(ih, vv, screenH);
   }
@@ -141,7 +140,6 @@ function appExtraBottomPx() {
   const iw = window.innerWidth || 0;
   const ih = window.innerHeight || 0;
   const screenMax = Math.max(window.screen.width || 0, window.screen.height || 0);
-  /* Phone: fillH already hits screen — no extra. iPad undershoot only. */
   if (Math.min(iw, ih) < 600) return 0;
   if (screenMax >= ih - 10) return 0;
   return Math.max(readSafeInsetBottom(), 20);
@@ -172,64 +170,6 @@ function syncAppFillHeight() {
 /** Sync fill height; CSS flex sizes the stage/map. */
 function layoutMapBox() {
   syncAppFillHeight();
-  paintLayoutDebug();
-}
-
-/** ?layoutDebug=1 — live numbers so we can fix PWA bottom without screenshots. */
-function paintLayoutDebug() {
-  if (!/\blayoutDebug=1\b/.test(location.search)) return;
-  let el = document.getElementById("layout-debug");
-  if (!el) {
-    el = document.createElement("pre");
-    el.id = "layout-debug";
-    el.setAttribute("aria-hidden", "true");
-    Object.assign(el.style, {
-      position: "fixed",
-      left: "4px",
-      bottom: "4px",
-      zIndex: "99999",
-      margin: "0",
-      padding: "6px 8px",
-      font: "10px/1.35 ui-monospace, monospace",
-      color: "#0f0",
-      background: "rgba(0,0,0,0.82)",
-      pointerEvents: "none",
-      maxWidth: "96vw",
-      whiteSpace: "pre-wrap",
-    });
-    document.body.appendChild(el);
-  }
-  const root = document.documentElement;
-  const bar = document.getElementById("chrome-bottom");
-  const br = bar && !bar.hidden ? bar.getBoundingClientRect() : null;
-  const ih = window.innerHeight || 0;
-  const vv = Math.round(window.visualViewport?.height || 0);
-  const sh = Math.max(window.screen.width || 0, window.screen.height || 0);
-  const smin = Math.min(window.screen.width || 0, window.screen.height || 0);
-  const screenH = isPortrait() ? sh : smin;
-  const fill = root.style.getPropertyValue("--app-fill-h") || "(css)";
-  const extra = root.style.getPropertyValue("--app-extra-b") || "0";
-  const safe = readSafeInsetBottom();
-  const shortfall = screenH - ih;
-  const depth = document.getElementById("icicle-depth");
-  const dr = depth && !depth.hidden ? depth.getBoundingClientRect() : null;
-  const barBot = br ? Math.round(br.bottom) : null;
-  const depthBot = dr ? Math.round(dr.bottom) : null;
-  const gap = br ? Math.round(ih - br.bottom) : null;
-  const build =
-    document.querySelector('meta[name="govdash-build"]')?.content || "?";
-  const barMb = br ? getComputedStyle(bar).marginBottom : "";
-  el.textContent = [
-    `build=${build}`,
-    `standalone=${root.classList.contains("pwa-standalone")}`,
-    `ih=${ih} vv=${vv} screenH=${screenH} shortfall=${shortfall}`,
-    `fillH=${fill} extraB=${extra} safeB=${safe.toFixed(1)}`,
-    br
-      ? `bar bot=${barBot} h=${Math.round(br.height)} gap→ih=${gap} marginB=${barMb}`
-      : "bar=hidden",
-    dr ? `depthRow bot=${depthBot}` : "depthRow=hidden",
-    `target: build 2380-overlay-depth; bar visible; gap→ih≈0`,
-  ].join("\n");
 }
 
 function scheduleViewResize() {
