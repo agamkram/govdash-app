@@ -198,6 +198,7 @@ export function initColorTheme() {
     localStorage.removeItem("govdash-scrub-coach");
     localStorage.removeItem("govdash-scrub-nudge");
     localStorage.removeItem("govdash-zip");
+    localStorage.removeItem("govdash-heat"); // Heat is session-only, always starts off
     // Keep govdash-chart-mode — chart view only.
   } catch {
     /* ignore */

@@ -1,5 +1,5 @@
-import { engagementActions } from "./engagement.js?v=2472";
-import { enrichmentContext, indexById } from "./context.js?v=2472";
+import { engagementActions } from "./engagement.js?v=2473";
+import { enrichmentContext, indexById } from "./context.js?v=2473";
 import {
   childCount,
   displayName,
@@ -14,19 +14,19 @@ import {
   HEAT_KIND_LABEL,
   syncHeatPulse,
   setHeatPulseSink,
-} from "./shared.js?v=2472";
-import { createIcicleView } from "./views/icicle.js?v=2472";
-import { createTreeView } from "./views/tree.js?v=2472";
-import { createPackView } from "./views/pack.js?v=2472";
-import { createSankeyView } from "./views/sankey.js?v=2472";
-import { createFiscalPage } from "./views/fiscal.js?v=2472";
-import { createYouPage, YOU_NODES } from "./views/you.js?v=2472";
-import { authorityLine } from "./authority.js?v=2472";
-import { createSpendYearController } from "./spend-year.js?v=2472";
+} from "./shared.js?v=2473";
+import { createIcicleView } from "./views/icicle.js?v=2473";
+import { createTreeView } from "./views/tree.js?v=2473";
+import { createPackView } from "./views/pack.js?v=2473";
+import { createSankeyView } from "./views/sankey.js?v=2473";
+import { createFiscalPage } from "./views/fiscal.js?v=2473";
+import { createYouPage, YOU_NODES } from "./views/you.js?v=2473";
+import { authorityLine } from "./authority.js?v=2473";
+import { createSpendYearController } from "./spend-year.js?v=2473";
 
-const TREE_URL = "./data/nested/gov-tree-product.json?v=2472";
-const BEYOND_URL = "./data/nested/gov-tree-beyond.json?v=2472";
-const SPEND_YEAR_URL = "./data/nested/spend-by-year.json?v=2472";
+const TREE_URL = "./data/nested/gov-tree-product.json?v=2473";
+const BEYOND_URL = "./data/nested/gov-tree-beyond.json?v=2473";
+const SPEND_YEAR_URL = "./data/nested/spend-by-year.json?v=2473";
 
 const factories = {
   icicle: createIcicleView,
@@ -37,7 +37,6 @@ const factories = {
 
 /** Persist only which chart (Icicle / Tree / Circles / Sankey) — nothing else. */
 const CHART_MODE_KEY = "govdash-chart-mode";
-const HEAT_KEY = "govdash-heat";
 
 function readSavedChartMode() {
   try {
@@ -58,20 +57,9 @@ function saveChartMode(m) {
   }
 }
 
+/** Heat always starts off; not persisted (off label is the invite). */
 function readHeatOn() {
-  try {
-    return localStorage.getItem(HEAT_KEY) === "1";
-  } catch {
-    return false;
-  }
-}
-
-function saveHeatOn(on) {
-  try {
-    localStorage.setItem(HEAT_KEY, on ? "1" : "0");
-  } catch {
-    /* ignore */
-  }
+  return false;
 }
 
 /** Places that actually pulse (own events, not parent rollup). */
@@ -1432,7 +1420,6 @@ async function main() {
 
   function toggleHeat() {
     const next = !document.documentElement.classList.contains("heat-on");
-    saveHeatOn(next);
     applyHeatChrome(next);
     // Phone keeps :focus after tap → looked like a third “mode” until refresh.
     try {
