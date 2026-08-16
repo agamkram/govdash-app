@@ -28,6 +28,10 @@ export function createTreeView(container, { onSelect, onFocusChange }) {
   const list = document.createElement("div");
   list.className = "org-tree";
   wrap.append(list);
+  wrap.addEventListener("click", (e) => {
+    if (e.target !== wrap && e.target !== list) return;
+    if (focus?.parent) goUp();
+  });
 
   function indexTree(node) {
     byId.set(node.data.id, node);
@@ -103,14 +107,26 @@ export function createTreeView(container, { onSelect, onFocusChange }) {
     label.type = "button";
     label.className = "org-label";
     label.textContent = displayName(node);
-    label.title = data.name;
-    label.addEventListener("click", (e) => {
+    label.title =
+      isFocus && node.parent
+        ? `${data.name} · tap to go up`
+        : data.name;
+    if (isFocus && node.parent) {
+      label.setAttribute("aria-label", `${displayName(node)}, tap to go up`);
+    }
+
+    function activateRow(e) {
+      if (toggle.contains(e.target)) return;
       e.stopPropagation();
+      // Current top row = Circles outer ring: tap to go up. ▾ still expands.
+      if (isFocus && node.parent) {
+        goUp();
+        return;
+      }
       selectedId = data.id;
       onSelect?.(data, node, {
         revealRoot: node === fullRoot && node === focus,
       });
-      // Drill: set focus when node has children
       if (hasKids && node !== focus) {
         focus = node;
         ensureAncestorsExpanded(focus);
@@ -118,7 +134,9 @@ export function createTreeView(container, { onSelect, onFocusChange }) {
         onFocusChange?.(focus);
       }
       paint();
-    });
+    }
+    label.addEventListener("click", activateRow);
+    row.addEventListener("click", activateRow);
 
     const meta = document.createElement("span");
     meta.className = "org-meta";
@@ -138,7 +156,8 @@ export function createTreeView(container, { onSelect, onFocusChange }) {
   function paint() {
     list.replaceChildren();
     if (!focus) return;
-    // Show from focus downward (ancestors live in breadcrumbs / Up)
+    // Show from focus downward. Tap the current top row to go up one level
+    // (Circles outer ring). Breadcrumbs still skip. ▾ expands in place.
     ensureAncestorsExpanded(focus);
     renderNode(focus, list, 0);
   }

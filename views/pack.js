@@ -237,7 +237,9 @@ export function createPackView(container, { onSelect, onFocusChange }) {
         return 0.94;
       })
       .attr("stroke", (d) => (d === focus ? INK : "rgba(0,0,0,0.28)"))
-      .attr("stroke-width", (d) => (d === focus ? 2.25 : 1));
+      .attr("data-stroke-rest", (d) => (d === focus ? INK : "rgba(0,0,0,0.28)"))
+      .attr("stroke-width", (d) => (d === focus ? 2.25 : 1))
+      .attr("data-stroke-w", (d) => (d === focus ? "2.25" : "1"));
     placeHalo();
     placeFocusChrome();
   }

@@ -290,6 +290,10 @@ export function kindFill(nodeOrData) {
 
 export function displayName(nodeOrData) {
   const n = nodeOrData?.data ?? nodeOrData;
+  if (!n) return "";
+  if (n.id === "usa" || n.id === "beyond" || n.kind === "sovereign") {
+    return atlasRail(n).short;
+  }
   if (n.short && n.short.length >= 2 && n.short.length <= 16) return n.short;
   let name = (n.name || "")
     .replace(/^US\s+/i, "")
@@ -515,6 +519,15 @@ function mixHex(a, b, t) {
   return `rgb(${m(0)},${m(1)},${m(2)})`;
 }
 
+function mixRgba(a, b, t, alpha) {
+  const pa = hexRgb(a);
+  const pb = hexRgb(b);
+  if (!pa || !pb) return a;
+  const m = (i) => Math.round(pa[i] + (pb[i] - pa[i]) * t);
+  const aOut = Number.isFinite(alpha) ? Math.max(0, Math.min(1, alpha)) : 1;
+  return `rgba(${m(0)},${m(1)},${m(2)},${aOut.toFixed(3)})`;
+}
+
 function parseColorRgb(color) {
   const s = String(color || "").trim();
   const hex = s.replace("#", "");
@@ -584,8 +597,8 @@ let heatPulseWanted = false;
 let heatPulseSink = null;
 
 export function heatPulsePhase(now = performance.now()) {
-  // 0 = rest fill, 1 = selected/bright fill
-  return 0.5 + 0.5 * Math.sin(now / 380);
+  // 0 = rest fill, 1 = selected/bright fill. 2π×318 ms ≈ 2s per breathe.
+  return 0.5 + 0.5 * Math.sin(now / 318);
 }
 
 /**
@@ -751,43 +764,77 @@ function heatPulseApply() {
     });
   }
 
-  // Circles — gentle color pulse only (no exaggerated size like icicle/sankey).
+  // Circles — radius stays put (area grow was too much). Peak lives on a
+  // full-opacity ring; ghosted parent disks lift a little so nest shade
+  // does not eat the fill lerp.
   const packNodes = document.querySelectorAll("html.heat-on circle.map-node.has-heat");
   for (const el of packNodes) {
     if (el.getAttribute("data-heat-hold") === "1") continue;
     const rest = el.getAttribute("data-fill-rest");
     const sel = el.getAttribute("data-fill-sel");
     const rBase = Number(el.getAttribute("data-r-base"));
-    if (rest && sel) el.setAttribute("fill", heatPulseFill(rest, sel, t));
     if (rBase > 0) el.setAttribute("r", String(rBase));
     el.removeAttribute("rx");
     el.removeAttribute("ry");
-    const baseOp = el.getAttribute("data-base-op");
-    if (baseOp != null) el.setAttribute("fill-opacity", baseOp);
+
+    const boost = rBase > 0 ? heatSizeBoost(rBase * 2) : 0.4;
+    const tt = heatPulseT(t, boost);
+    if (rest && sel) el.setAttribute("fill", heatPulseFill(rest, sel, tt));
+
+    const baseOp = Number(el.getAttribute("data-base-op"));
+    if (Number.isFinite(baseOp)) {
+      const peakOp = baseOp < 0.7 ? Math.min(0.78, baseOp + 0.44) : baseOp;
+      el.setAttribute("fill-opacity", String(baseOp + (peakOp - baseOp) * tt));
+    }
+
+    if (sel) {
+      const strokeRest = el.getAttribute("data-stroke-rest") || "rgba(0,0,0,0.28)";
+      const w0Raw = Number(el.getAttribute("data-stroke-w"));
+      const w0 = w0Raw > 0 ? w0Raw : 1;
+      const a0 = 0.28;
+      el.setAttribute("stroke", mixRgba(strokeRest, sel, tt, a0 + (1 - a0) * tt));
+      const wCap = rBase > 0 ? Math.max(w0, rBase * 0.26) : w0 + 1.3;
+      const wPeak = Math.min(2.55, w0 + 1.35, wCap);
+      el.setAttribute("stroke-width", String(w0 + (wPeak - w0) * tt));
+    }
   }
 
-  // Tree — direct heat: swatch + row wash. Branch with heat below: pulsing bracket only.
+  // Tree — heat item: whole row. Ancestors with heat below: vertical bar only.
+  // Keep pulsing after you arrive (focus/selected used to skip the rectangle).
   const rows = document.querySelectorAll(
     "html.heat-on .org-row.has-heat, html.heat-on .org-row.has-heat-deep"
   );
   for (const el of rows) {
-    if (el.classList.contains("is-selected") || el.classList.contains("is-focus")) continue;
     const rest = el.getAttribute("data-fill-rest");
     const sel = el.getAttribute("data-fill-sel");
     if (!rest || !sel) continue;
     const deepOnly = el.classList.contains("has-heat-deep");
-    const tt = heatPulseT(t, deepOnly ? 0.4 : 0.55);
+    const tt = heatPulseT(t, deepOnly ? 0.5 : 0.55);
     const fill = heatPulseFill(rest, sel, tt);
     const bracket = el.querySelector(".org-heat-bracket");
-    if (bracket) bracket.style.background = fill;
-    if (deepOnly) continue;
+    if (bracket) {
+      bracket.style.background = fill;
+      if (deepOnly) {
+        bracket.style.width = `${3 + 2.1 * tt}px`;
+        bracket.style.opacity = String(0.55 + 0.45 * tt);
+      } else {
+        bracket.style.width = "";
+        bracket.style.opacity = "";
+      }
+    }
+    if (deepOnly) {
+      el.style.backgroundColor = "";
+      el.style.boxShadow = "";
+      continue;
+    }
     const swatch = el.querySelector(".org-swatch");
     if (swatch) swatch.style.background = fill;
     const rgb = parseColorRgb(fill);
     if (rgb) {
-      const a = (0.1 + 0.14 * tt).toFixed(3);
+      const a = (0.16 + 0.38 * tt).toFixed(3);
       el.style.backgroundColor = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},${a})`;
     }
+    el.style.boxShadow = `inset 0 0 0 ${1 + 1.15 * tt}px ${mixRgba(rest, sel, tt, 0.35 + 0.65 * tt)}`;
   }
 
   if (heatPulseSink) {
@@ -841,11 +888,16 @@ function stopHeatPulse() {
       if (rest) el.setAttribute("fill", rest);
       const baseOp = el.getAttribute("data-base-op");
       if (baseOp != null) el.setAttribute("fill-opacity", baseOp);
+      const stroke = el.getAttribute("data-stroke-rest");
+      if (stroke) el.setAttribute("stroke", stroke);
+      const sw = el.getAttribute("data-stroke-w");
+      if (sw != null) el.setAttribute("stroke-width", sw);
     });
     document
       .querySelectorAll(".org-row.has-heat, .org-row.has-heat-deep")
       .forEach((el) => {
         el.style.backgroundColor = "";
+        el.style.boxShadow = "";
         const swatch = el.querySelector(".org-swatch");
         if (swatch) {
           swatch.style.transform = "";
@@ -853,7 +905,11 @@ function stopHeatPulse() {
           if (rest) swatch.style.background = rest;
         }
         const bracket = el.querySelector(".org-heat-bracket");
-        if (bracket) bracket.style.background = "";
+        if (bracket) {
+          bracket.style.background = "";
+          bracket.style.width = "";
+          bracket.style.opacity = "";
+        }
       });
   } catch {
     /* ignore */
