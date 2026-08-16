@@ -1,5 +1,5 @@
-import { engagementActions } from "./engagement.js?v=2465";
-import { enrichmentContext, indexById } from "./context.js?v=2465";
+import { engagementActions } from "./engagement.js?v=2472";
+import { enrichmentContext, indexById } from "./context.js?v=2472";
 import {
   childCount,
   displayName,
@@ -14,19 +14,19 @@ import {
   HEAT_KIND_LABEL,
   syncHeatPulse,
   setHeatPulseSink,
-} from "./shared.js?v=2465";
-import { createIcicleView } from "./views/icicle.js?v=2465";
-import { createTreeView } from "./views/tree.js?v=2465";
-import { createPackView } from "./views/pack.js?v=2465";
-import { createSankeyView } from "./views/sankey.js?v=2465";
-import { createFiscalPage } from "./views/fiscal.js?v=2465";
-import { createYouPage, YOU_NODES } from "./views/you.js?v=2465";
-import { authorityLine } from "./authority.js?v=2465";
-import { createSpendYearController } from "./spend-year.js?v=2465";
+} from "./shared.js?v=2472";
+import { createIcicleView } from "./views/icicle.js?v=2472";
+import { createTreeView } from "./views/tree.js?v=2472";
+import { createPackView } from "./views/pack.js?v=2472";
+import { createSankeyView } from "./views/sankey.js?v=2472";
+import { createFiscalPage } from "./views/fiscal.js?v=2472";
+import { createYouPage, YOU_NODES } from "./views/you.js?v=2472";
+import { authorityLine } from "./authority.js?v=2472";
+import { createSpendYearController } from "./spend-year.js?v=2472";
 
-const TREE_URL = "./data/nested/gov-tree-product.json?v=2465";
-const BEYOND_URL = "./data/nested/gov-tree-beyond.json?v=2465";
-const SPEND_YEAR_URL = "./data/nested/spend-by-year.json?v=2465";
+const TREE_URL = "./data/nested/gov-tree-product.json?v=2472";
+const BEYOND_URL = "./data/nested/gov-tree-beyond.json?v=2472";
+const SPEND_YEAR_URL = "./data/nested/spend-by-year.json?v=2472";
 
 const factories = {
   icicle: createIcicleView,
@@ -60,9 +60,9 @@ function saveChartMode(m) {
 
 function readHeatOn() {
   try {
-    return localStorage.getItem(HEAT_KEY) !== "0";
+    return localStorage.getItem(HEAT_KEY) === "1";
   } catch {
-    return true;
+    return false;
   }
 }
 
@@ -74,20 +74,79 @@ function saveHeatOn(on) {
   }
 }
 
+/** Places that actually pulse (own events, not parent rollup). */
+let heatPulsePlaceCount = 0;
+
+function countDirectHeatPlaces(root) {
+  let n = 0;
+  const walk = (node) => {
+    const h = node?.heat;
+    if (h && !h.rolledUp) {
+      const c =
+        typeof h.count === "number"
+          ? h.count
+          : Array.isArray(h.events)
+            ? h.events.length
+            : 0;
+      if (c > 0) n += 1;
+    }
+    for (const ch of node?.children || []) walk(ch);
+  };
+  if (root) walk(root);
+  return n;
+}
+
+function setHeatPulsePlaceCount(n) {
+  heatPulsePlaceCount = Math.max(0, Math.round(Number(n) || 0));
+  syncHeatChip();
+}
+
+const HEAT_OFF_LABEL = "Where's the action?";
+
+/**
+ * Heat switch: two functions only — off | on.
+ * When on, the label always carries the pulse count (including 0).
+ * Off after toggle must match cold-start off (same classes + label).
+ */
+function syncHeatChip() {
+  if (!btnHeat) return;
+  const on = document.documentElement.classList.contains("heat-on");
+  const n = heatPulsePlaceCount;
+  const nLabel = String(n);
+
+  let text;
+  let title;
+  let aria;
+  if (!on) {
+    text = HEAT_OFF_LABEL;
+    title =
+      "Tap to show places with upcoming floor, Register filings, and other official activity";
+    aria = "Heat off. Tap to show where the action is on the map.";
+  } else {
+    text = n === 1 ? "1 event ahead" : `${nLabel} events ahead`;
+    title =
+      n > 0
+        ? `${nLabel} place${n === 1 ? "" : "s"} with upcoming activity · zoom to find them · tap to hide`
+        : "Heat on · nothing upcoming in this snapshot · tap to hide";
+    aria =
+      n > 0
+        ? `Heat on. ${nLabel} event${n === 1 ? "" : "s"} ahead. Zoom to find them. Tap to hide.`
+        : "Heat on. 0 events ahead. Tap to hide.";
+  }
+
+  // Explicit two-state face — never leave a sticky on/empty class when off.
+  btnHeat.dataset.heatState = on ? "on" : "off";
+  btnHeat.classList.toggle("is-on", on);
+  btnHeat.classList.remove("is-empty", "is-active");
+  btnHeat.setAttribute("aria-pressed", on ? "true" : "false");
+  btnHeat.title = title;
+  btnHeat.setAttribute("aria-label", aria);
+  if (heatChipTextEl) heatChipTextEl.textContent = text;
+}
+
 function applyHeatChrome(on) {
   document.documentElement.classList.toggle("heat-on", !!on);
-  if (!btnHeat) return;
-  btnHeat.classList.toggle("is-active", !!on);
-  btnHeat.setAttribute("aria-pressed", on ? "true" : "false");
-  btnHeat.title = on
-    ? "Heat — what’s happening (on)"
-    : "Heat — what’s happening (off)";
-  btnHeat.setAttribute(
-    "aria-label",
-    on
-      ? "Heat. Showing live events on the map."
-      : "Heat. Live events hidden. Tap to show."
-  );
+  syncHeatChip();
   // Lightweight redraw — avoid full icicle rebuild via resize().
   viewApi?.setSelected?.(selectedNode?.id ?? null);
   if (mode === "sankey") viewApi?.resize?.();
@@ -118,6 +177,7 @@ const dNote = document.getElementById("d-note");
 const detailClose = document.getElementById("detail-close");
 const btnEnter = document.getElementById("btn-enter");
 const btnHeat = document.getElementById("btn-heat");
+const heatChipTextEl = document.getElementById("heat-chip-text");
 const btnFiscal = document.getElementById("btn-fiscal");
 const btnYou = document.getElementById("btn-you");
 const btnAbout = document.getElementById("btn-about");
@@ -1301,6 +1361,15 @@ async function main() {
   usaRoot = usaData.tree;
   attachBeyondDoors(usaRoot, beyondData.tree);
 
+  const metaDirect = usaData.meta?.heat?.nodesWithDirectHeat;
+  setHeatPulsePlaceCount(
+    typeof metaDirect === "number" && metaDirect >= 0
+      ? metaDirect
+      : countDirectHeatPlaces(usaRoot)
+  );
+  // Re-sync chip labels now that the pulse count is known.
+  applyHeatChrome(readHeatOn());
+
   spendYear = createSpendYearController(usaRoot);
   if (spendYearRes?.ok) {
     try {
@@ -1361,11 +1430,18 @@ async function main() {
     applySpendYear(y);
   });
 
-  btnHeat?.addEventListener("click", () => {
+  function toggleHeat() {
     const next = !document.documentElement.classList.contains("heat-on");
     saveHeatOn(next);
     applyHeatChrome(next);
-  });
+    // Phone keeps :focus after tap → looked like a third “mode” until refresh.
+    try {
+      btnHeat.blur();
+    } catch {
+      /* ignore */
+    }
+  }
+  btnHeat?.addEventListener("click", toggleHeat);
   btnFiscal?.addEventListener("click", () => {
     if (pageName() === "fiscal") closeAppPage();
     else openFiscalPage();

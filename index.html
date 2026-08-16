@@ -75,16 +75,16 @@
     })();
   </script>
   <title>GovDash</title>
-  <link rel="icon" type="image/png" href="icon-192.png?v=2465" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2465" />
+  <link rel="icon" type="image/png" href="icon-192.png?v=2472" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2472" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Michroma&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2465" />
-  <meta name="govdash-build" content="2464-toggle-3rem" />
+  <link rel="stylesheet" href="styles.css?v=2472" />
+  <meta name="govdash-build" content="2472-heat-half" />
   <script>
     try {
-      if (localStorage.getItem("govdash-heat") !== "0") {
+      if (localStorage.getItem("govdash-heat") === "1") {
         document.documentElement.classList.add("heat-on");
       }
     } catch (e) {}
@@ -107,16 +107,6 @@
             <button type="button" class="orient-btn" data-orient="top" title="Top down" aria-label="Top down">↓</button>
           </div>
           <div class="chrome-aside">
-            <button
-              type="button"
-              id="btn-heat"
-              class="btn btn-fiscal is-active"
-              title="Heat — what’s happening (on)"
-              aria-label="Heat. Showing live events on the map."
-              aria-pressed="true"
-            >
-              H
-            </button>
             <button
               type="button"
               id="btn-you"
@@ -156,19 +146,31 @@
           </div>
         </div>
       </div>
-      <div class="search-wrap">
-        <label class="sr-only" for="search">Search</label>
-        <input id="search" type="search" placeholder="Find…" autocomplete="off" enterkeyhint="search" />
+      <div class="search-row">
+        <div class="search-wrap">
+          <label class="sr-only" for="search">Search</label>
+          <input id="search" type="search" placeholder="Find…" autocomplete="off" enterkeyhint="search" />
+          <button
+            type="button"
+            id="search-refresh"
+            class="search-refresh"
+            title="Refresh"
+            aria-label="Refresh"
+          >
+            ×
+          </button>
+          <ul id="search-results" class="search-results" hidden></ul>
+        </div>
         <button
           type="button"
-          id="search-refresh"
-          class="search-refresh"
-          title="Refresh"
-          aria-label="Refresh"
+          id="btn-heat"
+          class="heat-chip"
+          aria-pressed="false"
+          title="Tap to show places with upcoming floor, Register filings, and other official activity"
+          aria-label="Heat off. Tap to show where the action is on the map."
         >
-          ×
+          <span class="heat-chip-text" id="heat-chip-text">Where's the action?</span>
         </button>
-        <ul id="search-results" class="search-results" hidden></ul>
       </div>
     </header>
 
@@ -239,7 +241,7 @@
         <iframe
           class="about-frame"
           id="about-frame"
-          src="about.html?v=2465"
+          src="about.html?v=2472"
           title="About GovDash — how to use and data sources"
         ></iframe>
       </section>
@@ -299,7 +301,7 @@
       </label>
     </footer>
   </div>
-  <script type="module" src="app.js?v=2465"></script>
+  <script type="module" src="app.js?v=2472"></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
