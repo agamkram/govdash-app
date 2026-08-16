@@ -108,15 +108,104 @@ export function createPackView(container, { onSelect, onFocusChange }) {
     return nodes;
   }
 
+  const SHEET_MS = 280;
+  const CAPTION_GUTTER = 36;
+  const SHEET_GAP = 8;
+
+  let liftY = 0;
+  let extraPad = 1;
+  let liftRaf = 0;
+  let camAnim = null;
+
+  function stopLiftAnim() {
+    if (liftRaf) cancelAnimationFrame(liftRaf);
+    liftRaf = 0;
+  }
+
+  function isPhoneSheet() {
+    return (
+      typeof window.matchMedia === "function" &&
+      window.matchMedia("(max-width: 599px)").matches
+    );
+  }
+
+  function sameCam(a, b) {
+    return Math.abs(a.lift - b.lift) < 0.75 && Math.abs(a.extraPad - b.extraPad) < 0.01;
+  }
+
+  /** Phone only: slide the pack up for the sheet; shrink if Safari leftover is tight. */
+  function phoneCamera() {
+    if (!isPhoneSheet()) return { lift: 0, extraPad: 1 };
+    const pane = document.getElementById("detail");
+    if (!pane || pane.hidden) return { lift: 0, extraPad: 1 };
+    void pane.offsetHeight;
+    const pr = pane.getBoundingClientRect();
+    const mr = el.getBoundingClientRect();
+    const overlap = Math.max(0, mr.bottom - pr.top);
+    const lift = pr.height > 8 ? pr.height / 2 : 0;
+    const leftover = Math.max(0, mr.height - overlap);
+    const inner = leftover - CAPTION_GUTTER - SHEET_GAP;
+    const minSide = Math.min(width || mr.width, height || mr.height);
+    let padMul = 1;
+    if (inner > 48 && minSide > 0) {
+      const need = (2 * minSide) / inner;
+      if (need > VIEW_PAD) padMul = need / VIEW_PAD;
+    }
+    return { lift, extraPad: padMul };
+  }
+
+  function frameCenterY() {
+    return height / 2 - liftY;
+  }
+
+  function applyCamera(cam) {
+    liftY = cam.lift;
+    extraPad = cam.extraPad;
+    if (nodeSel) renderFrame(view);
+  }
+
+  function easeCamera(to) {
+    if (liftRaf && camAnim && sameCam(to, camAnim)) return;
+    stopLiftAnim();
+    const from = { lift: liftY, extraPad };
+    if (sameCam(to, from)) {
+      applyCamera(to);
+      camAnim = null;
+      return;
+    }
+    camAnim = to;
+    const t0 = performance.now();
+    const step = (now) => {
+      const t = Math.min(1, (now - t0) / SHEET_MS);
+      const e = 1 - (1 - t) * (1 - t);
+      applyCamera({
+        lift: from.lift + (to.lift - from.lift) * e,
+        extraPad: from.extraPad + (to.extraPad - from.extraPad) * e,
+      });
+      if (t < 1) liftRaf = requestAnimationFrame(step);
+      else {
+        liftRaf = 0;
+        camAnim = null;
+        applyCamera(to);
+      }
+    };
+    liftRaf = requestAnimationFrame(step);
+  }
+
+  function syncLift() {
+    if (transitioning) return;
+    easeCamera(phoneCamera());
+  }
+
   function scaleK(v = view) {
-    return Math.min(width, height) / v[2];
+    return Math.min(width, height) / (v[2] * extraPad);
   }
 
   function placed(d, v = view) {
     const k = scaleK(v);
     return {
       x: (d.x - v[0]) * k + width / 2,
-      y: (d.y - v[1]) * k + height / 2,
+      y: (d.y - v[1]) * k + frameCenterY(),
       r: Math.max(0.4, d.r * k),
     };
   }
@@ -160,8 +249,7 @@ export function createPackView(container, { onSelect, onFocusChange }) {
       .attr("cx", p.x)
       .attr("cy", p.y)
       .attr("r", Math.max(p.r + 3, 12));
-    // Caption sits in the gutter above the focus ring (VIEW_PAD leaves room).
-    const captionY = Math.max(16, p.y - p.r - 18);
+    const captionY = Math.max(14, p.y - p.r - 16);
     focusCaption
       .attr("x", p.x)
       .attr("y", captionY)
@@ -173,7 +261,7 @@ export function createPackView(container, { onSelect, onFocusChange }) {
     if (!nodeSel) return;
     const k = scaleK(v);
     const place = (d) =>
-      `translate(${(d.x - v[0]) * k + width / 2},${(d.y - v[1]) * k + height / 2})`;
+      `translate(${(d.x - v[0]) * k + width / 2},${(d.y - v[1]) * k + frameCenterY()})`;
     const rad = (d) => Math.max(0.4, d.r * k);
 
     nodeSel
@@ -364,13 +452,17 @@ export function createPackView(container, { onSelect, onFocusChange }) {
         selectedId = d.data.id;
         onSelect?.(d.data, d, { revealRoot: true });
         paintStyles();
+        syncLift();
       }
       return;
     }
     selectedId = d.data.id;
     onSelect?.(d.data, d);
     if (d.children) zoomToNode(d);
-    else paintStyles();
+    else {
+      paintStyles();
+      syncLift();
+    }
   }
 
   function previewUnderFinger(clientX, clientY) {
@@ -562,16 +654,27 @@ export function createPackView(container, { onSelect, onFocusChange }) {
     armedId = null;
     scrubId = null;
     hideTip();
+
+    const phone = isPhoneSheet();
+    if (phone) view = v;
+
     bindVisible();
     onFocusChange?.(focus);
 
     if (!animate) {
       view = v;
-      renderFrame(view);
+      applyCamera(phoneCamera());
+      return;
+    }
+
+    if (phone) {
+      svg.interrupt();
+      easeCamera(phoneCamera());
       return;
     }
 
     transitioning = true;
+    stopLiftAnim();
     const i = d3.interpolateZoom(start, v);
     svg
       .transition()
@@ -661,11 +764,28 @@ export function createPackView(container, { onSelect, onFocusChange }) {
     focus = (id && byId.get(id)) || packRoot;
     view = [focus.x, focus.y, Math.max(focus.r * VIEW_PAD, 1)];
     selectedId = sel;
+    applyCamera(phoneCamera());
     bindVisible();
     onFocusChange?.(focus);
   }
 
+  const detailPane = document.getElementById("detail");
+  const detailLiftWatch =
+    detailPane &&
+    new MutationObserver(() => {
+      syncLift();
+    });
+  if (detailPane && detailLiftWatch) {
+    detailLiftWatch.observe(detailPane, {
+      attributes: true,
+      attributeFilter: ["hidden"],
+    });
+  }
+
   function destroy() {
+    stopLiftAnim();
+    camAnim = null;
+    detailLiftWatch?.disconnect();
     clearLongTimer();
     hideTip();
     el.classList.remove("is-scrubbing");

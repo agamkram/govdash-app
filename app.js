@@ -17,7 +17,7 @@ import {
 } from "./shared.js?v=2493";
 import { createIcicleView } from "./views/icicle.js?v=2493";
 import { createTreeView } from "./views/tree.js?v=2493";
-import { createPackView } from "./views/pack.js?v=2493";
+import { createPackView } from "./views/pack.js?v=2501";
 import { createSankeyView } from "./views/sankey.js?v=2493";
 import { createFiscalPage } from "./views/fiscal.js?v=2493";
 import { createYouPage, YOU_NODES } from "./views/you.js?v=2493";
