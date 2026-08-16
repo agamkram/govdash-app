@@ -1,5 +1,5 @@
-import { engagementActions } from "./engagement.js?v=2481";
-import { enrichmentContext, indexById } from "./context.js?v=2481";
+import { engagementActions } from "./engagement.js?v=2488";
+import { enrichmentContext, indexById } from "./context.js?v=2488";
 import {
   childCount,
   displayName,
@@ -14,19 +14,19 @@ import {
   HEAT_KIND_LABEL,
   syncHeatPulse,
   setHeatPulseSink,
-} from "./shared.js?v=2481";
-import { createIcicleView } from "./views/icicle.js?v=2481";
-import { createTreeView } from "./views/tree.js?v=2481";
-import { createPackView } from "./views/pack.js?v=2481";
-import { createSankeyView } from "./views/sankey.js?v=2481";
-import { createFiscalPage } from "./views/fiscal.js?v=2481";
-import { createYouPage, YOU_NODES } from "./views/you.js?v=2481";
-import { authorityLine } from "./authority.js?v=2481";
-import { createSpendYearController } from "./spend-year.js?v=2481";
+} from "./shared.js?v=2488";
+import { createIcicleView } from "./views/icicle.js?v=2488";
+import { createTreeView } from "./views/tree.js?v=2488";
+import { createPackView } from "./views/pack.js?v=2488";
+import { createSankeyView } from "./views/sankey.js?v=2488";
+import { createFiscalPage } from "./views/fiscal.js?v=2488";
+import { createYouPage, YOU_NODES } from "./views/you.js?v=2488";
+import { authorityLine } from "./authority.js?v=2488";
+import { createSpendYearController } from "./spend-year.js?v=2488";
 
-const TREE_URL = "./data/nested/gov-tree-product.json?v=2481";
-const BEYOND_URL = "./data/nested/gov-tree-beyond.json?v=2481";
-const SPEND_YEAR_URL = "./data/nested/spend-by-year.json?v=2481";
+const TREE_URL = "./data/nested/gov-tree-product.json?v=2488";
+const BEYOND_URL = "./data/nested/gov-tree-beyond.json?v=2488";
+const SPEND_YEAR_URL = "./data/nested/spend-by-year.json?v=2488";
 
 const factories = {
   icicle: createIcicleView,

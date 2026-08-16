@@ -7,6 +7,11 @@ html[data-theme="dark"] {
   --panel: #1a1d21;
   --accent: #5a8eb0;
   --accent-soft: #1e2a32;
+  --heat-invite: #e0c04a;
+  --heat-invite-soft: #241f12;
+  --heat-on: #e0c04a;
+  --heat-on-ink: #121518;
+  --heat-on-border: #e8eaed;
   --vv-top: 0px;
   --vv-left: 0px;
   --vv-w: 100%;
@@ -27,6 +32,11 @@ html[data-theme="light"] {
   --panel: #cfd3d7;
   --accent: #3a6d94;
   --accent-soft: #dce6ef;
+  --heat-invite: #8a6510;
+  --heat-invite-soft: #e6dcb8;
+  --heat-on: #c9a12a;
+  --heat-on-ink: #1f2428;
+  --heat-on-border: #1f2428;
 }
 
 *,
@@ -175,7 +185,7 @@ html.pwa-standalone .shell {
   max-width: none;
 }
 
-/* Find-row Heat switch — two looks only: off (default) and on (.is-on). */
+/* Find-row Heat switch — two looks only: off (gold invite) and on (.is-on). */
 .heat-chip {
   flex: 1 1 50%;
   display: inline-flex;
@@ -184,9 +194,9 @@ html.pwa-standalone .shell {
   gap: 0.3rem;
   margin: 0;
   padding: 0.4rem 0.55rem;
-  border: 1px solid var(--line);
-  background: var(--panel);
-  color: var(--ink);
+  border: 1px solid color-mix(in srgb, var(--heat-invite) 45%, var(--line));
+  background: var(--heat-invite-soft);
+  color: var(--heat-invite);
   font: inherit;
   font-family: "IBM Plex Mono", ui-monospace, monospace;
   font-size: 0.78rem;
@@ -208,17 +218,20 @@ html.pwa-standalone .shell {
   font-variant-numeric: tabular-nums;
 }
 
-/* On: inverted — only this class changes the face of the switch */
+/* On: solid gold — lit pair of the off invite, not ink invert */
 .heat-chip.is-on {
-  border-color: var(--ink);
-  background: var(--ink);
-  color: var(--bg);
+  border-color: var(--heat-on-border);
+  background: var(--heat-on);
+  color: var(--heat-on-ink);
 }
 
 /* Keyboard only — do not leave a focus ring that looks like a third mode on touch */
 @media (hover: hover) and (pointer: fine) {
   .heat-chip:hover {
-    border-color: var(--ink);
+    border-color: var(--heat-invite);
+  }
+  .heat-chip.is-on:hover {
+    border-color: var(--heat-on-border);
   }
   .heat-chip:focus-visible {
     outline: 2px solid var(--ink);
