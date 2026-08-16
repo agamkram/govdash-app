@@ -1,5 +1,5 @@
-import { engagementActions } from "./engagement.js?v=2488";
-import { enrichmentContext, indexById } from "./context.js?v=2488";
+import { engagementActions } from "./engagement.js?v=2493";
+import { enrichmentContext, indexById } from "./context.js?v=2493";
 import {
   childCount,
   displayName,
@@ -14,19 +14,20 @@ import {
   HEAT_KIND_LABEL,
   syncHeatPulse,
   setHeatPulseSink,
-} from "./shared.js?v=2488";
-import { createIcicleView } from "./views/icicle.js?v=2488";
-import { createTreeView } from "./views/tree.js?v=2488";
-import { createPackView } from "./views/pack.js?v=2488";
-import { createSankeyView } from "./views/sankey.js?v=2488";
-import { createFiscalPage } from "./views/fiscal.js?v=2488";
-import { createYouPage, YOU_NODES } from "./views/you.js?v=2488";
-import { authorityLine } from "./authority.js?v=2488";
-import { createSpendYearController } from "./spend-year.js?v=2488";
+} from "./shared.js?v=2493";
+import { createIcicleView } from "./views/icicle.js?v=2493";
+import { createTreeView } from "./views/tree.js?v=2493";
+import { createPackView } from "./views/pack.js?v=2493";
+import { createSankeyView } from "./views/sankey.js?v=2493";
+import { createFiscalPage } from "./views/fiscal.js?v=2493";
+import { createYouPage, YOU_NODES } from "./views/you.js?v=2493";
+import { createCalPage } from "./views/calendar.js?v=2493";
+import { authorityLine } from "./authority.js?v=2493";
+import { createSpendYearController } from "./spend-year.js?v=2493";
 
-const TREE_URL = "./data/nested/gov-tree-product.json?v=2488";
-const BEYOND_URL = "./data/nested/gov-tree-beyond.json?v=2488";
-const SPEND_YEAR_URL = "./data/nested/spend-by-year.json?v=2488";
+const TREE_URL = "./data/nested/gov-tree-product.json?v=2493";
+const BEYOND_URL = "./data/nested/gov-tree-beyond.json?v=2493";
+const SPEND_YEAR_URL = "./data/nested/spend-by-year.json?v=2493";
 
 const factories = {
   icicle: createIcicleView,
@@ -193,12 +194,15 @@ const btnHeat = document.getElementById("btn-heat");
 const heatChipTextEl = document.getElementById("heat-chip-text");
 const btnFiscal = document.getElementById("btn-fiscal");
 const btnYou = document.getElementById("btn-you");
+const btnCal = document.getElementById("btn-cal");
 const btnAbout = document.getElementById("btn-about");
 const btnTheme = document.getElementById("btn-theme");
 const fiscalPageEl = document.getElementById("page-fiscal");
 const fiscalBack = document.getElementById("fiscal-back");
 const youPageEl = document.getElementById("page-you");
 const youBack = document.getElementById("you-back");
+const calPageEl = document.getElementById("page-cal");
+const calBack = document.getElementById("cal-back");
 const aboutPageEl = document.getElementById("page-about");
 const aboutBack = document.getElementById("about-back");
 const mapEl = document.getElementById("map");
@@ -392,19 +396,33 @@ const fiscalPage = createFiscalPage(fiscalPageEl, {
 const youPage = createYouPage(youPageEl, {
   onMap: (chamber) => showYouOnMap(chamber),
 });
+const calPage = createCalPage(calPageEl, {
+  getRoot: () => usaRoot,
+  getAsOf: () => heatAsOfLabel,
+  onMap: (id) => {
+    if (!id) return;
+    closeAppPage();
+    applyHeatChrome(true);
+    viewApi?.zoomToId(id);
+    const node = nodeById.get(id);
+    if (node) showDetail(node, { revealRoot: true });
+  },
+});
 
 function pageName() {
   const h = location.hash.replace(/^#/, "");
-  if (h === "fiscal" || h === "you" || h === "about") return h;
+  if (h === "fiscal" || h === "you" || h === "cal" || h === "about") return h;
   return "map";
 }
 
 function hideAppPages() {
   fiscalPageEl.hidden = true;
   youPageEl.hidden = true;
+  if (calPageEl) calPageEl.hidden = true;
   if (aboutPageEl) aboutPageEl.hidden = true;
   btnFiscal?.classList.remove("is-active");
   btnYou?.classList.remove("is-active");
+  btnCal?.classList.remove("is-active");
   btnAbout?.classList.remove("is-active");
 }
 
@@ -430,6 +448,17 @@ function openYouPage() {
   youPage.prepare();
 }
 
+function openCalPage() {
+  detailEl.hidden = true;
+  hideAppPages();
+  if (location.hash !== "#cal") location.hash = "cal";
+  shellEl.dataset.page = "cal";
+  if (calPageEl) calPageEl.hidden = false;
+  btnCal?.classList.add("is-active");
+  syncBottomChrome();
+  calPage.show();
+}
+
 function openAboutPage() {
   detailEl.hidden = true;
   hideAppPages();
@@ -445,15 +474,18 @@ function closeAppPage() {
   const leaving =
     shellEl.dataset.page === "fiscal" ||
     shellEl.dataset.page === "you" ||
+    shellEl.dataset.page === "cal" ||
     shellEl.dataset.page === "about" ||
     pageName() === "fiscal" ||
     pageName() === "you" ||
+    pageName() === "cal" ||
     pageName() === "about";
   hideAppPages();
   shellEl.dataset.page = "map";
   if (
     location.hash === "#fiscal" ||
     location.hash === "#you" ||
+    location.hash === "#cal" ||
     location.hash === "#about"
   ) {
     history.pushState("", document.title, location.pathname + location.search);
@@ -474,6 +506,7 @@ function syncPageFromHash() {
   const p = pageName();
   if (p === "fiscal") openFiscalPage();
   else if (p === "you") openYouPage();
+  else if (p === "cal") openCalPage();
   else if (p === "about") openAboutPage();
   else {
     closeAppPage();
@@ -777,6 +810,16 @@ function formatHeatEventWhen(ev) {
       }
       return bits.join(" · ");
     }
+    case "comment_deadline":
+      return "Comments close " + day;
+    case "sunshine_meeting":
+      return "Meets " + day;
+    case "hearing":
+      return "Hearing " + day;
+    case "court_argument":
+      return "Argues " + day;
+    case "federal_holiday":
+      return "Closed " + day;
     case "presidential_doc": {
       if (ev.signedAt) {
         const signed = formatHeatWhen(ev.signedAt, { time: false });
@@ -1469,6 +1512,10 @@ async function main() {
     if (pageName() === "you") closeAppPage();
     else openYouPage();
   });
+  btnCal?.addEventListener("click", () => {
+    if (pageName() === "cal") closeAppPage();
+    else openCalPage();
+  });
   btnAbout?.addEventListener("click", () => {
     if (pageName() === "about") closeAppPage();
     else openAboutPage();
@@ -1478,6 +1525,7 @@ async function main() {
   });
   fiscalBack?.addEventListener("click", () => closeAppPage());
   youBack?.addEventListener("click", () => closeAppPage());
+  calBack?.addEventListener("click", () => closeAppPage());
   aboutBack?.addEventListener("click", () => closeAppPage());
   document.getElementById("about-frame")?.addEventListener("load", () => {
     syncAboutTheme();

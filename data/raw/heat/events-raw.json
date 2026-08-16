@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-16T00:45:03.247Z",
+  "fetchedAt": "2026-08-16T22:20:41.697Z",
   "sources": {
     "senateFloor": {
       "ok": true,
@@ -8,7 +8,7 @@
     },
     "houseClerk": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "url": "https://clerk.house.gov/"
     },
     "majorityLeader": {
@@ -26,6 +26,35 @@
       "count": 13,
       "since": "2026-08-02",
       "url": "https://www.federalregister.gov/presidential-documents"
+    },
+    "commentDeadlines": {
+      "ok": true,
+      "count": 157,
+      "start": "2026-08-16",
+      "end": "2026-09-14",
+      "type": "PRORULE",
+      "url": "https://www.federalregister.gov/"
+    },
+    "sunshine": {
+      "ok": true,
+      "count": 3,
+      "start": "2026-08-16",
+      "end": "2026-09-14",
+      "url": "https://www.federalregister.gov/"
+    },
+    "senateHearings": {
+      "ok": true,
+      "count": 0,
+      "start": "2026-08-16",
+      "end": "2026-09-14",
+      "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
+    },
+    "scotus": {
+      "ok": true,
+      "count": 0,
+      "start": "2026-08-16",
+      "end": "2026-09-14",
+      "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
     }
   },
   "events": [
@@ -40,19 +69,6 @@
       "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
       "source": "Senate.gov floor schedule XML",
       "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-      "urgency": "upcoming"
-    },
-    {
-      "id": "house-next-2026-08-17T13:00:00.000Z",
-      "kind": "floor_session",
-      "chamber": "House",
-      "when": "2026-08-17T13:00:00.000Z",
-      "until": null,
-      "title": "House next session",
-      "summary": "",
-      "url": "https://clerk.house.gov/",
-      "source": "Office of the Clerk, U.S. House",
-      "sourceUrl": "https://clerk.house.gov/",
       "urgency": "upcoming"
     },
     {
@@ -2022,6 +2038,3141 @@
       "sourceUrl": "https://www.federalregister.gov/presidential-documents",
       "urgency": "recent",
       "documentType": "Presidential Document"
+    },
+    {
+      "id": "fr-comment-2026-16760",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "Supplemental Nutrition Assistance Program: Changes in Federal-State Administrative Cost Sharing; Extension of Comment Period",
+      "summary": "Agriculture Department, Food and Nutrition Administration",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-17/pdf/2026-16760.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/17/2026-16760/supplemental-nutrition-assistance-program-changes-in-federal-state-administrative-cost-sharing",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-17/pdf/2026-16760.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Agriculture Department",
+        "Food and Nutrition Administration"
+      ],
+      "documentNumber": "2026-16760",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16575",
+      "kind": "comment_deadline",
+      "when": "2026-09-14",
+      "until": "2026-09-14",
+      "title": "Air Plan Approval; Virginia; 1997 8-Hour Ozone National Ambient Air Quality Standard Second Maintenance Plan for the Madison and Page Counties (Shenandoah National Park) Area",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-R03-OAR-2025-3820-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/14/2026-16575/air-plan-approval-virginia-1997-8-hour-ozone-national-ambient-air-quality-standard-second",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-14/pdf/2026-16575.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-16575",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16571",
+      "kind": "comment_deadline",
+      "when": "2026-09-14",
+      "until": "2026-09-14",
+      "title": "Air Plan Approval; Missouri; Moderate Attainment Plan Elements for the 2015 8-Hour Ozone Standard for the Missouri Portion of the St. Louis Nonattainment Area",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-R07-OAR-2026-5842-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/14/2026-16571/air-plan-approval-missouri-moderate-attainment-plan-elements-for-the-2015-8-hour-ozone-standard-for",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-14/pdf/2026-16571.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-16571",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16570",
+      "kind": "comment_deadline",
+      "when": "2026-09-14",
+      "until": "2026-09-14",
+      "title": "Air Plan Approval; Iowa; Interstate Transport Requirements for the 2010 Sulfur Dioxide Standard",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-R07-OAR-2026-5809-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/14/2026-16570/air-plan-approval-iowa-interstate-transport-requirements-for-the-2010-sulfur-dioxide-standard",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-14/pdf/2026-16570.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-16570",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16564",
+      "kind": "comment_deadline",
+      "when": "2026-09-14",
+      "until": "2026-09-14",
+      "title": "Air Plan Approval; Commonwealth of Virginia; Transfer of Authority and Requests for Certain Public Hearings on Air Permits",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-R03-OAR-2026-2379-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/13/2026-16564/air-plan-approval-commonwealth-of-virginia-transfer-of-authority-and-requests-for-certain-public",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-13/pdf/2026-16564.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-16564",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16406",
+      "kind": "comment_deadline",
+      "when": "2026-09-11",
+      "until": "2026-09-11",
+      "title": "Security Zone; U.S. Coast Guard Base, Los Angeles Harbor Main Channel, Los Angeles, CA",
+      "summary": "Homeland Security Department, Coast Guard",
+      "url": "http://www.regulations.gov/commenton/USCG-2026-0763-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/12/2026-16406/security-zone-us-coast-guard-base-los-angeles-harbor-main-channel-los-angeles-ca",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-12/pdf/2026-16406.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Homeland Security Department",
+        "Coast Guard"
+      ],
+      "documentNumber": "2026-16406",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16375",
+      "kind": "comment_deadline",
+      "when": "2026-09-10",
+      "until": "2026-09-10",
+      "title": "Schedules of Controlled Substances: Rescheduling of Suvorexant, Lemborexant, and Daridorexant From Schedule IV Into Schedule V",
+      "summary": "Justice Department, Drug Enforcement Administration",
+      "url": "http://www.regulations.gov/commenton/DEA-2026-1321-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/11/2026-16375/schedules-of-controlled-substances-rescheduling-of-suvorexant-lemborexant-and-daridorexant-from",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-11/pdf/2026-16375.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Justice Department",
+        "Drug Enforcement Administration"
+      ],
+      "documentNumber": "2026-16375",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16373",
+      "kind": "comment_deadline",
+      "when": "2026-09-10",
+      "until": "2026-09-10",
+      "title": "NRC Modernization: Rulemaking Procedure, Federal Advisory Committee Act Alignment, Access, and Security",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "http://www.regulations.gov/commenton/NRC-2025-1139-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/11/2026-16373/nrc-modernization-rulemaking-procedure-federal-advisory-committee-act-alignment-access-and-security",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-11/pdf/2026-16373.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentNumber": "2026-16373",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16357",
+      "kind": "comment_deadline",
+      "when": "2026-09-10",
+      "until": "2026-09-10",
+      "title": "Restricted Area: Naval Weapons Station Seal Beach",
+      "summary": "Defense Department, Engineers Corps",
+      "url": "http://www.regulations.gov/commenton/COE-2026-0067-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/11/2026-16357/restricted-area-naval-weapons-station-seal-beach",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-11/pdf/2026-16357.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Defense Department",
+        "Engineers Corps"
+      ],
+      "documentNumber": "2026-16357",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16335",
+      "kind": "comment_deadline",
+      "when": "2026-09-10",
+      "until": "2026-09-10",
+      "title": "Air Quality Plan; Arizona; Maricopa County Air Quality Department; Gasoline Loading",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-R09-OAR-2026-5743-0002",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/11/2026-16335/air-quality-plan-arizona-maricopa-county-air-quality-department-gasoline-loading",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-11/pdf/2026-16335.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-16335",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16329",
+      "kind": "comment_deadline",
+      "when": "2026-09-10",
+      "until": "2026-09-10",
+      "title": "Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to the Washington State Parks and Recreation Commission's Marine Facilities Replacement Program in North Puget Sound, Washington",
+      "summary": "Commerce Department, National Oceanic and Atmospheric Administration",
+      "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1255-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/11/2026-16329/takes-of-marine-mammals-incidental-to-specified-activities-taking-marine-mammals-incidental-to-the",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-11/pdf/2026-16329.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Commerce Department",
+        "National Oceanic and Atmospheric Administration"
+      ],
+      "documentNumber": "2026-16329",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16317",
+      "kind": "comment_deadline",
+      "when": "2026-09-10",
+      "until": "2026-09-10",
+      "title": "Television Broadcasting Services St. George, Utah",
+      "summary": "Federal Communications Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-11/pdf/2026-16317.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/11/2026-16317/television-broadcasting-services-st-george-utah",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-11/pdf/2026-16317.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Communications Commission"
+      ],
+      "documentNumber": "2026-16317",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16197",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "Protecting Against National Security Threats to the Communications Supply Chain Through the Equipment Authorization Program",
+      "summary": "Federal Communications Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-07/pdf/2026-16197.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/07/2026-16197/protecting-against-national-security-threats-to-the-communications-supply-chain-through-the",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-07/pdf/2026-16197.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Communications Commission"
+      ],
+      "documentNumber": "2026-16197",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16130",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "Safety Zone; WHALE Floating Production System Outer Continental Shelf Facility, Alaminos Canyon 773, Gulf of America",
+      "summary": "Homeland Security Department, Coast Guard",
+      "url": "http://www.regulations.gov/commenton/USCG-2026-0603-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/07/2026-16130/safety-zone-whale-floating-production-system-outer-continental-shelf-facility-alaminos-canyon-773",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-07/pdf/2026-16130.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Homeland Security Department",
+        "Coast Guard"
+      ],
+      "documentNumber": "2026-16130",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16124",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "Drawbridge Operation Regulation; Drawbridge Operation Regulation; San Bernard River, Brazoria County, Texas",
+      "summary": "Homeland Security Department, Coast Guard",
+      "url": "http://www.regulations.gov/commenton/USCG-2025-0070-0002",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/07/2026-16124/drawbridge-operation-regulation-drawbridge-operation-regulation-san-bernard-river-brazoria-county",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-07/pdf/2026-16124.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Homeland Security Department",
+        "Coast Guard"
+      ],
+      "documentNumber": "2026-16124",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16121",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "Drawbridge Operation Regulation; Old Brazos River, Freeport, Texas",
+      "summary": "Homeland Security Department, Coast Guard",
+      "url": "http://www.regulations.gov/commenton/USCG-2025-0309-0004",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/07/2026-16121/drawbridge-operation-regulation-old-brazos-river-freeport-texas",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-07/pdf/2026-16121.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Homeland Security Department",
+        "Coast Guard"
+      ],
+      "documentNumber": "2026-16121",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16118",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "Safety Zone; Chevron GENESIS SPAR Outer Continental Shelf Facility, Green Canyon Block 205A, Gulf of America",
+      "summary": "Homeland Security Department, Coast Guard",
+      "url": "http://www.regulations.gov/commenton/USCG-2026-0827-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/07/2026-16118/safety-zone-chevron-genesis-spar-outer-continental-shelf-facility-green-canyon-block-205a-gulf-of",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-07/pdf/2026-16118.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Homeland Security Department",
+        "Coast Guard"
+      ],
+      "documentNumber": "2026-16118",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16108",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "Personnel Appeals Board; Procedural Rules",
+      "summary": "Government Accountability Office",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-07/pdf/2026-16108.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/07/2026-16108/personnel-appeals-board-procedural-rules",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-07/pdf/2026-16108.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Government Accountability Office"
+      ],
+      "documentNumber": "2026-16108",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16016",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "New Mailing Standards for Live Animals",
+      "summary": "Postal Service",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-16016.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/06/2026-16016/new-mailing-standards-for-live-animals",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-16016.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Postal Service"
+      ],
+      "documentNumber": "2026-16016",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16001",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "Air Plan Approval; Illinois; 2015 Ozone Moderate and Serious Reasonably Available Control Technology Update",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-R05-OAR-2024-0617-0006",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/06/2026-16001/air-plan-approval-illinois-2015-ozone-moderate-and-serious-reasonably-available-control-technology",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-16001.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-16001",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15824",
+      "kind": "comment_deadline",
+      "when": "2026-09-03",
+      "until": "2026-09-03",
+      "title": "Petition for Rulemaking of Matheus Garcia Pereira",
+      "summary": "Federal Trade Commission",
+      "url": "http://www.regulations.gov/commenton/FTC-2026-1024-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/04/2026-15824/petition-for-rulemaking-of-matheus-garcia-pereira",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-04/pdf/2026-15824.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Trade Commission"
+      ],
+      "documentNumber": "2026-15824",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15782",
+      "kind": "comment_deadline",
+      "when": "2026-09-03",
+      "until": "2026-09-03",
+      "title": "Revision of Freedom of Information Act Regulations",
+      "summary": "Architectural and Transportation Barriers Compliance Board",
+      "url": "http://www.regulations.gov/commenton/ATBCB-2026-0004-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/04/2026-15782/revision-of-freedom-of-information-act-regulations",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-04/pdf/2026-15782.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Architectural and Transportation Barriers Compliance Board"
+      ],
+      "documentNumber": "2026-15782",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15743",
+      "kind": "comment_deadline",
+      "when": "2026-09-03",
+      "until": "2026-09-03",
+      "title": "Federal Motor Vehicle Safety Standards; Child Restraint Anchorage Systems; Child Restraint Systems",
+      "summary": "Transportation Department, National Highway Traffic Safety Administration",
+      "url": "http://www.regulations.gov/commenton/NHTSA-2025-0051-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/04/2026-15743/federal-motor-vehicle-safety-standards-child-restraint-anchorage-systems-child-restraint-systems",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-04/pdf/2026-15743.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "National Highway Traffic Safety Administration"
+      ],
+      "documentNumber": "2026-15743",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15725",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Auction of Flexible-Use Licenses in the Upper C-Band for Next-Generation Wireless Services Scheduled for April 27, 2027; Comment Sought on Competitive Bidding Procedures for Auction 115",
+      "summary": "Federal Communications Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-03/pdf/2026-15725.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/03/2026-15725/auction-of-flexible-use-licenses-in-the-upper-c-band-for-next-generation-wireless-services-scheduled",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-03/pdf/2026-15725.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Communications Commission"
+      ],
+      "documentNumber": "2026-15725",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15624",
+      "kind": "comment_deadline",
+      "when": "2026-09-02",
+      "until": "2026-09-02",
+      "title": "Amendment to 3,4-MDP-2-P Methyl Glycidic Acid, a List I Chemical",
+      "summary": "Justice Department, Drug Enforcement Administration",
+      "url": "http://www.regulations.gov/commenton/DEA-2026-1288-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/03/2026-15624/amendment-to-34-mdp-2-p-methyl-glycidic-acid-a-list-i-chemical",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-03/pdf/2026-15624.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Justice Department",
+        "Drug Enforcement Administration"
+      ],
+      "documentNumber": "2026-15624",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15602",
+      "kind": "comment_deadline",
+      "when": "2026-09-14",
+      "until": "2026-09-14",
+      "title": "Amendment of Jet Route J-24 and Very High Frequency Omnidirectional Range Federal Airways V-244, V-508 and Revocation of Very High Frequency Omnidirectional Range Federal Airway V-255 in the Vicinity of Hays, Kansas.",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-8291-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/31/2026-15602/amendment-of-jet-route-j-24-and-very-high-frequency-omnidirectional-range-federal-airways-v-244",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-31/pdf/2026-15602.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-15602",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15600",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Wireless Emergency Alerts; The Emergency Alert System; Modernization of the Nation's Alerting Systems",
+      "summary": "Federal Communications Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-31/pdf/2026-15600.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/31/2026-15600/wireless-emergency-alerts-the-emergency-alert-system-modernization-of-the-nations-alerting-systems",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-31/pdf/2026-15600.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Communications Commission"
+      ],
+      "documentNumber": "2026-15600",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15532",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Airworthiness Directives; CFM International, S.A. Engines",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7232-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/31/2026-15532/airworthiness-directives-cfm-international-sa-engines",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-31/pdf/2026-15532.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-15532",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15529",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Enhancing Flexibility of Air Fare Price Advertising",
+      "summary": "Transportation Department",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-31/pdf/2026-15529.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/31/2026-15529/enhancing-flexibility-of-air-fare-price-advertising",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-31/pdf/2026-15529.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department"
+      ],
+      "documentNumber": "2026-15529",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15415",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Waiver of Specified Statutory Requirements for Commercial Space Launch and Reentry Actions",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-8614-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/30/2026-15415/waiver-of-specified-statutory-requirements-for-commercial-space-launch-and-reentry-actions",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-30/pdf/2026-15415.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-15415",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15374",
+      "kind": "comment_deadline",
+      "when": "2026-09-14",
+      "until": "2026-09-14",
+      "title": "Airworthiness Directives; Airbus Helicopters Deutschland GmbH (AHD) Helicopters",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7230-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/30/2026-15374/airworthiness-directives-airbus-helicopters-deutschland-gmbh-ahd-helicopters",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-30/pdf/2026-15374.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-15374",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15372",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Air Plan Approval; Pennsylvania; Redesignation of the Warren County Nonattainment Area to Attainment and Approval of the Area's Maintenance Plan for the 2010 1-Hour Primary Sulfur Dioxide National Ambient Air Quality Standard",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-R03-OAR-2026-1685-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/30/2026-15372/air-plan-approval-pennsylvania-redesignation-of-the-warren-county-nonattainment-area-to-attainment",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-30/pdf/2026-15372.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-15372",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15371",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Air Plan Approval; Missouri; Construction Permit Exemptions",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-R07-OAR-2026-5182-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/30/2026-15371/air-plan-approval-missouri-construction-permit-exemptions",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-30/pdf/2026-15371.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-15371",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15362",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Clean Air Act Operating Permit Program Revisions; California; Amador County Air Pollution Control District, Calaveras County Air Pollution Control District, Great Basin Unified Air Pollution Control District, Northern Sierra Air Quality Management District",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-R09-OAR-2025-0166-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/30/2026-15362/clean-air-act-operating-permit-program-revisions-california-amador-county-air-pollution-control",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-30/pdf/2026-15362.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-15362",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15352",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Significant New Use Rules on Certain Chemical Substances (26-4)",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-HQ-OPPT-2026-2707-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/30/2026-15352/significant-new-use-rules-on-certain-chemical-substances-26-4",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-30/pdf/2026-15352.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-15352",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15321",
+      "kind": "comment_deadline",
+      "when": "2026-09-14",
+      "until": "2026-09-14",
+      "title": "Amendment of Jet Routes J-190 and J-584 and Very High Frequency Omnidirectional Range Federal Airways V-170 and V-188 in the Vicinity of Slate Run, Pennsylvania",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7895-0002",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/29/2026-15321/amendment-of-jet-routes-j-190-and-j-584-and-very-high-frequency-omnidirectional-range-federal",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-29/pdf/2026-15321.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-15321",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15283",
+      "kind": "comment_deadline",
+      "when": "2026-09-14",
+      "until": "2026-09-14",
+      "title": "Airworthiness Directives; Airbus Helicopters",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7231-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/29/2026-15283/airworthiness-directives-airbus-helicopters",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-29/pdf/2026-15283.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-15283",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15231",
+      "kind": "comment_deadline",
+      "when": "2026-08-26",
+      "until": "2026-08-26",
+      "title": "Federal Motor Vehicle Safety Standards; Modernization of FMVSS No. 135 To Accommodate ADS-Equipped Vehicles; Extension of Comment Period",
+      "summary": "Transportation Department, National Highway Traffic Safety Administration",
+      "url": "http://www.regulations.gov/commenton/NHTSA-2026-0728-0060",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/28/2026-15231/federal-motor-vehicle-safety-standards-modernization-of-fmvss-no-135-to-accommodate-ads-equipped",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-28/pdf/2026-15231.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "National Highway Traffic Safety Administration"
+      ],
+      "documentNumber": "2026-15231",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15229",
+      "kind": "comment_deadline",
+      "when": "2026-09-11",
+      "until": "2026-09-11",
+      "title": "Modification of Class E Airspace, Samaritan North Lincoln Hospital Heliport, Lincoln, OR",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-5064-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/28/2026-15229/modification-of-class-e-airspace-samaritan-north-lincoln-hospital-heliport-lincoln-or",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-28/pdf/2026-15229.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-15229",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15227",
+      "kind": "comment_deadline",
+      "when": "2026-08-27",
+      "until": "2026-08-27",
+      "title": "Benzene",
+      "summary": "Labor Department, Occupational Safety and Health Administration",
+      "url": "http://www.regulations.gov/commenton/OSHA-2025-0023-0025",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/28/2026-15227/benzene",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-28/pdf/2026-15227.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Labor Department",
+        "Occupational Safety and Health Administration"
+      ],
+      "documentNumber": "2026-15227",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15216",
+      "kind": "comment_deadline",
+      "when": "2026-08-26",
+      "until": "2026-08-26",
+      "title": "Request for Comment on the Extension of Standard Futures Contracts to 24/7 Trading and on Perpetual Contracts Referencing Physically Delivered or Storable Energy Commodities",
+      "summary": "Commodity Futures Trading Commission",
+      "url": "http://www.regulations.gov/commenton/CFTC-2026-1388-0061",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/28/2026-15216/request-for-comment-on-the-extension-of-standard-futures-contracts-to-247-trading-and-on-perpetual",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-28/pdf/2026-15216.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Commodity Futures Trading Commission"
+      ],
+      "documentNumber": "2026-15216",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15211",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Energy Conservation Program: Procedures, Interpretations, and Policies for Consideration of New or Revised Energy Conservation Standards and Test Procedures for Consumer Products and Certain Commercial/Industrial Equipment; Extension of Public Comment Period",
+      "summary": "Energy Department",
+      "url": "http://www.regulations.gov/commenton/EERE-2025-BT-STD-0001-0054",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/28/2026-15211/energy-conservation-program-procedures-interpretations-and-policies-for-consideration-of-new-or",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-28/pdf/2026-15211.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Energy Department"
+      ],
+      "documentNumber": "2026-15211",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15197",
+      "kind": "comment_deadline",
+      "when": "2026-08-27",
+      "until": "2026-08-27",
+      "title": "Drawbridge Operation Regulation; Cuyahoga River, Cleveland, OH",
+      "summary": "Homeland Security Department, Coast Guard",
+      "url": "http://www.regulations.gov/commenton/USCG-2025-1063-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/28/2026-15197/drawbridge-operation-regulation-cuyahoga-river-cleveland-oh",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-28/pdf/2026-15197.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Homeland Security Department",
+        "Coast Guard"
+      ],
+      "documentNumber": "2026-15197",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15182",
+      "kind": "comment_deadline",
+      "when": "2026-08-27",
+      "until": "2026-08-27",
+      "title": "Petition for Rulemaking of the National Consumers League, Campaign for Fairer Gambling, the National Council for Problem Gambling, the Public Health Advocacy Institute, and Truth in Advertising, Inc.",
+      "summary": "Federal Trade Commission",
+      "url": "http://www.regulations.gov/commenton/FTC-2026-0958-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/28/2026-15182/petition-for-rulemaking-of-the-national-consumers-league-campaign-for-fairer-gambling-the-national",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-28/pdf/2026-15182.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Trade Commission"
+      ],
+      "documentNumber": "2026-15182",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15168",
+      "kind": "comment_deadline",
+      "when": "2026-08-27",
+      "until": "2026-08-27",
+      "title": "Air Plan Approval; Michigan; Redesignation of the Detroit, MI Area to Attainment of the 2015 Ozone Standards",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-R05-OAR-2022-0004-0055",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/28/2026-15168/air-plan-approval-michigan-redesignation-of-the-detroit-mi-area-to-attainment-of-the-2015-ozone",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-28/pdf/2026-15168.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-15168",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15167",
+      "kind": "comment_deadline",
+      "when": "2026-08-27",
+      "until": "2026-08-27",
+      "title": "Air Plan Approval; Michigan; Redesignation of the Berrien, MI and Muskegon, MI Areas to Attainment of the 2015 Ozone Standards",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-R05-OAR-2025-4116-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/28/2026-15167/air-plan-approval-michigan-redesignation-of-the-berrien-mi-and-muskegon-mi-areas-to-attainment-of",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-28/pdf/2026-15167.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-15167",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15117",
+      "kind": "comment_deadline",
+      "when": "2026-08-26",
+      "until": "2026-08-26",
+      "title": "Modernizing Package Certification Requirements",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "http://www.regulations.gov/commenton/NRC-2025-1667-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/27/2026-15117/modernizing-package-certification-requirements",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-27/pdf/2026-15117.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentNumber": "2026-15117",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15080",
+      "kind": "comment_deadline",
+      "when": "2026-09-10",
+      "until": "2026-09-10",
+      "title": "Reducing Barriers to Medical Use Licensing",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "http://www.regulations.gov/commenton/NRC-2025-1237-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/27/2026-15080/reducing-barriers-to-medical-use-licensing",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-27/pdf/2026-15080.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentNumber": "2026-15080",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15073",
+      "kind": "comment_deadline",
+      "when": "2026-09-10",
+      "until": "2026-09-10",
+      "title": "Airworthiness Directives; Airbus Canada Limited Partnership (Type Certificate Previously Held by C Series Aircraft Limited Partnership (CSALP); Bombardier, Inc.) Airplanes",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7229-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/27/2026-15073/airworthiness-directives-airbus-canada-limited-partnership-type-certificate-previously-held-by-c",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-27/pdf/2026-15073.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-15073",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15072",
+      "kind": "comment_deadline",
+      "when": "2026-09-10",
+      "until": "2026-09-10",
+      "title": "Airworthiness Directives; The Boeing Company Airplanes",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7228-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/27/2026-15072/airworthiness-directives-the-boeing-company-airplanes",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-27/pdf/2026-15072.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-15072",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15047",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "Establishment of Class E Airspace; Ottawa, IL",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-8548-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/24/2026-15047/establishment-of-class-e-airspace-ottawa-il",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-24/pdf/2026-15047.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-15047",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15029",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "Amendment of Class E Airspace; Alma, MI; correction",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7756-0002",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/24/2026-15029/amendment-of-class-e-airspace-alma-mi-correction",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-24/pdf/2026-15029.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-15029",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-15018",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Pacific Island Fisheries; 2026-2028 Annual Catch Limits and Accountability Measures for Deepwater Shrimp and Precious Coral Fisheries in Hawaii",
+      "summary": "Commerce Department, National Oceanic and Atmospheric Administration",
+      "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2025-0537-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/24/2026-15018/pacific-island-fisheries-2026-2028-annual-catch-limits-and-accountability-measures-for-deepwater",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-24/pdf/2026-15018.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Commerce Department",
+        "National Oceanic and Atmospheric Administration"
+      ],
+      "documentNumber": "2026-15018",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14937",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Removal of Reporting Requirements",
+      "summary": "Equal Employment Opportunity Commission",
+      "url": "http://www.regulations.gov/commenton/EEOC-2026-0034-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14937/removal-of-reporting-requirements",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-23/pdf/2026-14937.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Equal Employment Opportunity Commission"
+      ],
+      "documentNumber": "2026-14937",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14927",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Spearmint Oil Produced in the Far West; Salable Quantities and Allotment Percentages for the 2026-2027 Marketing Year",
+      "summary": "Agriculture Department, Agricultural Marketing Service",
+      "url": "http://www.regulations.gov/commenton/AMS_FRDOC_0001-2735",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14927/spearmint-oil-produced-in-the-far-west-salable-quantities-and-allotment-percentages-for-the",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-23/pdf/2026-14927.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Agriculture Department",
+        "Agricultural Marketing Service"
+      ],
+      "documentNumber": "2026-14927",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14923",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Approval and Promulgation of State Implementation Plans; New Jersey; RACT Certifications for the 2008 and 2015 Ozone National Ambient Air Quality Standards",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-R02-OAR-2026-0793-0011",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14923/approval-and-promulgation-of-state-implementation-plans-new-jersey-ract-certifications-for-the-2008",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-23/pdf/2026-14923.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-14923",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14918",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Grapes Grown in a Designated Area of Southeastern California; Decreased Assessment Rate",
+      "summary": "Agriculture Department, Agricultural Marketing Service",
+      "url": "http://www.regulations.gov/commenton/AMS_FRDOC_0001-2736",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14918/grapes-grown-in-a-designated-area-of-southeastern-california-decreased-assessment-rate",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-23/pdf/2026-14918.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Agriculture Department",
+        "Agricultural Marketing Service"
+      ],
+      "documentNumber": "2026-14918",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14909",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Proposal To Revoke the Color Additive Listing for Use of Citrus Red No. 2 on the Skins of Mature Oranges",
+      "summary": "Health and Human Services Department, Food and Drug Administration",
+      "url": "http://www.regulations.gov/commenton/FDA-2026-N-6304-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14909/proposal-to-revoke-the-color-additive-listing-for-use-of-citrus-red-no-2-on-the-skins-of-mature",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-23/pdf/2026-14909.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Health and Human Services Department",
+        "Food and Drug Administration"
+      ],
+      "documentNumber": "2026-14909",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14906",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Rescinding Portions of AmeriCorps Title VI Regulations To Conform More Closely With the Statutory Text and To Implement Executive Order 14281",
+      "summary": "Corporation for National and Community Service",
+      "url": "http://www.regulations.gov/commenton/CNCS-2026-0299-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14906/rescinding-portions-of-americorps-title-vi-regulations-to-conform-more-closely-with-the-statutory",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-23/pdf/2026-14906.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Corporation for National and Community Service"
+      ],
+      "documentNumber": "2026-14906",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14902",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Air Plan Approval; Pennsylvania; Harrisburg-Lebanon-Carlisle-York Maintenance Area, Second 10-Year Maintenance Plan for the 2006 Fine Particulate Matter National Ambient Air Quality Standard",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-R03-OAR-2026-1817-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14902/air-plan-approval-pennsylvania-harrisburg-lebanon-carlisle-york-maintenance-area-second-10-year",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-23/pdf/2026-14902.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-14902",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14891",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Air Plan Approval; Pennsylvania; Revision to Source-Specific Reasonably Available Control Technology (RACT) Requirements",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-R03-OAR-2026-0630-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14891/air-plan-approval-pennsylvania-revision-to-source-specific-reasonably-available-control-technology",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-23/pdf/2026-14891.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-14891",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14886",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "Airworthiness Directives; Airbus Helicopters",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7226-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14886/airworthiness-directives-airbus-helicopters",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-23/pdf/2026-14886.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-14886",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14882",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "Airworthiness Directives; Rolls-Royce Deutschland Ltd & Co KG Engines",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7225-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14882/airworthiness-directives-rolls-royce-deutschland-ltd-and-co-kg-engines",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-23/pdf/2026-14882.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-14882",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14881",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "Airworthiness Directives; Bell Textron Canada Limited Helicopters",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7227-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14881/airworthiness-directives-bell-textron-canada-limited-helicopters",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-23/pdf/2026-14881.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-14881",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14879",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "List of Approved Spent Fuel Storage Casks: Holtec International HI-STORM Flood/Wind System, Certificate of Compliance No. 1032, Amendment No. 10",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "http://www.regulations.gov/commenton/NRC-2026-2476-0002",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14879/list-of-approved-spent-fuel-storage-casks-holtec-international-hi-storm-floodwind-system-certificate",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-23/pdf/2026-14879.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentNumber": "2026-14879",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14877",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Significant New Use Rules on Certain Chemical Substances (26-3)",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-HQ-OPPT-2026-2014-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/23/2026-14877/significant-new-use-rules-on-certain-chemical-substances-26-3",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-23/pdf/2026-14877.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-14877",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14854",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Methylene Chloride",
+      "summary": "Labor Department, Occupational Safety and Health Administration",
+      "url": "http://www.regulations.gov/commenton/OSHA-2025-0012-0024",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14854/methylene-chloride",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14854.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Labor Department",
+        "Occupational Safety and Health Administration"
+      ],
+      "documentNumber": "2026-14854",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14853",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Vinyl Chloride",
+      "summary": "Labor Department, Occupational Safety and Health Administration",
+      "url": "http://www.regulations.gov/commenton/OSHA-2025-0015-0024",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14853/vinyl-chloride",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14853.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Labor Department",
+        "Occupational Safety and Health Administration"
+      ],
+      "documentNumber": "2026-14853",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14852",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Methylenedianiline",
+      "summary": "Labor Department, Occupational Safety and Health Administration",
+      "url": "http://www.regulations.gov/commenton/OSHA-2025-0025-0021",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14852/methylenedianiline",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14852.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Labor Department",
+        "Occupational Safety and Health Administration"
+      ],
+      "documentNumber": "2026-14852",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14851",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Lead",
+      "summary": "Labor Department, Occupational Safety and Health Administration",
+      "url": "http://www.regulations.gov/commenton/OSHA-2025-0022-0031",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14851/lead",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14851.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Labor Department",
+        "Occupational Safety and Health Administration"
+      ],
+      "documentNumber": "2026-14851",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14850",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Inorganic Arsenic",
+      "summary": "Labor Department, Occupational Safety and Health Administration",
+      "url": "http://www.regulations.gov/commenton/OSHA-2025-0016-0023",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14850/inorganic-arsenic",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14850.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Labor Department",
+        "Occupational Safety and Health Administration"
+      ],
+      "documentNumber": "2026-14850",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14849",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Formaldehyde",
+      "summary": "Labor Department, Occupational Safety and Health Administration",
+      "url": "http://www.regulations.gov/commenton/OSHA-2025-0026-0025",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14849/formaldehyde",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14849.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Labor Department",
+        "Occupational Safety and Health Administration"
+      ],
+      "documentNumber": "2026-14849",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14847",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "1,2-Dibromo-3-Chloropropane",
+      "summary": "Labor Department, Occupational Safety and Health Administration",
+      "url": "http://www.regulations.gov/commenton/OSHA-2025-0019-0021",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14847/12-dibromo-3-chloropropane",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14847.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Labor Department",
+        "Occupational Safety and Health Administration"
+      ],
+      "documentNumber": "2026-14847",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14846",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Inorganic Arsenic",
+      "summary": "Labor Department, Occupational Safety and Health Administration",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14846.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14846/inorganic-arsenic",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14846.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Labor Department",
+        "Occupational Safety and Health Administration"
+      ],
+      "documentNumber": "2026-14846",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14845",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Acrylonitrile",
+      "summary": "Labor Department, Occupational Safety and Health Administration",
+      "url": "http://www.regulations.gov/commenton/OSHA-2025-0017-0021",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14845/acrylonitrile",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14845.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Labor Department",
+        "Occupational Safety and Health Administration"
+      ],
+      "documentNumber": "2026-14845",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14844",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "13 Carcinogens (4-Nitrobiphenyl, etc.)",
+      "summary": "Labor Department, Occupational Safety and Health Administration",
+      "url": "http://www.regulations.gov/commenton/OSHA-2025-0013-0021",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14844/13-carcinogens-4-nitrobiphenyl-etc",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14844.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Labor Department",
+        "Occupational Safety and Health Administration"
+      ],
+      "documentNumber": "2026-14844",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14843",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Ethylene Oxide",
+      "summary": "Labor Department, Occupational Safety and Health Administration",
+      "url": "http://www.regulations.gov/commenton/OSHA-2025-0018-0022",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14843/ethylene-oxide",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14843.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Labor Department",
+        "Occupational Safety and Health Administration"
+      ],
+      "documentNumber": "2026-14843",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14842",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Cadmium",
+      "summary": "Labor Department, Occupational Safety and Health Administration",
+      "url": "http://www.regulations.gov/commenton/OSHA-2025-0021-0021",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14842/cadmium",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14842.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Labor Department",
+        "Occupational Safety and Health Administration"
+      ],
+      "documentNumber": "2026-14842",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14840",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Asbestos",
+      "summary": "Labor Department, Occupational Safety and Health Administration",
+      "url": "http://www.regulations.gov/commenton/OSHA-2025-0024-0048",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14840/asbestos",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14840.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Labor Department",
+        "Occupational Safety and Health Administration"
+      ],
+      "documentNumber": "2026-14840",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14839",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "1, 3-Butadiene",
+      "summary": "Labor Department, Occupational Safety and Health Administration",
+      "url": "http://www.regulations.gov/commenton/OSHA-2025-0020-0022",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14839/1-3-butadiene",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14839.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Labor Department",
+        "Occupational Safety and Health Administration"
+      ],
+      "documentNumber": "2026-14839",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14820",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Amendment of Domestic Very High Frequency Omnidirectional Range (VOR) Federal Airways V-16, V-35, V-37, V-53, V-133, V-136, V-143, V-259, V-310, V-364, V-409, V-415, V-454, and V-605; Eastern United States",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-2452-0004",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14820/amendment-of-domestic-very-high-frequency-omnidirectional-range-vor-federal-airways-v-16-v-35-v-37",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14820.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-14820",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14798",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Coastal Migratory Pelagic Resources in the Gulf of America and Atlantic Region; Framework Amendment 14",
+      "summary": "Commerce Department, National Oceanic and Atmospheric Administration",
+      "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-0794-0003",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14798/coastal-migratory-pelagic-resources-in-the-gulf-of-america-and-atlantic-region-framework-amendment",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14798.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Commerce Department",
+        "National Oceanic and Atmospheric Administration"
+      ],
+      "documentNumber": "2026-14798",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14793",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Requirement To Identify All Real Parties in Interest to a Third Party Request for an Ex Parte Reexamination",
+      "summary": "Commerce Department, Patent and Trademark Office",
+      "url": "http://www.regulations.gov/commenton/PTO-P-2025-0545-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14793/requirement-to-identify-all-real-parties-in-interest-to-a-third-party-request-for-an-ex-parte",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14793.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Commerce Department",
+        "Patent and Trademark Office"
+      ],
+      "documentNumber": "2026-14793",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14559",
+      "kind": "comment_deadline",
+      "when": "2026-09-03",
+      "until": "2026-09-03",
+      "title": "Amendment of Class D Airspace and Class E Airspace Over Augusta, GA",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-8220-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/20/2026-14559/amendment-of-class-d-airspace-and-class-e-airspace-over-augusta-ga",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-20/pdf/2026-14559.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-14559",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14552",
+      "kind": "comment_deadline",
+      "when": "2026-09-03",
+      "until": "2026-09-03",
+      "title": "Amendment of Jet Routes J-190 and J-584 and Very High Frequency Omnidirectional Range Federal Airways V-170 and V-188 in the Vicinity of Slate Run, Pennsylvania",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7895-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/20/2026-14552/amendment-of-jet-routes-j-190-and-j-584-and-very-high-frequency-omnidirectional-range-federal",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-20/pdf/2026-14552.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-14552",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14471",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Establishment of Class E Airspace; Peoria, IL",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-8054-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/17/2026-14471/establishment-of-class-e-airspace-peoria-il",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-17/pdf/2026-14471.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-14471",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14450",
+      "kind": "comment_deadline",
+      "when": "2026-08-17",
+      "until": "2026-08-17",
+      "title": "Endangered and Threatened Wildlife and Plants; Grizzly Bear Listing on the List of Endangered and Threatened Wildlife With a Revised Section 4(d) Rule; Proposed Revision of the Protective Regulations Under Section 4(d)",
+      "summary": "Interior Department, Fish and Wildlife Service",
+      "url": "http://www.regulations.gov/commenton/FWS-R6-ES-2024-0186-76185",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/17/2026-14450/endangered-and-threatened-wildlife-and-plants-grizzly-bear-listing-on-the-list-of-endangered-and",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-17/pdf/2026-14450.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Interior Department",
+        "Fish and Wildlife Service"
+      ],
+      "documentNumber": "2026-14450",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14358",
+      "kind": "comment_deadline",
+      "when": "2026-09-14",
+      "until": "2026-09-14",
+      "title": "Request for Information; Clinical Laboratory Improvement Amendments of 1988 (CLIA) Regulations",
+      "summary": "Health and Human Services Department, Centers for Medicare & Medicaid Services",
+      "url": "http://www.regulations.gov/commenton/CMS-2026-2345-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/16/2026-14358/request-for-information-clinical-laboratory-improvement-amendments-of-1988-clia-regulations",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-16/pdf/2026-14358.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "documentNumber": "2026-14358",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14341",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Modernizing Reactor Licensing, Safety Oversight, and Siting Practices",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "http://www.regulations.gov/commenton/NRC-2025-0975-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/16/2026-14341/modernizing-reactor-licensing-safety-oversight-and-siting-practices",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-16/pdf/2026-14341.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentNumber": "2026-14341",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14329",
+      "kind": "comment_deadline",
+      "when": "2026-08-17",
+      "until": "2026-08-17",
+      "title": "Approval and Promulgation of State Plan (Negative Declaration) for Designated Facilities and Pollutants; Nebraska; Commercial and Industrial Solid Waste Incineration Units",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-R07-OAR-2026-4952-0002",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/16/2026-14329/approval-and-promulgation-of-state-plan-negative-declaration-for-designated-facilities-and",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-16/pdf/2026-14329.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-14329",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14327",
+      "kind": "comment_deadline",
+      "when": "2026-09-14",
+      "until": "2026-09-14",
+      "title": "Medicare and Medicaid Programs; CY 2027 Payment Policies Under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; and Medicare Prescription Drug Inflation Rebate Program",
+      "summary": "Health and Human Services Department, Centers for Medicare & Medicaid Services",
+      "url": "http://www.regulations.gov/commenton/CMS-2026-2377-0002",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/16/2026-14327/medicare-and-medicaid-programs-cy-2027-payment-policies-under-the-physician-fee-schedule-and-other",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-16/pdf/2026-14327.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "documentNumber": "2026-14327",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14325",
+      "kind": "comment_deadline",
+      "when": "2026-08-17",
+      "until": "2026-08-17",
+      "title": "Air Plan Approval; Pennsylvania; Reasonably Available Control Technology (RACT) for Volatile Organic Compounds (VOC) Control Technique Guidelines (CTG) Under the 2008 and 2015 Ozone National Ambient Air Quality Standards (NAAQS)",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-R03-OAR-2026-3764-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/16/2026-14325/air-plan-approval-pennsylvania-reasonably-available-control-technology-ract-for-volatile-organic",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-16/pdf/2026-14325.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-14325",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14300",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Airworthiness Directives; Bombardier, Inc., Airplanes",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7221-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/16/2026-14300/airworthiness-directives-bombardier-inc-airplanes",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-16/pdf/2026-14300.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-14300",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14281",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Airworthiness Directives; Rolls-Royce Deutschland Ltd & Co KG Engines",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7219-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/15/2026-14281/airworthiness-directives-rolls-royce-deutschland-ltd-and-co-kg-engines",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-15/pdf/2026-14281.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-14281",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14238",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Airworthiness Directives; Bell Textron Canada Limited Helicopters",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7220-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/15/2026-14238/airworthiness-directives-bell-textron-canada-limited-helicopters",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-15/pdf/2026-14238.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-14238",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14208",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Reforming and Modernizing the NRC's Radiation Protection Framework",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "http://www.regulations.gov/commenton/NRC-2025-1140-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/15/2026-14208/reforming-and-modernizing-the-nrcs-radiation-protection-framework",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-15/pdf/2026-14208.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentNumber": "2026-14208",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14134",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Radio Broadcasting Services; Whitehall, Michigan",
+      "summary": "Federal Communications Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-14/pdf/2026-14134.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/14/2026-14134/radio-broadcasting-services-whitehall-michigan",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-14/pdf/2026-14134.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Communications Commission"
+      ],
+      "documentNumber": "2026-14134",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14118",
+      "kind": "comment_deadline",
+      "when": "2026-09-14",
+      "until": "2026-09-14",
+      "title": "Alabama: Approval of State Coal Combustion Residuals Permit Program",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-HQ-OLEM-2022-0903-0560",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/14/2026-14118/alabama-approval-of-state-coal-combustion-residuals-permit-program",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-14/pdf/2026-14118.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-14118",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14112",
+      "kind": "comment_deadline",
+      "when": "2026-08-29",
+      "until": "2026-08-29",
+      "title": "Amendments and Nonconformance Penalties for Model Year 2027 and Later Heavy-Duty Highway Engines and Amendments to Inducement Provisions for SCR-Equipped Diesel Engines",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-HQ-OAR-2026-0728-0114",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/14/2026-14112/amendments-and-nonconformance-penalties-for-model-year-2027-and-later-heavy-duty-highway-engines-and",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-14/pdf/2026-14112.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-14112",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14108",
+      "kind": "comment_deadline",
+      "when": "2026-08-28",
+      "until": "2026-08-28",
+      "title": "Airworthiness Directives; Leonardo S.p.a Helicopters",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7212-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/14/2026-14108/airworthiness-directives-leonardo-spa-helicopters",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-14/pdf/2026-14108.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-14108",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-14073",
+      "kind": "comment_deadline",
+      "when": "2026-09-11",
+      "until": "2026-09-11",
+      "title": "Drug Establishment Registration and Drug Listing Requirements for Establishments Engaged in Distributed Manufacturing and Certain Foreign Establishments",
+      "summary": "Health and Human Services Department, Food and Drug Administration",
+      "url": "http://www.regulations.gov/commenton/FDA-2025-N-6075-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/13/2026-14073/drug-establishment-registration-and-drug-listing-requirements-for-establishments-engaged-in",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-13/pdf/2026-14073.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Health and Human Services Department",
+        "Food and Drug Administration"
+      ],
+      "documentNumber": "2026-14073",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13978",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Airworthiness Directives; Safran Helicopter Engines, S.A. Engines",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7213-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/10/2026-13978/airworthiness-directives-safran-helicopter-engines-sa-engines",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-10/pdf/2026-13978.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-13978",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13944",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Amendment of Class E Airspace; Bedford, IN",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7756-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/10/2026-13944/amendment-of-class-e-airspace-bedford-in",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-10/pdf/2026-13944.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-13944",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13941",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Revocation of Class E Airspace; Point Pleasant, WV",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7824-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/10/2026-13941/revocation-of-class-e-airspace-point-pleasant-wv",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-10/pdf/2026-13941.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-13941",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13939",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "Rescission of Floodplain Management and Protection of Wetlands; Minimum Property Standards for Flood Hazard Exposure; Building to the Federal Flood Risk Management Standard",
+      "summary": "Housing and Urban Development Department",
+      "url": "http://www.regulations.gov/commenton/HUD-2026-1090-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/10/2026-13939/rescission-of-floodplain-management-and-protection-of-wetlands-minimum-property-standards-for-flood",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-10/pdf/2026-13939.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Housing and Urban Development Department"
+      ],
+      "documentNumber": "2026-13939",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13924",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Special Conditions: Gulfstream Aerospace Corporation (Gulfstream) Model G300 Airplane; Dynamic Test Requirements for Single- and Multiple- Occupant Side-Facing Seats With or Without Airbag Systems",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-0168-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/10/2026-13924/special-conditions-gulfstream-aerospace-corporation-gulfstream-model-g300-airplane-dynamic-test",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-10/pdf/2026-13924.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-13924",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13919",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "Anti-Money Laundering and Countering the Financing of Terrorism Programs",
+      "summary": "Federal Reserve System",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-09/pdf/2026-13919.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/09/2026-13919/anti-money-laundering-and-countering-the-financing-of-terrorism-programs",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-09/pdf/2026-13919.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Reserve System"
+      ],
+      "documentNumber": "2026-13919",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13869",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Airworthiness Directives; The Boeing Company Airplanes",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7215-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/09/2026-13869/airworthiness-directives-the-boeing-company-airplanes",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-09/pdf/2026-13869.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-13869",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13861",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Amendment of Class D and Class E Airspace; Morgantown, WV",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2024-2559-0007",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/09/2026-13861/amendment-of-class-d-and-class-e-airspace-morgantown-wv",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-09/pdf/2026-13861.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-13861",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13805",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "Pipeline Safety: Repair Criteria for Hazardous Liquid and Gas Transmission Pipelines",
+      "summary": "Transportation Department, Pipeline and Hazardous Materials Safety Administration",
+      "url": "http://www.regulations.gov/commenton/PHMSA-2025-0019-0035",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/08/2026-13805/pipeline-safety-repair-criteria-for-hazardous-liquid-and-gas-transmission-pipelines",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-08/pdf/2026-13805.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Pipeline and Hazardous Materials Safety Administration"
+      ],
+      "documentNumber": "2026-13805",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13781",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Airworthiness Directives; Restricted Category Model CH-47D Helicopters",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2025-5394-0010",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/08/2026-13781/airworthiness-directives-restricted-category-model-ch-47d-helicopters",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-08/pdf/2026-13781.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-13781",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13711",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "Recission of the National Cancer Institute Clinical Cancer Education Program Regulation",
+      "summary": "Health and Human Services Department",
+      "url": "http://www.regulations.gov/commenton/NIH-2026-0034-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/07/2026-13711/recission-of-the-national-cancer-institute-clinical-cancer-education-program-regulation",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-07/pdf/2026-13711.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Health and Human Services Department"
+      ],
+      "documentNumber": "2026-13711",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13687",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Implementation of the National Environmental Policy Act",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "http://www.regulations.gov/commenton/NRC-2025-0478-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/07/2026-13687/implementation-of-the-national-environmental-policy-act",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-07/pdf/2026-13687.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentNumber": "2026-13687",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13673",
+      "kind": "comment_deadline",
+      "when": "2026-09-08",
+      "until": "2026-09-08",
+      "title": "Energy Conservation Program: Review of DOE's Analytic Methods for Setting Energy Conservation Standards",
+      "summary": "Energy Department",
+      "url": "http://www.regulations.gov/commenton/EERE-2022-BT-OT-0004-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/07/2026-13673/energy-conservation-program-review-of-does-analytic-methods-for-setting-energy-conservation",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-07/pdf/2026-13673.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Energy Department"
+      ],
+      "documentNumber": "2026-13673",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13667",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Minor New Source Review Program Air Permitting Public Participation Requirements for State Implementation Plans",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-HQ-OAR-2025-1212-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/07/2026-13667/minor-new-source-review-program-air-permitting-public-participation-requirements-for-state",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-07/pdf/2026-13667.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-13667",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13656",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; Including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+      "summary": "Health and Human Services Department, Centers for Medicare & Medicaid Services",
+      "url": "http://www.regulations.gov/commenton/CMS-2026-2344-0002",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/07/2026-13656/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-07/pdf/2026-13656.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "documentNumber": "2026-13656",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13639",
+      "kind": "comment_deadline",
+      "when": "2026-09-04",
+      "until": "2026-09-04",
+      "title": "Improvements to Rules on Recoupment of Benefit Overpayments",
+      "summary": "Pension Benefit Guaranty Corporation",
+      "url": "http://www.regulations.gov/commenton/PBGC-2026-0166-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/06/2026-13639/improvements-to-rules-on-recoupment-of-benefit-overpayments",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-06/pdf/2026-13639.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Pension Benefit Guaranty Corporation"
+      ],
+      "documentNumber": "2026-13639",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13602",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Calendar Year 2027 Home Health Prospective Payment System (HH PPS) Rate Update; Requirements for the HH Quality Reporting Program and the Expanded HH Value-Based Purchasing Model; Medicare Provider Enrollment, Durable Medical Equipment (DME), and DME, Prosthetics, Orthotics, and Supplies (DMEPOS) Policies",
+      "summary": "Health and Human Services Department, Centers for Medicare & Medicaid Services",
+      "url": "http://www.regulations.gov/commenton/CMS-2026-2311-0002",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/06/2026-13602/calendar-year-2027-home-health-prospective-payment-system-hh-pps-rate-update-requirements-for-the-hh",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-06/pdf/2026-13602.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "documentNumber": "2026-13602",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13586",
+      "kind": "comment_deadline",
+      "when": "2026-09-04",
+      "until": "2026-09-04",
+      "title": "Registering NFA Firearms That Fall Out of Government Contract",
+      "summary": "Justice Department, Alcohol, Tobacco, Firearms, and Explosives Bureau",
+      "url": "http://www.regulations.gov/commenton/ATF-2026-0298-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/06/2026-13586/registering-nfa-firearms-that-fall-out-of-government-contract",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-06/pdf/2026-13586.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Justice Department",
+        "Alcohol, Tobacco, Firearms, and Explosives Bureau"
+      ],
+      "documentNumber": "2026-13586",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13546",
+      "kind": "comment_deadline",
+      "when": "2026-09-04",
+      "until": "2026-09-04",
+      "title": "Ensuring Passenger Safety by Preempting Duty and Rest Requirements",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-6739-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/06/2026-13546/ensuring-passenger-safety-by-preempting-duty-and-rest-requirements",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-06/pdf/2026-13546.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-13546",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13541",
+      "kind": "comment_deadline",
+      "when": "2026-08-20",
+      "until": "2026-08-20",
+      "title": "Airworthiness Directives; Rolls-Royce Deutschland Ltd & Co KG Engines",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-7209-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/06/2026-13541/airworthiness-directives-rolls-royce-deutschland-ltd-and-co-kg-engines",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-06/pdf/2026-13541.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-13541",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13485",
+      "kind": "comment_deadline",
+      "when": "2026-08-17",
+      "until": "2026-08-17",
+      "title": "Federal Plan Requirements for Other Solid Waste Incineration Units That Commenced Construction on or Before August 31, 2020, and Have Not Been Modified or Reconstructed After August 29, 2025",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-HQ-OAR-2025-3028-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/02/2026-13485/federal-plan-requirements-for-other-solid-waste-incineration-units-that-commenced-construction-on-or",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-02/pdf/2026-13485.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-13485",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13455",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Direct Multifamily Housing Subsequent Loans for Acquisition",
+      "summary": "Agriculture Department, Rural Housing Service",
+      "url": "http://www.regulations.gov/commenton/RHS_FRDOC_0001-0629",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/02/2026-13455/direct-multifamily-housing-subsequent-loans-for-acquisition",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-02/pdf/2026-13455.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Agriculture Department",
+        "Rural Housing Service"
+      ],
+      "documentNumber": "2026-13455",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13440",
+      "kind": "comment_deadline",
+      "when": "2026-08-17",
+      "until": "2026-08-17",
+      "title": "Enabling Supersonic Overland Flight",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-6935-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/02/2026-13440/enabling-supersonic-overland-flight",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-02/pdf/2026-13440.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-13440",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13392",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "EB-5 Reform and Integrity Act of 2022; Ensuring the Integrity of the EB-5 Program; Automatic Revocation of Petitions for Immigrant Classification",
+      "summary": "Homeland Security Department",
+      "url": "http://www.regulations.gov/commenton/USCIS-2026-0100-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/02/2026-13392/eb-5-reform-and-integrity-act-of-2022-ensuring-the-integrity-of-the-eb-5-program-automatic",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-02/pdf/2026-13392.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Homeland Security Department"
+      ],
+      "documentNumber": "2026-13392",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13375",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Defense Federal Acquisition Regulation Supplement: Modifications to Printed Circuit Board Acquisition Restrictions (DFARS Case 2022-D011)",
+      "summary": "Defense Department, Defense Acquisition Regulations System",
+      "url": "http://www.regulations.gov/commenton/DARS-2026-0298-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/02/2026-13375/defense-federal-acquisition-regulation-supplement-modifications-to-printed-circuit-board-acquisition",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-02/pdf/2026-13375.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Defense Department",
+        "Defense Acquisition Regulations System"
+      ],
+      "documentNumber": "2026-13375",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13368",
+      "kind": "comment_deadline",
+      "when": "2026-08-17",
+      "until": "2026-08-17",
+      "title": "Airworthiness Directives; Airbus Helicopters",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-4664-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/02/2026-13368/airworthiness-directives-airbus-helicopters",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-02/pdf/2026-13368.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-13368",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13365",
+      "kind": "comment_deadline",
+      "when": "2026-08-17",
+      "until": "2026-08-17",
+      "title": "Airworthiness Directives; MD Helicopters, LLC Helicopters",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-4666-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/01/2026-13365/airworthiness-directives-md-helicopters-llc-helicopters",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-01/pdf/2026-13365.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-13365",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13302",
+      "kind": "comment_deadline",
+      "when": "2026-08-17",
+      "until": "2026-08-17",
+      "title": "Integrated Low-Level Radioactive Waste Disposal",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "http://www.regulations.gov/commenton/NRC-2011-0012-0205",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/01/2026-13302/integrated-low-level-radioactive-waste-disposal",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-01/pdf/2026-13302.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentNumber": "2026-13302",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13282",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Mechanic Certification: Inspection Rating and Recent Experience Requirements",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-6671-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/01/2026-13282/mechanic-certification-inspection-rating-and-recent-experience-requirements",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-01/pdf/2026-13282.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-13282",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13192",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Assessments Thresholds, Rate Schedules, and Adjustments",
+      "summary": "Federal Deposit Insurance Corporation",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-06-30/pdf/2026-13192.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/30/2026-13192/assessments-thresholds-rate-schedules-and-adjustments",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-30/pdf/2026-13192.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Deposit Insurance Corporation"
+      ],
+      "documentNumber": "2026-13192",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13191",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Resolution Submissions Required for Covered Insured Depository Institutions",
+      "summary": "Federal Deposit Insurance Corporation",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-06-30/pdf/2026-13191.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/30/2026-13191/resolution-submissions-required-for-covered-insured-depository-institutions",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-30/pdf/2026-13191.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Deposit Insurance Corporation"
+      ],
+      "documentNumber": "2026-13191",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13182",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Joint Request for Comment on Further Implementation of Portfolio Margining and Cross-Margining of Securities and Derivatives",
+      "summary": "Commodity Futures Trading Commission, Securities and Exchange Commission",
+      "url": "http://www.regulations.gov/commenton/CFTC-2026-1420-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/30/2026-13182/joint-request-for-comment-on-further-implementation-of-portfolio-margining-and-cross-margining-of",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-30/pdf/2026-13182.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Commodity Futures Trading Commission",
+        "Securities and Exchange Commission"
+      ],
+      "documentNumber": "2026-13182",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13133",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Federal Oil, Gas, and Coal Amendments",
+      "summary": "Interior Department, Natural Resources Revenue Office",
+      "url": "http://www.regulations.gov/commenton/ONRR-2025-0001-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/30/2026-13133/federal-oil-gas-and-coal-amendments",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-30/pdf/2026-13133.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Interior Department",
+        "Natural Resources Revenue Office"
+      ],
+      "documentNumber": "2026-13133",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13123",
+      "kind": "comment_deadline",
+      "when": "2026-08-31",
+      "until": "2026-08-31",
+      "title": "Disclosure of Information",
+      "summary": "Federal Deposit Insurance Corporation",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-06-30/pdf/2026-13123.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/30/2026-13123/disclosure-of-information",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-30/pdf/2026-13123.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Deposit Insurance Corporation"
+      ],
+      "documentNumber": "2026-13123",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13076",
+      "kind": "comment_deadline",
+      "when": "2026-08-28",
+      "until": "2026-08-28",
+      "title": "Endangered and Threatened Wildlife and Plants; 12-Month Finding and Proposed Rule To Revise Critical Habitat Designation for Southern California Steelhead",
+      "summary": "Commerce Department, National Oceanic and Atmospheric Administration",
+      "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2025-0050-0061",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/29/2026-13076/endangered-and-threatened-wildlife-and-plants-12-month-finding-and-proposed-rule-to-revise-critical",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-29/pdf/2026-13076.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Commerce Department",
+        "National Oceanic and Atmospheric Administration"
+      ],
+      "documentNumber": "2026-13076",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-13047",
+      "kind": "comment_deadline",
+      "when": "2026-09-14",
+      "until": "2026-09-14",
+      "title": "Establishment Registration and Product Listing for Tobacco Products",
+      "summary": "Health and Human Services Department, Food and Drug Administration",
+      "url": "http://www.regulations.gov/commenton/FDA-2025-N-7130-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/29/2026-13047/establishment-registration-and-product-listing-for-tobacco-products",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-29/pdf/2026-13047.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Health and Human Services Department",
+        "Food and Drug Administration"
+      ],
+      "documentNumber": "2026-13047",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12946",
+      "kind": "comment_deadline",
+      "when": "2026-08-25",
+      "until": "2026-08-25",
+      "title": "Unaccompanied Children Program Foundational Rule; Sponsor Assessment Update To Include Proof of Identity, Background Check, Placement, and Income Verification Standards",
+      "summary": "Health and Human Services Department, Children and Families Administration",
+      "url": "http://www.regulations.gov/commenton/ACF-2026-0199-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/26/2026-12946/unaccompanied-children-program-foundational-rule-sponsor-assessment-update-to-include-proof-of",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-26/pdf/2026-12946.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Health and Human Services Department",
+        "Children and Families Administration"
+      ],
+      "documentNumber": "2026-12946",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12925",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Medicare Program; CY 2027 Changes to the End-Stage Renal Disease (ESRD) Prospective Payment System, Acute Kidney Injury Dialysis (AKI) Payment, and ESRD Quality Incentive Program",
+      "summary": "Health and Human Services Department, Centers for Medicare & Medicaid Services",
+      "url": "http://www.regulations.gov/commenton/CMS-2026-2245-0002",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/26/2026-12925/medicare-program-cy-2027-changes-to-the-end-stage-renal-disease-esrd-prospective-payment-system",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-26/pdf/2026-12925.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "documentNumber": "2026-12925",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12922",
+      "kind": "comment_deadline",
+      "when": "2026-08-25",
+      "until": "2026-08-25",
+      "title": "Transport Airplane and Propulsion Certification Modernization",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-0430-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/26/2026-12922/transport-airplane-and-propulsion-certification-modernization",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-26/pdf/2026-12922.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-12922",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12919",
+      "kind": "comment_deadline",
+      "when": "2026-08-25",
+      "until": "2026-08-25",
+      "title": "Bus Testing: Updates to Bus Testing Program Procedures and Policies, Clarifications, Technical Adjustments, and Other Program Updates",
+      "summary": "Transportation Department, Federal Transit Administration",
+      "url": "http://www.regulations.gov/commenton/FTA-2024-0012-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/26/2026-12919/bus-testing-updates-to-bus-testing-program-procedures-and-policies-clarifications-technical",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-26/pdf/2026-12919.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Transit Administration"
+      ],
+      "documentNumber": "2026-12919",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12826",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Defense Federal Acquisition Regulation Supplement: Certification Requirement for Military Recruitment Advertising (DFARS Case 2024-D022)",
+      "summary": "Defense Department, Defense Acquisition Regulations System",
+      "url": "http://www.regulations.gov/commenton/DARS-2026-0266-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/25/2026-12826/defense-federal-acquisition-regulation-supplement-certification-requirement-for-military-recruitment",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-25/pdf/2026-12826.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Defense Department",
+        "Defense Acquisition Regulations System"
+      ],
+      "documentNumber": "2026-12826",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12825",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Defense Federal Acquisition Regulation Supplement: Small Purchase Exception for the Acquisition of U.S. Flags (DFARS Case 2024-D013)",
+      "summary": "Defense Department, Defense Acquisition Regulations System",
+      "url": "http://www.regulations.gov/commenton/DARS-2026-0265-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/25/2026-12825/defense-federal-acquisition-regulation-supplement-small-purchase-exception-for-the-acquisition-of-us",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-25/pdf/2026-12825.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Defense Department",
+        "Defense Acquisition Regulations System"
+      ],
+      "documentNumber": "2026-12825",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12749",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Safety Standard for Lithium-Ion Batteries Used in Micromobility Products and Electrical Systems of Micromobility Products Containing Such Batteries",
+      "summary": "Consumer Product Safety Commission",
+      "url": "http://www.regulations.gov/commenton/CPSC-2025-0012-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/24/2026-12749/safety-standard-for-lithium-ion-batteries-used-in-micromobility-products-and-electrical-systems-of",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-24/pdf/2026-12749.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Consumer Product Safety Commission"
+      ],
+      "documentNumber": "2026-12749",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12743",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Joint Request for Comment on Further Definition of “Swap” and “Security-Based Swap” and on Alternative Compliance",
+      "summary": "Commodity Futures Trading Commission, Securities and Exchange Commission",
+      "url": "http://www.regulations.gov/commenton/CFTC-2026-1355-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/24/2026-12743/joint-request-for-comment-on-further-definition-of-swap-and-security-based-swap-and-on-alternative",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-24/pdf/2026-12743.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Commodity Futures Trading Commission",
+        "Securities and Exchange Commission"
+      ],
+      "documentNumber": "2026-12743",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12742",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Joint Request for Comment on Swap and Security-Based Swap Data Reporting",
+      "summary": "Commodity Futures Trading Commission, Securities and Exchange Commission",
+      "url": "http://www.regulations.gov/commenton/CFTC-2026-1354-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/24/2026-12742/joint-request-for-comment-on-swap-and-security-based-swap-data-reporting",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-24/pdf/2026-12742.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Commodity Futures Trading Commission",
+        "Securities and Exchange Commission"
+      ],
+      "documentNumber": "2026-12742",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12738",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Royalty for Oil and Gas Lost From Onshore Federal and Indian Leases",
+      "summary": "Interior Department, Land Management Bureau",
+      "url": "http://www.regulations.gov/commenton/BLM-2025-0235-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/24/2026-12738/royalty-for-oil-and-gas-lost-from-onshore-federal-and-indian-leases",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-24/pdf/2026-12738.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Interior Department",
+        "Land Management Bureau"
+      ],
+      "documentNumber": "2026-12738",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12734",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Oil and Gas Leasing",
+      "summary": "Interior Department, Land Management Bureau",
+      "url": "http://www.regulations.gov/commenton/BLM-2025-0037-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/24/2026-12734/oil-and-gas-leasing",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-24/pdf/2026-12734.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Interior Department",
+        "Land Management Bureau"
+      ],
+      "documentNumber": "2026-12734",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12712",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Revisions to Financial Forms Reporting and Filing Requirements",
+      "summary": "Energy Department, Federal Energy Regulatory Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-06-24/pdf/2026-12712.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/24/2026-12712/revisions-to-financial-forms-reporting-and-filing-requirements",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-24/pdf/2026-12712.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Energy Department",
+        "Federal Energy Regulatory Commission"
+      ],
+      "documentNumber": "2026-12712",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12696",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Supplemental Nutrition Assistance Program: Changes in Federal-State Administrative Cost Sharing",
+      "summary": "Agriculture Department, Food and Nutrition Administration",
+      "url": "http://www.regulations.gov/commenton/FNA-2026-0034-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/24/2026-12696/supplemental-nutrition-assistance-program-changes-in-federal-state-administrative-cost-sharing",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-24/pdf/2026-12696.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Agriculture Department",
+        "Food and Nutrition Administration"
+      ],
+      "documentNumber": "2026-12696",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12676",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Medicare and State Health Care Programs: Fraud and Abuse; Request for Information Regarding the Federal Anti-Kickback Statute and Beneficiary Inducements CMP",
+      "summary": "Health and Human Services Department",
+      "url": "http://www.regulations.gov/commenton/HHSIG-2026-0034-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/24/2026-12676/medicare-and-state-health-care-programs-fraud-and-abuse-request-for-information-regarding-the",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-24/pdf/2026-12676.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Health and Human Services Department"
+      ],
+      "documentNumber": "2026-12676",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12597",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Fisheries Off West Coast States; Coastal Pelagic Species Fisheries; Amendment 22 to the Coastal Pelagic Species Fishery Management Plan",
+      "summary": "Commerce Department, National Oceanic and Atmospheric Administration",
+      "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2025-0051-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/23/2026-12597/fisheries-off-west-coast-states-coastal-pelagic-species-fisheries-amendment-22-to-the-coastal",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-23/pdf/2026-12597.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Commerce Department",
+        "National Oceanic and Atmospheric Administration"
+      ],
+      "documentNumber": "2026-12597",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12542",
+      "kind": "comment_deadline",
+      "when": "2026-08-24",
+      "until": "2026-08-24",
+      "title": "Naturalization Application Fee Adjustments",
+      "summary": "Homeland Security Department",
+      "url": "http://www.regulations.gov/commenton/USCIS-2026-0265-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/23/2026-12542/naturalization-application-fee-adjustments",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-23/pdf/2026-12542.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Homeland Security Department"
+      ],
+      "documentNumber": "2026-12542",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12460",
+      "kind": "comment_deadline",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Permitted Payment Stablecoin Issuer Customer Identification Program",
+      "summary": "Treasury Department, Financial Crimes Enforcement Network",
+      "url": "http://www.regulations.gov/commenton/FINCEN-2026-0101-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/22/2026-12460/permitted-payment-stablecoin-issuer-customer-identification-program",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-22/pdf/2026-12460.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Treasury Department",
+        "Financial Crimes Enforcement Network"
+      ],
+      "documentNumber": "2026-12460",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12163",
+      "kind": "comment_deadline",
+      "when": "2026-08-17",
+      "until": "2026-08-17",
+      "title": "The Trade-Through Rule and Locked and Crossed Markets Provisions of Regulation NMS",
+      "summary": "Securities and Exchange Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-06-17/pdf/2026-12163.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/17/2026-12163/the-trade-through-rule-and-locked-and-crossed-markets-provisions-of-regulation-nms",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-17/pdf/2026-12163.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Securities and Exchange Commission"
+      ],
+      "documentNumber": "2026-12163",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12100",
+      "kind": "comment_deadline",
+      "when": "2026-08-17",
+      "until": "2026-08-17",
+      "title": "Technical Amendments: Special Financial Assistance",
+      "summary": "Pension Benefit Guaranty Corporation",
+      "url": "http://www.regulations.gov/commenton/PBGC-2026-0133-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/16/2026-12100/technical-amendments-special-financial-assistance",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-16/pdf/2026-12100.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Pension Benefit Guaranty Corporation"
+      ],
+      "documentNumber": "2026-12100",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-12059",
+      "kind": "comment_deadline",
+      "when": "2026-08-17",
+      "until": "2026-08-17",
+      "title": "Medicare Drug Price Negotiation Program and Medicare Prescription Drug Benefit Program",
+      "summary": "Health and Human Services Department, Centers for Medicare & Medicaid Services",
+      "url": "http://www.regulations.gov/commenton/CMS-2026-2080-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/16/2026-12059/medicare-drug-price-negotiation-program-and-medicare-prescription-drug-benefit-program",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-16/pdf/2026-12059.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Health and Human Services Department",
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "documentNumber": "2026-12059",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-sun-2026-16767-2026-08-20",
+      "kind": "sunshine_meeting",
+      "when": "2026-08-20",
+      "until": "2026-08-20",
+      "title": "Sunshine Act Meetings",
+      "summary": "Securities and Exchange Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-17/pdf/2026-16767.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/17/2026-16767/sunshine-act-meetings",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-17/pdf/2026-16767.pdf",
+      "source": "Federal Register Sunshine Act meeting",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Securities and Exchange Commission"
+      ],
+      "documentNumber": "2026-16767"
+    },
+    {
+      "id": "fr-sun-2026-16743-2026-08-21",
+      "kind": "sunshine_meeting",
+      "when": "2026-08-21",
+      "until": "2026-08-21",
+      "title": "Sunshine Act Meeting Notice",
+      "summary": "Civil Rights Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-17/pdf/2026-16743.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/17/2026-16743/sunshine-act-meeting-notice",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-17/pdf/2026-16743.pdf",
+      "source": "Federal Register Sunshine Act meeting",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Civil Rights Commission"
+      ],
+      "documentNumber": "2026-16743"
+    },
+    {
+      "id": "fr-sun-2026-15592-2026-09-07",
+      "kind": "sunshine_meeting",
+      "when": "2026-09-07",
+      "until": "2026-09-07",
+      "title": "Sunshine Act Meetings",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-31/pdf/2026-15592.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/31/2026-15592/sunshine-act-meetings",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-31/pdf/2026-15592.pdf",
+      "source": "Federal Register Sunshine Act meeting",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentNumber": "2026-15592"
     }
   ]
 }

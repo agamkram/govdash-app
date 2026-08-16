@@ -56,7 +56,7 @@ function parseSenateFloorXml(xml) {
   const events = [];
   const days = xml.match(/<LegislativeDay[\s\S]*?<\/LegislativeDay>/gi) || [];
   const now = Date.now();
-  const horizon = now + 21 * 864e5; // 3 weeks ahead
+  const horizon = now + 30 * 864e5; // 30 days — matches the C page
   const past = now - 2 * 864e5;
 
   for (const day of days) {
@@ -290,6 +290,179 @@ function mapPresidentialDoc(doc) {
   };
 }
 
+function mapCommentDeadline(doc) {
+  const agencies = (doc.agencies || []).map((a) => a.name).filter(Boolean);
+  const close = doc.comments_close_on || null;
+  const num = doc.document_number || null;
+  const pdf = doc.pdf_url || null;
+  const regs = doc.regulations_dot_gov_url || doc.comment_url || null;
+  return {
+    id: `fr-comment-${num || doc.html_url}`,
+    kind: "comment_deadline",
+    when: close,
+    until: close,
+    title: (doc.title || "Proposed rule — comments close").replace(/\s+/g, " ").trim(),
+    summary: agencies.length > 0 ? agencies.join(", ") : "",
+    url: regs || pdf || doc.html_url || "https://www.federalregister.gov/",
+    htmlUrl: doc.html_url || null,
+    pdfUrl: pdf,
+    source: "Federal Register proposed rule (comments close)",
+    sourceUrl: "https://www.federalregister.gov/",
+    urgency: "upcoming",
+    agencies,
+    documentNumber: num,
+    documentType: doc.type || "PRORULE",
+  };
+}
+
+function ymdLocal(dt) {
+  const y = dt.getFullYear();
+  const m = String(dt.getMonth() + 1).padStart(2, "0");
+  const d = String(dt.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
+
+function horizonYmd() {
+  const start = ymdLocal(new Date());
+  const end = ymdLocal(new Date(Date.now() + 29 * 864e5));
+  return { start, end };
+}
+
+function parseNamedDates(text) {
+  const months = {
+    january: 0,
+    february: 1,
+    march: 2,
+    april: 3,
+    may: 4,
+    june: 5,
+    july: 6,
+    august: 7,
+    september: 8,
+    october: 9,
+    november: 10,
+    december: 11,
+  };
+  const re =
+    /\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{1,2})(?:st|nd|rd|th)?,?\s+(\d{4})\b/gi;
+  const out = [];
+  let m;
+  while ((m = re.exec(String(text || "")))) {
+    const mo = months[m[1].toLowerCase()];
+    const dt = new Date(Number(m[3]), mo, Number(m[2]));
+    if (Number.isFinite(dt.getTime())) out.push(ymdLocal(dt));
+  }
+  return [...new Set(out)];
+}
+
+function mapSunshineDoc(doc, meetingDay) {
+  const agencies = (doc.agencies || []).map((a) => a.name).filter(Boolean);
+  const num = doc.document_number || null;
+  const pdf = doc.pdf_url || null;
+  return {
+    id: `fr-sun-${num || doc.html_url}-${meetingDay}`,
+    kind: "sunshine_meeting",
+    when: meetingDay,
+    until: meetingDay,
+    title: (doc.title || "Sunshine Act meeting").replace(/\s+/g, " ").trim(),
+    summary: agencies.length > 0 ? agencies.join(", ") : "",
+    url: pdf || doc.html_url || "https://www.federalregister.gov/",
+    htmlUrl: doc.html_url || null,
+    pdfUrl: pdf,
+    source: "Federal Register Sunshine Act meeting",
+    sourceUrl: "https://www.federalregister.gov/",
+    urgency: "upcoming",
+    agencies,
+    documentNumber: num,
+  };
+}
+
+function parseSenateHearingsXml(xml, start, end) {
+  const events = [];
+  const blocks = xml.match(/<meeting>[\s\S]*?<\/meeting>/gi) || [];
+  for (const block of blocks) {
+    const committee = xmlTag(block, "committee");
+    const matter = xmlTag(block, "matter") || "";
+    if (!committee) continue;
+    if (/no committee hearings/i.test(matter)) continue;
+    const when = xmlTag(block, "date_iso_8601");
+    if (!when || when < start || when > end) continue;
+    const type = xmlTag(block, "type") || "Hearing";
+    const room = xmlTag(block, "room");
+    const time = xmlTag(block, "time") || xmlTag(block, "time_iso_8601");
+    const id = xmlTag(block, "identifier") || `senate-hearing-${committee}-${when}`;
+    events.push({
+      id: `senate-hearing-${id}`,
+      kind: "hearing",
+      chamber: "Senate",
+      committee,
+      when,
+      until: null,
+      title: matter.replace(/\s+/g, " ").trim() || `${committee} hearing`,
+      summary: [committee, type, time, room].filter(Boolean).join(" · "),
+      url: "https://www.senate.gov/committees/hearings_meetings.htm",
+      source: "Senate.gov committee hearings XML",
+      sourceUrl: "https://www.senate.gov/general/committee_schedules/hearings.xml",
+      urgency: "upcoming",
+    });
+  }
+  const byId = new Map();
+  for (const e of events) byId.set(e.id, e);
+  return [...byId.values()];
+}
+
+function parseScotusCalendars(html, start, end) {
+  const events = [];
+  const seen = new Set();
+  function add(when, title, url) {
+    if (!when || when < start || when > end) return;
+    const key = `${when}|${title}`;
+    if (seen.has(key)) return;
+    seen.add(key);
+    events.push({
+      id: `scotus-${when}-${title.replace(/\W+/g, "").slice(0, 24)}`,
+      kind: "court_argument",
+      when,
+      until: null,
+      title,
+      summary: "Supreme Court of the United States",
+      url: url || "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx",
+      source: "Supreme Court calendars and lists",
+      sourceUrl: "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx",
+      urgency: "upcoming",
+    });
+  }
+
+  const sessRe = /Session Beginning\s+([A-Za-z]+\s+\d{1,2},?\s*\d{4})/gi;
+  let m;
+  while ((m = sessRe.exec(html))) {
+    const days = parseNamedDates(m[1]);
+    for (const when of days) {
+      add(
+        when,
+        "Oral argument session begins",
+        "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
+      );
+    }
+  }
+
+  const hrefRe = /href="([^"]*?(\d{2})-(\d{2})-(\d{2})\.pdf)"/gi;
+  while ((m = hrefRe.exec(html))) {
+    const mm = m[2];
+    const dd = m[3];
+    const yy = Number(m[4]);
+    const year = yy >= 70 ? 1900 + yy : 2000 + yy;
+    const when = `${year}-${mm}-${dd}`;
+    let url = m[1].replace(/&amp;/g, "&");
+    if (url.startsWith("/")) url = "https://www.supremecourt.gov" + url;
+    else if (!/^https?:/i.test(url)) {
+      url = "https://www.supremecourt.gov/oral_arguments/" + url.replace(/^\.\//, "");
+    }
+    add(when, "Oral argument", url);
+  }
+  return events;
+}
+
 async function main() {
   const opts = parseArgs(process.argv.slice(2));
   await mkdir(OUT, { recursive: true });
@@ -426,6 +599,136 @@ async function main() {
   } catch (e) {
     pack.sources.presidential = { ok: false, error: String(e.message || e) };
     console.warn("Presidential docs failed:", e.message || e);
+  }
+
+  const { start, end } = horizonYmd();
+
+  // Proposed-rule comment close dates — citizen can still speak. Notices skipped.
+  try {
+    const sp = new URLSearchParams();
+    sp.set("conditions[comment_date][gte]", start);
+    sp.set("conditions[comment_date][lte]", end);
+    sp.set("conditions[type][]", "PRORULE");
+    sp.set("order", "newest");
+    sp.set("per_page", "200");
+    for (const f of [
+      "title",
+      "agencies",
+      "comments_close_on",
+      "html_url",
+      "pdf_url",
+      "document_number",
+      "type",
+      "regulations_dot_gov_url",
+      "comment_url",
+    ]) {
+      sp.append("fields[]", f);
+    }
+    const url =
+      "https://www.federalregister.gov/api/v1/documents.json?" + sp.toString();
+    const data = await getJson(url);
+    const list = (data.results || [])
+      .map(mapCommentDeadline)
+      .filter((e) => e.when && e.when >= start && e.when <= end);
+    pack.sources.commentDeadlines = {
+      ok: true,
+      count: list.length,
+      start,
+      end,
+      type: "PRORULE",
+      url: "https://www.federalregister.gov/",
+    };
+    pack.events.push(...list);
+    console.log(`Comment deadlines (proposed rules): ${list.length}`);
+  } catch (e) {
+    pack.sources.commentDeadlines = {
+      ok: false,
+      error: String(e.message || e),
+    };
+    console.warn("Comment deadlines failed:", e.message || e);
+  }
+
+  // Sunshine Act meetings — meeting day, not FR publish day.
+  try {
+    const pubSince = ymdLocal(new Date(Date.now() - 21 * 864e5));
+    const sp = new URLSearchParams();
+    sp.set("conditions[notice_type]", "sunshine_act_meeting");
+    sp.set("conditions[publication_date][gte]", pubSince);
+    sp.set("order", "newest");
+    sp.set("per_page", "40");
+    const data = await getJson(
+      "https://www.federalregister.gov/api/v1/documents.json?" + sp.toString()
+    );
+    const list = [];
+    for (const row of data.results || []) {
+      const num = row.document_number;
+      if (!num) continue;
+      let doc = row;
+      try {
+        doc = await getJson(
+          `https://www.federalregister.gov/api/v1/documents/${encodeURIComponent(num)}.json`
+        );
+      } catch {
+        /* list row may lack dates */
+      }
+      const days = parseNamedDates(doc.dates);
+      for (const when of days) {
+        if (when < start || when > end) continue;
+        list.push(mapSunshineDoc(doc, when));
+      }
+    }
+    pack.sources.sunshine = {
+      ok: true,
+      count: list.length,
+      start,
+      end,
+      url: "https://www.federalregister.gov/",
+    };
+    pack.events.push(...list);
+    console.log(`Sunshine meetings: ${list.length}`);
+  } catch (e) {
+    pack.sources.sunshine = { ok: false, error: String(e.message || e) };
+    console.warn("Sunshine meetings failed:", e.message || e);
+  }
+
+  // Senate committee hearings (chamber box — committees are not map places).
+  try {
+    const xml = await getText(
+      "https://www.senate.gov/general/committee_schedules/hearings.xml"
+    );
+    const list = parseSenateHearingsXml(xml, start, end);
+    pack.sources.senateHearings = {
+      ok: true,
+      count: list.length,
+      start,
+      end,
+      url: "https://www.senate.gov/general/committee_schedules/hearings.xml",
+    };
+    pack.events.push(...list);
+    console.log(`Senate hearings: ${list.length}`);
+  } catch (e) {
+    pack.sources.senateHearings = { ok: false, error: String(e.message || e) };
+    console.warn("Senate hearings failed:", e.message || e);
+  }
+
+  // SCOTUS argument days from the official calendars page (PDFs / session starts).
+  try {
+    const html = await getText(
+      "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
+    );
+    const list = parseScotusCalendars(html, start, end);
+    pack.sources.scotus = {
+      ok: true,
+      count: list.length,
+      start,
+      end,
+      url: "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx",
+    };
+    pack.events.push(...list);
+    console.log(`SCOTUS arguments: ${list.length}`);
+  } catch (e) {
+    pack.sources.scotus = { ok: false, error: String(e.message || e) };
+    console.warn("SCOTUS calendar failed:", e.message || e);
   }
 
   await writeFile(EVENTS_PATH, JSON.stringify(pack, null, 2));

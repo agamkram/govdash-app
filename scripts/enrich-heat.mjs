@@ -41,6 +41,7 @@ const ANCHOR = {
   executive: "gsa-41",
   doj: "gsa-653",
   judicial: "gsa-23",
+  scotus: "gsa-24",
 };
 
 const MAX_EVENTS_PER_NODE = 12;
@@ -102,10 +103,42 @@ function slimEvent(e) {
   };
 }
 
+function isDoorNode(n) {
+  return (
+    !n ||
+    n.kind === "branch" ||
+    n.kind === "sovereign" ||
+    n.id === "usa" ||
+    n.id === "beyond"
+  );
+}
+
+function descendantHits(node, idSet) {
+  for (const c of node.children || []) {
+    if (idSet.has(c.id)) return true;
+    if (descendantHits(c, idSet)) return true;
+  }
+  return false;
+}
+
+/** One home per event: never a door; if parent and child both match, keep the child. */
+function uniqueHomes(nodes) {
+  const uniq = [];
+  const seen = new Set();
+  for (const n of nodes) {
+    if (!n || isDoorNode(n) || seen.has(n.id)) continue;
+    seen.add(n.id);
+    uniq.push(n);
+  }
+  const ids = new Set(uniq.map((n) => n.id));
+  return uniq.filter((n) => !descendantHits(n, ids));
+}
+
 function buildAgencyIndex(nodes) {
   /** @type {{ node:*, names:string[] }[]} */
   const rows = [];
   for (const n of nodes) {
+    if (isDoorNode(n)) continue;
     const names = [n.name, n.short].filter(Boolean);
     const cw = n.sources?.crosswalk;
     if (cw?.gsaSfpName) names.push(cw.gsaSfpName);
@@ -252,8 +285,14 @@ async function enrichTreeFile(path, raw, agencyIndexExtra) {
 
   let matchedPi = 0;
   let unmatchedPi = 0;
+  let matchedComment = 0;
+  let unmatchedComment = 0;
+  let matchedSun = 0;
+  let unmatchedSun = 0;
   let chamber = 0;
   let presidential = 0;
+  let hearings = 0;
+  let scotus = 0;
 
   for (const e of raw.events || []) {
     if (e.kind === "floor_session" || e.kind === "house_schedule") {
@@ -266,21 +305,39 @@ async function enrichTreeFile(path, raw, agencyIndexExtra) {
       if (attachDirect(byId, id, e)) chamber++;
       continue;
     }
-    if (e.kind === "presidential_doc") {
-      if (attachDirect(byId, ANCHOR.potus, e)) presidential++;
-      // also light EOP lightly via roll-up from potus
+    if (e.kind === "hearing") {
+      const id = e.chamber === "House" ? ANCHOR.house : ANCHOR.senate;
+      if (attachDirect(byId, id, e)) hearings++;
       continue;
     }
-    if (e.kind === "public_inspection") {
+    if (e.kind === "court_argument") {
+      if (attachDirect(byId, ANCHOR.scotus, e)) scotus++;
+      continue;
+    }
+    if (e.kind === "presidential_doc") {
+      if (attachDirect(byId, ANCHOR.potus, e)) presidential++;
+      continue;
+    }
+    if (
+      e.kind === "public_inspection" ||
+      e.kind === "comment_deadline" ||
+      e.kind === "sunshine_meeting"
+    ) {
       const agencies = e.agencies || [];
+      const homes = uniqueHomes(
+        agencies.map((name) => bestAgencyMatch(name, index, 0.52)?.node)
+      );
       let any = false;
-      for (const name of agencies) {
-        const m = bestAgencyMatch(name, index, 0.52);
-        if (m && attachDirect(byId, m.node.id, { ...e, matchHow: m.how })) {
-          any = true;
-        }
+      for (const node of homes) {
+        if (attachDirect(byId, node.id, { ...e, matchHow: "agency" })) any = true;
       }
-      if (any) matchedPi++;
+      if (e.kind === "comment_deadline") {
+        if (any) matchedComment++;
+        else unmatchedComment++;
+      } else if (e.kind === "sunshine_meeting") {
+        if (any) matchedSun++;
+        else unmatchedSun++;
+      } else if (any) matchedPi++;
       else unmatchedPi++;
       continue;
     }
@@ -301,15 +358,25 @@ async function enrichTreeFile(path, raw, agencyIndexExtra) {
     nodesWithHeat: withHeat,
     nodesWithDirectHeat: direct,
     rawEventCount: (raw.events || []).length,
-    matched: { chamber, presidential, publicInspection: matchedPi },
+    matched: {
+      chamber,
+      presidential,
+      publicInspection: matchedPi,
+      commentDeadlines: matchedComment,
+      sunshine: matchedSun,
+      hearings,
+      scotus,
+    },
     unmatchedPublicInspection: unmatchedPi,
+    unmatchedCommentDeadlines: unmatchedComment,
+    unmatchedSunshine: unmatchedSun,
     sources: raw.sources || {},
     note: "Heat = dated official events. Pulse on the map when Heat is on. Old score formula removed.",
   };
 
   await writeFile(path, JSON.stringify(data, null, 2));
   console.log(
-    `${path.split("/").pop()}: ${withHeat} nodes with heat (${direct} direct), PI matched ${matchedPi}, unmatched ${unmatchedPi}`
+    `${path.split("/").pop()}: ${withHeat} nodes with heat (${direct} direct), PI ${matchedPi}/${unmatchedPi} unmatched, comments ${matchedComment}/${unmatchedComment} unmatched, sunshine ${matchedSun}/${unmatchedSun} unmatched`
   );
   return data.meta.heat;
 }

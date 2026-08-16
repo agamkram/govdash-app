@@ -21,7 +21,8 @@ import {
   heatSizeBoost,
   heatPulseT,
   heatPulseScale,
-} from "../shared.js?v=2463";
+  zoomJumpNode,
+} from "../shared.js?v=2493";
 
 const CONST_ID = "constitution";
 
@@ -1289,7 +1290,7 @@ export function createSankeyView(
     selectedId = id;
     armedId = null;
     scrubId = null;
-    focus = d;
+    focus = zoomJumpNode(d);
     onSelect?.(d.data, d);
     onFocusChange?.(focus);
     paint();

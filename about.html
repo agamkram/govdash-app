@@ -260,7 +260,7 @@
       <li><strong>Pick a layout</strong> — Icicle, Tree, Circles, or Sankey. The app remembers which chart you left on (only that — not depth, zoom, ZIP, theme, or Heat). Direction arrows flip Icicle/Sankey between top-down and sideways.</li>
       <li><strong>Depth slider</strong> (Icicle, bar under the map) — each step is another generation under <em>where you are</em>. At the Constitution, 1 is the six doors and 11 is the rest of the tree. After you enter a department, 1 is that place’s children.</li>
       <li><strong>Open a place</strong> — tap or click a cell to select it and open the detail pane. <em>Enter</em> (in the pane) or drill in the map to go deeper; breadcrumbs and the Constitution rail go back. On Tree, tap the current top row to go up one level (the ▾ control expands in place). When a place has dollars, a <strong>FY</strong> slider appears in the pane for years <strong>2018–2026</strong>. <strong>Committed</strong> is what they signed for; <strong>paid</strong> is what left the Treasury — both move when USAspending has them; child offices often have committed only. Structure, mission, and employee counts do not change. A blank year means no honest match, not a hidden number. The open year is incomplete until Q4 lands.</li>
-      <li><strong>Find</strong> — search by name. The half-width control next to Find is <strong>Heat</strong> (what’s happening — see below). <strong>Z</strong> looks up House/Senate by ZIP. <strong>$</strong> is federal money: debt, interest, receipts vs outlays, top agencies by committed dollars, and awards where you live. <strong>L</strong>/<strong>D</strong> switches light and dark for this session. <strong>i</strong> opens About.</li>
+      <li><strong>Find</strong> — search by name. The half-width control next to Find is <strong>Heat</strong> (what’s happening — see below). <strong>Z</strong> looks up House/Senate by ZIP. <strong>C</strong> is the next 30 days: the same Heat snapshot laid out on a calendar, plus OPM federal holidays (offices closed — not a map pulse). <strong>$</strong> is federal money: debt, interest, receipts vs outlays, top agencies by committed dollars, and awards where you live. <strong>L</strong>/<strong>D</strong> switches light and dark for this session. <strong>i</strong> opens About.</li>
       <li><strong>Six doors</strong> — Legislative · Executive · Judicial · Agencies · Chartered · International (in that order). On Sankey the last two are labeled <em>Chart</em> and <em>Int</em> so they fit; tap for the full names.</li>
     </ol>
 
@@ -269,14 +269,19 @@
     </div>
 
     <h2>Heat — what’s happening</h2>
-    <p>The control next to Find is a simple on/off switch. Off it asks <strong>Where’s the action?</strong> — tap to pulse places with upcoming floor sessions, Federal Register filings, and similar official activity. On it shows how many places are pulsing and when we last built this snapshot (e.g. <strong>33 as of Aug 16</strong>, or <strong>0 as of Aug 16</strong> if it is quiet) — pan and zoom to find them; tap again to hide. Open a pulsing place (or its parents) and the detail pane repeats that as-of day, then lists events with a date that names the action — e.g. when the chamber <strong>convenes</strong>, when a document <strong>publishes</strong> in the Federal Register, or when it was <strong>filed</strong> for public inspection.</p>
+    <p>The control next to Find is a simple on/off switch. Off it asks <strong>Where’s the action?</strong> — tap to pulse places with upcoming floor sessions, Federal Register filings, and similar official activity. On it shows how many places are pulsing and when we last built this snapshot (e.g. <strong>53 as of Aug 16</strong>, or <strong>0 as of Aug 16</strong> if it is quiet) — pan and zoom to find them; tap again to hide. Open a pulsing place (or its parents) and the detail pane repeats that as-of day, then lists events with a date that names the action — e.g. when the chamber <strong>convenes</strong>, when a document <strong>publishes</strong> in the Federal Register, when comments <strong>close</strong>, or when it was <strong>filed</strong> for public inspection. <strong>C</strong> is the same snapshot in time — next 30 days. Tap <strong>Map</strong> on an event to jump there with Heat on.</p>
     <ul class="sources">
-      <li><strong>Senate floor</strong> — Senate.gov floor schedule (next convene / recent sessions).</li>
+      <li><strong>Senate floor</strong> — Senate.gov floor schedule (next convene / recent sessions, 30-day window).</li>
       <li><strong>House session</strong> — Clerk of the House next meeting.</li>
       <li><strong>Public inspection</strong> — Federal Register filings about to appear in the daily issue, matched to agencies on the map (PDF when available).</li>
+      <li><strong>Comment deadlines</strong> — Federal Register <em>proposed rules</em> whose comments close in the next 30 days, matched like public inspection. Notices and unmatched rules stay off. Tap through to comment when the Register gives a link.</li>
+      <li><strong>Sunshine Act meetings</strong> — FR meeting notices, dated on the <em>meeting day</em> (not the print day), matched to the agency. Unmatched stay off.</li>
+      <li><strong>Senate hearings</strong> — Senate.gov committee schedule XML, on the Senate box (committees are not separate map places). House has no matching free feed yet.</li>
+      <li><strong>Supreme Court</strong> — oral argument days from supremecourt.gov calendars, on the Court box.</li>
       <li><strong>Presidential documents</strong> — recent FR presidential items (orders, proclamations, and the like).</li>
+      <li><strong>Federal holidays</strong> — OPM legal public holidays on C only. They do not pulse the map.</li>
     </ul>
-    <p class="note">Heat is a snapshot built into the map files — not a live feed while you browse. The on-chip date is that build day. Empty Heat means no matched event in this snapshot, not a hidden list. Spending and Heat are separate: USAspending is dollars; Heat is schedules and Register activity.</p>
+    <p class="note">Heat is a snapshot built into the map files — not a live feed while you browse. The on-chip date is that build day. Empty Heat means no matched event in this snapshot, not a hidden list. C uses that same bake plus holidays. Spending and Heat are separate: USAspending is dollars; Heat is schedules and Register activity.</p>
 
     <h2>Where the data comes from</h2>
     <p>Structure is built from official sources and refreshed offline into this app — not guessed.</p>
@@ -285,7 +290,8 @@
       <li><strong>OPM Federal Workforce Data (EHRI Status)</strong> — civilian employee counts when we can match a node. Snapshot <strong id="st-opm-asof">Jun 2026</strong>. Civilian only — not military end strength, USPS, or contractors. Legislative / most Judicial orgs often have no OPM row.</li>
       <li><strong>U.S. Government Manual</strong> — mission and leadership when available. Live Cabinet / selected agency names may overlay Manual text when refreshed from official .gov pages. The pane names that source (White House Cabinet, FDA, Manual) — not the day we last fetched.</li>
       <li><strong>SAM.gov</strong> — status overlays where matched.</li>
-      <li><strong>Senate.gov, Clerk of the House, Federal Register</strong> — Heat events (floor schedule, next session, public inspection, presidential documents). See <strong>Heat</strong> above.</li>
+      <li><strong>Senate.gov, Clerk of the House, Federal Register, Supreme Court</strong> — Heat events (floor, hearings, public inspection, proposed-rule comments, Sunshine meetings, presidential documents, argument days). See <strong>Heat</strong> above.</li>
+      <li><strong>OPM federal holidays</strong> — legal public holidays on the C page only (offices closed). Not a map pulse.</li>
       <li><strong>Treasury Fiscal Data</strong> — public debt, interest expense, and Monthly Treasury Statement receipts/outlays on the $ page (live).</li>
       <li><strong>USAspending.gov</strong> — committed (obligated) amounts on matched Cabinet / independent agencies, plus child offices when the name matches (CBP, FEMA, IRS, Army, …). Unmatched boxes stay blank. Open a matched place and use the detail-pane <strong>FY</strong> slider for years 2018–2026; paid (outlay) appears when USAspending has it. The $ page lists top agencies by committed dollars and ZIP place-of-performance awards.</li>
     </ul>
@@ -405,8 +411,10 @@
       <li><strong>Deficit</strong> — this year’s gap: outlays minus receipts. Adds to the debt.</li>
       <li><strong>Depth</strong> — generations under your current focus on the Icicle slider.</li>
       <li><strong>Chart / Int</strong> — Sankey short labels for Chartered and International.</li>
-      <li><strong>Heat</strong> — official “what’s happening” events on the map (pulse) and in the detail pane. Toggle with the half-width control next to Find.</li>
+      <li><strong>Heat</strong> — official “what’s happening” events on the map (pulse) and in the detail pane. Toggle with the half-width control next to Find. <strong>C</strong> is the same snapshot as a 30-day calendar. One gold dot means a busy day — types are named in the list, not color-coded.</li>
       <li><strong>Public inspection</strong> — Federal Register documents filed for the next daily issue, before they are “published.”</li>
+      <li><strong>Comment deadline</strong> — last day to comment on a proposed rule (Federal Register).</li>
+      <li><strong>Sunshine meeting</strong> — agency meeting noticed under the Sunshine Act.</li>
       <li><strong>Floor / session</strong> — when the Senate or House is next expected to convene (or recently sat), from chamber schedules.</li>
     </ul>
     <p class="note" id="st-foot">Counts from the merged product + Beyond tree — same files as the map, not a live OPM or USAspending query. Heat is likewise a baked snapshot of official schedules and Register feeds.</p>

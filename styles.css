@@ -497,7 +497,16 @@ html.pwa-standalone .shell {
 .shell[data-page="about"] .map,
 .shell[data-page="about"] .map-tip,
 .shell[data-page="about"] .scrub-coach,
-.shell[data-page="about"] .detail-pane {
+.shell[data-page="about"] .detail-pane,
+.shell[data-page="cal"] .search-row,
+.shell[data-page="cal"] .search-wrap,
+.shell[data-page="cal"] .breadcrumbs,
+.shell[data-page="cal"] .chrome-subline,
+.shell[data-page="cal"] .chrome-bottom,
+.shell[data-page="cal"] .map,
+.shell[data-page="cal"] .map-tip,
+.shell[data-page="cal"] .scrub-coach,
+.shell[data-page="cal"] .detail-pane {
   display: none !important;
 }
 
@@ -578,6 +587,143 @@ html.pwa-standalone .shell {
   color: var(--muted);
   font-size: 0.88rem;
   line-height: 1.4;
+}
+
+.cal-sheet {
+  margin: 0 0 1.25rem;
+}
+
+.cal-sheet-title,
+.cal-day-head {
+  margin: 0 0 0.45rem;
+  font-size: 0.68rem;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.cal-month-mark {
+  display: block;
+  font-size: 0.52rem;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  line-height: 1;
+  margin-bottom: 0.14rem;
+}
+
+.cal-cell.has-month {
+  padding-top: 0.22rem;
+}
+
+.cal-cell.is-selected .cal-month-mark {
+  color: var(--heat-on-ink);
+  opacity: 0.8;
+}
+
+.cal-num {
+  display: block;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.2rem;
+}
+
+.cal-dow {
+  text-align: center;
+  font-size: 0.62rem;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  padding: 0.15rem 0 0.35rem;
+}
+
+.cal-cell {
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0.45rem 0 0.7rem;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.88rem;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  min-height: 2.35rem;
+}
+
+.cal-cell.is-pad {
+  min-height: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+.cal-cell.is-out {
+  color: var(--muted);
+  opacity: 0.4;
+  cursor: default;
+}
+
+.cal-cell.is-busy .cal-dot {
+  position: absolute;
+  display: block;
+  left: 50%;
+  bottom: 0.22rem;
+  width: 0.28rem;
+  height: 0.28rem;
+  margin-left: -0.14rem;
+  border-radius: 50%;
+  background: var(--heat-on);
+  pointer-events: none;
+}
+
+.cal-cell.is-today {
+  border-color: color-mix(in srgb, var(--heat-invite) 55%, var(--line));
+}
+
+.cal-cell.is-selected {
+  border-color: var(--heat-on-border);
+  background: var(--heat-on);
+  color: var(--heat-on-ink);
+}
+
+.cal-cell.is-selected.is-busy .cal-dot {
+  background: var(--heat-on-ink);
+}
+
+.cal-day-list {
+  margin: 0 0 0.5rem;
+}
+
+.cal-events {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cal-event {
+  margin: 0 0 0.7rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.cal-event:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.cal-event .btn {
+  margin-top: 0.45rem;
 }
 
 .fiscal-block {
@@ -1190,13 +1336,15 @@ html.pwa-standalone.is-tablet:not(.has-depth) .map {
 
 .shell[data-page="fiscal"] .app-page,
 .shell[data-page="you"] .app-page,
-.shell[data-page="about"] .app-page {
+.shell[data-page="about"] .app-page,
+.shell[data-page="cal"] .app-page {
   bottom: 0;
 }
 
 html.pwa-standalone .shell[data-page="fiscal"] .app-page,
 html.pwa-standalone .shell[data-page="you"] .app-page,
-html.pwa-standalone .shell[data-page="about"] .app-page {
+html.pwa-standalone .shell[data-page="about"] .app-page,
+html.pwa-standalone .shell[data-page="cal"] .app-page {
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 

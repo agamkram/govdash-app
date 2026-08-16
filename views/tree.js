@@ -12,7 +12,8 @@ import {
   leafLayoutWeight,
   nodeHasHeat,
   nodeHasHeatDeep,
-} from "../shared.js?v=2463";
+  zoomJumpNode,
+} from "../shared.js?v=2493";
 
 export function createTreeView(container, { onSelect, onFocusChange }) {
   const el = typeof container === "string" ? document.querySelector(container) : container;
@@ -184,7 +185,7 @@ export function createTreeView(container, { onSelect, onFocusChange }) {
     if (!d) return null;
     selectedId = id;
     onSelect?.(d.data, d);
-    focus = d.children?.length ? d : d.parent || d;
+    focus = zoomJumpNode(d);
     ensureAncestorsExpanded(d);
     expandFocusLevel(focus);
     onFocusChange?.(focus);

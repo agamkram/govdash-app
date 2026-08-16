@@ -17,7 +17,8 @@ import {
   INK,
   noteScrubSuccess,
   nodeHasHeat,
-} from "../shared.js?v=2463";
+  zoomJumpNode,
+} from "../shared.js?v=2493";
 
 export function createPackView(container, { onSelect, onFocusChange }) {
   const el = typeof container === "string" ? document.querySelector(container) : container;
@@ -627,9 +628,7 @@ export function createPackView(container, { onSelect, onFocusChange }) {
     if (!d) return null;
     selectedId = id;
     onSelect?.(d.data, d);
-    if (d.children) zoomToNode(d);
-    else if (d.parent) zoomToNode(d.parent);
-    else zoomToNode(d);
+    zoomToNode(zoomJumpNode(d));
     return d;
   }
 

@@ -41,17 +41,23 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-08-16T00:45:12.205Z",
-      "asOf": "2026-08-16T00:45:03.247Z",
-      "nodesWithHeat": 0,
-      "nodesWithDirectHeat": 0,
-      "rawEventCount": 103,
+      "enrichedAt": "2026-08-16T22:46:15.882Z",
+      "asOf": "2026-08-16T22:20:41.697Z",
+      "nodesWithHeat": 3,
+      "nodesWithDirectHeat": 1,
+      "rawEventCount": 262,
       "matched": {
         "chamber": 0,
         "presidential": 0,
-        "publicInspection": 0
+        "publicInspection": 0,
+        "commentDeadlines": 1,
+        "sunshine": 0,
+        "hearings": 0,
+        "scotus": 0
       },
       "unmatchedPublicInspection": 88,
+      "unmatchedCommentDeadlines": 156,
+      "unmatchedSunshine": 3,
       "sources": {
         "senateFloor": {
           "ok": true,
@@ -60,7 +66,7 @@
         },
         "houseClerk": {
           "ok": true,
-          "count": 1,
+          "count": 0,
           "url": "https://clerk.house.gov/"
         },
         "majorityLeader": {
@@ -78,6 +84,35 @@
           "count": 13,
           "since": "2026-08-02",
           "url": "https://www.federalregister.gov/presidential-documents"
+        },
+        "commentDeadlines": {
+          "ok": true,
+          "count": 157,
+          "start": "2026-08-16",
+          "end": "2026-09-14",
+          "type": "PRORULE",
+          "url": "https://www.federalregister.gov/"
+        },
+        "sunshine": {
+          "ok": true,
+          "count": 3,
+          "start": "2026-08-16",
+          "end": "2026-09-14",
+          "url": "https://www.federalregister.gov/"
+        },
+        "senateHearings": {
+          "ok": true,
+          "count": 0,
+          "start": "2026-08-16",
+          "end": "2026-09-14",
+          "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
+        },
+        "scotus": {
+          "ok": true,
+          "count": 0,
+          "start": "2026-08-16",
+          "end": "2026-09-14",
+          "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
       "note": "Heat = dated official events. Pulse on the map when Heat is on. Old score formula removed."
@@ -95,7 +130,28 @@
       "usgm": null,
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
-    "heat": null,
+    "heat": {
+      "asOf": "2026-08-16T22:20:41.697Z",
+      "count": 1,
+      "rolledUp": true,
+      "events": [
+        {
+          "id": "fr-comment-2026-14906",
+          "kind": "comment_deadline",
+          "when": "2026-08-24",
+          "until": "2026-08-24",
+          "filedAt": null,
+          "signedAt": null,
+          "title": "Rescinding Portions of AmeriCorps Title VI Regulations To Conform More Closely With the Statutory Text and To Implement Executive Order 14281",
+          "summary": "Corporation for National and Community Service (from lower in the map)",
+          "url": "http://www.regulations.gov/commenton/CNCS-2026-0299-0001",
+          "source": "Federal Register proposed rule (comments close)",
+          "sourceUrl": "https://www.federalregister.gov/",
+          "urgency": "upcoming",
+          "bill": null
+        }
+      ]
+    },
     "children": [
       {
         "id": "product-chartered",
@@ -109,7 +165,28 @@
           "usgm": null,
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
-        "heat": null,
+        "heat": {
+          "asOf": "2026-08-16T22:20:41.697Z",
+          "count": 1,
+          "rolledUp": true,
+          "events": [
+            {
+              "id": "fr-comment-2026-14906",
+              "kind": "comment_deadline",
+              "when": "2026-08-24",
+              "until": "2026-08-24",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Rescinding Portions of AmeriCorps Title VI Regulations To Conform More Closely With the Statutory Text and To Implement Executive Order 14281",
+              "summary": "Corporation for National and Community Service (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/CNCS-2026-0299-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            }
+          ]
+        },
         "children": [
           {
             "id": "gsa-1697",
@@ -1694,7 +1771,28 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": null,
+            "heat": {
+              "asOf": "2026-08-16T22:20:41.697Z",
+              "count": 1,
+              "rolledUp": false,
+              "events": [
+                {
+                  "id": "fr-comment-2026-14906",
+                  "kind": "comment_deadline",
+                  "when": "2026-08-24",
+                  "until": "2026-08-24",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Rescinding Portions of AmeriCorps Title VI Regulations To Conform More Closely With the Statutory Text and To Implement Executive Order 14281",
+                  "summary": "Corporation for National and Community Service",
+                  "url": "http://www.regulations.gov/commenton/CNCS-2026-0299-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                }
+              ]
+            },
             "children": [],
             "workforce": {
               "count": 376,

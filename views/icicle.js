@@ -18,7 +18,8 @@ import {
   placeMapTip,
   noteScrubSuccess,
   nodeHasHeat,
-} from "../shared.js?v=2463";
+  zoomJumpNode,
+} from "../shared.js?v=2493";
 
 const CONST_W = 28;
 const FOCUS_W = 28;
@@ -1296,7 +1297,7 @@ export function createIcicleView(
     if (!d) return null;
     selectedId = id;
     onSelect?.(d.data, d);
-    focus = d.children?.length ? d : d.parent || d;
+    focus = zoomJumpNode(d);
     onFocusChange?.(focus);
     paint();
     return d;

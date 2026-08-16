@@ -219,6 +219,15 @@ export function atlasRail(rootOrData) {
   };
 }
 
+/**
+ * Map jump target (Find, C Map, ZIP). Always the place itself.
+ * Focusing a leaf’s parent used to dump independent agencies onto the
+ * Agencies door.
+ */
+export function zoomJumpNode(d) {
+  return d || null;
+}
+
 /** Stamp each data node with its constitutional door (Legislative / Executive / …). */
 export function stampDoorColors(root) {
   function walkDoor(node, door) {
@@ -579,7 +588,10 @@ export const HEAT_KIND_LABEL = {
   presidential_doc: "Presidential",
   hearing: "Hearing",
   comment_deadline: "Comment deadline",
+  sunshine_meeting: "Sunshine meeting",
+  court_argument: "Argument",
   vote_recent: "Vote",
+  federal_holiday: "Holiday",
 };
 
 /**

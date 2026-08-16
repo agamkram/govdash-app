@@ -75,13 +75,13 @@
     })();
   </script>
   <title>GovDash</title>
-  <link rel="icon" type="image/png" href="icon-192.png?v=2488" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2488" />
+  <link rel="icon" type="image/png" href="icon-192.png?v=2493" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2493" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Michroma&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2488" />
-  <meta name="govdash-build" content="2488-heat-gold" />
+  <link rel="stylesheet" href="styles.css?v=2493" />
+  <meta name="govdash-build" content="2493-map-home" />
 </head>
 <body>
   <div class="shell">
@@ -108,6 +108,15 @@
               aria-label="Your ZIP"
             >
               Z
+            </button>
+            <button
+              type="button"
+              id="btn-cal"
+              class="btn btn-fiscal"
+              title="Next 30 days"
+              aria-label="Next 30 days"
+            >
+              C
             </button>
             <button
               type="button"
@@ -234,9 +243,20 @@
         <iframe
           class="about-frame"
           id="about-frame"
-          src="about.html?v=2488"
+          src="about.html?v=2493"
           title="About GovDash — how to use and data sources"
         ></iframe>
+      </section>
+
+      <section class="app-page" id="page-cal" hidden>
+        <div class="app-page-inner cal-inner">
+          <p class="detail-kind">Calendar</p>
+          <h2>Next 30 days</h2>
+          <div id="cal-body"></div>
+          <p class="fiscal-actions">
+            <button type="button" id="cal-back" class="btn">Map</button>
+          </p>
+        </div>
       </section>
 
       <section class="app-page" id="page-you" hidden>
@@ -294,7 +314,7 @@
       </label>
     </footer>
   </div>
-  <script type="module" src="app.js?v=2488"></script>
+  <script type="module" src="app.js?v=2493"></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
