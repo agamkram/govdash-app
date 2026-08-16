@@ -1,40 +1,38 @@
 # GovDash
 
-Citizen map of the **U.S. federal government** — cascading / pinch-to-zoom hierarchy from official data, with live Heat events and engagement panels.
+A citizen map of the U.S. federal hierarchy — how it’s organized, what’s nested under what.
 
-## Quick start
+**Live:** GitHub → Vercel → [markmaga.com](https://markmaga.com) (GovDash). Layouts: Icicle, Tree, Circles, Sankey. How-to and glossary live in the in-app About page (`i`).
 
-```bash
-cd govdash-app
-npm run build:tree    # or full: npm run pipeline
-npm run serve         # or existing preview on :8799
-```
+The map remembers which chart you left on — not depth, zoom, ZIP, theme, or Heat.
 
-Open the printed URL. **Tap to drill in**, **H** toggles Heat (map pulse + detail events), search to fly to a node.
+## Data (baked into the shipped tree)
 
-## Pipeline
+Vercel serves committed JSON. Crosswalk owns the edges; other sources overlay fields and must not rewire parents.
 
-| Step | Command / path |
-|------|----------------|
-| Fetch Crosswalk | `npm run fetch` → `data/raw/` |
-| Nest Parent list | `npm run build:tree` → `data/nested/gov-tree.json` (full) |
-| Fetch SAM depts | `npm run fetch:sam` → `data/raw/sam/` (uses API quota) |
-| Enrich with SAM | `npm run enrich:sam` → attaches `sources.sam` |
-| Fetch Manual | `npm run fetch:usgm` → `data/raw/usgm/` |
-| Enrich Manual | `npm run enrich:usgm` → attaches `sources.usgm` |
-| Fetch spend raw | `npm run fetch:heat` → USAspending caches under `data/raw/heat/` |
-| Fetch Heat events | `npm run fetch:heat-events` → `data/raw/heat/events-raw.json` |
-| Enrich Heat | `npm run enrich:heat` → `node.heat` live events |
-| Curate map tree | `npm run curate` → `gov-tree-full.json` + `gov-tree-product.json` |
-| Map UI | `index.html` + `app.js` + `views/*` (Icicle / Tree / Size) |
-| Schema | `docs/data-model.md` |
+| Source | Role |
+|--------|------|
+| GSA Federal Hierarchy Crosswalk | Skeleton of orgs and parent links |
+| SAM.gov Federal Hierarchy API | Status / identity overlay on matched departments |
+| U.S. Government Manual | Mission, leadership, web, phone |
+| OPM Federal Workforce Data (EHRI) | Civilian employee counts when matched |
+| Senate.gov, Clerk of the House, Federal Register | Heat events (floor / session / public inspection) — a snapshot in the map files, not a live browse-time feed |
+| USAspending.gov | Committed (obligated) and paid (outlay) on matched agencies; FY overlay 2018–2026 |
+| Treasury Fiscal Data | Public debt, interest, receipts/outlays on the `$` page (live at browse time) |
 
-## Data sources (priority)
+Blanks are honest: no match, not a hidden number. OPM is civilian only. Child offices often have committed dollars without paid. Heat and spending are separate.
 
-1. GSA FederalHierarchy-Crosswalk — structural skeleton  
-2. SAM.gov Federal Hierarchy Public API — live status / codes  
-3. U.S. Government Manual (govinfo XML) — mission / leadership  
-4. Senate/House schedules + Federal Register — live Heat events  
-5. USAspending — spending (separate from Heat)  
+## Refresh the tree
 
-Roadmap on Desktop: `GovDash-roadmap.txt`
+`npm run pipeline` fetches, nests, enriches, and curates. Vercel deploys whatever is committed (`gov-tree-product.json`, `gov-tree-beyond.json`, `spend-by-year.json`).
+
+| Step | Command |
+|------|---------|
+| Crosswalk | `npm run fetch` → `npm run build:tree` |
+| SAM / Manual | `npm run fetch:sam` / `enrich:sam`, `fetch:usgm` / `parse:usgm` / `enrich:usgm` |
+| Workforce | `npm run fetch:workforce` → `enrich:workforce` |
+| Spend | `npm run fetch:heat` (USAspending cache), `fetch:subtier`, `enrich:spending`, `fetch:spend-history`, `enrich:spend-years` |
+| Heat events | `npm run fetch:heat-events` → `enrich:heat` |
+| Curate + About counts | `npm run curate`, `stats:about` |
+
+Map UI: `index.html`, `app.js`, `views/` (Icicle / Tree / Circles / Sankey). Schema: `docs/data-model.md`.

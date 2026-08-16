@@ -1,5 +1,5 @@
-import { engagementActions } from "./engagement.js?v=2473";
-import { enrichmentContext, indexById } from "./context.js?v=2473";
+import { engagementActions } from "./engagement.js?v=2475";
+import { enrichmentContext, indexById } from "./context.js?v=2475";
 import {
   childCount,
   displayName,
@@ -14,19 +14,19 @@ import {
   HEAT_KIND_LABEL,
   syncHeatPulse,
   setHeatPulseSink,
-} from "./shared.js?v=2473";
-import { createIcicleView } from "./views/icicle.js?v=2473";
-import { createTreeView } from "./views/tree.js?v=2473";
-import { createPackView } from "./views/pack.js?v=2473";
-import { createSankeyView } from "./views/sankey.js?v=2473";
-import { createFiscalPage } from "./views/fiscal.js?v=2473";
-import { createYouPage, YOU_NODES } from "./views/you.js?v=2473";
-import { authorityLine } from "./authority.js?v=2473";
-import { createSpendYearController } from "./spend-year.js?v=2473";
+} from "./shared.js?v=2475";
+import { createIcicleView } from "./views/icicle.js?v=2475";
+import { createTreeView } from "./views/tree.js?v=2475";
+import { createPackView } from "./views/pack.js?v=2475";
+import { createSankeyView } from "./views/sankey.js?v=2475";
+import { createFiscalPage } from "./views/fiscal.js?v=2475";
+import { createYouPage, YOU_NODES } from "./views/you.js?v=2475";
+import { authorityLine } from "./authority.js?v=2475";
+import { createSpendYearController } from "./spend-year.js?v=2475";
 
-const TREE_URL = "./data/nested/gov-tree-product.json?v=2473";
-const BEYOND_URL = "./data/nested/gov-tree-beyond.json?v=2473";
-const SPEND_YEAR_URL = "./data/nested/spend-by-year.json?v=2473";
+const TREE_URL = "./data/nested/gov-tree-product.json?v=2475";
+const BEYOND_URL = "./data/nested/gov-tree-beyond.json?v=2475";
+const SPEND_YEAR_URL = "./data/nested/spend-by-year.json?v=2475";
 
 const factories = {
   icicle: createIcicleView,
@@ -64,6 +64,30 @@ function readHeatOn() {
 
 /** Places that actually pulse (own events, not parent rollup). */
 let heatPulsePlaceCount = 0;
+/** Chip/pane snapshot day from meta.heat.asOf (e.g. "Aug 16"). */
+let heatAsOfLabel = "";
+
+/** Bake calendar day — YYYY-MM-DD in the ISO, not Idaho local clock. */
+function formatHeatSnapshotDay(iso) {
+  const s = String(iso || "").trim();
+  const day = /^(\d{4})-(\d{2})-(\d{2})/.exec(s);
+  if (day) {
+    const d = new Date(Date.UTC(Number(day[1]), Number(day[2]) - 1, Number(day[3])));
+    return d.toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      timeZone: "UTC",
+    });
+  }
+  const d = new Date(s);
+  if (!Number.isFinite(d.getTime())) return "";
+  return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+}
+
+function heatOnChipText(n) {
+  const count = String(n);
+  return heatAsOfLabel ? `${count} as of ${heatAsOfLabel}` : count;
+}
 
 function countDirectHeatPlaces(root) {
   let n = 0;
@@ -111,15 +135,16 @@ function syncHeatChip() {
       "Tap to show places with upcoming floor, Register filings, and other official activity";
     aria = "Heat off. Tap to show where the action is on the map.";
   } else {
-    text = n === 1 ? "1 event ahead" : `${nLabel} events ahead`;
+    text = heatOnChipText(n);
+    const asOfBit = heatAsOfLabel ? ` as of ${heatAsOfLabel}` : "";
     title =
       n > 0
-        ? `${nLabel} place${n === 1 ? "" : "s"} with upcoming activity · zoom to find them · tap to hide`
-        : "Heat on · nothing upcoming in this snapshot · tap to hide";
+        ? `${nLabel} place${n === 1 ? "" : "s"} with official activity${asOfBit} · zoom to find them · tap to hide`
+        : `Heat on · nothing in this snapshot${asOfBit} · tap to hide`;
     aria =
       n > 0
-        ? `Heat on. ${nLabel} event${n === 1 ? "" : "s"} ahead. Zoom to find them. Tap to hide.`
-        : "Heat on. 0 events ahead. Tap to hide.";
+        ? `Heat on. ${heatOnChipText(n)}. Zoom to find them. Tap to hide.`
+        : `Heat on. ${heatOnChipText(0)}. Tap to hide.`;
   }
 
   // Explicit two-state face — never leave a sticky on/empty class when off.
@@ -890,6 +915,19 @@ function showDetail(node, opts = {}) {
     const events = heat?.events || [];
     if (heat && (events.length || heat.count > 0)) {
       dHeat.hidden = false;
+      const h3 = dHeat.querySelector("h3");
+      let asOfEl = dHeat.querySelector(".heat-asof");
+      if (heatAsOfLabel) {
+        if (!asOfEl) {
+          asOfEl = document.createElement("p");
+          asOfEl.className = "heat-asof";
+          if (h3) h3.after(asOfEl);
+          else dHeatList.before(asOfEl);
+        }
+        asOfEl.textContent = `as of ${heatAsOfLabel}`;
+      } else if (asOfEl) {
+        asOfEl.remove();
+      }
       if (heat.rolledUp) {
         const note = document.createElement("p");
         note.className = "heat-roll-note";
@@ -986,19 +1024,10 @@ function showDetail(node, opts = {}) {
     }
     const oldNote = dLeaders.querySelector(".leaders-asof");
     if (oldNote) oldNote.remove();
-    if (live?.asOf || live?.sourceName) {
+    if (live?.sourceName) {
       const note = document.createElement("p");
       note.className = "leaders-asof";
-      const when = live.asOf
-        ? new Date(live.asOf).toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          })
-        : "";
-      note.textContent = [live.sourceName || "Official site", when]
-        .filter(Boolean)
-        .join(" · ");
+      note.textContent = live.sourceName;
       if (h3) h3.after(note);
       else dLeadersList.before(note);
     }
@@ -1349,6 +1378,9 @@ async function main() {
   usaRoot = usaData.tree;
   attachBeyondDoors(usaRoot, beyondData.tree);
 
+  heatAsOfLabel = formatHeatSnapshotDay(
+    usaData.meta?.heat?.asOf || usaData.meta?.heat?.enrichedAt || ""
+  );
   const metaDirect = usaData.meta?.heat?.nodesWithDirectHeat;
   setHeatPulsePlaceCount(
     typeof metaDirect === "number" && metaDirect >= 0

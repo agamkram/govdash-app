@@ -269,21 +269,21 @@
     </div>
 
     <h2>Heat — what’s happening</h2>
-    <p>The control next to Find is a simple on/off switch. Off it asks <strong>Where’s the action?</strong> — tap to pulse places with upcoming floor sessions, Federal Register filings, and similar official activity. On it shows the count (e.g. <strong>33 events ahead</strong>, or <strong>0 events ahead</strong> if this snapshot is quiet) — pan and zoom to find them; tap again to hide. Open a pulsing place (or its parents) and the detail pane lists those events with a date that names the action — e.g. when the chamber <strong>convenes</strong>, when a document <strong>publishes</strong> in the Federal Register, or when it was <strong>filed</strong> for public inspection.</p>
+    <p>The control next to Find is a simple on/off switch. Off it asks <strong>Where’s the action?</strong> — tap to pulse places with upcoming floor sessions, Federal Register filings, and similar official activity. On it shows how many places are pulsing and when we last built this snapshot (e.g. <strong>33 as of Aug 16</strong>, or <strong>0 as of Aug 16</strong> if it is quiet) — pan and zoom to find them; tap again to hide. Open a pulsing place (or its parents) and the detail pane repeats that as-of day, then lists events with a date that names the action — e.g. when the chamber <strong>convenes</strong>, when a document <strong>publishes</strong> in the Federal Register, or when it was <strong>filed</strong> for public inspection.</p>
     <ul class="sources">
       <li><strong>Senate floor</strong> — Senate.gov floor schedule (next convene / recent sessions).</li>
       <li><strong>House session</strong> — Clerk of the House next meeting.</li>
       <li><strong>Public inspection</strong> — Federal Register filings about to appear in the daily issue, matched to agencies on the map (PDF when available).</li>
       <li><strong>Presidential documents</strong> — recent FR presidential items (orders, proclamations, and the like).</li>
     </ul>
-    <p class="note">Heat is a snapshot built into the map files — not a live feed while you browse. Empty Heat means no matched event in this snapshot, not a hidden list. Spending and Heat are separate: USAspending is dollars; Heat is schedules and Register activity.</p>
+    <p class="note">Heat is a snapshot built into the map files — not a live feed while you browse. The on-chip date is that build day. Empty Heat means no matched event in this snapshot, not a hidden list. Spending and Heat are separate: USAspending is dollars; Heat is schedules and Register activity.</p>
 
     <h2>Where the data comes from</h2>
     <p>Structure is built from official sources and refreshed offline into this app — not guessed.</p>
     <ul class="sources">
       <li><strong>GSA Federal Hierarchy Crosswalk</strong> — skeleton of orgs and parent links (main map identity).</li>
       <li><strong>OPM Federal Workforce Data (EHRI Status)</strong> — civilian employee counts when we can match a node. Snapshot <strong id="st-opm-asof">Jun 2026</strong>. Civilian only — not military end strength, USPS, or contractors. Legislative / most Judicial orgs often have no OPM row.</li>
-      <li><strong>U.S. Government Manual</strong> — mission and leadership when available. Live Cabinet / selected agency names may overlay Manual text when refreshed from official .gov pages.</li>
+      <li><strong>U.S. Government Manual</strong> — mission and leadership when available. Live Cabinet / selected agency names may overlay Manual text when refreshed from official .gov pages. The pane names that source (White House Cabinet, FDA, Manual) — not the day we last fetched.</li>
       <li><strong>SAM.gov</strong> — status overlays where matched.</li>
       <li><strong>Senate.gov, Clerk of the House, Federal Register</strong> — Heat events (floor schedule, next session, public inspection, presidential documents). See <strong>Heat</strong> above.</li>
       <li><strong>Treasury Fiscal Data</strong> — public debt, interest expense, and Monthly Treasury Statement receipts/outlays on the $ page (live).</li>
