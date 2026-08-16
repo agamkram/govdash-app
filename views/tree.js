@@ -1,9 +1,18 @@
 /**
  * Org tree — HTML list under the current focus.
  * Opens at the constitutional branches; expand one level at a time.
+ * (Production navigation model — heat marks layered on top.)
  */
-import * as d3 from "../vendor/d3.js";
-import { displayName, paintFill, selectionFill, hierarchySort, leafLayoutWeight } from "../shared.js";
+import * as d3 from "../vendor/d3.js?v=2463";
+import {
+  displayName,
+  paintFill,
+  selectionFill,
+  hierarchySort,
+  leafLayoutWeight,
+  nodeHasHeat,
+  nodeHasHeatDeep,
+} from "../shared.js?v=2463";
 
 export function createTreeView(container, { onSelect, onFocusChange }) {
   const el = typeof container === "string" ? document.querySelector(container) : container;
@@ -47,18 +56,24 @@ export function createTreeView(container, { onSelect, onFocusChange }) {
     const isFocus = focus && data.id === focus.data.id;
     const isSel = data.id === selectedId;
 
+    const directHeat = nodeHasHeat(data);
+    const deepHeat = !directHeat && nodeHasHeatDeep(data);
+
     const row = document.createElement("div");
     row.className =
       "org-row" +
       (isFocus ? " is-focus" : "") +
       (isSel ? " is-selected" : "") +
-      (hasKids ? " has-kids" : "");
+      (hasKids ? " has-kids" : "") +
+      (directHeat ? " has-heat" : "") +
+      (deepHeat ? " has-heat-deep" : "");
     row.style.paddingLeft = `${0.35 + depth * 0.85}rem`;
     row.dataset.id = data.id;
 
-    const swatch = document.createElement("span");
-    swatch.className = "org-swatch";
-    swatch.style.background = isSel ? selectionFill(node) : paintFill(node);
+    const rest = paintFill(node);
+    const selFill = selectionFill(node);
+    row.setAttribute("data-fill-rest", rest);
+    row.setAttribute("data-fill-sel", selFill);
 
     const toggle = document.createElement("button");
     toggle.type = "button";
@@ -73,6 +88,16 @@ export function createTreeView(container, { onSelect, onFocusChange }) {
       else expanded.add(data.id);
       paint();
     });
+
+    // Heat mark: direct heat, or heat deeper in this branch.
+    const bracket = document.createElement("span");
+    bracket.className = "org-heat-bracket";
+    bracket.setAttribute("aria-hidden", "true");
+    if (directHeat || deepHeat) bracket.style.background = rest;
+
+    const swatch = document.createElement("span");
+    swatch.className = "org-swatch";
+    swatch.style.background = isSel ? selFill : rest;
 
     const label = document.createElement("button");
     label.type = "button";
@@ -99,7 +124,7 @@ export function createTreeView(container, { onSelect, onFocusChange }) {
     meta.className = "org-meta";
     meta.textContent = hasKids ? `${node.children.length}` : "";
 
-    row.append(toggle, swatch, label, meta);
+    row.append(toggle, bracket, swatch, label, meta);
     into.append(row);
 
     if (hasKids && isOpen) {

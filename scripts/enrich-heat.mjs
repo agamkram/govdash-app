@@ -1,18 +1,49 @@
 #!/usr/bin/env node
 /**
- * Attach heat scores onto gov-tree nodes from cached signals.
- * Preserves sources.sam / sources.usgm.
+ * Attach live Heat events onto product (and full) tree nodes.
+ * Kills the old score-based heat. New shape:
+ *
+ *   node.heat = {
+ *     asOf, count, rolledUp,
+ *     events: [{ id, kind, when, title, summary, url, source, urgency }]
+ *   }
  *
  * Usage: npm run enrich:heat
  */
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const TREE_PATH = join(ROOT, "data", "nested", "gov-tree.json");
-const HEAT = join(ROOT, "data", "raw", "heat");
-const SAMPLES = join(ROOT, "data", "nested", "samples");
+const NESTED = join(ROOT, "data", "nested");
+const RAW = join(ROOT, "data", "raw", "heat", "events-raw.json");
+const FR_AGENCIES = join(
+  ROOT,
+  "data",
+  "raw",
+  "heat",
+  "federal-register-agencies.json"
+);
+
+const PRODUCT = join(NESTED, "gov-tree-product.json");
+const FULL = join(NESTED, "gov-tree.json");
+const BEYOND = join(NESTED, "gov-tree-beyond.json");
+
+/** Stable map homes for chamber / executive signals. */
+const ANCHOR = {
+  senate: "gsa-3",
+  house: "gsa-4",
+  congress: "gsa-2",
+  legislative: "gsa-1",
+  potus: "gsa-43",
+  eop: "gsa-42",
+  whiteHouse: "gsa-53",
+  executive: "gsa-41",
+  doj: "gsa-653",
+  judicial: "gsa-23",
+};
+
+const MAX_EVENTS_PER_NODE = 12;
 
 function norm(s) {
   let t = String(s || "").toUpperCase();
@@ -26,8 +57,8 @@ function norm(s) {
     .replace(/\bUNITED STATES\b/g, " ")
     .replace(/\bDEPARTMENT OF\b/g, " DEPT ")
     .replace(/\bDEPT(?:ARTMENT)? OF\b/g, " DEPT ")
-    .replace(/\bNATIONAL AERONAUTICS AND SPACE ADMINISTRATION\b/g, " NASA ")
-    .replace(/\bSOCIAL SECURITY ADMINISTRATION\b/g, " SSA ")
+    .replace(/\bADMINISTRATION\b/g, " ADMIN ")
+    .replace(/\bCOMMISSION\b/g, " COMM ")
     .replace(/\bTHE\b/g, " ")
     .replace(/[^A-Z0-9]+/g, " ")
     .replace(/\s+/g, " ")
@@ -53,251 +84,256 @@ function walk(node, out = []) {
   return out;
 }
 
-function countDescendants(node) {
-  let n = 0;
-  for (const c of node.children || []) n += 1 + countDescendants(c);
-  return n;
+function slimEvent(e) {
+  return {
+    id: e.id,
+    kind: e.kind,
+    when: e.when || null,
+    until: e.until || null,
+    filedAt: e.filedAt || null,
+    signedAt: e.signedAt || null,
+    title: e.title,
+    summary: e.summary || "",
+    url: e.url || e.pdfUrl || e.htmlUrl || null,
+    source: e.source || "",
+    sourceUrl: e.sourceUrl || null,
+    urgency: e.urgency || "upcoming",
+    bill: e.bill || null,
+  };
 }
 
-function findByName(node, name) {
-  if (node.name === name) return node;
-  for (const c of node.children || []) {
-    const hit = findByName(c, name);
-    if (hit) return hit;
+function buildAgencyIndex(nodes) {
+  /** @type {{ node:*, names:string[] }[]} */
+  const rows = [];
+  for (const n of nodes) {
+    const names = [n.name, n.short].filter(Boolean);
+    const cw = n.sources?.crosswalk;
+    if (cw?.gsaSfpName) names.push(cw.gsaSfpName);
+    const sam = n.sources?.sam;
+    if (sam?.fhorgname) names.push(sam.fhorgname);
+    if (sam?.fhagencyorgname) names.push(sam.fhagencyorgname);
+    rows.push({ node: n, names });
   }
-  return null;
+  return rows;
 }
 
-function clone(node) {
-  return JSON.parse(JSON.stringify(node));
-}
-
-function scoreNode(n) {
-  const t = n.sources?.crosswalk?.gsaSfpEntityType;
-  let s = 0;
-  if (n.kind === "department") s += 50;
-  if (t === "Agency" || t === "Ind Agency") s += 30;
-  if (n.kind === "independent") s += 25;
-  return s;
-}
-
-function logNorm(values) {
-  const logs = values.map((v) => Math.log1p(Math.max(0, v || 0)));
-  const max = Math.max(...logs, 1e-9);
-  return (v) => Math.log1p(Math.max(0, v || 0)) / max;
-}
-
-function bestSpendMatch(agency, nodes, used) {
-  const name = agency.agency_name;
-  const abbr = agency.abbreviation;
-  let cands = nodes.filter((n) => !used.has(n.id) && norm(n.name) === norm(name));
-  if (abbr) {
-    cands = cands.concat(
-      nodes.filter(
-        (n) =>
-          !used.has(n.id) &&
-          (norm(n.short || "") === norm(abbr) || norm(n.name).includes(norm(abbr)))
-      )
-    );
+function bestAgencyMatch(agencyName, index, min = 0.55) {
+  let best = null;
+  let bestScore = min;
+  const nA = norm(agencyName);
+  for (const row of index) {
+    for (const name of row.names) {
+      if (!name) continue;
+      if (norm(name) === nA) {
+        return { node: row.node, score: 1, how: "exact" };
+      }
+      const j = jaccard(agencyName, name);
+      if (j > bestScore) {
+        bestScore = j;
+        best = { node: row.node, score: j, how: `jaccard-${j.toFixed(2)}` };
+      }
+    }
   }
-  if (cands.length) {
-    cands.sort((a, b) => scoreNode(b) - scoreNode(a));
-    return { node: cands[0], how: "name" };
-  }
-  cands = nodes
-    .filter((n) => !used.has(n.id))
-    .map((n) => ({
-      n,
-      j: Math.max(
-        jaccard(name, n.name),
-        abbr ? jaccard(abbr, n.short || n.name) : 0
-      ),
-    }))
-    .filter((x) => x.j >= 0.72)
-    .sort((a, b) => b.j - a.j || scoreNode(b.n) - scoreNode(a.n));
-  if (cands.length) return { node: cands[0].n, how: `jaccard-${cands[0].j.toFixed(2)}` };
-  return null;
+  return best;
 }
 
-function combineScore({ spendingN, frN, sizeN }) {
-  // weights among available signals
-  const parts = [];
-  if (spendingN != null) parts.push([0.55, spendingN]);
-  if (frN != null) parts.push([0.3, frN]);
-  if (sizeN != null) parts.push([0.15, sizeN]);
-  if (!parts.length) return 0;
-  const wsum = parts.reduce((s, [w]) => s + w, 0);
-  return parts.reduce((s, [w, v]) => s + (w / wsum) * v, 0);
+function eventSortKey(e) {
+  const u =
+    e.urgency === "now" ? 0 : e.urgency === "upcoming" ? 1 : e.urgency === "soon" ? 2 : 3;
+  const t = Date.parse(e.when || "") || 0;
+  return u * 1e15 - t;
+}
+
+function attachDirect(byId, nodeId, event) {
+  const n = byId.get(nodeId);
+  if (!n) return false;
+  if (!n._heatEvents) n._heatEvents = [];
+  n._heatEvents.push(slimEvent(event));
+  return true;
+}
+
+function finalizeHeat(nodes, asOf) {
+  // clear all first
+  for (const n of nodes) {
+    n.heat = null;
+  }
+
+  // direct events
+  for (const n of nodes) {
+    const list = n._heatEvents || [];
+    delete n._heatEvents;
+    if (!list.length) continue;
+    list.sort((a, b) => eventSortKey(a) - eventSortKey(b));
+    const uniq = new Map();
+    for (const e of list) uniq.set(e.id, e);
+    const events = [...uniq.values()]
+      .sort((a, b) => eventSortKey(a) - eventSortKey(b))
+      .slice(0, MAX_EVENTS_PER_NODE);
+    n.heat = {
+      asOf,
+      count: events.length,
+      rolledUp: false,
+      events,
+    };
+  }
+
+  // roll up: parents light up when children have heat
+  function roll(node) {
+    let childEvents = [];
+    let childCount = 0;
+    for (const c of node.children || []) {
+      const sub = roll(c);
+      childCount += sub.count;
+      childEvents = childEvents.concat(sub.sample);
+    }
+    const own = node.heat?.events || [];
+    const ownCount = node.heat?.count || 0;
+    if (ownCount === 0 && childCount === 0) return { count: 0, sample: [] };
+
+    if (ownCount > 0) {
+      // keep own events; still note child count in count field for badge
+      node.heat.count = ownCount + childCount;
+      if (childCount > 0) node.heat.hasChildHeat = true;
+      return {
+        count: node.heat.count,
+        sample: own.slice(0, 4),
+      };
+    }
+
+    // rolled-up only
+    childEvents.sort((a, b) => eventSortKey(a) - eventSortKey(b));
+    const sample = [];
+    const seen = new Set();
+    for (const e of childEvents) {
+      if (seen.has(e.id)) continue;
+      seen.add(e.id);
+      sample.push(e);
+      if (sample.length >= 6) break;
+    }
+    node.heat = {
+      asOf,
+      count: childCount,
+      rolledUp: true,
+      events: sample.map((e) => ({
+        ...e,
+        summary: e.summary
+          ? `${e.summary} (from lower in the map)`
+          : "Activity lower in this branch",
+      })),
+    };
+    return { count: childCount, sample };
+  }
+
+  // find root(s)
+  const roots = nodes.filter((n) => !n.parentId || n.id === "usa" || n.kind === "sovereign");
+  const treeRoot =
+    nodes.find((n) => n.id === "usa") ||
+    roots[0] ||
+    nodes[0];
+  if (treeRoot) roll(treeRoot);
+}
+
+async function loadJson(path) {
+  return JSON.parse(await readFile(path, "utf8"));
+}
+
+async function enrichTreeFile(path, raw, agencyIndexExtra) {
+  let data;
+  try {
+    data = await loadJson(path);
+  } catch {
+    console.warn(`skip missing ${path}`);
+    return null;
+  }
+  const tree = data.tree || data;
+  const nodes = walk(tree);
+  const byId = new Map(nodes.map((n) => [n.id, n]));
+  const index = buildAgencyIndex(nodes);
+
+  let matchedPi = 0;
+  let unmatchedPi = 0;
+  let chamber = 0;
+  let presidential = 0;
+
+  for (const e of raw.events || []) {
+    if (e.kind === "floor_session" || e.kind === "house_schedule") {
+      const id =
+        e.chamber === "Senate"
+          ? ANCHOR.senate
+          : e.chamber === "House"
+            ? ANCHOR.house
+            : ANCHOR.congress;
+      if (attachDirect(byId, id, e)) chamber++;
+      continue;
+    }
+    if (e.kind === "presidential_doc") {
+      if (attachDirect(byId, ANCHOR.potus, e)) presidential++;
+      // also light EOP lightly via roll-up from potus
+      continue;
+    }
+    if (e.kind === "public_inspection") {
+      const agencies = e.agencies || [];
+      let any = false;
+      for (const name of agencies) {
+        const m = bestAgencyMatch(name, index, 0.52);
+        if (m && attachDirect(byId, m.node.id, { ...e, matchHow: m.how })) {
+          any = true;
+        }
+      }
+      if (any) matchedPi++;
+      else unmatchedPi++;
+      continue;
+    }
+  }
+
+  const asOf = raw.fetchedAt || new Date().toISOString();
+  finalizeHeat(nodes, asOf);
+
+  const withHeat = nodes.filter((n) => n.heat && n.heat.count > 0).length;
+  const direct = nodes.filter((n) => n.heat && !n.heat.rolledUp).length;
+
+  data.meta = data.meta || {};
+  // incinerate old score meta
+  data.meta.heat = {
+    kind: "events",
+    enrichedAt: new Date().toISOString(),
+    asOf,
+    nodesWithHeat: withHeat,
+    nodesWithDirectHeat: direct,
+    rawEventCount: (raw.events || []).length,
+    matched: { chamber, presidential, publicInspection: matchedPi },
+    unmatchedPublicInspection: unmatchedPi,
+    sources: raw.sources || {},
+    note: "Heat = dated official events. Pulse on the map when Heat is on. Old score formula removed.",
+  };
+
+  await writeFile(path, JSON.stringify(data, null, 2));
+  console.log(
+    `${path.split("/").pop()}: ${withHeat} nodes with heat (${direct} direct), PI matched ${matchedPi}, unmatched ${unmatchedPi}`
+  );
+  return data.meta.heat;
 }
 
 async function main() {
-  const data = JSON.parse(await readFile(TREE_PATH, "utf8"));
-  const spend = JSON.parse(
-    await readFile(join(HEAT, "usaspending-toptier.json"), "utf8")
-  );
-  let frCounts = { results: [] };
+  let raw;
   try {
-    frCounts = JSON.parse(
-      await readFile(join(HEAT, "federal-register-counts.json"), "utf8")
-    );
+    raw = await loadJson(RAW);
   } catch {
-    /* optional until fetch:heat completes FR */
+    console.error("Missing data/raw/heat/events-raw.json — run npm run fetch:heat-events");
+    process.exit(1);
   }
 
-  const nodes = walk(data.tree);
-  const byId = new Map(nodes.map((n) => [n.id, n]));
+  // product tree is what the map loads
+  await enrichTreeFile(PRODUCT, raw);
+  // keep full tree consistent if present
+  await enrichTreeFile(FULL, raw);
+  // beyond map (chartered/igo) — only PI matches if any
+  await enrichTreeFile(BEYOND, raw);
 
-  // clear heat
-  for (const n of nodes) n.heat = null;
-
-  // size for all
-  for (const n of nodes) {
-    n._desc = countDescendants(n);
-  }
-  const sizeNorm = logNorm(nodes.map((n) => n._desc));
-
-  // spending matches
-  const used = new Set();
-  const spendMatches = [];
-  const obligated = (spend.results || []).map((a) => a.obligated_amount || 0);
-  const spendNorm = logNorm(obligated);
-
-  for (const agency of spend.results || []) {
-    const m = bestSpendMatch(agency, nodes, used);
-    if (!m) continue;
-    used.add(m.node.id);
-    spendMatches.push({
-      node: m.node,
-      agency,
-      how: m.how,
-      spendingN: spendNorm(agency.obligated_amount || 0),
-    });
-  }
-
-  // FR counts (already node-linked in cache)
-  const frByNode = new Map();
-  const frNorm = logNorm((frCounts.results || []).map((r) => r.documentCount || 0));
-  for (const r of frCounts.results || []) {
-    if (r.documentCount == null) continue;
-    frByNode.set(r.nodeId, {
-      ...r,
-      frN: frNorm(r.documentCount),
-    });
-  }
-
-  // assign direct heat
-  const direct = new Map();
-  for (const n of nodes) {
-    const sm = spendMatches.find((s) => s.node.id === n.id);
-    const fr = frByNode.get(n.id);
-    const spendingN = sm ? sm.spendingN : null;
-    const frN = fr ? fr.frN : null;
-    const sizeN = sizeNorm(n._desc);
-    const hasActivity = spendingN != null || frN != null;
-    if (!hasActivity && n._desc === 0) {
-      n.heat = null;
-      continue;
-    }
-    const score = combineScore({ spendingN, frN, sizeN: hasActivity ? sizeN : sizeN * 0.5 });
-    const heat = {
-      score: Number(score.toFixed(4)),
-      period: {
-        spending: spend.fetchedAt || null,
-        federalRegister: frCounts.since || null,
-      },
-      signals: {
-        obligatedAmount: sm ? sm.agency.obligated_amount : null,
-        outlayAmount: sm ? sm.agency.outlay_amount : null,
-        spendingAgency: sm ? sm.agency.agency_name : null,
-        federalRegisterDocs: fr ? fr.documentCount : null,
-        federalRegisterAgency: fr ? fr.frName : null,
-        descendantCount: n._desc,
-      },
-      rolledUp: false,
-    };
-    n.heat = heat;
-    if (hasActivity) direct.set(n.id, heat.score);
-  }
-
-  // roll up max heat to ancestors (so branches show activity)
-  function roll(node) {
-    let childMax = 0;
-    for (const c of node.children || []) {
-      childMax = Math.max(childMax, roll(c));
-    }
-    const own = node.heat?.score || 0;
-    const rolled = Math.max(own, childMax * 0.92);
-    if (rolled > 0) {
-      if (!node.heat) {
-        node.heat = {
-          score: Number(rolled.toFixed(4)),
-          period: { spending: spend.fetchedAt || null, federalRegister: frCounts.since || null },
-          signals: {
-            obligatedAmount: null,
-            outlayAmount: null,
-            spendingAgency: null,
-            federalRegisterDocs: null,
-            federalRegisterAgency: null,
-            descendantCount: node._desc,
-          },
-          rolledUp: true,
-        };
-      } else if (rolled > own + 1e-6) {
-        node.heat.score = Number(rolled.toFixed(4));
-        node.heat.rolledUp = own < rolled;
-      }
-    }
-    return node.heat?.score || 0;
-  }
-  roll(data.tree);
-
-  // cleanup temp
-  for (const n of nodes) delete n._desc;
-
-  const withHeat = nodes.filter((n) => n.heat && n.heat.score > 0).length;
-  data.meta.heat = {
-    enrichedAt: new Date().toISOString(),
-    spendingMatched: spendMatches.length,
-    federalRegisterMatched: frByNode.size,
-    nodesWithHeat: withHeat,
-    formula:
-      "0.55·logNorm(USAspending obligated) + 0.30·logNorm(FR docs since period) + 0.15·logNorm(descendants); parent roll-up = max(own, 0.92·max child)",
-    sources: {
-      usaspending: "data/raw/heat/usaspending-toptier.json",
-      federalRegister: "data/raw/heat/federal-register-counts.json",
-    },
-  };
-
-  await writeFile(TREE_PATH, JSON.stringify(data, null, 2));
-  await mkdir(SAMPLES, { recursive: true });
-  for (const [sample, name] of [
-    ["legislative", "Federal Legislative Branch"],
-    ["defense", "US Department of Defense (DOD)"],
-  ]) {
-    const node = findByName(data.tree, name);
-    if (!node) continue;
-    await writeFile(
-      join(SAMPLES, `${sample}.json`),
-      JSON.stringify({ meta: { ...data.meta, sample: name }, tree: clone(node) }, null, 2)
-    );
-  }
-
-  const top = nodes
-    .filter((n) => n.heat && !n.heat.rolledUp)
-    .sort((a, b) => b.heat.score - a.heat.score)
-    .slice(0, 8);
-  console.log(`Spending matched: ${spendMatches.length}`);
-  console.log(`FR matched:       ${frByNode.size}`);
-  console.log(`Nodes with heat:  ${withHeat}`);
-  console.log("Top direct heat:");
-  for (const n of top) {
-    console.log(
-      `  ${n.heat.score.toFixed(3)}  ${n.name.slice(0, 50)}  $=${n.heat.signals.obligatedAmount ?? "—"}  FR=${n.heat.signals.federalRegisterDocs ?? "—"}`
-    );
-  }
+  console.log("Old score-based heat replaced with event heat.");
 }
 
-main().catch((err) => {
-  console.error(err);
+main().catch((e) => {
+  console.error(e);
   process.exit(1);
 });

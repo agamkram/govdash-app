@@ -89,8 +89,21 @@ export function enrichmentContext(node, byId) {
     missionNote = `From parent agency (${parentName}) — this office has no separate Manual entry`;
   }
 
-  // Never bleed leadership — wrong people on the wrong org.
-  const leadership = ownUsgm?.leadership?.length ? ownUsgm.leadership : null;
+  // Live overlay (refreshed .gov pages) beats the annual Manual.
+  // Never bleed leadership from a parent — wrong people on the wrong org.
+  const liveLeaders = node?.sources?.leadership?.people?.length
+    ? node.sources.leadership.people
+    : null;
+  const leadership = liveLeaders || (ownUsgm?.leadership?.length ? ownUsgm.leadership : null);
+  const leadershipMeta =
+    node?.sources?.leadership ||
+    (ownUsgm?.leadership?.length
+      ? {
+          asOf: ownUsgm.edition || null,
+          sourceName: "U.S. Government Manual (may be out of date)",
+          sourceUrl: ownUsgm.govinfoUrl || null,
+        }
+      : null);
 
   let web = null;
   let webDetail = null;
@@ -119,6 +132,7 @@ export function enrichmentContext(node, byId) {
     mission,
     missionNote,
     leadership,
+    leadershipMeta,
     web,
     webDetail,
     phone,

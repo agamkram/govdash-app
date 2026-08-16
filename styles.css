@@ -1303,8 +1303,24 @@ html[data-theme="dark"] .scrub-coach-dismiss {
   display: flex;
   align-items: center;
   gap: 0.35rem;
-  min-height: 2rem;
+  min-height: 2.35rem;
   border-radius: 2px;
+}
+
+/* Heat mark before the row — direct heat or heat deeper in the branch */
+.org-heat-bracket {
+  width: 3px;
+  min-height: 1.15rem;
+  align-self: stretch;
+  flex: 0 0 auto;
+  border-radius: 1px;
+  background: transparent;
+  opacity: 0;
+}
+
+html.heat-on .org-row.has-heat > .org-heat-bracket,
+html.heat-on .org-row.has-heat-deep > .org-heat-bracket {
+  opacity: 1;
 }
 
 .org-row.is-selected > .org-label {
@@ -1317,14 +1333,26 @@ html[data-theme="dark"] .scrub-coach-dismiss {
 }
 
 .org-toggle {
-  width: 1.4rem;
+  width: 3rem;
+  min-width: 3rem;
+  min-height: 3rem;
   border: 0;
   background: transparent;
   color: var(--muted);
   font: inherit;
-  font-size: 0.85rem;
+  font-size: 1.25rem;
+  line-height: 1;
   cursor: pointer;
   padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.org-toggle:not(:disabled):active {
+  color: var(--ink);
 }
 
 .org-toggle:disabled {
@@ -1555,12 +1583,14 @@ html[data-theme="dark"] .detail-spending {
 }
 
 .detail-mission,
-.detail-leaders {
+.detail-leaders,
+.detail-heat {
   margin: 0.65rem 0 0.85rem;
 }
 
 .detail-mission h3,
 .detail-leaders h3,
+.detail-heat h3,
 .detail-engage h3 {
   margin: 0 0 0.35rem;
   font-size: 0.68rem;
@@ -1570,6 +1600,83 @@ html[data-theme="dark"] .detail-spending {
   color: var(--muted);
   font-weight: 500;
 }
+
+.detail-heat h3 {
+  color: #c4891a;
+}
+
+html[data-theme="dark"] .detail-heat h3 {
+  color: #e8a838;
+}
+
+.heat-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.heat-list li {
+  margin: 0 0 0.55rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.heat-list li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.heat-kind {
+  display: block;
+  font-size: 0.65rem;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #c4891a;
+  margin-bottom: 0.12rem;
+}
+
+html[data-theme="dark"] .heat-kind {
+  color: #e8a838;
+}
+
+.heat-title {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  line-height: 1.35;
+}
+
+a.heat-title:hover {
+  text-decoration: underline;
+  color: var(--accent);
+}
+
+.heat-summary {
+  margin: 0.2rem 0 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.heat-source {
+  margin: 0.15rem 0 0;
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+.heat-roll-note {
+  margin: 0 0 0.45rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Heat = cell fill lerps rest → selected. Tree keeps a quiet mark. */
 
 .detail-mission p {
   margin: 0 0 0.5rem;
@@ -1582,6 +1689,12 @@ html[data-theme="dark"] .detail-spending {
   color: var(--muted);
   font-style: italic;
   margin-bottom: 0.55rem;
+}
+
+.leaders-asof {
+  margin: 0 0 0.4rem;
+  font-size: 0.72rem;
+  color: var(--muted);
 }
 
 .detail-leaders ul {
@@ -1772,6 +1885,12 @@ a.engage-label:hover {
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
+  }
+
+  /* Find box: half width on phone only (desktop/iPad keep their rules). */
+  .search-wrap {
+    width: 50%;
+    max-width: 50%;
   }
 
   .chrome {

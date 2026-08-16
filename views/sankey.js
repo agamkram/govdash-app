@@ -2,8 +2,8 @@
  * Constitution Sankey view — same chrome hooks as Icicle/Tree/Circles.
  * Orientations: side (L→R) · top (T→B). Click node or line → detail.
  */
-import * as d3 from "../vendor/d3.js";
-import { sankey as d3Sankey, sankeyLeft } from "../vendor/d3-sankey.js";
+import * as d3 from "../vendor/d3.js?v=2463";
+import { sankey as d3Sankey, sankeyLeft } from "../vendor/d3-sankey.js?v=2463";
 import {
   hierarchySort,
   BRANCH_COLOR,
@@ -15,7 +15,13 @@ import {
   brightenHex,
   noteScrubSuccess,
   leafLayoutWeight,
-} from "../shared.js";
+  nodeHasHeat,
+  heatPulsePhase,
+  heatPulseFill,
+  heatSizeBoost,
+  heatPulseT,
+  heatPulseScale,
+} from "../shared.js?v=2463";
 
 const CONST_ID = "constitution";
 
@@ -210,6 +216,11 @@ export function createSankeyView(
   let orient = orientation === "top" ? "top" : "side";
   let cssSize = { w: 0, h: 0, dpr: 1 };
   let layoutNodes = [];
+  let alive = true;
+  let heatAlpha = 1;
+  let lastHeatPaintAt = 0;
+  /** Local backup timer so Sankey still pulses if the shared sink is missed (iOS cache). */
+  let heatLocalTimer = 0;
   let stage1Meta = [];
   let constGeom = null;
   let linkPaths = [];
@@ -218,7 +229,7 @@ export function createSankeyView(
   const pointers = new Map();
   let pinch = null;
   const CAM_MIN = 1;
-  const CAM_MAX = 12;
+  const CAM_MAX = 28;
   const isIPad =
     /iPad/i.test(navigator.userAgent || "") ||
     (navigator.platform === "MacIntel" && (navigator.maxTouchPoints || 0) > 1);
@@ -356,8 +367,42 @@ export function createSankeyView(
     return h?.data || null;
   }
 
+  function heatIsOn() {
+    return (
+      alive &&
+      typeof document !== "undefined" &&
+      document.documentElement.classList.contains("heat-on")
+    );
+  }
+
+  /** Shared Heat driver — throttle canvas repaints. */
+  function onHeatPulse(t, now) {
+    if (!alive || !graphRef || !heatIsOn()) return;
+    heatAlpha = typeof t === "number" ? t : heatPulsePhase(now);
+    if (now - lastHeatPaintAt < 50) return;
+    lastHeatPaintAt = now;
+    paint();
+  }
+
+  function startLocalHeatPulse() {
+    if (heatLocalTimer) return;
+    heatLocalTimer = setInterval(() => {
+      if (!alive || !graphRef) return;
+      if (!heatIsOn()) return;
+      const now = performance.now();
+      onHeatPulse(heatPulsePhase(now), now);
+    }, 66);
+  }
+
+  function stopLocalHeatPulse() {
+    if (heatLocalTimer) {
+      clearInterval(heatLocalTimer);
+      heatLocalTimer = 0;
+    }
+  }
+
   function paint() {
-    if (!graphRef) return;
+    if (!graphRef || !alive) return;
     const width = cssSize.w;
     const height = cssSize.h;
     const dpr = cssSize.dpr;
@@ -718,16 +763,33 @@ export function createSankeyView(
       if (doorIds.has(n.id)) continue;
       (isHotId(n.id) ? hotNodes : restNodes).push(n);
     }
+    const heatOn = heatIsOn();
+    if (heatOn && heatAlpha == null) heatAlpha = heatPulsePhase();
+
     const paintNode = (n, isSel) => {
       const x = (n.x0 + n.x1) / 2;
       const y = (n.y0 + n.y1) / 2;
       const col = colorFor(n.branch);
       // Screen-constant radius so dense bands don’t blob together; still readable when zoomed.
-      const r = lw(isSel ? 2.2 : 0.7);
+      const r0 = lw(isSel ? 2.2 : 0.7);
+      const hot = heatOn && nodeHasHeat(byId.get(n.id));
+      // Sankey dots are always tiny — pulse diameter up to 2× base (circle, not ellipse).
+      const boost = hot && !isSel ? heatSizeBoost(r0 * 2 * cam.k) : 0;
+      const tt = hot && !isSel ? heatPulseT(heatAlpha, boost) : heatAlpha;
+      const s =
+        hot && !isSel
+          ? 1 + 2 * (heatPulseScale(tt, Math.max(boost, 0.55)) - 1)
+          : 1;
+      const r = r0 * Math.max(s, 1);
+      const fill = isSel
+        ? brightenHex(col)
+        : hot
+          ? heatPulseFill(col, brightenHex(col), tt)
+          : col;
       if (isSel) {
         ctx.beginPath();
         ctx.arc(x, y, r, 0, Math.PI * 2);
-        ctx.fillStyle = brightenHex(col);
+        ctx.fillStyle = fill;
         ctx.fill();
         ctx.strokeStyle = INK;
         ctx.lineWidth = lw(1.1);
@@ -736,7 +798,7 @@ export function createSankeyView(
       }
       ctx.beginPath();
       ctx.arc(x, y, r, 0, Math.PI * 2);
-      ctx.fillStyle = col;
+      ctx.fillStyle = fill;
       ctx.fill();
     };
     for (const n of restNodes) paintNode(n, false);
@@ -1207,6 +1269,7 @@ export function createSankeyView(
     pointers.clear();
     measure();
     paint();
+    startLocalHeatPulse();
     onFocusChange?.(focus);
   }
 
@@ -1285,6 +1348,10 @@ export function createSankeyView(
   }
 
   function destroy() {
+    alive = false;
+    stopLocalHeatPulse();
+    clearTimeout(roTimer);
+    roTimer = 0;
     clearLongTimer();
     hideTip();
     el.classList.remove("is-scrubbing");
@@ -1300,6 +1367,9 @@ export function createSankeyView(
     pointers.clear();
     pinch = null;
     ro.disconnect();
+    graphRef = null;
+    layoutNodes = [];
+    linkPaths = [];
     el.replaceChildren();
     delete el.dataset.orient;
   }
@@ -1337,5 +1407,6 @@ export function createSankeyView(
     resize,
     destroy,
     getFocus: () => focus,
+    onHeatPulse,
   };
 }

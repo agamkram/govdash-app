@@ -38,6 +38,49 @@
       "rollup": 2,
       "enrichedAt": "2026-08-14T21:38:55.021Z",
       "note": "Toptier on Cabinet / independent. Subtier on descendants when the name matches. Honest blanks otherwise. Parents keep their own toptier total."
+    },
+    "heat": {
+      "kind": "events",
+      "enrichedAt": "2026-08-16T00:45:12.205Z",
+      "asOf": "2026-08-16T00:45:03.247Z",
+      "nodesWithHeat": 0,
+      "nodesWithDirectHeat": 0,
+      "rawEventCount": 103,
+      "matched": {
+        "chamber": 0,
+        "presidential": 0,
+        "publicInspection": 0
+      },
+      "unmatchedPublicInspection": 88,
+      "sources": {
+        "senateFloor": {
+          "ok": true,
+          "count": 1,
+          "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
+        },
+        "houseClerk": {
+          "ok": true,
+          "count": 1,
+          "url": "https://clerk.house.gov/"
+        },
+        "majorityLeader": {
+          "ok": true,
+          "count": 0,
+          "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm"
+        },
+        "publicInspection": {
+          "ok": true,
+          "count": 88,
+          "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
+        },
+        "presidential": {
+          "ok": true,
+          "count": 13,
+          "since": "2026-08-02",
+          "url": "https://www.federalregister.gov/presidential-documents"
+        }
+      },
+      "note": "Heat = dated official events. Pulse on the map when Heat is on. Old score formula removed."
     }
   },
   "tree": {
@@ -234,22 +277,7 @@
               },
               "usgm": null
             },
-            "heat": {
-              "score": 0.2614,
-              "period": {
-                "spending": "2026-08-10T04:49:07.619Z",
-                "federalRegister": "2025-01-01"
-              },
-              "signals": {
-                "obligatedAmount": 736067.78,
-                "outlayAmount": 1579642.34,
-                "spendingAgency": "Barry Goldwater Scholarship and Excellence In Education Foundation",
-                "federalRegisterDocs": 0,
-                "federalRegisterAgency": "Barry M. Goldwater Scholarship and Excellence in Education Foundation",
-                "descendantCount": 0
-              },
-              "rolledUp": false
-            },
+            "heat": null,
             "children": [],
             "workforce": {
               "count": 2,
@@ -733,22 +761,7 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": {
-              "score": 0,
-              "period": {
-                "spending": "2026-08-10T04:49:07.619Z",
-                "federalRegister": "2025-01-01"
-              },
-              "signals": {
-                "obligatedAmount": 0,
-                "outlayAmount": 0,
-                "spendingAgency": "John F. Kennedy Center for the Performing Arts",
-                "federalRegisterDocs": null,
-                "federalRegisterAgency": null,
-                "descendantCount": 0
-              },
-              "rolledUp": false
-            },
+            "heat": null,
             "children": [],
             "spending": {
               "obligatedAmount": 0,
@@ -921,22 +934,7 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": {
-              "score": 0.2955,
-              "period": {
-                "spending": "2026-08-10T04:49:07.619Z",
-                "federalRegister": "2025-01-01"
-              },
-              "signals": {
-                "obligatedAmount": null,
-                "outlayAmount": null,
-                "spendingAgency": null,
-                "federalRegisterDocs": 39,
-                "federalRegisterAgency": "Legal Services Corporation",
-                "descendantCount": 0
-              },
-              "rolledUp": false
-            },
+            "heat": null,
             "children": []
           },
           {
@@ -1487,22 +1485,7 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": {
-              "score": 0.4359,
-              "period": {
-                "spending": "2026-08-10T04:49:07.619Z",
-                "federalRegister": "2025-01-01"
-              },
-              "signals": {
-                "obligatedAmount": 7067400.26,
-                "outlayAmount": 6131581.42,
-                "spendingAgency": "African Development Foundation",
-                "federalRegisterDocs": null,
-                "federalRegisterAgency": null,
-                "descendantCount": 0
-              },
-              "rolledUp": false
-            },
+            "heat": null,
             "children": [],
             "workforce": {
               "count": 21,
@@ -1711,22 +1694,7 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": {
-              "score": 0.5328,
-              "period": {
-                "spending": "2026-08-10T04:49:07.619Z",
-                "federalRegister": "2025-01-01"
-              },
-              "signals": {
-                "obligatedAmount": 988415591.27,
-                "outlayAmount": 924074869.61,
-                "spendingAgency": "Corporation for National and Community Service",
-                "federalRegisterDocs": 38,
-                "federalRegisterAgency": "Corporation for National and Community Service",
-                "descendantCount": 0
-              },
-              "rolledUp": false
-            },
+            "heat": null,
             "children": [],
             "workforce": {
               "count": 376,
@@ -3446,22 +3414,7 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": {
-              "score": 0.5766,
-              "period": {
-                "spending": "2026-08-10T04:49:07.619Z",
-                "federalRegister": "2025-01-01"
-              },
-              "signals": {
-                "obligatedAmount": 1148497461.41,
-                "outlayAmount": 1215233427.27,
-                "spendingAgency": "U.S. International Development Finance Corporation",
-                "federalRegisterDocs": null,
-                "federalRegisterAgency": null,
-                "descendantCount": 0
-              },
-              "rolledUp": false
-            },
+            "heat": null,
             "children": []
           },
           {
@@ -5508,22 +5461,7 @@
               },
               "usgm": null
             },
-            "heat": {
-              "score": 0.0555,
-              "period": {
-                "spending": "2026-08-10T04:49:07.619Z",
-                "federalRegister": "2025-01-01"
-              },
-              "signals": {
-                "obligatedAmount": null,
-                "outlayAmount": null,
-                "spendingAgency": null,
-                "federalRegisterDocs": 1,
-                "federalRegisterAgency": "International Boundary and Water Commission, United States and Mexico",
-                "descendantCount": 0
-              },
-              "rolledUp": false
-            },
+            "heat": null,
             "children": []
           },
           {

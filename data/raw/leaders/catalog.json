@@ -1,0 +1,19 @@
+{
+  "note": "Official .gov leadership pages we re-fetch. Manual names are fallback only. overrides.json always wins.",
+  "nodes": [
+    {
+      "id": "gsa-551",
+      "short": "FDA",
+      "url": "https://www.fda.gov/about-fda/fda-organization/fda-leadership-profiles",
+      "parser": "fda-cards",
+      "sourceName": "FDA leadership profiles"
+    },
+    {
+      "id": "gsa-985",
+      "short": "GSA",
+      "url": "https://www.gsa.gov/about-gsa/organization/leadership-directory",
+      "parser": "gsa-directory",
+      "sourceName": "GSA leadership directory"
+    }
+  ]
+}

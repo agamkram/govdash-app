@@ -1,9 +1,10 @@
 /** Zoomable icicle — side / top orientation, depth 1–11 from focus. */
-import * as d3 from "../vendor/d3.js";
+import * as d3 from "../vendor/d3.js?v=2463";
 import {
   displayName,
   cellFill,
   paintFill,
+  selectionFill,
   sliceTree,
   hierarchySort,
   BRANCH_ORDER,
@@ -16,14 +17,15 @@ import {
   atlasRail,
   placeMapTip,
   noteScrubSuccess,
-} from "../shared.js";
+  nodeHasHeat,
+} from "../shared.js?v=2463";
 
-const CONST_W = 20;
-const FOCUS_W = 20;
-const CONST_H = 22;
-const FOCUS_H = 22;
-const BLACK_W = 2.5;
-const BLACK_H = 2.5;
+const CONST_W = 28;
+const FOCUS_W = 28;
+const CONST_H = 32;
+const FOCUS_H = 32;
+const BLACK_W = 3;
+const BLACK_H = 3;
 const RAIL_GAP = 0;
 const ICICLE_MAX_LEVELS = 11;
 
@@ -101,7 +103,12 @@ export function createIcicleView(
       "transform",
       `translate(${cam.x},${cam.y}) scale(${cam.k})`
     );
+    // Only base cells — heat ring uses non-scaling CSS stroke (works on iOS).
     g.selectAll("rect.icicle-rect").attr("stroke-width", cellStrokeW() / cam.k);
+    // Screen size for heat boost (small cells pulse bigger when zoomed out).
+    const mapRoot = typeof el === "object" && el?.closest ? el.closest(".map") || el : null;
+    const host = mapRoot || document.getElementById("map");
+    if (host?.dataset) host.dataset.heatCamK = String(cam.k);
   }
 
   function resetCam() {
@@ -181,10 +188,34 @@ export function createIcicleView(
     return scrubId || armedId || hoverId || selectedId;
   }
 
+  function stampHeatFills(sel) {
+    const hid = highlightId();
+    // Never rewrite data-w-base / data-h-base here — those are layout sizes from
+    // paint(). Reading width after a heat pulse corrupts the base and the pulse
+    // drifts to one side.
+    sel
+      .attr("data-fill-rest", (d) => paintFill(d))
+      .attr("data-fill-sel", (d) => selectionFill(d))
+      .attr("data-heat-hold", (d) => (d.data.id === hid ? "1" : null))
+      .attr("fill", function (d) {
+        if (d.data.id === hid) return selectionFill(d);
+        // Leave heat cells to the pulse timer so we don’t stomp their fill mid-frame.
+        if (
+          typeof document !== "undefined" &&
+          document.documentElement.classList.contains("heat-on") &&
+          nodeHasHeat(d)
+        ) {
+          return this.getAttribute("fill") || paintFill(d);
+        }
+        return paintFill(d);
+      });
+  }
+
   function paintArmedStroke() {
     const hid = highlightId();
-    g.selectAll("rect.icicle-rect")
-      .attr("fill", (d) => cellFill(d, d.data.id === hid))
+    const rects = g.selectAll("rect.icicle-rect");
+    stampHeatFills(rects);
+    rects
       .attr("stroke", cellStroke())
       .attr("stroke-width", cellStrokeW() / cam.k);
   }
@@ -511,14 +542,14 @@ export function createIcicleView(
 
   function railStripeWidth(count) {
     if (count <= 3) return FOCUS_W;
-    if (count <= 6) return 16;
-    return 14;
+    if (count <= 6) return 22;
+    return 20;
   }
 
   function railStripeHeight(count) {
     if (count <= 3) return FOCUS_H;
-    if (count <= 6) return 18;
-    return 16;
+    if (count <= 6) return 26;
+    return 24;
   }
 
   function contentLeft() {
@@ -883,6 +914,7 @@ export function createIcicleView(
         const e = enter
           .append("g")
           .attr("class", "icicle-cell")
+          .attr("data-id", (d) => d.data.id)
           .style("cursor", "pointer")
           .style("-webkit-tap-highlight-color", "transparent");
         e.append("rect").attr("class", "icicle-rect");
@@ -913,6 +945,12 @@ export function createIcicleView(
         });
         return e;
       });
+
+    cell
+      .classed("has-heat", (d) => nodeHasHeat(d))
+      .attr("data-id", (d) => d.data.id);
+    // Pulse geometry is drawn on g.icicle-heat-pulse (above all cells) so
+    // neighbor paint order can’t hide the right/bottom half of the grow.
 
     layoutCells = [];
     for (const d of visible) {
@@ -1167,11 +1205,20 @@ export function createIcicleView(
     }
 
     if (isTop()) {
-      cell.attr("transform", (d) => `translate(${d.x0},${d.y0})`);
       cell
-        .select("rect")
+        .attr("data-tx", (d) => d.x0)
+        .attr("data-ty", (d) => d.y0)
+        .attr("transform", (d) => `translate(${d.x0},${d.y0})`);
+      cell
+        .select("rect.icicle-rect")
+        .attr("x", 0)
+        .attr("y", 0)
         .attr("width", (d) => Math.max(0, d.x1 - d.x0))
-        .attr("height", (d) => Math.max(0, d.y1 - d.y0));
+        .attr("height", (d) => Math.max(0, d.y1 - d.y0))
+        .attr("data-w-base", (d) => Math.max(0, d.x1 - d.x0))
+        .attr("data-h-base", (d) => Math.max(0, d.y1 - d.y0))
+        // Top view: sibling axis is horizontal → widen X.
+        .attr("data-grow", "x");
       cell
         .select("text")
         .style("pointer-events", "none")
@@ -1182,11 +1229,20 @@ export function createIcicleView(
         .attr("y", (d) => Math.max(0, d.y1 - d.y0) / 2);
       paintCellLabel(cell.select("text"));
     } else {
-      cell.attr("transform", (d) => `translate(${d.y0},${d.x0})`);
       cell
-        .select("rect")
+        .attr("data-tx", (d) => d.y0)
+        .attr("data-ty", (d) => d.x0)
+        .attr("transform", (d) => `translate(${d.y0},${d.x0})`);
+      cell
+        .select("rect.icicle-rect")
+        .attr("x", 0)
+        .attr("y", 0)
         .attr("width", (d) => Math.max(0, d.y1 - d.y0))
-        .attr("height", (d) => Math.max(0, d.x1 - d.x0));
+        .attr("height", (d) => Math.max(0, d.x1 - d.x0))
+        .attr("data-w-base", (d) => Math.max(0, d.y1 - d.y0))
+        .attr("data-h-base", (d) => Math.max(0, d.x1 - d.x0))
+        // Side view: sibling axis is vertical → widen Y (not depth length).
+        .attr("data-grow", "y");
       cell
         .select("text")
         .style("pointer-events", "none")
@@ -1206,10 +1262,9 @@ export function createIcicleView(
       paintCellLabel(cell.select("text"));
     }
 
+    stampHeatFills(cell.select("rect.icicle-rect"));
     cell
-      .select("rect")
-      .attr("fill", (d) => cellFill(d, d.data.id === highlightId()))
-      .attr("fill-opacity", 1)
+      .select("rect.icicle-rect")
       .attr("stroke", cellStroke())
       .attr("stroke-width", cellStrokeW() / cam.k);
   }
@@ -1258,6 +1313,18 @@ export function createIcicleView(
 
   function setSelected(id) {
     selectedId = id || null;
+    // Match Sankey UX: clearing selection returns to the whole map
+    // (icicle otherwise stays drilled into the current focus subtree).
+    if (!id && fullRoot && focus && focus !== fullRoot) {
+      focus = fullRoot;
+      armedId = null;
+      hoverId = null;
+      scrubId = null;
+      resetCam();
+      onFocusChange?.(focus);
+      paint();
+      return;
+    }
     styleSelected();
   }
 
@@ -1316,6 +1383,10 @@ export function createIcicleView(
 
 
   function destroy() {
+    if (nestPaintRaf) {
+      cancelAnimationFrame(nestPaintRaf);
+      nestPaintRaf = 0;
+    }
     clearLongTimer();
     hideTip();
     el.classList.remove("is-scrubbing");

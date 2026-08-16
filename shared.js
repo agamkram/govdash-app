@@ -480,6 +480,32 @@ export function cellFill(nodeOrData, selected) {
   return selected ? selectionFill(nodeOrData) : paintFill(nodeOrData);
 }
 
+/** Pulse only when this node has its own events — not a parent echo. */
+export function nodeHasHeat(nodeOrData) {
+  const d = nodeOrData?.data ?? nodeOrData;
+  const h = d?.heat;
+  if (!h || h.rolledUp) return false;
+  if (typeof h.count === "number" && h.count > 0) return true;
+  return Array.isArray(h.events) && h.events.length > 0;
+}
+
+/** Heat here or below (rolled-up). Used for tree branch marks. */
+export function nodeHasHeatDeep(nodeOrData) {
+  const d = nodeOrData?.data ?? nodeOrData;
+  const h = d?.heat;
+  if (!h) return false;
+  if (typeof h.count === "number" && h.count > 0) return true;
+  return Array.isArray(h.events) && h.events.length > 0;
+}
+
+export function heatEventCount(nodeOrData) {
+  const d = nodeOrData?.data ?? nodeOrData;
+  const h = d?.heat;
+  if (!h) return 0;
+  if (typeof h.count === "number") return h.count;
+  return Array.isArray(h.events) ? h.events.length : 0;
+}
+
 function mixHex(a, b, t) {
   const pa = hexRgb(a);
   const pb = hexRgb(b);
@@ -530,4 +556,322 @@ export function sliceTree(node, depthLeft) {
     layoutWeight: node.layoutWeight,
     children: kids,
   };
+}
+
+export const HEAT_KIND_LABEL = {
+  floor_session: "Floor",
+  house_schedule: "House schedule",
+  public_inspection: "Public inspection",
+  presidential_doc: "Presidential",
+  hearing: "Hearing",
+  comment_deadline: "Comment deadline",
+  vote_recent: "Vote",
+};
+
+/**
+ * JS-driven Heat pulse for all maps.
+ *
+ * Why not CSS: iOS Safari often skips opacity keyframes on SVG under transforms.
+ * Why setInterval (not only rAF): Low Power Mode / background tabs stall rAF;
+ * interval keeps a visible pulse on phone/pad.
+ *
+ * Cost: ~70 nodes × ~15 Hz attribute writes. Negligible next to map layout.
+ */
+let heatPulseTimer = 0;
+let heatPulseWanted = false;
+/** Optional canvas/view hook (Sankey) — (t, now) => void */
+let heatPulseSink = null;
+
+export function heatPulsePhase(now = performance.now()) {
+  // 0 = rest fill, 1 = selected/bright fill
+  return 0.5 + 0.5 * Math.sin(now / 380);
+}
+
+/**
+ * How hard to boost a heat cell from on-screen size (px).
+ * Tiny / hard to see → 1. Large / zoomed in → 0 (normal pulse).
+ */
+export function heatSizeBoost(screenPx) {
+  const n = Number(screenPx);
+  if (!(n > 0)) return 1;
+  if (n >= 72) return 0;
+  if (n <= 18) return 1;
+  return 1 - (n - 18) / (72 - 18);
+}
+
+/** Stronger color swing when boost > 0 (still ends at selected at t=1 when large). */
+export function heatPulseT(t, boost = 0) {
+  const b = Math.max(0, Math.min(1, boost));
+  // Widen the sine around 0.5 so small cells flash harder.
+  const amp = 1 + 0.55 * b;
+  return Math.max(0, Math.min(1, 0.5 + (t - 0.5) * amp));
+}
+
+/** Lerp rest (unselected) → selected color. */
+export function heatPulseFill(rest, selected, t) {
+  return mixHex(rest, selected, t);
+}
+
+/** Width scale for tiny heat cells (1 = no grow). Peaks at 2 (= double area, height fixed). */
+export function heatPulseScale(t, boost = 0) {
+  const b = Math.max(0, Math.min(1, boost));
+  // s=2 at full boost/peak → double width, equal left+right from center.
+  return 1 + b * 1.0 * t;
+}
+
+export function setHeatPulseSink(fn) {
+  heatPulseSink = typeof fn === "function" ? fn : null;
+}
+
+const SVG_NS = "http://www.w3.org/2000/svg";
+
+/** Overlay above all icicle cells so L+R growth isn’t covered by neighbors. */
+function ensureIcicleHeatOverlay() {
+  const viewport =
+    document.querySelector("#map .icicle-viewport") ||
+    document.querySelector(".icicle-viewport");
+  if (!viewport) return null;
+  let o = viewport.querySelector("g.icicle-heat-pulse");
+  if (!o) {
+    o = document.createElementNS(SVG_NS, "g");
+    o.setAttribute("class", "icicle-heat-pulse");
+    o.style.pointerEvents = "none";
+    viewport.appendChild(o);
+  } else if (viewport.lastElementChild !== o) {
+    viewport.appendChild(o);
+  }
+  return o;
+}
+
+function clearIcicleHeatOverlay() {
+  document.querySelectorAll("g.icicle-heat-pulse").forEach((o) => {
+    o.replaceChildren();
+  });
+}
+
+function heatPulseApply() {
+  if (!heatPulseWanted) return;
+  if (
+    typeof document === "undefined" ||
+    !document.documentElement.classList.contains("heat-on")
+  ) {
+    stopHeatPulse();
+    return;
+  }
+
+  const now = performance.now();
+  const t = heatPulsePhase(now);
+  const mapEl = document.getElementById("map");
+  const camK = Math.max(0.001, Number(mapEl?.dataset?.heatCamK) || 1);
+
+  const icicleCells = document.querySelectorAll(
+    "html.heat-on .icicle-cell.has-heat > rect.icicle-rect"
+  );
+  const overlay = ensureIcicleHeatOverlay();
+  const seen = new Set();
+
+  for (const el of icicleCells) {
+    const g = el.parentElement;
+    if (!g) continue;
+    const hold = el.getAttribute("data-heat-hold") === "1";
+    const rest = el.getAttribute("data-fill-rest");
+    const sel = el.getAttribute("data-fill-sel");
+    // Layout size only — never fall back to live width/height (those pulse).
+    const wBase = Number(el.getAttribute("data-w-base"));
+    const hBase = Number(el.getAttribute("data-h-base"));
+    if (!(wBase > 0) || !(hBase > 0)) continue;
+    const tx = Number(g.getAttribute("data-tx"));
+    const ty = Number(g.getAttribute("data-ty"));
+    if (!Number.isFinite(tx) || !Number.isFinite(ty)) continue;
+
+    // Real cell stays at layout size (hit-test + neighbors don’t cover a grown box).
+    g.setAttribute("transform", `translate(${tx},${ty})`);
+    el.removeAttribute("transform");
+    el.setAttribute("x", "0");
+    el.setAttribute("y", "0");
+    el.setAttribute("width", String(wBase));
+    el.setAttribute("height", String(hBase));
+
+    const screenMin = Math.min(wBase, hBase) * camK;
+    const boost = heatSizeBoost(screenMin);
+    const tt = heatPulseT(t, boost);
+    const s = hold ? 1 : heatPulseScale(tt, Math.max(boost, 0.35));
+    const grow = el.getAttribute("data-grow") === "y" ? "y" : "x";
+
+    const fill =
+      hold && sel
+        ? sel
+        : rest && sel
+          ? heatPulseFill(rest, sel, tt)
+          : rest || sel || null;
+    if (fill) {
+      el.setAttribute("fill", fill);
+      el.setAttribute("fill-opacity", "1");
+    }
+
+    // Expanded visual on overlay (above every cell) so L and R both show.
+    if (!overlay || hold || s <= 1.001) continue;
+    const id = g.getAttribute("data-id") || rest;
+    const key = String(id ?? `${tx},${ty}`).replace(/"/g, "");
+    seen.add(key);
+    let pulse = null;
+    for (const r of overlay.querySelectorAll("rect[data-heat-id]")) {
+      if (r.getAttribute("data-heat-id") === key) {
+        pulse = r;
+        break;
+      }
+    }
+    if (!pulse) {
+      pulse = document.createElementNS(SVG_NS, "rect");
+      pulse.setAttribute("data-heat-id", key);
+      pulse.style.pointerEvents = "none";
+      overlay.appendChild(pulse);
+    }
+    if (grow === "y") {
+      const hPulse = hBase * s;
+      pulse.setAttribute("x", String(tx));
+      pulse.setAttribute("y", String(ty + (hBase - hPulse) / 2));
+      pulse.setAttribute("width", String(wBase));
+      pulse.setAttribute("height", String(hPulse));
+    } else {
+      const wPulse = wBase * s;
+      pulse.setAttribute("x", String(tx + (wBase - wPulse) / 2));
+      pulse.setAttribute("y", String(ty));
+      pulse.setAttribute("width", String(wPulse));
+      pulse.setAttribute("height", String(hBase));
+    }
+    if (fill) pulse.setAttribute("fill", fill);
+    pulse.setAttribute("fill-opacity", "1");
+  }
+
+  if (overlay) {
+    overlay.querySelectorAll("rect[data-heat-id]").forEach((r) => {
+      if (!seen.has(r.getAttribute("data-heat-id"))) r.remove();
+    });
+  }
+
+  // Circles — gentle color pulse only (no exaggerated size like icicle/sankey).
+  const packNodes = document.querySelectorAll("html.heat-on circle.map-node.has-heat");
+  for (const el of packNodes) {
+    if (el.getAttribute("data-heat-hold") === "1") continue;
+    const rest = el.getAttribute("data-fill-rest");
+    const sel = el.getAttribute("data-fill-sel");
+    const rBase = Number(el.getAttribute("data-r-base"));
+    if (rest && sel) el.setAttribute("fill", heatPulseFill(rest, sel, t));
+    if (rBase > 0) el.setAttribute("r", String(rBase));
+    el.removeAttribute("rx");
+    el.removeAttribute("ry");
+    const baseOp = el.getAttribute("data-base-op");
+    if (baseOp != null) el.setAttribute("fill-opacity", baseOp);
+  }
+
+  // Tree — direct heat: swatch + row wash. Branch with heat below: pulsing bracket only.
+  const rows = document.querySelectorAll(
+    "html.heat-on .org-row.has-heat, html.heat-on .org-row.has-heat-deep"
+  );
+  for (const el of rows) {
+    if (el.classList.contains("is-selected") || el.classList.contains("is-focus")) continue;
+    const rest = el.getAttribute("data-fill-rest");
+    const sel = el.getAttribute("data-fill-sel");
+    if (!rest || !sel) continue;
+    const deepOnly = el.classList.contains("has-heat-deep");
+    const tt = heatPulseT(t, deepOnly ? 0.4 : 0.55);
+    const fill = heatPulseFill(rest, sel, tt);
+    const bracket = el.querySelector(".org-heat-bracket");
+    if (bracket) bracket.style.background = fill;
+    if (deepOnly) continue;
+    const swatch = el.querySelector(".org-swatch");
+    if (swatch) swatch.style.background = fill;
+    const rgb = parseColorRgb(fill);
+    if (rgb) {
+      const a = (0.1 + 0.14 * tt).toFixed(3);
+      el.style.backgroundColor = `rgba(${rgb[0]},${rgb[1]},${rgb[2]},${a})`;
+    }
+  }
+
+  if (heatPulseSink) {
+    try {
+      heatPulseSink(t, now);
+    } catch {
+      /* ignore */
+    }
+  }
+}
+
+function stopHeatPulse() {
+  heatPulseWanted = false;
+  if (heatPulseTimer) {
+    clearInterval(heatPulseTimer);
+    heatPulseTimer = 0;
+  }
+  // Reset size boost / overlay so layout stays clean when Heat is off.
+  try {
+    clearIcicleHeatOverlay();
+    document.querySelectorAll(".icicle-cell.has-heat").forEach((g) => {
+      const tx = g.getAttribute("data-tx");
+      const ty = g.getAttribute("data-ty");
+      if (tx != null && ty != null) {
+        g.setAttribute("transform", `translate(${tx},${ty})`);
+      }
+      const el = g.querySelector("rect.icicle-rect");
+      if (!el) return;
+      el.removeAttribute("transform");
+      const w = el.getAttribute("data-w-base");
+      const h = el.getAttribute("data-h-base");
+      if (w != null) {
+        el.setAttribute("x", "0");
+        el.setAttribute("width", w);
+      }
+      if (h != null) {
+        el.setAttribute("y", "0");
+        el.setAttribute("height", h);
+      }
+      const rest = el.getAttribute("data-fill-rest");
+      if (rest) el.setAttribute("fill", rest);
+    });
+    document.querySelectorAll("circle.map-node.has-heat").forEach((el) => {
+      const r = el.getAttribute("data-r-base");
+      if (r != null) {
+        el.setAttribute("r", r);
+        el.removeAttribute("rx");
+        el.removeAttribute("ry");
+      }
+      const rest = el.getAttribute("data-fill-rest");
+      if (rest) el.setAttribute("fill", rest);
+      const baseOp = el.getAttribute("data-base-op");
+      if (baseOp != null) el.setAttribute("fill-opacity", baseOp);
+    });
+    document
+      .querySelectorAll(".org-row.has-heat, .org-row.has-heat-deep")
+      .forEach((el) => {
+        el.style.backgroundColor = "";
+        const swatch = el.querySelector(".org-swatch");
+        if (swatch) {
+          swatch.style.transform = "";
+          const rest = el.getAttribute("data-fill-rest");
+          if (rest) swatch.style.background = rest;
+        }
+        const bracket = el.querySelector(".org-heat-bracket");
+        if (bracket) bracket.style.background = "";
+      });
+  } catch {
+    /* ignore */
+  }
+}
+
+/** Call when Heat is toggled on/off (or after mount). */
+export function syncHeatPulse() {
+  const on =
+    typeof document !== "undefined" &&
+    document.documentElement.classList.contains("heat-on");
+  if (!on) {
+    stopHeatPulse();
+    return;
+  }
+  heatPulseWanted = true;
+  heatPulseApply(); // immediate first frame
+  if (!heatPulseTimer) {
+    // ~15 Hz — smooth enough, light on battery
+    heatPulseTimer = setInterval(heatPulseApply, 66);
+  }
 }

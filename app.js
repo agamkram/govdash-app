@@ -1,5 +1,5 @@
-import { engagementActions } from "./engagement.js";
-import { enrichmentContext, indexById } from "./context.js";
+import { engagementActions } from "./engagement.js?v=2465";
+import { enrichmentContext, indexById } from "./context.js?v=2465";
 import {
   childCount,
   displayName,
@@ -11,19 +11,22 @@ import {
   cycleColorTheme,
   themeMeta,
   getColorTheme,
-} from "./shared.js";
-import { createIcicleView } from "./views/icicle.js";
-import { createTreeView } from "./views/tree.js";
-import { createPackView } from "./views/pack.js";
-import { createSankeyView } from "./views/sankey.js";
-import { createFiscalPage } from "./views/fiscal.js";
-import { createYouPage, YOU_NODES } from "./views/you.js";
-import { authorityLine } from "./authority.js";
-import { createSpendYearController } from "./spend-year.js";
+  HEAT_KIND_LABEL,
+  syncHeatPulse,
+  setHeatPulseSink,
+} from "./shared.js?v=2465";
+import { createIcicleView } from "./views/icicle.js?v=2465";
+import { createTreeView } from "./views/tree.js?v=2465";
+import { createPackView } from "./views/pack.js?v=2465";
+import { createSankeyView } from "./views/sankey.js?v=2465";
+import { createFiscalPage } from "./views/fiscal.js?v=2465";
+import { createYouPage, YOU_NODES } from "./views/you.js?v=2465";
+import { authorityLine } from "./authority.js?v=2465";
+import { createSpendYearController } from "./spend-year.js?v=2465";
 
-const TREE_URL = "./data/nested/gov-tree-product.json";
-const BEYOND_URL = "./data/nested/gov-tree-beyond.json";
-const SPEND_YEAR_URL = "./data/nested/spend-by-year.json";
+const TREE_URL = "./data/nested/gov-tree-product.json?v=2465";
+const BEYOND_URL = "./data/nested/gov-tree-beyond.json?v=2465";
+const SPEND_YEAR_URL = "./data/nested/spend-by-year.json?v=2465";
 
 const factories = {
   icicle: createIcicleView,
@@ -34,6 +37,7 @@ const factories = {
 
 /** Persist only which chart (Icicle / Tree / Circles / Sankey) — nothing else. */
 const CHART_MODE_KEY = "govdash-chart-mode";
+const HEAT_KEY = "govdash-heat";
 
 function readSavedChartMode() {
   try {
@@ -54,6 +58,42 @@ function saveChartMode(m) {
   }
 }
 
+function readHeatOn() {
+  try {
+    return localStorage.getItem(HEAT_KEY) !== "0";
+  } catch {
+    return true;
+  }
+}
+
+function saveHeatOn(on) {
+  try {
+    localStorage.setItem(HEAT_KEY, on ? "1" : "0");
+  } catch {
+    /* ignore */
+  }
+}
+
+function applyHeatChrome(on) {
+  document.documentElement.classList.toggle("heat-on", !!on);
+  if (!btnHeat) return;
+  btnHeat.classList.toggle("is-active", !!on);
+  btnHeat.setAttribute("aria-pressed", on ? "true" : "false");
+  btnHeat.title = on
+    ? "Heat — what’s happening (on)"
+    : "Heat — what’s happening (off)";
+  btnHeat.setAttribute(
+    "aria-label",
+    on
+      ? "Heat. Showing live events on the map."
+      : "Heat. Live events hidden. Tap to show."
+  );
+  // Lightweight redraw — avoid full icicle rebuild via resize().
+  viewApi?.setSelected?.(selectedNode?.id ?? null);
+  if (mode === "sankey") viewApi?.resize?.();
+  syncHeatPulse();
+}
+
 const searchInput = document.getElementById("search");
 const searchResults = document.getElementById("search-results");
 const breadcrumbsEl = document.getElementById("breadcrumbs");
@@ -65,6 +105,8 @@ const dAuthority = document.getElementById("d-authority");
 const dWorkforce = document.getElementById("d-workforce");
 const dSpending = document.getElementById("d-spending");
 const dShort = document.getElementById("d-short");
+const dHeat = document.getElementById("d-heat");
+const dHeatList = document.getElementById("d-heat-list");
 const dCodes = document.getElementById("d-codes");
 const dMission = document.getElementById("d-mission");
 const dMissionBody = document.getElementById("d-mission-body");
@@ -75,6 +117,7 @@ const dEngageList = document.getElementById("d-engage-list");
 const dNote = document.getElementById("d-note");
 const detailClose = document.getElementById("detail-close");
 const btnEnter = document.getElementById("btn-enter");
+const btnHeat = document.getElementById("btn-heat");
 const btnFiscal = document.getElementById("btn-fiscal");
 const btnYou = document.getElementById("btn-you");
 const btnAbout = document.getElementById("btn-about");
@@ -601,6 +644,82 @@ function isConstitutionNode(node) {
   return !!(node && (node.id === "usa" || node.id === "constitution") && node.id !== "beyond");
 }
 
+/** Calendar day for YYYY-MM-DD (no UTC day-shift, no fake time). */
+function formatHeatWhen(when, { time = "auto" } = {}) {
+  if (!when) return "";
+  const s = String(when).trim();
+  const dayOnly = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s);
+  if (dayOnly) {
+    const dt = new Date(
+      Date.UTC(+dayOnly[1], +dayOnly[2] - 1, +dayOnly[3], 12, 0, 0)
+    );
+    return dt.toLocaleDateString("en-US", {
+      timeZone: "America/New_York",
+      weekday: "short",
+      month: "short",
+      day: "numeric",
+    });
+  }
+  const t = Date.parse(s);
+  if (!Number.isFinite(t)) return s;
+  const wantTime = time === true || (time === "auto" && /T\d{2}:\d{2}/.test(s));
+  try {
+    return wantTime
+      ? new Date(t).toLocaleString("en-US", {
+          timeZone: "America/New_York",
+          weekday: "short",
+          month: "short",
+          day: "numeric",
+          hour: "numeric",
+          minute: "2-digit",
+        })
+      : new Date(t).toLocaleDateString("en-US", {
+          timeZone: "America/New_York",
+          weekday: "short",
+          month: "short",
+          day: "numeric",
+        });
+  } catch {
+    return s;
+  }
+}
+
+/** Role-labeled date so the day matches the action. */
+function formatHeatEventWhen(ev) {
+  if (!ev) return "";
+  const when = ev.when;
+  if (!when) return "";
+  const day = formatHeatWhen(when);
+  if (!day) return "";
+  switch (ev.kind) {
+    case "floor_session":
+      return (ev.urgency === "recent" ? "Convened " : "Convenes ") + day;
+    case "house_schedule":
+      return "Week of " + day;
+    case "public_inspection": {
+      const bits = ["Publishes " + day];
+      if (ev.filedAt) {
+        const f = formatHeatWhen(ev.filedAt, { time: false });
+        if (f && f !== day) bits.push("Filed " + f);
+      }
+      return bits.join(" · ");
+    }
+    case "presidential_doc": {
+      if (ev.signedAt) {
+        const signed = formatHeatWhen(ev.signedAt, { time: false });
+        const pub = formatHeatWhen(when, { time: false });
+        if (signed && pub && signed !== pub) {
+          return "Signed " + signed + " · Published " + pub;
+        }
+        if (signed) return "Signed " + signed;
+      }
+      return "Published " + day;
+    }
+    default:
+      return day;
+  }
+}
+
 const CONSTITUTION_BLURB = [
   "The Constitution is the supreme law of the United States. It establishes the national government, defines the powers of its three branches, and protects fundamental rights.",
   "Ratified in 1788 and amended since (including the Bill of Rights), it is the charter that organizes the federal structure you explore in this map — Legislative, Executive, and Judicial — with independent agencies operating under statutes Congress passes within that framework.",
@@ -716,6 +835,65 @@ function showDetail(node, opts = {}) {
     : !rail && node.short
       ? `Short: ${node.short}`
       : "";
+
+  if (dHeat && dHeatList) {
+    dHeatList.replaceChildren();
+    const heat = !asConstitution && node.heat;
+    const events = heat?.events || [];
+    if (heat && (events.length || heat.count > 0)) {
+      dHeat.hidden = false;
+      if (heat.rolledUp) {
+        const note = document.createElement("p");
+        note.className = "heat-roll-note";
+        note.textContent =
+          heat.count > 1
+            ? `${heat.count} live items lower in this branch (sample below).`
+            : "Live activity lower in this branch.";
+        dHeatList.append(note);
+      }
+      for (const ev of events.slice(0, 8)) {
+        const li = document.createElement("li");
+        const kind = document.createElement("span");
+        kind.className = "heat-kind";
+        kind.textContent =
+          HEAT_KIND_LABEL[ev.kind] || ev.kind || "Event";
+        li.append(kind);
+
+        if (ev.url) {
+          const a = document.createElement("a");
+          a.className = "heat-title";
+          a.href = ev.url;
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+          a.textContent = ev.title || "Open source";
+          li.append(a);
+        } else {
+          const t = document.createElement("span");
+          t.className = "heat-title";
+          t.textContent = ev.title || "Event";
+          li.append(t);
+        }
+
+        if (ev.summary || ev.when || ev.filedAt || ev.signedAt) {
+          const sum = document.createElement("p");
+          sum.className = "heat-summary";
+          const whenBit = formatHeatEventWhen(ev);
+          sum.textContent = [whenBit, ev.summary].filter(Boolean).join(" · ");
+          li.append(sum);
+        }
+        if (ev.source) {
+          const src = document.createElement("p");
+          src.className = "heat-source";
+          src.textContent = ev.source;
+          li.append(src);
+        }
+        dHeatList.append(li);
+      }
+    } else {
+      dHeat.hidden = true;
+    }
+  }
+
   dCodes.replaceChildren();
   dMissionBody.replaceChildren();
   dLeadersList.replaceChildren();
@@ -753,6 +931,29 @@ function showDetail(node, opts = {}) {
 
   if (!asConstitution && ctx?.leadership?.length) {
     dLeaders.hidden = false;
+    const h3 = dLeaders.querySelector("h3");
+    const live = ctx.leadershipMeta;
+    if (h3) {
+      h3.textContent = "Leadership";
+    }
+    const oldNote = dLeaders.querySelector(".leaders-asof");
+    if (oldNote) oldNote.remove();
+    if (live?.asOf || live?.sourceName) {
+      const note = document.createElement("p");
+      note.className = "leaders-asof";
+      const when = live.asOf
+        ? new Date(live.asOf).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          })
+        : "";
+      note.textContent = [live.sourceName || "Official site", when]
+        .filter(Boolean)
+        .join(" · ");
+      if (h3) h3.after(note);
+      else dLeadersList.before(note);
+    }
     for (const person of ctx.leadership.slice(0, 12)) {
       const title = (person.title || "").trim();
       const name = (person.name || "").trim();
@@ -1027,6 +1228,7 @@ function mountView(nextMode, { preserve = true } = {}) {
   let suppressSelect = true;
 
   if (viewApi) viewApi.destroy();
+  setHeatPulseSink(null);
   mode = nextMode;
   saveChartMode(mode);
   setModeChrome();
@@ -1068,6 +1270,11 @@ function mountView(nextMode, { preserve = true } = {}) {
   }
   renderBreadcrumbs();
   syncScrubCoach(mode);
+  // Sankey: canvas pulse via shared driver (SVG views update opacity in the same loop).
+  if (typeof viewApi.onHeatPulse === "function") {
+    setHeatPulseSink((t, now) => viewApi.onHeatPulse(t, now));
+  }
+  syncHeatPulse();
 }
 
 async function main() {
@@ -1077,6 +1284,7 @@ async function main() {
   }
   initColorTheme();
   syncThemeChrome();
+  applyHeatChrome(readHeatOn());
   window.addEventListener("govdash-theme", () => {
     syncThemeChrome();
     viewApi?.resize?.();
@@ -1153,6 +1361,11 @@ async function main() {
     applySpendYear(y);
   });
 
+  btnHeat?.addEventListener("click", () => {
+    const next = !document.documentElement.classList.contains("heat-on");
+    saveHeatOn(next);
+    applyHeatChrome(next);
+  });
   btnFiscal?.addEventListener("click", () => {
     if (pageName() === "fiscal") closeAppPage();
     else openFiscalPage();

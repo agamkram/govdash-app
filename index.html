@@ -75,13 +75,20 @@
     })();
   </script>
   <title>GovDash</title>
-  <link rel="icon" type="image/png" href="icon-192.png?v=2369" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2369" />
+  <link rel="icon" type="image/png" href="icon-192.png?v=2465" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2465" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Michroma&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2435" />
-  <meta name="govdash-build" content="2435-committed-paid" />
+  <link rel="stylesheet" href="styles.css?v=2465" />
+  <meta name="govdash-build" content="2464-toggle-3rem" />
+  <script>
+    try {
+      if (localStorage.getItem("govdash-heat") !== "0") {
+        document.documentElement.classList.add("heat-on");
+      }
+    } catch (e) {}
+  </script>
 </head>
 <body>
   <div class="shell">
@@ -100,6 +107,16 @@
             <button type="button" class="orient-btn" data-orient="top" title="Top down" aria-label="Top down">↓</button>
           </div>
           <div class="chrome-aside">
+            <button
+              type="button"
+              id="btn-heat"
+              class="btn btn-fiscal is-active"
+              title="Heat — what’s happening (on)"
+              aria-label="Heat. Showing live events on the map."
+              aria-pressed="true"
+            >
+              H
+            </button>
             <button
               type="button"
               id="btn-you"
@@ -190,6 +207,10 @@
             <output id="fy-out" for="fy-range">2026</output>
           </label>
           <p class="detail-short" id="d-short"></p>
+          <div class="detail-heat" id="d-heat" hidden>
+            <h3>Heat</h3>
+            <ul id="d-heat-list" class="heat-list"></ul>
+          </div>
           <div class="detail-mission" id="d-mission" hidden>
             <h3>Mission</h3>
             <div id="d-mission-body"></div>
@@ -218,7 +239,7 @@
         <iframe
           class="about-frame"
           id="about-frame"
-          src="about.html?v=2435"
+          src="about.html?v=2465"
           title="About GovDash — how to use and data sources"
         ></iframe>
       </section>
@@ -278,7 +299,7 @@
       </label>
     </footer>
   </div>
-  <script type="module" src="app.js?v=2435"></script>
+  <script type="module" src="app.js?v=2465"></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>

@@ -15,3 +15,11 @@ Refresh: npm run fetch:heat [-- --force] [-- --fr-limit 60]
 Enrich:  npm run enrich:heat
          npm run enrich:spending
          npm run enrich:spend-years   → data/nested/spend-by-year.json
+
+---
+Heat events (map Heat / H toggle) — 2026-08-15
+  events-raw.json from npm run fetch:heat-events
+  Sources: Senate floor XML, clerk.house.gov, Majority Leader weekly (when fresh),
+  Federal Register public inspection API, FR presidential documents.
+  Old score-based heat (spending+FR counts blend) retired; enrich:heat attaches events only.
+  USAspending JSON in this folder remains for the spending pipeline, not map Heat.

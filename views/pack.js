@@ -5,7 +5,7 @@
  * Phone: tap only a labeled (resolvable) node; long-press scrub unlabeled
  * like Icicle/Sankey. Tap the outer ring (or empty map) to go back.
  */
-import * as d3 from "../vendor/d3.js";
+import * as d3 from "../vendor/d3.js?v=2463";
 import {
   paintFill,
   selectionFill,
@@ -16,7 +16,8 @@ import {
   atlasRail,
   INK,
   noteScrubSuccess,
-} from "../shared.js";
+  nodeHasHeat,
+} from "../shared.js?v=2463";
 
 export function createPackView(container, { onSelect, onFocusChange }) {
   const el = typeof container === "string" ? document.querySelector(container) : container;
@@ -172,8 +173,12 @@ export function createPackView(container, { onSelect, onFocusChange }) {
     const k = scaleK(v);
     const place = (d) =>
       `translate(${(d.x - v[0]) * k + width / 2},${(d.y - v[1]) * k + height / 2})`;
+    const rad = (d) => Math.max(0.4, d.r * k);
 
-    nodeSel.attr("transform", place).attr("r", (d) => Math.max(0.4, d.r * k));
+    nodeSel
+      .attr("transform", place)
+      .attr("r", rad)
+      .attr("data-r-base", rad);
 
     labelSel
       .attr("transform", place)
@@ -209,11 +214,22 @@ export function createPackView(container, { onSelect, onFocusChange }) {
     if (!nodeSel) return;
     const hid = highlightId();
     nodeSel
+      .classed("has-heat", (d) => nodeHasHeat(d))
+      .attr("data-fill-rest", (d) => paintFill(d))
+      .attr("data-fill-sel", (d) => selectionFill(d))
+      .attr("data-heat-hold", (d) =>
+        d === focus || (d.data.id === hid && !d.children) ? "1" : null
+      )
       .attr("fill", (d) => {
         // Never dump selection fill on the outer focus disk — it blacks the whole map.
         if (d === focus) return paintFill(d);
         if (d.data.id === hid && !d.children) return selectionFill(d);
         return paintFill(d);
+      })
+      .attr("data-base-op", (d) => {
+        if (d === focus) return "0.1";
+        if (d.children) return "0.34";
+        return "0.94";
       })
       .attr("fill-opacity", (d) => {
         if (d === focus) return 0.1;

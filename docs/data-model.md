@@ -34,7 +34,7 @@ Every org unit is one object:
 | `sources.crosswalk` | Raw Crosswalk fields (codes, entity type, parent name). |
 | `sources.sam` | Placeholder for SAM.gov Federal Hierarchy API. |
 | `sources.usgm` | Placeholder for U.S. Government Manual content. |
-| `heat` | Activity overlay `{ score, period, signals }` from spending / FR / size. |
+| `heat` | Live events overlay `{ asOf, count, rolledUp, events[] }` from official calendars / FR. |
 | `children` | Nested child nodes (D3 hierarchy / collapsible tree). |
 
 Synthetic root: `id: "usa"` — Crosswalk has no single USA node; branches use `Parent: "[Branch]"`.
@@ -111,22 +111,19 @@ Examples:
 
 These are **generated**, not scraped per agency. Later heat/time can add “what’s active now” actions.
 
-## Heat (Step 10 — in use)
+## Heat (live events — in use)
 
 ```bash
-npm run fetch:heat    # cache USAspending + FR counts
-npm run enrich:heat   # write node.heat { score, signals, period }
+npm run fetch:heat-events   # Senate / House / FR public inspection / presidential docs
+npm run enrich:heat         # write node.heat { asOf, count, events[] } (kills old score heat)
 ```
 
-**Score (v1):** weighted mix of
+**Heat** = dated official events (floor sessions, FR public inspection, presidential docs, etc.).  
+**Pulse** on the map when the **H** toggle is on. Tap a node → detail **Heat** section with title, summary, source link.
 
-1. USAspending obligated amount (log-normalized)
-2. Federal Register document count since 2025-01-01 (where matched)
-3. Org footprint (descendant count)
+Parents roll up child heat so branches pulse at high zoom. Honest blanks when nothing is matched.
 
-Parents get a **roll-up** = max(own, 0.92 × hottest child) so branches show activity at high zoom.
-
-UI: amber intensity + inline meter; detail panel breaks down signals. Toggle **Heat** in the toolbar.
+`npm run fetch:heat` still caches USAspending raw files for the **spending** pipeline (not map heat).
 
 ## Time (FY scrub — spending only)
 

@@ -9,10 +9,6 @@ function encodeQuery(s) {
   return encodeURIComponent(String(s || "").trim());
 }
 
-function usaGovSearch(name) {
-  return `https://www.usa.gov/search?query=${encodeQuery(name)}`;
-}
-
 function foiaSearch(name) {
   return `https://www.foia.gov/search.html?q=${encodeQuery(name)}`;
 }
@@ -104,7 +100,7 @@ export function engagementActions(node, optsOrById) {
       id: "usa-constitution",
       label: "Plain-language Constitution guide",
       detail: "USA.gov — how the Constitution works",
-      href: "https://www.usa.gov/constitution",
+      href: "https://www.usa.gov/historical-documents",
     });
     add({
       id: "usa-gov",
@@ -140,7 +136,7 @@ export function engagementActions(node, optsOrById) {
         id: "court-listener-hint",
         label: "Learn how federal courts work",
         detail: "Plain-language overview from USA.gov",
-        href: "https://www.usa.gov/federal-courts",
+        href: "https://www.usa.gov/courts",
       });
     }
     if (/executive/i.test(name)) {
@@ -198,8 +194,8 @@ export function engagementActions(node, optsOrById) {
     add({
       id: "learn-usa",
       label: "Look up this agency on USA.gov",
-      detail: "Services, contacts, and plain-language explainers",
-      href: usaGovSearch(name),
+      detail: "A–Z index of federal agencies",
+      href: "https://www.usa.gov/agency-index",
     });
     add({
       id: "foia",
@@ -236,7 +232,7 @@ export function engagementActions(node, optsOrById) {
     add({
       id: "court-info",
       label: "Federal court basics",
-      href: "https://www.usa.gov/federal-courts",
+      href: "https://www.usa.gov/courts",
     });
   }
 
