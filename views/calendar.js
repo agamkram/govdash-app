@@ -228,7 +228,7 @@ export function createCalPage(root, { getRoot, getAsOf, getItemCount, onMap }) {
   function renderDayList(key, grouped) {
     const box = el("div", "cal-day-list");
     const list = grouped.get(key) || [];
-    box.append(el("p", "cal-day-count", plural(list.length, "item", "items")));
+    box.append(el("p", "cal-day-count", plural(list.length, "event", "events")));
     box.append(el("h3", "cal-day-head", prettyDay(key)));
     if (!list.length) {
       box.append(
@@ -302,7 +302,7 @@ export function createCalPage(root, { getRoot, getAsOf, getItemCount, onMap }) {
         btn.setAttribute(
           "aria-label",
           n
-            ? `${prettyDay(key)}, ${n} item${n === 1 ? "" : "s"}`
+            ? `${prettyDay(key)}, ${n} event${n === 1 ? "" : "s"}`
             : prettyDay(key)
         );
         btn.addEventListener("click", () => {
@@ -332,7 +332,7 @@ export function createCalPage(root, { getRoot, getAsOf, getItemCount, onMap }) {
     const asOf = getAsOf?.() || "";
     const itemCount = Number(getItemCount?.()) || 0;
     const total = el("p", "cal-items");
-    total.append(el("span", null, plural(itemCount, "item", "items")));
+    total.append(el("span", null, plural(itemCount, "event", "events")));
     if (asOf) {
       total.append(el("span", "cal-items-sub", ` · as of ${asOf}`));
     }

@@ -21,7 +21,7 @@ import { createPackView } from "./views/pack.js?v=2501";
 import { createSankeyView } from "./views/sankey.js?v=2493";
 import { createFiscalPage } from "./views/fiscal.js?v=2493";
 import { createYouPage, YOU_NODES } from "./views/you.js?v=2493";
-import { createCalPage } from "./views/calendar.js?v=2502";
+import { createCalPage } from "./views/calendar.js?v=2503";
 import { authorityLine } from "./authority.js?v=2493";
 import { createSpendYearController } from "./spend-year.js?v=2493";
 
@@ -991,7 +991,7 @@ function showDetail(node, opts = {}) {
         note.className = "heat-roll-note";
         note.textContent =
           heat.count > 1
-            ? `${heat.count} live items lower in this branch (sample below).`
+            ? `${heat.count} live events lower in this branch (sample below).`
             : "Live activity lower in this branch.";
         dHeatList.append(note);
       }
