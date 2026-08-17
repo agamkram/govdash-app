@@ -21,7 +21,7 @@ import { createPackView } from "./views/pack.js?v=2501";
 import { createSankeyView } from "./views/sankey.js?v=2493";
 import { createFiscalPage } from "./views/fiscal.js?v=2493";
 import { createYouPage, YOU_NODES } from "./views/you.js?v=2493";
-import { createCalPage } from "./views/calendar.js?v=2493";
+import { createCalPage } from "./views/calendar.js?v=2502";
 import { authorityLine } from "./authority.js?v=2493";
 import { createSpendYearController } from "./spend-year.js?v=2493";
 
@@ -65,6 +65,8 @@ function readHeatOn() {
 
 /** Places that actually pulse (own events, not parent rollup). */
 let heatPulsePlaceCount = 0;
+/** Raw events in this Heat bake (C page total; not the 30-day slice). */
+let heatRawEventCount = 0;
 /** Chip/pane snapshot day from meta.heat.asOf (e.g. "Aug 16"). */
 let heatAsOfLabel = "";
 
@@ -399,6 +401,7 @@ const youPage = createYouPage(youPageEl, {
 const calPage = createCalPage(calPageEl, {
   getRoot: () => usaRoot,
   getAsOf: () => heatAsOfLabel,
+  getItemCount: () => heatRawEventCount,
   onMap: (id) => {
     if (!id) return;
     closeAppPage();
@@ -592,11 +595,23 @@ function syncAboutTheme() {
   const win = frame?.contentWindow;
   if (!win) return;
   try {
-    win.postMessage({ type: "govdash-theme", theme: getColorTheme() }, "*");
+    win.postMessage(
+      {
+        type: "govdash-theme",
+        theme: getColorTheme(),
+        heatAsOf: heatAsOfLabel,
+        heatPlaces: heatPulsePlaceCount,
+      },
+      "*"
+    );
   } catch {
     /* ignore */
   }
 }
+
+document.getElementById("about-frame")?.addEventListener("load", () => {
+  syncAboutTheme();
+});
 
 function defaultOrientation() {
   return "top";
@@ -1425,6 +1440,9 @@ async function main() {
     usaData.meta?.heat?.asOf || usaData.meta?.heat?.enrichedAt || ""
   );
   const metaDirect = usaData.meta?.heat?.nodesWithDirectHeat;
+  const metaItems = usaData.meta?.heat?.rawEventCount;
+  heatRawEventCount =
+    typeof metaItems === "number" && metaItems >= 0 ? metaItems : 0;
   setHeatPulsePlaceCount(
     typeof metaDirect === "number" && metaDirect >= 0
       ? metaDirect
@@ -1432,6 +1450,7 @@ async function main() {
   );
   // Re-sync chip labels now that the pulse count is known.
   applyHeatChrome(readHeatOn());
+  syncAboutTheme();
 
   spendYear = createSpendYearController(usaRoot);
   if (spendYearRes?.ok) {

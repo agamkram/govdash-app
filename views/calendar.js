@@ -203,7 +203,11 @@ function byDay(items) {
   return map;
 }
 
-export function createCalPage(root, { getRoot, getAsOf, onMap }) {
+function plural(n, one, many) {
+  return `${n} ${n === 1 ? one : many}`;
+}
+
+export function createCalPage(root, { getRoot, getAsOf, getItemCount, onMap }) {
   if (!root) return { show() {} };
   const body = root.querySelector("#cal-body");
   let selected = "";
@@ -223,9 +227,9 @@ export function createCalPage(root, { getRoot, getAsOf, onMap }) {
 
   function renderDayList(key, grouped) {
     const box = el("div", "cal-day-list");
-    const head = el("h3", "cal-day-head", prettyDay(key));
-    box.append(head);
     const list = grouped.get(key) || [];
+    box.append(el("p", "cal-day-count", plural(list.length, "item", "items")));
+    box.append(el("h3", "cal-day-head", prettyDay(key)));
     if (!list.length) {
       box.append(
         el(
@@ -326,12 +330,17 @@ export function createCalPage(root, { getRoot, getAsOf, onMap }) {
     }
 
     const asOf = getAsOf?.() || "";
+    const itemCount = Number(getItemCount?.()) || 0;
+    const total = el("p", "cal-items");
+    total.append(el("span", null, plural(itemCount, "item", "items")));
+    if (asOf) {
+      total.append(el("span", "cal-items-sub", ` · as of ${asOf}`));
+    }
+    body.append(total);
     const lede = el(
       "p",
       "fiscal-lede",
-      asOf
-        ? `Official activity in this Heat snapshot through ${prettyDay(end)} · as of ${asOf}.`
-        : `Official activity in this Heat snapshot through ${prettyDay(end)}.`
+      `Official activity in this Heat snapshot through ${prettyDay(end)}.`
     );
     body.append(lede);
 

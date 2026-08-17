@@ -260,7 +260,7 @@
       <li><strong>Pick a layout</strong> — Icicle, Tree, Circles, or Sankey. The app remembers which chart you left on (only that — not depth, zoom, ZIP, theme, or Heat). Direction arrows flip Icicle/Sankey between top-down and sideways.</li>
       <li><strong>Depth slider</strong> (Icicle, bar under the map) — each step is another generation under <em>where you are</em>. At the Constitution, 1 is the six doors and 11 is the rest of the tree. After you enter a department, 1 is that place’s children.</li>
       <li><strong>Open a place</strong> — tap or click a cell to select it and open the detail pane. <em>Enter</em> (in the pane) or drill in the map to go deeper; breadcrumbs and the Constitution rail go back. On Tree, tap the current top row to go up one level (the ▾ control expands in place). When a place has dollars, a <strong>FY</strong> slider appears in the pane for years <strong>2018–2026</strong>. <strong>Committed</strong> is what they signed for; <strong>paid</strong> is what left the Treasury — both move when USAspending has them; child offices often have committed only. Structure, mission, and employee counts do not change. A blank year means no honest match, not a hidden number. The open year is incomplete until Q4 lands.</li>
-      <li><strong>Find</strong> — search by name. The half-width control next to Find is <strong>Heat</strong> (what’s happening — see below). <strong>Z</strong> looks up House/Senate by ZIP. <strong>C</strong> is the next 30 days: the same Heat snapshot laid out on a calendar, plus OPM federal holidays (offices closed — not a map pulse). <strong>$</strong> is federal money: debt, interest, receipts vs outlays, top agencies by committed dollars, and awards where you live. <strong>L</strong>/<strong>D</strong> switches light and dark for this session. <strong>i</strong> opens About.</li>
+      <li><strong>Find</strong> — search by name. The half-width control next to Find is <strong>Heat</strong> (what’s happening — see below). <strong>Z</strong> looks up House/Senate by ZIP. <strong>C</strong> is the next 30 days: the same Heat snapshot laid out on a calendar, plus OPM federal holidays (offices closed — not a map pulse). The item count under Next 30 days is the whole bake; the number above the list is that day’s items, and it changes when you tap a date. <strong>$</strong> is federal money: debt, interest, receipts vs outlays, top agencies by committed dollars, and awards where you live. <strong>L</strong>/<strong>D</strong> switches light and dark for this session. <strong>i</strong> opens About.</li>
       <li><strong>Six doors</strong> — Legislative · Executive · Judicial · Agencies · Chartered · International (in that order). On Sankey the last two are labeled <em>Chart</em> and <em>Int</em> so they fit; tap for the full names.</li>
     </ol>
 
@@ -269,7 +269,7 @@
     </div>
 
     <h2>Heat — what’s happening</h2>
-    <p>The control next to Find is a simple on/off switch. Off it asks <strong>Where’s the action?</strong> — tap to pulse places with upcoming floor sessions, Federal Register filings, and similar official activity. On it shows how many places are pulsing and when we last built this snapshot (e.g. <strong>53 as of Aug 16</strong>, or <strong>0 as of Aug 16</strong> if it is quiet) — pan and zoom to find them; tap again to hide. Open a pulsing place (or its parents) and the detail pane repeats that as-of day, then lists events with a date that names the action — e.g. when the chamber <strong>convenes</strong>, when a document <strong>publishes</strong> in the Federal Register, when comments <strong>close</strong>, or when it was <strong>filed</strong> for public inspection. <strong>C</strong> is the same snapshot in time — next 30 days. Tap <strong>Map</strong> on an event to jump to that box with Heat on — the place itself, not its door.</p>
+    <p>The control next to Find is a simple on/off switch. Off it asks <strong>Where’s the action?</strong> — tap to pulse places with upcoming floor sessions, Federal Register filings, and similar official activity. On it shows how many places are pulsing and when we last built this snapshot (<strong id="heat-chip-example">the bake count as of that day</strong>, or <strong id="heat-chip-quiet">0 as of that day</strong> if it is quiet) — pan and zoom to find them; tap again to hide. Open a pulsing place (or its parents) and the detail pane repeats that as-of day, then lists events with a date that names the action — e.g. when the chamber <strong>convenes</strong>, when a document <strong>publishes</strong> in the Federal Register, when comments <strong>close</strong>, or when it was <strong>filed</strong> for public inspection. <strong>C</strong> is the same snapshot in time — next 30 days. Item count under the title is the bake. The number above the list is that day’s items — tap a date and it changes. Tap <strong>Map</strong> on an event to jump to that box with Heat on — the place itself, not its door.</p>
     <ul class="sources">
       <li><strong>Senate floor</strong> — Senate.gov floor schedule (next convene / recent sessions, 30-day window).</li>
       <li><strong>House session</strong> — Clerk of the House next meeting.</li>
@@ -417,7 +417,8 @@
       <li><strong>Sunshine meeting</strong> — agency meeting noticed under the Sunshine Act.</li>
       <li><strong>Floor / session</strong> — when the Senate or House is next expected to convene (or recently sat), from chamber schedules.</li>
     </ul>
-    <p class="note" id="st-foot">Counts from the merged product + Beyond tree — same files as the map, not a live OPM or USAspending query. Heat is likewise a baked snapshot of official schedules and Register feeds.</p>
+    <p class="note" id="st-foot">Counts from the merged product + Beyond tree — same files as the map, not a live OPM or USAspending query.</p>
+    <p class="note" id="st-heat-asof">Heat snapshot as of <strong id="heat-asof-label">this bake</strong> — same day as the map chip and C, not a live query.</p>
   </main>
   <script>
     (function () {
@@ -428,8 +429,19 @@
       apply("dark");
       window.addEventListener("message", (e) => {
         const d = e.data;
-        if (!d || d.type !== "govdash-theme") return;
-        apply(d.theme);
+        if (!d || typeof d !== "object") return;
+        if (d.type === "govdash-theme") apply(d.theme);
+        if (d.type === "govdash-theme" || d.type === "govdash-heat") {
+          const asOf = String(d.heatAsOf || d.asOf || "").trim();
+          const places = d.heatPlaces ?? d.places;
+          if (asOf) {
+            const n =
+              typeof places === "number" && places >= 0 ? String(places) : "0";
+            text("heat-chip-example", `${n} as of ${asOf}`);
+            text("heat-chip-quiet", `0 as of ${asOf}`);
+            text("heat-asof-label", asOf);
+          }
+        }
       });
 
       function esc(s) {
@@ -579,7 +591,7 @@
           );
           text(
             "st-foot",
-            `Counts from the merged product + Beyond tree · ${s.opmAsOfLabel} workforce · USAspending ${s.spendPeriod} + sub-agency · generated ${String(s.generatedAt || "").slice(0, 10)}. Heat is a baked snapshot of official schedules and Register feeds — not a live query.`
+            `Counts from the merged product + Beyond tree · ${s.opmAsOfLabel} workforce · USAspending ${s.spendPeriod} + sub-agency · generated ${String(s.generatedAt || "").slice(0, 10)}.`
           );
         })
         .catch(() => {

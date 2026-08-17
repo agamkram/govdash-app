@@ -593,6 +593,25 @@ html.pwa-standalone .shell {
   margin: 0 0 1.25rem;
 }
 
+.cal-items {
+  margin: -0.1rem 0 0.55rem;
+  font-size: 1.02rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.cal-items-sub {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.cal-day-count {
+  margin: 0 0 0.2rem;
+  font-size: 1.02rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
 .cal-sheet-title,
 .cal-day-head {
   margin: 0 0 0.45rem;
