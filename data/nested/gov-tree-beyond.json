@@ -41,11 +41,11 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-08-17T14:07:32.274Z",
-      "asOf": "2026-08-17T14:06:31.181Z",
+      "enrichedAt": "2026-08-18T17:34:31.937Z",
+      "asOf": "2026-08-18T17:33:24.282Z",
       "nodesWithHeat": 3,
       "nodesWithDirectHeat": 1,
-      "rawEventCount": 251,
+      "rawEventCount": 256,
       "matched": {
         "chamber": 0,
         "presidential": 0,
@@ -55,13 +55,13 @@
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 75,
-      "unmatchedCommentDeadlines": 157,
-      "unmatchedSunshine": 3,
+      "unmatchedPublicInspection": 87,
+      "unmatchedCommentDeadlines": 147,
+      "unmatchedSunshine": 5,
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 1,
+          "count": 2,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
@@ -76,42 +76,42 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 75,
+          "count": 87,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
           "count": 13,
-          "since": "2026-08-03",
+          "since": "2026-08-04",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 158,
-          "start": "2026-08-17",
-          "end": "2026-09-15",
+          "count": 148,
+          "start": "2026-08-18",
+          "end": "2026-09-16",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
-          "count": 3,
-          "start": "2026-08-17",
-          "end": "2026-09-15",
+          "count": 5,
+          "start": "2026-08-18",
+          "end": "2026-09-16",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
           "count": 0,
-          "start": "2026-08-17",
-          "end": "2026-09-15",
+          "start": "2026-08-18",
+          "end": "2026-09-16",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "scotus": {
           "ok": true,
           "count": 0,
-          "start": "2026-08-17",
-          "end": "2026-09-15",
+          "start": "2026-08-18",
+          "end": "2026-09-16",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -131,7 +131,7 @@
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
     "heat": {
-      "asOf": "2026-08-17T14:06:31.181Z",
+      "asOf": "2026-08-18T17:33:24.282Z",
       "count": 1,
       "rolledUp": true,
       "events": [
@@ -166,7 +166,7 @@
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
         "heat": {
-          "asOf": "2026-08-17T14:06:31.181Z",
+          "asOf": "2026-08-18T17:33:24.282Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -1772,7 +1772,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-17T14:06:31.181Z",
+              "asOf": "2026-08-18T17:33:24.282Z",
               "count": 1,
               "rolledUp": false,
               "events": [
