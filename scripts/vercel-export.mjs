@@ -30,11 +30,12 @@ const files = [
   "engagement.js",
   "authority.js",
   "spend-year.js",
-  "sankey.html",
   "apple-touch-icon.png",
   "icon-192.png",
   "icon-512.png",
   "icon-maskable-512.png",
+  "robots.txt",
+  "sitemap.xml",
 ];
 const dirs = ["views", "vendor", "data/nested"];
 
