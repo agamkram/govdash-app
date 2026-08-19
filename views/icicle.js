@@ -19,7 +19,7 @@ import {
   noteScrubSuccess,
   nodeHasHeat,
   zoomJumpNode,
-} from "../shared.js?v=2493";
+} from "../shared.js?v=2504";
 
 const CONST_W = 28;
 const FOCUS_W = 28;

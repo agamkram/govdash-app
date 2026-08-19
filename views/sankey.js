@@ -22,7 +22,7 @@ import {
   heatPulseT,
   heatPulseScale,
   zoomJumpNode,
-} from "../shared.js?v=2493";
+} from "../shared.js?v=2504";
 
 const CONST_ID = "constitution";
 

@@ -13,7 +13,7 @@ import {
   nodeHasHeat,
   nodeHasHeatDeep,
   zoomJumpNode,
-} from "../shared.js?v=2493";
+} from "../shared.js?v=2504";
 
 export function createTreeView(container, { onSelect, onFocusChange }) {
   const el = typeof container === "string" ? document.querySelector(container) : container;

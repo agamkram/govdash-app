@@ -57,11 +57,7 @@
           r.style.setProperty("--vv-w", iw + "px");
           r.style.setProperty("--vv-h", ih + "px");
         }
-        var chart = "icicle";
-        try {
-          chart = localStorage.getItem("govdash-chart-mode") || "icicle";
-        } catch (e) {}
-        if (chart === "icicle") r.classList.add("has-depth");
+        r.classList.add("has-depth");
         var minSide = Math.min(iw, ih);
         var ipad =
           /iPad/i.test(n.userAgent || "") ||
@@ -81,7 +77,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Michroma&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=2502" />
-  <meta name="govdash-build" content="2503-cal-events" />
+  <meta name="govdash-build" content="2504-icicle-open" />
 </head>
 <body>
   <div class="shell">
@@ -243,7 +239,7 @@
         <iframe
           class="about-frame"
           id="about-frame"
-          src="about.html?v=2503"
+          src="about.html?v=2504"
           title="About GovDash — how to use and data sources"
         ></iframe>
       </section>
@@ -314,7 +310,7 @@
       </label>
     </footer>
   </div>
-  <script type="module" src="app.js?v=2503"></script>
+  <script type="module" src="app.js?v=2504"></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>

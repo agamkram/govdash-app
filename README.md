@@ -4,7 +4,7 @@ A citizen map of the U.S. federal hierarchy — how it’s organized, what’s n
 
 **Live:** GitHub → Vercel → [markmaga.com](https://markmaga.com) (GovDash). Layouts: Icicle, Tree, Circles, Sankey. How-to and glossary live in the in-app About page (`i`).
 
-The map remembers which chart you left on — not depth, zoom, ZIP, theme, or Heat.
+Each visit opens on Icicle. Nothing is remembered (not chart, depth, zoom, ZIP, theme, or Heat).
 
 ## Data (baked into the shipped tree)
 

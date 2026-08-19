@@ -3,7 +3,7 @@
  * Same bake as the map. Empty days stay empty.
  */
 
-import { HEAT_KIND_LABEL, displayName } from "../shared.js?v=2493";
+import { HEAT_KIND_LABEL, displayName } from "../shared.js?v=2504";
 
 const HORIZON_DAYS = 30;
 const WEEKDAYS = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];

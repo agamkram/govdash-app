@@ -14,7 +14,7 @@ import {
   HEAT_KIND_LABEL,
   syncHeatPulse,
   setHeatPulseSink,
-} from "./shared.js?v=2493";
+} from "./shared.js?v=2504";
 import { createIcicleView } from "./views/icicle.js?v=2493";
 import { createTreeView } from "./views/tree.js?v=2493";
 import { createPackView } from "./views/pack.js?v=2501";
@@ -35,28 +35,6 @@ const factories = {
   pack: createPackView,
   sankey: createSankeyView,
 };
-
-/** Persist only which chart (Icicle / Tree / Circles / Sankey) — nothing else. */
-const CHART_MODE_KEY = "govdash-chart-mode";
-
-function readSavedChartMode() {
-  try {
-    const m = localStorage.getItem(CHART_MODE_KEY);
-    if (m && factories[m]) return m;
-  } catch {
-    /* ignore */
-  }
-  return "icicle";
-}
-
-function saveChartMode(m) {
-  if (!factories[m]) return;
-  try {
-    localStorage.setItem(CHART_MODE_KEY, m);
-  } catch {
-    /* ignore */
-  }
-}
 
 /** Heat always starts off; not persisted (off label is the invite). */
 function readHeatOn() {
@@ -1365,7 +1343,6 @@ function mountView(nextMode, { preserve = true } = {}) {
   if (viewApi) viewApi.destroy();
   setHeatPulseSink(null);
   mode = nextMode;
-  saveChartMode(mode);
   setModeChrome();
 
   const opts = {
@@ -1462,8 +1439,8 @@ async function main() {
     }
   }
 
-  // Chart mode remembered; orientation / nest / focus / FY / pages stay fresh.
-  mode = readSavedChartMode();
+  // Fresh visit: Icicle. Orientation / nest / focus / FY / pages stay fresh too.
+  mode = "icicle";
   orientation = defaultOrientation();
   icicleNestLevels = defaultIcicleNestLevels();
 
