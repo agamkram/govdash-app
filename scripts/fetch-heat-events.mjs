@@ -120,12 +120,91 @@ function parseSenateFloorXml(xml) {
   return [...byId.values()];
 }
 
+/** YYYY-MM-DD for America/New_York, plus calendar-day offset. */
+function nyYmdPlus(offsetDays) {
+  const fmt = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/New_York",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+  const ymd = fmt.format(new Date());
+  const [y, m, d] = ymd.split("-").map(Number);
+  const utc = Date.UTC(y, m - 1, d + offsetDays);
+  const dd = new Date(utc);
+  const mm = String(dd.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(dd.getUTCDate()).padStart(2, "0");
+  return `${dd.getUTCFullYear()}-${mm}-${day}`;
+}
+
+/** Wall clock in a zone → ISO. House clerk times are Eastern. */
+function wallTimeToIso(ymd, hour, minute, tz = "America/New_York") {
+  const [y, mo, d] = ymd.split("-").map(Number);
+  let utc = Date.UTC(y, mo - 1, d, hour, minute, 0);
+  const partsOf = (ms) => {
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: tz,
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+    }).formatToParts(new Date(ms));
+    const get = (type) => Number(parts.find((p) => p.type === type)?.value);
+    let h = get("hour");
+    if (h === 24) h = 0;
+    return {
+      y: get("year"),
+      mo: get("month"),
+      d: get("day"),
+      h,
+      min: get("minute"),
+    };
+  };
+  const got = partsOf(utc);
+  const want = Date.UTC(y, mo - 1, d, hour, minute);
+  const asGot = Date.UTC(got.y, got.mo - 1, got.d, got.h, got.min);
+  utc += want - asGot;
+  return new Date(utc).toISOString();
+}
+
+function parseClock12(clock) {
+  const m = String(clock || "").match(/(\d{1,2}):(\d{2})\s*([AP]M)/i);
+  if (!m) return null;
+  let h = Number(m[1]);
+  const min = Number(m[2]);
+  const ap = m[3].toUpperCase();
+  if (ap === "PM" && h !== 12) h += 12;
+  if (ap === "AM" && h === 12) h = 0;
+  return { h, min };
+}
+
+function parseHouseSessionWhen(phrase) {
+  const rel = phrase.match(
+    /^(today|tomorrow|yesterday)\s+at\s+(\d{1,2}:\d{2}\s*[AP]M)$/i
+  );
+  if (rel) {
+    const which = rel[1].toLowerCase();
+    const offset = which === "today" ? 0 : which === "tomorrow" ? 1 : -1;
+    const clock = parseClock12(rel[2]);
+    if (clock) return wallTimeToIso(nyYmdPlus(offset), clock.h, clock.min);
+  }
+  const cleaned = phrase
+    .replace(/(\d+)(st|nd|rd|th)/gi, "$1")
+    .replace(/\bat\b/i, "");
+  const t = Date.parse(cleaned);
+  if (Number.isFinite(t)) return new Date(t).toISOString();
+  return null;
+}
+
 function parseHouseClerkHtml(html) {
   const events = [];
-  // "Next Session: August 17th, 2026 at 9:00 AM" (current clerk.house.gov)
-  // older: "The next meeting is scheduled for 9:00 a.m. on August 17, 2026"
+  // Dated: "Next Session: August 17th, 2026 at 9:00 AM"
+  // Relative (recess weeks flip to this): "Next Session: Tomorrow at 10:00 AM"
+  // Older: "The next meeting is scheduled for 9:00 a.m. on August 17, 2026"
   const patterns = [
-    /Next Session:\s*([A-Za-z]+\s+\d{1,2}(?:st|nd|rd|th)?,\s*\d{4}\s+at\s+\d{1,2}:\d{2}\s*[AP]M)/i,
+    /Next Session:\s*([^<\n]+)/i,
     /next meeting is scheduled for\s+([^.<]+?\d{4})/i,
   ];
   let phrase = null;
@@ -138,12 +217,7 @@ function parseHouseClerkHtml(html) {
   }
   if (!phrase) return events;
 
-  let when = null;
-  const cleaned = phrase
-    .replace(/(\d+)(st|nd|rd|th)/gi, "$1")
-    .replace(/\bat\b/i, "");
-  const t = Date.parse(cleaned);
-  if (Number.isFinite(t)) when = new Date(t).toISOString();
+  const when = parseHouseSessionWhen(phrase);
 
   events.push({
     id: `house-next-${(when || phrase).slice(0, 40)}`,
@@ -152,7 +226,7 @@ function parseHouseClerkHtml(html) {
     when: when || phrase,
     until: null,
     title: "House next session",
-    summary: "",
+    summary: phrase,
     url: "https://clerk.house.gov/",
     source: "Office of the Clerk, U.S. House",
     sourceUrl: "https://clerk.house.gov/",

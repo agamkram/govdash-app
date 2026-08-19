@@ -41,22 +41,22 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-08-18T17:34:31.937Z",
-      "asOf": "2026-08-18T17:33:24.282Z",
-      "nodesWithHeat": 3,
-      "nodesWithDirectHeat": 1,
-      "rawEventCount": 256,
+      "enrichedAt": "2026-08-19T14:16:43.713Z",
+      "asOf": "2026-08-19T14:15:13.601Z",
+      "nodesWithHeat": 5,
+      "nodesWithDirectHeat": 2,
+      "rawEventCount": 279,
       "matched": {
         "chamber": 0,
         "presidential": 0,
-        "publicInspection": 0,
+        "publicInspection": 1,
         "commentDeadlines": 1,
         "sunshine": 0,
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 87,
-      "unmatchedCommentDeadlines": 147,
+      "unmatchedPublicInspection": 107,
+      "unmatchedCommentDeadlines": 149,
       "unmatchedSunshine": 5,
       "sources": {
         "senateFloor": {
@@ -76,42 +76,42 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 87,
+          "count": 108,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
-          "count": 13,
-          "since": "2026-08-04",
+          "count": 12,
+          "since": "2026-08-05",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 148,
-          "start": "2026-08-18",
-          "end": "2026-09-16",
+          "count": 150,
+          "start": "2026-08-19",
+          "end": "2026-09-17",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
           "count": 5,
-          "start": "2026-08-18",
-          "end": "2026-09-16",
+          "start": "2026-08-19",
+          "end": "2026-09-17",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
-          "count": 0,
-          "start": "2026-08-18",
-          "end": "2026-09-16",
+          "count": 1,
+          "start": "2026-08-19",
+          "end": "2026-09-17",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "scotus": {
           "ok": true,
           "count": 0,
-          "start": "2026-08-18",
-          "end": "2026-09-16",
+          "start": "2026-08-19",
+          "end": "2026-09-17",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -131,8 +131,8 @@
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
     "heat": {
-      "asOf": "2026-08-18T17:33:24.282Z",
-      "count": 1,
+      "asOf": "2026-08-19T14:15:13.601Z",
+      "count": 2,
       "rolledUp": true,
       "events": [
         {
@@ -147,6 +147,21 @@
           "url": "http://www.regulations.gov/commenton/CNCS-2026-0299-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
+          "urgency": "upcoming",
+          "bill": null
+        },
+        {
+          "id": "fr-pi-2026-16968",
+          "kind": "public_inspection",
+          "when": "2026-08-20",
+          "until": null,
+          "filedAt": "2026-08-19T08:45:00.000-04:00",
+          "signedAt": null,
+          "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
+          "summary": "U.S. International Development Finance Corporation (from lower in the map)",
+          "url": "https://public-inspection.federalregister.gov/2026-16968.pdf",
+          "source": "Federal Register public inspection (PDF)",
+          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
           "urgency": "upcoming",
           "bill": null
         }
@@ -166,7 +181,7 @@
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
         "heat": {
-          "asOf": "2026-08-18T17:33:24.282Z",
+          "asOf": "2026-08-19T14:15:13.601Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -1772,7 +1787,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-18T17:33:24.282Z",
+              "asOf": "2026-08-19T14:15:13.601Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -2262,7 +2277,28 @@
           "usgm": null,
           "note": "∞ map door: Crosswalk International Governmental Organizations. Not U.S. agencies; tables the United States sits at."
         },
-        "heat": null,
+        "heat": {
+          "asOf": "2026-08-19T14:15:13.601Z",
+          "count": 1,
+          "rolledUp": true,
+          "events": [
+            {
+              "id": "fr-pi-2026-16968",
+              "kind": "public_inspection",
+              "when": "2026-08-20",
+              "until": null,
+              "filedAt": "2026-08-19T08:45:00.000-04:00",
+              "signedAt": null,
+              "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
+              "summary": "U.S. International Development Finance Corporation (from lower in the map)",
+              "url": "https://public-inspection.federalregister.gov/2026-16968.pdf",
+              "source": "Federal Register public inspection (PDF)",
+              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+              "urgency": "upcoming",
+              "bill": null
+            }
+          ]
+        },
         "children": [
           {
             "id": "gsa-1168",
@@ -3512,7 +3548,28 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": null,
+            "heat": {
+              "asOf": "2026-08-19T14:15:13.601Z",
+              "count": 1,
+              "rolledUp": false,
+              "events": [
+                {
+                  "id": "fr-pi-2026-16968",
+                  "kind": "public_inspection",
+                  "when": "2026-08-20",
+                  "until": null,
+                  "filedAt": "2026-08-19T08:45:00.000-04:00",
+                  "signedAt": null,
+                  "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
+                  "summary": "U.S. International Development Finance Corporation",
+                  "url": "https://public-inspection.federalregister.gov/2026-16968.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                }
+              ]
+            },
             "children": []
           },
           {
