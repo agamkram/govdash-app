@@ -201,7 +201,7 @@ html.pwa-standalone .shell {
   font-family: "IBM Plex Mono", ui-monospace, monospace;
   font-size: 0.78rem;
   font-weight: 600;
-  line-height: 1.15;
+  line-height: 1.35;
   letter-spacing: 0.01em;
   white-space: nowrap;
   cursor: pointer;
@@ -213,9 +213,13 @@ html.pwa-standalone .shell {
 }
 
 .heat-chip .heat-chip-text {
-  overflow: hidden;
+  /* Ellipsis sideways only — don’t clip descenders (g in Aug). */
+  overflow-x: hidden;
+  overflow-y: visible;
   text-overflow: ellipsis;
   font-variant-numeric: tabular-nums;
+  line-height: 1.35;
+  padding-bottom: 0.08em;
 }
 
 /* On: solid gold — lit pair of the off invite, not ink invert */
@@ -2346,8 +2350,8 @@ a.engage-label:hover {
     max-width: 50%;
     min-width: 0;
     font-size: 0.62rem;
-    padding: 0.22rem 0.28rem;
-    line-height: 1.1;
+    padding: 0.28rem 0.28rem 0.32rem;
+    line-height: 1.35;
   }
 
   .chrome {
