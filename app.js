@@ -22,6 +22,7 @@ import { createSankeyView } from "./views/sankey.js?v=2493";
 import { createFiscalPage } from "./views/fiscal.js?v=2493";
 import { createYouPage, YOU_NODES } from "./views/you.js?v=2493";
 import { createCalPage } from "./views/calendar.js?v=2503";
+import { createRefugeesPage } from "./views/refugees.js?v=2518";
 import { authorityLine } from "./authority.js?v=2493";
 import { createSpendYearController } from "./spend-year.js?v=2493";
 
@@ -175,6 +176,7 @@ const heatChipTextEl = document.getElementById("heat-chip-text");
 const btnFiscal = document.getElementById("btn-fiscal");
 const btnYou = document.getElementById("btn-you");
 const btnCal = document.getElementById("btn-cal");
+const btnRefugees = document.getElementById("btn-refugees");
 const btnAbout = document.getElementById("btn-about");
 const btnTheme = document.getElementById("btn-theme");
 const fiscalPageEl = document.getElementById("page-fiscal");
@@ -183,6 +185,8 @@ const youPageEl = document.getElementById("page-you");
 const youBack = document.getElementById("you-back");
 const calPageEl = document.getElementById("page-cal");
 const calBack = document.getElementById("cal-back");
+const refugeesPageEl = document.getElementById("page-refugees");
+const refugeesBack = document.getElementById("refugees-back");
 const aboutPageEl = document.getElementById("page-about");
 const aboutBack = document.getElementById("about-back");
 const mapEl = document.getElementById("map");
@@ -389,10 +393,19 @@ const calPage = createCalPage(calPageEl, {
     if (node) showDetail(node, { revealRoot: true });
   },
 });
+const refugeesPage = createRefugeesPage(refugeesPageEl);
 
 function pageName() {
   const h = location.hash.replace(/^#/, "");
-  if (h === "fiscal" || h === "you" || h === "cal" || h === "about") return h;
+  if (
+    h === "fiscal" ||
+    h === "you" ||
+    h === "cal" ||
+    h === "refugees" ||
+    h === "about"
+  ) {
+    return h;
+  }
   return "map";
 }
 
@@ -400,10 +413,12 @@ function hideAppPages() {
   fiscalPageEl.hidden = true;
   youPageEl.hidden = true;
   if (calPageEl) calPageEl.hidden = true;
+  if (refugeesPageEl) refugeesPageEl.hidden = true;
   if (aboutPageEl) aboutPageEl.hidden = true;
   btnFiscal?.classList.remove("is-active");
   btnYou?.classList.remove("is-active");
   btnCal?.classList.remove("is-active");
+  btnRefugees?.classList.remove("is-active");
   btnAbout?.classList.remove("is-active");
 }
 
@@ -440,6 +455,17 @@ function openCalPage() {
   calPage.show();
 }
 
+function openRefugeesPage() {
+  detailEl.hidden = true;
+  hideAppPages();
+  if (location.hash !== "#refugees") location.hash = "refugees";
+  shellEl.dataset.page = "refugees";
+  if (refugeesPageEl) refugeesPageEl.hidden = false;
+  btnRefugees?.classList.add("is-active");
+  syncBottomChrome();
+  refugeesPage.show();
+}
+
 function openAboutPage() {
   detailEl.hidden = true;
   hideAppPages();
@@ -456,10 +482,12 @@ function closeAppPage() {
     shellEl.dataset.page === "fiscal" ||
     shellEl.dataset.page === "you" ||
     shellEl.dataset.page === "cal" ||
+    shellEl.dataset.page === "refugees" ||
     shellEl.dataset.page === "about" ||
     pageName() === "fiscal" ||
     pageName() === "you" ||
     pageName() === "cal" ||
+    pageName() === "refugees" ||
     pageName() === "about";
   hideAppPages();
   shellEl.dataset.page = "map";
@@ -467,6 +495,7 @@ function closeAppPage() {
     location.hash === "#fiscal" ||
     location.hash === "#you" ||
     location.hash === "#cal" ||
+    location.hash === "#refugees" ||
     location.hash === "#about"
   ) {
     history.pushState("", document.title, location.pathname + location.search);
@@ -488,6 +517,7 @@ function syncPageFromHash() {
   if (p === "fiscal") openFiscalPage();
   else if (p === "you") openYouPage();
   else if (p === "cal") openCalPage();
+  else if (p === "refugees") openRefugeesPage();
   else if (p === "about") openAboutPage();
   else {
     closeAppPage();
@@ -1444,6 +1474,20 @@ async function main() {
   orientation = defaultOrientation();
   icicleNestLevels = defaultIcicleNestLevels();
 
+  // Don't reopen Z / C / R / $ / i from a leftover #hash (PWA / last URL).
+  {
+    const h = location.hash.replace(/^#/, "");
+    if (
+      h === "fiscal" ||
+      h === "you" ||
+      h === "cal" ||
+      h === "refugees" ||
+      h === "about"
+    ) {
+      history.replaceState("", document.title, location.pathname + location.search);
+    }
+  }
+
   applyRoot({ preserve: false });
   syncPageFromHash();
   syncBottomChrome();
@@ -1512,6 +1556,10 @@ async function main() {
     if (pageName() === "cal") closeAppPage();
     else openCalPage();
   });
+  btnRefugees?.addEventListener("click", () => {
+    if (pageName() === "refugees") closeAppPage();
+    else openRefugeesPage();
+  });
   btnAbout?.addEventListener("click", () => {
     if (pageName() === "about") closeAppPage();
     else openAboutPage();
@@ -1522,6 +1570,7 @@ async function main() {
   fiscalBack?.addEventListener("click", () => closeAppPage());
   youBack?.addEventListener("click", () => closeAppPage());
   calBack?.addEventListener("click", () => closeAppPage());
+  refugeesBack?.addEventListener("click", () => closeAppPage());
   aboutBack?.addEventListener("click", () => closeAppPage());
   document.getElementById("about-frame")?.addEventListener("load", () => {
     syncAboutTheme();

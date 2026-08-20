@@ -31,6 +31,7 @@
     "enrich:usgm": "node scripts/enrich-usgm.mjs",
     "fetch:leaders": "node scripts/fetch-leaders.mjs",
     "enrich:leaders": "node scripts/enrich-leaders.mjs",
+    "fetch:wraps": "node scripts/fetch-wraps.mjs",
     "curate": "node scripts/curate-product-tree.mjs",
     "pipeline": "npm run fetch && npm run build:tree && npm run enrich:sam && npm run enrich:usgm && npm run fetch:heat && npm run fetch:subtier && npm run fetch:workforce && npm run enrich:workforce && npm run fetch:population && npm run curate && npm run enrich:spending && npm run fetch:spend-history && npm run enrich:spend-years && npm run fetch:heat-events && npm run enrich:heat && npm run fetch:leaders && npm run enrich:leaders && npm run stats:about",
     "serve": "python3 serve-https.py"

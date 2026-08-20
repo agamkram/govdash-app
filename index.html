@@ -104,11 +104,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Michroma&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2502" />
-  <meta name="govdash-build" content="2507-house-hearings" />
+  <link rel="stylesheet" href="styles.css?v=2518" />
+  <meta name="govdash-build" content="2518-refugees" />
 </head>
 <body>
-  <div class="shell">
+  <div class="shell" data-page="map">
     <header class="chrome">
       <div class="chrome-top">
         <h1 class="brand">GovDash</h1>
@@ -141,6 +141,15 @@
               aria-label="Next 30 days"
             >
               C
+            </button>
+            <button
+              type="button"
+              id="btn-refugees"
+              class="btn btn-fiscal"
+              title="Refugee admissions"
+              aria-label="Refugee admissions"
+            >
+              R
             </button>
             <button
               type="button"
@@ -267,7 +276,7 @@
         <iframe
           class="about-frame"
           id="about-frame"
-          src="about.html?v=2507"
+          src="about.html?v=2518"
           title="About GovDash — how to use and data sources"
         ></iframe>
       </section>
@@ -309,6 +318,21 @@
         </div>
       </section>
 
+      <section class="app-page" id="page-refugees" hidden>
+        <div class="app-page-inner">
+          <p class="detail-kind">Refugees</p>
+          <h2>Who arrived</h2>
+          <p class="fiscal-lede">
+            U.S. Refugee Admissions Program numbers from State/PRM public reports.
+            National total, then states — tap a state for nationality. Snapshot — not live.
+          </p>
+          <div id="refugees-body"></div>
+          <p class="fiscal-actions">
+            <button type="button" id="refugees-back" class="btn">Map</button>
+          </p>
+        </div>
+      </section>
+
       <section class="app-page" id="page-fiscal" hidden>
         <div class="app-page-inner">
           <p class="detail-kind">Federal money</p>
@@ -338,7 +362,7 @@
       </label>
     </footer>
   </div>
-  <script type="module" src="app.js?v=2504"></script>
+  <script type="module" src="app.js?v=2518"></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>

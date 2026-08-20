@@ -326,7 +326,7 @@ html.pwa-standalone .shell {
 .mode-btn {
   font: inherit;
   font-size: 0.78rem;
-  padding: 0.35rem 0.6rem;
+  padding: 0.35rem 0.48rem;
   border: 0;
   border-right: 1px solid var(--line);
   background: transparent;
@@ -506,7 +506,16 @@ html.pwa-standalone .shell {
 .shell[data-page="cal"] .map,
 .shell[data-page="cal"] .map-tip,
 .shell[data-page="cal"] .scrub-coach,
-.shell[data-page="cal"] .detail-pane {
+.shell[data-page="cal"] .detail-pane,
+.shell[data-page="refugees"] .search-row,
+.shell[data-page="refugees"] .search-wrap,
+.shell[data-page="refugees"] .breadcrumbs,
+.shell[data-page="refugees"] .chrome-subline,
+.shell[data-page="refugees"] .chrome-bottom,
+.shell[data-page="refugees"] .map,
+.shell[data-page="refugees"] .map-tip,
+.shell[data-page="refugees"] .scrub-coach,
+.shell[data-page="refugees"] .detail-pane {
   display: none !important;
 }
 
@@ -1054,6 +1063,10 @@ html[data-theme="dark"] .fiscal-agency-amt {
 
 .fiscal-actions {
   margin: 1.25rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
 }
 
 .you-form {
@@ -1126,6 +1139,141 @@ html[data-theme="dark"] .fiscal-agency-amt {
   flex-wrap: wrap;
   gap: 0.35rem;
   margin: 0.65rem 0 0;
+}
+
+.refugees-hero {
+  margin: 0 0 1rem;
+}
+
+.refugees-kicker {
+  margin: 0;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+.refugees-total {
+  margin: 0.2rem 0 0;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 2.35rem;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+}
+
+.refugees-sub {
+  margin: 0.25rem 0 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.refugees-h {
+  margin: 1rem 0 0.45rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.refugees-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.refugees-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.28rem 0;
+  font-size: 0.88rem;
+}
+
+.refugees-list > .refugees-row {
+  border-bottom: 1px solid var(--line);
+}
+
+.refugees-name {
+  min-width: 0;
+}
+
+.refugees-num {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.refugees-block > .refugees-row .refugees-num,
+.refugees-national-subs .refugees-num {
+  color: var(--accent);
+}
+
+.refugees-state-btn {
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: inherit;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+  min-width: 0;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.refugees-state-btn:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.refugees-state-btn[aria-expanded="true"] {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.refugees-block {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.refugees-block > .refugees-row {
+  border-bottom: 0;
+  padding: 0.35rem 0;
+}
+
+.refugees-nations {
+  list-style: none;
+  margin: 0 0 0.45rem;
+  padding: 0 0 0.15rem 0.85rem;
+}
+
+.refugees-national-subs {
+  margin: 0.45rem 0 0;
+  padding-left: 0;
+}
+
+.refugees-national-subs .refugees-nation {
+  color: var(--ink);
+  font-size: 0.88rem;
+  padding: 0.22rem 0;
+}
+
+.refugees-nation {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.18rem 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.refugees-nation .refugees-num {
+  color: var(--ink);
 }
 
 .breadcrumbs {
@@ -1356,14 +1504,16 @@ html.pwa-standalone.is-tablet:not(.has-depth) .map {
 .shell[data-page="fiscal"] .app-page,
 .shell[data-page="you"] .app-page,
 .shell[data-page="about"] .app-page,
-.shell[data-page="cal"] .app-page {
+.shell[data-page="cal"] .app-page,
+.shell[data-page="refugees"] .app-page {
   bottom: 0;
 }
 
 html.pwa-standalone .shell[data-page="fiscal"] .app-page,
 html.pwa-standalone .shell[data-page="you"] .app-page,
 html.pwa-standalone .shell[data-page="about"] .app-page,
-html.pwa-standalone .shell[data-page="cal"] .app-page {
+html.pwa-standalone .shell[data-page="cal"] .app-page,
+html.pwa-standalone .shell[data-page="refugees"] .app-page {
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
@@ -2164,33 +2314,49 @@ a.engage-label:hover {
     border-bottom: 0;
   }
 
-  /* Phone: Find half, Heat half. */
+  /* Phone: Find half, Heat half — shorter; top tools do the work. */
   .search-row {
     width: 100%;
     max-width: 100%;
+    gap: 0.28rem;
   }
 
   .search-wrap {
     width: auto;
     max-width: none;
     flex: 1 1 50%;
+    min-width: 0;
+  }
+
+  #search {
+    padding: 0.22rem 1.6rem 0.22rem 0.4rem;
+    font-size: 0.78rem;
+  }
+
+  .search-refresh {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.4rem;
+    height: 1.4rem;
+    font-size: 0.85rem;
   }
 
   .heat-chip {
     flex: 1 1 50%;
     max-width: 50%;
     min-width: 0;
-    font-size: 0.72rem;
-    padding: 0.4rem 0.4rem;
+    font-size: 0.62rem;
+    padding: 0.22rem 0.28rem;
+    line-height: 1.1;
   }
 
   .chrome {
-    gap: 0.28rem;
-    padding: 0 0.65rem 0.28rem;
+    gap: 0.22rem;
+    padding: 0 0.65rem 0.22rem;
   }
 
   .chrome-top {
-    gap: 0.28rem;
+    gap: 0.22rem;
   }
 
   .brand {
@@ -2200,14 +2366,16 @@ a.engage-label:hover {
     padding-top: 0;
   }
 
+  /* One tools row: use the gap for padding, not empty space between groups. */
   .chrome-tools {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 0.28rem;
+    width: 100%;
   }
 
   .chrome-aside {
-    gap: 0.28rem;
+    gap: 0.22rem;
     flex-shrink: 0;
   }
 
@@ -2257,8 +2425,7 @@ a.engage-label:hover {
 
   .mode-toggle,
   .orient-toggle {
-    flex-shrink: 1;
-    min-width: 0;
+    flex-shrink: 0;
   }
 
   .icicle-depth output {
@@ -2267,24 +2434,26 @@ a.engage-label:hover {
   }
 
   .mode-btn {
-    padding: 0.28rem 0.32rem;
-    font-size: 0.65rem;
+    padding: 0.32rem 0.28rem;
+    font-size: 0.66rem;
+    flex: 0 0 auto;
+    white-space: nowrap;
   }
 
   .orient-btn {
-    padding: 0.28rem 0.38rem;
-    font-size: 0.72rem;
+    padding: 0.32rem 0.36rem;
+    font-size: 0.7rem;
   }
 
   .chrome-aside .btn {
-    padding: 0.28rem 0.45rem;
-    font-size: 0.68rem;
+    padding: 0.3rem 0.34rem;
+    font-size: 0.7rem;
   }
 
   .btn-fiscal {
-    padding: 0.18rem 0.3rem;
-    font-size: 0.62rem;
-    min-width: 1.15rem;
+    padding: 0.28rem 0.3rem;
+    font-size: 0.68rem;
+    min-width: 1.2rem;
   }
 
   .app-page-inner {
