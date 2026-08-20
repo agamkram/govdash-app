@@ -53,11 +53,21 @@ def draw_cascade(size: int, *, maskable: bool = False) -> Image.Image:
 
 
 def main() -> None:
+    # New filenames so Safari drops the old map-pin tab favicon cache.
+    draw_cascade(512).save(ROOT / "icon-cascade-512.png", optimize=True)
+    draw_cascade(192).save(ROOT / "icon-cascade-192.png", optimize=True)
+    draw_cascade(512, maskable=True).save(
+        ROOT / "icon-cascade-maskable-512.png", optimize=True
+    )
+    draw_cascade(180).save(ROOT / "apple-touch-icon-cascade.png", optimize=True)
+    # Keep legacy paths in sync for any bookmarked / cached deep links.
     draw_cascade(512).save(ROOT / "icon-512.png", optimize=True)
     draw_cascade(192).save(ROOT / "icon-192.png", optimize=True)
     draw_cascade(512, maskable=True).save(ROOT / "icon-maskable-512.png", optimize=True)
     draw_cascade(180).save(ROOT / "apple-touch-icon.png", optimize=True)
-    print("Wrote icon-192, icon-512, icon-maskable-512, apple-touch-icon")
+    print(
+        "Wrote icon-cascade-192/512, apple-touch-icon-cascade (+ legacy names)"
+    )
 
 
 if __name__ == "__main__":

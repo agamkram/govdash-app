@@ -31,9 +31,13 @@ const files = [
   "authority.js",
   "spend-year.js",
   "apple-touch-icon.png",
+  "apple-touch-icon-cascade.png",
   "icon-192.png",
   "icon-512.png",
   "icon-maskable-512.png",
+  "icon-cascade-192.png",
+  "icon-cascade-512.png",
+  "icon-cascade-maskable-512.png",
   "robots.txt",
   "sitemap.xml",
 ];
