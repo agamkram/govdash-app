@@ -1,9 +1,9 @@
 {
-  "fetchedAt": "2026-08-20T15:55:55.709Z",
+  "fetchedAt": "2026-08-20T19:07:08.723Z",
   "sources": {
     "senateFloor": {
       "ok": true,
-      "count": 3,
+      "count": 2,
       "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
     },
     "houseClerk": {
@@ -49,6 +49,15 @@
       "end": "2026-09-18",
       "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
     },
+    "houseHearings": {
+      "ok": true,
+      "count": 2,
+      "start": "2026-08-20",
+      "end": "2026-09-18",
+      "congress": 119,
+      "calendarIds": 2,
+      "url": "https://api.congress.gov/v3/committee-meeting/119/house"
+    },
     "scotus": {
       "ok": true,
       "count": 0,
@@ -58,19 +67,6 @@
     }
   },
   "events": [
-    {
-      "id": "senate-next-2026-08-20T11:30:00-04:00",
-      "kind": "floor_session",
-      "chamber": "Senate",
-      "when": "2026-08-20T11:30:00-04:00",
-      "until": null,
-      "title": "Senate next convenes",
-      "summary": "",
-      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-      "source": "Senate.gov floor schedule XML",
-      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-      "urgency": "upcoming"
-    },
     {
       "id": "senate-floor-2026-08-20T11:30:02-04:00",
       "kind": "floor_session",
@@ -556,10 +552,10 @@
       "when": "2026-08-21",
       "until": null,
       "filedAt": "2026-08-20T08:45:00.000-04:00",
-      "title": "Charter Amendments, Establishments, Renewals and Terminations: Federal Advisory Committee—Reserve Forces Policy Board",
+      "title": "Charter Amendments, Establishments, Renewals and Terminations: Federal Advisory Committee - Reserve Forces Policy Board",
       "summary": "Defense Department",
       "url": "https://public-inspection.federalregister.gov/2026-17065.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-17065/charter-amendments-establishments-renewals-and-terminations-federal-advisory-committeereserve-forces",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-17065/charter-amendments-establishments-renewals-and-terminations-federal-advisory-committee---reserve",
       "pdfUrl": "https://public-inspection.federalregister.gov/2026-17065.pdf",
       "source": "Federal Register public inspection (PDF)",
       "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
@@ -5757,6 +5753,38 @@
       "source": "Senate.gov committee hearings XML",
       "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
       "urgency": "upcoming"
+    },
+    {
+      "id": "house-hearing-119504",
+      "kind": "hearing",
+      "chamber": "House",
+      "committee": "Committee on House Administration",
+      "when": "2026-08-20T14:00:00Z",
+      "until": null,
+      "title": "Committee on House Administration Joint Deposition of Matt DeBergalis",
+      "summary": "Committee on House Administration · Meeting · Scheduled · Rayburn House Office Building 2237",
+      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119504",
+      "source": "Congress.gov committee meeting API",
+      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+      "urgency": "upcoming",
+      "eventId": "119504",
+      "meetingType": "Meeting"
+    },
+    {
+      "id": "house-hearing-119501",
+      "kind": "hearing",
+      "chamber": "House",
+      "committee": "House Education and Workforce",
+      "when": "2026-08-25T15:30:00Z",
+      "until": null,
+      "title": "“Deployed, Not Disqualified: Defending Servicemembers in Our Schools”",
+      "summary": "House Education and Workforce · Hearing · Scheduled",
+      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119501",
+      "source": "Congress.gov committee meeting API",
+      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+      "urgency": "upcoming",
+      "eventId": "119501",
+      "meetingType": "Hearing"
     }
   ]
 }

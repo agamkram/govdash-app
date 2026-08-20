@@ -1,20 +1,23 @@
 #!/usr/bin/env node
 /**
  * Fetch official "what's happening" caches for Heat.
- * Free endpoints only (no Congress.gov key required).
+ * Most sources are free with no key. House committee meetings use
+ * Congress.gov (CONGRESS_API_KEY in .env) + docs.house.gov calendar IDs.
  *
  *   npm run fetch:heat-events
  *   npm run fetch:heat-events -- --force
  */
-import { mkdir, writeFile, access } from "node:fs/promises";
+import { mkdir, writeFile, access, readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = join(ROOT, "data", "raw", "heat");
 const EVENTS_PATH = join(OUT, "events-raw.json");
+const ENV_PATH = join(ROOT, ".env");
 
 const UA = "GovDash/1 (citizen map; +https://govdash.markmaga.com)";
+const CONGRESS_API = "https://api.congress.gov/v3";
 
 function parseArgs(argv) {
   const opts = { force: false };
@@ -45,6 +48,113 @@ async function getJson(url) {
   });
   if (!r.ok) throw new Error(`${url} → HTTP ${r.status}`);
   return r.json();
+}
+
+async function loadCongressKey() {
+  try {
+    const text = await readFile(ENV_PATH, "utf8");
+    const m = text.match(/^CONGRESS_API_KEY=(.+)$/m);
+    if (!m) return null;
+    const key = m[1].trim();
+    return key || null;
+  } catch {
+    return null;
+  }
+}
+
+/** U.S. Congress number for a calendar date (new Congress Jan 3 of odd years). */
+function congressNumber(d = new Date()) {
+  let y = d.getFullYear();
+  if (d.getMonth() === 0 && d.getDate() < 3) y -= 1;
+  return Math.floor((y - 1789) / 2) + 1;
+}
+
+function eachYmd(start, end) {
+  const out = [];
+  let t = Date.parse(`${start}T12:00:00Z`);
+  const last = Date.parse(`${end}T12:00:00Z`);
+  while (Number.isFinite(t) && t <= last) {
+    out.push(new Date(t).toISOString().slice(0, 10));
+    t += 864e5;
+  }
+  return out;
+}
+
+/** docs.house.gov day calendar → EventIDs in the Heat window (no API key). */
+async function discoverHouseEventIds(start, end) {
+  const ids = new Set();
+  for (const ymd of eachYmd(start, end)) {
+    const [y, m, d] = ymd.split("-");
+    const dayId = `${m}${d}${y}`;
+    const html = await getText(
+      `https://docs.house.gov/Committee/Calendar/ByDay.aspx?DayID=${dayId}`
+    );
+    for (const id of html.matchAll(/EventID=(\d+)/g)) ids.add(id[1]);
+  }
+  return [...ids];
+}
+
+function mapHouseCommitteeMeeting(detail, eventId) {
+  const cm = detail?.committeeMeeting || detail;
+  if (!cm) return null;
+  const status = String(cm.meetingStatus || "");
+  if (/canceled|cancelled/i.test(status)) return null;
+  const whenRaw = cm.date;
+  if (!whenRaw) return null;
+  const when = String(whenRaw);
+  const type = String(cm.type || "Meeting").trim() || "Meeting";
+  const committees = Array.isArray(cm.committees)
+    ? cm.committees.map((c) => c.name || c).filter(Boolean)
+    : [];
+  const committee = committees[0] || "House committee";
+  const title = String(cm.title || "")
+    .replace(/\s+/g, " ")
+    .trim();
+  const loc = cm.location || {};
+  const room = [loc.building, loc.room].filter(Boolean).join(" ");
+  const citizenUrl = `https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=${eventId}`;
+  return {
+    id: `house-hearing-${eventId}`,
+    kind: "hearing",
+    chamber: "House",
+    committee,
+    when,
+    until: null,
+    title: title || `${committee} ${type.toLowerCase()}`,
+    summary: [committee, type, status, room].filter(Boolean).join(" · "),
+    url: citizenUrl,
+    source: "Congress.gov committee meeting API",
+    sourceUrl: `${CONGRESS_API}/committee-meeting`,
+    urgency: "upcoming",
+    eventId: String(eventId),
+    meetingType: type,
+  };
+}
+
+/**
+ * House committee hearings / markups / meetings on the House box
+ * (committees are not separate map places — same pattern as Senate).
+ */
+async function fetchHouseHearings(start, end) {
+  const key = await loadCongressKey();
+  if (!key) {
+    throw new Error("CONGRESS_API_KEY missing in .env");
+  }
+  const congress = congressNumber();
+  const eventIds = await discoverHouseEventIds(start, end);
+  const events = [];
+  for (const eventId of eventIds) {
+    const url =
+      `${CONGRESS_API}/committee-meeting/${congress}/house/${eventId}` +
+      `?format=json&api_key=${encodeURIComponent(key)}`;
+    const detail = await getJson(url);
+    const mapped = mapHouseCommitteeMeeting(detail, eventId);
+    if (!mapped) continue;
+    const day = String(mapped.when).slice(0, 10);
+    if (day < start || day > end) continue;
+    events.push(mapped);
+  }
+  return { events, congress, eventIds: eventIds.length };
 }
 
 function xmlTag(block, tag) {
@@ -783,6 +893,30 @@ async function main() {
   } catch (e) {
     pack.sources.senateHearings = { ok: false, error: String(e.message || e) };
     console.warn("Senate hearings failed:", e.message || e);
+  }
+
+  // House committee meetings (Congress.gov + docs.house.gov calendar IDs).
+  try {
+    const { events: list, congress, eventIds } = await fetchHouseHearings(
+      start,
+      end
+    );
+    pack.sources.houseHearings = {
+      ok: true,
+      count: list.length,
+      start,
+      end,
+      congress,
+      calendarIds: eventIds,
+      url: `${CONGRESS_API}/committee-meeting/${congress}/house`,
+    };
+    pack.events.push(...list);
+    console.log(
+      `House hearings: ${list.length} (from ${eventIds} calendar ids, ${congress}th)`
+    );
+  } catch (e) {
+    pack.sources.houseHearings = { ok: false, error: String(e.message || e) };
+    console.warn("House hearings failed:", e.message || e);
   }
 
   // SCOTUS argument days from the official calendars page (PDFs / session starts).

@@ -41,11 +41,11 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-08-20T15:56:40.047Z",
-      "asOf": "2026-08-20T15:55:55.709Z",
+      "enrichedAt": "2026-08-20T19:08:06.491Z",
+      "asOf": "2026-08-20T19:07:08.723Z",
       "nodesWithHeat": 3,
       "nodesWithDirectHeat": 1,
-      "rawEventCount": 292,
+      "rawEventCount": 293,
       "matched": {
         "chamber": 0,
         "presidential": 0,
@@ -61,7 +61,7 @@
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 3,
+          "count": 2,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
@@ -107,6 +107,15 @@
           "end": "2026-09-18",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
+        "houseHearings": {
+          "ok": true,
+          "count": 2,
+          "start": "2026-08-20",
+          "end": "2026-09-18",
+          "congress": 119,
+          "calendarIds": 2,
+          "url": "https://api.congress.gov/v3/committee-meeting/119/house"
+        },
         "scotus": {
           "ok": true,
           "count": 0,
@@ -131,7 +140,7 @@
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
     "heat": {
-      "asOf": "2026-08-20T15:55:55.709Z",
+      "asOf": "2026-08-20T19:07:08.723Z",
       "count": 1,
       "rolledUp": true,
       "events": [
@@ -166,7 +175,7 @@
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
         "heat": {
-          "asOf": "2026-08-20T15:55:55.709Z",
+          "asOf": "2026-08-20T19:07:08.723Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -1772,7 +1781,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-20T15:55:55.709Z",
+              "asOf": "2026-08-20T19:07:08.723Z",
               "count": 1,
               "rolledUp": false,
               "events": [
