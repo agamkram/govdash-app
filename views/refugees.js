@@ -3,7 +3,7 @@
  * Baked snapshot — not live. Tap a state to expand nationalities.
  */
 
-const WRAPS_URL = "./data/nested/wraps.json?v=2518";
+const WRAPS_URL = "./data/nested/wraps.json?v=2522";
 
 function el(tag, cls, text) {
   const n = document.createElement(tag);
@@ -50,6 +50,11 @@ export function createRefugeesPage(root) {
     const hero = el("div", "refugees-hero");
     hero.append(el("p", "refugees-kicker", `FY${data.fiscalYear || "—"} admissions`));
     hero.append(el("p", "refugees-total", fmt(data.admissions?.total)));
+    if (data.admissions?.ceiling != null) {
+      hero.append(
+        el("p", "refugees-sub", `of ${fmt(data.admissions.ceiling)} ceiling`)
+      );
+    }
     const countries = [...(data.admissions?.byCountry || [])].sort(
       (a, b) =>
         (b.total || 0) - (a.total || 0) ||
@@ -65,14 +70,6 @@ export function createRefugeesPage(root) {
       }
       hero.append(nest);
     }
-    const subBits = [];
-    if (data.admissions?.ceiling != null) {
-      subBits.push(`ceiling ${fmt(data.admissions.ceiling)}`);
-    }
-    if (data.asOfLabel || data.asOf) {
-      subBits.push(`as of ${data.asOfLabel || data.asOf}`);
-    }
-    if (subBits.length) hero.append(el("p", "refugees-sub", subBits.join(" · ")));
     if (data.period) hero.append(el("p", "fiscal-note", data.period));
     body.append(hero);
 
