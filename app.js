@@ -22,7 +22,7 @@ import { createSankeyView } from "./views/sankey.js?v=2493";
 import { createFiscalPage } from "./views/fiscal.js?v=2493";
 import { createYouPage, YOU_NODES } from "./views/you.js?v=2493";
 import { createCalPage } from "./views/calendar.js?v=2503";
-import { createRefugeesPage } from "./views/refugees.js?v=2531";
+import { createRefugeesPage } from "./views/refugees.js?v=2532";
 import { authorityLine } from "./authority.js?v=2493";
 import { createSpendYearController } from "./spend-year.js?v=2493";
 

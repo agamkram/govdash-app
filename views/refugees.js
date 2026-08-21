@@ -3,10 +3,10 @@
  * Cards: NIV · IV · USRAP · SIV · Border. No merged total.
  */
 
-const WRAPS_URL = "./data/nested/wraps.json?v=2531";
-const SIV_URL = "./data/nested/siv.json?v=2531";
-const CBP_URL = "./data/nested/cbp-encounters.json?v=2531";
-const VISAS_URL = "./data/nested/visas.json?v=2531";
+const WRAPS_URL = "./data/nested/wraps.json?v=2532";
+const SIV_URL = "./data/nested/siv.json?v=2532";
+const CBP_URL = "./data/nested/cbp-encounters.json?v=2532";
+const VISAS_URL = "./data/nested/visas.json?v=2532";
 
 function el(tag, cls, text) {
   const n = document.createElement(tag);
@@ -48,6 +48,8 @@ export function createRefugeesPage(root) {
   /** @type {"home" | "niv" | "iv" | "usrap" | "siv" | "cbp"} */
   let view = "home";
   let openState = "";
+  /** @type {"southwest" | "northern" | "other" | "nationwide"} */
+  let cbpRegion = "southwest";
 
   function setChrome(kind, title, lede) {
     if (kindEl) kindEl.textContent = kind;
@@ -435,80 +437,82 @@ export function createRefugeesPage(root) {
 
   function renderCbp() {
     const data = cbp;
+    const regionMeta = [
+      { id: "southwest", short: "Southwest", pack: data.southwest },
+      { id: "northern", short: "Northern", pack: data.northern },
+      { id: "other", short: "Other", pack: data.other },
+      { id: "nationwide", short: "Nationwide", pack: data.nationwide },
+    ].filter((r) => r.pack && r.pack.latestTotal != null);
+
+    if (!regionMeta.some((r) => r.id === cbpRegion)) cbpRegion = "southwest";
+    const active =
+      regionMeta.find((r) => r.id === cbpRegion) || regionMeta[0] || null;
+    const pack = active?.pack || {
+      latestTotal: data.latestTotal,
+      fytdTotal: data.fytdTotal,
+      months: data.months || [],
+      byDemographic: data.byDemographic || [],
+    };
+
     setChrome(
       "Border",
       "CBP encounters",
-      "Southwest leads the card; northern and nationwide are the same month from CBP."
+      "Pick a region — same month from CBP. Card on the home list still leads with Southwest."
     );
     body.replaceChildren();
     body.append(
       backRow(() => {
         view = "home";
         openState = "";
+        cbpRegion = "southwest";
         render();
       })
     );
 
+    if (regionMeta.length) {
+      const toggle = el("div", "flows-region-toggle");
+      toggle.setAttribute("role", "group");
+      toggle.setAttribute("aria-label", "CBP encounter region");
+      for (const r of regionMeta) {
+        const btn = el("button", "flows-region-btn");
+        btn.type = "button";
+        if (r.id === cbpRegion) btn.classList.add("is-active");
+        btn.setAttribute("aria-pressed", r.id === cbpRegion ? "true" : "false");
+        btn.append(el("span", "flows-region-name", r.short));
+        btn.append(el("span", "flows-region-count", fmt(r.pack.latestTotal)));
+        btn.addEventListener("click", () => {
+          cbpRegion = r.id;
+          render();
+        });
+        toggle.append(btn);
+      }
+      body.append(toggle);
+    }
+
     const hero = el("div", "refugees-hero");
     const head = el("div", "flows-card-head");
     head.append(
-      el("p", "refugees-kicker", `${data.asOfLabel || "Latest month"} · Southwest`)
+      el(
+        "p",
+        "refugees-kicker",
+        `${data.asOfLabel || "Latest month"} · ${active?.short || "Southwest"}`
+      )
     );
     head.append(cadencePill());
     hero.append(head);
-    hero.append(el("p", "refugees-total", fmt(data.latestTotal)));
+    hero.append(el("p", "refugees-total", fmt(pack.latestTotal)));
     hero.append(
       el(
         "p",
         "refugees-sub",
-        `FY${data.fiscalYear || "—"} YTD ${fmt(data.fytdTotal)} · SW land`
+        `FY${data.fiscalYear || "—"} YTD ${fmt(pack.fytdTotal)}`
       )
     );
     body.append(hero);
 
-    const regions = [
-      {
-        name: "Southwest land",
-        latest: data.southwest?.latestTotal ?? data.latestTotal,
-        fytd: data.southwest?.fytdTotal ?? data.fytdTotal,
-      },
-      {
-        name: "Northern land",
-        latest: data.northern?.latestTotal,
-        fytd: data.northern?.fytdTotal,
-      },
-      {
-        name: "Other",
-        latest: data.other?.latestTotal,
-        fytd: data.other?.fytdTotal,
-      },
-      {
-        name: "Nationwide",
-        latest: data.nationwide?.latestTotal,
-        fytd: data.nationwide?.fytdTotal,
-      },
-    ].filter((r) => r.latest != null);
-
-    if (regions.length) {
-      body.append(el("h3", "refugees-h", `${data.asOfLabel || "Latest"} · by region`));
-      const ul = el("ul", "refugees-list");
-      for (const r of regions) {
-        const row = el("li", "refugees-row");
-        row.append(el("span", "refugees-name", r.name));
-        const right = el("span", "refugees-num");
-        right.textContent =
-          r.fytd != null
-            ? `${fmt(r.latest)} · YTD ${fmt(r.fytd)}`
-            : fmt(r.latest);
-        row.append(right);
-        ul.append(row);
-      }
-      body.append(ul);
-    }
-
-    const demos = data.byDemographic || [];
+    const demos = pack.byDemographic || [];
     if (demos.length) {
-      body.append(el("h3", "refugees-h", `Southwest · by group`));
+      body.append(el("h3", "refugees-h", `By group`));
       const ul = el("ul", "refugees-list");
       for (const d of demos) {
         const row = el("li", "refugees-row");
@@ -519,10 +523,10 @@ export function createRefugeesPage(root) {
       body.append(ul);
     }
 
-    const months = data.southwest?.months || data.months || [];
+    const months = pack.months || [];
     if (months.length) {
       body.append(
-        el("h3", "refugees-h", `Southwest · FY${data.fiscalYear || ""} by month`)
+        el("h3", "refugees-h", `FY${data.fiscalYear || ""} by month`)
       );
       const ul = el("ul", "refugees-list");
       for (const m of [...months].reverse()) {
@@ -572,6 +576,7 @@ export function createRefugeesPage(root) {
   async function show() {
     view = "home";
     openState = "";
+    cbpRegion = "southwest";
     setNote("Loading…");
     try {
       const results = await Promise.allSettled([

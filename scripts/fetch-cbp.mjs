@@ -147,18 +147,22 @@ function regionKey(label) {
   return null;
 }
 
-function packRegion(byMonth) {
+function packRegion(byMonth, byDemo) {
   const present = [...byMonth.keys()].sort(
     (a, b) => (MONTHS[a] || 0) - (MONTHS[b] || 0)
   );
   const latest = present.at(-1) || null;
   const latestTotal = latest ? byMonth.get(latest) || 0 : 0;
   const fytdTotal = [...byMonth.values()].reduce((a, b) => a + b, 0);
+  const byDemographic = [...(byDemo?.entries?.() || [])]
+    .map(([name, total]) => ({ name, total }))
+    .sort((a, b) => b.total - a.total || a.name.localeCompare(b.name));
   return {
     latestMonth: latest,
     latestTotal,
     fytdTotal,
     months: present.map((m) => ({ month: m, total: byMonth.get(m) || 0 })),
+    byDemographic,
   };
 }
 
@@ -210,27 +214,47 @@ async function bake(csvPath, sourceUrl) {
     );
   }
 
-  const southwest = packRegion(byRegionMonth.southwest);
-  const northern = packRegion(byRegionMonth.northern);
-  const other = packRegion(byRegionMonth.other);
-  const nationwide = packRegion(byRegionMonth.nationwide);
+  // Latest month from SW (or nationwide) for demographic slice.
+  const monthOrder = [...byRegionMonth.southwest.keys()].sort(
+    (a, b) => (MONTHS[a] || 0) - (MONTHS[b] || 0)
+  );
+  const latest =
+    monthOrder.at(-1) ||
+    [...byRegionMonth.nationwide.keys()].sort(
+      (a, b) => (MONTHS[a] || 0) - (MONTHS[b] || 0)
+    ).at(-1) ||
+    null;
 
-  const latest = southwest.latestMonth || nationwide.latestMonth;
-  const fiscalYear = Number(String(fytd).match(/20\d{2}/)?.[0] || 0) || null;
-
-  // SW latest-month demographics (same slice the old SBO card showed)
-  const latestDemo = new Map();
+  const byRegionDemo = {
+    southwest: new Map(),
+    northern: new Map(),
+    other: new Map(),
+    nationwide: new Map(),
+  };
   for (const r of fyRows) {
     if (r["Month (abbv)"] !== latest) continue;
-    if (regionKey(r["Land Border Region"]) !== "southwest") continue;
     const n = Number(r["Encounter Count"] || 0);
     if (!Number.isFinite(n)) continue;
     const demo = r.Demographic || "Other";
-    latestDemo.set(demo, (latestDemo.get(demo) || 0) + n);
+    const key = regionKey(r["Land Border Region"]);
+    if (key) {
+      byRegionDemo[key].set(demo, (byRegionDemo[key].get(demo) || 0) + n);
+    }
+    byRegionDemo.nationwide.set(
+      demo,
+      (byRegionDemo.nationwide.get(demo) || 0) + n
+    );
   }
-  const demoRows = [...latestDemo.entries()]
-    .map(([name, total]) => ({ name, total }))
-    .sort((a, b) => b.total - a.total || a.name.localeCompare(b.name));
+
+  const southwest = packRegion(byRegionMonth.southwest, byRegionDemo.southwest);
+  const northern = packRegion(byRegionMonth.northern, byRegionDemo.northern);
+  const other = packRegion(byRegionMonth.other, byRegionDemo.other);
+  const nationwide = packRegion(
+    byRegionMonth.nationwide,
+    byRegionDemo.nationwide
+  );
+
+  const fiscalYear = Number(String(fytd).match(/20\d{2}/)?.[0] || 0) || null;
 
   let asOfLabel = latest || "—";
   if (latest && fiscalYear) {
@@ -252,7 +276,7 @@ async function bake(csvPath, sourceUrl) {
     northern,
     other,
     nationwide,
-    byDemographic: demoRows,
+    byDemographic: southwest.byDemographic,
     months: southwest.months,
     sourceName: "CBP encounters (nationwide CSV)",
     sourceUrl: NW_PAGE,

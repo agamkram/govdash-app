@@ -1231,6 +1231,63 @@ html[data-theme="dark"] .fiscal-agency-amt {
   margin: 0 0 0.75rem;
 }
 
+.flows-region-toggle {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.4rem;
+  margin: 0 0 0.85rem;
+}
+
+@media (min-width: 520px) {
+  .flows-region-toggle {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.flows-region-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem;
+  margin: 0;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 0.45rem;
+  background: color-mix(in srgb, var(--panel, var(--bg)) 92%, var(--ink) 8%);
+  color: var(--muted);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.flows-region-btn:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.flows-region-btn.is-active {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.flows-region-name {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.flows-region-count {
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  color: inherit;
+}
+
+.flows-region-btn.is-active .flows-region-count {
+  color: inherit;
+}
+
 .flows-row-left {
   min-width: 0;
   display: flex;
