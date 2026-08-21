@@ -3,10 +3,10 @@
  * Cards: NIV · IV · USRAP · SIV · Border. No merged total.
  */
 
-const WRAPS_URL = "./data/nested/wraps.json?v=2530";
-const SIV_URL = "./data/nested/siv.json?v=2530";
-const CBP_URL = "./data/nested/cbp-encounters.json?v=2530";
-const VISAS_URL = "./data/nested/visas.json?v=2530";
+const WRAPS_URL = "./data/nested/wraps.json?v=2531";
+const SIV_URL = "./data/nested/siv.json?v=2531";
+const CBP_URL = "./data/nested/cbp-encounters.json?v=2531";
+const VISAS_URL = "./data/nested/visas.json?v=2531";
 
 function el(tag, cls, text) {
   const n = document.createElement(tag);
@@ -478,7 +478,7 @@ export function createRefugeesPage(root) {
         fytd: data.northern?.fytdTotal,
       },
       {
-        name: "Other (air / sea)",
+        name: "Other",
         latest: data.other?.latestTotal,
         fytd: data.other?.fytdTotal,
       },
@@ -535,6 +535,13 @@ export function createRefugeesPage(root) {
     }
 
     body.append(el("p", "fiscal-note", data.note || ""));
+    body.append(
+      el(
+        "p",
+        "fiscal-note",
+        "Other is CBP’s non–Southwest / non–northern bucket (mostly OFO at airports, seaports, and preclearance)."
+      )
+    );
     const actions = el("p", "fiscal-actions");
     if (data.sourceUrl) {
       const a = el("a", "btn", "Nationwide CBP");

@@ -8,7 +8,7 @@
  * Free — no API key. Writes data/raw/cbp/* and data/nested/cbp-encounters.json.
  *
  * Metric: encounters (apprehensions / inadmissibles / expulsions) — NOT admissions.
- * Regions from Land Border Region: Southwest, Northern, Other (air/sea), plus Nationwide sum.
+ * Regions from Land Border Region: Southwest, Northern, Other, plus Nationwide sum.
  * Home card still leads with Southwest; detail shows all regions.
  */
 import { mkdir, writeFile, access, readFile } from "node:fs/promises";
@@ -259,7 +259,7 @@ async function bake(csvPath, sourceUrl) {
     southwestSourceUrl: SW_PAGE,
     csvUrl: sourceUrl,
     note:
-      "CBP encounters (USBP + OFO): Southwest and Northern land borders, plus Other (air/sea). " +
+      "CBP encounters (USBP + OFO): Southwest and Northern land borders, plus Other. " +
       "Nationwide is the sum. Card total is Southwest. One person can appear more than once.",
   };
 
