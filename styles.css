@@ -1145,6 +1145,112 @@ html[data-theme="dark"] .fiscal-agency-amt {
   margin: 0.65rem 0 0;
 }
 
+.flows-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin: 0 0 0.85rem;
+}
+
+.flows-card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: 0.55rem;
+  background: color-mix(in srgb, var(--panel, var(--bg)) 92%, var(--ink) 8%);
+  color: var(--ink);
+  padding: 0.75rem 0.85rem 0.8rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+.flows-card:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.flows-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 0 0 0.15rem;
+}
+
+.flows-card-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.flows-cadence {
+  flex-shrink: 0;
+  font-size: 0.68rem;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: 0.02em;
+  padding: 0.12rem 0.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.flows-cadence-month {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
+  color: var(--accent);
+}
+
+.flows-card-blurb {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.flows-card-metric {
+  margin: 0.35rem 0 0;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+.flows-card-total {
+  font-size: 1.85rem;
+  margin-top: 0.15rem;
+}
+
+.flows-card-sub {
+  margin: 0.2rem 0 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.flows-back-row {
+  margin: 0 0 0.75rem;
+}
+
+.flows-row-left {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.flows-metric-tag {
+  font-size: 0.68rem;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.flows-row-note {
+  margin: 0 0 0.35rem;
+  padding-left: 0;
+}
+
 .refugees-hero {
   margin: 0 0 1rem;
 }

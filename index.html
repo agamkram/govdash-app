@@ -104,8 +104,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Michroma&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2519" />
-  <meta name="govdash-build" content="2522-refugees" />
+  <link rel="stylesheet" href="styles.css?v=2526" />
+  <meta name="govdash-build" content="2526-flows" />
 </head>
 <body>
   <div class="shell" data-page="map">
@@ -146,8 +146,8 @@
               type="button"
               id="btn-refugees"
               class="btn btn-fiscal"
-              title="Refugee admissions"
-              aria-label="Refugee admissions"
+              title="Who comes in"
+              aria-label="Who comes in — human flows"
             >
               R
             </button>
@@ -276,7 +276,7 @@
         <iframe
           class="about-frame"
           id="about-frame"
-          src="about.html?v=2522"
+          src="about.html?v=2526"
           title="About GovDash — how to use and data sources"
         ></iframe>
       </section>
@@ -320,11 +320,11 @@
 
       <section class="app-page" id="page-refugees" hidden>
         <div class="app-page-inner">
-          <p class="detail-kind">Refugees</p>
-          <h2>Who arrived</h2>
-          <p class="fiscal-lede">
-            U.S. Refugee Admissions Program numbers from State/PRM public reports.
-            National total, then states — tap a state for nationality.
+          <p class="detail-kind" data-flows-kind>Human flows</p>
+          <h2 data-flows-title>Who comes in</h2>
+          <p class="fiscal-lede" data-flows-lede>
+            Three monthly snapshots — USRAP, SIV, and southwest border encounters.
+            Each card is its own count.
           </p>
           <div id="refugees-body"></div>
           <p class="fiscal-actions">
@@ -362,7 +362,7 @@
       </label>
     </footer>
   </div>
-  <script type="module" src="app.js?v=2522"></script>
+  <script type="module" src="app.js?v=2526"></script>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>

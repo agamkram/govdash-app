@@ -478,7 +478,7 @@ def main() -> None:
             "total": arrivals.get("total"),
             "byState": arrivals.get("byState") or {},
         },
-        "note": "USRAP only — monthly RPC snapshot. Not SIV, UAC, or ORR. Historical months can move after reconciliation.",
+        "note": "Monthly RPC snapshot. Historical months can move after reconciliation.",
     }
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
