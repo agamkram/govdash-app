@@ -22,7 +22,7 @@ import { createSankeyView } from "./views/sankey.js?v=2493";
 import { createFiscalPage } from "./views/fiscal.js?v=2493";
 import { createYouPage, YOU_NODES } from "./views/you.js?v=2493";
 import { createCalPage } from "./views/calendar.js?v=2503";
-import { createRefugeesPage } from "./views/refugees.js?v=2528";
+import { createRefugeesPage } from "./views/refugees.js?v=2529";
 import { authorityLine } from "./authority.js?v=2493";
 import { createSpendYearController } from "./spend-year.js?v=2493";
 
@@ -1474,7 +1474,7 @@ async function main() {
   orientation = defaultOrientation();
   icicleNestLevels = defaultIcicleNestLevels();
 
-  // Don't reopen Z / C / F / $ / i from a leftover #hash (PWA / last URL).
+  // Don't reopen Z / C / I / $ / A from a leftover #hash (PWA / last URL).
   {
     const h = location.hash.replace(/^#/, "");
     if (

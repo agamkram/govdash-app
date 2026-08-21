@@ -1,12 +1,12 @@
 /**
- * F page — Who comes in (timely monthly flows).
+ * I page — Who comes in (timely monthly immigration flows).
  * Cards: NIV · IV · USRAP · SIV · Border. No merged total.
  */
 
-const WRAPS_URL = "./data/nested/wraps.json?v=2528";
-const SIV_URL = "./data/nested/siv.json?v=2528";
-const CBP_URL = "./data/nested/cbp-encounters.json?v=2528";
-const VISAS_URL = "./data/nested/visas.json?v=2528";
+const WRAPS_URL = "./data/nested/wraps.json?v=2529";
+const SIV_URL = "./data/nested/siv.json?v=2529";
+const CBP_URL = "./data/nested/cbp-encounters.json?v=2529";
+const VISAS_URL = "./data/nested/visas.json?v=2529";
 
 function el(tag, cls, text) {
   const n = document.createElement(tag);
@@ -181,7 +181,7 @@ export function createRefugeesPage(root) {
 
   function renderHome() {
     setChrome(
-      "Human flows",
+      "Immigration",
       "Who comes in",
       "Monthly snapshots from State and CBP. Each card is its own count — not one total."
     );
