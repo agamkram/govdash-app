@@ -1,11 +1,12 @@
 /**
  * F page — Who comes in (timely monthly flows).
- * Cards: USRAP · SIV · CBP encounters. No merged total.
+ * Cards: NIV · IV · USRAP · SIV · Border. No merged total.
  */
 
-const WRAPS_URL = "./data/nested/wraps.json?v=2527";
-const SIV_URL = "./data/nested/siv.json?v=2527";
-const CBP_URL = "./data/nested/cbp-encounters.json?v=2527";
+const WRAPS_URL = "./data/nested/wraps.json?v=2528";
+const SIV_URL = "./data/nested/siv.json?v=2528";
+const CBP_URL = "./data/nested/cbp-encounters.json?v=2528";
+const VISAS_URL = "./data/nested/visas.json?v=2528";
 
 function el(tag, cls, text) {
   const n = document.createElement(tag);
@@ -43,7 +44,8 @@ export function createRefugeesPage(root) {
   let wraps = null;
   let siv = null;
   let cbp = null;
-  /** @type {"home" | "usrap" | "siv" | "cbp"} */
+  let visas = null;
+  /** @type {"home" | "niv" | "iv" | "usrap" | "siv" | "cbp"} */
   let view = "home";
   let openState = "";
 
@@ -77,16 +79,130 @@ export function createRefugeesPage(root) {
     });
   }
 
+  function namedTotalList(title, rows) {
+    const list = rows || [];
+    if (!list.length) return;
+    body.append(el("h3", "refugees-h", title));
+    const ul = el("ul", "refugees-list");
+    for (const row of list) {
+      const li = el("li", "refugees-row");
+      li.append(el("span", "refugees-name", row.name));
+      li.append(el("span", "refugees-num", fmt(row.total)));
+      ul.append(li);
+    }
+    body.append(ul);
+  }
+
+  function renderVisa(kind) {
+    const data = kind === "niv" ? visas?.niv : visas?.iv;
+    if (!data) {
+      setNote(`No ${kind.toUpperCase()} bake yet. Run npm run fetch:visas.`);
+      return;
+    }
+    const isNiv = kind === "niv";
+    setChrome(
+      isNiv ? "NIV" : "IV",
+      isNiv ? "Nonimmigrant visas" : "Immigrant visas",
+      isNiv
+        ? "Consular nonimmigrant visa issuances for one month (State Department)."
+        : "Consular immigrant visa issuances for one month (State Department)."
+    );
+    body.replaceChildren();
+    body.append(
+      backRow(() => {
+        view = "home";
+        openState = "";
+        render();
+      })
+    );
+
+    const hero = el("div", "refugees-hero");
+    const head = el("div", "flows-card-head");
+    head.append(
+      el(
+        "p",
+        "refugees-kicker",
+        `${data.asOfLabel || "Latest month"} · issuances`
+      )
+    );
+    head.append(cadencePill());
+    hero.append(head);
+    hero.append(el("p", "refugees-total", fmt(data.total)));
+    hero.append(
+      el(
+        "p",
+        "refugees-sub",
+        `One month only · not FYTD · FY${data.fiscalYear || "—"}`
+      )
+    );
+    if (
+      data.rowSum != null &&
+      data.total != null &&
+      Math.abs(data.rowSum - data.total) > 50
+    ) {
+      hero.append(
+        el(
+          "p",
+          "fiscal-note",
+          `PDF grand total ${fmt(data.total)}; parsed rows sum ${fmt(data.rowSum)}.`
+        )
+      );
+    }
+    body.append(hero);
+
+    namedTotalList("By visa class (top)", data.byClass);
+    namedTotalList("By nationality (top)", data.byNationality);
+
+    body.append(
+      el(
+        "p",
+        "fiscal-note",
+        data.note ||
+          "Issuances, not arrivals. Preliminary. Do not sum months for an FY total."
+      )
+    );
+    const actions = el("p", "fiscal-actions");
+    if (data.sourceUrl) {
+      const a = el("a", "btn", "State tables");
+      a.href = data.sourceUrl;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      actions.append(a);
+    }
+    if (data.pdfUrl) {
+      const a = el("a", "btn", "This month PDF");
+      a.href = data.pdfUrl;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      actions.append(a);
+    }
+    if (actions.childNodes.length) body.append(actions);
+  }
+
   function renderHome() {
     setChrome(
       "Human flows",
       "Who comes in",
-      "Three monthly snapshots from RPC and CBP. Each card is its own count."
+      "Monthly snapshots from State and CBP. Each card is its own count — not one total."
     );
     body.replaceChildren();
     const list = el("div", "flows-cards");
 
     const cards = [
+      {
+        id: "niv",
+        title: "NIV",
+        blurb: "Nonimmigrant visa issuances",
+        total: visas?.niv?.total,
+        sub: `${visas?.niv?.asOfLabel || "—"} · one month · State`,
+      },
+      {
+        id: "iv",
+        title: "IV",
+        blurb: "Immigrant visa issuances",
+        total: visas?.iv?.total,
+        sub: `${visas?.iv?.asOfLabel || "—"} · one month · State`,
+      },
       {
         id: "usrap",
         title: "USRAP",
@@ -131,7 +247,13 @@ export function createRefugeesPage(root) {
       list.append(btn);
     }
     body.append(list);
-    body.append(el("p", "fiscal-note", "Tap a card for detail."));
+    body.append(
+      el(
+        "p",
+        "fiscal-note",
+        "Tap a card for detail. NIV/IV are issuances for one month — not FY year-to-date."
+      )
+    );
   }
 
   function renderStateList(byState, emptyNote) {
@@ -379,6 +501,8 @@ export function createRefugeesPage(root) {
 
   function render() {
     if (view === "home") renderHome();
+    else if (view === "niv") renderVisa("niv");
+    else if (view === "iv") renderVisa("iv");
     else if (view === "usrap") renderUsrap();
     else if (view === "siv") renderSiv();
     else if (view === "cbp") renderCbp();
@@ -393,20 +517,24 @@ export function createRefugeesPage(root) {
         loadJson(WRAPS_URL),
         loadJson(SIV_URL),
         loadJson(CBP_URL),
+        loadJson(VISAS_URL),
       ]);
       if (results[0].status === "fulfilled") wraps = results[0].value;
       if (results[1].status === "fulfilled") siv = results[1].value;
       if (results[2].status === "fulfilled") cbp = results[2].value;
-      if (!wraps && !siv && !cbp) {
+      if (results[3].status === "fulfilled") visas = results[3].value;
+      if (!wraps && !siv && !cbp && !visas) {
         throw new Error(
-          results.map((r) => (r.status === "rejected" ? r.reason?.message : "")).filter(Boolean).join("; ") ||
-            "no data"
+          results
+            .map((r) => (r.status === "rejected" ? r.reason?.message : ""))
+            .filter(Boolean)
+            .join("; ") || "no data"
         );
       }
       render();
     } catch (err) {
       setNote(
-        `Could not load flow snapshots (${err.message || err}). Run npm run fetch:wraps and npm run fetch:cbp.`
+        `Could not load flow snapshots (${err.message || err}). Run npm run fetch:visas, fetch:wraps, and fetch:cbp.`
       );
     }
   }
