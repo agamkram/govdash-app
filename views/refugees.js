@@ -3,10 +3,10 @@
  * Cards: NIV · IV · USRAP · SIV · Border. No merged total.
  */
 
-const WRAPS_URL = "./data/nested/wraps.json?v=2532";
-const SIV_URL = "./data/nested/siv.json?v=2532";
-const CBP_URL = "./data/nested/cbp-encounters.json?v=2532";
-const VISAS_URL = "./data/nested/visas.json?v=2532";
+const WRAPS_URL = "./data/nested/wraps.json?v=2533";
+const SIV_URL = "./data/nested/siv.json?v=2533";
+const CBP_URL = "./data/nested/cbp-encounters.json?v=2533";
+const VISAS_URL = "./data/nested/visas.json?v=2533";
 
 function el(tag, cls, text) {
   const n = document.createElement(tag);
@@ -47,9 +47,16 @@ export function createRefugeesPage(root) {
   let visas = null;
   /** @type {"home" | "niv" | "iv" | "usrap" | "siv" | "cbp"} */
   let view = "home";
+  let lastView = null;
   let openState = "";
   /** @type {"southwest" | "northern" | "other" | "nationwide"} */
   let cbpRegion = "southwest";
+
+  function scrollPageTop() {
+    // #page-refugees is the overflow scroller — keep card opens at the top.
+    root.scrollTop = 0;
+    if (typeof root.scrollTo === "function") root.scrollTo(0, 0);
+  }
 
   function setChrome(kind, title, lede) {
     if (kindEl) kindEl.textContent = kind;
@@ -565,19 +572,24 @@ export function createRefugeesPage(root) {
   }
 
   function render() {
+    const viewChanged = view !== lastView;
+    lastView = view;
     if (view === "home") renderHome();
     else if (view === "niv") renderVisa("niv");
     else if (view === "iv") renderVisa("iv");
     else if (view === "usrap") renderUsrap();
     else if (view === "siv") renderSiv();
     else if (view === "cbp") renderCbp();
+    if (viewChanged) scrollPageTop();
   }
 
   async function show() {
     view = "home";
+    lastView = null;
     openState = "";
     cbpRegion = "southwest";
     setNote("Loading…");
+    scrollPageTop();
     try {
       const results = await Promise.allSettled([
         loadJson(WRAPS_URL),
