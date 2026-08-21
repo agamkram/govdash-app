@@ -398,6 +398,7 @@ async function main() {
   await enrichTreeFile(BEYOND, raw);
 
   console.log("Old score-based heat replaced with event heat.");
+  console.log("Next: npm run compare:heat  (HEAD → this bake reply block)");
 }
 
 main().catch((e) => {

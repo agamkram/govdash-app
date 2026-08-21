@@ -34,19 +34,40 @@ async function exists(p) {
   }
 }
 
+const RETRYABLE = new Set([429, 502, 503, 504]);
+const FETCH_ATTEMPTS = 4;
+
+function sleep(ms) {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
+async function fetchRes(url, headers) {
+  let lastErr;
+  for (let i = 0; i < FETCH_ATTEMPTS; i++) {
+    try {
+      const r = await fetch(url, { headers: { ...headers, "User-Agent": UA } });
+      if (r.ok) return r;
+      const err = new Error(`${url} → HTTP ${r.status}`);
+      err.httpStatus = r.status;
+      lastErr = err;
+      if (!RETRYABLE.has(r.status)) throw err;
+    } catch (e) {
+      lastErr = e;
+      if (e?.httpStatus && !RETRYABLE.has(e.httpStatus)) throw e;
+      if (i === FETCH_ATTEMPTS - 1) throw e;
+    }
+    await sleep(400 * 2 ** i);
+  }
+  throw lastErr;
+}
+
 async function getText(url) {
-  const r = await fetch(url, {
-    headers: { Accept: "*/*", "User-Agent": UA },
-  });
-  if (!r.ok) throw new Error(`${url} → HTTP ${r.status}`);
+  const r = await fetchRes(url, { Accept: "*/*" });
   return r.text();
 }
 
 async function getJson(url) {
-  const r = await fetch(url, {
-    headers: { Accept: "application/json", "User-Agent": UA },
-  });
-  if (!r.ok) throw new Error(`${url} → HTTP ${r.status}`);
+  const r = await fetchRes(url, { Accept: "application/json" });
   return r.json();
 }
 
@@ -943,6 +964,31 @@ async function main() {
   console.log(
     `Wrote ${pack.events.length} raw events → data/raw/heat/events-raw.json`
   );
+
+  // Core daily pulse sources — do not enrich a bake that missed these.
+  const CORE = [
+    "senateFloor",
+    "houseClerk",
+    "publicInspection",
+    "presidential",
+  ];
+  const failed = Object.entries(pack.sources).filter(
+    ([, s]) => s && s.ok === false
+  );
+  const coreFailed = failed.filter(([k]) => CORE.includes(k));
+  if (failed.length) {
+    console.warn("Sources failed:");
+    for (const [k, s] of failed) {
+      console.warn(`  - ${k}: ${s.error || "failed"}`);
+    }
+  }
+  if (coreFailed.length) {
+    console.error(
+      "Core Heat sources failed — re-run with --force before enrich:heat (do not commit this bake)."
+    );
+    process.exit(1);
+  }
+
   console.log("Next: npm run enrich:heat");
 }
 
