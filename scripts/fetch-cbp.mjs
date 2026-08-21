@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Download CBP Southwest Land Border Encounters CSV and bake a snapshot.
+ * Download CBP Nationwide Encounters CSV and bake a Border snapshot.
  *
  *   npm run fetch:cbp
  *   npm run fetch:cbp -- --force
@@ -8,6 +8,8 @@
  * Free — no API key. Writes data/raw/cbp/* and data/nested/cbp-encounters.json.
  *
  * Metric: encounters (apprehensions / inadmissibles / expulsions) — NOT admissions.
+ * Regions from Land Border Region: Southwest, Northern, Other (air/sea), plus Nationwide sum.
+ * Home card still leads with Southwest; detail shows all regions.
  */
 import { mkdir, writeFile, access, readFile } from "node:fs/promises";
 import { createWriteStream } from "node:fs";
@@ -21,7 +23,9 @@ import { createReadStream } from "node:fs";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = join(ROOT, "data", "raw", "cbp");
 const NESTED = join(ROOT, "data", "nested", "cbp-encounters.json");
-const INDEX = "https://www.cbp.gov/document/stats/southwest-land-border-encounters";
+const INDEX = "https://www.cbp.gov/document/stats/nationwide-encounters";
+const SW_PAGE = "https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters";
+const NW_PAGE = "https://www.cbp.gov/newsroom/stats/nationwide-encounters";
 const UA = "GovDash/1 (citizen map; +https://govdash.markmaga.com)";
 
 const MONTHS = {
@@ -37,6 +41,21 @@ const MONTHS = {
   JUL: 10,
   AUG: 11,
   SEP: 12,
+};
+
+const MON_PRETTY = {
+  OCT: "Oct",
+  NOV: "Nov",
+  DEC: "Dec",
+  JAN: "Jan",
+  FEB: "Feb",
+  MAR: "Mar",
+  APR: "Apr",
+  MAY: "May",
+  JUN: "Jun",
+  JUL: "Jul",
+  AUG: "Aug",
+  SEP: "Sep",
 };
 
 function parseArgs(argv) {
@@ -59,40 +78,42 @@ function absUrl(href) {
 }
 
 async function getText(url) {
-  const r = await fetch(url, { headers: { Accept: "text/html", "User-Agent": UA } });
+  const r = await fetch(url, {
+    headers: { Accept: "text/html", "User-Agent": UA },
+  });
   if (!r.ok) throw new Error(`${url} → HTTP ${r.status}`);
   return r.text();
 }
 
 async function download(url, dest) {
-  const r = await fetch(url, { headers: { "User-Agent": UA }, redirect: "follow" });
+  const r = await fetch(url, {
+    headers: { "User-Agent": UA },
+    redirect: "follow",
+  });
   if (!r.ok) throw new Error(`${url} → HTTP ${r.status}`);
   await pipeline(Readable.fromWeb(r.body), createWriteStream(dest));
 }
 
+/** Prefer latest FYTD nationwide AOR CSV (has Land Border Region). */
 function pickLatestCsv(html) {
-  const re =
-    /href="([^"]*sbo-encounters-fy[^"]+\.csv)"[^>]*>[\s\S]*?<\/a>/gi;
+  const re = /href="([^"]*nationwide-encounters-fy[^"]+-aor\.csv)"/gi;
   const hits = [];
   let m;
   while ((m = re.exec(html))) {
-    hits.push(m[1].replace(/&amp;/g, "&"));
-  }
-  // Also bare hrefs
-  const re2 = /href="([^"]*sbo-encounters-fy[^"]+\.csv)"/gi;
-  while ((m = re2.exec(html))) {
     const href = m[1].replace(/&amp;/g, "&");
     if (!hits.includes(href)) hits.push(href);
   }
   if (!hits.length) return null;
-  // Prefer FYTD current file with latest month in path (jul > jun > …)
   const scored = hits.map((href) => {
-    const mon = (href.match(/-(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\.csv/i) || [])[1];
+    const mon = (href.match(
+      /-(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)(?:-aor)?\.csv/i
+    ) || [])[1];
     const order = mon ? MONTHS[mon.toUpperCase().slice(0, 3)] || 0 : 0;
-    const fytd = /fytd|fy\d{2}-fy\d{2}/i.test(href) ? 1 : 0;
-    return { href, order, fytd };
+    const fyBits = [...href.matchAll(/fy(\d{2})/gi)].map((x) => Number(x[1]));
+    const maxFy = fyBits.length ? Math.max(...fyBits) : 0;
+    return { href, order, maxFy };
   });
-  scored.sort((a, b) => b.fytd - a.fytd || b.order - a.order);
+  scored.sort((a, b) => b.maxFy - a.maxFy || b.order - a.order);
   return scored[0].href;
 }
 
@@ -118,8 +139,34 @@ function parseCsvLine(line) {
   return out;
 }
 
+function regionKey(label) {
+  const s = String(label || "");
+  if (/southwest/i.test(s)) return "southwest";
+  if (/northern/i.test(s)) return "northern";
+  if (/^other$/i.test(s)) return "other";
+  return null;
+}
+
+function packRegion(byMonth) {
+  const present = [...byMonth.keys()].sort(
+    (a, b) => (MONTHS[a] || 0) - (MONTHS[b] || 0)
+  );
+  const latest = present.at(-1) || null;
+  const latestTotal = latest ? byMonth.get(latest) || 0 : 0;
+  const fytdTotal = [...byMonth.values()].reduce((a, b) => a + b, 0);
+  return {
+    latestMonth: latest,
+    latestTotal,
+    fytdTotal,
+    months: present.map((m) => ({ month: m, total: byMonth.get(m) || 0 })),
+  };
+}
+
 async function bake(csvPath, sourceUrl) {
-  const rl = createInterface({ input: createReadStream(csvPath, "utf8"), crlfDelay: Infinity });
+  const rl = createInterface({
+    input: createReadStream(csvPath, "utf8"),
+    crlfDelay: Infinity,
+  });
   let headers = null;
   const rows = [];
   for await (const line of rl) {
@@ -136,99 +183,89 @@ async function bake(csvPath, sourceUrl) {
     rows.push(obj);
   }
 
-  // Current FY rows: "2026 (FYTD)" or highest FY
   const fys = [...new Set(rows.map((r) => r["Fiscal Year"]))];
   const fytd = fys.find((f) => /FYTD/i.test(f)) || fys.sort().at(-1);
   const fyRows = rows.filter(
     (r) => r["Fiscal Year"] === fytd && r["Month Grouping"] === "FYTD"
   );
 
-  const byMonth = new Map();
-  const byDemo = new Map();
+  const byRegionMonth = {
+    southwest: new Map(),
+    northern: new Map(),
+    other: new Map(),
+    nationwide: new Map(),
+  };
+
   for (const r of fyRows) {
     const mon = r["Month (abbv)"];
     const n = Number(r["Encounter Count"] || 0);
-    if (!Number.isFinite(n)) continue;
-    byMonth.set(mon, (byMonth.get(mon) || 0) + n);
-    const demo = r.Demographic || "Other";
-    byDemo.set(demo, (byDemo.get(demo) || 0) + n);
+    if (!mon || !Number.isFinite(n)) continue;
+    const key = regionKey(r["Land Border Region"]);
+    if (key) {
+      byRegionMonth[key].set(mon, (byRegionMonth[key].get(mon) || 0) + n);
+    }
+    byRegionMonth.nationwide.set(
+      mon,
+      (byRegionMonth.nationwide.get(mon) || 0) + n
+    );
   }
 
-  // Latest month in FY order (OCT…SEP)
-  const present = [...byMonth.keys()].sort(
-    (a, b) => (MONTHS[a] || 0) - (MONTHS[b] || 0)
-  );
-  const latest = present.at(-1);
-  const latestTotal = byMonth.get(latest) || 0;
+  const southwest = packRegion(byRegionMonth.southwest);
+  const northern = packRegion(byRegionMonth.northern);
+  const other = packRegion(byRegionMonth.other);
+  const nationwide = packRegion(byRegionMonth.nationwide);
 
-  // FYTD cumulative through latest = sum of monthly values in this file
-  // (CBP labels Month Grouping FYTD but values are that month’s encounters.)
-  const fytdTotal = [...byMonth.values()].reduce((a, b) => a + b, 0);
-
+  const latest = southwest.latestMonth || nationwide.latestMonth;
   const fiscalYear = Number(String(fytd).match(/20\d{2}/)?.[0] || 0) || null;
 
-  // Latest-month demographic slice
+  // SW latest-month demographics (same slice the old SBO card showed)
   const latestDemo = new Map();
   for (const r of fyRows) {
     if (r["Month (abbv)"] !== latest) continue;
+    if (regionKey(r["Land Border Region"]) !== "southwest") continue;
     const n = Number(r["Encounter Count"] || 0);
     if (!Number.isFinite(n)) continue;
     const demo = r.Demographic || "Other";
     latestDemo.set(demo, (latestDemo.get(demo) || 0) + n);
   }
-
-  const monthRows = present.map((m) => ({
-    month: m,
-    total: byMonth.get(m) || 0,
-  }));
-
   const demoRows = [...latestDemo.entries()]
     .map(([name, total]) => ({ name, total }))
     .sort((a, b) => b.total - a.total || a.name.localeCompare(b.name));
 
-  const monPretty = {
-    OCT: "Oct",
-    NOV: "Nov",
-    DEC: "Dec",
-    JAN: "Jan",
-    FEB: "Feb",
-    MAR: "Mar",
-    APR: "Apr",
-    MAY: "May",
-    JUN: "Jun",
-    JUL: "Jul",
-    AUG: "Aug",
-    SEP: "Sep",
-  };
-  // Calendar year of that FY month (FY starts in Oct of prior calendar year).
   let asOfLabel = latest || "—";
   if (latest && fiscalYear) {
     const calYear = ["OCT", "NOV", "DEC"].includes(latest)
       ? fiscalYear - 1
       : fiscalYear;
-    asOfLabel = `${monPretty[latest] || latest} ${calYear}`;
+    asOfLabel = `${MON_PRETTY[latest] || latest} ${calYear}`;
   }
 
   const payload = {
     generatedAt: new Date().toISOString(),
     asOfLabel,
     fiscalYear,
-    latestMonth: latest,
-    latestTotal,
-    fytdTotal,
-    sourceName: "CBP Southwest Land Border Encounters",
-    sourceUrl: "https://www.cbp.gov/newsroom/stats/southwest-land-border-encounters",
-    csvUrl: sourceUrl,
-    months: monthRows,
+    // Home card still leads with Southwest land border.
+    latestMonth: southwest.latestMonth,
+    latestTotal: southwest.latestTotal,
+    fytdTotal: southwest.fytdTotal,
+    southwest,
+    northern,
+    other,
+    nationwide,
     byDemographic: demoRows,
+    months: southwest.months,
+    sourceName: "CBP encounters (nationwide CSV)",
+    sourceUrl: NW_PAGE,
+    southwestSourceUrl: SW_PAGE,
+    csvUrl: sourceUrl,
     note:
-      "Southwest land border encounters (USBP + OFO). Monthly public CSV from CBP. " +
-      "One person can appear more than once.",
+      "CBP encounters (USBP + OFO): Southwest and Northern land borders, plus Other (air/sea). " +
+      "Nationwide is the sum. Card total is Southwest. One person can appear more than once.",
   };
 
   await writeFile(NESTED, JSON.stringify(payload, null, 2) + "\n");
   console.log(
-    `Wrote ${NESTED} — FY${fiscalYear} ${latest}=${latestTotal} FYTD=${fytdTotal}`
+    `Wrote ${NESTED} — ${asOfLabel} SW=${southwest.latestTotal} N=${northern.latestTotal} US=${nationwide.latestTotal} (FYTD SW=${southwest.fytdTotal})`
   );
   return payload;
 }
@@ -236,29 +273,37 @@ async function bake(csvPath, sourceUrl) {
 async function main() {
   const opts = parseArgs(process.argv.slice(2));
   await mkdir(OUT, { recursive: true });
-  const csvPath = join(OUT, "sbo-encounters.csv");
+  const csvPath = join(OUT, "nationwide-encounters-aor.csv");
   const manifestPath = join(OUT, "manifest.json");
 
   if (!opts.force && (await exists(csvPath)) && (await exists(manifestPath))) {
-    const age = Date.now() - JSON.parse(await readFile(manifestPath, "utf8")).fetchedAtMs;
+    const man = JSON.parse(await readFile(manifestPath, "utf8"));
+    const age = Date.now() - man.fetchedAtMs;
     if (Number.isFinite(age) && age < 12 * 3600e3) {
       console.log("cbp raw is fresh (<12h). Use --force to refetch.");
-      await bake(csvPath, JSON.parse(await readFile(manifestPath, "utf8")).csvUrl);
+      await bake(csvPath, man.csvUrl);
       return;
     }
   }
 
-  console.log("Fetching CBP encounters document page…");
+  console.log("Fetching CBP nationwide encounters document page…");
   const html = await getText(INDEX);
   const href = pickLatestCsv(html);
-  if (!href) throw new Error("Could not find sbo-encounters CSV on CBP page");
+  if (!href) {
+    throw new Error("Could not find nationwide-encounters AOR CSV on CBP page");
+  }
   const csvUrl = absUrl(href);
   console.log(`CSV: ${csvUrl}`);
   await download(csvUrl, csvPath);
   await writeFile(
     manifestPath,
     JSON.stringify(
-      { fetchedAt: new Date().toISOString(), fetchedAtMs: Date.now(), csvUrl, index: INDEX },
+      {
+        fetchedAt: new Date().toISOString(),
+        fetchedAtMs: Date.now(),
+        csvUrl,
+        index: INDEX,
+      },
       null,
       2
     )

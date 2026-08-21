@@ -3,10 +3,10 @@
  * Cards: NIV · IV · USRAP · SIV · Border. No merged total.
  */
 
-const WRAPS_URL = "./data/nested/wraps.json?v=2529";
-const SIV_URL = "./data/nested/siv.json?v=2529";
-const CBP_URL = "./data/nested/cbp-encounters.json?v=2529";
-const VISAS_URL = "./data/nested/visas.json?v=2529";
+const WRAPS_URL = "./data/nested/wraps.json?v=2530";
+const SIV_URL = "./data/nested/siv.json?v=2530";
+const CBP_URL = "./data/nested/cbp-encounters.json?v=2530";
+const VISAS_URL = "./data/nested/visas.json?v=2530";
 
 function el(tag, cls, text) {
   const n = document.createElement(tag);
@@ -223,9 +223,12 @@ export function createRefugeesPage(root) {
       {
         id: "cbp",
         title: "Border",
-        blurb: "SW land encounters",
+        blurb: "CBP encounters (SW lead)",
         total: cbp?.latestTotal,
-        sub: `${cbp?.asOfLabel || "—"} · CBP`,
+        sub:
+          cbp?.nationwide?.latestTotal != null
+            ? `${cbp.asOfLabel || "—"} · SW · N ${fmt(cbp.northern?.latestTotal)} · US ${fmt(cbp.nationwide.latestTotal)}`
+            : `${cbp?.asOfLabel || "—"} · CBP`,
       },
     ];
 
@@ -434,8 +437,8 @@ export function createRefugeesPage(root) {
     const data = cbp;
     setChrome(
       "Border",
-      "Southwest encounters",
-      "CBP southwest land border encounters (USBP and OFO)."
+      "CBP encounters",
+      "Southwest leads the card; northern and nationwide are the same month from CBP."
     );
     body.replaceChildren();
     body.append(
@@ -448,7 +451,9 @@ export function createRefugeesPage(root) {
 
     const hero = el("div", "refugees-hero");
     const head = el("div", "flows-card-head");
-    head.append(el("p", "refugees-kicker", data.asOfLabel || "Latest month"));
+    head.append(
+      el("p", "refugees-kicker", `${data.asOfLabel || "Latest month"} · Southwest`)
+    );
     head.append(cadencePill());
     hero.append(head);
     hero.append(el("p", "refugees-total", fmt(data.latestTotal)));
@@ -456,14 +461,54 @@ export function createRefugeesPage(root) {
       el(
         "p",
         "refugees-sub",
-        `FY${data.fiscalYear || "—"} YTD ${fmt(data.fytdTotal)}`
+        `FY${data.fiscalYear || "—"} YTD ${fmt(data.fytdTotal)} · SW land`
       )
     );
     body.append(hero);
 
+    const regions = [
+      {
+        name: "Southwest land",
+        latest: data.southwest?.latestTotal ?? data.latestTotal,
+        fytd: data.southwest?.fytdTotal ?? data.fytdTotal,
+      },
+      {
+        name: "Northern land",
+        latest: data.northern?.latestTotal,
+        fytd: data.northern?.fytdTotal,
+      },
+      {
+        name: "Other (air / sea)",
+        latest: data.other?.latestTotal,
+        fytd: data.other?.fytdTotal,
+      },
+      {
+        name: "Nationwide",
+        latest: data.nationwide?.latestTotal,
+        fytd: data.nationwide?.fytdTotal,
+      },
+    ].filter((r) => r.latest != null);
+
+    if (regions.length) {
+      body.append(el("h3", "refugees-h", `${data.asOfLabel || "Latest"} · by region`));
+      const ul = el("ul", "refugees-list");
+      for (const r of regions) {
+        const row = el("li", "refugees-row");
+        row.append(el("span", "refugees-name", r.name));
+        const right = el("span", "refugees-num");
+        right.textContent =
+          r.fytd != null
+            ? `${fmt(r.latest)} · YTD ${fmt(r.fytd)}`
+            : fmt(r.latest);
+        row.append(right);
+        ul.append(row);
+      }
+      body.append(ul);
+    }
+
     const demos = data.byDemographic || [];
     if (demos.length) {
-      body.append(el("h3", "refugees-h", `Latest month · by group`));
+      body.append(el("h3", "refugees-h", `Southwest · by group`));
       const ul = el("ul", "refugees-list");
       for (const d of demos) {
         const row = el("li", "refugees-row");
@@ -474,9 +519,11 @@ export function createRefugeesPage(root) {
       body.append(ul);
     }
 
-    const months = data.months || [];
+    const months = data.southwest?.months || data.months || [];
     if (months.length) {
-      body.append(el("h3", "refugees-h", `FY${data.fiscalYear || ""} by month`));
+      body.append(
+        el("h3", "refugees-h", `Southwest · FY${data.fiscalYear || ""} by month`)
+      );
       const ul = el("ul", "refugees-list");
       for (const m of [...months].reverse()) {
         const row = el("li", "refugees-row");
@@ -488,15 +535,22 @@ export function createRefugeesPage(root) {
     }
 
     body.append(el("p", "fiscal-note", data.note || ""));
+    const actions = el("p", "fiscal-actions");
     if (data.sourceUrl) {
-      const actions = el("p", "fiscal-actions");
-      const a = el("a", "btn", "CBP source");
+      const a = el("a", "btn", "Nationwide CBP");
       a.href = data.sourceUrl;
       a.target = "_blank";
       a.rel = "noopener noreferrer";
       actions.append(a);
-      body.append(actions);
     }
+    if (data.southwestSourceUrl) {
+      const a = el("a", "btn", "SW border CBP");
+      a.href = data.southwestSourceUrl;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      actions.append(a);
+    }
+    if (actions.childNodes.length) body.append(actions);
   }
 
   function render() {
