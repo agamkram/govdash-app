@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-21T14:05:47.543Z",
+  "fetchedAt": "2026-08-22T15:25:24.339Z",
   "sources": {
     "senateFloor": {
       "ok": true,
@@ -18,42 +18,42 @@
     },
     "publicInspection": {
       "ok": true,
-      "count": 85,
+      "count": 87,
       "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
     },
     "presidential": {
       "ok": true,
-      "count": 9,
-      "since": "2026-08-07",
+      "count": 10,
+      "since": "2026-08-08",
       "url": "https://www.federalregister.gov/presidential-documents"
     },
     "commentDeadlines": {
       "ok": true,
-      "count": 155,
-      "start": "2026-08-21",
-      "end": "2026-09-19",
+      "count": 133,
+      "start": "2026-08-22",
+      "end": "2026-09-20",
       "type": "PRORULE",
       "url": "https://www.federalregister.gov/"
     },
     "sunshine": {
       "ok": true,
-      "count": 3,
-      "start": "2026-08-21",
-      "end": "2026-09-19",
+      "count": 1,
+      "start": "2026-08-22",
+      "end": "2026-09-20",
       "url": "https://www.federalregister.gov/"
     },
     "senateHearings": {
       "ok": true,
       "count": 1,
-      "start": "2026-08-21",
-      "end": "2026-09-19",
+      "start": "2026-08-22",
+      "end": "2026-09-20",
       "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
     },
     "houseHearings": {
       "ok": true,
       "count": 1,
-      "start": "2026-08-21",
-      "end": "2026-09-19",
+      "start": "2026-08-22",
+      "end": "2026-09-20",
       "congress": 119,
       "calendarIds": 1,
       "url": "https://api.congress.gov/v3/committee-meeting/119/house"
@@ -61,8 +61,8 @@
     "scotus": {
       "ok": true,
       "count": 0,
-      "start": "2026-08-21",
-      "end": "2026-09-19",
+      "start": "2026-08-22",
+      "end": "2026-09-20",
       "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
     }
   },
@@ -1309,9 +1309,9 @@
     {
       "id": "fr-pi-2026-17227",
       "kind": "public_inspection",
-      "when": "2026-08-24",
+      "when": null,
       "until": null,
-      "filedAt": "2026-08-21T08:45:00.000-04:00",
+      "filedAt": null,
       "title": "Safety Zone: Indiana Harbor Canal, East Chicago, IN",
       "summary": "Coast Guard",
       "url": "https://public-inspection.federalregister.gov/2026-17227.pdf",
@@ -1807,6 +1807,46 @@
       "documentNumber": "2026-17257"
     },
     {
+      "id": "fr-pi-2026-17294",
+      "kind": "public_inspection",
+      "when": "2026-08-24",
+      "until": null,
+      "filedAt": "2026-08-21T11:15:00.000-04:00",
+      "title": "Canada; Temporary Suspension of Additional Duties To Offset Discrimination Against U.S. Commerce With Respect to Alcoholic Beverages, Dairy, and Motor Vehicles (Proc. 11056)",
+      "summary": "Executive Office of the President",
+      "url": "https://public-inspection.federalregister.gov/2026-17294.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-17294/canada-temporary-suspension-of-additional-duties-to-offset-discrimination-against-us-commerce-with",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-17294.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "documentType": "Presidential Document",
+      "documentNumber": "2026-17294"
+    },
+    {
+      "id": "fr-pi-2026-17238",
+      "kind": "public_inspection",
+      "when": "2026-08-26",
+      "until": null,
+      "filedAt": "2026-08-21T21:00:00.000-04:00",
+      "title": "Ballot Mail For Federal Elections",
+      "summary": "Postal Service",
+      "url": "https://public-inspection.federalregister.gov/2026-17238.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-17238/ballot-mail-for-federal-elections",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-17238.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Postal Service"
+      ],
+      "documentType": "Rule",
+      "documentNumber": "2026-17238"
+    },
+    {
       "id": "fr-pres-2026-16730",
       "kind": "presidential_doc",
       "when": "2026-08-14",
@@ -1849,6 +1889,22 @@
       "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-11/pdf/2026-16403.pdf",
       "htmlUrl": "https://www.federalregister.gov/documents/2026/08/11/2026-16403/continuing-to-protect-the-meaning-and-value-of-american-citizenship",
       "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-11/pdf/2026-16403.pdf",
+      "source": "Federal Register presidential documents (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+      "urgency": "recent",
+      "documentType": "Presidential Document"
+    },
+    {
+      "id": "fr-pres-2026-17294",
+      "kind": "presidential_doc",
+      "when": "2026-08-24",
+      "until": null,
+      "signedAt": null,
+      "title": "Temporary Suspension of Additional Duties To Offset Canadian Discrimination Against the Commerce of the United States With Respect to Alcoholic Beverages, Dairy, and Motor Vehicles",
+      "summary": "Presidential Document",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-24/pdf/2026-17294.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/24/2026-17294/temporary-suspension-of-additional-duties-to-offset-canadian-discrimination-against-the-commerce-of",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-24/pdf/2026-17294.pdf",
       "source": "Federal Register presidential documents (PDF)",
       "sourceUrl": "https://www.federalregister.gov/presidential-documents",
       "urgency": "recent",
@@ -2632,25 +2688,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-15529",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Enhancing Flexibility of Air Fare Price Advertising",
-      "summary": "Transportation Department",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-31/pdf/2026-15529.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/31/2026-15529/enhancing-flexibility-of-air-fare-price-advertising",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-31/pdf/2026-15529.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department"
-      ],
-      "documentNumber": "2026-15529",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-15415",
       "kind": "comment_deadline",
       "when": "2026-08-31",
@@ -2883,25 +2920,6 @@
         "Commodity Futures Trading Commission"
       ],
       "documentNumber": "2026-15216",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-15211",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Energy Conservation Program: Procedures, Interpretations, and Policies for Consideration of New or Revised Energy Conservation Standards and Test Procedures for Consumer Products and Certain Commercial/Industrial Equipment; Extension of Public Comment Period",
-      "summary": "Energy Department",
-      "url": "http://www.regulations.gov/commenton/EERE-2025-BT-STD-0001-0054",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/28/2026-15211/energy-conservation-program-procedures-interpretations-and-policies-for-consideration-of-new-or",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-28/pdf/2026-15211.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Energy Department"
-      ],
-      "documentNumber": "2026-15211",
       "documentType": "Proposed Rule"
     },
     {
@@ -3370,346 +3388,6 @@
         "Environmental Protection Agency"
       ],
       "documentNumber": "2026-14877",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-14854",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Methylene Chloride",
-      "summary": "Labor Department, Occupational Safety and Health Administration",
-      "url": "http://www.regulations.gov/commenton/OSHA-2025-0012-0024",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14854/methylene-chloride",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14854.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Labor Department",
-        "Occupational Safety and Health Administration"
-      ],
-      "documentNumber": "2026-14854",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-14853",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Vinyl Chloride",
-      "summary": "Labor Department, Occupational Safety and Health Administration",
-      "url": "http://www.regulations.gov/commenton/OSHA-2025-0015-0024",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14853/vinyl-chloride",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14853.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Labor Department",
-        "Occupational Safety and Health Administration"
-      ],
-      "documentNumber": "2026-14853",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-14852",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Methylenedianiline",
-      "summary": "Labor Department, Occupational Safety and Health Administration",
-      "url": "http://www.regulations.gov/commenton/OSHA-2025-0025-0021",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14852/methylenedianiline",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14852.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Labor Department",
-        "Occupational Safety and Health Administration"
-      ],
-      "documentNumber": "2026-14852",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-14851",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Lead",
-      "summary": "Labor Department, Occupational Safety and Health Administration",
-      "url": "http://www.regulations.gov/commenton/OSHA-2025-0022-0031",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14851/lead",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14851.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Labor Department",
-        "Occupational Safety and Health Administration"
-      ],
-      "documentNumber": "2026-14851",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-14850",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Inorganic Arsenic",
-      "summary": "Labor Department, Occupational Safety and Health Administration",
-      "url": "http://www.regulations.gov/commenton/OSHA-2025-0016-0023",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14850/inorganic-arsenic",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14850.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Labor Department",
-        "Occupational Safety and Health Administration"
-      ],
-      "documentNumber": "2026-14850",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-14849",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Formaldehyde",
-      "summary": "Labor Department, Occupational Safety and Health Administration",
-      "url": "http://www.regulations.gov/commenton/OSHA-2025-0026-0025",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14849/formaldehyde",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14849.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Labor Department",
-        "Occupational Safety and Health Administration"
-      ],
-      "documentNumber": "2026-14849",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-14847",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "1,2-Dibromo-3-Chloropropane",
-      "summary": "Labor Department, Occupational Safety and Health Administration",
-      "url": "http://www.regulations.gov/commenton/OSHA-2025-0019-0021",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14847/12-dibromo-3-chloropropane",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14847.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Labor Department",
-        "Occupational Safety and Health Administration"
-      ],
-      "documentNumber": "2026-14847",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-14846",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Inorganic Arsenic",
-      "summary": "Labor Department, Occupational Safety and Health Administration",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14846.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14846/inorganic-arsenic",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14846.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Labor Department",
-        "Occupational Safety and Health Administration"
-      ],
-      "documentNumber": "2026-14846",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-14845",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Acrylonitrile",
-      "summary": "Labor Department, Occupational Safety and Health Administration",
-      "url": "http://www.regulations.gov/commenton/OSHA-2025-0017-0021",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14845/acrylonitrile",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14845.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Labor Department",
-        "Occupational Safety and Health Administration"
-      ],
-      "documentNumber": "2026-14845",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-14844",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "13 Carcinogens (4-Nitrobiphenyl, etc.)",
-      "summary": "Labor Department, Occupational Safety and Health Administration",
-      "url": "http://www.regulations.gov/commenton/OSHA-2025-0013-0021",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14844/13-carcinogens-4-nitrobiphenyl-etc",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14844.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Labor Department",
-        "Occupational Safety and Health Administration"
-      ],
-      "documentNumber": "2026-14844",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-14843",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Ethylene Oxide",
-      "summary": "Labor Department, Occupational Safety and Health Administration",
-      "url": "http://www.regulations.gov/commenton/OSHA-2025-0018-0022",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14843/ethylene-oxide",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14843.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Labor Department",
-        "Occupational Safety and Health Administration"
-      ],
-      "documentNumber": "2026-14843",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-14842",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Cadmium",
-      "summary": "Labor Department, Occupational Safety and Health Administration",
-      "url": "http://www.regulations.gov/commenton/OSHA-2025-0021-0021",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14842/cadmium",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14842.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Labor Department",
-        "Occupational Safety and Health Administration"
-      ],
-      "documentNumber": "2026-14842",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-14840",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Asbestos",
-      "summary": "Labor Department, Occupational Safety and Health Administration",
-      "url": "http://www.regulations.gov/commenton/OSHA-2025-0024-0048",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14840/asbestos",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14840.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Labor Department",
-        "Occupational Safety and Health Administration"
-      ],
-      "documentNumber": "2026-14840",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-14839",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "1, 3-Butadiene",
-      "summary": "Labor Department, Occupational Safety and Health Administration",
-      "url": "http://www.regulations.gov/commenton/OSHA-2025-0020-0022",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14839/1-3-butadiene",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14839.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Labor Department",
-        "Occupational Safety and Health Administration"
-      ],
-      "documentNumber": "2026-14839",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-14820",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Amendment of Domestic Very High Frequency Omnidirectional Range (VOR) Federal Airways V-16, V-35, V-37, V-53, V-133, V-136, V-143, V-259, V-310, V-364, V-409, V-415, V-454, and V-605; Eastern United States",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2026-2452-0004",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14820/amendment-of-domestic-very-high-frequency-omnidirectional-range-vor-federal-airways-v-16-v-35-v-37",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14820.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-14820",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-14798",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Coastal Migratory Pelagic Resources in the Gulf of America and Atlantic Region; Framework Amendment 14",
-      "summary": "Commerce Department, National Oceanic and Atmospheric Administration",
-      "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-0794-0003",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14798/coastal-migratory-pelagic-resources-in-the-gulf-of-america-and-atlantic-region-framework-amendment",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14798.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Commerce Department",
-        "National Oceanic and Atmospheric Administration"
-      ],
-      "documentNumber": "2026-14798",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-14793",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Requirement To Identify All Real Parties in Interest to a Third Party Request for an Ex Parte Reexamination",
-      "summary": "Commerce Department, Patent and Trademark Office",
-      "url": "http://www.regulations.gov/commenton/PTO-P-2025-0545-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/22/2026-14793/requirement-to-identify-all-real-parties-in-interest-to-a-third-party-request-for-an-ex-parte",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14793.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Commerce Department",
-        "Patent and Trademark Office"
-      ],
-      "documentNumber": "2026-14793",
       "documentType": "Proposed Rule"
     },
     {
@@ -4265,25 +3943,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-13687",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Implementation of the National Environmental Policy Act",
-      "summary": "Nuclear Regulatory Commission",
-      "url": "http://www.regulations.gov/commenton/NRC-2025-0478-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/07/2026-13687/implementation-of-the-national-environmental-policy-act",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-07/pdf/2026-13687.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Nuclear Regulatory Commission"
-      ],
-      "documentNumber": "2026-13687",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-13673",
       "kind": "comment_deadline",
       "when": "2026-09-08",
@@ -4300,25 +3959,6 @@
         "Energy Department"
       ],
       "documentNumber": "2026-13673",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-13667",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Minor New Source Review Program Air Permitting Public Participation Requirements for State Implementation Plans",
-      "summary": "Environmental Protection Agency",
-      "url": "http://www.regulations.gov/commenton/EPA-HQ-OAR-2025-1212-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/07/2026-13667/minor-new-source-review-program-air-permitting-public-participation-requirements-for-state",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-07/pdf/2026-13667.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Environmental Protection Agency"
-      ],
-      "documentNumber": "2026-13667",
       "documentType": "Proposed Rule"
     },
     {
@@ -4974,26 +4614,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-12460",
-      "kind": "comment_deadline",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Permitted Payment Stablecoin Issuer Customer Identification Program",
-      "summary": "Treasury Department, Financial Crimes Enforcement Network",
-      "url": "http://www.regulations.gov/commenton/FINCEN-2026-0101-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/06/22/2026-12460/permitted-payment-stablecoin-issuer-customer-identification-program",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-06-22/pdf/2026-12460.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Treasury Department",
-        "Financial Crimes Enforcement Network"
-      ],
-      "documentNumber": "2026-12460",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-sun-2026-16797-2026-08-26",
       "kind": "sunshine_meeting",
       "when": "2026-08-26",
@@ -5010,42 +4630,6 @@
         "Railroad Retirement Board"
       ],
       "documentNumber": "2026-16797"
-    },
-    {
-      "id": "fr-sun-2026-16743-2026-08-21",
-      "kind": "sunshine_meeting",
-      "when": "2026-08-21",
-      "until": "2026-08-21",
-      "title": "Sunshine Act Meeting Notice",
-      "summary": "Civil Rights Commission",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-17/pdf/2026-16743.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/17/2026-16743/sunshine-act-meeting-notice",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-17/pdf/2026-16743.pdf",
-      "source": "Federal Register Sunshine Act meeting",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Civil Rights Commission"
-      ],
-      "documentNumber": "2026-16743"
-    },
-    {
-      "id": "fr-sun-2026-15592-2026-09-07",
-      "kind": "sunshine_meeting",
-      "when": "2026-09-07",
-      "until": "2026-09-07",
-      "title": "Sunshine Act Meetings",
-      "summary": "Nuclear Regulatory Commission",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-31/pdf/2026-15592.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/31/2026-15592/sunshine-act-meetings",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-31/pdf/2026-15592.pdf",
-      "source": "Federal Register Sunshine Act meeting",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Nuclear Regulatory Commission"
-      ],
-      "documentNumber": "2026-15592"
     },
     {
       "id": "senate-hearing-338724",

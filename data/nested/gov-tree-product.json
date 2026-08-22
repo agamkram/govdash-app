@@ -80,22 +80,22 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-08-21T14:06:01.960Z",
-      "asOf": "2026-08-21T14:05:47.543Z",
-      "nodesWithHeat": 96,
-      "nodesWithDirectHeat": 49,
-      "rawEventCount": 257,
+      "enrichedAt": "2026-08-22T15:25:43.904Z",
+      "asOf": "2026-08-22T15:25:24.339Z",
+      "nodesWithHeat": 93,
+      "nodesWithDirectHeat": 48,
+      "rawEventCount": 236,
       "matched": {
         "chamber": 3,
-        "presidential": 9,
-        "publicInspection": 70,
-        "commentDeadlines": 144,
-        "sunshine": 3,
+        "presidential": 10,
+        "publicInspection": 72,
+        "commentDeadlines": 124,
+        "sunshine": 1,
         "hearings": 2,
         "scotus": 0
       },
       "unmatchedPublicInspection": 15,
-      "unmatchedCommentDeadlines": 11,
+      "unmatchedCommentDeadlines": 9,
       "unmatchedSunshine": 0,
       "sources": {
         "senateFloor": {
@@ -115,42 +115,42 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 85,
+          "count": 87,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
-          "count": 9,
-          "since": "2026-08-07",
+          "count": 10,
+          "since": "2026-08-08",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 155,
-          "start": "2026-08-21",
-          "end": "2026-09-19",
+          "count": 133,
+          "start": "2026-08-22",
+          "end": "2026-09-20",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
-          "count": 3,
-          "start": "2026-08-21",
-          "end": "2026-09-19",
+          "count": 1,
+          "start": "2026-08-22",
+          "end": "2026-09-20",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
           "count": 1,
-          "start": "2026-08-21",
-          "end": "2026-09-19",
+          "start": "2026-08-22",
+          "end": "2026-09-20",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
           "count": 1,
-          "start": "2026-08-21",
-          "end": "2026-09-19",
+          "start": "2026-08-22",
+          "end": "2026-09-20",
           "congress": 119,
           "calendarIds": 1,
           "url": "https://api.congress.gov/v3/committee-meeting/119/house"
@@ -158,8 +158,8 @@
         "scotus": {
           "ok": true,
           "count": 0,
-          "start": "2026-08-21",
-          "end": "2026-09-19",
+          "start": "2026-08-22",
+          "end": "2026-09-20",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -296,8 +296,8 @@
       "note": "Product root: curated for the citizen map. Full Crosswalk nest preserved in gov-tree-full.json."
     },
     "heat": {
-      "asOf": "2026-08-21T14:05:47.543Z",
-      "count": 184,
+      "asOf": "2026-08-22T15:25:24.339Z",
+      "count": 170,
       "rolledUp": true,
       "events": [
         {
@@ -417,7 +417,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-08-21T14:05:47.543Z",
+          "asOf": "2026-08-22T15:25:24.339Z",
           "count": 6,
           "rolledUp": true,
           "events": [
@@ -1090,7 +1090,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 5,
               "rolledUp": true,
               "events": [
@@ -1306,7 +1306,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-08-21T14:05:47.543Z",
+                  "asOf": "2026-08-22T15:25:24.339Z",
                   "count": 2,
                   "rolledUp": false,
                   "events": [
@@ -1472,7 +1472,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-08-21T14:05:47.543Z",
+                  "asOf": "2026-08-22T15:25:24.339Z",
                   "count": 3,
                   "rolledUp": false,
                   "events": [
@@ -1945,7 +1945,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -2483,8 +2483,8 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-08-21T14:05:47.543Z",
-          "count": 116,
+          "asOf": "2026-08-22T15:25:24.339Z",
+          "count": 104,
           "rolledUp": true,
           "events": [
             {
@@ -2604,10 +2604,25 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
-              "count": 9,
+              "asOf": "2026-08-22T15:25:24.339Z",
+              "count": 11,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-pres-2026-17294",
+                  "kind": "presidential_doc",
+                  "when": "2026-08-24",
+                  "until": null,
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Temporary Suspension of Additional Duties To Offset Canadian Discrimination Against the Commerce of the United States With Respect to Alcoholic Beverages, Dairy, and Motor Vehicles",
+                  "summary": "Presidential Document",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-24/pdf/2026-17294.pdf",
+                  "source": "Federal Register presidential documents (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+                  "urgency": "recent",
+                  "bill": null
+                },
                 {
                   "id": "fr-pres-2026-16979",
                   "kind": "presidential_doc",
@@ -2743,7 +2758,8 @@
                   "urgency": "recent",
                   "bill": null
                 }
-              ]
+              ],
+              "hasChildHeat": true
             },
             "children": [
               {
@@ -2783,7 +2799,28 @@
                   },
                   "usgm": null
                 },
-                "heat": null,
+                "heat": {
+                  "asOf": "2026-08-22T15:25:24.339Z",
+                  "count": 1,
+                  "rolledUp": false,
+                  "events": [
+                    {
+                      "id": "fr-pi-2026-17294",
+                      "kind": "public_inspection",
+                      "when": "2026-08-24",
+                      "until": null,
+                      "filedAt": "2026-08-21T11:15:00.000-04:00",
+                      "signedAt": null,
+                      "title": "Canada; Temporary Suspension of Additional Duties To Offset Discrimination Against U.S. Commerce With Respect to Alcoholic Beverages, Dairy, and Motor Vehicles (Proc. 11056)",
+                      "summary": "Executive Office of the President",
+                      "url": "https://public-inspection.federalregister.gov/2026-17294.pdf",
+                      "source": "Federal Register public inspection (PDF)",
+                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                      "urgency": "upcoming",
+                      "bill": null
+                    }
+                  ]
+                },
                 "children": [
                   {
                     "id": "gsa-52",
@@ -3464,7 +3501,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 4,
               "rolledUp": true,
               "events": [
@@ -3581,7 +3618,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-21T14:05:47.543Z",
+                  "asOf": "2026-08-22T15:25:24.339Z",
                   "count": 4,
                   "rolledUp": true,
                   "events": [
@@ -3672,7 +3709,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-08-21T14:05:47.543Z",
+                      "asOf": "2026-08-22T15:25:24.339Z",
                       "count": 4,
                       "rolledUp": true,
                       "events": [
@@ -5011,7 +5048,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
+                          "asOf": "2026-08-22T15:25:24.339Z",
                           "count": 2,
                           "rolledUp": true,
                           "events": [
@@ -5072,7 +5109,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-08-21T14:05:47.543Z",
+                              "asOf": "2026-08-22T15:25:24.339Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -5293,7 +5330,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
+                          "asOf": "2026-08-22T15:25:24.339Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -5339,7 +5376,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-08-21T14:05:47.543Z",
+                              "asOf": "2026-08-22T15:25:24.339Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -5806,7 +5843,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
+                          "asOf": "2026-08-22T15:25:24.339Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -5956,7 +5993,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-08-21T14:05:47.543Z",
+                              "asOf": "2026-08-22T15:25:24.339Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -6316,8 +6353,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
-              "count": 15,
+              "asOf": "2026-08-22T15:25:24.339Z",
+              "count": 13,
               "rolledUp": true,
               "events": [
                 {
@@ -6437,8 +6474,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-21T14:05:47.543Z",
-                  "count": 15,
+                  "asOf": "2026-08-22T15:25:24.339Z",
+                  "count": 13,
                   "rolledUp": true,
                   "events": [
                     {
@@ -6558,8 +6595,8 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-08-21T14:05:47.543Z",
-                      "count": 15,
+                      "asOf": "2026-08-22T15:25:24.339Z",
+                      "count": 13,
                       "rolledUp": true,
                       "events": [
                         {
@@ -6679,8 +6716,8 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
-                          "count": 15,
+                          "asOf": "2026-08-22T15:25:24.339Z",
+                          "count": 13,
                           "rolledUp": true,
                           "events": [
                             {
@@ -7562,7 +7599,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-08-21T14:05:47.543Z",
+                              "asOf": "2026-08-22T15:25:24.339Z",
                               "count": 2,
                               "rolledUp": true,
                               "events": [
@@ -7675,7 +7712,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-08-21T14:05:47.543Z",
+                                  "asOf": "2026-08-22T15:25:24.339Z",
                                   "count": 2,
                                   "rolledUp": false,
                                   "events": [
@@ -7811,28 +7848,7 @@
                               "sam": null,
                               "usgm": null
                             },
-                            "heat": {
-                              "asOf": "2026-08-21T14:05:47.543Z",
-                              "count": 1,
-                              "rolledUp": true,
-                              "events": [
-                                {
-                                  "id": "fr-comment-2026-14793",
-                                  "kind": "comment_deadline",
-                                  "when": "2026-08-21",
-                                  "until": "2026-08-21",
-                                  "filedAt": null,
-                                  "signedAt": null,
-                                  "title": "Requirement To Identify All Real Parties in Interest to a Third Party Request for an Ex Parte Reexamination",
-                                  "summary": "Commerce Department, Patent and Trademark Office (from lower in the map)",
-                                  "url": "http://www.regulations.gov/commenton/PTO-P-2025-0545-0001",
-                                  "source": "Federal Register proposed rule (comments close)",
-                                  "sourceUrl": "https://www.federalregister.gov/",
-                                  "urgency": "upcoming",
-                                  "bill": null
-                                }
-                              ]
-                            },
+                            "heat": null,
                             "children": [
                               {
                                 "id": "gsa-158",
@@ -7882,28 +7898,7 @@
                                     "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
                                   }
                                 },
-                                "heat": {
-                                  "asOf": "2026-08-21T14:05:47.543Z",
-                                  "count": 1,
-                                  "rolledUp": false,
-                                  "events": [
-                                    {
-                                      "id": "fr-comment-2026-14793",
-                                      "kind": "comment_deadline",
-                                      "when": "2026-08-21",
-                                      "until": "2026-08-21",
-                                      "filedAt": null,
-                                      "signedAt": null,
-                                      "title": "Requirement To Identify All Real Parties in Interest to a Third Party Request for an Ex Parte Reexamination",
-                                      "summary": "Commerce Department, Patent and Trademark Office",
-                                      "url": "http://www.regulations.gov/commenton/PTO-P-2025-0545-0001",
-                                      "source": "Federal Register proposed rule (comments close)",
-                                      "sourceUrl": "https://www.federalregister.gov/",
-                                      "urgency": "upcoming",
-                                      "bill": null
-                                    }
-                                  ]
-                                },
+                                "heat": null,
                                 "children": [],
                                 "workforce": {
                                   "count": 13529,
@@ -7984,7 +7979,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-08-21T14:05:47.543Z",
+                              "asOf": "2026-08-22T15:25:24.339Z",
                               "count": 1,
                               "rolledUp": true,
                               "events": [
@@ -8090,7 +8085,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-08-21T14:05:47.543Z",
+                                  "asOf": "2026-08-22T15:25:24.339Z",
                                   "count": 1,
                                   "rolledUp": false,
                                   "events": [
@@ -8349,8 +8344,8 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-08-21T14:05:47.543Z",
-                              "count": 11,
+                              "asOf": "2026-08-22T15:25:24.339Z",
+                              "count": 10,
                               "rolledUp": true,
                               "events": [
                                 {
@@ -8440,8 +8435,8 @@
                                   "usgm": null
                                 },
                                 "heat": {
-                                  "asOf": "2026-08-21T14:05:47.543Z",
-                                  "count": 11,
+                                  "asOf": "2026-08-22T15:25:24.339Z",
+                                  "count": 10,
                                   "rolledUp": true,
                                   "events": [
                                     {
@@ -8633,8 +8628,8 @@
                                       }
                                     },
                                     "heat": {
-                                      "asOf": "2026-08-21T14:05:47.543Z",
-                                      "count": 11,
+                                      "asOf": "2026-08-22T15:25:24.339Z",
+                                      "count": 10,
                                       "rolledUp": false,
                                       "events": [
                                         {
@@ -8782,21 +8777,6 @@
                                           "title": "Fisheries Off West Coast States; Coastal Pelagic Species Fisheries; Amendment 22 to the Coastal Pelagic Species Fishery Management Plan",
                                           "summary": "Commerce Department, National Oceanic and Atmospheric Administration",
                                           "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2025-0051-0001",
-                                          "source": "Federal Register proposed rule (comments close)",
-                                          "sourceUrl": "https://www.federalregister.gov/",
-                                          "urgency": "upcoming",
-                                          "bill": null
-                                        },
-                                        {
-                                          "id": "fr-comment-2026-14798",
-                                          "kind": "comment_deadline",
-                                          "when": "2026-08-21",
-                                          "until": "2026-08-21",
-                                          "filedAt": null,
-                                          "signedAt": null,
-                                          "title": "Coastal Migratory Pelagic Resources in the Gulf of America and Atlantic Region; Framework Amendment 14",
-                                          "summary": "Commerce Department, National Oceanic and Atmospheric Administration",
-                                          "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-0794-0003",
                                           "source": "Federal Register proposed rule (comments close)",
                                           "sourceUrl": "https://www.federalregister.gov/",
                                           "urgency": "upcoming",
@@ -22728,7 +22708,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 5,
               "rolledUp": true,
               "events": [
@@ -22819,7 +22799,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-21T14:05:47.543Z",
+                  "asOf": "2026-08-22T15:25:24.339Z",
                   "count": 5,
                   "rolledUp": true,
                   "events": [
@@ -25455,7 +25435,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-08-21T14:05:47.543Z",
+                      "asOf": "2026-08-22T15:25:24.339Z",
                       "count": 5,
                       "rolledUp": false,
                       "events": [
@@ -25787,7 +25767,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 19,
               "rolledUp": false,
               "events": [
@@ -25864,7 +25844,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-21T14:05:47.543Z",
+                  "asOf": "2026-08-22T15:25:24.339Z",
                   "count": 16,
                   "rolledUp": true,
                   "events": [
@@ -26010,7 +25990,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-08-21T14:05:47.543Z",
+                      "asOf": "2026-08-22T15:25:24.339Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -26346,7 +26326,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-08-21T14:05:47.543Z",
+                      "asOf": "2026-08-22T15:25:24.339Z",
                       "count": 5,
                       "rolledUp": false,
                       "events": [
@@ -27553,7 +27533,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-08-21T14:05:47.543Z",
+                      "asOf": "2026-08-22T15:25:24.339Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -27802,7 +27782,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-08-21T14:05:47.543Z",
+                      "asOf": "2026-08-22T15:25:24.339Z",
                       "count": 9,
                       "rolledUp": false,
                       "events": [
@@ -28194,7 +28174,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 10,
               "rolledUp": true,
               "events": [
@@ -28285,7 +28265,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-21T14:05:47.543Z",
+                  "asOf": "2026-08-22T15:25:24.339Z",
                   "count": 10,
                   "rolledUp": true,
                   "events": [
@@ -28376,7 +28356,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-08-21T14:05:47.543Z",
+                      "asOf": "2026-08-22T15:25:24.339Z",
                       "count": 10,
                       "rolledUp": true,
                       "events": [
@@ -29874,7 +29854,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
+                          "asOf": "2026-08-22T15:25:24.339Z",
                           "count": 10,
                           "rolledUp": false,
                           "events": [
@@ -30016,9 +29996,9 @@
                             {
                               "id": "fr-pi-2026-17227",
                               "kind": "public_inspection",
-                              "when": "2026-08-24",
+                              "when": null,
                               "until": null,
-                              "filedAt": "2026-08-21T08:45:00.000-04:00",
+                              "filedAt": null,
                               "signedAt": null,
                               "title": "Safety Zone: Indiana Harbor Canal, East Chicago, IN",
                               "summary": "Coast Guard",
@@ -30675,7 +30655,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -32439,7 +32419,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 3,
               "rolledUp": true,
               "events": [
@@ -32551,7 +32531,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-21T14:05:47.543Z",
+                  "asOf": "2026-08-22T15:25:24.339Z",
                   "count": 3,
                   "rolledUp": true,
                   "events": [
@@ -32627,7 +32607,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-08-21T14:05:47.543Z",
+                      "asOf": "2026-08-22T15:25:24.339Z",
                       "count": 3,
                       "rolledUp": true,
                       "events": [
@@ -34061,7 +34041,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
+                          "asOf": "2026-08-22T15:25:24.339Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -34143,7 +34123,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
+                          "asOf": "2026-08-22T15:25:24.339Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -34607,8 +34587,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
-              "count": 13,
+              "asOf": "2026-08-22T15:25:24.339Z",
+              "count": 2,
               "rolledUp": true,
               "events": [
                 {
@@ -34636,51 +34616,6 @@
                   "title": "Benzene",
                   "summary": "Labor Department, Occupational Safety and Health Administration (from lower in the map)",
                   "url": "http://www.regulations.gov/commenton/OSHA-2025-0023-0025",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-14854",
-                  "kind": "comment_deadline",
-                  "when": "2026-08-21",
-                  "until": "2026-08-21",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Methylene Chloride",
-                  "summary": "Labor Department, Occupational Safety and Health Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/OSHA-2025-0012-0024",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-14853",
-                  "kind": "comment_deadline",
-                  "when": "2026-08-21",
-                  "until": "2026-08-21",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Vinyl Chloride",
-                  "summary": "Labor Department, Occupational Safety and Health Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/OSHA-2025-0015-0024",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-14852",
-                  "kind": "comment_deadline",
-                  "when": "2026-08-21",
-                  "until": "2026-08-21",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Methylenedianiline",
-                  "summary": "Labor Department, Occupational Safety and Health Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/OSHA-2025-0025-0021",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
@@ -34713,8 +34648,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-21T14:05:47.543Z",
-                  "count": 13,
+                  "asOf": "2026-08-22T15:25:24.339Z",
+                  "count": 2,
                   "rolledUp": true,
                   "events": [
                     {
@@ -34742,51 +34677,6 @@
                       "title": "Benzene",
                       "summary": "Labor Department, Occupational Safety and Health Administration (from lower in the map)",
                       "url": "http://www.regulations.gov/commenton/OSHA-2025-0023-0025",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-14854",
-                      "kind": "comment_deadline",
-                      "when": "2026-08-21",
-                      "until": "2026-08-21",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Methylene Chloride",
-                      "summary": "Labor Department, Occupational Safety and Health Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/OSHA-2025-0012-0024",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-14853",
-                      "kind": "comment_deadline",
-                      "when": "2026-08-21",
-                      "until": "2026-08-21",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Vinyl Chloride",
-                      "summary": "Labor Department, Occupational Safety and Health Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/OSHA-2025-0015-0024",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-14852",
-                      "kind": "comment_deadline",
-                      "when": "2026-08-21",
-                      "until": "2026-08-21",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Methylenedianiline",
-                      "summary": "Labor Department, Occupational Safety and Health Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/OSHA-2025-0025-0021",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
@@ -34819,8 +34709,8 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-08-21T14:05:47.543Z",
-                      "count": 13,
+                      "asOf": "2026-08-22T15:25:24.339Z",
+                      "count": 2,
                       "rolledUp": true,
                       "events": [
                         {
@@ -34848,51 +34738,6 @@
                           "title": "Benzene",
                           "summary": "Labor Department, Occupational Safety and Health Administration (from lower in the map)",
                           "url": "http://www.regulations.gov/commenton/OSHA-2025-0023-0025",
-                          "source": "Federal Register proposed rule (comments close)",
-                          "sourceUrl": "https://www.federalregister.gov/",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-comment-2026-14854",
-                          "kind": "comment_deadline",
-                          "when": "2026-08-21",
-                          "until": "2026-08-21",
-                          "filedAt": null,
-                          "signedAt": null,
-                          "title": "Methylene Chloride",
-                          "summary": "Labor Department, Occupational Safety and Health Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/OSHA-2025-0012-0024",
-                          "source": "Federal Register proposed rule (comments close)",
-                          "sourceUrl": "https://www.federalregister.gov/",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-comment-2026-14853",
-                          "kind": "comment_deadline",
-                          "when": "2026-08-21",
-                          "until": "2026-08-21",
-                          "filedAt": null,
-                          "signedAt": null,
-                          "title": "Vinyl Chloride",
-                          "summary": "Labor Department, Occupational Safety and Health Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/OSHA-2025-0015-0024",
-                          "source": "Federal Register proposed rule (comments close)",
-                          "sourceUrl": "https://www.federalregister.gov/",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-comment-2026-14852",
-                          "kind": "comment_deadline",
-                          "when": "2026-08-21",
-                          "until": "2026-08-21",
-                          "filedAt": null,
-                          "signedAt": null,
-                          "title": "Methylenedianiline",
-                          "summary": "Labor Department, Occupational Safety and Health Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/OSHA-2025-0025-0021",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
@@ -35750,8 +35595,8 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
-                          "count": 12,
+                          "asOf": "2026-08-22T15:25:24.339Z",
+                          "count": 1,
                           "rolledUp": false,
                           "events": [
                             {
@@ -35764,171 +35609,6 @@
                               "title": "Benzene",
                               "summary": "Labor Department, Occupational Safety and Health Administration",
                               "url": "http://www.regulations.gov/commenton/OSHA-2025-0023-0025",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-14854",
-                              "kind": "comment_deadline",
-                              "when": "2026-08-21",
-                              "until": "2026-08-21",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Methylene Chloride",
-                              "summary": "Labor Department, Occupational Safety and Health Administration",
-                              "url": "http://www.regulations.gov/commenton/OSHA-2025-0012-0024",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-14853",
-                              "kind": "comment_deadline",
-                              "when": "2026-08-21",
-                              "until": "2026-08-21",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Vinyl Chloride",
-                              "summary": "Labor Department, Occupational Safety and Health Administration",
-                              "url": "http://www.regulations.gov/commenton/OSHA-2025-0015-0024",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-14852",
-                              "kind": "comment_deadline",
-                              "when": "2026-08-21",
-                              "until": "2026-08-21",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Methylenedianiline",
-                              "summary": "Labor Department, Occupational Safety and Health Administration",
-                              "url": "http://www.regulations.gov/commenton/OSHA-2025-0025-0021",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-14851",
-                              "kind": "comment_deadline",
-                              "when": "2026-08-21",
-                              "until": "2026-08-21",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Lead",
-                              "summary": "Labor Department, Occupational Safety and Health Administration",
-                              "url": "http://www.regulations.gov/commenton/OSHA-2025-0022-0031",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-14850",
-                              "kind": "comment_deadline",
-                              "when": "2026-08-21",
-                              "until": "2026-08-21",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Inorganic Arsenic",
-                              "summary": "Labor Department, Occupational Safety and Health Administration",
-                              "url": "http://www.regulations.gov/commenton/OSHA-2025-0016-0023",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-14849",
-                              "kind": "comment_deadline",
-                              "when": "2026-08-21",
-                              "until": "2026-08-21",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Formaldehyde",
-                              "summary": "Labor Department, Occupational Safety and Health Administration",
-                              "url": "http://www.regulations.gov/commenton/OSHA-2025-0026-0025",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-14847",
-                              "kind": "comment_deadline",
-                              "when": "2026-08-21",
-                              "until": "2026-08-21",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "1,2-Dibromo-3-Chloropropane",
-                              "summary": "Labor Department, Occupational Safety and Health Administration",
-                              "url": "http://www.regulations.gov/commenton/OSHA-2025-0019-0021",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-14846",
-                              "kind": "comment_deadline",
-                              "when": "2026-08-21",
-                              "until": "2026-08-21",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Inorganic Arsenic",
-                              "summary": "Labor Department, Occupational Safety and Health Administration",
-                              "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-22/pdf/2026-14846.pdf",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-14845",
-                              "kind": "comment_deadline",
-                              "when": "2026-08-21",
-                              "until": "2026-08-21",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Acrylonitrile",
-                              "summary": "Labor Department, Occupational Safety and Health Administration",
-                              "url": "http://www.regulations.gov/commenton/OSHA-2025-0017-0021",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-14844",
-                              "kind": "comment_deadline",
-                              "when": "2026-08-21",
-                              "until": "2026-08-21",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "13 Carcinogens (4-Nitrobiphenyl, etc.)",
-                              "summary": "Labor Department, Occupational Safety and Health Administration",
-                              "url": "http://www.regulations.gov/commenton/OSHA-2025-0013-0021",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-14843",
-                              "kind": "comment_deadline",
-                              "when": "2026-08-21",
-                              "until": "2026-08-21",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Ethylene Oxide",
-                              "summary": "Labor Department, Occupational Safety and Health Administration",
-                              "url": "http://www.regulations.gov/commenton/OSHA-2025-0018-0022",
                               "source": "Federal Register proposed rule (comments close)",
                               "sourceUrl": "https://www.federalregister.gov/",
                               "urgency": "upcoming",
@@ -36810,7 +36490,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
+                          "asOf": "2026-08-22T15:25:24.339Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -39145,7 +38825,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 16,
               "rolledUp": true,
               "events": [
@@ -39266,7 +38946,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-21T14:05:47.543Z",
+                  "asOf": "2026-08-22T15:25:24.339Z",
                   "count": 16,
                   "rolledUp": true,
                   "events": [
@@ -39387,7 +39067,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-08-21T14:05:47.543Z",
+                      "asOf": "2026-08-22T15:25:24.339Z",
                       "count": 16,
                       "rolledUp": true,
                       "events": [
@@ -39508,7 +39188,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
+                          "asOf": "2026-08-22T15:25:24.339Z",
                           "count": 12,
                           "rolledUp": true,
                           "events": [
@@ -39681,7 +39361,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-08-21T14:05:47.543Z",
+                              "asOf": "2026-08-22T15:25:24.339Z",
                               "count": 12,
                               "rolledUp": false,
                               "events": [
@@ -40056,7 +39736,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
+                          "asOf": "2026-08-22T15:25:24.339Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -40124,7 +39804,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-08-21T14:05:47.543Z",
+                              "asOf": "2026-08-22T15:25:24.339Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -40388,7 +40068,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
+                          "asOf": "2026-08-22T15:25:24.339Z",
                           "count": 2,
                           "rolledUp": true,
                           "events": [
@@ -40471,7 +40151,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-08-21T14:05:47.543Z",
+                              "asOf": "2026-08-22T15:25:24.339Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -40812,7 +40492,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
+                          "asOf": "2026-08-22T15:25:24.339Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -40943,7 +40623,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-08-21T14:05:47.543Z",
+                              "asOf": "2026-08-22T15:25:24.339Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -41788,8 +41468,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
-              "count": 4,
+              "asOf": "2026-08-22T15:25:24.339Z",
+              "count": 3,
               "rolledUp": true,
               "events": [
                 {
@@ -41834,21 +41514,6 @@
                   "url": "https://public-inspection.federalregister.gov/2026-17249.pdf",
                   "source": "Federal Register public inspection (PDF)",
                   "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-12460",
-                  "kind": "comment_deadline",
-                  "when": "2026-08-21",
-                  "until": "2026-08-21",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Permitted Payment Stablecoin Issuer Customer Identification Program",
-                  "summary": "Treasury Department, Financial Crimes Enforcement Network (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FINCEN-2026-0101-0001",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
                 }
@@ -41905,8 +41570,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-21T14:05:47.543Z",
-                  "count": 4,
+                  "asOf": "2026-08-22T15:25:24.339Z",
+                  "count": 3,
                   "rolledUp": true,
                   "events": [
                     {
@@ -41951,21 +41616,6 @@
                       "url": "https://public-inspection.federalregister.gov/2026-17249.pdf",
                       "source": "Federal Register public inspection (PDF)",
                       "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-12460",
-                      "kind": "comment_deadline",
-                      "when": "2026-08-21",
-                      "until": "2026-08-21",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Permitted Payment Stablecoin Issuer Customer Identification Program",
-                      "summary": "Treasury Department, Financial Crimes Enforcement Network (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FINCEN-2026-0101-0001",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
                       "bill": null
                     }
@@ -42048,8 +41698,8 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-08-21T14:05:47.543Z",
-                      "count": 4,
+                      "asOf": "2026-08-22T15:25:24.339Z",
+                      "count": 3,
                       "rolledUp": true,
                       "events": [
                         {
@@ -42094,21 +41744,6 @@
                           "url": "https://public-inspection.federalregister.gov/2026-17249.pdf",
                           "source": "Federal Register public inspection (PDF)",
                           "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-comment-2026-12460",
-                          "kind": "comment_deadline",
-                          "when": "2026-08-21",
-                          "until": "2026-08-21",
-                          "filedAt": null,
-                          "signedAt": null,
-                          "title": "Permitted Payment Stablecoin Issuer Customer Identification Program",
-                          "summary": "Treasury Department, Financial Crimes Enforcement Network (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/FINCEN-2026-0101-0001",
-                          "source": "Federal Register proposed rule (comments close)",
-                          "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
                           "bill": null
                         }
@@ -42966,28 +42601,7 @@
                           "sam": null,
                           "usgm": null
                         },
-                        "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
-                          "count": 1,
-                          "rolledUp": true,
-                          "events": [
-                            {
-                              "id": "fr-comment-2026-12460",
-                              "kind": "comment_deadline",
-                              "when": "2026-08-21",
-                              "until": "2026-08-21",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Permitted Payment Stablecoin Issuer Customer Identification Program",
-                              "summary": "Treasury Department, Financial Crimes Enforcement Network (from lower in the map)",
-                              "url": "http://www.regulations.gov/commenton/FINCEN-2026-0101-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            }
-                          ]
-                        },
+                        "heat": null,
                         "children": [
                           {
                             "id": "gsa-1640",
@@ -43064,28 +42678,7 @@
                               "sam": null,
                               "usgm": null
                             },
-                            "heat": {
-                              "asOf": "2026-08-21T14:05:47.543Z",
-                              "count": 1,
-                              "rolledUp": false,
-                              "events": [
-                                {
-                                  "id": "fr-comment-2026-12460",
-                                  "kind": "comment_deadline",
-                                  "when": "2026-08-21",
-                                  "until": "2026-08-21",
-                                  "filedAt": null,
-                                  "signedAt": null,
-                                  "title": "Permitted Payment Stablecoin Issuer Customer Identification Program",
-                                  "summary": "Treasury Department, Financial Crimes Enforcement Network",
-                                  "url": "http://www.regulations.gov/commenton/FINCEN-2026-0101-0001",
-                                  "source": "Federal Register proposed rule (comments close)",
-                                  "sourceUrl": "https://www.federalregister.gov/",
-                                  "urgency": "upcoming",
-                                  "bill": null
-                                }
-                              ]
-                            },
+                            "heat": null,
                             "children": [],
                             "workforce": {
                               "count": 231,
@@ -43481,7 +43074,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
+                          "asOf": "2026-08-22T15:25:24.339Z",
                           "count": 3,
                           "rolledUp": false,
                           "events": [
@@ -43915,7 +43508,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 16,
               "rolledUp": true,
               "events": [
@@ -44036,7 +43629,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-21T14:05:47.543Z",
+                  "asOf": "2026-08-22T15:25:24.339Z",
                   "count": 16,
                   "rolledUp": true,
                   "events": [
@@ -44157,7 +43750,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-08-21T14:05:47.543Z",
+                      "asOf": "2026-08-22T15:25:24.339Z",
                       "count": 16,
                       "rolledUp": true,
                       "events": [
@@ -44768,7 +44361,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
+                          "asOf": "2026-08-22T15:25:24.339Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -44871,7 +44464,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
+                          "asOf": "2026-08-22T15:25:24.339Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -45181,7 +44774,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
+                          "asOf": "2026-08-22T15:25:24.339Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -45363,7 +44956,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-21T14:05:47.543Z",
+                          "asOf": "2026-08-22T15:25:24.339Z",
                           "count": 12,
                           "rolledUp": false,
                           "events": [
@@ -49591,8 +49184,8 @@
           "note": "Product door: Crosswalk Independent Federal Agencies + major non-Cabinet agencies + government corporations shelf. Constitutionally many report through the Executive; shown separately for citizen clarity."
         },
         "heat": {
-          "asOf": "2026-08-21T14:05:47.543Z",
-          "count": 62,
+          "asOf": "2026-08-22T15:25:24.339Z",
+          "count": 60,
           "rolledUp": true,
           "events": [
             {
@@ -50036,7 +49629,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -50956,7 +50549,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 8,
               "rolledUp": false,
               "events": [
@@ -52284,7 +51877,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -52690,7 +52283,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -52767,8 +52360,8 @@
               "note": "Product shelf: GSE / government corporation entities lifted from Crosswalk Industry bucket."
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
-              "count": 6,
+              "asOf": "2026-08-22T15:25:24.339Z",
+              "count": 7,
               "rolledUp": true,
               "events": [
                 {
@@ -52832,6 +52425,21 @@
                   "bill": null
                 },
                 {
+                  "id": "fr-pi-2026-17238",
+                  "kind": "public_inspection",
+                  "when": "2026-08-26",
+                  "until": null,
+                  "filedAt": "2026-08-21T21:00:00.000-04:00",
+                  "signedAt": null,
+                  "title": "Ballot Mail For Federal Elections",
+                  "summary": "Postal Service (from lower in the map)",
+                  "url": "https://public-inspection.federalregister.gov/2026-17238.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
                   "id": "fr-pi-2026-17194",
                   "kind": "public_inspection",
                   "when": "2026-08-24",
@@ -52841,21 +52449,6 @@
                   "title": "Applications for Long-Term Loans or Financial Guarantees in Excess of $100 Million",
                   "summary": "Export-Import Bank (from lower in the map)",
                   "url": "https://public-inspection.federalregister.gov/2026-17194.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-pi-2026-17207",
-                  "kind": "public_inspection",
-                  "when": "2026-08-24",
-                  "until": null,
-                  "filedAt": "2026-08-21T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Applications for Long-Term Loans or Financial Guarantees in Excess of $100 Million",
-                  "summary": "Export-Import Bank (from lower in the map)",
-                  "url": "https://public-inspection.federalregister.gov/2026-17207.pdf",
                   "source": "Federal Register public inspection (PDF)",
                   "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                   "urgency": "upcoming",
@@ -53071,7 +52664,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-08-21T14:05:47.543Z",
+                  "asOf": "2026-08-22T15:25:24.339Z",
                   "count": 2,
                   "rolledUp": false,
                   "events": [
@@ -53430,7 +53023,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-08-21T14:05:47.543Z",
+                  "asOf": "2026-08-22T15:25:24.339Z",
                   "count": 3,
                   "rolledUp": false,
                   "events": [
@@ -54544,8 +54137,8 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-08-21T14:05:47.543Z",
-                  "count": 1,
+                  "asOf": "2026-08-22T15:25:24.339Z",
+                  "count": 2,
                   "rolledUp": false,
                   "events": [
                     {
@@ -54560,6 +54153,21 @@
                       "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-16016.pdf",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "fr-pi-2026-17238",
+                      "kind": "public_inspection",
+                      "when": "2026-08-26",
+                      "until": null,
+                      "filedAt": "2026-08-21T21:00:00.000-04:00",
+                      "signedAt": null,
+                      "title": "Ballot Mail For Federal Elections",
+                      "summary": "Postal Service",
+                      "url": "https://public-inspection.federalregister.gov/2026-17238.pdf",
+                      "source": "Federal Register public inspection (PDF)",
+                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                       "urgency": "upcoming",
                       "bill": null
                     }
@@ -60247,8 +59855,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
-              "count": 2,
+              "asOf": "2026-08-22T15:25:24.339Z",
+              "count": 1,
               "rolledUp": false,
               "events": [
                 {
@@ -60263,21 +59871,6 @@
                   "url": "https://public-inspection.federalregister.gov/2026-17197.pdf",
                   "source": "Federal Register public inspection (PDF)",
                   "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-sun-2026-16743-2026-08-21",
-                  "kind": "sunshine_meeting",
-                  "when": "2026-08-21",
-                  "until": "2026-08-21",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Sunshine Act Meeting Notice",
-                  "summary": "Civil Rights Commission",
-                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-17/pdf/2026-16743.pdf",
-                  "source": "Federal Register Sunshine Act meeting",
-                  "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
                 }
@@ -60542,7 +60135,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -60974,7 +60567,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -61485,7 +61078,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 12,
               "rolledUp": false,
               "events": [
@@ -62651,7 +62244,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -63950,7 +63543,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -64424,8 +64017,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
-              "count": 9,
+              "asOf": "2026-08-22T15:25:24.339Z",
+              "count": 7,
               "rolledUp": false,
               "events": [
                 {
@@ -64454,21 +64047,6 @@
                   "summary": "Nuclear Regulatory Commission",
                   "url": "http://www.regulations.gov/commenton/NRC-2025-1237-0001",
                   "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-sun-2026-15592-2026-09-07",
-                  "kind": "sunshine_meeting",
-                  "when": "2026-09-07",
-                  "until": "2026-09-07",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Sunshine Act Meetings",
-                  "summary": "Nuclear Regulatory Commission",
-                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-31/pdf/2026-15592.pdf",
-                  "source": "Federal Register Sunshine Act meeting",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
@@ -64543,21 +64121,6 @@
                   "title": "List of Approved Spent Fuel Storage Casks: Holtec International HI-STORM Flood/Wind System, Certificate of Compliance No. 1032, Amendment No. 10",
                   "summary": "Nuclear Regulatory Commission",
                   "url": "http://www.regulations.gov/commenton/NRC-2026-2476-0002",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-13687",
-                  "kind": "comment_deadline",
-                  "when": "2026-08-21",
-                  "until": "2026-08-21",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Implementation of the National Environmental Policy Act",
-                  "summary": "Nuclear Regulatory Commission",
-                  "url": "http://www.regulations.gov/commenton/NRC-2025-0478-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
@@ -66606,7 +66169,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -66850,7 +66413,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-21T14:05:47.543Z",
+              "asOf": "2026-08-22T15:25:24.339Z",
               "count": 12,
               "rolledUp": false,
               "events": [
