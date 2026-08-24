@@ -41,22 +41,22 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-08-22T15:25:52.555Z",
-      "asOf": "2026-08-22T15:25:24.339Z",
+      "enrichedAt": "2026-08-24T21:01:01.042Z",
+      "asOf": "2026-08-24T21:00:28.328Z",
       "nodesWithHeat": 3,
       "nodesWithDirectHeat": 1,
-      "rawEventCount": 236,
+      "rawEventCount": 259,
       "matched": {
         "chamber": 0,
         "presidential": 0,
-        "publicInspection": 0,
+        "publicInspection": 1,
         "commentDeadlines": 1,
         "sunshine": 0,
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 87,
-      "unmatchedCommentDeadlines": 132,
+      "unmatchedPublicInspection": 94,
+      "unmatchedCommentDeadlines": 147,
       "unmatchedSunshine": 1,
       "sources": {
         "senateFloor": {
@@ -76,42 +76,42 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 87,
+          "count": 95,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
           "count": 10,
-          "since": "2026-08-08",
+          "since": "2026-08-10",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 133,
-          "start": "2026-08-22",
-          "end": "2026-09-20",
+          "count": 148,
+          "start": "2026-08-24",
+          "end": "2026-09-22",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
           "count": 1,
-          "start": "2026-08-22",
-          "end": "2026-09-20",
+          "start": "2026-08-24",
+          "end": "2026-09-22",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
           "count": 1,
-          "start": "2026-08-22",
-          "end": "2026-09-20",
+          "start": "2026-08-24",
+          "end": "2026-09-22",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
           "count": 1,
-          "start": "2026-08-22",
-          "end": "2026-09-20",
+          "start": "2026-08-24",
+          "end": "2026-09-22",
           "congress": 119,
           "calendarIds": 1,
           "url": "https://api.congress.gov/v3/committee-meeting/119/house"
@@ -119,8 +119,8 @@
         "scotus": {
           "ok": true,
           "count": 0,
-          "start": "2026-08-22",
-          "end": "2026-09-20",
+          "start": "2026-08-24",
+          "end": "2026-09-22",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -140,10 +140,25 @@
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
     "heat": {
-      "asOf": "2026-08-22T15:25:24.339Z",
-      "count": 1,
+      "asOf": "2026-08-24T21:00:28.328Z",
+      "count": 2,
       "rolledUp": true,
       "events": [
+        {
+          "id": "fr-pi-2026-17264",
+          "kind": "public_inspection",
+          "when": "2026-08-25",
+          "until": null,
+          "filedAt": "2026-08-24T08:45:00.000-04:00",
+          "signedAt": null,
+          "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Current Population Survey Civic Engagement and Volunteering Supplement",
+          "summary": "Corporation for National and Community Service (from lower in the map)",
+          "url": "https://public-inspection.federalregister.gov/2026-17264.pdf",
+          "source": "Federal Register public inspection (PDF)",
+          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+          "urgency": "upcoming",
+          "bill": null
+        },
         {
           "id": "fr-comment-2026-14906",
           "kind": "comment_deadline",
@@ -175,10 +190,25 @@
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
         "heat": {
-          "asOf": "2026-08-22T15:25:24.339Z",
-          "count": 1,
+          "asOf": "2026-08-24T21:00:28.328Z",
+          "count": 2,
           "rolledUp": true,
           "events": [
+            {
+              "id": "fr-pi-2026-17264",
+              "kind": "public_inspection",
+              "when": "2026-08-25",
+              "until": null,
+              "filedAt": "2026-08-24T08:45:00.000-04:00",
+              "signedAt": null,
+              "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Current Population Survey Civic Engagement and Volunteering Supplement",
+              "summary": "Corporation for National and Community Service (from lower in the map)",
+              "url": "https://public-inspection.federalregister.gov/2026-17264.pdf",
+              "source": "Federal Register public inspection (PDF)",
+              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+              "urgency": "upcoming",
+              "bill": null
+            },
             {
               "id": "fr-comment-2026-14906",
               "kind": "comment_deadline",
@@ -1781,10 +1811,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-22T15:25:24.339Z",
-              "count": 1,
+              "asOf": "2026-08-24T21:00:28.328Z",
+              "count": 2,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-pi-2026-17264",
+                  "kind": "public_inspection",
+                  "when": "2026-08-25",
+                  "until": null,
+                  "filedAt": "2026-08-24T08:45:00.000-04:00",
+                  "signedAt": null,
+                  "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Current Population Survey Civic Engagement and Volunteering Supplement",
+                  "summary": "Corporation for National and Community Service",
+                  "url": "https://public-inspection.federalregister.gov/2026-17264.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-14906",
                   "kind": "comment_deadline",
