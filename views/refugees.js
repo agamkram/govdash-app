@@ -21,6 +21,13 @@ function fmt(n) {
   return x.toLocaleString("en-US");
 }
 
+/** Date on each home card — source’s newest published month. */
+function latestAsOf(label) {
+  const s = String(label || "").trim();
+  if (!s || s === "—") return "—";
+  return `${s} (latest)`;
+}
+
 function stateRows(byState) {
   return Object.entries(byState || {})
     .map(([name, row]) => ({ name, total: Number(row?.total) || 0, row }))
@@ -203,14 +210,14 @@ export function createRefugeesPage(root) {
         title: "NIV",
         blurb: "Nonimmigrant visa issuances",
         total: visas?.niv?.total,
-        sub: `${visas?.niv?.asOfLabel || "—"} · one month · State`,
+        sub: `${latestAsOf(visas?.niv?.asOfLabel)} · one month · State`,
       },
       {
         id: "iv",
         title: "IV",
         blurb: "Immigrant visa issuances",
         total: visas?.iv?.total,
-        sub: `${visas?.iv?.asOfLabel || "—"} · one month · State`,
+        sub: `${latestAsOf(visas?.iv?.asOfLabel)} · one month · State`,
       },
       {
         id: "usrap",
@@ -219,15 +226,15 @@ export function createRefugeesPage(root) {
         total: wraps?.admissions?.total,
         sub:
           wraps?.admissions?.ceiling != null
-            ? `of ${fmt(wraps.admissions.ceiling)} ceiling · ${wraps.asOfLabel || "—"} · RPC`
-            : `${wraps?.asOfLabel || "—"} · RPC`,
+            ? `of ${fmt(wraps.admissions.ceiling)} ceiling · ${latestAsOf(wraps.asOfLabel)} · RPC`
+            : `${latestAsOf(wraps?.asOfLabel)} · RPC`,
       },
       {
         id: "siv",
         title: "SIV",
         blurb: "Afghan / Iraqi SIV arrivals",
         total: siv?.total,
-        sub: `${siv?.asOfLabel || "—"} · RPC`,
+        sub: `${latestAsOf(siv?.asOfLabel)} · RPC`,
       },
       {
         id: "cbp",
@@ -236,8 +243,8 @@ export function createRefugeesPage(root) {
         total: cbp?.latestTotal,
         sub:
           cbp?.nationwide?.latestTotal != null
-            ? `${cbp.asOfLabel || "—"} · SW · N ${fmt(cbp.northern?.latestTotal)} · US ${fmt(cbp.nationwide.latestTotal)}`
-            : `${cbp?.asOfLabel || "—"} · CBP`,
+            ? `${latestAsOf(cbp.asOfLabel)} · SW · N ${fmt(cbp.northern?.latestTotal)} · US ${fmt(cbp.nationwide.latestTotal)}`
+            : `${latestAsOf(cbp?.asOfLabel)} · CBP`,
       },
     ];
 
