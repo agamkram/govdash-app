@@ -41,22 +41,22 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-08-24T21:01:01.042Z",
-      "asOf": "2026-08-24T21:00:28.328Z",
-      "nodesWithHeat": 3,
-      "nodesWithDirectHeat": 1,
-      "rawEventCount": 259,
+      "enrichedAt": "2026-08-25T15:39:49.464Z",
+      "asOf": "2026-08-25T15:37:17.356Z",
+      "nodesWithHeat": 0,
+      "nodesWithDirectHeat": 0,
+      "rawEventCount": 230,
       "matched": {
         "chamber": 0,
         "presidential": 0,
-        "publicInspection": 1,
-        "commentDeadlines": 1,
+        "publicInspection": 0,
+        "commentDeadlines": 0,
         "sunshine": 0,
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 94,
-      "unmatchedCommentDeadlines": 147,
+      "unmatchedPublicInspection": 92,
+      "unmatchedCommentDeadlines": 117,
       "unmatchedSunshine": 1,
       "sources": {
         "senateFloor": {
@@ -76,51 +76,51 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 95,
+          "count": 92,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
-          "count": 10,
-          "since": "2026-08-10",
+          "count": 11,
+          "since": "2026-08-11",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 148,
-          "start": "2026-08-24",
-          "end": "2026-09-22",
+          "count": 117,
+          "start": "2026-08-25",
+          "end": "2026-09-23",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
           "count": 1,
-          "start": "2026-08-24",
-          "end": "2026-09-22",
+          "start": "2026-08-25",
+          "end": "2026-09-23",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
           "count": 1,
-          "start": "2026-08-24",
-          "end": "2026-09-22",
+          "start": "2026-08-25",
+          "end": "2026-09-23",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
-          "count": 1,
-          "start": "2026-08-24",
-          "end": "2026-09-22",
+          "count": 5,
+          "start": "2026-08-25",
+          "end": "2026-09-23",
           "congress": 119,
-          "calendarIds": 1,
+          "calendarIds": 5,
           "url": "https://api.congress.gov/v3/committee-meeting/119/house"
         },
         "scotus": {
           "ok": true,
           "count": 0,
-          "start": "2026-08-24",
-          "end": "2026-09-22",
+          "start": "2026-08-25",
+          "end": "2026-09-23",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -139,43 +139,7 @@
       "usgm": null,
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
-    "heat": {
-      "asOf": "2026-08-24T21:00:28.328Z",
-      "count": 2,
-      "rolledUp": true,
-      "events": [
-        {
-          "id": "fr-pi-2026-17264",
-          "kind": "public_inspection",
-          "when": "2026-08-25",
-          "until": null,
-          "filedAt": "2026-08-24T08:45:00.000-04:00",
-          "signedAt": null,
-          "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Current Population Survey Civic Engagement and Volunteering Supplement",
-          "summary": "Corporation for National and Community Service (from lower in the map)",
-          "url": "https://public-inspection.federalregister.gov/2026-17264.pdf",
-          "source": "Federal Register public inspection (PDF)",
-          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-          "urgency": "upcoming",
-          "bill": null
-        },
-        {
-          "id": "fr-comment-2026-14906",
-          "kind": "comment_deadline",
-          "when": "2026-08-24",
-          "until": "2026-08-24",
-          "filedAt": null,
-          "signedAt": null,
-          "title": "Rescinding Portions of AmeriCorps Title VI Regulations To Conform More Closely With the Statutory Text and To Implement Executive Order 14281",
-          "summary": "Corporation for National and Community Service (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/CNCS-2026-0299-0001",
-          "source": "Federal Register proposed rule (comments close)",
-          "sourceUrl": "https://www.federalregister.gov/",
-          "urgency": "upcoming",
-          "bill": null
-        }
-      ]
-    },
+    "heat": null,
     "children": [
       {
         "id": "product-chartered",
@@ -189,43 +153,7 @@
           "usgm": null,
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
-        "heat": {
-          "asOf": "2026-08-24T21:00:28.328Z",
-          "count": 2,
-          "rolledUp": true,
-          "events": [
-            {
-              "id": "fr-pi-2026-17264",
-              "kind": "public_inspection",
-              "when": "2026-08-25",
-              "until": null,
-              "filedAt": "2026-08-24T08:45:00.000-04:00",
-              "signedAt": null,
-              "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Current Population Survey Civic Engagement and Volunteering Supplement",
-              "summary": "Corporation for National and Community Service (from lower in the map)",
-              "url": "https://public-inspection.federalregister.gov/2026-17264.pdf",
-              "source": "Federal Register public inspection (PDF)",
-              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-14906",
-              "kind": "comment_deadline",
-              "when": "2026-08-24",
-              "until": "2026-08-24",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Rescinding Portions of AmeriCorps Title VI Regulations To Conform More Closely With the Statutory Text and To Implement Executive Order 14281",
-              "summary": "Corporation for National and Community Service (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/CNCS-2026-0299-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            }
-          ]
-        },
+        "heat": null,
         "children": [
           {
             "id": "gsa-1697",
@@ -1810,43 +1738,7 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": {
-              "asOf": "2026-08-24T21:00:28.328Z",
-              "count": 2,
-              "rolledUp": false,
-              "events": [
-                {
-                  "id": "fr-pi-2026-17264",
-                  "kind": "public_inspection",
-                  "when": "2026-08-25",
-                  "until": null,
-                  "filedAt": "2026-08-24T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Current Population Survey Civic Engagement and Volunteering Supplement",
-                  "summary": "Corporation for National and Community Service",
-                  "url": "https://public-inspection.federalregister.gov/2026-17264.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-14906",
-                  "kind": "comment_deadline",
-                  "when": "2026-08-24",
-                  "until": "2026-08-24",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Rescinding Portions of AmeriCorps Title VI Regulations To Conform More Closely With the Statutory Text and To Implement Executive Order 14281",
-                  "summary": "Corporation for National and Community Service",
-                  "url": "http://www.regulations.gov/commenton/CNCS-2026-0299-0001",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                }
-              ]
-            },
+            "heat": null,
             "children": [],
             "workforce": {
               "count": 376,
