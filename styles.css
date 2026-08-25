@@ -141,7 +141,7 @@ html.pwa-standalone .shell {
 .brand {
   margin: 0;
   font-family: Michroma, "IBM Plex Sans", system-ui, sans-serif;
-  font-size: 1.45rem;
+  font-size: clamp(0.78rem, 3.6vw, 1.45rem);
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1;
@@ -2387,7 +2387,7 @@ a.engage-label:hover {
   .brand {
     grid-area: brand;
     justify-self: center;
-    font-size: 1.58rem; /* tick larger on iPad/Mac */
+    font-size: clamp(0.95rem, 2.2vw, 1.35rem); /* longer product name */
   }
 
   .chrome-tools {
@@ -2527,7 +2527,7 @@ a.engage-label:hover {
   }
 
   .brand {
-    font-size: 1.32rem;
+    font-size: clamp(0.72rem, 3.4vw, 1.05rem);
     line-height: 1;
     margin: 0;
     padding-top: 0;
