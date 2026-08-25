@@ -2388,6 +2388,7 @@ a.engage-label:hover {
     grid-area: brand;
     justify-self: center;
     font-size: clamp(0.95rem, 2.2vw, 1.35rem); /* longer product name */
+    transform: translateY(-0.12em); /* optical vertical center */
   }
 
   .chrome-tools {
@@ -2531,6 +2532,7 @@ a.engage-label:hover {
     line-height: 1;
     margin: 0;
     padding-top: 0;
+    transform: translateY(-0.12em); /* optical vertical center */
   }
 
   /* One tools row: use the gap for padding, not empty space between groups. */
