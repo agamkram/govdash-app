@@ -1,4 +1,4 @@
-# GovernmentDashboard data model
+# GovDash data model
 
 ## Goal
 
