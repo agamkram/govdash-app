@@ -80,18 +80,18 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-08-26T17:38:08.022Z",
-      "asOf": "2026-08-26T17:37:39.179Z",
+      "enrichedAt": "2026-08-26T17:45:49.809Z",
+      "asOf": "2026-08-26T17:45:20.900Z",
       "nodesWithHeat": 98,
       "nodesWithDirectHeat": 52,
-      "rawEventCount": 236,
+      "rawEventCount": 249,
       "matched": {
         "chamber": 2,
         "presidential": 8,
         "publicInspection": 87,
         "commentDeadlines": 113,
         "sunshine": 3,
-        "hearings": 1,
+        "hearings": 14,
         "scotus": 0
       },
       "unmatchedPublicInspection": 14,
@@ -147,8 +147,14 @@
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
-          "ok": false,
-          "error": "https://api.congress.gov/v3/committee-meeting/119/house/119527?format=json&api_key=b8CRgnv9zRZI7QtxDmyNdjdHkYekt5uOtzLoRwAR → HTTP 404"
+          "ok": true,
+          "count": 13,
+          "start": "2026-08-26",
+          "end": "2026-09-24",
+          "congress": 119,
+          "calendarIds": 13,
+          "skipped404": [],
+          "url": "https://api.congress.gov/v3/committee-meeting/119/house"
         },
         "scotus": {
           "ok": true,
@@ -202,8 +208,8 @@
       "note": "Synthetic root. Crosswalk branches attach under Parent=[Branch]."
     },
     "heat": {
-      "asOf": "2026-08-26T17:37:39.179Z",
-      "count": 162,
+      "asOf": "2026-08-26T17:45:20.900Z",
+      "count": 173,
       "rolledUp": true,
       "events": [
         {
@@ -349,7 +355,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-08-26T17:37:39.179Z",
+          "asOf": "2026-08-26T17:45:20.900Z",
           "count": 116,
           "rolledUp": true,
           "events": [
@@ -2231,7 +2237,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 8,
               "rolledUp": false,
               "events": [
@@ -3259,7 +3265,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 8,
               "rolledUp": true,
               "events": [
@@ -3406,7 +3412,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-26T17:37:39.179Z",
+                  "asOf": "2026-08-26T17:45:20.900Z",
                   "count": 8,
                   "rolledUp": true,
                   "events": [
@@ -3527,7 +3533,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-08-26T17:37:39.179Z",
+                      "asOf": "2026-08-26T17:45:20.900Z",
                       "count": 8,
                       "rolledUp": true,
                       "events": [
@@ -4327,7 +4333,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-08-26T17:37:39.179Z",
+                          "asOf": "2026-08-26T17:45:20.900Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -4373,7 +4379,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-08-26T17:37:39.179Z",
+                              "asOf": "2026-08-26T17:45:20.900Z",
                               "count": 1,
                               "rolledUp": true,
                               "events": [
@@ -4419,7 +4425,7 @@
                                   "usgm": null
                                 },
                                 "heat": {
-                                  "asOf": "2026-08-26T17:37:39.179Z",
+                                  "asOf": "2026-08-26T17:45:20.900Z",
                                   "count": 1,
                                   "rolledUp": false,
                                   "events": [
@@ -4932,7 +4938,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-08-26T17:37:39.179Z",
+                          "asOf": "2026-08-26T17:45:20.900Z",
                           "count": 4,
                           "rolledUp": true,
                           "events": [
@@ -5023,7 +5029,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-08-26T17:37:39.179Z",
+                              "asOf": "2026-08-26T17:45:20.900Z",
                               "count": 4,
                               "rolledUp": false,
                               "events": [
@@ -5274,7 +5280,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-08-26T17:37:39.179Z",
+                          "asOf": "2026-08-26T17:45:20.900Z",
                           "count": 2,
                           "rolledUp": true,
                           "events": [
@@ -5335,7 +5341,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-08-26T17:37:39.179Z",
+                              "asOf": "2026-08-26T17:45:20.900Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -5817,7 +5823,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-08-26T17:37:39.179Z",
+                          "asOf": "2026-08-26T17:45:20.900Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -5967,7 +5973,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-08-26T17:37:39.179Z",
+                              "asOf": "2026-08-26T17:45:20.900Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -6327,7 +6333,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 10,
               "rolledUp": true,
               "events": [
@@ -6448,7 +6454,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-26T17:37:39.179Z",
+                  "asOf": "2026-08-26T17:45:20.900Z",
                   "count": 10,
                   "rolledUp": true,
                   "events": [
@@ -6569,7 +6575,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-08-26T17:37:39.179Z",
+                      "asOf": "2026-08-26T17:45:20.900Z",
                       "count": 10,
                       "rolledUp": true,
                       "events": [
@@ -6690,7 +6696,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-08-26T17:37:39.179Z",
+                          "asOf": "2026-08-26T17:45:20.900Z",
                           "count": 10,
                           "rolledUp": true,
                           "events": [
@@ -6811,7 +6817,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-08-26T17:37:39.179Z",
+                              "asOf": "2026-08-26T17:45:20.900Z",
                               "count": 1,
                               "rolledUp": true,
                               "events": [
@@ -6882,7 +6888,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-08-26T17:37:39.179Z",
+                                  "asOf": "2026-08-26T17:45:20.900Z",
                                   "count": 1,
                                   "rolledUp": false,
                                   "events": [
@@ -7793,7 +7799,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-08-26T17:37:39.179Z",
+                              "asOf": "2026-08-26T17:45:20.900Z",
                               "count": 2,
                               "rolledUp": true,
                               "events": [
@@ -7879,7 +7885,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-08-26T17:37:39.179Z",
+                                  "asOf": "2026-08-26T17:45:20.900Z",
                                   "count": 2,
                                   "rolledUp": false,
                                   "events": [
@@ -7995,7 +8001,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-08-26T17:37:39.179Z",
+                              "asOf": "2026-08-26T17:45:20.900Z",
                               "count": 1,
                               "rolledUp": true,
                               "events": [
@@ -8101,7 +8107,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-08-26T17:37:39.179Z",
+                                  "asOf": "2026-08-26T17:45:20.900Z",
                                   "count": 1,
                                   "rolledUp": false,
                                   "events": [
@@ -8360,7 +8366,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-08-26T17:37:39.179Z",
+                              "asOf": "2026-08-26T17:45:20.900Z",
                               "count": 6,
                               "rolledUp": true,
                               "events": [
@@ -8451,7 +8457,7 @@
                                   "usgm": null
                                 },
                                 "heat": {
-                                  "asOf": "2026-08-26T17:37:39.179Z",
+                                  "asOf": "2026-08-26T17:45:20.900Z",
                                   "count": 6,
                                   "rolledUp": true,
                                   "events": [
@@ -8644,7 +8650,7 @@
                                       }
                                     },
                                     "heat": {
-                                      "asOf": "2026-08-26T17:37:39.179Z",
+                                      "asOf": "2026-08-26T17:45:20.900Z",
                                       "count": 6,
                                       "rolledUp": false,
                                       "events": [
@@ -22627,7 +22633,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 2,
               "rolledUp": true,
               "events": [
@@ -22688,7 +22694,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-26T17:37:39.179Z",
+                  "asOf": "2026-08-26T17:45:20.900Z",
                   "count": 2,
                   "rolledUp": true,
                   "events": [
@@ -25294,7 +25300,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-08-26T17:37:39.179Z",
+                      "asOf": "2026-08-26T17:45:20.900Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -25581,7 +25587,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 18,
               "rolledUp": false,
               "events": [
@@ -25628,7 +25634,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-26T17:37:39.179Z",
+                  "asOf": "2026-08-26T17:45:20.900Z",
                   "count": 17,
                   "rolledUp": true,
                   "events": [
@@ -26089,7 +26095,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-08-26T17:37:39.179Z",
+                      "asOf": "2026-08-26T17:45:20.900Z",
                       "count": 6,
                       "rolledUp": false,
                       "events": [
@@ -27311,7 +27317,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-08-26T17:37:39.179Z",
+                      "asOf": "2026-08-26T17:45:20.900Z",
                       "count": 4,
                       "rolledUp": false,
                       "events": [
@@ -27454,7 +27460,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-08-26T17:37:39.179Z",
+                      "asOf": "2026-08-26T17:45:20.900Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -27641,7 +27647,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-08-26T17:37:39.179Z",
+                      "asOf": "2026-08-26T17:45:20.900Z",
                       "count": 5,
                       "rolledUp": false,
                       "events": [
@@ -27973,7 +27979,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 12,
               "rolledUp": true,
               "events": [
@@ -28064,7 +28070,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-26T17:37:39.179Z",
+                  "asOf": "2026-08-26T17:45:20.900Z",
                   "count": 12,
                   "rolledUp": true,
                   "events": [
@@ -28155,7 +28161,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-08-26T17:37:39.179Z",
+                      "asOf": "2026-08-26T17:45:20.900Z",
                       "count": 12,
                       "rolledUp": true,
                       "events": [
@@ -29653,7 +29659,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-08-26T17:37:39.179Z",
+                          "asOf": "2026-08-26T17:45:20.900Z",
                           "count": 12,
                           "rolledUp": false,
                           "events": [
@@ -30484,7 +30490,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -32233,7 +32239,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 5,
               "rolledUp": true,
               "events": [
@@ -32375,7 +32381,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-26T17:37:39.179Z",
+                  "asOf": "2026-08-26T17:45:20.900Z",
                   "count": 5,
                   "rolledUp": true,
                   "events": [
@@ -32481,7 +32487,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-08-26T17:37:39.179Z",
+                      "asOf": "2026-08-26T17:45:20.900Z",
                       "count": 5,
                       "rolledUp": true,
                       "events": [
@@ -33945,7 +33951,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-26T17:37:39.179Z",
+                          "asOf": "2026-08-26T17:45:20.900Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -34027,7 +34033,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-26T17:37:39.179Z",
+                          "asOf": "2026-08-26T17:45:20.900Z",
                           "count": 4,
                           "rolledUp": false,
                           "events": [
@@ -34521,7 +34527,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 4,
               "rolledUp": true,
               "events": [
@@ -34612,7 +34618,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-26T17:37:39.179Z",
+                  "asOf": "2026-08-26T17:45:20.900Z",
                   "count": 4,
                   "rolledUp": true,
                   "events": [
@@ -34703,7 +34709,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-08-26T17:37:39.179Z",
+                      "asOf": "2026-08-26T17:45:20.900Z",
                       "count": 4,
                       "rolledUp": true,
                       "events": [
@@ -35066,7 +35072,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-26T17:37:39.179Z",
+                          "asOf": "2026-08-26T17:45:20.900Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -35640,7 +35646,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-26T17:37:39.179Z",
+                          "asOf": "2026-08-26T17:45:20.900Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -36535,7 +36541,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-26T17:37:39.179Z",
+                          "asOf": "2026-08-26T17:45:20.900Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -38885,7 +38891,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 2,
               "rolledUp": true,
               "events": [
@@ -38946,7 +38952,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-26T17:37:39.179Z",
+                  "asOf": "2026-08-26T17:45:20.900Z",
                   "count": 2,
                   "rolledUp": true,
                   "events": [
@@ -39007,7 +39013,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-08-26T17:37:39.179Z",
+                      "asOf": "2026-08-26T17:45:20.900Z",
                       "count": 2,
                       "rolledUp": true,
                       "events": [
@@ -39364,7 +39370,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-08-26T17:37:39.179Z",
+                          "asOf": "2026-08-26T17:45:20.900Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -39432,7 +39438,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-08-26T17:37:39.179Z",
+                              "asOf": "2026-08-26T17:45:20.900Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -40048,7 +40054,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-08-26T17:37:39.179Z",
+                          "asOf": "2026-08-26T17:45:20.900Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -40179,7 +40185,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-08-26T17:37:39.179Z",
+                              "asOf": "2026-08-26T17:45:20.900Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -41024,7 +41030,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 1,
               "rolledUp": true,
               "events": [
@@ -41070,7 +41076,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-26T17:37:39.179Z",
+                  "asOf": "2026-08-26T17:45:20.900Z",
                   "count": 1,
                   "rolledUp": true,
                   "events": [
@@ -41168,7 +41174,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-08-26T17:37:39.179Z",
+                      "asOf": "2026-08-26T17:45:20.900Z",
                       "count": 1,
                       "rolledUp": true,
                       "events": [
@@ -42514,7 +42520,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-26T17:37:39.179Z",
+                          "asOf": "2026-08-26T17:45:20.900Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -42918,7 +42924,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 19,
               "rolledUp": true,
               "events": [
@@ -43039,7 +43045,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-08-26T17:37:39.179Z",
+                  "asOf": "2026-08-26T17:45:20.900Z",
                   "count": 19,
                   "rolledUp": true,
                   "events": [
@@ -43160,7 +43166,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-08-26T17:37:39.179Z",
+                      "asOf": "2026-08-26T17:45:20.900Z",
                       "count": 19,
                       "rolledUp": true,
                       "events": [
@@ -43551,7 +43557,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-26T17:37:39.179Z",
+                          "asOf": "2026-08-26T17:45:20.900Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -43874,7 +43880,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-26T17:37:39.179Z",
+                          "asOf": "2026-08-26T17:45:20.900Z",
                           "count": 5,
                           "rolledUp": false,
                           "events": [
@@ -44229,7 +44235,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-26T17:37:39.179Z",
+                          "asOf": "2026-08-26T17:45:20.900Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -44411,7 +44417,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-08-26T17:37:39.179Z",
+                          "asOf": "2026-08-26T17:45:20.900Z",
                           "count": 12,
                           "rolledUp": false,
                           "events": [
@@ -47056,7 +47062,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 12,
               "rolledUp": false,
               "events": [
@@ -48222,7 +48228,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -49079,7 +49085,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 7,
               "rolledUp": false,
               "events": [
@@ -49373,7 +49379,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -50370,7 +50376,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -50604,7 +50610,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -52853,8 +52859,8 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-08-26T17:37:39.179Z",
-          "count": 4,
+          "asOf": "2026-08-26T17:45:20.900Z",
+          "count": 15,
           "rolledUp": true,
           "events": [
             {
@@ -52888,32 +52894,62 @@
               "bill": null
             },
             {
-              "id": "house-next-2026-08-27T13:00:00.000Z",
-              "kind": "floor_session",
-              "when": "2026-08-27T13:00:00.000Z",
+              "id": "house-hearing-119526",
+              "kind": "hearing",
+              "when": "2026-09-02T18:00:00Z",
               "until": null,
               "filedAt": null,
               "signedAt": null,
-              "title": "House next session",
-              "summary": "Tomorrow at 9:00 AM (from lower in the map)",
-              "url": "https://clerk.house.gov/",
-              "source": "Office of the Clerk, U.S. House",
-              "sourceUrl": "https://clerk.house.gov/",
+              "title": "‘“Subject to the Jurisdiction Thereof’: Birthright Citizenship and the Fourteenth Amendment, Part II”",
+              "summary": "House Judiciary Subcommittee on Constitution and Limited Government · Hearing · Scheduled · Rayburn House Office Building 2141 (from lower in the map)",
+              "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119526",
+              "source": "Congress.gov committee meeting API",
+              "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "senate-next-2026-08-27T08:00:00-04:00",
-              "kind": "floor_session",
-              "when": "2026-08-27T08:00:00-04:00",
+              "id": "house-hearing-119517",
+              "kind": "hearing",
+              "when": "2026-09-02T14:15:00Z",
               "until": null,
               "filedAt": null,
               "signedAt": null,
-              "title": "Senate next convenes",
-              "summary": "Activity lower in this branch",
-              "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-              "source": "Senate.gov floor schedule XML",
-              "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
+              "title": "Beyond Go-Live: VA Electronic Health Record Modernization Status Update",
+              "summary": "House Veterans' Affairs · Hearing · Scheduled · Cannon House Office Building 360 (from lower in the map)",
+              "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119517",
+              "source": "Congress.gov committee meeting API",
+              "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "house-hearing-119521",
+              "kind": "hearing",
+              "when": "2026-09-02T14:15:00Z",
+              "until": null,
+              "filedAt": null,
+              "signedAt": null,
+              "title": "“Less Red Tape, More Opportunity: Unleashing American Workers and Job Creators”",
+              "summary": "House Education and Workforce Subcommittee on Workforce Protections · Hearing · Scheduled · Rayburn House Office Building 2175 (from lower in the map)",
+              "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119521",
+              "source": "Congress.gov committee meeting API",
+              "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "house-hearing-119498",
+              "kind": "hearing",
+              "when": "2026-09-02T14:00:00Z",
+              "until": null,
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Member Day Hearing on Proposed Rules Changes for the 120th Congress",
+              "summary": "House Rules · Meeting · Scheduled · Capitol H-313 (from lower in the map)",
+              "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119498",
+              "source": "Congress.gov committee meeting API",
+              "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
               "urgency": "upcoming",
               "bill": null
             }
@@ -53496,8 +53532,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
-              "count": 3,
+              "asOf": "2026-08-26T17:45:20.900Z",
+              "count": 14,
               "rolledUp": true,
               "events": [
                 {
@@ -53516,17 +53552,62 @@
                   "bill": null
                 },
                 {
-                  "id": "house-next-2026-08-27T13:00:00.000Z",
-                  "kind": "floor_session",
-                  "when": "2026-08-27T13:00:00.000Z",
+                  "id": "house-hearing-119526",
+                  "kind": "hearing",
+                  "when": "2026-09-02T18:00:00Z",
                   "until": null,
                   "filedAt": null,
                   "signedAt": null,
-                  "title": "House next session",
-                  "summary": "Tomorrow at 9:00 AM (from lower in the map)",
-                  "url": "https://clerk.house.gov/",
-                  "source": "Office of the Clerk, U.S. House",
-                  "sourceUrl": "https://clerk.house.gov/",
+                  "title": "‘“Subject to the Jurisdiction Thereof’: Birthright Citizenship and the Fourteenth Amendment, Part II”",
+                  "summary": "House Judiciary Subcommittee on Constitution and Limited Government · Hearing · Scheduled · Rayburn House Office Building 2141 (from lower in the map)",
+                  "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119526",
+                  "source": "Congress.gov committee meeting API",
+                  "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "house-hearing-119517",
+                  "kind": "hearing",
+                  "when": "2026-09-02T14:15:00Z",
+                  "until": null,
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Beyond Go-Live: VA Electronic Health Record Modernization Status Update",
+                  "summary": "House Veterans' Affairs · Hearing · Scheduled · Cannon House Office Building 360 (from lower in the map)",
+                  "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119517",
+                  "source": "Congress.gov committee meeting API",
+                  "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "house-hearing-119521",
+                  "kind": "hearing",
+                  "when": "2026-09-02T14:15:00Z",
+                  "until": null,
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "“Less Red Tape, More Opportunity: Unleashing American Workers and Job Creators”",
+                  "summary": "House Education and Workforce Subcommittee on Workforce Protections · Hearing · Scheduled · Rayburn House Office Building 2175 (from lower in the map)",
+                  "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119521",
+                  "source": "Congress.gov committee meeting API",
+                  "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "house-hearing-119498",
+                  "kind": "hearing",
+                  "when": "2026-09-02T14:00:00Z",
+                  "until": null,
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Member Day Hearing on Proposed Rules Changes for the 120th Congress",
+                  "summary": "House Rules · Meeting · Scheduled · Capitol H-313 (from lower in the map)",
+                  "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119498",
+                  "source": "Congress.gov committee meeting API",
+                  "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
                   "urgency": "upcoming",
                   "bill": null
                 },
@@ -53682,22 +53763,187 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-08-26T17:37:39.179Z",
-                  "count": 1,
+                  "asOf": "2026-08-26T17:45:20.900Z",
+                  "count": 12,
                   "rolledUp": false,
                   "events": [
                     {
-                      "id": "house-next-2026-08-27T13:00:00.000Z",
-                      "kind": "floor_session",
-                      "when": "2026-08-27T13:00:00.000Z",
+                      "id": "house-hearing-119526",
+                      "kind": "hearing",
+                      "when": "2026-09-02T18:00:00Z",
                       "until": null,
                       "filedAt": null,
                       "signedAt": null,
-                      "title": "House next session",
-                      "summary": "Tomorrow at 9:00 AM",
-                      "url": "https://clerk.house.gov/",
-                      "source": "Office of the Clerk, U.S. House",
-                      "sourceUrl": "https://clerk.house.gov/",
+                      "title": "‘“Subject to the Jurisdiction Thereof’: Birthright Citizenship and the Fourteenth Amendment, Part II”",
+                      "summary": "House Judiciary Subcommittee on Constitution and Limited Government · Hearing · Scheduled · Rayburn House Office Building 2141",
+                      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119526",
+                      "source": "Congress.gov committee meeting API",
+                      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "house-hearing-119517",
+                      "kind": "hearing",
+                      "when": "2026-09-02T14:15:00Z",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Beyond Go-Live: VA Electronic Health Record Modernization Status Update",
+                      "summary": "House Veterans' Affairs · Hearing · Scheduled · Cannon House Office Building 360",
+                      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119517",
+                      "source": "Congress.gov committee meeting API",
+                      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "house-hearing-119521",
+                      "kind": "hearing",
+                      "when": "2026-09-02T14:15:00Z",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "“Less Red Tape, More Opportunity: Unleashing American Workers and Job Creators”",
+                      "summary": "House Education and Workforce Subcommittee on Workforce Protections · Hearing · Scheduled · Rayburn House Office Building 2175",
+                      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119521",
+                      "source": "Congress.gov committee meeting API",
+                      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "house-hearing-119498",
+                      "kind": "hearing",
+                      "when": "2026-09-02T14:00:00Z",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Member Day Hearing on Proposed Rules Changes for the 120th Congress",
+                      "summary": "House Rules · Meeting · Scheduled · Capitol H-313",
+                      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119498",
+                      "source": "Congress.gov committee meeting API",
+                      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "house-hearing-119520",
+                      "kind": "hearing",
+                      "when": "2026-09-02T14:00:00Z",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "“Renewal of USPTO Fee Setting Authority: Giving Full Effect to the America Invents Act”",
+                      "summary": "House Judiciary Subcommittee on Courts, Intellectual Property, Artificial Intelligence, and the Internet · Hearing · Scheduled · Rayburn House Office Building 2141",
+                      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119520",
+                      "source": "Congress.gov committee meeting API",
+                      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "house-hearing-119522",
+                      "kind": "hearing",
+                      "when": "2026-09-02T14:00:00Z",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Strengthening the American Economy: Promoting Growth, Opportunity, and Prosperity",
+                      "summary": "House Financial Services · Hearing · Scheduled · Rayburn House Office Building 2128",
+                      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119522",
+                      "source": "Congress.gov committee meeting API",
+                      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "house-hearing-119524",
+                      "kind": "hearing",
+                      "when": "2026-09-02T14:00:00Z",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "“Fueling the Golden Age: Future Resource Needs and Small Business Opportunity.”",
+                      "summary": "House Small Business Subcommittee on Rural Development, Energy, and Supply Chains · Hearing · Scheduled · Rayburn House Office Building 2360",
+                      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119524",
+                      "source": "Congress.gov committee meeting API",
+                      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "house-hearing-119527",
+                      "kind": "hearing",
+                      "when": "2026-09-02T14:00:00Z",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "“No Flame, More Pain: How State and Local Bans on Natural Gas Increase Costs”",
+                      "summary": "House Oversight and Government Reform Subcommittee on Economic Growth, Energy Policy, and Regulatory Affairs · Hearing · Scheduled · Rayburn House Office Building 2154",
+                      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119527",
+                      "source": "Congress.gov committee meeting API",
+                      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "house-hearing-119519",
+                      "kind": "hearing",
+                      "when": "2026-09-01T18:00:00Z",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Subcommittee Hearing on Welfare Reform at 30: Restoring the Promise of Work and Personal Responsibility in Federal Welfare Programs",
+                      "summary": "House Ways and Means Subcommittee on Work and Welfare · Meeting · Scheduled · Rayburn House Office Building 2020",
+                      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119519",
+                      "source": "Congress.gov committee meeting API",
+                      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "house-hearing-119514",
+                      "kind": "hearing",
+                      "when": "2026-09-01T14:15:00Z",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "“Supporting Working Families: State-Led Child Care Solutions”",
+                      "summary": "House Education and Workforce Subcommittee on Early Childhood, Elementary, and Secondary Education · Hearing · Scheduled · Rayburn House Office Building 2175",
+                      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119514",
+                      "source": "Congress.gov committee meeting API",
+                      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "house-hearing-119515",
+                      "kind": "hearing",
+                      "when": "2026-09-01T14:00:00Z",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Countering Houthi Terrorism: Protecting U.S. Interests and Security in the Red Sea",
+                      "summary": "House Subcommittee on the Middle East and North Africa · Hearing · Scheduled · Rayburn House Office Building 2172",
+                      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119515",
+                      "source": "Congress.gov committee meeting API",
+                      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "house-hearing-119516",
+                      "kind": "hearing",
+                      "when": "2026-09-01T14:00:00Z",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "“Sanctuary Policies, Tragic Consequences”",
+                      "summary": "House Judiciary Subcommittee on Immigration Integrity, Security, and Enforcement · Hearing · Scheduled · Rayburn House Office Building 2141",
+                      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119516",
+                      "source": "Congress.gov committee meeting API",
+                      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
                       "urgency": "upcoming",
                       "bill": null
                     }
@@ -53833,7 +54079,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-08-26T17:37:39.179Z",
+                  "asOf": "2026-08-26T17:45:20.900Z",
                   "count": 2,
                   "rolledUp": false,
                   "events": [
@@ -54291,7 +54537,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -54829,7 +55075,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-08-26T17:37:39.179Z",
+          "asOf": "2026-08-26T17:45:20.900Z",
           "count": 33,
           "rolledUp": true,
           "events": [
@@ -55274,7 +55520,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -55451,7 +55697,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -56230,7 +56476,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 8,
               "rolledUp": false,
               "events": [
@@ -57558,7 +57804,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -57964,7 +58210,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -61890,7 +62136,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -63212,7 +63458,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -64357,7 +64603,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -64631,7 +64877,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -64875,7 +65121,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 11,
               "rolledUp": false,
               "events": [
@@ -65739,7 +65985,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-08-26T17:37:39.179Z",
+          "asOf": "2026-08-26T17:45:20.900Z",
           "count": 9,
           "rolledUp": true,
           "events": [
@@ -66368,7 +66614,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -66712,7 +66958,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -68811,7 +69057,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -69473,7 +69719,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 3,
               "rolledUp": false,
               "events": [

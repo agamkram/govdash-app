@@ -41,11 +41,11 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-08-26T17:38:08.976Z",
-      "asOf": "2026-08-26T17:37:39.179Z",
+      "enrichedAt": "2026-08-26T17:45:50.744Z",
+      "asOf": "2026-08-26T17:45:20.900Z",
       "nodesWithHeat": 3,
       "nodesWithDirectHeat": 1,
-      "rawEventCount": 236,
+      "rawEventCount": 249,
       "matched": {
         "chamber": 0,
         "presidential": 0,
@@ -108,8 +108,14 @@
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
-          "ok": false,
-          "error": "https://api.congress.gov/v3/committee-meeting/119/house/119527?format=json&api_key=b8CRgnv9zRZI7QtxDmyNdjdHkYekt5uOtzLoRwAR → HTTP 404"
+          "ok": true,
+          "count": 13,
+          "start": "2026-08-26",
+          "end": "2026-09-24",
+          "congress": 119,
+          "calendarIds": 13,
+          "skipped404": [],
+          "url": "https://api.congress.gov/v3/committee-meeting/119/house"
         },
         "scotus": {
           "ok": true,
@@ -135,7 +141,7 @@
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
     "heat": {
-      "asOf": "2026-08-26T17:37:39.179Z",
+      "asOf": "2026-08-26T17:45:20.900Z",
       "count": 1,
       "rolledUp": true,
       "events": [
@@ -170,7 +176,7 @@
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
         "heat": {
-          "asOf": "2026-08-26T17:37:39.179Z",
+          "asOf": "2026-08-26T17:45:20.900Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -1776,7 +1782,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-08-26T17:37:39.179Z",
+              "asOf": "2026-08-26T17:45:20.900Z",
               "count": 1,
               "rolledUp": false,
               "events": [

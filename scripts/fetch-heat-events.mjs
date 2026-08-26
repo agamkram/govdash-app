@@ -164,18 +164,30 @@ async function fetchHouseHearings(start, end) {
   const congress = congressNumber();
   const eventIds = await discoverHouseEventIds(start, end);
   const events = [];
+  const skipped = [];
   for (const eventId of eventIds) {
     const url =
       `${CONGRESS_API}/committee-meeting/${congress}/house/${eventId}` +
       `?format=json&api_key=${encodeURIComponent(key)}`;
-    const detail = await getJson(url);
+    let detail;
+    try {
+      detail = await getJson(url);
+    } catch (e) {
+      // docs.house.gov calendar can list EventIDs Congress.gov has not
+      // indexed yet (or never will). Skip those; keep the rest.
+      if (e?.httpStatus === 404) {
+        skipped.push(String(eventId));
+        continue;
+      }
+      throw e;
+    }
     const mapped = mapHouseCommitteeMeeting(detail, eventId);
     if (!mapped) continue;
     const day = String(mapped.when).slice(0, 10);
     if (day < start || day > end) continue;
     events.push(mapped);
   }
-  return { events, congress, eventIds: eventIds.length };
+  return { events, congress, eventIds: eventIds.length, skipped };
 }
 
 function xmlTag(block, tag) {
@@ -918,10 +930,8 @@ async function main() {
 
   // House committee meetings (Congress.gov + docs.house.gov calendar IDs).
   try {
-    const { events: list, congress, eventIds } = await fetchHouseHearings(
-      start,
-      end
-    );
+    const { events: list, congress, eventIds, skipped } =
+      await fetchHouseHearings(start, end);
     pack.sources.houseHearings = {
       ok: true,
       count: list.length,
@@ -929,11 +939,15 @@ async function main() {
       end,
       congress,
       calendarIds: eventIds,
+      skipped404: skipped,
       url: `${CONGRESS_API}/committee-meeting/${congress}/house`,
     };
     pack.events.push(...list);
+    const skipNote = skipped.length
+      ? `, skipped ${skipped.length} Congress.gov 404`
+      : "";
     console.log(
-      `House hearings: ${list.length} (from ${eventIds} calendar ids, ${congress}th)`
+      `House hearings: ${list.length} (from ${eventIds} calendar ids, ${congress}th${skipNote})`
     );
   } catch (e) {
     pack.sources.houseHearings = { ok: false, error: String(e.message || e) };
