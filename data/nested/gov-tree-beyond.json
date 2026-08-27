@@ -41,32 +41,32 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-08-27T04:37:34.125Z",
-      "asOf": "2026-08-27T04:36:52.407Z",
-      "nodesWithHeat": 3,
-      "nodesWithDirectHeat": 1,
-      "rawEventCount": 258,
+      "enrichedAt": "2026-08-27T14:07:04.934Z",
+      "asOf": "2026-08-27T14:06:23.093Z",
+      "nodesWithHeat": 0,
+      "nodesWithDirectHeat": 0,
+      "rawEventCount": 271,
       "matched": {
         "chamber": 0,
         "presidential": 0,
-        "publicInspection": 1,
+        "publicInspection": 0,
         "commentDeadlines": 0,
         "sunshine": 0,
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 102,
-      "unmatchedCommentDeadlines": 127,
+      "unmatchedPublicInspection": 111,
+      "unmatchedCommentDeadlines": 130,
       "unmatchedSunshine": 2,
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 1,
+          "count": 2,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
           "ok": true,
-          "count": 0,
+          "count": 1,
           "url": "https://clerk.house.gov/"
         },
         "majorityLeader": {
@@ -76,7 +76,7 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 103,
+          "count": 111,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
@@ -87,7 +87,7 @@
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 127,
+          "count": 130,
           "start": "2026-08-27",
           "end": "2026-09-25",
           "type": "PRORULE",
@@ -140,28 +140,7 @@
       "usgm": null,
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
-    "heat": {
-      "asOf": "2026-08-27T04:36:52.407Z",
-      "count": 1,
-      "rolledUp": true,
-      "events": [
-        {
-          "id": "fr-pi-2026-17436",
-          "kind": "public_inspection",
-          "when": "2026-08-27",
-          "until": null,
-          "filedAt": "2026-08-26T08:45:00.000-04:00",
-          "signedAt": null,
-          "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: AmeriCorps Education Award Transfer Forms",
-          "summary": "Corporation for National and Community Service (from lower in the map)",
-          "url": "https://public-inspection.federalregister.gov/2026-17436.pdf",
-          "source": "Federal Register public inspection (PDF)",
-          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-          "urgency": "upcoming",
-          "bill": null
-        }
-      ]
-    },
+    "heat": null,
     "children": [
       {
         "id": "product-chartered",
@@ -175,28 +154,7 @@
           "usgm": null,
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
-        "heat": {
-          "asOf": "2026-08-27T04:36:52.407Z",
-          "count": 1,
-          "rolledUp": true,
-          "events": [
-            {
-              "id": "fr-pi-2026-17436",
-              "kind": "public_inspection",
-              "when": "2026-08-27",
-              "until": null,
-              "filedAt": "2026-08-26T08:45:00.000-04:00",
-              "signedAt": null,
-              "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: AmeriCorps Education Award Transfer Forms",
-              "summary": "Corporation for National and Community Service (from lower in the map)",
-              "url": "https://public-inspection.federalregister.gov/2026-17436.pdf",
-              "source": "Federal Register public inspection (PDF)",
-              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-              "urgency": "upcoming",
-              "bill": null
-            }
-          ]
-        },
+        "heat": null,
         "children": [
           {
             "id": "gsa-1697",
@@ -1781,28 +1739,7 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": {
-              "asOf": "2026-08-27T04:36:52.407Z",
-              "count": 1,
-              "rolledUp": false,
-              "events": [
-                {
-                  "id": "fr-pi-2026-17436",
-                  "kind": "public_inspection",
-                  "when": "2026-08-27",
-                  "until": null,
-                  "filedAt": "2026-08-26T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: AmeriCorps Education Award Transfer Forms",
-                  "summary": "Corporation for National and Community Service",
-                  "url": "https://public-inspection.federalregister.gov/2026-17436.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                }
-              ]
-            },
+            "heat": null,
             "children": [],
             "workforce": {
               "count": 376,
