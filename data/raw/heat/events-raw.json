@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-26T17:45:20.900Z",
+  "fetchedAt": "2026-08-27T04:36:52.407Z",
   "sources": {
     "senateFloor": {
       "ok": true,
@@ -8,7 +8,7 @@
     },
     "houseClerk": {
       "ok": true,
-      "count": 1,
+      "count": 0,
       "url": "https://clerk.house.gov/"
     },
     "majorityLeader": {
@@ -18,52 +18,52 @@
     },
     "publicInspection": {
       "ok": true,
-      "count": 101,
+      "count": 103,
       "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
     },
     "presidential": {
       "ok": true,
       "count": 8,
-      "since": "2026-08-12",
+      "since": "2026-08-13",
       "url": "https://www.federalregister.gov/presidential-documents"
     },
     "commentDeadlines": {
       "ok": true,
-      "count": 121,
-      "start": "2026-08-26",
-      "end": "2026-09-24",
+      "count": 127,
+      "start": "2026-08-27",
+      "end": "2026-09-25",
       "type": "PRORULE",
       "url": "https://www.federalregister.gov/"
     },
     "sunshine": {
       "ok": true,
-      "count": 3,
-      "start": "2026-08-26",
-      "end": "2026-09-24",
+      "count": 2,
+      "start": "2026-08-27",
+      "end": "2026-09-25",
       "url": "https://www.federalregister.gov/"
     },
     "senateHearings": {
       "ok": true,
       "count": 1,
-      "start": "2026-08-26",
-      "end": "2026-09-24",
+      "start": "2026-08-27",
+      "end": "2026-09-25",
       "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
     },
     "houseHearings": {
       "ok": true,
-      "count": 13,
-      "start": "2026-08-26",
-      "end": "2026-09-24",
+      "count": 16,
+      "start": "2026-08-27",
+      "end": "2026-09-25",
       "congress": 119,
-      "calendarIds": 13,
+      "calendarIds": 16,
       "skipped404": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house"
     },
     "scotus": {
       "ok": true,
       "count": 0,
-      "start": "2026-08-26",
-      "end": "2026-09-24",
+      "start": "2026-08-27",
+      "end": "2026-09-25",
       "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
     }
   },
@@ -79,19 +79,6 @@
       "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
       "source": "Senate.gov floor schedule XML",
       "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-      "urgency": "upcoming"
-    },
-    {
-      "id": "house-next-2026-08-27T13:00:00.000Z",
-      "kind": "floor_session",
-      "chamber": "House",
-      "when": "2026-08-27T13:00:00.000Z",
-      "until": null,
-      "title": "House next session",
-      "summary": "Tomorrow at 9:00 AM",
-      "url": "https://clerk.house.gov/",
-      "source": "Office of the Clerk, U.S. House",
-      "sourceUrl": "https://clerk.house.gov/",
       "urgency": "upcoming"
     },
     {
@@ -2115,6 +2102,46 @@
       "documentNumber": "2026-17591"
     },
     {
+      "id": "fr-pi-2026-17650",
+      "kind": "public_inspection",
+      "when": "2026-08-28",
+      "until": null,
+      "filedAt": "2026-08-26T16:15:00.000-04:00",
+      "title": "Fisheries of the Exclusive Economic Zone off Alaska: Pacific Ocean Perch in the Central Aleutian District of the Bering Sea and Aleutian Islands Management Area",
+      "summary": "National Oceanic and Atmospheric Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-17650.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-17650/fisheries-of-the-exclusive-economic-zone-off-alaska-pacific-ocean-perch-in-the-central-aleutian",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-17650.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Oceanic and Atmospheric Administration"
+      ],
+      "documentType": "Rule",
+      "documentNumber": "2026-17650"
+    },
+    {
+      "id": "fr-pi-2026-17615",
+      "kind": "public_inspection",
+      "when": "2026-08-28",
+      "until": null,
+      "filedAt": "2026-08-26T16:15:00.000-04:00",
+      "title": "Airworthiness Directives: Bell Textron Canada Limited Helicopters",
+      "summary": "Federal Aviation Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-17615.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-17615/airworthiness-directives-bell-textron-canada-limited-helicopters",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-17615.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Aviation Administration"
+      ],
+      "documentType": "Rule",
+      "documentNumber": "2026-17615"
+    },
+    {
       "id": "fr-pres-2026-16730",
       "kind": "presidential_doc",
       "when": "2026-08-14",
@@ -2241,6 +2268,64 @@
       "sourceUrl": "https://www.federalregister.gov/presidential-documents",
       "urgency": "recent",
       "documentType": "Presidential Document"
+    },
+    {
+      "id": "fr-comment-2026-17446",
+      "kind": "comment_deadline",
+      "when": "2026-09-25",
+      "until": "2026-09-25",
+      "title": "List of Approved Spent Fuel Storage Casks: TN Americas, LLC Standardized NUHOMS® Horizontal Modular Storage System for Irradiated Nuclear Fuel, Certificate of Compliance No. 1004, Renewed Amendment No. 19",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "http://www.regulations.gov/commenton/NRC-2026-2806-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/26/2026-17446/list-of-approved-spent-fuel-storage-casks-tn-americas-llc-standardized-nuhoms-horizontal-modular",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-26/pdf/2026-17446.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentNumber": "2026-17446",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-17419",
+      "kind": "comment_deadline",
+      "when": "2026-09-25",
+      "until": "2026-09-25",
+      "title": "Anchorage Regulation; San Juan Bay, San Juan, PR",
+      "summary": "Homeland Security Department, Coast Guard",
+      "url": "http://www.regulations.gov/commenton/USCG-2026-0035-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/26/2026-17419/anchorage-regulation-san-juan-bay-san-juan-pr",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-26/pdf/2026-17419.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Homeland Security Department",
+        "Coast Guard"
+      ],
+      "documentNumber": "2026-17419",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-17416",
+      "kind": "comment_deadline",
+      "when": "2026-09-25",
+      "until": "2026-09-25",
+      "title": "Swap Execution Facility Order Book Requirement for Permitted Transactions",
+      "summary": "Commodity Futures Trading Commission",
+      "url": "http://www.regulations.gov/commenton/CFTC-2026-1882-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/26/2026-17416/swap-execution-facility-order-book-requirement-for-permitted-transactions",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-26/pdf/2026-17416.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Commodity Futures Trading Commission"
+      ],
+      "documentNumber": "2026-17416",
+      "documentType": "Proposed Rule"
     },
     {
       "id": "fr-comment-2026-17324",
@@ -2747,6 +2832,26 @@
       "documentType": "Proposed Rule"
     },
     {
+      "id": "fr-comment-2026-16350",
+      "kind": "comment_deadline",
+      "when": "2026-09-25",
+      "until": "2026-09-25",
+      "title": "Establishment of Class E Airspace; Canton, IL",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-9505-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/11/2026-16350/establishment-of-class-e-airspace-canton-il",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-11/pdf/2026-16350.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-16350",
+      "documentType": "Proposed Rule"
+    },
+    {
       "id": "fr-comment-2026-16335",
       "kind": "comment_deadline",
       "when": "2026-09-10",
@@ -2763,6 +2868,64 @@
         "Environmental Protection Agency"
       ],
       "documentNumber": "2026-16335",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16333",
+      "kind": "comment_deadline",
+      "when": "2026-09-25",
+      "until": "2026-09-25",
+      "title": "Amendment of Class D Airspace and Class E Airspace Over Tri-Cities, TN",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-8449-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/11/2026-16333/amendment-of-class-d-airspace-and-class-e-airspace-over-tri-cities-tn",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-11/pdf/2026-16333.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-16333",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16331",
+      "kind": "comment_deadline",
+      "when": "2026-09-25",
+      "until": "2026-09-25",
+      "title": "Response to Clean Air Act Section 176A Petition From New Hampshire",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-HQ-OAR-2026-2179-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/11/2026-16331/response-to-clean-air-act-section-176a-petition-from-new-hampshire",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-11/pdf/2026-16331.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-16331",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16330",
+      "kind": "comment_deadline",
+      "when": "2026-09-25",
+      "until": "2026-09-25",
+      "title": "Air Plan Approval; New Hampshire; Repeal of Motor Vehicle Inspection and Maintenance Program",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-R01-OAR-2026-2147-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/11/2026-16330/air-plan-approval-new-hampshire-repeal-of-motor-vehicle-inspection-and-maintenance-program",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-11/pdf/2026-16330.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-16330",
       "documentType": "Proposed Rule"
     },
     {
@@ -2802,6 +2965,26 @@
         "Federal Communications Commission"
       ],
       "documentNumber": "2026-16317",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16314",
+      "kind": "comment_deadline",
+      "when": "2026-09-25",
+      "until": "2026-09-25",
+      "title": "Employer Contributions to Trump Accounts and Nondiscrimination Rules for Dependent Care Assistance Programs",
+      "summary": "Treasury Department, Internal Revenue Service",
+      "url": "http://www.regulations.gov/commenton/IRS-2026-0925-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/11/2026-16314/employer-contributions-to-trump-accounts-and-nondiscrimination-rules-for-dependent-care-assistance",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-11/pdf/2026-16314.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Treasury Department",
+        "Internal Revenue Service"
+      ],
+      "documentNumber": "2026-16314",
       "documentType": "Proposed Rule"
     },
     {
@@ -3412,26 +3595,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-15231",
-      "kind": "comment_deadline",
-      "when": "2026-08-26",
-      "until": "2026-08-26",
-      "title": "Federal Motor Vehicle Safety Standards; Modernization of FMVSS No. 135 To Accommodate ADS-Equipped Vehicles; Extension of Comment Period",
-      "summary": "Transportation Department, National Highway Traffic Safety Administration",
-      "url": "http://www.regulations.gov/commenton/NHTSA-2026-0728-0060",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/28/2026-15231/federal-motor-vehicle-safety-standards-modernization-of-fmvss-no-135-to-accommodate-ads-equipped",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-28/pdf/2026-15231.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "National Highway Traffic Safety Administration"
-      ],
-      "documentNumber": "2026-15231",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-15229",
       "kind": "comment_deadline",
       "when": "2026-09-11",
@@ -3469,25 +3632,6 @@
         "Occupational Safety and Health Administration"
       ],
       "documentNumber": "2026-15227",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-15216",
-      "kind": "comment_deadline",
-      "when": "2026-08-26",
-      "until": "2026-08-26",
-      "title": "Request for Comment on the Extension of Standard Futures Contracts to 24/7 Trading and on Perpetual Contracts Referencing Physically Delivered or Storable Energy Commodities",
-      "summary": "Commodity Futures Trading Commission",
-      "url": "http://www.regulations.gov/commenton/CFTC-2026-1388-0061",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/28/2026-15216/request-for-comment-on-the-extension-of-standard-futures-contracts-to-247-trading-and-on-perpetual",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-28/pdf/2026-15216.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Commodity Futures Trading Commission"
-      ],
-      "documentNumber": "2026-15216",
       "documentType": "Proposed Rule"
     },
     {
@@ -3568,22 +3712,22 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-15117",
+      "id": "fr-comment-2026-15120",
       "kind": "comment_deadline",
-      "when": "2026-08-26",
-      "until": "2026-08-26",
-      "title": "Modernizing Package Certification Requirements",
-      "summary": "Nuclear Regulatory Commission",
-      "url": "http://www.regulations.gov/commenton/NRC-2025-1667-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/27/2026-15117/modernizing-package-certification-requirements",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-27/pdf/2026-15117.pdf",
+      "when": "2026-09-25",
+      "until": "2026-09-25",
+      "title": "Review of Submarine Cable Landing License Rules and Procedures To Assess Evolving National Security, Law Enforcement, Foreign Policy, and Trade Policy Risks",
+      "summary": "Federal Communications Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-27/pdf/2026-15120.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/27/2026-15120/review-of-submarine-cable-landing-license-rules-and-procedures-to-assess-evolving-national-security",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-27/pdf/2026-15120.pdf",
       "source": "Federal Register proposed rule (comments close)",
       "sourceUrl": "https://www.federalregister.gov/",
       "urgency": "upcoming",
       "agencies": [
-        "Nuclear Regulatory Commission"
+        "Federal Communications Commission"
       ],
-      "documentNumber": "2026-15117",
+      "documentNumber": "2026-15120",
       "documentType": "Proposed Rule"
     },
     {
@@ -4645,24 +4789,6 @@
       "documentNumber": "2026-17407"
     },
     {
-      "id": "fr-sun-2026-16797-2026-08-26",
-      "kind": "sunshine_meeting",
-      "when": "2026-08-26",
-      "until": "2026-08-26",
-      "title": "Sunshine Act Meetings",
-      "summary": "Railroad Retirement Board",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-18/pdf/2026-16797.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/18/2026-16797/sunshine-act-meetings",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-18/pdf/2026-16797.pdf",
-      "source": "Federal Register Sunshine Act meeting",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Railroad Retirement Board"
-      ],
-      "documentNumber": "2026-16797"
-    },
-    {
       "id": "senate-hearing-338724",
       "kind": "hearing",
       "chamber": "Senate",
@@ -4757,6 +4883,22 @@
       "meetingType": "Meeting"
     },
     {
+      "id": "house-hearing-119497",
+      "kind": "hearing",
+      "chamber": "House",
+      "committee": "House Intelligence (Permanent Select)",
+      "when": "2026-09-02T14:00:00Z",
+      "until": null,
+      "title": "Persistent Competition & Legacy Architectures",
+      "summary": "House Intelligence (Permanent Select) · Hearing · Scheduled · Longworth House Office Building 1334",
+      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119497",
+      "source": "Congress.gov committee meeting API",
+      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+      "urgency": "upcoming",
+      "eventId": "119497",
+      "meetingType": "Hearing"
+    },
+    {
       "id": "house-hearing-119498",
       "kind": "hearing",
       "chamber": "House",
@@ -4771,6 +4913,22 @@
       "urgency": "upcoming",
       "eventId": "119498",
       "meetingType": "Meeting"
+    },
+    {
+      "id": "house-hearing-119506",
+      "kind": "hearing",
+      "chamber": "House",
+      "committee": "House Natural Resources Subcommittee on Federal Lands",
+      "when": "2026-09-02T14:00:00Z",
+      "until": null,
+      "title": "Legislative hearing on: H.R. 642 (Rep. Steube), “Myakka Wild and Scenic River Act of 2025”; H.R. 5470 (Rep. LaHood), “Route 66 National Historic Trail Designation Act”; H.R. 6788 (Rep. Downing), “Montana Sportsmen Conservation Act”; H.R. 9269 (Rep. Clyburn), “Renewing the African American Civil Rights Network Act”; H.R. 9600 (Rep. Raskin), \"Common Sense Act 250 Act of 2026\"; H.R. 9779 (Rep. Gonzalez), “Hands Off Our Boca Chica Beach Act of 2026” ; H.R. 10128 (Rep. McClintock), To codify Secretary's Order No. 3434 of the Department of the Interior; H.R. 10136 (Rep. Westerman), “Crossett Experimental Forest Act of 2026”; S. 675 (Rep. Hoeven) “Theodore Roosevelt Presidential Library Act”",
+      "summary": "House Natural Resources Subcommittee on Federal Lands · Hearing · Scheduled · Longworth House Office Building 1324",
+      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119506",
+      "source": "Congress.gov committee meeting API",
+      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+      "urgency": "upcoming",
+      "eventId": "119506",
+      "meetingType": "Hearing"
     },
     {
       "id": "house-hearing-119520",
@@ -4834,6 +4992,22 @@
       "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
       "urgency": "upcoming",
       "eventId": "119527",
+      "meetingType": "Hearing"
+    },
+    {
+      "id": "house-hearing-119530",
+      "kind": "hearing",
+      "chamber": "House",
+      "committee": "House Ways and Means",
+      "when": "2026-09-02T14:00:00Z",
+      "until": null,
+      "title": "Full Committee Hearing on Strategic Partnerships to Secure Critical Resources and Supply Chains",
+      "summary": "House Ways and Means · Hearing · Scheduled · Cannon House Office Building 390",
+      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119530",
+      "source": "Congress.gov committee meeting API",
+      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+      "urgency": "upcoming",
+      "eventId": "119530",
       "meetingType": "Hearing"
     },
     {
