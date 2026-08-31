@@ -41,90 +41,87 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-08-28T14:09:52.558Z",
-      "asOf": "2026-08-28T14:09:20.652Z",
-      "nodesWithHeat": 0,
-      "nodesWithDirectHeat": 0,
-      "rawEventCount": 279,
+      "enrichedAt": "2026-08-31T13:54:52.915Z",
+      "asOf": "2026-08-31T13:54:18.909Z",
+      "nodesWithHeat": 3,
+      "nodesWithDirectHeat": 1,
+      "rawEventCount": 312,
       "matched": {
         "chamber": 0,
         "presidential": 0,
-        "publicInspection": 0,
+        "publicInspection": 2,
         "commentDeadlines": 0,
         "sunshine": 0,
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 119,
-      "unmatchedCommentDeadlines": 125,
+      "unmatchedPublicInspection": 113,
+      "unmatchedCommentDeadlines": 140,
       "unmatchedSunshine": 3,
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 2,
+          "count": 1,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
           "ok": true,
-          "count": 1,
+          "count": 0,
           "url": "https://clerk.house.gov/"
         },
         "majorityLeader": {
           "ok": true,
-          "count": 0,
+          "count": 19,
           "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm"
         },
         "publicInspection": {
           "ok": true,
-          "count": 119,
+          "count": 115,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
-          "count": 9,
-          "since": "2026-08-14",
+          "count": 10,
+          "since": "2026-08-17",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 125,
-          "start": "2026-08-28",
-          "end": "2026-09-26",
+          "count": 140,
+          "start": "2026-08-31",
+          "end": "2026-09-29",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
           "count": 3,
-          "start": "2026-08-28",
-          "end": "2026-09-26",
+          "start": "2026-08-31",
+          "end": "2026-09-29",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
           "count": 1,
-          "start": "2026-08-28",
-          "end": "2026-09-26",
+          "start": "2026-08-31",
+          "end": "2026-09-29",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
-          "count": 19,
-          "start": "2026-08-28",
-          "end": "2026-09-26",
+          "count": 23,
+          "start": "2026-08-31",
+          "end": "2026-09-29",
           "congress": 119,
-          "calendarIds": 21,
-          "skipped404": [
-            "119531",
-            "119533"
-          ],
+          "calendarIds": 23,
+          "skipped404": [],
           "url": "https://api.congress.gov/v3/committee-meeting/119/house"
         },
         "scotus": {
           "ok": true,
           "count": 0,
-          "start": "2026-08-28",
-          "end": "2026-09-26",
+          "start": "2026-08-31",
+          "end": "2026-09-29",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -143,7 +140,43 @@
       "usgm": null,
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
-    "heat": null,
+    "heat": {
+      "asOf": "2026-08-31T13:54:18.909Z",
+      "count": 2,
+      "rolledUp": true,
+      "events": [
+        {
+          "id": "fr-pi-2026-17824",
+          "kind": "public_inspection",
+          "when": "2026-09-01",
+          "until": null,
+          "filedAt": "2026-08-31T08:45:00.000-04:00",
+          "signedAt": null,
+          "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: 2026 Final Descriptive Report Update",
+          "summary": "National Endowment for the Arts (from lower in the map)",
+          "url": "https://public-inspection.federalregister.gov/2026-17824.pdf",
+          "source": "Federal Register public inspection (PDF)",
+          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+          "urgency": "upcoming",
+          "bill": null
+        },
+        {
+          "id": "fr-pi-2026-17860",
+          "kind": "public_inspection",
+          "when": "2026-09-01",
+          "until": null,
+          "filedAt": "2026-08-31T08:45:00.000-04:00",
+          "signedAt": null,
+          "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Blanket Justification for National Endowment for the Arts Funding Application Guidelines and Requirements",
+          "summary": "National Endowment for the Arts (from lower in the map)",
+          "url": "https://public-inspection.federalregister.gov/2026-17860.pdf",
+          "source": "Federal Register public inspection (PDF)",
+          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+          "urgency": "upcoming",
+          "bill": null
+        }
+      ]
+    },
     "children": [
       {
         "id": "product-chartered",
@@ -157,7 +190,43 @@
           "usgm": null,
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
-        "heat": null,
+        "heat": {
+          "asOf": "2026-08-31T13:54:18.909Z",
+          "count": 2,
+          "rolledUp": true,
+          "events": [
+            {
+              "id": "fr-pi-2026-17824",
+              "kind": "public_inspection",
+              "when": "2026-09-01",
+              "until": null,
+              "filedAt": "2026-08-31T08:45:00.000-04:00",
+              "signedAt": null,
+              "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: 2026 Final Descriptive Report Update",
+              "summary": "National Endowment for the Arts (from lower in the map)",
+              "url": "https://public-inspection.federalregister.gov/2026-17824.pdf",
+              "source": "Federal Register public inspection (PDF)",
+              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-pi-2026-17860",
+              "kind": "public_inspection",
+              "when": "2026-09-01",
+              "until": null,
+              "filedAt": "2026-08-31T08:45:00.000-04:00",
+              "signedAt": null,
+              "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Blanket Justification for National Endowment for the Arts Funding Application Guidelines and Requirements",
+              "summary": "National Endowment for the Arts (from lower in the map)",
+              "url": "https://public-inspection.federalregister.gov/2026-17860.pdf",
+              "source": "Federal Register public inspection (PDF)",
+              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+              "urgency": "upcoming",
+              "bill": null
+            }
+          ]
+        },
         "children": [
           {
             "id": "gsa-1697",
@@ -1008,7 +1077,43 @@
               "sam": null,
               "usgm": null
             },
-            "heat": null,
+            "heat": {
+              "asOf": "2026-08-31T13:54:18.909Z",
+              "count": 2,
+              "rolledUp": false,
+              "events": [
+                {
+                  "id": "fr-pi-2026-17824",
+                  "kind": "public_inspection",
+                  "when": "2026-09-01",
+                  "until": null,
+                  "filedAt": "2026-08-31T08:45:00.000-04:00",
+                  "signedAt": null,
+                  "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: 2026 Final Descriptive Report Update",
+                  "summary": "National Endowment for the Arts",
+                  "url": "https://public-inspection.federalregister.gov/2026-17824.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-pi-2026-17860",
+                  "kind": "public_inspection",
+                  "when": "2026-09-01",
+                  "until": null,
+                  "filedAt": "2026-08-31T08:45:00.000-04:00",
+                  "signedAt": null,
+                  "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Blanket Justification for National Endowment for the Arts Funding Application Guidelines and Requirements",
+                  "summary": "National Endowment for the Arts",
+                  "url": "https://public-inspection.federalregister.gov/2026-17860.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                }
+              ]
+            },
             "children": []
           },
           {
