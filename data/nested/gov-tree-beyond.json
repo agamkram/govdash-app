@@ -41,22 +41,22 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-09-01T14:47:57.327Z",
-      "asOf": "2026-09-01T14:47:22.506Z",
-      "nodesWithHeat": 3,
-      "nodesWithDirectHeat": 1,
-      "rawEventCount": 260,
+      "enrichedAt": "2026-09-02T17:04:50.345Z",
+      "asOf": "2026-09-02T17:04:19.115Z",
+      "nodesWithHeat": 0,
+      "nodesWithDirectHeat": 0,
+      "rawEventCount": 286,
       "matched": {
         "chamber": 0,
         "presidential": 0,
-        "publicInspection": 1,
+        "publicInspection": 0,
         "commentDeadlines": 0,
         "sunshine": 0,
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 82,
-      "unmatchedCommentDeadlines": 121,
+      "unmatchedPublicInspection": 108,
+      "unmatchedCommentDeadlines": 126,
       "unmatchedSunshine": 3,
       "sources": {
         "senateFloor": {
@@ -76,52 +76,52 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 83,
+          "count": 108,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
-          "count": 9,
-          "since": "2026-08-18",
+          "count": 11,
+          "since": "2026-08-19",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 121,
-          "start": "2026-09-01",
-          "end": "2026-09-30",
+          "count": 126,
+          "start": "2026-09-02",
+          "end": "2026-10-01",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
           "count": 3,
-          "start": "2026-09-01",
-          "end": "2026-09-30",
+          "start": "2026-09-02",
+          "end": "2026-10-01",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
           "count": 1,
-          "start": "2026-09-01",
-          "end": "2026-09-30",
+          "start": "2026-09-02",
+          "end": "2026-10-01",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
-          "count": 22,
-          "start": "2026-09-01",
-          "end": "2026-09-30",
+          "count": 16,
+          "start": "2026-09-02",
+          "end": "2026-10-01",
           "congress": 119,
-          "calendarIds": 22,
+          "calendarIds": 16,
           "skipped404": [],
           "url": "https://api.congress.gov/v3/committee-meeting/119/house"
         },
         "scotus": {
           "ok": true,
           "count": 0,
-          "start": "2026-09-01",
-          "end": "2026-09-30",
+          "start": "2026-09-02",
+          "end": "2026-10-01",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -140,28 +140,7 @@
       "usgm": null,
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
-    "heat": {
-      "asOf": "2026-09-01T14:47:22.506Z",
-      "count": 1,
-      "rolledUp": true,
-      "events": [
-        {
-          "id": "fr-pi-2026-17974",
-          "kind": "public_inspection",
-          "when": "2026-09-02",
-          "until": null,
-          "filedAt": "2026-09-01T08:45:00.000-04:00",
-          "signedAt": null,
-          "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Arts Basic Survey",
-          "summary": "National Endowment for the Arts (from lower in the map)",
-          "url": "https://public-inspection.federalregister.gov/2026-17974.pdf",
-          "source": "Federal Register public inspection (PDF)",
-          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-          "urgency": "upcoming",
-          "bill": null
-        }
-      ]
-    },
+    "heat": null,
     "children": [
       {
         "id": "product-chartered",
@@ -175,28 +154,7 @@
           "usgm": null,
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
-        "heat": {
-          "asOf": "2026-09-01T14:47:22.506Z",
-          "count": 1,
-          "rolledUp": true,
-          "events": [
-            {
-              "id": "fr-pi-2026-17974",
-              "kind": "public_inspection",
-              "when": "2026-09-02",
-              "until": null,
-              "filedAt": "2026-09-01T08:45:00.000-04:00",
-              "signedAt": null,
-              "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Arts Basic Survey",
-              "summary": "National Endowment for the Arts (from lower in the map)",
-              "url": "https://public-inspection.federalregister.gov/2026-17974.pdf",
-              "source": "Federal Register public inspection (PDF)",
-              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-              "urgency": "upcoming",
-              "bill": null
-            }
-          ]
-        },
+        "heat": null,
         "children": [
           {
             "id": "gsa-1697",
@@ -1047,28 +1005,7 @@
               "sam": null,
               "usgm": null
             },
-            "heat": {
-              "asOf": "2026-09-01T14:47:22.506Z",
-              "count": 1,
-              "rolledUp": false,
-              "events": [
-                {
-                  "id": "fr-pi-2026-17974",
-                  "kind": "public_inspection",
-                  "when": "2026-09-02",
-                  "until": null,
-                  "filedAt": "2026-09-01T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Arts Basic Survey",
-                  "summary": "National Endowment for the Arts",
-                  "url": "https://public-inspection.federalregister.gov/2026-17974.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                }
-              ]
-            },
+            "heat": null,
             "children": []
           },
           {
