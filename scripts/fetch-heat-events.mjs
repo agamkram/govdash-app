@@ -2,7 +2,7 @@
 /**
  * Fetch official "what's happening" caches for Heat.
  * Most sources are free with no key. House committee meetings use
- * Congress.gov (CONGRESS_API_KEY in .env) + docs.house.gov calendar IDs.
+ * Congress.gov (CONGRESS_API_KEY env or .env) + docs.house.gov calendar IDs.
  *
  *   npm run fetch:heat-events
  *   npm run fetch:heat-events -- --force
@@ -72,6 +72,8 @@ async function getJson(url) {
 }
 
 async function loadCongressKey() {
+  const fromEnv = (process.env.CONGRESS_API_KEY || "").trim();
+  if (fromEnv) return fromEnv;
   try {
     const text = await readFile(ENV_PATH, "utf8");
     const m = text.match(/^CONGRESS_API_KEY=(.+)$/m);
@@ -159,7 +161,9 @@ function mapHouseCommitteeMeeting(detail, eventId) {
 async function fetchHouseHearings(start, end) {
   const key = await loadCongressKey();
   if (!key) {
-    throw new Error("CONGRESS_API_KEY missing in .env");
+    throw new Error(
+      "CONGRESS_API_KEY missing (set the GitHub Actions secret CONGRESS_API_KEY or add it to .env)"
+    );
   }
   const congress = congressNumber();
   const eventIds = await discoverHouseEventIds(start, end);

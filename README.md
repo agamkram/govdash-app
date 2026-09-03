@@ -32,7 +32,7 @@ Blanks are honest: no match, not a hidden number. OPM is civilian only. Child of
 | SAM / Manual | `npm run fetch:sam` / `enrich:sam`, `fetch:usgm` / `parse:usgm` / `enrich:usgm` |
 | Workforce | `npm run fetch:workforce` → `enrich:workforce` |
 | Spend | `npm run fetch:heat` (USAspending cache), `fetch:subtier`, `enrich:spending`, `fetch:spend-history`, `enrich:spend-years` |
-| Heat events | `npm run fetch:heat-events` → `enrich:heat` |
+| Heat events | Daily GitHub Action (`.github/workflows/heat-bake.yml`, 10:00 ET) runs `fetch:heat-events --force` → `enrich:heat` → `compare:heat` and pushes the four Heat files to `main`. Local: same npm scripts. |
 | Curate + About counts | `npm run curate`, `stats:about` |
 
 Map UI: `index.html`, `app.js`, `views/` (Icicle / Tree / Circles / Sankey). Schema: `docs/data-model.md`.

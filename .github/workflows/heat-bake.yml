@@ -1,0 +1,112 @@
+# Daily Heat bake (job #1 only). GitHub runners replace the laptop Grok Bot cron.
+# Vercel deploys from main → https://govdash.markmaga.com (copies data/nested → public).
+#
+# Schedule: 14:00 UTC = 10:00 America/New_York while EDT (UTC-4) is in effect.
+# After the US falls back to EST (UTC-5), this same cron is 09:00 ET. GitHub cron
+# cannot follow DST; leave at 14:00 UTC unless you want 10:00 EST (15:00 UTC).
+name: Heat bake
+
+on:
+  schedule:
+    - cron: "0 14 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Fetch, enrich, and compare without committing or pushing"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: heat-bake
+  cancel-in-progress: false
+
+jobs:
+  heat:
+    name: Bake Heat events
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      TZ: America/New_York
+      CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          # package.json engines.node is "24.x" — setup-node reads that file.
+          node-version-file: package.json
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Require CONGRESS_API_KEY secret
+        run: |
+          if [ -z "${CONGRESS_API_KEY}" ]; then
+            echo "::error::CONGRESS_API_KEY is not set. Add it as a repository secret: Settings → Secrets and variables → Actions → New repository secret, name CONGRESS_API_KEY (House committee hearings). Do not paste the key into issues, PRs, or chat."
+            exit 1
+          fi
+          echo "CONGRESS_API_KEY is present."
+
+      - name: Fetch Heat events
+        run: |
+          set -euo pipefail
+          if npm run fetch:heat-events -- --force; then
+            echo "Fetch succeeded."
+          else
+            echo "Fetch exited non-zero (core source failed: floor / clerk / public inspection / presidential). Retrying once with --force..."
+            npm run fetch:heat-events -- --force
+          fi
+
+      - name: Enrich Heat onto the tree
+        run: npm run enrich:heat
+
+      - name: Compare Heat bake
+        run: npm run compare:heat
+
+      - name: Commit and push Heat files
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.dry_run != true }}
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          files=(
+            data/raw/heat/events-raw.json
+            data/nested/gov-tree-product.json
+            data/nested/gov-tree.json
+            data/nested/gov-tree-beyond.json
+          )
+
+          git add -- "${files[@]}"
+
+          if git diff --cached --quiet; then
+            echo "No Heat file changes — nothing to commit."
+            exit 0
+          fi
+
+          extra="$(git diff --cached --name-only | grep -v -e '^data/raw/heat/events-raw.json$' -e '^data/nested/gov-tree-product.json$' -e '^data/nested/gov-tree.json$' -e '^data/nested/gov-tree-beyond.json$' || true)"
+          if [ -n "${extra}" ]; then
+            echo "::error::Refusing to commit unexpected staged files:"
+            echo "${extra}"
+            exit 1
+          fi
+
+          date_label="$(LC_TIME=C date '+%-d %b %Y')"
+          git commit -m "Refresh Heat bake for ${date_label} so the map pulse matches today's floor, FR inspection, and presidential docs."
+          git push
+        env:
+          # Default GITHUB_TOKEN with contents: write. If main is protected and
+          # blocks this push, allow github-actions[bot] (or "Allow specified
+          # actors to bypass required pull requests") rather than adding a PAT.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Dry run — skip commit
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == true }}
+        run: echo "Dry run — fetch/enrich/compare finished; no commit or push."
