@@ -41,11 +41,11 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-09-03T04:24:23.874Z",
-      "asOf": "2026-09-03T04:24:06.893Z",
+      "enrichedAt": "2026-09-03T17:36:35.615Z",
+      "asOf": "2026-09-03T17:36:16.330Z",
       "nodesWithHeat": 0,
       "nodesWithDirectHeat": 0,
-      "rawEventCount": 276,
+      "rawEventCount": 253,
       "matched": {
         "chamber": 0,
         "presidential": 0,
@@ -55,18 +55,18 @@
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 109,
-      "unmatchedCommentDeadlines": 130,
+      "unmatchedPublicInspection": 83,
+      "unmatchedCommentDeadlines": 131,
       "unmatchedSunshine": 3,
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 2,
+          "count": 1,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
           "ok": true,
-          "count": 0,
+          "count": 1,
           "url": "https://clerk.house.gov/"
         },
         "majorityLeader": {
@@ -76,18 +76,18 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 109,
+          "count": 83,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
-          "count": 10,
+          "count": 11,
           "since": "2026-08-20",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 130,
+          "count": 131,
           "start": "2026-09-03",
           "end": "2026-10-02",
           "type": "PRORULE",
@@ -109,11 +109,11 @@
         },
         "houseHearings": {
           "ok": true,
-          "count": 2,
+          "count": 3,
           "start": "2026-09-03",
           "end": "2026-10-02",
           "congress": 119,
-          "calendarIds": 2,
+          "calendarIds": 3,
           "skipped404": [],
           "url": "https://api.congress.gov/v3/committee-meeting/119/house"
         },
