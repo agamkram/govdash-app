@@ -1,14 +1,12 @@
-# Daily Heat bake (job #1 only). GitHub runners replace the laptop Grok Bot cron.
+# Daily Heat bake (job #1 only). GitHub runners still do the bake.
 # Vercel deploys from main → https://govdash.markmaga.com (copies data/nested → public).
 #
-# Schedule: 14:00 UTC = 10:00 America/New_York while EDT (UTC-4) is in effect.
-# After the US falls back to EST (UTC-5), this same cron is 09:00 ET. GitHub cron
-# cannot follow DST; leave at 14:00 UTC unless you want 10:00 EST (15:00 UTC).
+# Kickoff: daily 10:00 America/New_York via an external Grok Bot
+# workflow_dispatch — not on.schedule. GitHub Actions cron drifted by hours
+# (a 14:00 UTC schedule fired ~17:36 UTC), so we do not rely on it.
 name: Heat bake
 
 on:
-  schedule:
-    - cron: "0 14 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
