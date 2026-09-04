@@ -1,12 +1,17 @@
 # Daily Heat bake (job #1 only). GitHub runners still do the bake.
 # Vercel deploys from main → https://govdash.markmaga.com (copies data/nested → public).
 #
-# Kickoff: daily 10:00 America/New_York via an external Grok Bot
-# workflow_dispatch — not on.schedule. GitHub Actions cron drifted by hours
-# (a 14:00 UTC schedule fired ~17:36 UTC), so we do not rely on it.
+# Kickoff: GitHub Actions schedule ~9:17 America/New_York (after FR Public
+# Inspection ~8:45). Odd minute to reduce Actions :00/:30 queue delay.
+# timezone so DST is handled (stays 9:17 ET year-round). Actions cron can
+# still drift by hours but is the chosen automatic path; no external
+# scheduler. workflow_dispatch remains for manual runs (including dry_run).
 name: Heat bake
 
 on:
+  schedule:
+    - cron: "17 9 * * *"
+      timezone: "America/New_York"
   workflow_dispatch:
     inputs:
       dry_run:
