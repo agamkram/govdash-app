@@ -1,9 +1,9 @@
 {
-  "fetchedAt": "2026-09-04T14:38:37.800Z",
+  "fetchedAt": "2026-09-05T15:23:03.257Z",
   "sources": {
     "senateFloor": {
       "ok": true,
-      "count": 3,
+      "count": 2,
       "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
     },
     "houseClerk": {
@@ -18,81 +18,68 @@
     },
     "publicInspection": {
       "ok": true,
-      "count": 71,
+      "count": 77,
       "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
     },
     "presidential": {
       "ok": true,
       "count": 11,
-      "since": "2026-08-21",
+      "since": "2026-08-22",
       "url": "https://www.federalregister.gov/presidential-documents"
     },
     "commentDeadlines": {
       "ok": true,
-      "count": 126,
-      "start": "2026-09-04",
-      "end": "2026-10-03",
+      "count": 123,
+      "start": "2026-09-05",
+      "end": "2026-10-04",
       "type": "PRORULE",
       "url": "https://www.federalregister.gov/"
     },
     "sunshine": {
       "ok": true,
-      "count": 2,
-      "start": "2026-09-04",
-      "end": "2026-10-03",
+      "count": 4,
+      "start": "2026-09-05",
+      "end": "2026-10-04",
       "url": "https://www.federalregister.gov/"
     },
     "senateHearings": {
       "ok": true,
       "count": 1,
-      "start": "2026-09-04",
-      "end": "2026-10-03",
+      "start": "2026-09-05",
+      "end": "2026-10-04",
       "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
     },
     "houseHearings": {
       "ok": true,
-      "count": 2,
-      "start": "2026-09-04",
-      "end": "2026-10-03",
+      "count": 1,
+      "start": "2026-09-05",
+      "end": "2026-10-04",
       "congress": 119,
-      "calendarIds": 2,
+      "calendarIds": 1,
       "skipped404": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house"
     },
     "scotus": {
       "ok": true,
       "count": 0,
-      "start": "2026-09-04",
-      "end": "2026-10-03",
+      "start": "2026-09-05",
+      "end": "2026-10-04",
       "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
     }
   },
   "events": [
-    {
-      "id": "senate-next-2026-09-04T10:00:00-04:00",
-      "kind": "floor_session",
-      "chamber": "Senate",
-      "when": "2026-09-04T10:00:00-04:00",
-      "until": null,
-      "title": "Senate next convenes",
-      "summary": "",
-      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-      "source": "Senate.gov floor schedule XML",
-      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-      "urgency": "upcoming"
-    },
     {
       "id": "senate-floor-2026-09-04T10:00:02-04:00",
       "kind": "floor_session",
       "chamber": "Senate",
       "when": "2026-09-04T10:00:02-04:00",
       "until": "2026-09-04T10:00:36-04:00",
-      "title": "Senate floor session",
+      "title": "Senate floor (recent)",
       "summary": "Has adjourned",
       "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
       "source": "Senate.gov floor schedule XML",
       "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-      "urgency": "upcoming"
+      "urgency": "recent"
     },
     {
       "id": "senate-next-2026-09-08T13:15:00-04:00",
@@ -869,9 +856,9 @@
     {
       "id": "fr-pi-2026-18214",
       "kind": "public_inspection",
-      "when": "2026-09-08",
+      "when": null,
       "until": null,
-      "filedAt": "2026-09-04T08:45:00.000-04:00",
+      "filedAt": null,
       "title": "Horseracing Integrity And Safety Authority Proposed 2027 Budget",
       "summary": "Federal Trade Commission",
       "url": "https://public-inspection.federalregister.gov/2026-18214.pdf",
@@ -1229,9 +1216,9 @@
     {
       "id": "fr-pi-2026-18233",
       "kind": "public_inspection",
-      "when": "2026-09-08",
+      "when": null,
       "until": null,
-      "filedAt": "2026-09-04T08:45:00.000-04:00",
+      "filedAt": null,
       "title": "Intent to Reorganize HUD and Revise Headquarters and Field Operating Model",
       "summary": "Housing and Urban Development Department",
       "url": "https://public-inspection.federalregister.gov/2026-18233.pdf",
@@ -1805,6 +1792,126 @@
       ],
       "documentType": "Proposed Rule",
       "documentNumber": "2026-18282"
+    },
+    {
+      "id": "fr-pi-2026-18361",
+      "kind": "public_inspection",
+      "when": "2026-09-09",
+      "until": null,
+      "filedAt": "2026-09-04T11:15:00.000-04:00",
+      "title": "Meetings; Sunshine Act",
+      "summary": "Federal Energy Regulatory Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-18361.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-18361/meetings-sunshine-act",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-18361.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Energy Regulatory Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-18361"
+    },
+    {
+      "id": "fr-pi-2026-18345",
+      "kind": "public_inspection",
+      "when": "2026-09-09",
+      "until": null,
+      "filedAt": "2026-09-04T16:15:00.000-04:00",
+      "title": "Registration of Lawful Permanent Residence for Children Born to Foreign Government Employees in the United States",
+      "summary": "Homeland Security Department",
+      "url": "https://public-inspection.federalregister.gov/2026-18345.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-18345/registration-of-lawful-permanent-residence-for-children-born-to-foreign-government-employees-in-the",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-18345.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Homeland Security Department"
+      ],
+      "documentType": "Rule",
+      "documentNumber": "2026-18345"
+    },
+    {
+      "id": "fr-pi-2026-18391",
+      "kind": "public_inspection",
+      "when": "2026-09-09",
+      "until": null,
+      "filedAt": "2026-09-04T16:15:00.000-04:00",
+      "title": "Fisheries of the Exclusive Economic Zone off Alaska: Pacific Ocean Perch in the Western Aleutian District of the Bering Sea and Aleutian Islands Management Area",
+      "summary": "National Oceanic and Atmospheric Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-18391.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-18391/fisheries-of-the-exclusive-economic-zone-off-alaska-pacific-ocean-perch-in-the-western-aleutian",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-18391.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Oceanic and Atmospheric Administration"
+      ],
+      "documentType": "Rule",
+      "documentNumber": "2026-18391"
+    },
+    {
+      "id": "fr-pi-2026-18368",
+      "kind": "public_inspection",
+      "when": "2026-09-09",
+      "until": null,
+      "filedAt": "2026-09-04T16:15:00.000-04:00",
+      "title": "Guidance: Temporary Policies for Compounding Certain Starter Parenteral Nutrition Drug Products for Neonates",
+      "summary": "Food and Drug Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-18368.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-18368/guidance-temporary-policies-for-compounding-certain-starter-parenteral-nutrition-drug-products-for",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-18368.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Food and Drug Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-18368"
+    },
+    {
+      "id": "fr-pi-2026-18392",
+      "kind": "public_inspection",
+      "when": "2026-09-09",
+      "until": null,
+      "filedAt": "2026-09-04T16:15:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Application for Dependency and Indemnity Compensation, Survivors Pension, and/or Accrued Benefits",
+      "summary": "Veterans Affairs Department",
+      "url": "https://public-inspection.federalregister.gov/2026-18392.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-18392/agency-information-collection-activities-proposals-submissions-and-approvals-application-for",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-18392.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Veterans Affairs Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-18392"
+    },
+    {
+      "id": "fr-pi-2026-18396",
+      "kind": "public_inspection",
+      "when": "2026-09-09",
+      "until": null,
+      "filedAt": "2026-09-04T16:15:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Application for Disability Compensation Benefits",
+      "summary": "Veterans Affairs Department",
+      "url": "https://public-inspection.federalregister.gov/2026-18396.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-18396/agency-information-collection-activities-proposals-submissions-and-approvals-application-for",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-18396.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Veterans Affairs Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-18396"
     },
     {
       "id": "fr-pres-2026-18141",
@@ -4333,65 +4440,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-13639",
-      "kind": "comment_deadline",
-      "when": "2026-09-04",
-      "until": "2026-09-04",
-      "title": "Improvements to Rules on Recoupment of Benefit Overpayments",
-      "summary": "Pension Benefit Guaranty Corporation",
-      "url": "http://www.regulations.gov/commenton/PBGC-2026-0166-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/06/2026-13639/improvements-to-rules-on-recoupment-of-benefit-overpayments",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-06/pdf/2026-13639.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Pension Benefit Guaranty Corporation"
-      ],
-      "documentNumber": "2026-13639",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-13586",
-      "kind": "comment_deadline",
-      "when": "2026-09-04",
-      "until": "2026-09-04",
-      "title": "Registering NFA Firearms That Fall Out of Government Contract",
-      "summary": "Justice Department, Alcohol, Tobacco, Firearms, and Explosives Bureau",
-      "url": "http://www.regulations.gov/commenton/ATF-2026-0298-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/06/2026-13586/registering-nfa-firearms-that-fall-out-of-government-contract",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-06/pdf/2026-13586.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Justice Department",
-        "Alcohol, Tobacco, Firearms, and Explosives Bureau"
-      ],
-      "documentNumber": "2026-13586",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-13546",
-      "kind": "comment_deadline",
-      "when": "2026-09-04",
-      "until": "2026-09-04",
-      "title": "Ensuring Passenger Safety by Preempting Duty and Rest Requirements",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2026-6739-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/06/2026-13546/ensuring-passenger-safety-by-preempting-duty-and-rest-requirements",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-06/pdf/2026-13546.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-13546",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-13300",
       "kind": "comment_deadline",
       "when": "2026-09-18",
@@ -4452,6 +4500,42 @@
       "documentType": "Proposed Rule"
     },
     {
+      "id": "fr-sun-2026-18262-2026-09-10",
+      "kind": "sunshine_meeting",
+      "when": "2026-09-10",
+      "until": "2026-09-10",
+      "title": "Sunshine Act Meetings",
+      "summary": "Securities and Exchange Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-08/pdf/2026-18262.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/08/2026-18262/sunshine-act-meetings",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-08/pdf/2026-18262.pdf",
+      "source": "Federal Register Sunshine Act meeting",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Securities and Exchange Commission"
+      ],
+      "documentNumber": "2026-18262"
+    },
+    {
+      "id": "fr-sun-2026-18257-2026-09-10",
+      "kind": "sunshine_meeting",
+      "when": "2026-09-10",
+      "until": "2026-09-10",
+      "title": "Sunshine Act Meetings",
+      "summary": "Securities and Exchange Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-08/pdf/2026-18257.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/08/2026-18257/sunshine-act-meetings",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-08/pdf/2026-18257.pdf",
+      "source": "Federal Register Sunshine Act meeting",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Securities and Exchange Commission"
+      ],
+      "documentNumber": "2026-18257"
+    },
+    {
       "id": "fr-sun-2026-17407-2026-09-09",
       "kind": "sunshine_meeting",
       "when": "2026-09-09",
@@ -4500,22 +4584,6 @@
       "source": "Senate.gov committee hearings XML",
       "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
       "urgency": "upcoming"
-    },
-    {
-      "id": "house-hearing-119533",
-      "kind": "hearing",
-      "chamber": "House",
-      "committee": "House Appropriations Subcommittee on Defense",
-      "when": "2026-09-04T17:00:00Z",
-      "until": null,
-      "title": "Industrial Base and Workforce Development for Skilled Trades",
-      "summary": "House Appropriations Subcommittee on Defense · Hearing · Scheduled",
-      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119533",
-      "source": "Congress.gov committee meeting API",
-      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
-      "urgency": "upcoming",
-      "eventId": "119533",
-      "meetingType": "Hearing"
     },
     {
       "id": "house-hearing-119538",

@@ -80,27 +80,27 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-09-04T14:38:53.610Z",
-      "asOf": "2026-09-04T14:38:37.800Z",
-      "nodesWithHeat": 101,
-      "nodesWithDirectHeat": 56,
-      "rawEventCount": 236,
+      "enrichedAt": "2026-09-05T15:23:20.025Z",
+      "asOf": "2026-09-05T15:23:03.257Z",
+      "nodesWithHeat": 100,
+      "nodesWithDirectHeat": 55,
+      "rawEventCount": 239,
       "matched": {
-        "chamber": 23,
+        "chamber": 22,
         "presidential": 11,
-        "publicInspection": 69,
-        "commentDeadlines": 121,
-        "sunshine": 2,
-        "hearings": 3,
+        "publicInspection": 72,
+        "commentDeadlines": 118,
+        "sunshine": 4,
+        "hearings": 2,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 2,
+      "unmatchedPublicInspection": 5,
       "unmatchedCommentDeadlines": 5,
       "unmatchedSunshine": 0,
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 3,
+          "count": 2,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
@@ -115,52 +115,52 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 71,
+          "count": 77,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
           "count": 11,
-          "since": "2026-08-21",
+          "since": "2026-08-22",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 126,
-          "start": "2026-09-04",
-          "end": "2026-10-03",
+          "count": 123,
+          "start": "2026-09-05",
+          "end": "2026-10-04",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
-          "count": 2,
-          "start": "2026-09-04",
-          "end": "2026-10-03",
+          "count": 4,
+          "start": "2026-09-05",
+          "end": "2026-10-04",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
           "count": 1,
-          "start": "2026-09-04",
-          "end": "2026-10-03",
+          "start": "2026-09-05",
+          "end": "2026-10-04",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
-          "count": 2,
-          "start": "2026-09-04",
-          "end": "2026-10-03",
+          "count": 1,
+          "start": "2026-09-05",
+          "end": "2026-10-04",
           "congress": 119,
-          "calendarIds": 2,
+          "calendarIds": 1,
           "skipped404": [],
           "url": "https://api.congress.gov/v3/committee-meeting/119/house"
         },
         "scotus": {
           "ok": true,
           "count": 0,
-          "start": "2026-09-04",
-          "end": "2026-10-03",
+          "start": "2026-09-05",
+          "end": "2026-10-04",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -208,7 +208,7 @@
       "note": "Synthetic root. Crosswalk branches attach under Parent=[Branch]."
     },
     "heat": {
-      "asOf": "2026-09-04T14:38:37.800Z",
+      "asOf": "2026-09-05T15:23:03.257Z",
       "count": 186,
       "rolledUp": true,
       "events": [
@@ -355,8 +355,8 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-09-04T14:38:37.800Z",
-          "count": 131,
+          "asOf": "2026-09-05T15:23:03.257Z",
+          "count": 132,
           "rolledUp": true,
           "events": [
             {
@@ -2237,7 +2237,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 11,
               "rolledUp": false,
               "events": [
@@ -3310,7 +3310,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 16,
               "rolledUp": true,
               "events": [
@@ -3457,7 +3457,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-04T14:38:37.800Z",
+                  "asOf": "2026-09-05T15:23:03.257Z",
                   "count": 16,
                   "rolledUp": true,
                   "events": [
@@ -3578,7 +3578,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-04T14:38:37.800Z",
+                      "asOf": "2026-09-05T15:23:03.257Z",
                       "count": 16,
                       "rolledUp": true,
                       "events": [
@@ -4378,7 +4378,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -4519,7 +4519,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-04T14:38:37.800Z",
+                              "asOf": "2026-09-05T15:23:03.257Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -4699,7 +4699,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -4745,7 +4745,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-04T14:38:37.800Z",
+                              "asOf": "2026-09-05T15:23:03.257Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -5004,7 +5004,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 2,
                           "rolledUp": true,
                           "events": [
@@ -5065,7 +5065,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-04T14:38:37.800Z",
+                              "asOf": "2026-09-05T15:23:03.257Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -5286,7 +5286,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 12,
                           "rolledUp": true,
                           "events": [
@@ -5377,7 +5377,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-04T14:38:37.800Z",
+                              "asOf": "2026-09-05T15:23:03.257Z",
                               "count": 12,
                               "rolledUp": false,
                               "events": [
@@ -6477,8 +6477,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
-              "count": 10,
+              "asOf": "2026-09-05T15:23:03.257Z",
+              "count": 11,
               "rolledUp": true,
               "events": [
                 {
@@ -6598,8 +6598,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-04T14:38:37.800Z",
-                  "count": 10,
+                  "asOf": "2026-09-05T15:23:03.257Z",
+                  "count": 11,
                   "rolledUp": true,
                   "events": [
                     {
@@ -6719,8 +6719,8 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-04T14:38:37.800Z",
-                      "count": 10,
+                      "asOf": "2026-09-05T15:23:03.257Z",
+                      "count": 11,
                       "rolledUp": true,
                       "events": [
                         {
@@ -6840,8 +6840,8 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
-                          "count": 10,
+                          "asOf": "2026-09-05T15:23:03.257Z",
+                          "count": 11,
                           "rolledUp": true,
                           "events": [
                             {
@@ -8031,7 +8031,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-04T14:38:37.800Z",
+                              "asOf": "2026-09-05T15:23:03.257Z",
                               "count": 2,
                               "rolledUp": true,
                               "events": [
@@ -8152,7 +8152,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-09-04T14:38:37.800Z",
+                                  "asOf": "2026-09-05T15:23:03.257Z",
                                   "count": 2,
                                   "rolledUp": false,
                                   "events": [
@@ -8426,8 +8426,8 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-04T14:38:37.800Z",
-                              "count": 8,
+                              "asOf": "2026-09-05T15:23:03.257Z",
+                              "count": 9,
                               "rolledUp": true,
                               "events": [
                                 {
@@ -8517,8 +8517,8 @@
                                   "usgm": null
                                 },
                                 "heat": {
-                                  "asOf": "2026-09-04T14:38:37.800Z",
-                                  "count": 8,
+                                  "asOf": "2026-09-05T15:23:03.257Z",
+                                  "count": 9,
                                   "rolledUp": true,
                                   "events": [
                                     {
@@ -8710,8 +8710,8 @@
                                       }
                                     },
                                     "heat": {
-                                      "asOf": "2026-09-04T14:38:37.800Z",
-                                      "count": 8,
+                                      "asOf": "2026-09-05T15:23:03.257Z",
+                                      "count": 9,
                                       "rolledUp": false,
                                       "events": [
                                         {
@@ -8786,6 +8786,21 @@
                                           "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1255-0001",
                                           "source": "Federal Register proposed rule (comments close)",
                                           "sourceUrl": "https://www.federalregister.gov/",
+                                          "urgency": "upcoming",
+                                          "bill": null
+                                        },
+                                        {
+                                          "id": "fr-pi-2026-18391",
+                                          "kind": "public_inspection",
+                                          "when": "2026-09-09",
+                                          "until": null,
+                                          "filedAt": "2026-09-04T16:15:00.000-04:00",
+                                          "signedAt": null,
+                                          "title": "Fisheries of the Exclusive Economic Zone off Alaska: Pacific Ocean Perch in the Western Aleutian District of the Bering Sea and Aleutian Islands Management Area",
+                                          "summary": "National Oceanic and Atmospheric Administration",
+                                          "url": "https://public-inspection.federalregister.gov/2026-18391.pdf",
+                                          "source": "Federal Register public inspection (PDF)",
+                                          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                                           "urgency": "upcoming",
                                           "bill": null
                                         },
@@ -22723,10 +22738,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
-              "count": 5,
+              "asOf": "2026-09-05T15:23:03.257Z",
+              "count": 6,
               "rolledUp": true,
               "events": [
+                {
+                  "id": "fr-pi-2026-18361",
+                  "kind": "public_inspection",
+                  "when": "2026-09-09",
+                  "until": null,
+                  "filedAt": "2026-09-04T11:15:00.000-04:00",
+                  "signedAt": null,
+                  "title": "Meetings; Sunshine Act",
+                  "summary": "Federal Energy Regulatory Commission (from lower in the map)",
+                  "url": "https://public-inspection.federalregister.gov/2026-18361.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-pi-2026-18227",
                   "kind": "public_inspection",
@@ -22771,21 +22801,6 @@
                   "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                   "urgency": "upcoming",
                   "bill": null
-                },
-                {
-                  "id": "fr-pi-2026-18230",
-                  "kind": "public_inspection",
-                  "when": "2026-09-08",
-                  "until": null,
-                  "filedAt": "2026-09-04T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Request under Blanket Authorization: Enable Gas Transmission, LLC",
-                  "summary": "Federal Energy Regulatory Commission (from lower in the map)",
-                  "url": "https://public-inspection.federalregister.gov/2026-18230.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
                 }
               ]
             },
@@ -22814,10 +22829,25 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-04T14:38:37.800Z",
-                  "count": 5,
+                  "asOf": "2026-09-05T15:23:03.257Z",
+                  "count": 6,
                   "rolledUp": true,
                   "events": [
+                    {
+                      "id": "fr-pi-2026-18361",
+                      "kind": "public_inspection",
+                      "when": "2026-09-09",
+                      "until": null,
+                      "filedAt": "2026-09-04T11:15:00.000-04:00",
+                      "signedAt": null,
+                      "title": "Meetings; Sunshine Act",
+                      "summary": "Federal Energy Regulatory Commission (from lower in the map)",
+                      "url": "https://public-inspection.federalregister.gov/2026-18361.pdf",
+                      "source": "Federal Register public inspection (PDF)",
+                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
                     {
                       "id": "fr-pi-2026-18227",
                       "kind": "public_inspection",
@@ -22858,21 +22888,6 @@
                       "title": "Combined Filings",
                       "summary": "Federal Energy Regulatory Commission (from lower in the map)",
                       "url": "https://public-inspection.federalregister.gov/2026-18229.pdf",
-                      "source": "Federal Register public inspection (PDF)",
-                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-pi-2026-18230",
-                      "kind": "public_inspection",
-                      "when": "2026-09-08",
-                      "until": null,
-                      "filedAt": "2026-09-04T08:45:00.000-04:00",
-                      "signedAt": null,
-                      "title": "Request under Blanket Authorization: Enable Gas Transmission, LLC",
-                      "summary": "Federal Energy Regulatory Commission (from lower in the map)",
-                      "url": "https://public-inspection.federalregister.gov/2026-18230.pdf",
                       "source": "Federal Register public inspection (PDF)",
                       "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                       "urgency": "upcoming",
@@ -25450,10 +25465,25 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-04T14:38:37.800Z",
-                      "count": 5,
+                      "asOf": "2026-09-05T15:23:03.257Z",
+                      "count": 6,
                       "rolledUp": false,
                       "events": [
+                        {
+                          "id": "fr-pi-2026-18361",
+                          "kind": "public_inspection",
+                          "when": "2026-09-09",
+                          "until": null,
+                          "filedAt": "2026-09-04T11:15:00.000-04:00",
+                          "signedAt": null,
+                          "title": "Meetings; Sunshine Act",
+                          "summary": "Federal Energy Regulatory Commission",
+                          "url": "https://public-inspection.federalregister.gov/2026-18361.pdf",
+                          "source": "Federal Register public inspection (PDF)",
+                          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
                         {
                           "id": "fr-pi-2026-18227",
                           "kind": "public_inspection",
@@ -25782,8 +25812,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
-              "count": 15,
+              "asOf": "2026-09-05T15:23:03.257Z",
+              "count": 16,
               "rolledUp": false,
               "events": [
                 {
@@ -25829,8 +25859,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-04T14:38:37.800Z",
-                  "count": 14,
+                  "asOf": "2026-09-05T15:23:03.257Z",
+                  "count": 15,
                   "rolledUp": true,
                   "events": [
                     {
@@ -26290,7 +26320,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-04T14:38:37.800Z",
+                      "asOf": "2026-09-05T15:23:03.257Z",
                       "count": 4,
                       "rolledUp": false,
                       "events": [
@@ -26547,7 +26577,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-04T14:38:37.800Z",
+                      "asOf": "2026-09-05T15:23:03.257Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -27503,7 +27533,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-04T14:38:37.800Z",
+                      "asOf": "2026-09-05T15:23:03.257Z",
                       "count": 3,
                       "rolledUp": false,
                       "events": [
@@ -27631,7 +27661,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-04T14:38:37.800Z",
+                      "asOf": "2026-09-05T15:23:03.257Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -27803,8 +27833,8 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-04T14:38:37.800Z",
-                      "count": 5,
+                      "asOf": "2026-09-05T15:23:03.257Z",
+                      "count": 6,
                       "rolledUp": false,
                       "events": [
                         {
@@ -27864,6 +27894,21 @@
                           "url": "http://www.regulations.gov/commenton/FDA-2025-N-6075-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
+                        {
+                          "id": "fr-pi-2026-18368",
+                          "kind": "public_inspection",
+                          "when": "2026-09-09",
+                          "until": null,
+                          "filedAt": "2026-09-04T16:15:00.000-04:00",
+                          "signedAt": null,
+                          "title": "Guidance: Temporary Policies for Compounding Certain Starter Parenteral Nutrition Drug Products for Neonates",
+                          "summary": "Food and Drug Administration",
+                          "url": "https://public-inspection.federalregister.gov/2026-18368.pdf",
+                          "source": "Federal Register public inspection (PDF)",
+                          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                           "urgency": "upcoming",
                           "bill": null
                         },
@@ -28135,7 +28180,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 9,
               "rolledUp": true,
               "events": [
@@ -28226,7 +28271,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-04T14:38:37.800Z",
+                  "asOf": "2026-09-05T15:23:03.257Z",
                   "count": 9,
                   "rolledUp": true,
                   "events": [
@@ -28317,7 +28362,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-04T14:38:37.800Z",
+                      "asOf": "2026-09-05T15:23:03.257Z",
                       "count": 9,
                       "rolledUp": true,
                       "events": [
@@ -29815,7 +29860,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 9,
                           "rolledUp": false,
                           "events": [
@@ -30601,25 +30646,10 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 2,
               "rolledUp": false,
               "events": [
-                {
-                  "id": "fr-pi-2026-18233",
-                  "kind": "public_inspection",
-                  "when": "2026-09-08",
-                  "until": null,
-                  "filedAt": "2026-09-04T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Intent to Reorganize HUD and Revise Headquarters and Field Operating Model",
-                  "summary": "Housing and Urban Development Department",
-                  "url": "https://public-inspection.federalregister.gov/2026-18233.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
                 {
                   "id": "fr-comment-2026-13939",
                   "kind": "comment_deadline",
@@ -30632,6 +30662,21 @@
                   "url": "http://www.regulations.gov/commenton/HUD-2026-1090-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-pi-2026-18233",
+                  "kind": "public_inspection",
+                  "when": null,
+                  "until": null,
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Intent to Reorganize HUD and Revise Headquarters and Field Operating Model",
+                  "summary": "Housing and Urban Development Department",
+                  "url": "https://public-inspection.federalregister.gov/2026-18233.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                   "urgency": "upcoming",
                   "bill": null
                 }
@@ -32365,8 +32410,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
-              "count": 10,
+              "asOf": "2026-09-05T15:23:03.257Z",
+              "count": 9,
               "rolledUp": true,
               "events": [
                 {
@@ -32443,21 +32488,6 @@
                   "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                   "urgency": "upcoming",
                   "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-13586",
-                  "kind": "comment_deadline",
-                  "when": "2026-09-04",
-                  "until": "2026-09-04",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Registering NFA Firearms That Fall Out of Government Contract",
-                  "summary": "Justice Department, Alcohol, Tobacco, Firearms, and Explosives Bureau (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/ATF-2026-0298-0001",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
                 }
               ]
             },
@@ -32522,8 +32552,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-04T14:38:37.800Z",
-                  "count": 10,
+                  "asOf": "2026-09-05T15:23:03.257Z",
+                  "count": 9,
                   "rolledUp": true,
                   "events": [
                     {
@@ -32600,21 +32630,6 @@
                       "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                       "urgency": "upcoming",
                       "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-13586",
-                      "kind": "comment_deadline",
-                      "when": "2026-09-04",
-                      "until": "2026-09-04",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Registering NFA Firearms That Fall Out of Government Contract",
-                      "summary": "Justice Department, Alcohol, Tobacco, Firearms, and Explosives Bureau (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/ATF-2026-0298-0001",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
                     }
                   ]
                 },
@@ -32643,8 +32658,8 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-04T14:38:37.800Z",
-                      "count": 10,
+                      "asOf": "2026-09-05T15:23:03.257Z",
+                      "count": 9,
                       "rolledUp": true,
                       "events": [
                         {
@@ -32719,21 +32734,6 @@
                           "url": "https://public-inspection.federalregister.gov/2026-18201.pdf",
                           "source": "Federal Register public inspection (PDF)",
                           "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-comment-2026-13586",
-                          "kind": "comment_deadline",
-                          "when": "2026-09-04",
-                          "until": "2026-09-04",
-                          "filedAt": null,
-                          "signedAt": null,
-                          "title": "Registering NFA Firearms That Fall Out of Government Contract",
-                          "summary": "Justice Department, Alcohol, Tobacco, Firearms, and Explosives Bureau (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/ATF-2026-0298-0001",
-                          "source": "Federal Register proposed rule (comments close)",
-                          "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
                           "bill": null
                         }
@@ -33539,7 +33539,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -34142,28 +34142,7 @@
                             "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
                           }
                         },
-                        "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
-                          "count": 1,
-                          "rolledUp": false,
-                          "events": [
-                            {
-                              "id": "fr-comment-2026-13586",
-                              "kind": "comment_deadline",
-                              "when": "2026-09-04",
-                              "until": "2026-09-04",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Registering NFA Firearms That Fall Out of Government Contract",
-                              "summary": "Justice Department, Alcohol, Tobacco, Firearms, and Explosives Bureau",
-                              "url": "http://www.regulations.gov/commenton/ATF-2026-0298-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            }
-                          ]
-                        },
+                        "heat": null,
                         "children": [],
                         "workforce": {
                           "count": 4504,
@@ -34225,7 +34204,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 8,
                           "rolledUp": false,
                           "events": [
@@ -34779,8 +34758,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
-              "count": 6,
+              "asOf": "2026-09-05T15:23:03.257Z",
+              "count": 5,
               "rolledUp": true,
               "events": [
                 {
@@ -34857,21 +34836,6 @@
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-13639",
-                  "kind": "comment_deadline",
-                  "when": "2026-09-04",
-                  "until": "2026-09-04",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Improvements to Rules on Recoupment of Benefit Overpayments",
-                  "summary": "Pension Benefit Guaranty Corporation (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/PBGC-2026-0166-0001",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
                 }
               ]
             },
@@ -34900,8 +34864,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-04T14:38:37.800Z",
-                  "count": 6,
+                  "asOf": "2026-09-05T15:23:03.257Z",
+                  "count": 5,
                   "rolledUp": true,
                   "events": [
                     {
@@ -34978,21 +34942,6 @@
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
                       "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-13639",
-                      "kind": "comment_deadline",
-                      "when": "2026-09-04",
-                      "until": "2026-09-04",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Improvements to Rules on Recoupment of Benefit Overpayments",
-                      "summary": "Pension Benefit Guaranty Corporation (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/PBGC-2026-0166-0001",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
                     }
                   ]
                 },
@@ -35021,8 +34970,8 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-04T14:38:37.800Z",
-                      "count": 6,
+                      "asOf": "2026-09-05T15:23:03.257Z",
+                      "count": 5,
                       "rolledUp": true,
                       "events": [
                         {
@@ -35095,21 +35044,6 @@
                           "title": "Penalties for Failure To Provide Certain Notices or Other Material Information",
                           "summary": "Pension Benefit Guaranty Corporation (from lower in the map)",
                           "url": "http://www.regulations.gov/commenton/PBGC-2026-0100-0001",
-                          "source": "Federal Register proposed rule (comments close)",
-                          "sourceUrl": "https://www.federalregister.gov/",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-comment-2026-13639",
-                          "kind": "comment_deadline",
-                          "when": "2026-09-04",
-                          "until": "2026-09-04",
-                          "filedAt": null,
-                          "signedAt": null,
-                          "title": "Improvements to Rules on Recoupment of Benefit Overpayments",
-                          "summary": "Pension Benefit Guaranty Corporation (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/PBGC-2026-0166-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
@@ -35414,7 +35348,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -35686,7 +35620,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -36570,7 +36504,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -36919,8 +36853,8 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
-                          "count": 2,
+                          "asOf": "2026-09-05T15:23:03.257Z",
+                          "count": 1,
                           "rolledUp": false,
                           "events": [
                             {
@@ -36933,21 +36867,6 @@
                               "title": "Penalties for Failure To Provide Certain Notices or Other Material Information",
                               "summary": "Pension Benefit Guaranty Corporation",
                               "url": "http://www.regulations.gov/commenton/PBGC-2026-0100-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-13639",
-                              "kind": "comment_deadline",
-                              "when": "2026-09-04",
-                              "until": "2026-09-04",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Improvements to Rules on Recoupment of Benefit Overpayments",
-                              "summary": "Pension Benefit Guaranty Corporation",
-                              "url": "http://www.regulations.gov/commenton/PBGC-2026-0166-0001",
                               "source": "Federal Register proposed rule (comments close)",
                               "sourceUrl": "https://www.federalregister.gov/",
                               "urgency": "upcoming",
@@ -39269,7 +39188,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 4,
               "rolledUp": true,
               "events": [
@@ -39360,7 +39279,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-04T14:38:37.800Z",
+                  "asOf": "2026-09-05T15:23:03.257Z",
                   "count": 4,
                   "rolledUp": true,
                   "events": [
@@ -39451,7 +39370,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-04T14:38:37.800Z",
+                      "asOf": "2026-09-05T15:23:03.257Z",
                       "count": 4,
                       "rolledUp": true,
                       "events": [
@@ -39542,7 +39461,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 2,
                           "rolledUp": true,
                           "events": [
@@ -39685,7 +39604,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-09-04T14:38:37.800Z",
+                              "asOf": "2026-09-05T15:23:03.257Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -40200,7 +40119,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -40268,7 +40187,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-09-04T14:38:37.800Z",
+                              "asOf": "2026-09-05T15:23:03.257Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -40594,7 +40513,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -40725,7 +40644,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-04T14:38:37.800Z",
+                              "asOf": "2026-09-05T15:23:03.257Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -41570,7 +41489,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 7,
               "rolledUp": true,
               "events": [
@@ -41691,7 +41610,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-04T14:38:37.800Z",
+                  "asOf": "2026-09-05T15:23:03.257Z",
                   "count": 7,
                   "rolledUp": true,
                   "events": [
@@ -41864,7 +41783,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-04T14:38:37.800Z",
+                      "asOf": "2026-09-05T15:23:03.257Z",
                       "count": 7,
                       "rolledUp": true,
                       "events": [
@@ -42327,7 +42246,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -42849,7 +42768,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -42947,7 +42866,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-04T14:38:37.800Z",
+                              "asOf": "2026-09-05T15:23:03.257Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -43363,7 +43282,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 4,
                           "rolledUp": false,
                           "events": [
@@ -43812,7 +43731,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 17,
               "rolledUp": true,
               "events": [
@@ -43933,7 +43852,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-04T14:38:37.800Z",
+                  "asOf": "2026-09-05T15:23:03.257Z",
                   "count": 17,
                   "rolledUp": true,
                   "events": [
@@ -44054,7 +43973,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-04T14:38:37.800Z",
+                      "asOf": "2026-09-05T15:23:03.257Z",
                       "count": 17,
                       "rolledUp": true,
                       "events": [
@@ -44506,7 +44425,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -44604,7 +44523,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -44804,7 +44723,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -45099,7 +45018,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -45281,7 +45200,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-04T14:38:37.800Z",
+                          "asOf": "2026-09-05T15:23:03.257Z",
                           "count": 12,
                           "rolledUp": false,
                           "events": [
@@ -47926,7 +47845,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 12,
               "rolledUp": false,
               "events": [
@@ -49928,7 +49847,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -50177,7 +50096,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -51174,7 +51093,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -53606,8 +53525,8 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-09-04T14:38:37.800Z",
-          "count": 18,
+          "asOf": "2026-09-05T15:23:03.257Z",
+          "count": 17,
           "rolledUp": true,
           "events": [
             {
@@ -54279,8 +54198,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
-              "count": 16,
+              "asOf": "2026-09-05T15:23:03.257Z",
+              "count": 15,
               "rolledUp": true,
               "events": [
                 {
@@ -54344,34 +54263,34 @@
                   "bill": null
                 },
                 {
-                  "id": "house-hearing-119533",
-                  "kind": "hearing",
-                  "when": "2026-09-04T17:00:00Z",
+                  "id": "house-ml-S858",
+                  "kind": "house_schedule",
+                  "when": "AUGUST 31",
                   "until": null,
                   "filedAt": null,
                   "signedAt": null,
-                  "title": "Industrial Base and Workforce Development for Skilled Trades",
-                  "summary": "House Appropriations Subcommittee on Defense · Hearing · Scheduled (from lower in the map)",
-                  "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119533",
-                  "source": "Congress.gov committee meeting API",
-                  "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                  "title": "S. 858 — Hershel ‘Woody' Williams National Medal of Honor Monument Location Act",
+                  "summary": "Majority Leader weekly schedule (from lower in the map)",
+                  "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+                  "source": "House Majority Leader weekly schedule",
+                  "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
                   "urgency": "upcoming",
-                  "bill": null
+                  "bill": "S. 858"
                 },
                 {
-                  "id": "senate-floor-2026-09-04T10:00:02-04:00",
-                  "kind": "floor_session",
-                  "when": "2026-09-04T10:00:02-04:00",
-                  "until": "2026-09-04T10:00:36-04:00",
+                  "id": "house-ml-HR8481",
+                  "kind": "house_schedule",
+                  "when": "AUGUST 31",
+                  "until": null,
                   "filedAt": null,
                   "signedAt": null,
-                  "title": "Senate floor session",
-                  "summary": "Has adjourned (from lower in the map)",
-                  "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-                  "source": "Senate.gov floor schedule XML",
-                  "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
+                  "title": "H.R. 8481 — Kayleigh’s Law Act of 2026",
+                  "summary": "Majority Leader weekly schedule (from lower in the map)",
+                  "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+                  "source": "House Majority Leader weekly schedule",
+                  "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
                   "urgency": "upcoming",
-                  "bill": null
+                  "bill": "H.R. 8481"
                 }
               ]
             },
@@ -54510,7 +54429,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-09-04T14:38:37.800Z",
+                  "asOf": "2026-09-05T15:23:03.257Z",
                   "count": 12,
                   "rolledUp": false,
                   "events": [
@@ -54541,21 +54460,6 @@
                       "url": "https://clerk.house.gov/",
                       "source": "Office of the Clerk, U.S. House",
                       "sourceUrl": "https://clerk.house.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "house-hearing-119533",
-                      "kind": "hearing",
-                      "when": "2026-09-04T17:00:00Z",
-                      "until": null,
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Industrial Base and Workforce Development for Skilled Trades",
-                      "summary": "House Appropriations Subcommittee on Defense · Hearing · Scheduled",
-                      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119533",
-                      "source": "Congress.gov committee meeting API",
-                      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
                       "urgency": "upcoming",
                       "bill": null
                     },
@@ -54693,6 +54597,21 @@
                       "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
                       "urgency": "upcoming",
                       "bill": "H.R. 5210"
+                    },
+                    {
+                      "id": "house-ml-HR5185",
+                      "kind": "house_schedule",
+                      "when": "AUGUST 31",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "H.R. 5185 — To make improvements in the enactment of title 41, United States Code, into a positive law title and to improve the Code",
+                      "summary": "Majority Leader weekly schedule",
+                      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+                      "source": "House Majority Leader weekly schedule",
+                      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+                      "urgency": "upcoming",
+                      "bill": "H.R. 5185"
                     }
                   ]
                 },
@@ -54826,8 +54745,8 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-09-04T14:38:37.800Z",
-                  "count": 4,
+                  "asOf": "2026-09-05T15:23:03.257Z",
+                  "count": 3,
                   "rolledUp": false,
                   "events": [
                     {
@@ -54867,27 +54786,12 @@
                       "until": "2026-09-04T10:00:36-04:00",
                       "filedAt": null,
                       "signedAt": null,
-                      "title": "Senate floor session",
+                      "title": "Senate floor (recent)",
                       "summary": "Has adjourned",
                       "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
                       "source": "Senate.gov floor schedule XML",
                       "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "senate-next-2026-09-04T10:00:00-04:00",
-                      "kind": "floor_session",
-                      "when": "2026-09-04T10:00:00-04:00",
-                      "until": null,
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Senate next convenes",
-                      "summary": "",
-                      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-                      "source": "Senate.gov floor schedule XML",
-                      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-                      "urgency": "upcoming",
+                      "urgency": "recent",
                       "bill": null
                     }
                   ]
@@ -55314,7 +55218,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -55734,7 +55638,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -55873,7 +55777,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-09-04T14:38:37.800Z",
+          "asOf": "2026-09-05T15:23:03.257Z",
           "count": 32,
           "rolledUp": true,
           "events": [
@@ -57217,7 +57121,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 9,
               "rolledUp": false,
               "events": [
@@ -58560,7 +58464,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -58966,16 +58870,16 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 1,
               "rolledUp": false,
               "events": [
                 {
                   "id": "fr-pi-2026-18214",
                   "kind": "public_inspection",
-                  "when": "2026-09-08",
+                  "when": null,
                   "until": null,
-                  "filedAt": "2026-09-04T08:45:00.000-04:00",
+                  "filedAt": null,
                   "signedAt": null,
                   "title": "Horseracing Integrity And Safety Authority Proposed 2027 Budget",
                   "summary": "Federal Trade Commission",
@@ -60546,7 +60450,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -62898,7 +62802,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -63300,7 +63204,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -63799,7 +63703,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -64262,7 +64166,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -64527,7 +64431,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -65428,7 +65332,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -65895,7 +65799,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 12,
               "rolledUp": false,
               "events": [
@@ -65910,6 +65814,36 @@
                   "summary": "Securities and Exchange Commission",
                   "url": "https://www.govinfo.gov/content/pkg/FR-2026-07-21/pdf/2026-14679.pdf",
                   "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-sun-2026-18262-2026-09-10",
+                  "kind": "sunshine_meeting",
+                  "when": "2026-09-10",
+                  "until": "2026-09-10",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Sunshine Act Meetings",
+                  "summary": "Securities and Exchange Commission",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-08/pdf/2026-18262.pdf",
+                  "source": "Federal Register Sunshine Act meeting",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-sun-2026-18257-2026-09-10",
+                  "kind": "sunshine_meeting",
+                  "when": "2026-09-10",
+                  "until": "2026-09-10",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Sunshine Act Meetings",
+                  "summary": "Securities and Exchange Commission",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-08/pdf/2026-18257.pdf",
+                  "source": "Federal Register Sunshine Act meeting",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
@@ -66044,36 +65978,6 @@
                   "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Ombudsman Matter Management System Submission Form",
                   "summary": "Securities and Exchange Commission",
                   "url": "https://public-inspection.federalregister.gov/2026-18253.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-pi-2026-18255",
-                  "kind": "public_inspection",
-                  "when": "2026-09-08",
-                  "until": null,
-                  "filedAt": "2026-09-04T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
-                  "summary": "Securities and Exchange Commission",
-                  "url": "https://public-inspection.federalregister.gov/2026-18255.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-pi-2026-18256",
-                  "kind": "public_inspection",
-                  "when": "2026-09-08",
-                  "until": null,
-                  "filedAt": "2026-09-04T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
-                  "summary": "Securities and Exchange Commission",
-                  "url": "https://public-inspection.federalregister.gov/2026-18256.pdf",
                   "source": "Federal Register public inspection (PDF)",
                   "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                   "urgency": "upcoming",
@@ -66774,7 +66678,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-09-04T14:38:37.800Z",
+          "asOf": "2026-09-05T15:23:03.257Z",
           "count": 5,
           "rolledUp": true,
           "events": [
@@ -67388,7 +67292,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -67732,7 +67636,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -70427,7 +70331,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-04T14:38:37.800Z",
+              "asOf": "2026-09-05T15:23:03.257Z",
               "count": 3,
               "rolledUp": false,
               "events": [
