@@ -6,6 +6,14 @@
 # timezone so DST is handled (stays 9:17 ET year-round). Actions cron can
 # still drift by hours but is the chosen automatic path; no external
 # scheduler. workflow_dispatch remains for manual runs (including dry_run).
+#
+# Email (optional): repo Actions secrets —
+#   BAKE_NOTIFY_TO   your inbox
+#   BAKE_SMTP_HOST   e.g. smtp.gmail.com
+#   BAKE_SMTP_PORT   587
+#   BAKE_SMTP_USER   SMTP login (usually the Gmail address)
+#   BAKE_SMTP_PASS   app password (not the normal Gmail password)
+# Without mail secrets the bake still ships; before/after is always in the job summary.
 name: Heat bake
 
 on:
@@ -34,6 +42,12 @@ jobs:
     env:
       TZ: America/New_York
       CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+      GITHUB_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      BAKE_NOTIFY_TO: ${{ secrets.BAKE_NOTIFY_TO }}
+      BAKE_SMTP_HOST: ${{ secrets.BAKE_SMTP_HOST }}
+      BAKE_SMTP_PORT: ${{ secrets.BAKE_SMTP_PORT }}
+      BAKE_SMTP_USER: ${{ secrets.BAKE_SMTP_USER }}
+      BAKE_SMTP_PASS: ${{ secrets.BAKE_SMTP_PASS }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -57,6 +71,8 @@ jobs:
           echo "CONGRESS_API_KEY is present."
 
       - name: Fetch Heat events
+        id: fetch
+        continue-on-error: true
         run: |
           set -euo pipefail
           if npm run fetch:heat-events -- --force; then
@@ -67,13 +83,57 @@ jobs:
           fi
 
       - name: Enrich Heat onto the tree
+        id: enrich
+        if: steps.fetch.outcome == 'success'
+        continue-on-error: true
         run: npm run enrich:heat
 
-      - name: Compare Heat bake
-        run: npm run compare:heat
+      - name: Write before/after report
+        id: report
+        if: always()
+        run: |
+          set -euo pipefail
+          {
+            if [ "${{ steps.fetch.outcome }}" != "success" ]; then
+              echo "GovDash Heat bake · FAIL"
+              echo
+              echo "Fetch failed. No enrich, no commit."
+            elif [ "${{ steps.enrich.outcome }}" != "success" ]; then
+              echo "GovDash Heat bake · FAIL"
+              echo
+              echo "Enrich failed. No commit."
+            else
+              echo "GovDash Heat bake · SUCCESS"
+              echo
+              npm run compare:heat
+            fi
+            echo
+            echo "Run: ${GITHUB_RUN_URL}"
+          } | tee /tmp/bake-report.txt
+          {
+            echo '```'
+            cat /tmp/bake-report.txt
+            echo '```'
+          } > /tmp/bake-report.md
+          cat /tmp/bake-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Require bake
+        id: gate
+        if: always()
+        run: |
+          set -euo pipefail
+          if [ "${{ steps.fetch.outcome }}" != "success" ]; then
+            echo "::error::Heat fetch failed."
+            exit 1
+          fi
+          if [ "${{ steps.enrich.outcome }}" != "success" ]; then
+            echo "::error::Heat enrich failed."
+            exit 1
+          fi
+          echo "Fetch and enrich succeeded."
 
       - name: Commit and push Heat files
-        if: ${{ github.event_name != 'workflow_dispatch' || inputs.dry_run != true }}
+        if: ${{ success() && (github.event_name != 'workflow_dispatch' || inputs.dry_run != true) }}
         run: |
           set -euo pipefail
 
@@ -111,5 +171,25 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Dry run — skip commit
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == true }}
+        if: ${{ success() && github.event_name == 'workflow_dispatch' && inputs.dry_run == true }}
         run: echo "Dry run — fetch/enrich/compare finished; no commit or push."
+
+      - name: Mail before/after report
+        if: ${{ always() && steps.report.outcome == 'success' && env.BAKE_NOTIFY_TO != '' && env.BAKE_SMTP_HOST != '' && env.BAKE_SMTP_USER != '' && env.BAKE_SMTP_PASS != '' }}
+        uses: dawidd6/action-send-mail@v4
+        with:
+          server_address: ${{ env.BAKE_SMTP_HOST }}
+          server_port: ${{ env.BAKE_SMTP_PORT != '' && env.BAKE_SMTP_PORT || 587 }}
+          secure: false
+          username: ${{ env.BAKE_SMTP_USER }}
+          password: ${{ env.BAKE_SMTP_PASS }}
+          subject: ${{ steps.gate.outcome == 'success' && 'GovDash Heat bake · SUCCESS' || 'GovDash Heat bake · FAIL' }}
+          to: ${{ env.BAKE_NOTIFY_TO }}
+          from: GovDash Heat bake <${{ env.BAKE_SMTP_USER }}>
+          body: file:///tmp/bake-report.txt
+          html_body: file:///tmp/bake-report.md
+
+      - name: Note when mail secrets are missing
+        if: ${{ always() && (env.BAKE_NOTIFY_TO == '' || env.BAKE_SMTP_HOST == '' || env.BAKE_SMTP_USER == '' || env.BAKE_SMTP_PASS == '') }}
+        run: |
+          echo "Mail skipped — add BAKE_NOTIFY_TO, BAKE_SMTP_HOST, BAKE_SMTP_PORT (587), BAKE_SMTP_USER, BAKE_SMTP_PASS under Settings → Secrets → Actions. Report is in the job summary."
