@@ -207,7 +207,7 @@ function plural(n, one, many) {
   return `${n} ${n === 1 ? one : many}`;
 }
 
-export function createCalPage(root, { getRoot, getAsOf, getItemCount, onMap }) {
+export function createCalPage(root, { getRoot, getAsOf, onMap }) {
   if (!root) return { show() {} };
   const body = root.querySelector("#cal-body");
   let selected = "";
@@ -330,9 +330,10 @@ export function createCalPage(root, { getRoot, getAsOf, getItemCount, onMap }) {
     }
 
     const asOf = getAsOf?.() || "";
-    const itemCount = Number(getItemCount?.()) || 0;
+    // Count what this page can actually show. The bake's raw total includes
+    // events that matched no place on the map, and blanks here stay honest.
     const total = el("p", "cal-items");
-    total.append(el("span", null, plural(itemCount, "event", "events")));
+    total.append(el("span", null, plural(items.length, "event", "events")));
     if (asOf) {
       total.append(el("span", "cal-items-sub", ` · as of ${asOf}`));
     }

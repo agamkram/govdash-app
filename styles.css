@@ -2314,11 +2314,40 @@ a.heat-title:hover {
   border-bottom: none;
 }
 
+.engage-list li.is-urgent {
+  border-left: 2px solid #c4891a;
+  padding-left: 0.42rem;
+  margin-bottom: 0.32rem;
+  padding-bottom: 0.26rem;
+}
+
+html[data-theme="dark"] .engage-list li.is-urgent {
+  border-left-color: #e8a838;
+}
+
+.engage-kicker {
+  display: block;
+  font-size: 0.65rem;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #c4891a;
+  margin-bottom: 0.12rem;
+}
+
+html[data-theme="dark"] .engage-kicker {
+  color: #e8a838;
+}
+
 .engage-label {
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--accent);
   text-decoration: none;
+}
+
+.engage-list li.is-urgent .engage-label {
+  color: var(--ink);
 }
 
 a.engage-label:hover {

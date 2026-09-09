@@ -98,10 +98,12 @@ UI shows mission + leadership in the detail panel; brown dot in the tree marks n
 
 ## Citizen engagement (Step 9)
 
-`engagement.js` builds **How you can engage** links from node `kind` + Manual web/phone.
+`engagement.js` builds **How you can engage** links from node `kind` + Manual web/phone,
+led by any comment period the node still has open.
 
 Examples:
 
+- Open comment deadlines (from `heat.events`), soonest first, with the close date
 - Official site / phone (from `sources.usgm`)
 - Find your members of Congress (legislative)
 - Comment on rules (Regulations.gov)
@@ -109,7 +111,9 @@ Examples:
 - Agency lookup (USA.gov)
 - Related spending search (USAspending)
 
-These are **generated**, not scraped per agency. Later heat/time can add “what’s active now” actions.
+The evergreen links are **generated**, not scraped per agency. The comment deadlines on top
+are the live exception: they come from the Heat bake, expire on their own, and are capped at
+four so the evergreen links stay reachable.
 
 ## Heat (live events — in use)
 

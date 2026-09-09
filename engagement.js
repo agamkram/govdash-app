@@ -13,6 +13,60 @@ function foiaSearch(name) {
   return `https://www.foia.gov/search.html?q=${encodeQuery(name)}`;
 }
 
+/** Most open dockets to list before falling back to the Regulations.gov search. */
+const MAX_OPEN_DOCKETS = 4;
+
+function dayKey(iso) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(iso || "").trim());
+  return m ? `${m[1]}-${m[2]}-${m[3]}` : "";
+}
+
+function todayKey() {
+  const n = new Date();
+  const m = String(n.getMonth() + 1).padStart(2, "0");
+  const d = String(n.getDate()).padStart(2, "0");
+  return `${n.getFullYear()}-${m}-${d}`;
+}
+
+/** Build from the parts, not Date(iso) — UTC parsing would shift the day west. */
+function prettyDay(key) {
+  const [y, m, d] = key.split("-").map(Number);
+  if (!y) return "";
+  return new Date(y, m - 1, d).toLocaleDateString("en-US", {
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+  });
+}
+
+/** Federal Register hands back http:// for comment forms; don't ship the hop. */
+function secureUrl(url) {
+  return String(url || "").replace(/^http:\/\//i, "https://");
+}
+
+/** Say where the link really goes — only some dockets carry a comment form. */
+function docketDestination(url) {
+  if (/regulations\.gov/i.test(url)) return "Regulations.gov";
+  if (/federalregister\.gov|govinfo\.gov/i.test(url)) return "Read the rule";
+  return "";
+}
+
+/**
+ * Comment periods this org still has open, soonest first. The Heat bake already
+ * carries the Regulations.gov comment form for most of these.
+ */
+function openDockets(node) {
+  const heat = node?.heat;
+  if (!heat || heat.rolledUp || !Array.isArray(heat.events)) return [];
+  const today = todayKey();
+  return heat.events
+    .filter(
+      (e) => e.kind === "comment_deadline" && e.url && dayKey(e.when) >= today
+    )
+    .sort((a, b) => dayKey(a.when).localeCompare(dayKey(b.when)))
+    .slice(0, MAX_OPEN_DOCKETS);
+}
+
 /**
  * @param {object} node
  * @param {{ byId?: Map } | Map} [optsOrById]
@@ -32,6 +86,24 @@ export function engagementActions(node, optsOrById) {
     if (!action?.label) return;
     if (action.href || action.tel || action.detail) actions.push(action);
   };
+
+  // Open comment periods lead. They expire, and they are the one action here
+  // that puts a citizen's words into the record instead of just informing them.
+  const dockets = openDockets(node);
+  for (const ev of dockets) {
+    const closes = prettyDay(dayKey(ev.when));
+    const href = secureUrl(ev.url);
+    add({
+      id: `docket-${ev.id}`,
+      kicker: "Comment deadline",
+      urgent: true,
+      label: ev.title || "Comment on a proposed rule",
+      detail: [closes && `Closes ${closes}`, docketDestination(href)]
+        .filter(Boolean)
+        .join(" · "),
+      href,
+    });
+  }
 
   if (web) {
     add({
@@ -205,7 +277,9 @@ export function engagementActions(node, optsOrById) {
     });
     add({
       id: "regs-agency",
-      label: "Find and comment on this agency’s rules",
+      label: dockets.length
+        ? "Browse this agency’s other rules"
+        : "Find and comment on this agency’s rules",
       detail: "Search Regulations.gov",
       href: `https://www.regulations.gov/search?filter=${encodeQuery(name)}`,
     });

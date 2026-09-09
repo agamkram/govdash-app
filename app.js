@@ -44,8 +44,6 @@ function readHeatOn() {
 
 /** Places that actually pulse (own events, not parent rollup). */
 let heatPulsePlaceCount = 0;
-/** Raw events in this Heat bake (C page total; not the 30-day slice). */
-let heatRawEventCount = 0;
 /** Chip/pane snapshot day from meta.heat.asOf (e.g. "Aug 16"). */
 let heatAsOfLabel = "";
 
@@ -383,7 +381,6 @@ const youPage = createYouPage(youPageEl, {
 const calPage = createCalPage(calPageEl, {
   getRoot: () => usaRoot,
   getAsOf: () => heatAsOfLabel,
-  getItemCount: () => heatRawEventCount,
   onMap: (id) => {
     if (!id) return;
     closeAppPage();
@@ -737,6 +734,13 @@ function renderEngage(node) {
   const actions = engagementActions(node, { byId: nodeById });
   for (const action of actions) {
     const li = document.createElement("li");
+    if (action.urgent) li.className = "is-urgent";
+    if (action.kicker) {
+      const kicker = document.createElement("span");
+      kicker.className = "engage-kicker";
+      kicker.textContent = action.kicker;
+      li.append(kicker);
+    }
     const main = document.createElement(action.href || action.tel ? "a" : "span");
     main.className = "engage-label";
     main.textContent = action.label;
@@ -1447,9 +1451,6 @@ async function main() {
     usaData.meta?.heat?.asOf || usaData.meta?.heat?.enrichedAt || ""
   );
   const metaDirect = usaData.meta?.heat?.nodesWithDirectHeat;
-  const metaItems = usaData.meta?.heat?.rawEventCount;
-  heatRawEventCount =
-    typeof metaItems === "number" && metaItems >= 0 ? metaItems : 0;
   setHeatPulsePlaceCount(
     typeof metaDirect === "number" && metaDirect >= 0
       ? metaDirect

@@ -44,6 +44,7 @@ const ANCHOR = {
   scotus: "gsa-24",
 };
 
+/** Routine-notice budget per node. Comment deadlines are never cut for it. */
 const MAX_EVENTS_PER_NODE = 12;
 
 function norm(s) {
@@ -199,9 +200,17 @@ function finalizeHeat(nodes, asOf) {
     list.sort((a, b) => eventSortKey(a) - eventSortKey(b));
     const uniq = new Map();
     for (const e of list) uniq.set(e.id, e);
-    const events = [...uniq.values()]
-      .sort((a, b) => eventSortKey(a) - eventSortKey(b))
-      .slice(0, MAX_EVENTS_PER_NODE);
+    const ordered = [...uniq.values()].sort(
+      (a, b) => eventSortKey(a) - eventSortKey(b)
+    );
+    // A comment deadline is the only kind a citizen can still act on, so the
+    // cap trims routine notices rather than dropping any of them.
+    const dockets = ordered.filter((e) => e.kind === "comment_deadline");
+    const routine = ordered.filter((e) => e.kind !== "comment_deadline");
+    const events = [
+      ...dockets,
+      ...routine.slice(0, Math.max(0, MAX_EVENTS_PER_NODE - dockets.length)),
+    ].sort((a, b) => eventSortKey(a) - eventSortKey(b));
     n.heat = {
       asOf,
       count: events.length,
