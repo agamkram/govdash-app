@@ -41,23 +41,23 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-09-10T17:01:58.092Z",
-      "asOf": "2026-09-10T17:01:32.478Z",
-      "nodesWithHeat": 0,
-      "nodesWithDirectHeat": 0,
-      "rawEventCount": 321,
+      "enrichedAt": "2026-09-11T17:03:05.006Z",
+      "asOf": "2026-09-11T17:02:37.778Z",
+      "nodesWithHeat": 4,
+      "nodesWithDirectHeat": 2,
+      "rawEventCount": 366,
       "matched": {
         "chamber": 0,
         "presidential": 0,
-        "publicInspection": 0,
+        "publicInspection": 2,
         "commentDeadlines": 0,
         "sunshine": 0,
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 116,
-      "unmatchedCommentDeadlines": 138,
-      "unmatchedSunshine": 5,
+      "unmatchedPublicInspection": 155,
+      "unmatchedCommentDeadlines": 130,
+      "unmatchedSunshine": 1,
       "sources": {
         "senateFloor": {
           "ok": true,
@@ -66,7 +66,7 @@
         },
         "houseClerk": {
           "ok": true,
-          "count": 0,
+          "count": 1,
           "url": "https://clerk.house.gov/"
         },
         "majorityLeader": {
@@ -76,52 +76,52 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 116,
+          "count": 157,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
-          "count": 11,
-          "since": "2026-08-27",
+          "count": 13,
+          "since": "2026-08-28",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 138,
-          "start": "2026-09-10",
-          "end": "2026-10-09",
+          "count": 130,
+          "start": "2026-09-11",
+          "end": "2026-10-10",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
-          "count": 5,
-          "start": "2026-09-10",
-          "end": "2026-10-09",
+          "count": 1,
+          "start": "2026-09-11",
+          "end": "2026-10-10",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
-          "count": 2,
-          "start": "2026-09-10",
-          "end": "2026-10-09",
+          "count": 13,
+          "start": "2026-09-11",
+          "end": "2026-10-10",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
-          "count": 27,
-          "start": "2026-09-10",
-          "end": "2026-10-09",
+          "count": 29,
+          "start": "2026-09-11",
+          "end": "2026-10-10",
           "congress": 119,
-          "calendarIds": 27,
+          "calendarIds": 29,
           "skipped404": [],
           "url": "https://api.congress.gov/v3/committee-meeting/119/house"
         },
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-09-10",
-          "end": "2026-10-09",
+          "start": "2026-09-11",
+          "end": "2026-10-10",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -140,7 +140,43 @@
       "usgm": null,
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
-    "heat": null,
+    "heat": {
+      "asOf": "2026-09-11T17:02:37.778Z",
+      "count": 2,
+      "rolledUp": true,
+      "events": [
+        {
+          "id": "fr-pi-2026-18803",
+          "kind": "public_inspection",
+          "when": "2026-09-15",
+          "until": null,
+          "filedAt": "2026-09-11T11:15:00.000-04:00",
+          "signedAt": null,
+          "title": "Meetings; Sunshine Act",
+          "summary": "Neighborhood Reinvestment Corporation (from lower in the map)",
+          "url": "https://public-inspection.federalregister.gov/2026-18803.pdf",
+          "source": "Federal Register public inspection (PDF)",
+          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+          "urgency": "upcoming",
+          "bill": null
+        },
+        {
+          "id": "fr-pi-2026-18626",
+          "kind": "public_inspection",
+          "when": "2026-09-14",
+          "until": null,
+          "filedAt": "2026-09-11T08:45:00.000-04:00",
+          "signedAt": null,
+          "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: AmeriCorps State and National Application Instructions",
+          "summary": "Corporation for National and Community Service (from lower in the map)",
+          "url": "https://public-inspection.federalregister.gov/2026-18626.pdf",
+          "source": "Federal Register public inspection (PDF)",
+          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+          "urgency": "upcoming",
+          "bill": null
+        }
+      ]
+    },
     "children": [
       {
         "id": "product-chartered",
@@ -154,7 +190,43 @@
           "usgm": null,
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
-        "heat": null,
+        "heat": {
+          "asOf": "2026-09-11T17:02:37.778Z",
+          "count": 2,
+          "rolledUp": true,
+          "events": [
+            {
+              "id": "fr-pi-2026-18803",
+              "kind": "public_inspection",
+              "when": "2026-09-15",
+              "until": null,
+              "filedAt": "2026-09-11T11:15:00.000-04:00",
+              "signedAt": null,
+              "title": "Meetings; Sunshine Act",
+              "summary": "Neighborhood Reinvestment Corporation (from lower in the map)",
+              "url": "https://public-inspection.federalregister.gov/2026-18803.pdf",
+              "source": "Federal Register public inspection (PDF)",
+              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-pi-2026-18626",
+              "kind": "public_inspection",
+              "when": "2026-09-14",
+              "until": null,
+              "filedAt": "2026-09-11T08:45:00.000-04:00",
+              "signedAt": null,
+              "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: AmeriCorps State and National Application Instructions",
+              "summary": "Corporation for National and Community Service (from lower in the map)",
+              "url": "https://public-inspection.federalregister.gov/2026-18626.pdf",
+              "source": "Federal Register public inspection (PDF)",
+              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+              "urgency": "upcoming",
+              "bill": null
+            }
+          ]
+        },
         "children": [
           {
             "id": "gsa-1697",
@@ -1168,7 +1240,28 @@
               "sam": null,
               "usgm": null
             },
-            "heat": null,
+            "heat": {
+              "asOf": "2026-09-11T17:02:37.778Z",
+              "count": 1,
+              "rolledUp": false,
+              "events": [
+                {
+                  "id": "fr-pi-2026-18803",
+                  "kind": "public_inspection",
+                  "when": "2026-09-15",
+                  "until": null,
+                  "filedAt": "2026-09-11T11:15:00.000-04:00",
+                  "signedAt": null,
+                  "title": "Meetings; Sunshine Act",
+                  "summary": "Neighborhood Reinvestment Corporation",
+                  "url": "https://public-inspection.federalregister.gov/2026-18803.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                }
+              ]
+            },
             "children": []
           },
           {
@@ -1739,7 +1832,28 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": null,
+            "heat": {
+              "asOf": "2026-09-11T17:02:37.778Z",
+              "count": 1,
+              "rolledUp": false,
+              "events": [
+                {
+                  "id": "fr-pi-2026-18626",
+                  "kind": "public_inspection",
+                  "when": "2026-09-14",
+                  "until": null,
+                  "filedAt": "2026-09-11T08:45:00.000-04:00",
+                  "signedAt": null,
+                  "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: AmeriCorps State and National Application Instructions",
+                  "summary": "Corporation for National and Community Service",
+                  "url": "https://public-inspection.federalregister.gov/2026-18626.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                }
+              ]
+            },
             "children": [],
             "workforce": {
               "count": 376,
