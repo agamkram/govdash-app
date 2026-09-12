@@ -41,11 +41,11 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-09-11T17:03:05.006Z",
-      "asOf": "2026-09-11T17:02:37.778Z",
+      "enrichedAt": "2026-09-12T16:22:08.854Z",
+      "asOf": "2026-09-12T16:21:43.604Z",
       "nodesWithHeat": 4,
       "nodesWithDirectHeat": 2,
-      "rawEventCount": 366,
+      "rawEventCount": 397,
       "matched": {
         "chamber": 0,
         "presidential": 0,
@@ -56,8 +56,8 @@
         "scotus": 0
       },
       "unmatchedPublicInspection": 155,
-      "unmatchedCommentDeadlines": 130,
-      "unmatchedSunshine": 1,
+      "unmatchedCommentDeadlines": 127,
+      "unmatchedSunshine": 3,
       "sources": {
         "senateFloor": {
           "ok": true,
@@ -71,7 +71,7 @@
         },
         "majorityLeader": {
           "ok": true,
-          "count": 19,
+          "count": 40,
           "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm"
         },
         "publicInspection": {
@@ -81,47 +81,47 @@
         },
         "presidential": {
           "ok": true,
-          "count": 13,
-          "since": "2026-08-28",
+          "count": 17,
+          "since": "2026-08-29",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 130,
-          "start": "2026-09-11",
-          "end": "2026-10-10",
+          "count": 127,
+          "start": "2026-09-12",
+          "end": "2026-10-11",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
-          "count": 1,
-          "start": "2026-09-11",
-          "end": "2026-10-10",
+          "count": 3,
+          "start": "2026-09-12",
+          "end": "2026-10-11",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
-          "count": 13,
-          "start": "2026-09-11",
-          "end": "2026-10-10",
+          "count": 17,
+          "start": "2026-09-12",
+          "end": "2026-10-11",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
-          "count": 29,
-          "start": "2026-09-11",
-          "end": "2026-10-10",
+          "count": 32,
+          "start": "2026-09-12",
+          "end": "2026-10-11",
           "congress": 119,
-          "calendarIds": 29,
+          "calendarIds": 32,
           "skipped404": [],
           "url": "https://api.congress.gov/v3/committee-meeting/119/house"
         },
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-09-11",
-          "end": "2026-10-10",
+          "start": "2026-09-12",
+          "end": "2026-10-11",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -141,7 +141,7 @@
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
     "heat": {
-      "asOf": "2026-09-11T17:02:37.778Z",
+      "asOf": "2026-09-12T16:21:43.604Z",
       "count": 2,
       "rolledUp": true,
       "events": [
@@ -191,7 +191,7 @@
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
         "heat": {
-          "asOf": "2026-09-11T17:02:37.778Z",
+          "asOf": "2026-09-12T16:21:43.604Z",
           "count": 2,
           "rolledUp": true,
           "events": [
@@ -1241,7 +1241,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-09-11T17:02:37.778Z",
+              "asOf": "2026-09-12T16:21:43.604Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -1833,7 +1833,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-11T17:02:37.778Z",
+              "asOf": "2026-09-12T16:21:43.604Z",
               "count": 1,
               "rolledUp": false,
               "events": [
