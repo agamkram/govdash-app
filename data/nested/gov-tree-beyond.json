@@ -41,11 +41,11 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-09-14T14:42:04.098Z",
-      "asOf": "2026-09-14T14:41:41.201Z",
+      "enrichedAt": "2026-09-14T18:41:21.117Z",
+      "asOf": "2026-09-14T18:41:00.191Z",
       "nodesWithHeat": 3,
       "nodesWithDirectHeat": 1,
-      "rawEventCount": 376,
+      "rawEventCount": 378,
       "matched": {
         "chamber": 0,
         "presidential": 0,
@@ -55,7 +55,7 @@
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 119,
+      "unmatchedPublicInspection": 120,
       "unmatchedCommentDeadlines": 141,
       "unmatchedSunshine": 3,
       "sources": {
@@ -76,7 +76,7 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 120,
+          "count": 121,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
@@ -109,11 +109,11 @@
         },
         "houseHearings": {
           "ok": true,
-          "count": 36,
+          "count": 37,
           "start": "2026-09-14",
           "end": "2026-10-13",
           "congress": 119,
-          "calendarIds": 36,
+          "calendarIds": 37,
           "skipped404": [],
           "url": "https://api.congress.gov/v3/committee-meeting/119/house"
         },
@@ -141,7 +141,7 @@
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
     "heat": {
-      "asOf": "2026-09-14T14:41:41.201Z",
+      "asOf": "2026-09-14T18:41:00.191Z",
       "count": 1,
       "rolledUp": true,
       "events": [
@@ -176,7 +176,7 @@
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
         "heat": {
-          "asOf": "2026-09-14T14:41:41.201Z",
+          "asOf": "2026-09-14T18:41:00.191Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -1211,7 +1211,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-09-14T14:41:41.201Z",
+              "asOf": "2026-09-14T18:41:00.191Z",
               "count": 1,
               "rolledUp": false,
               "events": [

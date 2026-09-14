@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-14T14:41:41.201Z",
+  "fetchedAt": "2026-09-14T18:41:00.191Z",
   "sources": {
     "senateFloor": {
       "ok": true,
@@ -18,7 +18,7 @@
     },
     "publicInspection": {
       "ok": true,
-      "count": 120,
+      "count": 121,
       "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
     },
     "presidential": {
@@ -51,11 +51,11 @@
     },
     "houseHearings": {
       "ok": true,
-      "count": 36,
+      "count": 37,
       "start": "2026-09-14",
       "end": "2026-10-13",
       "congress": 119,
-      "calendarIds": 36,
+      "calendarIds": 37,
       "skipped404": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house"
     },
@@ -3043,6 +3043,26 @@
       ],
       "documentType": "Proposed Rule",
       "documentNumber": "2026-18944"
+    },
+    {
+      "id": "fr-pi-2026-18959",
+      "kind": "public_inspection",
+      "when": "2026-09-15",
+      "until": null,
+      "filedAt": "2026-09-14T11:15:00.000-04:00",
+      "title": "Special Observances: Patriot Day, 2026; 25th Anniversary of the September 11, 2001, Terrorist Attacks (Proc. 11066)",
+      "summary": "Executive Office of the President",
+      "url": "https://public-inspection.federalregister.gov/2026-18959.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-18959/special-observances-patriot-day-2026-25th-anniversary-of-the-september-11-2001-terrorist-attacks",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-18959.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "documentType": "Presidential Document",
+      "documentNumber": "2026-18959"
     },
     {
       "id": "fr-pres-2026-18739",
@@ -6246,7 +6266,7 @@
       "committee": "Health, Education, Labor, and Pensions",
       "when": "2026-09-16",
       "until": null,
-      "title": "Hearings to examine the nominations of Gerard Klomp, of Utah, to be Deputy Secretary, Timothy Westlake, of Wisconsin, to be Assistant Secretary for Mental Health and Substance Use, both of the Department of Health and Human Services, and Nicole Saphier, of New Jersey, to be Medical Director in the Regular Corps of the Public Health Service, subject to qualifications therefor as provided by law and regulations, and to be Surgeon General of the Public Health Service.",
+      "title": "Hearings to examine the nominations of Gerard Klomp, of Utah, to be Deputy Secretary, Timothy Westlake, of Wisconsin, to be Assistant Secretary for Mental Health and Substance Use, and Nicole Saphier, of New Jersey, to be Medical Director in the Regular Corps of the Public Health Service, and to be Surgeon General of the Public Health Service, of the Department of Health and Human Services.",
       "summary": "Health, Education, Labor, and Pensions · Open Hearing · 10:00 AM · SD-430",
       "url": "https://www.senate.gov/committees/hearings_meetings.htm",
       "source": "Senate.gov committee hearings XML",
@@ -6956,6 +6976,22 @@
       "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
       "urgency": "upcoming",
       "eventId": "119564",
+      "meetingType": "Hearing"
+    },
+    {
+      "id": "house-hearing-119569",
+      "kind": "hearing",
+      "chamber": "House",
+      "committee": "House Budget",
+      "when": "2026-09-21T18:00:00Z",
+      "until": null,
+      "title": "America's Fiscal Future: Examining the Need for a Fiscal Commission",
+      "summary": "House Budget · Hearing · Scheduled",
+      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119569",
+      "source": "Congress.gov committee meeting API",
+      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+      "urgency": "upcoming",
+      "eventId": "119569",
       "meetingType": "Hearing"
     },
     {
