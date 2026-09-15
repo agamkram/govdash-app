@@ -41,22 +41,22 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-09-14T18:41:21.117Z",
-      "asOf": "2026-09-14T18:41:00.191Z",
+      "enrichedAt": "2026-09-15T15:48:21.192Z",
+      "asOf": "2026-09-15T15:47:58.927Z",
       "nodesWithHeat": 3,
       "nodesWithDirectHeat": 1,
-      "rawEventCount": 378,
+      "rawEventCount": 355,
       "matched": {
         "chamber": 0,
         "presidential": 0,
-        "publicInspection": 1,
+        "publicInspection": 0,
         "commentDeadlines": 0,
-        "sunshine": 0,
+        "sunshine": 1,
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 120,
-      "unmatchedCommentDeadlines": 141,
+      "unmatchedPublicInspection": 104,
+      "unmatchedCommentDeadlines": 133,
       "unmatchedSunshine": 3,
       "sources": {
         "senateFloor": {
@@ -76,52 +76,52 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 121,
+          "count": 104,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
-          "count": 17,
-          "since": "2026-08-31",
+          "count": 15,
+          "since": "2026-09-01",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 141,
-          "start": "2026-09-14",
-          "end": "2026-10-13",
+          "count": 133,
+          "start": "2026-09-15",
+          "end": "2026-10-14",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
-          "count": 3,
-          "start": "2026-09-14",
-          "end": "2026-10-13",
+          "count": 4,
+          "start": "2026-09-15",
+          "end": "2026-10-14",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
-          "count": 17,
-          "start": "2026-09-14",
-          "end": "2026-10-13",
+          "count": 19,
+          "start": "2026-09-15",
+          "end": "2026-10-14",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
-          "count": 37,
-          "start": "2026-09-14",
-          "end": "2026-10-13",
+          "count": 38,
+          "start": "2026-09-15",
+          "end": "2026-10-14",
           "congress": 119,
-          "calendarIds": 37,
+          "calendarIds": 38,
           "skipped404": [],
           "url": "https://api.congress.gov/v3/committee-meeting/119/house"
         },
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-09-14",
-          "end": "2026-10-13",
+          "start": "2026-09-15",
+          "end": "2026-10-14",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -141,22 +141,22 @@
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
     "heat": {
-      "asOf": "2026-09-14T18:41:00.191Z",
+      "asOf": "2026-09-15T15:47:58.927Z",
       "count": 1,
       "rolledUp": true,
       "events": [
         {
-          "id": "fr-pi-2026-18803",
-          "kind": "public_inspection",
-          "when": "2026-09-15",
-          "until": null,
-          "filedAt": "2026-09-11T11:15:00.000-04:00",
+          "id": "fr-sun-2026-18803-2026-09-17",
+          "kind": "sunshine_meeting",
+          "when": "2026-09-17",
+          "until": "2026-09-17",
+          "filedAt": null,
           "signedAt": null,
-          "title": "Meetings; Sunshine Act",
+          "title": "Sunshine Act Meetings",
           "summary": "Neighborhood Reinvestment Corporation (from lower in the map)",
-          "url": "https://public-inspection.federalregister.gov/2026-18803.pdf",
-          "source": "Federal Register public inspection (PDF)",
-          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+          "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-15/pdf/2026-18803.pdf",
+          "source": "Federal Register Sunshine Act meeting",
+          "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         }
@@ -176,22 +176,22 @@
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
         "heat": {
-          "asOf": "2026-09-14T18:41:00.191Z",
+          "asOf": "2026-09-15T15:47:58.927Z",
           "count": 1,
           "rolledUp": true,
           "events": [
             {
-              "id": "fr-pi-2026-18803",
-              "kind": "public_inspection",
-              "when": "2026-09-15",
-              "until": null,
-              "filedAt": "2026-09-11T11:15:00.000-04:00",
+              "id": "fr-sun-2026-18803-2026-09-17",
+              "kind": "sunshine_meeting",
+              "when": "2026-09-17",
+              "until": "2026-09-17",
+              "filedAt": null,
               "signedAt": null,
-              "title": "Meetings; Sunshine Act",
+              "title": "Sunshine Act Meetings",
               "summary": "Neighborhood Reinvestment Corporation (from lower in the map)",
-              "url": "https://public-inspection.federalregister.gov/2026-18803.pdf",
-              "source": "Federal Register public inspection (PDF)",
-              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+              "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-15/pdf/2026-18803.pdf",
+              "source": "Federal Register Sunshine Act meeting",
+              "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             }
@@ -1211,22 +1211,22 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-09-14T18:41:00.191Z",
+              "asOf": "2026-09-15T15:47:58.927Z",
               "count": 1,
               "rolledUp": false,
               "events": [
                 {
-                  "id": "fr-pi-2026-18803",
-                  "kind": "public_inspection",
-                  "when": "2026-09-15",
-                  "until": null,
-                  "filedAt": "2026-09-11T11:15:00.000-04:00",
+                  "id": "fr-sun-2026-18803-2026-09-17",
+                  "kind": "sunshine_meeting",
+                  "when": "2026-09-17",
+                  "until": "2026-09-17",
+                  "filedAt": null,
                   "signedAt": null,
-                  "title": "Meetings; Sunshine Act",
+                  "title": "Sunshine Act Meetings",
                   "summary": "Neighborhood Reinvestment Corporation",
-                  "url": "https://public-inspection.federalregister.gov/2026-18803.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-15/pdf/2026-18803.pdf",
+                  "source": "Federal Register Sunshine Act meeting",
+                  "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
                 }
