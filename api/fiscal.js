@@ -28,9 +28,22 @@ export default async function handler(req, res) {
     const val = Array.isArray(v) ? v[0] : v;
     if (val != null && val !== "") u.searchParams.set(k, String(val));
   }
-  const r = await fetch(u, {
-    headers: { Accept: "application/json", "User-Agent": "GovDash/1" },
-  });
+  let r;
+  try {
+    r = await fetch(u, {
+      headers: { Accept: "application/json", "User-Agent": "GovDash/1" },
+      // Treasury occasionally stalls; fail fast so the client can fall back
+      // instead of leaving "$" on "Loading federal money figures…" forever.
+      signal: AbortSignal.timeout(8000),
+    });
+  } catch (err) {
+    const timedOut =
+      err?.name === "TimeoutError" || err?.name === "AbortError";
+    res.status(timedOut ? 504 : 502).json({
+      error: timedOut ? "Treasury timed out" : "Treasury unreachable",
+    });
+    return;
+  }
   const text = await r.text();
   res.status(r.status);
   res.setHeader("Content-Type", r.headers.get("content-type") || "application/json");

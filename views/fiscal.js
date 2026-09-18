@@ -106,10 +106,18 @@ function amt(row, key) {
   return Number.isFinite(n) ? n : null;
 }
 
-async function fetchJson(url) {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  return res.json();
+const FETCH_MS = 8000;
+
+async function fetchJson(url, { timeoutMs = FETCH_MS } = {}) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+  try {
+    const res = await fetch(url, { signal: ctrl.signal });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return await res.json();
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 function proxyUrl(dataset, params) {
@@ -123,6 +131,8 @@ async function fetchTreasury(dataset, path, params) {
   try {
     return await fetchJson(proxyUrl(dataset, params));
   } catch {
+    // Monterey Safari often cannot verify Treasury's cert; proxy is preferred.
+    // Timed-out / failed proxy must not hang the $ page forever.
     return await fetchJson(fiscalUrl(path, params));
   }
 }
