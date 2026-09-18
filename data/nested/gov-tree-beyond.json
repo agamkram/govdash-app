@@ -17,15 +17,15 @@
       ]
     },
     "workforce": {
-      "asOf": "202606",
+      "asOf": "202607",
       "source": "OPM Federal Workforce Data (EHRI Status)",
       "matched": {
-        "subelement": 7,
+        "subelement": 8,
         "agency": 0,
         "department": 0
       },
-      "nodesWithCount": 10,
-      "enrichedAt": "2026-08-12T00:51:07.721Z"
+      "nodesWithCount": 11,
+      "enrichedAt": "2026-09-18T15:34:30.027Z"
     },
     "spending": {
       "source": "USAspending.gov toptier + sub-agency",
@@ -324,16 +324,6 @@
             },
             "heat": null,
             "children": [],
-            "workforce": {
-              "count": 2,
-              "asOf": "202606",
-              "source": "OPM Federal Workforce Data (EHRI Status)",
-              "level": "subelement",
-              "opmCode": "GE00",
-              "opmName": "BARRY GOLDWATER SCHOLARSHIP AND EXCELLENCE IN EDUCATION FOUNDATION",
-              "matchedHow": "name",
-              "rolledUp": false
-            },
             "spending": {
               "obligatedAmount": 736067.78,
               "outlayAmount": 1579642.34,
@@ -347,6 +337,16 @@
               "agencySlug": "barry-goldwater-scholarship-and-excellence-in-education-foundation",
               "toptierCode": "313",
               "abbreviation": "GOLDWATER",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "workforce": {
+              "count": 2,
+              "asOf": "202607",
+              "source": "OPM Federal Workforce Data (EHRI Status)",
+              "level": "subelement",
+              "opmCode": "GE00",
+              "opmName": "BARRY GOLDWATER SCHOLARSHIP AND EXCELLENCE IN EDUCATION FOUNDATION",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -823,6 +823,16 @@
               "abbreviation": "KENNEDY CENTER",
               "matchedHow": "name",
               "rolledUp": false
+            },
+            "workforce": {
+              "count": 48,
+              "asOf": "202607",
+              "source": "OPM Federal Workforce Data (EHRI Status)",
+              "level": "subelement",
+              "opmCode": "SM04",
+              "opmName": "JOHN F. KENNEDY CENTER FOR THE PERFORMING ARTS",
+              "matchedHow": "name",
+              "rolledUp": false
             }
           },
           {
@@ -1084,7 +1094,7 @@
             "children": [],
             "workforce": {
               "count": 613,
-              "asOf": "202606",
+              "asOf": "202607",
               "source": "OPM Federal Workforce Data (EHRI Status)",
               "level": "subelement",
               "opmCode": "SM01",
@@ -1532,16 +1542,6 @@
             },
             "heat": null,
             "children": [],
-            "workforce": {
-              "count": 21,
-              "asOf": "202606",
-              "source": "OPM Federal Workforce Data (EHRI Status)",
-              "level": "subelement",
-              "opmCode": "AN00",
-              "opmName": "AFRICAN DEVELOPMENT FOUNDATION",
-              "matchedHow": "name",
-              "rolledUp": false
-            },
             "spending": {
               "obligatedAmount": 7067400.26,
               "outlayAmount": 6131581.42,
@@ -1555,6 +1555,16 @@
               "agencySlug": "african-development-foundation",
               "toptierCode": "166",
               "abbreviation": "USADF",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "workforce": {
+              "count": 21,
+              "asOf": "202607",
+              "source": "OPM Federal Workforce Data (EHRI Status)",
+              "level": "subelement",
+              "opmCode": "AN00",
+              "opmName": "AFRICAN DEVELOPMENT FOUNDATION",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -1741,16 +1751,6 @@
             },
             "heat": null,
             "children": [],
-            "workforce": {
-              "count": 376,
-              "asOf": "202606",
-              "source": "OPM Federal Workforce Data (EHRI Status)",
-              "level": "subelement",
-              "opmCode": "KS00",
-              "opmName": "CORPORATION FOR NATIONAL AND COMMUNITY SERVICE",
-              "matchedHow": "name",
-              "rolledUp": false
-            },
             "spending": {
               "obligatedAmount": 988415591.27,
               "outlayAmount": 924074869.61,
@@ -1764,6 +1764,16 @@
               "agencySlug": "corporation-for-national-and-community-service",
               "toptierCode": "485",
               "abbreviation": "CNCS",
+              "matchedHow": "name",
+              "rolledUp": false
+            },
+            "workforce": {
+              "count": 373,
+              "asOf": "202607",
+              "source": "OPM Federal Workforce Data (EHRI Status)",
+              "level": "subelement",
+              "opmCode": "KS00",
+              "opmName": "CORPORATION FOR NATIONAL AND COMMUNITY SERVICE",
               "matchedHow": "name",
               "rolledUp": false
             }
@@ -1926,7 +1936,7 @@
             "children": [],
             "workforce": {
               "count": 90,
-              "asOf": "202606",
+              "asOf": "202607",
               "source": "OPM Federal Workforce Data (EHRI Status)",
               "level": "subelement",
               "opmCode": "HD00",
@@ -2170,16 +2180,6 @@
             "children": []
           }
         ],
-        "workforce": {
-          "count": 1102,
-          "asOf": "202606",
-          "source": "OPM Federal Workforce Data (EHRI Status)",
-          "level": "rollup",
-          "opmCode": null,
-          "opmName": null,
-          "matchedHow": "sum-children",
-          "rolledUp": true
-        },
         "spending": {
           "obligatedAmount": 996219059.31,
           "outlayAmount": 931786093.37,
@@ -2193,6 +2193,16 @@
           "agencySlug": null,
           "toptierCode": null,
           "abbreviation": null,
+          "matchedHow": "sum-children",
+          "rolledUp": true
+        },
+        "workforce": {
+          "count": 1147,
+          "asOf": "202607",
+          "source": "OPM Federal Workforce Data (EHRI Status)",
+          "level": "rollup",
+          "opmCode": null,
+          "opmName": null,
           "matchedHow": "sum-children",
           "rolledUp": true
         }
@@ -5424,7 +5434,7 @@
             "children": [],
             "workforce": {
               "count": 22,
-              "asOf": "202606",
+              "asOf": "202607",
               "source": "OPM Federal Workforce Data (EHRI Status)",
               "level": "subelement",
               "opmCode": "GX00",
@@ -5459,8 +5469,8 @@
             "heat": null,
             "children": [],
             "workforce": {
-              "count": 14,
-              "asOf": "202606",
+              "count": 15,
+              "asOf": "202607",
               "source": "OPM Federal Workforce Data (EHRI Status)",
               "level": "subelement",
               "opmCode": "GY00",
@@ -5641,8 +5651,8 @@
           }
         ],
         "workforce": {
-          "count": 36,
-          "asOf": "202606",
+          "count": 37,
+          "asOf": "202607",
           "source": "OPM Federal Workforce Data (EHRI Status)",
           "level": "rollup",
           "opmCode": null,
@@ -5652,16 +5662,6 @@
         }
       }
     ],
-    "workforce": {
-      "count": 1138,
-      "asOf": "202606",
-      "source": "OPM Federal Workforce Data (EHRI Status)",
-      "level": "rollup",
-      "opmCode": null,
-      "opmName": null,
-      "matchedHow": "sum-children",
-      "rolledUp": true
-    },
     "spending": {
       "obligatedAmount": 996219059.31,
       "outlayAmount": 931786093.37,
@@ -5675,6 +5675,16 @@
       "agencySlug": null,
       "toptierCode": null,
       "abbreviation": null,
+      "matchedHow": "sum-children",
+      "rolledUp": true
+    },
+    "workforce": {
+      "count": 1184,
+      "asOf": "202607",
+      "source": "OPM Federal Workforce Data (EHRI Status)",
+      "level": "rollup",
+      "opmCode": null,
+      "opmName": null,
       "matchedHow": "sum-children",
       "rolledUp": true
     }
