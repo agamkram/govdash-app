@@ -1,9 +1,9 @@
 {
-  "fetchedAt": "2026-09-18T17:06:38.851Z",
+  "fetchedAt": "2026-09-19T16:32:30.697Z",
   "sources": {
     "senateFloor": {
       "ok": true,
-      "count": 3,
+      "count": 2,
       "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
     },
     "houseClerk": {
@@ -18,81 +18,68 @@
     },
     "publicInspection": {
       "ok": true,
-      "count": 78,
+      "count": 79,
       "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
     },
     "presidential": {
       "ok": true,
       "count": 14,
-      "since": "2026-09-04",
+      "since": "2026-09-05",
       "url": "https://www.federalregister.gov/presidential-documents"
     },
     "commentDeadlines": {
       "ok": true,
-      "count": 131,
-      "start": "2026-09-18",
-      "end": "2026-10-17",
+      "count": 126,
+      "start": "2026-09-19",
+      "end": "2026-10-18",
       "type": "PRORULE",
       "url": "https://www.federalregister.gov/"
     },
     "sunshine": {
       "ok": true,
       "count": 1,
-      "start": "2026-09-18",
-      "end": "2026-10-17",
+      "start": "2026-09-19",
+      "end": "2026-10-18",
       "url": "https://www.federalregister.gov/"
     },
     "senateHearings": {
       "ok": true,
       "count": 18,
-      "start": "2026-09-18",
-      "end": "2026-10-17",
+      "start": "2026-09-19",
+      "end": "2026-10-18",
       "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
     },
     "houseHearings": {
       "ok": true,
-      "count": 2,
-      "start": "2026-09-18",
-      "end": "2026-10-17",
+      "count": 1,
+      "start": "2026-09-19",
+      "end": "2026-10-18",
       "congress": 119,
-      "calendarIds": 2,
+      "calendarIds": 1,
       "skipped404": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house"
     },
     "scotus": {
       "ok": true,
       "count": 1,
-      "start": "2026-09-18",
-      "end": "2026-10-17",
+      "start": "2026-09-19",
+      "end": "2026-10-18",
       "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
     }
   },
   "events": [
-    {
-      "id": "senate-floor-2026-09-17T10:00:00-04:00",
-      "kind": "floor_session",
-      "chamber": "Senate",
-      "when": "2026-09-17T10:00:00-04:00",
-      "until": "2026-09-17T15:42:00-04:00",
-      "title": "Senate floor (recent)",
-      "summary": "Has adjourned",
-      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-      "source": "Senate.gov floor schedule XML",
-      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-      "urgency": "recent"
-    },
     {
       "id": "senate-floor-2026-09-18T09:00:01-04:00",
       "kind": "floor_session",
       "chamber": "Senate",
       "when": "2026-09-18T09:00:01-04:00",
       "until": "2026-09-18T09:00:25-04:00",
-      "title": "Senate floor session",
+      "title": "Senate floor (recent)",
       "summary": "Has adjourned",
       "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
       "source": "Senate.gov floor schedule XML",
       "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-      "urgency": "upcoming"
+      "urgency": "recent"
     },
     {
       "id": "senate-next-2026-09-22T15:00:00-04:00",
@@ -1446,7 +1433,7 @@
       "when": "2026-09-21",
       "until": null,
       "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Proposed Settlement Agreement, Stipulation, Order, and Judgment, etc.: CTS Of Asheville, Inc. Superfund Site, Asheville, NC",
+      "title": "Proposed Settlement Agreement, Stipulation, Order, and Judgment, etc.: CTS of Asheville, Inc. Superfund Site, Asheville, NC",
       "summary": "Environmental Protection Agency",
       "url": "https://public-inspection.federalregister.gov/2026-19249.pdf",
       "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19249/proposed-settlement-agreement-stipulation-order-and-judgment-etc-cts-of-asheville-inc-superfund-site",
@@ -2239,6 +2226,26 @@
       ],
       "documentType": "Presidential Document",
       "documentNumber": "2026-19336"
+    },
+    {
+      "id": "fr-pi-2026-19369",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-18T16:15:00.000-04:00",
+      "title": "Meetings; Sunshine Act",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19369.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19369/meetings-sunshine-act",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19369.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19369"
     },
     {
       "id": "fr-pres-2026-18739",
@@ -3466,7 +3473,7 @@
       "until": "2026-09-21",
       "title": "Proposed Deletion From the National Priorities List",
       "summary": "Environmental Protection Agency",
-      "url": "http://www.regulations.gov/commenton/EPA-HQ-OLEM-2026-4886-0001",
+      "url": "http://www.regulations.gov/commenton/EPA-HQ-OLEM-2025-2499-0001",
       "htmlUrl": "https://www.federalregister.gov/documents/2026/08/20/2026-16994/proposed-deletion-from-the-national-priorities-list",
       "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-20/pdf/2026-16994.pdf",
       "source": "Federal Register proposed rule (comments close)",
@@ -3505,7 +3512,7 @@
       "until": "2026-09-21",
       "title": "Receipt of Pesticide Petitions Filed for Residues of Pesticide Chemicals in or on Various Commodities-June 2026",
       "summary": "Environmental Protection Agency",
-      "url": "http://www.regulations.gov/commenton/EPA-HQ-OPP-2025-0042-0008",
+      "url": "http://www.regulations.gov/commenton/EPA-HQ-OPP-2026-4423-0001",
       "htmlUrl": "https://www.federalregister.gov/documents/2026/08/20/2026-16976/receipt-of-pesticide-petitions-filed-for-residues-of-pesticide-chemicals-in-or-on-various",
       "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-20/pdf/2026-16976.pdf",
       "source": "Federal Register proposed rule (comments close)",
@@ -3575,83 +3582,6 @@
         "Federal Aviation Administration"
       ],
       "documentNumber": "2026-16956",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-16943",
-      "kind": "comment_deadline",
-      "when": "2026-09-18",
-      "until": "2026-09-18",
-      "title": "International Association of Color Manufacturers; Filing of Color Additive Petition",
-      "summary": "Health and Human Services Department, Food and Drug Administration",
-      "url": "http://www.regulations.gov/commenton/FDA-2026-C-8883-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/19/2026-16943/international-association-of-color-manufacturers-filing-of-color-additive-petition",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-19/pdf/2026-16943.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Health and Human Services Department",
-        "Food and Drug Administration"
-      ],
-      "documentNumber": "2026-16943",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-16937",
-      "kind": "comment_deadline",
-      "when": "2026-09-18",
-      "until": "2026-09-18",
-      "title": "Air Plan Approval; South Carolina; Minor Source Permit Program Revisions",
-      "summary": "Environmental Protection Agency",
-      "url": "http://www.regulations.gov/commenton/EPA-R04-OAR-2024-0241-0038",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/19/2026-16937/air-plan-approval-south-carolina-minor-source-permit-program-revisions",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-19/pdf/2026-16937.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Environmental Protection Agency"
-      ],
-      "documentNumber": "2026-16937",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-16932",
-      "kind": "comment_deadline",
-      "when": "2026-09-18",
-      "until": "2026-09-18",
-      "title": "Air Plan Partial Approval and Partial Conditional Approval; South Carolina; Control of Oxides of Nitrogen and Source Testing Requirements",
-      "summary": "Environmental Protection Agency",
-      "url": "http://www.regulations.gov/commenton/EPA-R04-OAR-2025-0017-0012",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/19/2026-16932/air-plan-partial-approval-and-partial-conditional-approval-south-carolina-control-of-oxides-of",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-19/pdf/2026-16932.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Environmental Protection Agency"
-      ],
-      "documentNumber": "2026-16932",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-16930",
-      "kind": "comment_deadline",
-      "when": "2026-09-18",
-      "until": "2026-09-18",
-      "title": "Air Plan Approval; South Carolina; Minor Source Permit Program Revisions",
-      "summary": "Environmental Protection Agency",
-      "url": "http://www.regulations.gov/commenton/EPA-R04-OAR-2024-0241-0037",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/19/2026-16930/air-plan-approval-south-carolina-minor-source-permit-program-revisions",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-19/pdf/2026-16930.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Environmental Protection Agency"
-      ],
-      "documentNumber": "2026-16930",
       "documentType": "Proposed Rule"
     },
     {
@@ -5001,26 +4931,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-13300",
-      "kind": "comment_deadline",
-      "when": "2026-09-18",
-      "until": "2026-09-18",
-      "title": "Proposed Amendment of Class C Airspace at Ontario International Airport, CA; Public Meeting",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2013-0259-5356",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/01/2026-13300/proposed-amendment-of-class-c-airspace-at-ontario-international-airport-ca-public-meeting",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-01/pdf/2026-13300.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-13300",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-11545",
       "kind": "comment_deadline",
       "when": "2026-09-28",
@@ -5135,8 +5045,8 @@
       "committee": "Indian Affairs",
       "when": "2026-09-23",
       "until": null,
-      "title": "Hearings to examine S.1750, to reaffirm the applicability of the Indian Reorganization Act to the Poarch Band of Creek Indians, S.3859, to amend the Catawba Indian Tribe of South Carolina Land Claims Settlement Act of 1993 with respect to future membership in the Catawba Indian Nation, S.4053, to take certain land in the State of California into trust for the benefit of the Pechanga Band of Indians, and H.R.226, to take certain Federal lands in Tennessee into trust for the benefit of the Eastern Band of Cherokee Indians.",
-      "summary": "Indian Affairs · Open Hearing · 02:30 PM · SD-628",
+      "title": "Business meeting to consider S.5354, to reauthorize the Native American Housing Assistance and Self-Determination Act of 1996; to be immediately followed by hearings to examine S.1750, to reaffirm the applicability of the Indian Reorganization Act to the Poarch Band of Creek Indians, S.3859, to amend the Catawba Indian Tribe of South Carolina Land Claims Settlement Act of 1993 with respect to future membership in the Catawba Indian Nation, S.4053, to take certain land in the State of California into trust for the benefit of the Pechanga Band of Indians, and H.R.226, to take certain Federal lands in Tennessee into trust for the benefit of the Eastern Band of Cherokee Indians.",
+      "summary": "Indian Affairs · Open Business Meeting · 02:30 PM · SD-628",
       "url": "https://www.senate.gov/committees/hearings_meetings.htm",
       "source": "Senate.gov committee hearings XML",
       "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
@@ -5309,22 +5219,6 @@
       "source": "Senate.gov committee hearings XML",
       "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
       "urgency": "upcoming"
-    },
-    {
-      "id": "house-hearing-119564",
-      "kind": "hearing",
-      "chamber": "House",
-      "committee": "House Financial Services Subcommittee on Financial Institutions",
-      "when": "2026-09-18T16:00:00Z",
-      "until": null,
-      "title": "Main Street Capital Access Act: Empowering Community Banks to Drive Economic Growth",
-      "summary": "House Financial Services Subcommittee on Financial Institutions · Hearing · Scheduled",
-      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119564",
-      "source": "Congress.gov committee meeting API",
-      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
-      "urgency": "upcoming",
-      "eventId": "119564",
-      "meetingType": "Hearing"
     },
     {
       "id": "house-hearing-119569",
