@@ -80,27 +80,27 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-09-19T16:32:47.059Z",
-      "asOf": "2026-09-19T16:32:30.697Z",
-      "nodesWithHeat": 109,
-      "nodesWithDirectHeat": 63,
-      "rawEventCount": 283,
+      "enrichedAt": "2026-09-20T16:52:04.626Z",
+      "asOf": "2026-09-20T16:51:46.093Z",
+      "nodesWithHeat": 114,
+      "nodesWithDirectHeat": 67,
+      "rawEventCount": 295,
       "matched": {
-        "chamber": 43,
+        "chamber": 42,
         "presidential": 14,
         "publicInspection": 70,
-        "commentDeadlines": 122,
+        "commentDeadlines": 135,
         "sunshine": 1,
-        "hearings": 19,
+        "hearings": 18,
         "scotus": 1
       },
       "unmatchedPublicInspection": 9,
-      "unmatchedCommentDeadlines": 4,
+      "unmatchedCommentDeadlines": 5,
       "unmatchedSunshine": 0,
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 2,
+          "count": 1,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
@@ -121,36 +121,36 @@
         "presidential": {
           "ok": true,
           "count": 14,
-          "since": "2026-09-05",
+          "since": "2026-09-06",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 126,
-          "start": "2026-09-19",
-          "end": "2026-10-18",
+          "count": 140,
+          "start": "2026-09-20",
+          "end": "2026-10-19",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
           "count": 1,
-          "start": "2026-09-19",
-          "end": "2026-10-18",
+          "start": "2026-09-20",
+          "end": "2026-10-19",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
-          "count": 18,
-          "start": "2026-09-19",
-          "end": "2026-10-18",
+          "count": 17,
+          "start": "2026-09-20",
+          "end": "2026-10-19",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
           "count": 1,
-          "start": "2026-09-19",
-          "end": "2026-10-18",
+          "start": "2026-09-20",
+          "end": "2026-10-19",
           "congress": 119,
           "calendarIds": 1,
           "skipped404": [],
@@ -159,8 +159,8 @@
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-09-19",
-          "end": "2026-10-18",
+          "start": "2026-09-20",
+          "end": "2026-10-19",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -297,95 +297,95 @@
       "note": "Product root: curated for the citizen map. Full Crosswalk nest preserved in gov-tree-full.json."
     },
     "heat": {
-      "asOf": "2026-09-19T16:32:30.697Z",
-      "count": 228,
+      "asOf": "2026-09-20T16:51:46.093Z",
+      "count": 250,
       "rolledUp": true,
       "events": [
         {
-          "id": "fr-comment-2026-18574",
+          "id": "fr-comment-2026-16914",
           "kind": "comment_deadline",
-          "when": "2026-10-16",
-          "until": "2026-10-16",
+          "when": "2026-10-19",
+          "until": "2026-10-19",
           "filedAt": null,
           "signedAt": null,
-          "title": "Information Reporting Regarding Qualified Opportunity Zones and Updated Qualified Opportunity Fund Certification and Decertification Procedures",
-          "summary": "Treasury Department, Internal Revenue Service (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/IRS-2026-1223-0001",
+          "title": "Rescission of Rural Development's Construction and Repair Regulation",
+          "summary": "Agriculture Department, Rural Business-Cooperative Service, Rural Housing Service (from lower in the map)",
+          "url": "http://www.regulations.gov/commenton/RHS_FRDOC_0001-0631",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-16769",
+          "id": "fr-comment-2026-19059",
           "kind": "comment_deadline",
-          "when": "2026-10-16",
-          "until": "2026-10-16",
+          "when": "2026-10-19",
+          "until": "2026-10-19",
           "filedAt": null,
           "signedAt": null,
-          "title": "Proposed Removal of a Reporting Requirement for Trusts Whose Charitable Contribution Deductions Are Solely for Contributions Made by Passthrough Entities",
-          "summary": "Treasury Department, Internal Revenue Service (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/IRS-2026-0991-0001",
+          "title": "Drawbridge Operation Regulation; Connecticut River, East Haddam, CT",
+          "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+          "url": "http://www.regulations.gov/commenton/USCG-2026-0960-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-17867",
+          "id": "fr-comment-2026-19058",
           "kind": "comment_deadline",
-          "when": "2026-10-16",
-          "until": "2026-10-16",
+          "when": "2026-10-19",
+          "until": "2026-10-19",
           "filedAt": null,
           "signedAt": null,
-          "title": "Amendment of Class D Airspace and Class E Airspace Over New Haven, CT",
+          "title": "Drawbridge Operation Regulation; Niantic River, Between Waterford and Niantic, CT",
+          "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+          "url": "http://www.regulations.gov/commenton/USCG-2026-0961-0001",
+          "source": "Federal Register proposed rule (comments close)",
+          "sourceUrl": "https://www.federalregister.gov/",
+          "urgency": "upcoming",
+          "bill": null
+        },
+        {
+          "id": "fr-comment-2026-19057",
+          "kind": "comment_deadline",
+          "when": "2026-10-19",
+          "until": "2026-10-19",
+          "filedAt": null,
+          "signedAt": null,
+          "title": "Drawbridge Operation Regulation; Mystic River, Mystic, CT",
+          "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+          "url": "http://www.regulations.gov/commenton/USCG-2026-0962-0001",
+          "source": "Federal Register proposed rule (comments close)",
+          "sourceUrl": "https://www.federalregister.gov/",
+          "urgency": "upcoming",
+          "bill": null
+        },
+        {
+          "id": "fr-comment-2026-19094",
+          "kind": "comment_deadline",
+          "when": "2026-10-19",
+          "until": "2026-10-19",
+          "filedAt": null,
+          "signedAt": null,
+          "title": "Airworthiness Directives; Pratt & Whitney Engines",
           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-9967-0001",
+          "url": "http://www.regulations.gov/commenton/FAA-2026-8816-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-17840",
+          "id": "fr-comment-2026-18145",
           "kind": "comment_deadline",
-          "when": "2026-10-16",
-          "until": "2026-10-16",
+          "when": "2026-10-19",
+          "until": "2026-10-19",
           "filedAt": null,
           "signedAt": null,
-          "title": "Airworthiness Directives; Airbus Helicopters",
+          "title": "Establishment of Class E Airspace Over Lexington, VA",
           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-8790-0001",
-          "source": "Federal Register proposed rule (comments close)",
-          "sourceUrl": "https://www.federalregister.gov/",
-          "urgency": "upcoming",
-          "bill": null
-        },
-        {
-          "id": "fr-comment-2026-18854",
-          "kind": "comment_deadline",
-          "when": "2026-10-15",
-          "until": "2026-10-15",
-          "filedAt": null,
-          "signedAt": null,
-          "title": "Petition for Rulemaking of Robert Michael Vanleeuwen",
-          "summary": "Federal Trade Commission (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FTC-2026-1321-0001",
-          "source": "Federal Register proposed rule (comments close)",
-          "sourceUrl": "https://www.federalregister.gov/",
-          "urgency": "upcoming",
-          "bill": null
-        },
-        {
-          "id": "fr-comment-2026-18759",
-          "kind": "comment_deadline",
-          "when": "2026-10-14",
-          "until": "2026-10-14",
-          "filedAt": null,
-          "signedAt": null,
-          "title": "Approval and Promulgation of State Air Quality Plans for Designated Facilities and Pollutants; District of Columbia; Negative Declaration for Existing Other Solid Waste Incinerators",
-          "summary": "Environmental Protection Agency (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/EPA-R03-OAR-2026-4522-0001",
+          "url": "http://www.regulations.gov/commenton/FAA-2026-10544-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
@@ -418,7 +418,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-09-19T16:32:30.697Z",
+          "asOf": "2026-09-20T16:51:46.093Z",
           "count": 25,
           "rolledUp": true,
           "events": [
@@ -459,7 +459,7 @@
               "until": null,
               "filedAt": null,
               "signedAt": null,
-              "title": "Closed hearings to examine an update on the budget of the Department of Defense.",
+              "title": "To receive a closed briefing on an update on the budget of the Department of Defense.",
               "summary": "Armed Services · Closed Hearing · 09:30 AM · SVC-217 (from lower in the map)",
               "url": "https://www.senate.gov/committees/hearings_meetings.htm",
               "source": "Senate.gov committee hearings XML",
@@ -1091,7 +1091,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 24,
               "rolledUp": true,
               "events": [
@@ -1117,7 +1117,7 @@
                   "until": null,
                   "filedAt": null,
                   "signedAt": null,
-                  "title": "Closed hearings to examine an update on the budget of the Department of Defense.",
+                  "title": "To receive a closed briefing on an update on the budget of the Department of Defense.",
                   "summary": "Armed Services · Closed Hearing · 09:30 AM · SVC-217 (from lower in the map)",
                   "url": "https://www.senate.gov/committees/hearings_meetings.htm",
                   "source": "Senate.gov committee hearings XML",
@@ -1178,7 +1178,7 @@
                   "filedAt": null,
                   "signedAt": null,
                   "title": "House next session",
-                  "summary": "September 21st, 2026 at 10:30 AM (from lower in the map)",
+                  "summary": "Tomorrow at 10:30 AM (from lower in the map)",
                   "url": "https://clerk.house.gov/",
                   "source": "Office of the Clerk, U.S. House",
                   "sourceUrl": "https://clerk.house.gov/",
@@ -1322,7 +1322,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-09-19T16:32:30.697Z",
+                  "asOf": "2026-09-20T16:51:46.093Z",
                   "count": 12,
                   "rolledUp": false,
                   "events": [
@@ -1349,7 +1349,7 @@
                       "filedAt": null,
                       "signedAt": null,
                       "title": "House next session",
-                      "summary": "September 21st, 2026 at 10:30 AM",
+                      "summary": "Tomorrow at 10:30 AM",
                       "url": "https://clerk.house.gov/",
                       "source": "Office of the Clerk, U.S. House",
                       "sourceUrl": "https://clerk.house.gov/",
@@ -1638,7 +1638,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-09-19T16:32:30.697Z",
+                  "asOf": "2026-09-20T16:51:46.093Z",
                   "count": 12,
                   "rolledUp": false,
                   "events": [
@@ -1664,7 +1664,7 @@
                       "until": null,
                       "filedAt": null,
                       "signedAt": null,
-                      "title": "Closed hearings to examine an update on the budget of the Department of Defense.",
+                      "title": "To receive a closed briefing on an update on the budget of the Department of Defense.",
                       "summary": "Armed Services · Closed Hearing · 09:30 AM · SVC-217",
                       "url": "https://www.senate.gov/committees/hearings_meetings.htm",
                       "source": "Senate.gov committee hearings XML",
@@ -1778,21 +1778,6 @@
                       "bill": null
                     },
                     {
-                      "id": "senate-hearing-338759",
-                      "kind": "hearing",
-                      "when": "2026-09-23",
-                      "until": null,
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Hearings to examine to take sworn witness testimony.",
-                      "summary": "Homeland Security and Governmental Affairs · Open Hearing · 10:00 AM · SD-342",
-                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-                      "source": "Senate.gov committee hearings XML",
-                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
                       "id": "senate-hearing-338769",
                       "kind": "hearing",
                       "when": "2026-09-23",
@@ -1816,6 +1801,21 @@
                       "signedAt": null,
                       "title": "Business meeting to consider S.5354, to reauthorize the Native American Housing Assistance and Self-Determination Act of 1996; to be immediately followed by hearings to examine S.1750, to reaffirm the applicability of the Indian Reorganization Act to the Poarch Band of Creek Indians, S.3859, to amend the Catawba Indian Tribe of South Carolina Land Claims Settlement Act of 1993 with respect to future membership in the Catawba Indian Nation, S.4053, to take certain land in the State of California into trust for the benefit of the Pechanga Band of Indians, and H.R.226, to take certain Federal lands in Tennessee into trust for the benefit of the Eastern Band of Cherokee Indians.",
                       "summary": "Indian Affairs · Open Business Meeting · 02:30 PM · SD-628",
+                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+                      "source": "Senate.gov committee hearings XML",
+                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "senate-hearing-338757",
+                      "kind": "hearing",
+                      "when": "2026-09-23",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "To receive a closed briefing on cyber operations and readiness for the second and third quarters of Fiscal Year 2026 as well as an update on election security.",
+                      "summary": "Armed Services · Closed Hearing · 02:30 PM · SVC-217",
                       "url": "https://www.senate.gov/committees/hearings_meetings.htm",
                       "source": "Senate.gov committee hearings XML",
                       "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
@@ -2645,7 +2645,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -2784,95 +2784,95 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-09-19T16:32:30.697Z",
-          "count": 140,
+          "asOf": "2026-09-20T16:51:46.093Z",
+          "count": 153,
           "rolledUp": true,
           "events": [
             {
-              "id": "fr-comment-2026-18574",
+              "id": "fr-comment-2026-16914",
               "kind": "comment_deadline",
-              "when": "2026-10-16",
-              "until": "2026-10-16",
+              "when": "2026-10-19",
+              "until": "2026-10-19",
               "filedAt": null,
               "signedAt": null,
-              "title": "Information Reporting Regarding Qualified Opportunity Zones and Updated Qualified Opportunity Fund Certification and Decertification Procedures",
-              "summary": "Treasury Department, Internal Revenue Service (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/IRS-2026-1223-0001",
+              "title": "Rescission of Rural Development's Construction and Repair Regulation",
+              "summary": "Agriculture Department, Rural Business-Cooperative Service, Rural Housing Service (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/RHS_FRDOC_0001-0631",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-16769",
+              "id": "fr-comment-2026-19059",
               "kind": "comment_deadline",
-              "when": "2026-10-16",
-              "until": "2026-10-16",
+              "when": "2026-10-19",
+              "until": "2026-10-19",
               "filedAt": null,
               "signedAt": null,
-              "title": "Proposed Removal of a Reporting Requirement for Trusts Whose Charitable Contribution Deductions Are Solely for Contributions Made by Passthrough Entities",
-              "summary": "Treasury Department, Internal Revenue Service (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/IRS-2026-0991-0001",
+              "title": "Drawbridge Operation Regulation; Connecticut River, East Haddam, CT",
+              "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/USCG-2026-0960-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-17867",
+              "id": "fr-comment-2026-19058",
               "kind": "comment_deadline",
-              "when": "2026-10-16",
-              "until": "2026-10-16",
+              "when": "2026-10-19",
+              "until": "2026-10-19",
               "filedAt": null,
               "signedAt": null,
-              "title": "Amendment of Class D Airspace and Class E Airspace Over New Haven, CT",
+              "title": "Drawbridge Operation Regulation; Niantic River, Between Waterford and Niantic, CT",
+              "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/USCG-2026-0961-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-19057",
+              "kind": "comment_deadline",
+              "when": "2026-10-19",
+              "until": "2026-10-19",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Drawbridge Operation Regulation; Mystic River, Mystic, CT",
+              "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/USCG-2026-0962-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-19094",
+              "kind": "comment_deadline",
+              "when": "2026-10-19",
+              "until": "2026-10-19",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Airworthiness Directives; Pratt & Whitney Engines",
               "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/FAA-2026-9967-0001",
+              "url": "http://www.regulations.gov/commenton/FAA-2026-8816-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-17840",
+              "id": "fr-comment-2026-18145",
               "kind": "comment_deadline",
-              "when": "2026-10-16",
-              "until": "2026-10-16",
+              "when": "2026-10-19",
+              "until": "2026-10-19",
               "filedAt": null,
               "signedAt": null,
-              "title": "Airworthiness Directives; Airbus Helicopters",
+              "title": "Establishment of Class E Airspace Over Lexington, VA",
               "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/FAA-2026-8790-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-18481",
-              "kind": "comment_deadline",
-              "when": "2026-10-13",
-              "until": "2026-10-13",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Decennial Census of the Population of Americans; Proposed Residence Criteria and Proposed Regulations for Demographic Questions",
-              "summary": "Commerce Department, Census Bureau (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/USBC-2026-0628-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-18484",
-              "kind": "comment_deadline",
-              "when": "2026-10-13",
-              "until": "2026-10-13",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Reef Fish Fishery of the Gulf of America; 2027 Red Grouper Commercial Quota Retention",
-              "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1882-0002",
+              "url": "http://www.regulations.gov/commenton/FAA-2026-10544-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
@@ -2905,8 +2905,8 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
-              "count": 16,
+              "asOf": "2026-09-20T16:51:46.093Z",
+              "count": 20,
               "rolledUp": false,
               "events": [
                 {
@@ -3131,8 +3131,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-19T16:32:30.697Z",
-                  "count": 4,
+                  "asOf": "2026-09-20T16:51:46.093Z",
+                  "count": 8,
                   "rolledUp": false,
                   "events": [
                     {
@@ -3195,7 +3195,8 @@
                       "urgency": "upcoming",
                       "bill": null
                     }
-                  ]
+                  ],
+                  "hasChildHeat": true
                 },
                 "children": [
                   {
@@ -3331,7 +3332,73 @@
                         ]
                       }
                     },
-                    "heat": null,
+                    "heat": {
+                      "asOf": "2026-09-20T16:51:46.093Z",
+                      "count": 4,
+                      "rolledUp": false,
+                      "events": [
+                        {
+                          "id": "fr-comment-2026-19162",
+                          "kind": "comment_deadline",
+                          "when": "2026-10-19",
+                          "until": "2026-10-19",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Federal Acquisition Regulation: Revolutionary FAR Overhaul Parts 8, 12, 13, 15, 38, 44, and 51",
+                          "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
+                          "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1913",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
+                        {
+                          "id": "fr-comment-2026-19160",
+                          "kind": "comment_deadline",
+                          "when": "2026-10-19",
+                          "until": "2026-10-19",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 16, 17, and 35",
+                          "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
+                          "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1914",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
+                        {
+                          "id": "fr-comment-2026-19159",
+                          "kind": "comment_deadline",
+                          "when": "2026-10-19",
+                          "until": "2026-10-19",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 9, 27, and 47",
+                          "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
+                          "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1911",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
+                        {
+                          "id": "fr-comment-2026-19158",
+                          "kind": "comment_deadline",
+                          "when": "2026-10-19",
+                          "until": "2026-10-19",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 14, 28, 36, and 52",
+                          "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
+                          "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1912",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        }
+                      ]
+                    },
                     "children": [
                       {
                         "id": "gsa-46",
@@ -3897,10 +3964,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
-              "count": 8,
+              "asOf": "2026-09-20T16:51:46.093Z",
+              "count": 10,
               "rolledUp": true,
               "events": [
+                {
+                  "id": "fr-comment-2026-16914",
+                  "kind": "comment_deadline",
+                  "when": "2026-10-19",
+                  "until": "2026-10-19",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Rescission of Rural Development's Construction and Repair Regulation",
+                  "summary": "Agriculture Department, Rural Business-Cooperative Service, Rural Housing Service (from lower in the map)",
+                  "url": "http://www.regulations.gov/commenton/RHS_FRDOC_0001-0631",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-18648",
                   "kind": "comment_deadline",
@@ -3975,21 +4057,6 @@
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
-                },
-                {
-                  "id": "fr-pi-2026-19237",
-                  "kind": "public_inspection",
-                  "when": "2026-09-21",
-                  "until": null,
-                  "filedAt": "2026-09-18T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Petition: Bayer U.S.-Crop Science; Determination of Nonregulated Status and Draft Plant Pest Risk Assessment for Herbicide Resistant MON 96012 Cotton (Gossypium hirsutum)",
-                  "summary": "Animal and Plant Health Inspection Service (from lower in the map)",
-                  "url": "https://public-inspection.federalregister.gov/2026-19237.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
                 }
               ]
             },
@@ -4044,10 +4111,25 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-19T16:32:30.697Z",
-                  "count": 8,
+                  "asOf": "2026-09-20T16:51:46.093Z",
+                  "count": 10,
                   "rolledUp": true,
                   "events": [
+                    {
+                      "id": "fr-comment-2026-16914",
+                      "kind": "comment_deadline",
+                      "when": "2026-10-19",
+                      "until": "2026-10-19",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Rescission of Rural Development's Construction and Repair Regulation",
+                      "summary": "Agriculture Department, Rural Business-Cooperative Service, Rural Housing Service (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/RHS_FRDOC_0001-0631",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
                     {
                       "id": "fr-comment-2026-18648",
                       "kind": "comment_deadline",
@@ -4122,21 +4204,6 @@
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
                       "bill": null
-                    },
-                    {
-                      "id": "fr-pi-2026-19237",
-                      "kind": "public_inspection",
-                      "when": "2026-09-21",
-                      "until": null,
-                      "filedAt": "2026-09-18T08:45:00.000-04:00",
-                      "signedAt": null,
-                      "title": "Petition: Bayer U.S.-Crop Science; Determination of Nonregulated Status and Draft Plant Pest Risk Assessment for Herbicide Resistant MON 96012 Cotton (Gossypium hirsutum)",
-                      "summary": "Animal and Plant Health Inspection Service (from lower in the map)",
-                      "url": "https://public-inspection.federalregister.gov/2026-19237.pdf",
-                      "source": "Federal Register public inspection (PDF)",
-                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                      "urgency": "upcoming",
-                      "bill": null
                     }
                   ]
                 },
@@ -4165,10 +4232,25 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-19T16:32:30.697Z",
-                      "count": 8,
+                      "asOf": "2026-09-20T16:51:46.093Z",
+                      "count": 10,
                       "rolledUp": true,
                       "events": [
+                        {
+                          "id": "fr-comment-2026-16914",
+                          "kind": "comment_deadline",
+                          "when": "2026-10-19",
+                          "until": "2026-10-19",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Rescission of Rural Development's Construction and Repair Regulation",
+                          "summary": "Agriculture Department, Rural Business-Cooperative Service, Rural Housing Service (from lower in the map)",
+                          "url": "http://www.regulations.gov/commenton/RHS_FRDOC_0001-0631",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
                         {
                           "id": "fr-comment-2026-18648",
                           "kind": "comment_deadline",
@@ -4241,21 +4323,6 @@
                           "url": "http://www.regulations.gov/commenton/FS-2026-0100-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-pi-2026-19237",
-                          "kind": "public_inspection",
-                          "when": "2026-09-21",
-                          "until": null,
-                          "filedAt": "2026-09-18T08:45:00.000-04:00",
-                          "signedAt": null,
-                          "title": "Petition: Bayer U.S.-Crop Science; Determination of Nonregulated Status and Draft Plant Pest Risk Assessment for Herbicide Resistant MON 96012 Cotton (Gossypium hirsutum)",
-                          "summary": "Animal and Plant Health Inspection Service (from lower in the map)",
-                          "url": "https://public-inspection.federalregister.gov/2026-19237.pdf",
-                          "source": "Federal Register public inspection (PDF)",
-                          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                           "urgency": "upcoming",
                           "bill": null
                         }
@@ -5534,7 +5601,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 5,
                           "rolledUp": true,
                           "events": [
@@ -5640,7 +5707,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-19T16:32:30.697Z",
+                              "asOf": "2026-09-20T16:51:46.093Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -5740,7 +5807,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-19T16:32:30.697Z",
+                              "asOf": "2026-09-20T16:51:46.093Z",
                               "count": 4,
                               "rolledUp": false,
                               "events": [
@@ -5912,7 +5979,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 3,
                           "rolledUp": true,
                           "events": [
@@ -5988,7 +6055,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-19T16:32:30.697Z",
+                              "asOf": "2026-09-20T16:51:46.093Z",
                               "count": 3,
                               "rolledUp": false,
                               "events": [
@@ -6484,7 +6551,28 @@
                           "sam": null,
                           "usgm": null
                         },
-                        "heat": null,
+                        "heat": {
+                          "asOf": "2026-09-20T16:51:46.093Z",
+                          "count": 2,
+                          "rolledUp": true,
+                          "events": [
+                            {
+                              "id": "fr-comment-2026-16914",
+                              "kind": "comment_deadline",
+                              "when": "2026-10-19",
+                              "until": "2026-10-19",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Rescission of Rural Development's Construction and Repair Regulation",
+                              "summary": "Agriculture Department, Rural Business-Cooperative Service, Rural Housing Service (from lower in the map)",
+                              "url": "http://www.regulations.gov/commenton/RHS_FRDOC_0001-0631",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            }
+                          ]
+                        },
                         "children": [
                           {
                             "id": "gsa-103",
@@ -6561,7 +6649,28 @@
                               "sam": null,
                               "usgm": null
                             },
-                            "heat": null,
+                            "heat": {
+                              "asOf": "2026-09-20T16:51:46.093Z",
+                              "count": 1,
+                              "rolledUp": false,
+                              "events": [
+                                {
+                                  "id": "fr-comment-2026-16914",
+                                  "kind": "comment_deadline",
+                                  "when": "2026-10-19",
+                                  "until": "2026-10-19",
+                                  "filedAt": null,
+                                  "signedAt": null,
+                                  "title": "Rescission of Rural Development's Construction and Repair Regulation",
+                                  "summary": "Agriculture Department, Rural Business-Cooperative Service, Rural Housing Service",
+                                  "url": "http://www.regulations.gov/commenton/RHS_FRDOC_0001-0631",
+                                  "source": "Federal Register proposed rule (comments close)",
+                                  "sourceUrl": "https://www.federalregister.gov/",
+                                  "urgency": "upcoming",
+                                  "bill": null
+                                }
+                              ]
+                            },
                             "children": [],
                             "spending": {
                               "obligatedAmount": 55075978.87,
@@ -6603,7 +6712,28 @@
                               "sam": null,
                               "usgm": null
                             },
-                            "heat": null,
+                            "heat": {
+                              "asOf": "2026-09-20T16:51:46.093Z",
+                              "count": 1,
+                              "rolledUp": false,
+                              "events": [
+                                {
+                                  "id": "fr-comment-2026-16914",
+                                  "kind": "comment_deadline",
+                                  "when": "2026-10-19",
+                                  "until": "2026-10-19",
+                                  "filedAt": null,
+                                  "signedAt": null,
+                                  "title": "Rescission of Rural Development's Construction and Repair Regulation",
+                                  "summary": "Agriculture Department, Rural Business-Cooperative Service, Rural Housing Service",
+                                  "url": "http://www.regulations.gov/commenton/RHS_FRDOC_0001-0631",
+                                  "source": "Federal Register proposed rule (comments close)",
+                                  "sourceUrl": "https://www.federalregister.gov/",
+                                  "urgency": "upcoming",
+                                  "bill": null
+                                }
+                              ]
+                            },
                             "children": [],
                             "spending": {
                               "obligatedAmount": 1683109019.67,
@@ -6943,8 +7073,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
-              "count": 13,
+              "asOf": "2026-09-20T16:51:46.093Z",
+              "count": 12,
               "rolledUp": true,
               "events": [
                 {
@@ -7064,8 +7194,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-19T16:32:30.697Z",
-                  "count": 13,
+                  "asOf": "2026-09-20T16:51:46.093Z",
+                  "count": 12,
                   "rolledUp": true,
                   "events": [
                     {
@@ -7185,8 +7315,8 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-19T16:32:30.697Z",
-                      "count": 13,
+                      "asOf": "2026-09-20T16:51:46.093Z",
+                      "count": 12,
                       "rolledUp": true,
                       "events": [
                         {
@@ -7306,8 +7436,8 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
-                          "count": 13,
+                          "asOf": "2026-09-20T16:51:46.093Z",
+                          "count": 12,
                           "rolledUp": true,
                           "events": [
                             {
@@ -7924,7 +8054,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-19T16:32:30.697Z",
+                              "asOf": "2026-09-20T16:51:46.093Z",
                               "count": 1,
                               "rolledUp": true,
                               "events": [
@@ -8005,7 +8135,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-09-19T16:32:30.697Z",
+                                  "asOf": "2026-09-20T16:51:46.093Z",
                                   "count": 1,
                                   "rolledUp": true,
                                   "events": [
@@ -8113,7 +8243,7 @@
                                       "usgm": null
                                     },
                                     "heat": {
-                                      "asOf": "2026-09-19T16:32:30.697Z",
+                                      "asOf": "2026-09-20T16:51:46.093Z",
                                       "count": 1,
                                       "rolledUp": false,
                                       "events": [
@@ -8550,7 +8680,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-19T16:32:30.697Z",
+                              "asOf": "2026-09-20T16:51:46.093Z",
                               "count": 5,
                               "rolledUp": true,
                               "events": [
@@ -8701,7 +8831,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-09-19T16:32:30.697Z",
+                                  "asOf": "2026-09-20T16:51:46.093Z",
                                   "count": 5,
                                   "rolledUp": false,
                                   "events": [
@@ -9020,8 +9150,8 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-19T16:32:30.697Z",
-                              "count": 7,
+                              "asOf": "2026-09-20T16:51:46.093Z",
+                              "count": 6,
                               "rolledUp": true,
                               "events": [
                                 {
@@ -9111,8 +9241,8 @@
                                   "usgm": null
                                 },
                                 "heat": {
-                                  "asOf": "2026-09-19T16:32:30.697Z",
-                                  "count": 7,
+                                  "asOf": "2026-09-20T16:51:46.093Z",
+                                  "count": 6,
                                   "rolledUp": true,
                                   "events": [
                                     {
@@ -9304,8 +9434,8 @@
                                       }
                                     },
                                     "heat": {
-                                      "asOf": "2026-09-19T16:32:30.697Z",
-                                      "count": 7,
+                                      "asOf": "2026-09-20T16:51:46.093Z",
+                                      "count": 6,
                                       "rolledUp": false,
                                       "events": [
                                         {
@@ -9395,21 +9525,6 @@
                                           "url": "https://public-inspection.federalregister.gov/2026-19258.pdf",
                                           "source": "Federal Register public inspection (PDF)",
                                           "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                                          "urgency": "upcoming",
-                                          "bill": null
-                                        },
-                                        {
-                                          "id": "fr-comment-2026-14694",
-                                          "kind": "comment_deadline",
-                                          "when": "2026-09-19",
-                                          "until": "2026-09-19",
-                                          "filedAt": null,
-                                          "signedAt": null,
-                                          "title": "Magnuson-Stevens Act Provisions; Fisheries Off West Coast States; Pacific Coast Groundfish Fishery; Pacific Coast Groundfish Fishery Management Plan; Amendment 38; 2027-28 Biennial Specifications and Management Measures",
-                                          "summary": "Commerce Department, National Oceanic and Atmospheric Administration",
-                                          "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1354-0004",
-                                          "source": "Federal Register proposed rule (comments close)",
-                                          "sourceUrl": "https://www.federalregister.gov/",
                                           "urgency": "upcoming",
                                           "bill": null
                                         }
@@ -23619,7 +23734,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 6,
               "rolledUp": true,
               "events": [
@@ -23710,7 +23825,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-19T16:32:30.697Z",
+                  "asOf": "2026-09-20T16:51:46.093Z",
                   "count": 6,
                   "rolledUp": true,
                   "events": [
@@ -26346,7 +26461,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-19T16:32:30.697Z",
+                      "asOf": "2026-09-20T16:51:46.093Z",
                       "count": 6,
                       "rolledUp": false,
                       "events": [
@@ -26693,7 +26808,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 20,
               "rolledUp": false,
               "events": [
@@ -26755,7 +26870,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-19T16:32:30.697Z",
+                  "asOf": "2026-09-20T16:51:46.093Z",
                   "count": 18,
                   "rolledUp": true,
                   "events": [
@@ -26901,7 +27016,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-19T16:32:30.697Z",
+                      "asOf": "2026-09-20T16:51:46.093Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -27252,7 +27367,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-19T16:32:30.697Z",
+                      "asOf": "2026-09-20T16:51:46.093Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -27464,7 +27579,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-19T16:32:30.697Z",
+                      "asOf": "2026-09-20T16:51:46.093Z",
                       "count": 3,
                       "rolledUp": false,
                       "events": [
@@ -28450,7 +28565,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-19T16:32:30.697Z",
+                      "asOf": "2026-09-20T16:51:46.093Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -28563,7 +28678,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-19T16:32:30.697Z",
+                      "asOf": "2026-09-20T16:51:46.093Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -28735,7 +28850,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-19T16:32:30.697Z",
+                      "asOf": "2026-09-20T16:51:46.093Z",
                       "count": 9,
                       "rolledUp": false,
                       "events": [
@@ -29127,10 +29242,55 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
-              "count": 4,
+              "asOf": "2026-09-20T16:51:46.093Z",
+              "count": 7,
               "rolledUp": true,
               "events": [
+                {
+                  "id": "fr-comment-2026-19059",
+                  "kind": "comment_deadline",
+                  "when": "2026-10-19",
+                  "until": "2026-10-19",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Drawbridge Operation Regulation; Connecticut River, East Haddam, CT",
+                  "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+                  "url": "http://www.regulations.gov/commenton/USCG-2026-0960-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-19058",
+                  "kind": "comment_deadline",
+                  "when": "2026-10-19",
+                  "until": "2026-10-19",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Drawbridge Operation Regulation; Niantic River, Between Waterford and Niantic, CT",
+                  "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+                  "url": "http://www.regulations.gov/commenton/USCG-2026-0961-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-19057",
+                  "kind": "comment_deadline",
+                  "when": "2026-10-19",
+                  "until": "2026-10-19",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Drawbridge Operation Regulation; Mystic River, Mystic, CT",
+                  "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+                  "url": "http://www.regulations.gov/commenton/USCG-2026-0962-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-17483",
                   "kind": "comment_deadline",
@@ -29143,51 +29303,6 @@
                   "url": "http://www.regulations.gov/commenton/USCG-2026-0758-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-17419",
-                  "kind": "comment_deadline",
-                  "when": "2026-09-25",
-                  "until": "2026-09-25",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Anchorage Regulation; San Juan Bay, San Juan, PR",
-                  "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/USCG-2026-0035-0001",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-pi-2026-19254",
-                  "kind": "public_inspection",
-                  "when": "2026-09-21",
-                  "until": null,
-                  "filedAt": "2026-09-18T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Great Lakes Pilotage Rates: 2027 Annual Review and Revisions to Methodology",
-                  "summary": "Coast Guard (from lower in the map)",
-                  "url": "https://public-inspection.federalregister.gov/2026-19254.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-pi-2026-19270",
-                  "kind": "public_inspection",
-                  "when": "2026-09-21",
-                  "until": null,
-                  "filedAt": "2026-09-18T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Safety Zone: Illinois River, Morris, IL",
-                  "summary": "Coast Guard (from lower in the map)",
-                  "url": "https://public-inspection.federalregister.gov/2026-19270.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                   "urgency": "upcoming",
                   "bill": null
                 }
@@ -29218,10 +29333,55 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-19T16:32:30.697Z",
-                  "count": 4,
+                  "asOf": "2026-09-20T16:51:46.093Z",
+                  "count": 7,
                   "rolledUp": true,
                   "events": [
+                    {
+                      "id": "fr-comment-2026-19059",
+                      "kind": "comment_deadline",
+                      "when": "2026-10-19",
+                      "until": "2026-10-19",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Drawbridge Operation Regulation; Connecticut River, East Haddam, CT",
+                      "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/USCG-2026-0960-0001",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "fr-comment-2026-19058",
+                      "kind": "comment_deadline",
+                      "when": "2026-10-19",
+                      "until": "2026-10-19",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Drawbridge Operation Regulation; Niantic River, Between Waterford and Niantic, CT",
+                      "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/USCG-2026-0961-0001",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "fr-comment-2026-19057",
+                      "kind": "comment_deadline",
+                      "when": "2026-10-19",
+                      "until": "2026-10-19",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Drawbridge Operation Regulation; Mystic River, Mystic, CT",
+                      "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/USCG-2026-0962-0001",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
                     {
                       "id": "fr-comment-2026-17483",
                       "kind": "comment_deadline",
@@ -29234,51 +29394,6 @@
                       "url": "http://www.regulations.gov/commenton/USCG-2026-0758-0001",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-17419",
-                      "kind": "comment_deadline",
-                      "when": "2026-09-25",
-                      "until": "2026-09-25",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Anchorage Regulation; San Juan Bay, San Juan, PR",
-                      "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/USCG-2026-0035-0001",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-pi-2026-19254",
-                      "kind": "public_inspection",
-                      "when": "2026-09-21",
-                      "until": null,
-                      "filedAt": "2026-09-18T08:45:00.000-04:00",
-                      "signedAt": null,
-                      "title": "Great Lakes Pilotage Rates: 2027 Annual Review and Revisions to Methodology",
-                      "summary": "Coast Guard (from lower in the map)",
-                      "url": "https://public-inspection.federalregister.gov/2026-19254.pdf",
-                      "source": "Federal Register public inspection (PDF)",
-                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-pi-2026-19270",
-                      "kind": "public_inspection",
-                      "when": "2026-09-21",
-                      "until": null,
-                      "filedAt": "2026-09-18T08:45:00.000-04:00",
-                      "signedAt": null,
-                      "title": "Safety Zone: Illinois River, Morris, IL",
-                      "summary": "Coast Guard (from lower in the map)",
-                      "url": "https://public-inspection.federalregister.gov/2026-19270.pdf",
-                      "source": "Federal Register public inspection (PDF)",
-                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                       "urgency": "upcoming",
                       "bill": null
                     }
@@ -29309,10 +29424,55 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-19T16:32:30.697Z",
-                      "count": 4,
+                      "asOf": "2026-09-20T16:51:46.093Z",
+                      "count": 7,
                       "rolledUp": true,
                       "events": [
+                        {
+                          "id": "fr-comment-2026-19059",
+                          "kind": "comment_deadline",
+                          "when": "2026-10-19",
+                          "until": "2026-10-19",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Drawbridge Operation Regulation; Connecticut River, East Haddam, CT",
+                          "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+                          "url": "http://www.regulations.gov/commenton/USCG-2026-0960-0001",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
+                        {
+                          "id": "fr-comment-2026-19058",
+                          "kind": "comment_deadline",
+                          "when": "2026-10-19",
+                          "until": "2026-10-19",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Drawbridge Operation Regulation; Niantic River, Between Waterford and Niantic, CT",
+                          "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+                          "url": "http://www.regulations.gov/commenton/USCG-2026-0961-0001",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
+                        {
+                          "id": "fr-comment-2026-19057",
+                          "kind": "comment_deadline",
+                          "when": "2026-10-19",
+                          "until": "2026-10-19",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Drawbridge Operation Regulation; Mystic River, Mystic, CT",
+                          "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+                          "url": "http://www.regulations.gov/commenton/USCG-2026-0962-0001",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
                         {
                           "id": "fr-comment-2026-17483",
                           "kind": "comment_deadline",
@@ -29325,51 +29485,6 @@
                           "url": "http://www.regulations.gov/commenton/USCG-2026-0758-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-comment-2026-17419",
-                          "kind": "comment_deadline",
-                          "when": "2026-09-25",
-                          "until": "2026-09-25",
-                          "filedAt": null,
-                          "signedAt": null,
-                          "title": "Anchorage Regulation; San Juan Bay, San Juan, PR",
-                          "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/USCG-2026-0035-0001",
-                          "source": "Federal Register proposed rule (comments close)",
-                          "sourceUrl": "https://www.federalregister.gov/",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-pi-2026-19254",
-                          "kind": "public_inspection",
-                          "when": "2026-09-21",
-                          "until": null,
-                          "filedAt": "2026-09-18T08:45:00.000-04:00",
-                          "signedAt": null,
-                          "title": "Great Lakes Pilotage Rates: 2027 Annual Review and Revisions to Methodology",
-                          "summary": "Coast Guard (from lower in the map)",
-                          "url": "https://public-inspection.federalregister.gov/2026-19254.pdf",
-                          "source": "Federal Register public inspection (PDF)",
-                          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-pi-2026-19270",
-                          "kind": "public_inspection",
-                          "when": "2026-09-21",
-                          "until": null,
-                          "filedAt": "2026-09-18T08:45:00.000-04:00",
-                          "signedAt": null,
-                          "title": "Safety Zone: Illinois River, Morris, IL",
-                          "summary": "Coast Guard (from lower in the map)",
-                          "url": "https://public-inspection.federalregister.gov/2026-19270.pdf",
-                          "source": "Federal Register public inspection (PDF)",
-                          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                           "urgency": "upcoming",
                           "bill": null
                         }
@@ -30807,10 +30922,55 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
-                          "count": 4,
+                          "asOf": "2026-09-20T16:51:46.093Z",
+                          "count": 7,
                           "rolledUp": false,
                           "events": [
+                            {
+                              "id": "fr-comment-2026-19059",
+                              "kind": "comment_deadline",
+                              "when": "2026-10-19",
+                              "until": "2026-10-19",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Drawbridge Operation Regulation; Connecticut River, East Haddam, CT",
+                              "summary": "Homeland Security Department, Coast Guard",
+                              "url": "http://www.regulations.gov/commenton/USCG-2026-0960-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-19058",
+                              "kind": "comment_deadline",
+                              "when": "2026-10-19",
+                              "until": "2026-10-19",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Drawbridge Operation Regulation; Niantic River, Between Waterford and Niantic, CT",
+                              "summary": "Homeland Security Department, Coast Guard",
+                              "url": "http://www.regulations.gov/commenton/USCG-2026-0961-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-19057",
+                              "kind": "comment_deadline",
+                              "when": "2026-10-19",
+                              "until": "2026-10-19",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Drawbridge Operation Regulation; Mystic River, Mystic, CT",
+                              "summary": "Homeland Security Department, Coast Guard",
+                              "url": "http://www.regulations.gov/commenton/USCG-2026-0962-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
                             {
                               "id": "fr-comment-2026-17483",
                               "kind": "comment_deadline",
@@ -31518,7 +31678,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -33267,7 +33427,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 5,
               "rolledUp": true,
               "events": [
@@ -33409,7 +33569,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-19T16:32:30.697Z",
+                  "asOf": "2026-09-20T16:51:46.093Z",
                   "count": 5,
                   "rolledUp": true,
                   "events": [
@@ -33515,7 +33675,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-19T16:32:30.697Z",
+                      "asOf": "2026-09-20T16:51:46.093Z",
                       "count": 5,
                       "rolledUp": true,
                       "events": [
@@ -34396,7 +34556,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -35000,7 +35160,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -35082,7 +35242,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 3,
                           "rolledUp": false,
                           "events": [
@@ -35561,7 +35721,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 10,
               "rolledUp": true,
               "events": [
@@ -35682,7 +35842,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-19T16:32:30.697Z",
+                  "asOf": "2026-09-20T16:51:46.093Z",
                   "count": 10,
                   "rolledUp": true,
                   "events": [
@@ -35803,7 +35963,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-19T16:32:30.697Z",
+                      "asOf": "2026-09-20T16:51:46.093Z",
                       "count": 10,
                       "rolledUp": true,
                       "events": [
@@ -36196,7 +36356,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -36468,7 +36628,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 3,
                           "rolledUp": false,
                           "events": [
@@ -36821,7 +36981,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 3,
                           "rolledUp": false,
                           "events": [
@@ -37418,7 +37578,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -37564,7 +37724,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -37788,7 +37948,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -40123,7 +40283,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 4,
               "rolledUp": true,
               "events": [
@@ -40199,7 +40359,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-19T16:32:30.697Z",
+                  "asOf": "2026-09-20T16:51:46.093Z",
                   "count": 4,
                   "rolledUp": true,
                   "events": [
@@ -40275,7 +40435,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-19T16:32:30.697Z",
+                      "asOf": "2026-09-20T16:51:46.093Z",
                       "count": 4,
                       "rolledUp": true,
                       "events": [
@@ -40351,7 +40511,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 2,
                           "rolledUp": true,
                           "events": [
@@ -40494,7 +40654,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-09-19T16:32:30.697Z",
+                              "asOf": "2026-09-20T16:51:46.093Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -40597,7 +40757,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-09-19T16:32:30.697Z",
+                              "asOf": "2026-09-20T16:51:46.093Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -41015,7 +41175,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 2,
                           "rolledUp": true,
                           "events": [
@@ -41157,7 +41317,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-09-19T16:32:30.697Z",
+                              "asOf": "2026-09-20T16:51:46.093Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -41252,7 +41412,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-09-19T16:32:30.697Z",
+                              "asOf": "2026-09-20T16:51:46.093Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -42364,7 +42524,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 13,
               "rolledUp": true,
               "events": [
@@ -42511,7 +42671,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-19T16:32:30.697Z",
+                  "asOf": "2026-09-20T16:51:46.093Z",
                   "count": 13,
                   "rolledUp": true,
                   "events": [
@@ -42684,7 +42844,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-19T16:32:30.697Z",
+                      "asOf": "2026-09-20T16:51:46.093Z",
                       "count": 13,
                       "rolledUp": true,
                       "events": [
@@ -42956,7 +43116,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 4,
                           "rolledUp": true,
                           "events": [
@@ -43074,7 +43234,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-09-19T16:32:30.697Z",
+                              "asOf": "2026-09-20T16:51:46.093Z",
                               "count": 4,
                               "rolledUp": false,
                               "events": [
@@ -43279,7 +43439,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 3,
                           "rolledUp": false,
                           "events": [
@@ -43816,7 +43976,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -43914,7 +44074,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-19T16:32:30.697Z",
+                              "asOf": "2026-09-20T16:51:46.093Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -44330,7 +44490,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 5,
                           "rolledUp": false,
                           "events": [
@@ -44794,65 +44954,65 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
-              "count": 40,
+              "asOf": "2026-09-20T16:51:46.093Z",
+              "count": 45,
               "rolledUp": true,
               "events": [
                 {
-                  "id": "fr-comment-2026-17867",
+                  "id": "fr-comment-2026-19094",
                   "kind": "comment_deadline",
-                  "when": "2026-10-16",
-                  "until": "2026-10-16",
+                  "when": "2026-10-19",
+                  "until": "2026-10-19",
                   "filedAt": null,
                   "signedAt": null,
-                  "title": "Amendment of Class D Airspace and Class E Airspace Over New Haven, CT",
+                  "title": "Airworthiness Directives; Pratt & Whitney Engines",
                   "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FAA-2026-9967-0001",
+                  "url": "http://www.regulations.gov/commenton/FAA-2026-8816-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
                 },
                 {
-                  "id": "fr-comment-2026-17840",
+                  "id": "fr-comment-2026-18145",
                   "kind": "comment_deadline",
-                  "when": "2026-10-16",
-                  "until": "2026-10-16",
+                  "when": "2026-10-19",
+                  "until": "2026-10-19",
                   "filedAt": null,
                   "signedAt": null,
-                  "title": "Airworthiness Directives; Airbus Helicopters",
+                  "title": "Establishment of Class E Airspace Over Lexington, VA",
                   "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FAA-2026-8790-0001",
+                  "url": "http://www.regulations.gov/commenton/FAA-2026-10544-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
                 },
                 {
-                  "id": "fr-comment-2026-17661",
+                  "id": "fr-comment-2026-18144",
                   "kind": "comment_deadline",
-                  "when": "2026-10-13",
-                  "until": "2026-10-13",
+                  "when": "2026-10-19",
+                  "until": "2026-10-19",
                   "filedAt": null,
                   "signedAt": null,
-                  "title": "Special Conditions: Skyryse, Robinson Helicopter Company Model R66 Helicopter; Control Margin Awareness",
+                  "title": "Establishment of Class E Airspace Over Hardy, VA",
                   "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FAA-2026-1585-0001",
+                  "url": "http://www.regulations.gov/commenton/FAA-2026-10543-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
                 },
                 {
-                  "id": "fr-comment-2026-17609",
+                  "id": "fr-comment-2026-18072",
                   "kind": "comment_deadline",
-                  "when": "2026-10-13",
-                  "until": "2026-10-13",
+                  "when": "2026-10-19",
+                  "until": "2026-10-19",
                   "filedAt": null,
                   "signedAt": null,
-                  "title": "Airworthiness Directives; Embraer S.A. Airplanes",
+                  "title": "Airworthiness Directives; Airbus SAS Airplanes",
                   "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FAA-2026-8791-0001",
+                  "url": "http://www.regulations.gov/commenton/FAA-2026-8795-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
@@ -44915,65 +45075,65 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-19T16:32:30.697Z",
-                  "count": 40,
+                  "asOf": "2026-09-20T16:51:46.093Z",
+                  "count": 45,
                   "rolledUp": true,
                   "events": [
                     {
-                      "id": "fr-comment-2026-17867",
+                      "id": "fr-comment-2026-19094",
                       "kind": "comment_deadline",
-                      "when": "2026-10-16",
-                      "until": "2026-10-16",
+                      "when": "2026-10-19",
+                      "until": "2026-10-19",
                       "filedAt": null,
                       "signedAt": null,
-                      "title": "Amendment of Class D Airspace and Class E Airspace Over New Haven, CT",
+                      "title": "Airworthiness Directives; Pratt & Whitney Engines",
                       "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAA-2026-9967-0001",
+                      "url": "http://www.regulations.gov/commenton/FAA-2026-8816-0001",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
                       "bill": null
                     },
                     {
-                      "id": "fr-comment-2026-17840",
+                      "id": "fr-comment-2026-18145",
                       "kind": "comment_deadline",
-                      "when": "2026-10-16",
-                      "until": "2026-10-16",
+                      "when": "2026-10-19",
+                      "until": "2026-10-19",
                       "filedAt": null,
                       "signedAt": null,
-                      "title": "Airworthiness Directives; Airbus Helicopters",
+                      "title": "Establishment of Class E Airspace Over Lexington, VA",
                       "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAA-2026-8790-0001",
+                      "url": "http://www.regulations.gov/commenton/FAA-2026-10544-0001",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
                       "bill": null
                     },
                     {
-                      "id": "fr-comment-2026-17661",
+                      "id": "fr-comment-2026-18144",
                       "kind": "comment_deadline",
-                      "when": "2026-10-13",
-                      "until": "2026-10-13",
+                      "when": "2026-10-19",
+                      "until": "2026-10-19",
                       "filedAt": null,
                       "signedAt": null,
-                      "title": "Special Conditions: Skyryse, Robinson Helicopter Company Model R66 Helicopter; Control Margin Awareness",
+                      "title": "Establishment of Class E Airspace Over Hardy, VA",
                       "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAA-2026-1585-0001",
+                      "url": "http://www.regulations.gov/commenton/FAA-2026-10543-0001",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
                       "bill": null
                     },
                     {
-                      "id": "fr-comment-2026-17609",
+                      "id": "fr-comment-2026-18072",
                       "kind": "comment_deadline",
-                      "when": "2026-10-13",
-                      "until": "2026-10-13",
+                      "when": "2026-10-19",
+                      "until": "2026-10-19",
                       "filedAt": null,
                       "signedAt": null,
-                      "title": "Airworthiness Directives; Embraer S.A. Airplanes",
+                      "title": "Airworthiness Directives; Airbus SAS Airplanes",
                       "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAA-2026-8791-0001",
+                      "url": "http://www.regulations.gov/commenton/FAA-2026-8795-0001",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
@@ -45036,65 +45196,65 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-19T16:32:30.697Z",
-                      "count": 39,
+                      "asOf": "2026-09-20T16:51:46.093Z",
+                      "count": 44,
                       "rolledUp": true,
                       "events": [
                         {
-                          "id": "fr-comment-2026-17867",
+                          "id": "fr-comment-2026-19094",
                           "kind": "comment_deadline",
-                          "when": "2026-10-16",
-                          "until": "2026-10-16",
+                          "when": "2026-10-19",
+                          "until": "2026-10-19",
                           "filedAt": null,
                           "signedAt": null,
-                          "title": "Amendment of Class D Airspace and Class E Airspace Over New Haven, CT",
+                          "title": "Airworthiness Directives; Pratt & Whitney Engines",
                           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/FAA-2026-9967-0001",
+                          "url": "http://www.regulations.gov/commenton/FAA-2026-8816-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
                           "bill": null
                         },
                         {
-                          "id": "fr-comment-2026-17840",
+                          "id": "fr-comment-2026-18145",
                           "kind": "comment_deadline",
-                          "when": "2026-10-16",
-                          "until": "2026-10-16",
+                          "when": "2026-10-19",
+                          "until": "2026-10-19",
                           "filedAt": null,
                           "signedAt": null,
-                          "title": "Airworthiness Directives; Airbus Helicopters",
+                          "title": "Establishment of Class E Airspace Over Lexington, VA",
                           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/FAA-2026-8790-0001",
+                          "url": "http://www.regulations.gov/commenton/FAA-2026-10544-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
                           "bill": null
                         },
                         {
-                          "id": "fr-comment-2026-17661",
+                          "id": "fr-comment-2026-18144",
                           "kind": "comment_deadline",
-                          "when": "2026-10-13",
-                          "until": "2026-10-13",
+                          "when": "2026-10-19",
+                          "until": "2026-10-19",
                           "filedAt": null,
                           "signedAt": null,
-                          "title": "Special Conditions: Skyryse, Robinson Helicopter Company Model R66 Helicopter; Control Margin Awareness",
+                          "title": "Establishment of Class E Airspace Over Hardy, VA",
                           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/FAA-2026-1585-0001",
+                          "url": "http://www.regulations.gov/commenton/FAA-2026-10543-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
                           "bill": null
                         },
                         {
-                          "id": "fr-comment-2026-17609",
+                          "id": "fr-comment-2026-18072",
                           "kind": "comment_deadline",
-                          "when": "2026-10-13",
-                          "until": "2026-10-13",
+                          "when": "2026-10-19",
+                          "until": "2026-10-19",
                           "filedAt": null,
                           "signedAt": null,
-                          "title": "Airworthiness Directives; Embraer S.A. Airplanes",
+                          "title": "Airworthiness Directives; Airbus SAS Airplanes",
                           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/FAA-2026-8791-0001",
+                          "url": "http://www.regulations.gov/commenton/FAA-2026-8795-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
@@ -45488,7 +45648,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -45586,7 +45746,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -45786,7 +45946,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -46096,7 +46256,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
+                          "asOf": "2026-09-20T16:51:46.093Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -46278,10 +46438,85 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-19T16:32:30.697Z",
-                          "count": 33,
+                          "asOf": "2026-09-20T16:51:46.093Z",
+                          "count": 38,
                           "rolledUp": false,
                           "events": [
+                            {
+                              "id": "fr-comment-2026-19094",
+                              "kind": "comment_deadline",
+                              "when": "2026-10-19",
+                              "until": "2026-10-19",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Airworthiness Directives; Pratt & Whitney Engines",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-8816-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-18145",
+                              "kind": "comment_deadline",
+                              "when": "2026-10-19",
+                              "until": "2026-10-19",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Establishment of Class E Airspace Over Lexington, VA",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-10544-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-18144",
+                              "kind": "comment_deadline",
+                              "when": "2026-10-19",
+                              "until": "2026-10-19",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Establishment of Class E Airspace Over Hardy, VA",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-10543-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-18072",
+                              "kind": "comment_deadline",
+                              "when": "2026-10-19",
+                              "until": "2026-10-19",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Airworthiness Directives; Airbus SAS Airplanes",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-8795-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-17967",
+                              "kind": "comment_deadline",
+                              "when": "2026-10-19",
+                              "until": "2026-10-19",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Airworthiness Directives; Airbus Canada Limited Partnership (Type Certificate Previously Held by C Series Aircraft Limited Partnership (CSALP); Bombardier, Inc.) Airplanes",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-8794-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
                             {
                               "id": "fr-comment-2026-17867",
                               "kind": "comment_deadline",
@@ -47159,7 +47394,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-19T16:32:30.697Z",
+                      "asOf": "2026-09-20T16:51:46.093Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -49184,7 +49419,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-09-19T16:32:30.697Z",
+          "asOf": "2026-09-20T16:51:46.093Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -49793,7 +50028,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -50894,10 +51129,85 @@
           "note": "Product door: Crosswalk Independent Federal Agencies + major non-Cabinet agencies + government corporations shelf. Constitutionally many report through the Executive; shown separately for citizen clarity."
         },
         "heat": {
-          "asOf": "2026-09-19T16:32:30.697Z",
-          "count": 62,
+          "asOf": "2026-09-20T16:51:46.093Z",
+          "count": 71,
           "rolledUp": true,
           "events": [
+            {
+              "id": "fr-comment-2026-19162",
+              "kind": "comment_deadline",
+              "when": "2026-10-19",
+              "until": "2026-10-19",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Federal Acquisition Regulation: Revolutionary FAR Overhaul Parts 8, 12, 13, 15, 38, 44, and 51",
+              "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1913",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-19160",
+              "kind": "comment_deadline",
+              "when": "2026-10-19",
+              "until": "2026-10-19",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 16, 17, and 35",
+              "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1914",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-19159",
+              "kind": "comment_deadline",
+              "when": "2026-10-19",
+              "until": "2026-10-19",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 9, 27, and 47",
+              "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1911",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-19158",
+              "kind": "comment_deadline",
+              "when": "2026-10-19",
+              "until": "2026-10-19",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 14, 28, 36, and 52",
+              "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1912",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-18134",
+              "kind": "comment_deadline",
+              "when": "2026-10-19",
+              "until": "2026-10-19",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Updates to the National Pollutant Discharge Elimination System Definitions and Exclusions",
+              "summary": "Environmental Protection Agency (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/EPA-HQ-OW-2026-6965-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
             {
               "id": "fr-comment-2026-18854",
               "kind": "comment_deadline",
@@ -50908,81 +51218,6 @@
               "title": "Petition for Rulemaking of Robert Michael Vanleeuwen",
               "summary": "Federal Trade Commission (from lower in the map)",
               "url": "http://www.regulations.gov/commenton/FTC-2026-1321-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-18759",
-              "kind": "comment_deadline",
-              "when": "2026-10-14",
-              "until": "2026-10-14",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Approval and Promulgation of State Air Quality Plans for Designated Facilities and Pollutants; District of Columbia; Negative Declaration for Existing Other Solid Waste Incinerators",
-              "summary": "Environmental Protection Agency (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/EPA-R03-OAR-2026-4522-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-18755",
-              "kind": "comment_deadline",
-              "when": "2026-10-14",
-              "until": "2026-10-14",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Clean Data Determination; 1997 8-Hour Ozone Standards; California; Sacramento Metro Area",
-              "summary": "Environmental Protection Agency (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/EPA-R09-OAR-2026-4885-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-18750",
-              "kind": "comment_deadline",
-              "when": "2026-10-14",
-              "until": "2026-10-14",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Approval and Promulgation of State Air Quality Plans for Designated Facilities and Pollutants; Maryland; Negative Declaration for Existing Other Solid Waste Incinerators",
-              "summary": "Environmental Protection Agency (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/EPA-R03-OAR-2026-4225-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-16590",
-              "kind": "comment_deadline",
-              "when": "2026-10-13",
-              "until": "2026-10-13",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "FCC To Review E-Rate Program To Ensure Congress's Vision",
-              "summary": "Federal Communications Commission (from lower in the map)",
-              "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-14/pdf/2026-16590.pdf",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-16454",
-              "kind": "comment_deadline",
-              "when": "2026-10-13",
-              "until": "2026-10-13",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Community Reinvestment Act Regulations",
-              "summary": "Treasury Department, Comptroller of the Currency, Federal Deposit Insurance Corporation (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/OCC-2026-0694-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
@@ -52238,7 +52473,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 7,
               "rolledUp": false,
               "events": [
@@ -53551,7 +53786,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -53972,7 +54207,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -54034,7 +54269,7 @@
               "note": "Product shelf: GSE / government corporation entities lifted from Crosswalk Industry bucket."
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 7,
               "rolledUp": true,
               "events": [
@@ -54338,7 +54573,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-09-19T16:32:30.697Z",
+                  "asOf": "2026-09-20T16:51:46.093Z",
                   "count": 1,
                   "rolledUp": false,
                   "events": [
@@ -54682,7 +54917,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-09-19T16:32:30.697Z",
+                  "asOf": "2026-09-20T16:51:46.093Z",
                   "count": 5,
                   "rolledUp": false,
                   "events": [
@@ -55826,7 +56061,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-09-19T16:32:30.697Z",
+                  "asOf": "2026-09-20T16:51:46.093Z",
                   "count": 1,
                   "rolledUp": false,
                   "events": [
@@ -56933,7 +57168,73 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": null,
+            "heat": {
+              "asOf": "2026-09-20T16:51:46.093Z",
+              "count": 4,
+              "rolledUp": false,
+              "events": [
+                {
+                  "id": "fr-comment-2026-19162",
+                  "kind": "comment_deadline",
+                  "when": "2026-10-19",
+                  "until": "2026-10-19",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Federal Acquisition Regulation: Revolutionary FAR Overhaul Parts 8, 12, 13, 15, 38, 44, and 51",
+                  "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
+                  "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1913",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-19160",
+                  "kind": "comment_deadline",
+                  "when": "2026-10-19",
+                  "until": "2026-10-19",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 16, 17, and 35",
+                  "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
+                  "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1914",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-19159",
+                  "kind": "comment_deadline",
+                  "when": "2026-10-19",
+                  "until": "2026-10-19",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 9, 27, and 47",
+                  "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
+                  "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1911",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-19158",
+                  "kind": "comment_deadline",
+                  "when": "2026-10-19",
+                  "until": "2026-10-19",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 14, 28, 36, and 52",
+                  "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
+                  "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1912",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                }
+              ]
+            },
             "children": [
               {
                 "id": "gsa-1019",
@@ -59064,7 +59365,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -59786,7 +60087,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -61845,7 +62146,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -62767,10 +63068,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
-              "count": 14,
+              "asOf": "2026-09-20T16:51:46.093Z",
+              "count": 15,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-18134",
+                  "kind": "comment_deadline",
+                  "when": "2026-10-19",
+                  "until": "2026-10-19",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Updates to the National Pollutant Discharge Elimination System Definitions and Exclusions",
+                  "summary": "Environmental Protection Agency",
+                  "url": "http://www.regulations.gov/commenton/EPA-HQ-OW-2026-6965-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-18759",
                   "kind": "comment_deadline",
@@ -63973,7 +64289,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -64344,10 +64660,70 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
-              "count": 1,
+              "asOf": "2026-09-20T16:51:46.093Z",
+              "count": 5,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-19162",
+                  "kind": "comment_deadline",
+                  "when": "2026-10-19",
+                  "until": "2026-10-19",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Federal Acquisition Regulation: Revolutionary FAR Overhaul Parts 8, 12, 13, 15, 38, 44, and 51",
+                  "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
+                  "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1913",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-19160",
+                  "kind": "comment_deadline",
+                  "when": "2026-10-19",
+                  "until": "2026-10-19",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 16, 17, and 35",
+                  "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
+                  "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1914",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-19159",
+                  "kind": "comment_deadline",
+                  "when": "2026-10-19",
+                  "until": "2026-10-19",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 9, 27, and 47",
+                  "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
+                  "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1911",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-19158",
+                  "kind": "comment_deadline",
+                  "when": "2026-10-19",
+                  "until": "2026-10-19",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 14, 28, 36, and 52",
+                  "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
+                  "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1912",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-pi-2026-19210",
                   "kind": "public_inspection",
@@ -65731,7 +66107,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 5,
               "rolledUp": false,
               "events": [
@@ -66292,7 +66668,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -67666,7 +68042,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -68133,7 +68509,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 11,
               "rolledUp": false,
               "events": [
@@ -68677,7 +69053,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -68896,7 +69272,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-19T16:32:30.697Z",
+              "asOf": "2026-09-20T16:51:46.093Z",
               "count": 1,
               "rolledUp": false,
               "events": [

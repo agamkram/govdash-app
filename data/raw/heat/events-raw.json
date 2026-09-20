@@ -1,9 +1,9 @@
 {
-  "fetchedAt": "2026-09-19T16:32:30.697Z",
+  "fetchedAt": "2026-09-20T16:51:46.093Z",
   "sources": {
     "senateFloor": {
       "ok": true,
-      "count": 2,
+      "count": 1,
       "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
     },
     "houseClerk": {
@@ -24,36 +24,36 @@
     "presidential": {
       "ok": true,
       "count": 14,
-      "since": "2026-09-05",
+      "since": "2026-09-06",
       "url": "https://www.federalregister.gov/presidential-documents"
     },
     "commentDeadlines": {
       "ok": true,
-      "count": 126,
-      "start": "2026-09-19",
-      "end": "2026-10-18",
+      "count": 140,
+      "start": "2026-09-20",
+      "end": "2026-10-19",
       "type": "PRORULE",
       "url": "https://www.federalregister.gov/"
     },
     "sunshine": {
       "ok": true,
       "count": 1,
-      "start": "2026-09-19",
-      "end": "2026-10-18",
+      "start": "2026-09-20",
+      "end": "2026-10-19",
       "url": "https://www.federalregister.gov/"
     },
     "senateHearings": {
       "ok": true,
-      "count": 18,
-      "start": "2026-09-19",
-      "end": "2026-10-18",
+      "count": 17,
+      "start": "2026-09-20",
+      "end": "2026-10-19",
       "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
     },
     "houseHearings": {
       "ok": true,
       "count": 1,
-      "start": "2026-09-19",
-      "end": "2026-10-18",
+      "start": "2026-09-20",
+      "end": "2026-10-19",
       "congress": 119,
       "calendarIds": 1,
       "skipped404": [],
@@ -62,25 +62,12 @@
     "scotus": {
       "ok": true,
       "count": 1,
-      "start": "2026-09-19",
-      "end": "2026-10-18",
+      "start": "2026-09-20",
+      "end": "2026-10-19",
       "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
     }
   },
   "events": [
-    {
-      "id": "senate-floor-2026-09-18T09:00:01-04:00",
-      "kind": "floor_session",
-      "chamber": "Senate",
-      "when": "2026-09-18T09:00:01-04:00",
-      "until": "2026-09-18T09:00:25-04:00",
-      "title": "Senate floor (recent)",
-      "summary": "Has adjourned",
-      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-      "source": "Senate.gov floor schedule XML",
-      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-      "urgency": "recent"
-    },
     {
       "id": "senate-next-2026-09-22T15:00:00-04:00",
       "kind": "floor_session",
@@ -101,7 +88,7 @@
       "when": "2026-09-21T14:30:00.000Z",
       "until": null,
       "title": "House next session",
-      "summary": "September 21st, 2026 at 10:30 AM",
+      "summary": "Tomorrow at 10:30 AM",
       "url": "https://clerk.house.gov/",
       "source": "Office of the Clerk, U.S. House",
       "sourceUrl": "https://clerk.house.gov/",
@@ -2472,6 +2459,178 @@
       "documentType": "Presidential Document"
     },
     {
+      "id": "fr-comment-2026-19162",
+      "kind": "comment_deadline",
+      "when": "2026-10-19",
+      "until": "2026-10-19",
+      "title": "Federal Acquisition Regulation: Revolutionary FAR Overhaul Parts 8, 12, 13, 15, 38, 44, and 51",
+      "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
+      "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1913",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/18/2026-19162/federal-acquisition-regulation-revolutionary-far-overhaul-parts-8-12-13-15-38-44-and-51",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-18/pdf/2026-19162.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Management and Budget Office",
+        "Federal Procurement Policy Office",
+        "Defense Department",
+        "General Services Administration",
+        "National Aeronautics and Space Administration"
+      ],
+      "documentNumber": "2026-19162",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-19160",
+      "kind": "comment_deadline",
+      "when": "2026-10-19",
+      "until": "2026-10-19",
+      "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 16, 17, and 35",
+      "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
+      "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1914",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/18/2026-19160/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-16-17-and",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-18/pdf/2026-19160.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Management and Budget Office",
+        "Federal Procurement Policy Office",
+        "Defense Department",
+        "General Services Administration",
+        "National Aeronautics and Space Administration"
+      ],
+      "documentNumber": "2026-19160",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-19159",
+      "kind": "comment_deadline",
+      "when": "2026-10-19",
+      "until": "2026-10-19",
+      "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 9, 27, and 47",
+      "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
+      "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1911",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/18/2026-19159/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-9-27-and",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-18/pdf/2026-19159.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Management and Budget Office",
+        "Federal Procurement Policy Office",
+        "Defense Department",
+        "General Services Administration",
+        "National Aeronautics and Space Administration"
+      ],
+      "documentNumber": "2026-19159",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-19158",
+      "kind": "comment_deadline",
+      "when": "2026-10-19",
+      "until": "2026-10-19",
+      "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 14, 28, 36, and 52",
+      "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
+      "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1912",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/18/2026-19158/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-14-28-36",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-18/pdf/2026-19158.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Management and Budget Office",
+        "Federal Procurement Policy Office",
+        "Defense Department",
+        "General Services Administration",
+        "National Aeronautics and Space Administration"
+      ],
+      "documentNumber": "2026-19158",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-19094",
+      "kind": "comment_deadline",
+      "when": "2026-10-19",
+      "until": "2026-10-19",
+      "title": "Airworthiness Directives; Pratt & Whitney Engines",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-8816-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/17/2026-19094/airworthiness-directives-pratt-and-whitney-engines",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-17/pdf/2026-19094.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-19094",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-19059",
+      "kind": "comment_deadline",
+      "when": "2026-10-19",
+      "until": "2026-10-19",
+      "title": "Drawbridge Operation Regulation; Connecticut River, East Haddam, CT",
+      "summary": "Homeland Security Department, Coast Guard",
+      "url": "http://www.regulations.gov/commenton/USCG-2026-0960-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/17/2026-19059/drawbridge-operation-regulation-connecticut-river-east-haddam-ct",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-17/pdf/2026-19059.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Homeland Security Department",
+        "Coast Guard"
+      ],
+      "documentNumber": "2026-19059",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-19058",
+      "kind": "comment_deadline",
+      "when": "2026-10-19",
+      "until": "2026-10-19",
+      "title": "Drawbridge Operation Regulation; Niantic River, Between Waterford and Niantic, CT",
+      "summary": "Homeland Security Department, Coast Guard",
+      "url": "http://www.regulations.gov/commenton/USCG-2026-0961-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/17/2026-19058/drawbridge-operation-regulation-niantic-river-between-waterford-and-niantic-ct",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-17/pdf/2026-19058.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Homeland Security Department",
+        "Coast Guard"
+      ],
+      "documentNumber": "2026-19058",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-19057",
+      "kind": "comment_deadline",
+      "when": "2026-10-19",
+      "until": "2026-10-19",
+      "title": "Drawbridge Operation Regulation; Mystic River, Mystic, CT",
+      "summary": "Homeland Security Department, Coast Guard",
+      "url": "http://www.regulations.gov/commenton/USCG-2026-0962-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/17/2026-19057/drawbridge-operation-regulation-mystic-river-mystic-ct",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-17/pdf/2026-19057.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Homeland Security Department",
+        "Coast Guard"
+      ],
+      "documentNumber": "2026-19057",
+      "documentType": "Proposed Rule"
+    },
+    {
       "id": "fr-comment-2026-18943",
       "kind": "comment_deadline",
       "when": "2026-09-29",
@@ -2804,6 +2963,85 @@
       "documentType": "Proposed Rule"
     },
     {
+      "id": "fr-comment-2026-18145",
+      "kind": "comment_deadline",
+      "when": "2026-10-19",
+      "until": "2026-10-19",
+      "title": "Establishment of Class E Airspace Over Lexington, VA",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-10544-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/04/2026-18145/establishment-of-class-e-airspace-over-lexington-va",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-04/pdf/2026-18145.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-18145",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-18144",
+      "kind": "comment_deadline",
+      "when": "2026-10-19",
+      "until": "2026-10-19",
+      "title": "Establishment of Class E Airspace Over Hardy, VA",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-10543-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/04/2026-18144/establishment-of-class-e-airspace-over-hardy-va",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-04/pdf/2026-18144.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-18144",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-18134",
+      "kind": "comment_deadline",
+      "when": "2026-10-19",
+      "until": "2026-10-19",
+      "title": "Updates to the National Pollutant Discharge Elimination System Definitions and Exclusions",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-HQ-OW-2026-6965-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/04/2026-18134/updates-to-the-national-pollutant-discharge-elimination-system-definitions-and-exclusions",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-04/pdf/2026-18134.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-18134",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-18072",
+      "kind": "comment_deadline",
+      "when": "2026-10-19",
+      "until": "2026-10-19",
+      "title": "Airworthiness Directives; Airbus SAS Airplanes",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-8795-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/03/2026-18072/airworthiness-directives-airbus-sas-airplanes",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-03/pdf/2026-18072.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-18072",
+      "documentType": "Proposed Rule"
+    },
+    {
       "id": "fr-comment-2026-18031",
       "kind": "comment_deadline",
       "when": "2026-10-05",
@@ -2840,6 +3078,26 @@
         "Federal Communications Commission"
       ],
       "documentNumber": "2026-18015",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-17967",
+      "kind": "comment_deadline",
+      "when": "2026-10-19",
+      "until": "2026-10-19",
+      "title": "Airworthiness Directives; Airbus Canada Limited Partnership (Type Certificate Previously Held by C Series Aircraft Limited Partnership (CSALP); Bombardier, Inc.) Airplanes",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-8794-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/02/2026-17967/airworthiness-directives-airbus-canada-limited-partnership-type-certificate-previously-held-by-c",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-02/pdf/2026-17967.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-17967",
       "documentType": "Proposed Rule"
     },
     {
@@ -3585,6 +3843,27 @@
       "documentType": "Proposed Rule"
     },
     {
+      "id": "fr-comment-2026-16914",
+      "kind": "comment_deadline",
+      "when": "2026-10-19",
+      "until": "2026-10-19",
+      "title": "Rescission of Rural Development's Construction and Repair Regulation",
+      "summary": "Agriculture Department, Rural Business-Cooperative Service, Rural Housing Service",
+      "url": "http://www.regulations.gov/commenton/RHS_FRDOC_0001-0631",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/19/2026-16914/rescission-of-rural-developments-construction-and-repair-regulation",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-19/pdf/2026-16914.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Agriculture Department",
+        "Rural Business-Cooperative Service",
+        "Rural Housing Service"
+      ],
+      "documentNumber": "2026-16914",
+      "documentType": "Proposed Rule"
+    },
+    {
       "id": "fr-comment-2026-16874",
       "kind": "comment_deadline",
       "when": "2026-10-05",
@@ -3622,6 +3901,25 @@
         "Federal Aviation Administration"
       ],
       "documentNumber": "2026-16804",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-16796",
+      "kind": "comment_deadline",
+      "when": "2026-10-19",
+      "until": "2026-10-19",
+      "title": "GENIUS Act Regulations on Payment Stablecoin Issuance, Offer, and Sale",
+      "summary": "Treasury Department",
+      "url": "http://www.regulations.gov/commenton/TREAS-DO-2026-0496-0003",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/18/2026-16796/genius-act-regulations-on-payment-stablecoin-issuance-offer-and-sale",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-18/pdf/2026-16796.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Treasury Department"
+      ],
+      "documentNumber": "2026-16796",
       "documentType": "Proposed Rule"
     },
     {
@@ -4834,26 +5132,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-14694",
-      "kind": "comment_deadline",
-      "when": "2026-09-19",
-      "until": "2026-09-19",
-      "title": "Magnuson-Stevens Act Provisions; Fisheries Off West Coast States; Pacific Coast Groundfish Fishery; Pacific Coast Groundfish Fishery Management Plan; Amendment 38; 2027-28 Biennial Specifications and Management Measures",
-      "summary": "Commerce Department, National Oceanic and Atmospheric Administration",
-      "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1354-0004",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/07/21/2026-14694/magnuson-stevens-act-provisions-fisheries-off-west-coast-states-pacific-coast-groundfish-fishery",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-07-21/pdf/2026-14694.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Commerce Department",
-        "National Oceanic and Atmospheric Administration"
-      ],
-      "documentNumber": "2026-14694",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-14679",
       "kind": "comment_deadline",
       "when": "2026-09-21",
@@ -5011,20 +5289,6 @@
       "urgency": "upcoming"
     },
     {
-      "id": "senate-hearing-338759",
-      "kind": "hearing",
-      "chamber": "Senate",
-      "committee": "Homeland Security and Governmental Affairs",
-      "when": "2026-09-23",
-      "until": null,
-      "title": "Hearings to examine to take sworn witness testimony.",
-      "summary": "Homeland Security and Governmental Affairs · Open Hearing · 10:00 AM · SD-342",
-      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-      "source": "Senate.gov committee hearings XML",
-      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-      "urgency": "upcoming"
-    },
-    {
       "id": "senate-hearing-338769",
       "kind": "hearing",
       "chamber": "Senate",
@@ -5143,7 +5407,7 @@
       "committee": "Armed Services",
       "when": "2026-09-24",
       "until": null,
-      "title": "Closed hearings to examine an update on the budget of the Department of Defense.",
+      "title": "To receive a closed briefing on an update on the budget of the Department of Defense.",
       "summary": "Armed Services · Closed Hearing · 09:30 AM · SVC-217",
       "url": "https://www.senate.gov/committees/hearings_meetings.htm",
       "source": "Senate.gov committee hearings XML",
