@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-20T16:51:46.093Z",
+  "fetchedAt": "2026-09-21T18:45:29.998Z",
   "sources": {
     "senateFloor": {
       "ok": true,
@@ -18,42 +18,42 @@
     },
     "publicInspection": {
       "ok": true,
-      "count": 79,
+      "count": 102,
       "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
     },
     "presidential": {
       "ok": true,
-      "count": 14,
-      "since": "2026-09-06",
+      "count": 18,
+      "since": "2026-09-07",
       "url": "https://www.federalregister.gov/presidential-documents"
     },
     "commentDeadlines": {
       "ok": true,
-      "count": 140,
-      "start": "2026-09-20",
-      "end": "2026-10-19",
+      "count": 146,
+      "start": "2026-09-21",
+      "end": "2026-10-20",
       "type": "PRORULE",
       "url": "https://www.federalregister.gov/"
     },
     "sunshine": {
       "ok": true,
-      "count": 1,
-      "start": "2026-09-20",
-      "end": "2026-10-19",
+      "count": 2,
+      "start": "2026-09-21",
+      "end": "2026-10-20",
       "url": "https://www.federalregister.gov/"
     },
     "senateHearings": {
       "ok": true,
       "count": 17,
-      "start": "2026-09-20",
-      "end": "2026-10-19",
+      "start": "2026-09-21",
+      "end": "2026-10-20",
       "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
     },
     "houseHearings": {
       "ok": true,
       "count": 1,
-      "start": "2026-09-20",
-      "end": "2026-10-19",
+      "start": "2026-09-21",
+      "end": "2026-10-20",
       "congress": 119,
       "calendarIds": 1,
       "skipped404": [],
@@ -62,8 +62,8 @@
     "scotus": {
       "ok": true,
       "count": 1,
-      "start": "2026-09-20",
-      "end": "2026-10-19",
+      "start": "2026-09-21",
+      "end": "2026-10-20",
       "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
     }
   },
@@ -82,13 +82,13 @@
       "urgency": "upcoming"
     },
     {
-      "id": "house-next-2026-09-21T14:30:00.000Z",
+      "id": "house-next-2026-09-24T18:30:00.000Z",
       "kind": "floor_session",
       "chamber": "House",
-      "when": "2026-09-21T14:30:00.000Z",
+      "when": "2026-09-24T18:30:00.000Z",
       "until": null,
       "title": "House next session",
-      "summary": "Tomorrow at 10:30 AM",
+      "summary": "September 24th, 2026 at 2:30 PM",
       "url": "https://clerk.house.gov/",
       "source": "Office of the Clerk, U.S. House",
       "sourceUrl": "https://clerk.house.gov/",
@@ -655,1446 +655,6 @@
       "bill": "H.R. 2846"
     },
     {
-      "id": "fr-pi-2026-19243",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-17T11:15:00.000-04:00",
-      "title": "Meetings; Sunshine Act",
-      "summary": "Securities and Exchange Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19243.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19243/meetings-sunshine-act",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19243.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Securities and Exchange Commission"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19243"
-    },
-    {
-      "id": "fr-pi-2026-19252",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-17T12:30:00.000-04:00",
-      "title": "Request for Information: Electromagnetic Fields, Radiofrequency Radiation, and Wireless Radiation Exposure",
-      "summary": "Health and Human Services Department",
-      "url": "https://public-inspection.federalregister.gov/2026-19252.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19252/request-for-information-electromagnetic-fields-radiofrequency-radiation-and-wireless-radiation",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19252.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Health and Human Services Department"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19252"
-    },
-    {
-      "id": "fr-pi-2026-19212",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Application: Wasatch Funds Trust and Wasatch Advisors LP",
-      "summary": "Securities and Exchange Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19212.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19212/application-wasatch-funds-trust-and-wasatch-advisors-lp",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19212.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Securities and Exchange Commission"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19212"
-    },
-    {
-      "id": "fr-pi-2026-19210",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Acquisition Regulation; GSA Voluntary FSS Domestic End Product Certification on GSA Federal Supply Schedule, etc.",
-      "summary": "General Services Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19210.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19210/agency-information-collection-activities-proposals-submissions-and-approvals-acquisition-regulation",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19210.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "General Services Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19210"
-    },
-    {
-      "id": "fr-pi-2026-19208",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
-      "summary": "National Mediation Board",
-      "url": "https://public-inspection.federalregister.gov/2026-19208.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19208/agency-information-collection-activities-proposals-submissions-and-approvals",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19208.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "National Mediation Board"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19208"
-    },
-    {
-      "id": "fr-pi-2026-19209",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
-      "summary": "National Mediation Board",
-      "url": "https://public-inspection.federalregister.gov/2026-19209.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19209/agency-information-collection-activities-proposals-submissions-and-approvals",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19209.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "National Mediation Board"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19209"
-    },
-    {
-      "id": "fr-pi-2026-19213",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Self-Regulatory Organizations; Proposed Rule Changes: Municipal Securities Rulemaking Board",
-      "summary": "Securities and Exchange Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19213.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19213/self-regulatory-organizations-proposed-rule-changes-municipal-securities-rulemaking-board",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19213.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Securities and Exchange Commission"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19213"
-    },
-    {
-      "id": "fr-pi-2026-19215",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Registration as a National Securities Exchange: North American Derivatives Exchange, Inc.",
-      "summary": "Securities and Exchange Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19215.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19215/registration-as-a-national-securities-exchange-north-american-derivatives-exchange-inc",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19215.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Securities and Exchange Commission"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19215"
-    },
-    {
-      "id": "fr-pi-2026-19216",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Self-Regulatory Organizations; Proposed Rule Changes: The Options Clearing Corp.",
-      "summary": "Securities and Exchange Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19216.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19216/self-regulatory-organizations-proposed-rule-changes-the-options-clearing-corp",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19216.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Securities and Exchange Commission"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19216"
-    },
-    {
-      "id": "fr-pi-2026-19217",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Guidance: Material Compatibility for Non-Light Water-Reactors",
-      "summary": "Nuclear Regulatory Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19217.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19217/guidance-material-compatibility-for-non-light-water-reactors",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19217.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Nuclear Regulatory Commission"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19217"
-    },
-    {
-      "id": "fr-pi-2026-19218",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Self-Regulatory Organizations; Proposed Rule Changes: Investors Exchange LLC",
-      "summary": "Securities and Exchange Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19218.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19218/self-regulatory-organizations-proposed-rule-changes-investors-exchange-llc",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19218.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Securities and Exchange Commission"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19218"
-    },
-    {
-      "id": "fr-pi-2026-19219",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Self-Regulatory Organizations; Proposed Rule Changes: Nasdaq Texas, LLC",
-      "summary": "Securities and Exchange Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19219.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19219/self-regulatory-organizations-proposed-rule-changes-nasdaq-texas-llc",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19219.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Securities and Exchange Commission"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19219"
-    },
-    {
-      "id": "fr-pi-2026-19220",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Joint Industry Plan: National Market System Plan Governing the Consolidated Audit Trail to Add MX2 LLC as a Participant",
-      "summary": "Securities and Exchange Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19220.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19220/joint-industry-plan-national-market-system-plan-governing-the-consolidated-audit-trail-to-add-mx2",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19220.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Securities and Exchange Commission"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19220"
-    },
-    {
-      "id": "fr-pi-2026-19221",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Supplemental Funding: Rural Quality Improvement Technical Assistance Program",
-      "summary": "Health Resources and Services Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19221.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19221/supplemental-funding-rural-quality-improvement-technical-assistance-program",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19221.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Health Resources and Services Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19221"
-    },
-    {
-      "id": "fr-pi-2026-19223",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Public Access to Information",
-      "summary": "State Department",
-      "url": "https://public-inspection.federalregister.gov/2026-19223.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19223/public-access-to-information",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19223.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "State Department"
-      ],
-      "documentType": "Rule",
-      "documentNumber": "2026-19223"
-    },
-    {
-      "id": "fr-pi-2026-19224",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Hearings, Meetings, Proceedings, etc.: President's Military Spouse Commission",
-      "summary": "Defense Department",
-      "url": "https://public-inspection.federalregister.gov/2026-19224.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19224/hearings-meetings-proceedings-etc-presidents-military-spouse-commission",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19224.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Defense Department"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19224"
-    },
-    {
-      "id": "fr-pi-2026-19225",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Hearings, Meetings, Proceedings, etc.: Center for Scientific Review",
-      "summary": "National Institutes of Health",
-      "url": "https://public-inspection.federalregister.gov/2026-19225.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19225/hearings-meetings-proceedings-etc-center-for-scientific-review",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19225.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "National Institutes of Health"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19225"
-    },
-    {
-      "id": "fr-pi-2026-19226",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Hearings, Meetings, Proceedings, etc.: Center for Scientific Review; Amended",
-      "summary": "National Institutes of Health",
-      "url": "https://public-inspection.federalregister.gov/2026-19226.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19226/hearings-meetings-proceedings-etc-center-for-scientific-review-amended",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19226.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "National Institutes of Health"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19226"
-    },
-    {
-      "id": "fr-pi-2026-19228",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Special Conditions: Skyryse, Robinson Helicopter Company Model R66 Helicopter; Control Margin Awareness; Correction",
-      "summary": "Federal Aviation Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19228.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19228/special-conditions-skyryse-robinson-helicopter-company-model-r66-helicopter-control-margin-awareness",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19228.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Federal Aviation Administration"
-      ],
-      "documentType": "Proposed Rule",
-      "documentNumber": "2026-19228"
-    },
-    {
-      "id": "fr-pi-2026-19229",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Formal Determination on Records Release",
-      "summary": "Civil Rights Cold Case Records Review Board",
-      "url": "https://public-inspection.federalregister.gov/2026-19229.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19229/formal-determination-on-records-release",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19229.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Civil Rights Cold Case Records Review Board"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19229"
-    },
-    {
-      "id": "fr-pi-2026-19230",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Decision and Order: John Ramsay Walters, M.D.",
-      "summary": "Drug Enforcement Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19230.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19230/decision-and-order-john-ramsay-walters-md",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19230.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Drug Enforcement Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19230"
-    },
-    {
-      "id": "fr-pi-2026-19231",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Schedules of Controlled Substances: Placement of Diphenidine in Schedule I",
-      "summary": "Drug Enforcement Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19231.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19231/schedules-of-controlled-substances-placement-of-diphenidine-in-schedule-i",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19231.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Drug Enforcement Administration"
-      ],
-      "documentType": "Rule",
-      "documentNumber": "2026-19231"
-    },
-    {
-      "id": "fr-pi-2026-19232",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Decision and Order: Esther Villanueva Valdes, M.D.",
-      "summary": "Drug Enforcement Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19232.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19232/decision-and-order-esther-villanueva-valdes-md",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19232.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Drug Enforcement Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19232"
-    },
-    {
-      "id": "fr-pi-2026-19233",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Supplemental Funding: State Offices of Rural Health Coordination and Development Program",
-      "summary": "Health Resources and Services Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19233.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19233/supplemental-funding-state-offices-of-rural-health-coordination-and-development-program",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19233.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Health Resources and Services Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19233"
-    },
-    {
-      "id": "fr-pi-2026-19234",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Supplemental Funding: Medicare Rural Hospital Flexibility Program Evaluation Cooperative Agreement",
-      "summary": "Health Resources and Services Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19234.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19234/supplemental-funding-medicare-rural-hospital-flexibility-program-evaluation-cooperative-agreement",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19234.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Health Resources and Services Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19234"
-    },
-    {
-      "id": "fr-pi-2026-19235",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "2025-26 Award Year Deadline Date for Reports and Other Records: Prison Education Programs Accessing the Federal Pell Grant",
-      "summary": "Education Department",
-      "url": "https://public-inspection.federalregister.gov/2026-19235.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19235/2025-26-award-year-deadline-date-for-reports-and-other-records-prison-education-programs-accessing",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19235.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Education Department"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19235"
-    },
-    {
-      "id": "fr-pi-2026-19236",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
-      "summary": "Agriculture Department",
-      "url": "https://public-inspection.federalregister.gov/2026-19236.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19236/agency-information-collection-activities-proposals-submissions-and-approvals",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19236.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Agriculture Department"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19236"
-    },
-    {
-      "id": "fr-pi-2026-19237",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Petition: Bayer U.S.-Crop Science; Determination of Nonregulated Status and Draft Plant Pest Risk Assessment for Herbicide Resistant MON 96012 Cotton (Gossypium hirsutum)",
-      "summary": "Animal and Plant Health Inspection Service",
-      "url": "https://public-inspection.federalregister.gov/2026-19237.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19237/petition-bayer-us-crop-science-determination-of-nonregulated-status-and-draft-plant-pest-risk",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19237.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Animal and Plant Health Inspection Service"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19237"
-    },
-    {
-      "id": "fr-pi-2026-19238",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Requests for Nominations: National Vaccine Advisory Committee",
-      "summary": "Health and Human Services Department",
-      "url": "https://public-inspection.federalregister.gov/2026-19238.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19238/requests-for-nominations-national-vaccine-advisory-committee",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19238.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Health and Human Services Department"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19238"
-    },
-    {
-      "id": "fr-pi-2026-19239",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Petition: Bayer U.S.-Crop Science; Determination of Nonregulated Status and Draft Plant Pest Risk Assessment for MON 89151 Lepidopteran-Protected Cotton (Gossypium hirsutum)",
-      "summary": "Animal and Plant Health Inspection Service",
-      "url": "https://public-inspection.federalregister.gov/2026-19239.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19239/petition-bayer-us-crop-science-determination-of-nonregulated-status-and-draft-plant-pest-risk",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19239.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Animal and Plant Health Inspection Service"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19239"
-    },
-    {
-      "id": "fr-pi-2026-19240",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Competition Announcement: Impact Aid Discretionary Construction Grant Program",
-      "summary": "Education Department",
-      "url": "https://public-inspection.federalregister.gov/2026-19240.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19240/competition-announcement-impact-aid-discretionary-construction-grant-program",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19240.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Education Department"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19240"
-    },
-    {
-      "id": "fr-pi-2026-19241",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Application: NorthWestern Energy",
-      "summary": "Federal Energy Regulatory Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19241.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19241/application-northwestern-energy",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19241.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Federal Energy Regulatory Commission"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19241"
-    },
-    {
-      "id": "fr-pi-2026-19242",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Federal Motor Vehicle Safety Standards: Denial of a Petition for Rulemaking",
-      "summary": "National Highway Traffic Safety Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19242.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19242/federal-motor-vehicle-safety-standards-denial-of-a-petition-for-rulemaking",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19242.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "National Highway Traffic Safety Administration"
-      ],
-      "documentType": "Proposed Rule",
-      "documentNumber": "2026-19242"
-    },
-    {
-      "id": "fr-pi-2026-19244",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Combined Filings",
-      "summary": "Federal Energy Regulatory Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19244.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19244/combined-filings",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19244.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Federal Energy Regulatory Commission"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19244"
-    },
-    {
-      "id": "fr-pi-2026-19245",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Application: Duke Energy Carolinas, LLC",
-      "summary": "Federal Energy Regulatory Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19245.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19245/application-duke-energy-carolinas-llc",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19245.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Federal Energy Regulatory Commission"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19245"
-    },
-    {
-      "id": "fr-pi-2026-19246",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Combined Filings",
-      "summary": "Federal Energy Regulatory Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19246.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19246/combined-filings",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19246.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Federal Energy Regulatory Commission"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19246"
-    },
-    {
-      "id": "fr-pi-2026-19247",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "New Postal Products",
-      "summary": "Postal Regulatory Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19247.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19247/new-postal-products",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19247.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Postal Regulatory Commission"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19247"
-    },
-    {
-      "id": "fr-pi-2026-19248",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Proposed Deletion from the National Priorities List; Correction",
-      "summary": "Environmental Protection Agency",
-      "url": "https://public-inspection.federalregister.gov/2026-19248.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19248/proposed-deletion-from-the-national-priorities-list-correction",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19248.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Environmental Protection Agency"
-      ],
-      "documentType": "Proposed Rule",
-      "documentNumber": "2026-19248"
-    },
-    {
-      "id": "fr-pi-2026-19249",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Proposed Settlement Agreement, Stipulation, Order, and Judgment, etc.: CTS of Asheville, Inc. Superfund Site, Asheville, NC",
-      "summary": "Environmental Protection Agency",
-      "url": "https://public-inspection.federalregister.gov/2026-19249.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19249/proposed-settlement-agreement-stipulation-order-and-judgment-etc-cts-of-asheville-inc-superfund-site",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19249.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Environmental Protection Agency"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19249"
-    },
-    {
-      "id": "fr-pi-2026-19250",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Charging Standard Administrative Fees for Non-Program Information",
-      "summary": "Social Security Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19250.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19250/charging-standard-administrative-fees-for-non-program-information",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19250.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Social Security Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19250"
-    },
-    {
-      "id": "fr-pi-2026-19253",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Finding of Mass Influx of Aliens",
-      "summary": "Homeland Security Department",
-      "url": "https://public-inspection.federalregister.gov/2026-19253.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19253/finding-of-mass-influx-of-aliens",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19253.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Homeland Security Department"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19253"
-    },
-    {
-      "id": "fr-pi-2026-19254",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Great Lakes Pilotage Rates: 2027 Annual Review and Revisions to Methodology",
-      "summary": "Coast Guard",
-      "url": "https://public-inspection.federalregister.gov/2026-19254.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19254/great-lakes-pilotage-rates-2027-annual-review-and-revisions-to-methodology",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19254.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Coast Guard"
-      ],
-      "documentType": "Proposed Rule",
-      "documentNumber": "2026-19254"
-    },
-    {
-      "id": "fr-pi-2026-19255",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Airworthiness Directives: The Boeing Company Airplanes",
-      "summary": "Federal Aviation Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19255.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19255/airworthiness-directives-the-boeing-company-airplanes",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19255.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Federal Aviation Administration"
-      ],
-      "documentType": "Proposed Rule",
-      "documentNumber": "2026-19255"
-    },
-    {
-      "id": "fr-pi-2026-19256",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Petition for Decision of Inconsequential Noncompliance: Ford Motor Co.",
-      "summary": "National Highway Traffic Safety Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19256.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19256/petition-for-decision-of-inconsequential-noncompliance-ford-motor-co",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19256.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "National Highway Traffic Safety Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19256"
-    },
-    {
-      "id": "fr-pi-2026-19258",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Hearings, Meetings, Proceedings, etc.: Gulf Fishery Management Council and South Atlantic Fishery Management Council",
-      "summary": "National Oceanic and Atmospheric Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19258.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19258/hearings-meetings-proceedings-etc-gulf-fishery-management-council-and-south-atlantic-fishery",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19258.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "National Oceanic and Atmospheric Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19258"
-    },
-    {
-      "id": "fr-pi-2026-19259",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Proxy Solicitation Modernization",
-      "summary": "Securities and Exchange Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19259.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19259/proxy-solicitation-modernization",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19259.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Securities and Exchange Commission"
-      ],
-      "documentType": "Proposed Rule",
-      "documentNumber": "2026-19259"
-    },
-    {
-      "id": "fr-pi-2026-19260",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Rescission of Rule 14a-8's Federal Regulation of Shareholder Proposals and Amendments to Rule 14a-4",
-      "summary": "Securities and Exchange Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19260.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19260/rescission-of-rule-14a-8s-federal-regulation-of-shareholder-proposals-and-amendments-to-rule-14a-4",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19260.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Securities and Exchange Commission"
-      ],
-      "documentType": "Proposed Rule",
-      "documentNumber": "2026-19260"
-    },
-    {
-      "id": "fr-pi-2026-19261",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Release of Waybill Data",
-      "summary": "Surface Transportation Board",
-      "url": "https://public-inspection.federalregister.gov/2026-19261.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19261/release-of-waybill-data",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19261.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Surface Transportation Board"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19261"
-    },
-    {
-      "id": "fr-pi-2026-19262",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Tapered Roller Bearings and Parts Thereof, Finished and Unfinished, from the People's Republic of China",
-      "summary": "International Trade Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19262.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19262/antidumping-or-countervailing-duty-investigations-orders-or-reviews-tapered-roller-bearings-and",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19262.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "International Trade Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19262"
-    },
-    {
-      "id": "fr-pi-2026-19263",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Welded Stainless Line and Pressure Pipe from India and the Republic of Turkiye",
-      "summary": "International Trade Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19263.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19263/antidumping-or-countervailing-duty-investigations-orders-or-reviews-welded-stainless-line-and",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19263.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "International Trade Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19263"
-    },
-    {
-      "id": "fr-pi-2026-19264",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Disclosures to Workers under the Migrant and Seasonal Agricultural Worker Protection Act",
-      "summary": "Wage and Hour Division",
-      "url": "https://public-inspection.federalregister.gov/2026-19264.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19264/agency-information-collection-activities-proposals-submissions-and-approvals-disclosures-to-workers",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19264.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Wage and Hour Division"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19264"
-    },
-    {
-      "id": "fr-pi-2026-19265",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Qualification/Certification Program Request for MSHA Individual Identification Number",
-      "summary": "Labor Department",
-      "url": "https://public-inspection.federalregister.gov/2026-19265.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19265/agency-information-collection-activities-proposals-submissions-and-approvals",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19265.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Labor Department"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19265"
-    },
-    {
-      "id": "fr-pi-2026-19266",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Refuse Piles and Impoundment Structures",
-      "summary": "Mine Safety and Health Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19266.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19266/agency-information-collection-activities-proposals-submissions-and-approvals-refuse-piles-and",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19266.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Mine Safety and Health Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19266"
-    },
-    {
-      "id": "fr-pi-2026-19267",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Nationally Recognized Testing Laboratories: RETC, LLC.; Application for Expansion of Recognition",
-      "summary": "Occupational Safety and Health Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19267.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19267/nationally-recognized-testing-laboratories-retc-llc-application-for-expansion-of-recognition",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19267.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Occupational Safety and Health Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19267"
-    },
-    {
-      "id": "fr-pi-2026-19268",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Nationally Recognized Testing Laboratories: TUV SUD America, Inc.; Application for Expansion of Recognition",
-      "summary": "Occupational Safety and Health Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19268.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19268/nationally-recognized-testing-laboratories-tuv-sud-america-inc-application-for-expansion-of",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19268.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Occupational Safety and Health Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19268"
-    },
-    {
-      "id": "fr-pi-2026-19269",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Charter Amendments, Establishments, Renewals and Terminations: National Advisory Committee on Occupational Safety and Health",
-      "summary": "Occupational Safety and Health Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19269.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19269/charter-amendments-establishments-renewals-and-terminations-national-advisory-committee-on",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19269.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Occupational Safety and Health Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19269"
-    },
-    {
-      "id": "fr-pi-2026-19270",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Safety Zone: Illinois River, Morris, IL",
-      "summary": "Coast Guard",
-      "url": "https://public-inspection.federalregister.gov/2026-19270.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19270/safety-zone-illinois-river-morris-il",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19270.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Coast Guard"
-      ],
-      "documentType": "Rule",
-      "documentNumber": "2026-19270"
-    },
-    {
-      "id": "fr-pi-2026-19271",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Data Intermediaries and Approaches to Strengthen Public Health Data Exchange",
-      "summary": "Centers for Disease Control and Prevention",
-      "url": "https://public-inspection.federalregister.gov/2026-19271.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19271/data-intermediaries-and-approaches-to-strengthen-public-health-data-exchange",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19271.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Centers for Disease Control and Prevention"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19271"
-    },
-    {
-      "id": "fr-pi-2026-19272",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Heavy Walled Rectangular Welded Carbon Steel Pipes and Tubes from the Republic of Korea",
-      "summary": "International Trade Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19272.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19272/antidumping-or-countervailing-duty-investigations-orders-or-reviews-heavy-walled-rectangular-welded",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19272.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "International Trade Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19272"
-    },
-    {
-      "id": "fr-pi-2026-19273",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Seamless Refined Copper Pipe and Tube from Mexico",
-      "summary": "International Trade Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19273.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19273/antidumping-or-countervailing-duty-investigations-orders-or-reviews-seamless-refined-copper-pipe-and",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19273.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "International Trade Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19273"
-    },
-    {
-      "id": "fr-pi-2026-19274",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Sales at Less Than Fair Value; Determinations, Investigations, etc.: Tin Mill Products from the People's Republic of China",
-      "summary": "International Trade Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19274.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19274/sales-at-less-than-fair-value-determinations-investigations-etc-tin-mill-products-from-the-peoples",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19274.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "International Trade Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19274"
-    },
-    {
-      "id": "fr-pi-2026-19275",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
-      "summary": "National Credit Union Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19275.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19275/agency-information-collection-activities-proposals-submissions-and-approvals",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19275.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "National Credit Union Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19275"
-    },
-    {
-      "id": "fr-pi-2026-19276",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Hazardous Materials",
-      "summary": "Pipeline and Hazardous Materials Safety Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19276.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19276/agency-information-collection-activities-proposals-submissions-and-approvals-hazardous-materials",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19276.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Pipeline and Hazardous Materials Safety Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19276"
-    },
-    {
-      "id": "fr-pi-2026-19277",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Chemistry, Manufacturing, and Controls Development and Readiness Pilot Program",
-      "summary": "Food and Drug Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19277.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19277/chemistry-manufacturing-and-controls-development-and-readiness-pilot-program",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19277.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Food and Drug Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19277"
-    },
-    {
-      "id": "fr-pi-2026-19278",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
-      "summary": "Agriculture Department",
-      "url": "https://public-inspection.federalregister.gov/2026-19278.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19278/agency-information-collection-activities-proposals-submissions-and-approvals",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19278.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Agriculture Department"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19278"
-    },
-    {
-      "id": "fr-pi-2026-19279",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Application: Southern California Edison, Reasonable Period of Time for Water Quality Certification",
-      "summary": "Federal Energy Regulatory Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19279.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19279/application-southern-california-edison-reasonable-period-of-time-for-water-quality-certification",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19279.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Federal Energy Regulatory Commission"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19279"
-    },
-    {
-      "id": "fr-pi-2026-19280",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Application: Brown Bear II Hydro, Inc., Reasonable Period of Time for Water Quality Certification",
-      "summary": "Federal Energy Regulatory Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19280.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19280/application-brown-bear-ii-hydro-inc-reasonable-period-of-time-for-water-quality-certification",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19280.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Federal Energy Regulatory Commission"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19280"
-    },
-    {
-      "id": "fr-pi-2026-19281",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Prior Notice of Imported Food under the Public Health Security and Bioterrorism Preparedness and Response Act",
-      "summary": "Food and Drug Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19281.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19281/agency-information-collection-activities-proposals-submissions-and-approvals-prior-notice-of",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19281.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Food and Drug Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19281"
-    },
-    {
-      "id": "fr-pi-2026-19282",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: State Petitions for Exemption from Preemption",
-      "summary": "Food and Drug Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19282.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19282/agency-information-collection-activities-proposals-submissions-and-approvals-state-petitions-for",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19282.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Food and Drug Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19282"
-    },
-    {
-      "id": "fr-pi-2026-19283",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Temporary Marketing Permit Applications",
-      "summary": "Food and Drug Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19283.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19283/agency-information-collection-activities-proposals-submissions-and-approvals-temporary-marketing",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19283.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Food and Drug Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19283"
-    },
-    {
-      "id": "fr-pi-2026-19284",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Orphan Drugs",
-      "summary": "Food and Drug Administration",
-      "url": "https://public-inspection.federalregister.gov/2026-19284.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19284/agency-information-collection-activities-proposals-submissions-and-approvals-orphan-drugs",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19284.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Food and Drug Administration"
-      ],
-      "documentType": "Notice",
-      "documentNumber": "2026-19284"
-    },
-    {
-      "id": "fr-pi-2026-19290",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T08:45:00.000-04:00",
-      "title": "Privacy Act Regulations",
-      "summary": "Commodity Futures Trading Commission",
-      "url": "https://public-inspection.federalregister.gov/2026-19290.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19290/privacy-act-regulations",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19290.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Commodity Futures Trading Commission"
-      ],
-      "documentType": "Proposed Rule",
-      "documentNumber": "2026-19290"
-    },
-    {
       "id": "fr-pi-2026-19304",
       "kind": "public_inspection",
       "when": "2026-09-22",
@@ -2135,86 +695,6 @@
       "documentNumber": "2026-19306"
     },
     {
-      "id": "fr-pi-2026-19333",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T11:15:00.000-04:00",
-      "title": "Special Observances: Constitution Day, Citizenship Day, and Constitution Week (Proc. 11067)",
-      "summary": "Executive Office of the President",
-      "url": "https://public-inspection.federalregister.gov/2026-19333.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19333/special-observances-constitution-day-citizenship-day-and-constitution-week-proc-11067",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19333.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Executive Office of the President"
-      ],
-      "documentType": "Presidential Document",
-      "documentNumber": "2026-19333"
-    },
-    {
-      "id": "fr-pi-2026-19334",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T11:15:00.000-04:00",
-      "title": "Special Observances: National POW/MIA Recognition Day, 2026 (Proc. 11068)",
-      "summary": "Executive Office of the President",
-      "url": "https://public-inspection.federalregister.gov/2026-19334.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19334/special-observances-national-powmia-recognition-day-2026-proc-11068",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19334.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Executive Office of the President"
-      ],
-      "documentType": "Presidential Document",
-      "documentNumber": "2026-19334"
-    },
-    {
-      "id": "fr-pi-2026-19335",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T11:15:00.000-04:00",
-      "title": "Water Quality Improvements; Collaboration and Oversight Through Federal Support (EO 14428)",
-      "summary": "Executive Office of the President",
-      "url": "https://public-inspection.federalregister.gov/2026-19335.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19335/water-quality-improvements-collaboration-and-oversight-through-federal-support-eo-14428",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19335.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Executive Office of the President"
-      ],
-      "documentType": "Presidential Document",
-      "documentNumber": "2026-19335"
-    },
-    {
-      "id": "fr-pi-2026-19336",
-      "kind": "public_inspection",
-      "when": "2026-09-21",
-      "until": null,
-      "filedAt": "2026-09-18T11:15:00.000-04:00",
-      "title": "Government Procurement; Efforts To Restore Reciprocity (Memorandum of September 16, 2026)",
-      "summary": "Executive Office of the President",
-      "url": "https://public-inspection.federalregister.gov/2026-19336.pdf",
-      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19336/government-procurement-efforts-to-restore-reciprocity-memorandum-of-september-16-2026",
-      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19336.pdf",
-      "source": "Federal Register public inspection (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-      "urgency": "upcoming",
-      "agencies": [
-        "Executive Office of the President"
-      ],
-      "documentType": "Presidential Document",
-      "documentNumber": "2026-19336"
-    },
-    {
       "id": "fr-pi-2026-19369",
       "kind": "public_inspection",
       "when": "2026-09-22",
@@ -2233,6 +713,2003 @@
       ],
       "documentType": "Notice",
       "documentNumber": "2026-19369"
+    },
+    {
+      "id": "fr-pi-2026-19287",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Sanctions Action",
+      "summary": "Foreign Assets Control Office",
+      "url": "https://public-inspection.federalregister.gov/2026-19287.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19287/sanctions-action",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19287.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Foreign Assets Control Office"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19287"
+    },
+    {
+      "id": "fr-pi-2026-19289",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Consent Order: FleetCor Technologies",
+      "summary": "Federal Trade Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19289.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19289/consent-order-fleetcor-technologies",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19289.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Trade Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19289"
+    },
+    {
+      "id": "fr-pi-2026-19288",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Hearings, Meetings, Proceedings, etc.: Gulf Fishery Management Council",
+      "summary": "National Oceanic and Atmospheric Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19288.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19288/hearings-meetings-proceedings-etc-gulf-fishery-management-council",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19288.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Oceanic and Atmospheric Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19288"
+    },
+    {
+      "id": "fr-pi-2026-19285",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Competitive Postal Products",
+      "summary": "Postal Regulatory Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19285.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19285/competitive-postal-products",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19285.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Postal Regulatory Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19285"
+    },
+    {
+      "id": "fr-pi-2026-19291",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Application for Permit to Modify and Supporting Documentation",
+      "summary": "Safety and Environmental Enforcement Bureau",
+      "url": "https://public-inspection.federalregister.gov/2026-19291.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19291/agency-information-collection-activities-proposals-submissions-and-approvals-application-for-permit",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19291.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Safety and Environmental Enforcement Bureau"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19291"
+    },
+    {
+      "id": "fr-pi-2026-19292",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Quarterly IRS Interest Rates Used in Calculating Interest on Overdue Accounts and Refunds of Customs Duties",
+      "summary": "U.S. Customs and Border Protection",
+      "url": "https://public-inspection.federalregister.gov/2026-19292.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19292/quarterly-irs-interest-rates-used-in-calculating-interest-on-overdue-accounts-and-refunds-of-customs",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19292.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "U.S. Customs and Border Protection"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19292"
+    },
+    {
+      "id": "fr-pi-2026-19293",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Decommissioning Activities",
+      "summary": "Safety and Environmental Enforcement Bureau",
+      "url": "https://public-inspection.federalregister.gov/2026-19293.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19293/agency-information-collection-activities-proposals-submissions-and-approvals-decommissioning",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19293.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Safety and Environmental Enforcement Bureau"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19293"
+    },
+    {
+      "id": "fr-pi-2026-19294",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Atomic Safety and Licensing Board: Eden Radioisotopes, LLC",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19294.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19294/atomic-safety-and-licensing-board-eden-radioisotopes-llc",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19294.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19294"
+    },
+    {
+      "id": "fr-pi-2026-19295",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Hearings, Meetings, Proceedings, etc.: Center for Scientific Review; Amended",
+      "summary": "National Institutes of Health",
+      "url": "https://public-inspection.federalregister.gov/2026-19295.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19295/hearings-meetings-proceedings-etc-center-for-scientific-review-amended",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19295.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Institutes of Health"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19295"
+    },
+    {
+      "id": "fr-pi-2026-19296",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Self-Regulatory Organizations; Proposed Rule Changes: New York Stock Exchange LLC",
+      "summary": "Securities and Exchange Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19296.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19296/self-regulatory-organizations-proposed-rule-changes-new-york-stock-exchange-llc",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19296.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Securities and Exchange Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19296"
+    },
+    {
+      "id": "fr-pi-2026-19297",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Hearings, Meetings, Proceedings, etc.: National Institute of Environmental Health Sciences",
+      "summary": "National Institutes of Health",
+      "url": "https://public-inspection.federalregister.gov/2026-19297.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19297/hearings-meetings-proceedings-etc-national-institute-of-environmental-health-sciences",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19297.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Institutes of Health"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19297"
+    },
+    {
+      "id": "fr-pi-2026-19298",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Self-Regulatory Organizations; Proposed Rule Changes: Nasdaq PHLX LLC",
+      "summary": "Securities and Exchange Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19298.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19298/self-regulatory-organizations-proposed-rule-changes-nasdaq-phlx-llc",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19298.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Securities and Exchange Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19298"
+    },
+    {
+      "id": "fr-pi-2026-19299",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Self-Regulatory Organizations; Proposed Rule Changes: Cboe C2 Exchange, Inc.",
+      "summary": "Securities and Exchange Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19299.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19299/self-regulatory-organizations-proposed-rule-changes-cboe-c2-exchange-inc",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19299.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Securities and Exchange Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19299"
+    },
+    {
+      "id": "fr-pi-2026-19300",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Regulatory Guide: Design-Basis Floods for Nuclear Power Plants and Guidance for Assessment of Flooding Hazards due to Water Control Structure Failures and Incidents",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19300.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19300/regulatory-guide-design-basis-floods-for-nuclear-power-plants-and-guidance-for-assessment-of",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19300.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19300"
+    },
+    {
+      "id": "fr-pi-2026-19301",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Proposed Data Sharing Activity",
+      "summary": "Census Bureau",
+      "url": "https://public-inspection.federalregister.gov/2026-19301.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19301/proposed-data-sharing-activity",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19301.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Census Bureau"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19301"
+    },
+    {
+      "id": "fr-pi-2026-19302",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Hearings, Meetings, Proceedings, etc.: Center for Scientific Review; Amended",
+      "summary": "National Institutes of Health",
+      "url": "https://public-inspection.federalregister.gov/2026-19302.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19302/hearings-meetings-proceedings-etc-center-for-scientific-review-amended",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19302.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Institutes of Health"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19302"
+    },
+    {
+      "id": "fr-pi-2026-19303",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: The Impact and Costs of Promoting Objectivity in Research and Responsible Prospective Contractors (Office of the Director)",
+      "summary": "National Institutes of Health",
+      "url": "https://public-inspection.federalregister.gov/2026-19303.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19303/agency-information-collection-activities-proposals-submissions-and-approvals-the-impact-and-costs-of",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19303.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Institutes of Health"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19303"
+    },
+    {
+      "id": "fr-pi-2026-19305",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
+      "summary": "Federal Communications Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19305.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19305/agency-information-collection-activities-proposals-submissions-and-approvals",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19305.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Communications Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19305"
+    },
+    {
+      "id": "fr-pi-2026-19307",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
+      "summary": "Federal Communications Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19307.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19307/agency-information-collection-activities-proposals-submissions-and-approvals",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19307.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Communications Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19307"
+    },
+    {
+      "id": "fr-pi-2026-19308",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Merger Transactions",
+      "summary": "Federal Deposit Insurance Corporation",
+      "url": "https://public-inspection.federalregister.gov/2026-19308.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19308/merger-transactions",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19308.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Deposit Insurance Corporation"
+      ],
+      "documentType": "Proposed Rule",
+      "documentNumber": "2026-19308"
+    },
+    {
+      "id": "fr-pi-2026-19309",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
+      "summary": "Federal Communications Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19309.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19309/agency-information-collection-activities-proposals-submissions-and-approvals",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19309.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Communications Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19309"
+    },
+    {
+      "id": "fr-pi-2026-19310",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "State Bank Parity",
+      "summary": "Federal Deposit Insurance Corporation",
+      "url": "https://public-inspection.federalregister.gov/2026-19310.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19310/state-bank-parity",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19310.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Deposit Insurance Corporation"
+      ],
+      "documentType": "Proposed Rule",
+      "documentNumber": "2026-19310"
+    },
+    {
+      "id": "fr-pi-2026-19311",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Reinstatement of Radio Non-Duplication Rule for Commercial FM Stations; Correction",
+      "summary": "Federal Communications Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19311.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19311/reinstatement-of-radio-non-duplication-rule-for-commercial-fm-stations-correction",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19311.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Communications Commission"
+      ],
+      "documentType": "Rule",
+      "documentNumber": "2026-19311"
+    },
+    {
+      "id": "fr-pi-2026-19312",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Unsafe or Unsound Practices, Matters Requiring Attention; Correction",
+      "summary": "Comptroller of the Currency, Federal Deposit Insurance Corporation",
+      "url": "https://public-inspection.federalregister.gov/2026-19312.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19312/unsafe-or-unsound-practices-matters-requiring-attention-correction",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19312.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Comptroller of the Currency",
+        "Federal Deposit Insurance Corporation"
+      ],
+      "documentType": "Rule",
+      "documentNumber": "2026-19312"
+    },
+    {
+      "id": "fr-pi-2026-19313",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
+      "summary": "Federal Communications Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19313.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19313/agency-information-collection-activities-proposals-submissions-and-approvals",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19313.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Communications Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19313"
+    },
+    {
+      "id": "fr-pi-2026-19314",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
+      "summary": "Federal Communications Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19314.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19314/agency-information-collection-activities-proposals-submissions-and-approvals",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19314.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Communications Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19314"
+    },
+    {
+      "id": "fr-pi-2026-19315",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: NUREG/BR-0254, Payment Methods, and Authorization for Payment by Credit Card on Pay.gov",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19315.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19315/agency-information-collection-activities-proposals-submissions-and-approvals-nuregbr-0254-payment",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19315.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19315"
+    },
+    {
+      "id": "fr-pi-2026-19316",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Arms Sales",
+      "summary": "Defense Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19316.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19316/arms-sales",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19316.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Defense Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19316"
+    },
+    {
+      "id": "fr-pi-2026-19317",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Request for Acceptance of Changes in Approved Drawings and Specifications",
+      "summary": "Housing and Urban Development Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19317.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19317/agency-information-collection-activities-proposals-submissions-and-approvals-request-for-acceptance",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19317.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Housing and Urban Development Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19317"
+    },
+    {
+      "id": "fr-pi-2026-19318",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Arms Sales",
+      "summary": "Defense Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19318.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19318/arms-sales",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19318.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Defense Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19318"
+    },
+    {
+      "id": "fr-pi-2026-19319",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Criteria and Procedures for Determining Eligibility for Access to or Control Over Special Nuclear Material",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19319.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19319/agency-information-collection-activities-proposals-submissions-and-approvals-criteria-and-procedures",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19319.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19319"
+    },
+    {
+      "id": "fr-pi-2026-19320",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Arms Sales",
+      "summary": "Defense Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19320.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19320/arms-sales",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19320.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Defense Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19320"
+    },
+    {
+      "id": "fr-pi-2026-19321",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Arms Sales",
+      "summary": "Defense Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19321.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19321/arms-sales",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19321.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Defense Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19321"
+    },
+    {
+      "id": "fr-pi-2026-19322",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Arms Sales",
+      "summary": "Defense Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19322.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19322/arms-sales",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19322.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Defense Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19322"
+    },
+    {
+      "id": "fr-pi-2026-19323",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Arms Sales",
+      "summary": "Defense Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19323.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19323/arms-sales",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19323.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Defense Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19323"
+    },
+    {
+      "id": "fr-pi-2026-19324",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Arms Sales",
+      "summary": "Defense Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19324.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19324/arms-sales",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19324.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Defense Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19324"
+    },
+    {
+      "id": "fr-pi-2026-19325",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Arms Sales",
+      "summary": "Defense Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19325.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19325/arms-sales",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19325.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Defense Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19325"
+    },
+    {
+      "id": "fr-pi-2026-19326",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Arms Sales",
+      "summary": "Defense Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19326.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19326/arms-sales",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19326.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Defense Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19326"
+    },
+    {
+      "id": "fr-pi-2026-19327",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Arms Sales",
+      "summary": "Defense Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19327.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19327/arms-sales",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19327.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Defense Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19327"
+    },
+    {
+      "id": "fr-pi-2026-19328",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Funding Opportunity: Contract Tower Competitive Grant Program; Fiscal Year 2027",
+      "summary": "Federal Aviation Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19328.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19328/funding-opportunity-contract-tower-competitive-grant-program-fiscal-year-2027",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19328.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Aviation Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19328"
+    },
+    {
+      "id": "fr-pi-2026-19329",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Radio Broadcasting Services: Various Locations",
+      "summary": "Federal Communications Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19329.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19329/radio-broadcasting-services-various-locations",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19329.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Communications Commission"
+      ],
+      "documentType": "Rule",
+      "documentNumber": "2026-19329"
+    },
+    {
+      "id": "fr-pi-2026-19330",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Designation of Fishery Management Council Members and Application for Reinstatement of State Authority",
+      "summary": "National Oceanic and Atmospheric Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19330.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19330/agency-information-collection-activities-proposals-submissions-and-approvals-designation-of-fishery",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19330.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Oceanic and Atmospheric Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19330"
+    },
+    {
+      "id": "fr-pi-2026-19331",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Acquisition Regulation: General Services Administration Acquisition Regulation Implementation of Executive Order 14275, Federal Supply Schedule Ordering Procedures",
+      "summary": "General Services Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19331.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19331/acquisition-regulation-general-services-administration-acquisition-regulation-implementation-of",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19331.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "General Services Administration"
+      ],
+      "documentType": "Proposed Rule",
+      "documentNumber": "2026-19331"
+    },
+    {
+      "id": "fr-pi-2026-19332",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Appeals Procedures for DOE Contractor Employee Protection Program",
+      "summary": "Energy Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19332.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19332/appeals-procedures-for-doe-contractor-employee-protection-program",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19332.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Energy Department"
+      ],
+      "documentType": "Proposed Rule",
+      "documentNumber": "2026-19332"
+    },
+    {
+      "id": "fr-pi-2026-19337",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Application for Preauthorization of CERCLA Response Action and Claim for CERCLA Response Action",
+      "summary": "Environmental Protection Agency",
+      "url": "https://public-inspection.federalregister.gov/2026-19337.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19337/agency-information-collection-activities-proposals-submissions-and-approvals-application-for",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19337.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19337"
+    },
+    {
+      "id": "fr-pi-2026-19338",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Off-Exchange Foreign Currency Transactions",
+      "summary": "Commodity Futures Trading Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19338.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19338/agency-information-collection-activities-proposals-submissions-and-approvals-off-exchange-foreign",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19338.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Commodity Futures Trading Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19338"
+    },
+    {
+      "id": "fr-pi-2026-19339",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Generic Information Collection Request for Health Resources and Services Administration Hotlines, Chatlines, and Online Portals",
+      "summary": "Health Resources and Services Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19339.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19339/agency-information-collection-activities-proposals-submissions-and-approvals-generic-information",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19339.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Health Resources and Services Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19339"
+    },
+    {
+      "id": "fr-pi-2026-19340",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Application: Withdrawal and Opportunity for a Public Meeting; Comanche County, OK",
+      "summary": "Land Management Bureau",
+      "url": "https://public-inspection.federalregister.gov/2026-19340.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19340/application-withdrawal-and-opportunity-for-a-public-meeting-comanche-county-ok",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19340.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Land Management Bureau"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19340"
+    },
+    {
+      "id": "fr-pi-2026-19341",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Fisheries of the Caribbean, Gulf of America, and South Atlantic: Snapper-Grouper Fishery of the South Atlantic; Regulatory Amendment 37",
+      "summary": "National Oceanic and Atmospheric Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19341.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19341/fisheries-of-the-caribbean-gulf-of-america-and-south-atlantic-snapper-grouper-fishery-of-the-south",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19341.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Oceanic and Atmospheric Administration"
+      ],
+      "documentType": "Proposed Rule",
+      "documentNumber": "2026-19341"
+    },
+    {
+      "id": "fr-pi-2026-19342",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Interim Approval of the Rate Schedule for Jim Woodruff Project",
+      "summary": "Southeastern Power Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19342.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19342/interim-approval-of-the-rate-schedule-for-jim-woodruff-project",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19342.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Southeastern Power Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19342"
+    },
+    {
+      "id": "fr-pi-2026-19343",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Airworthiness Directives: Leonardo S.p.a. Helicopters",
+      "summary": "Federal Aviation Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19343.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19343/airworthiness-directives-leonardo-spa-helicopters",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19343.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Aviation Administration"
+      ],
+      "documentType": "Proposed Rule",
+      "documentNumber": "2026-19343"
+    },
+    {
+      "id": "fr-pi-2026-19344",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Endangered and Threatened Species: Initiation of 5-Year Status Review for Black Caiman",
+      "summary": "Fish and Wildlife Service",
+      "url": "https://public-inspection.federalregister.gov/2026-19344.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19344/endangered-and-threatened-species-initiation-of-5-year-status-review-for-black-caiman",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19344.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Fish and Wildlife Service"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19344"
+    },
+    {
+      "id": "fr-pi-2026-19345",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Airworthiness Directives: Bell Textron Canada Limited Helicopters",
+      "summary": "Federal Aviation Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19345.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19345/airworthiness-directives-bell-textron-canada-limited-helicopters",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19345.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Aviation Administration"
+      ],
+      "documentType": "Proposed Rule",
+      "documentNumber": "2026-19345"
+    },
+    {
+      "id": "fr-pi-2026-19346",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Fisheries off West Coast States: Pacific Coast Groundfish Fishery; Pacific Coast Groundfish Fishery Management Plan; Amendment 38; 2027-28 Biennial Specifications and Management Measures",
+      "summary": "National Oceanic and Atmospheric Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19346.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19346/fisheries-off-west-coast-states-pacific-coast-groundfish-fishery-pacific-coast-groundfish-fishery",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19346.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Oceanic and Atmospheric Administration"
+      ],
+      "documentType": "Proposed Rule",
+      "documentNumber": "2026-19346"
+    },
+    {
+      "id": "fr-pi-2026-19347",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Hearings, Meetings, Proceedings, etc.: North Pacific Fishery Management Council",
+      "summary": "National Oceanic and Atmospheric Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19347.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19347/hearings-meetings-proceedings-etc-north-pacific-fishery-management-council",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19347.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Oceanic and Atmospheric Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19347"
+    },
+    {
+      "id": "fr-pi-2026-19348",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Hearings, Meetings, Proceedings, etc.: North Pacific Fishery Management Council",
+      "summary": "National Oceanic and Atmospheric Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19348.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19348/hearings-meetings-proceedings-etc-north-pacific-fishery-management-council",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19348.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Oceanic and Atmospheric Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19348"
+    },
+    {
+      "id": "fr-pi-2026-19349",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Nonclinical Testing Terminology",
+      "summary": "Food and Drug Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19349.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19349/nonclinical-testing-terminology",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19349.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Food and Drug Administration"
+      ],
+      "documentType": "Proposed Rule",
+      "documentNumber": "2026-19349"
+    },
+    {
+      "id": "fr-pi-2026-19350",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Nonclinical Testing Terminology",
+      "summary": "Food and Drug Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19350.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19350/nonclinical-testing-terminology",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19350.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Food and Drug Administration"
+      ],
+      "documentType": "Rule",
+      "documentNumber": "2026-19350"
+    },
+    {
+      "id": "fr-pi-2026-19351",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Hearings, Meetings, Proceedings, etc.: Pipeline Safety; Liquid Pipeline Advisory Committee",
+      "summary": "Pipeline and Hazardous Materials Safety Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19351.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19351/hearings-meetings-proceedings-etc-pipeline-safety-liquid-pipeline-advisory-committee",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19351.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Pipeline and Hazardous Materials Safety Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19351"
+    },
+    {
+      "id": "fr-pi-2026-19352",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Safety Zone: Neuse River, New Bern, NC",
+      "summary": "Coast Guard",
+      "url": "https://public-inspection.federalregister.gov/2026-19352.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19352/safety-zone-neuse-river-new-bern-nc",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19352.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Coast Guard"
+      ],
+      "documentType": "Proposed Rule",
+      "documentNumber": "2026-19352"
+    },
+    {
+      "id": "fr-pi-2026-19353",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "New Postal Products",
+      "summary": "Postal Regulatory Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19353.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19353/new-postal-products",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19353.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Postal Regulatory Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19353"
+    },
+    {
+      "id": "fr-pi-2026-19354",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Application to Amend Federal Firearms License",
+      "summary": "Justice Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19354.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19354/agency-information-collection-activities-proposals-submissions-and-approvals-application-to-amend",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19354.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Justice Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19354"
+    },
+    {
+      "id": "fr-pi-2026-19355",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Airworthiness Directives: Airbus SAS Airplanes",
+      "summary": "Federal Aviation Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19355.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19355/airworthiness-directives-airbus-sas-airplanes",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19355.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Aviation Administration"
+      ],
+      "documentType": "Proposed Rule",
+      "documentNumber": "2026-19355"
+    },
+    {
+      "id": "fr-pi-2026-19356",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Request for Relief from Explosives Disability",
+      "summary": "Justice Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19356.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19356/agency-information-collection-activities-proposals-submissions-and-approvals-request-for-relief-from",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19356.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Justice Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19356"
+    },
+    {
+      "id": "fr-pi-2026-19357",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Supplemental Information on Water Quality Considerations",
+      "summary": "Justice Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19357.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19357/agency-information-collection-activities-proposals-submissions-and-approvals-supplemental",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19357.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Justice Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19357"
+    },
+    {
+      "id": "fr-pi-2026-19358",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agreements Filed",
+      "summary": "Federal Maritime Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19358.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19358/agreements-filed",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19358.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Maritime Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19358"
+    },
+    {
+      "id": "fr-pi-2026-19359",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Law Enforcement Officers Congressional Badge of Bravery",
+      "summary": "Justice Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19359.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19359/agency-information-collection-activities-proposals-submissions-and-approvals-law-enforcement",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19359.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Justice Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19359"
+    },
+    {
+      "id": "fr-pi-2026-19360",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Airworthiness Directives: Airbus SAS Airplanes",
+      "summary": "Federal Aviation Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19360.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19360/airworthiness-directives-airbus-sas-airplanes",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19360.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Aviation Administration"
+      ],
+      "documentType": "Proposed Rule",
+      "documentNumber": "2026-19360"
+    },
+    {
+      "id": "fr-pi-2026-19361",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Periodic Reporting",
+      "summary": "Postal Regulatory Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19361.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19361/periodic-reporting",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19361.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Postal Regulatory Commission"
+      ],
+      "documentType": "Proposed Rule",
+      "documentNumber": "2026-19361"
+    },
+    {
+      "id": "fr-pi-2026-19362",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Questionnaire and Data Collection Testing, Evaluation, and Research for the Health Resources and Services Administration",
+      "summary": "Health Resources and Services Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19362.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19362/agency-information-collection-activities-proposals-submissions-and-approvals-questionnaire-and-data",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19362.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Health Resources and Services Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19362"
+    },
+    {
+      "id": "fr-pi-2026-19363",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Intent to Exchange of Air Force Real Property for Non-Air Force Real Property; Correction",
+      "summary": "Air Force Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19363.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19363/intent-to-exchange-of-air-force-real-property-for-non-air-force-real-property-correction",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19363.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Air Force Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19363"
+    },
+    {
+      "id": "fr-pi-2026-19364",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "RF Exposure Issues Subject to D.C. Circuit Remand in Environmental Health Trust v. FCC",
+      "summary": "Federal Communications Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19364.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19364/rf-exposure-issues-subject-to-dc-circuit-remand-in-environmental-health-trust-v-fcc",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19364.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Communications Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19364"
+    },
+    {
+      "id": "fr-pi-2026-19365",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Permit and Reporting Requirements for Non-commercial Fishing in the Rose Atoll, Marianas Trench, and Pacific Remote Islands Marine National Monuments",
+      "summary": "National Oceanic and Atmospheric Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19365.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19365/agency-information-collection-activities-proposals-submissions-and-approvals-permit-and-reporting",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19365.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Oceanic and Atmospheric Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19365"
+    },
+    {
+      "id": "fr-pi-2026-19366",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
+      "summary": "Centers for Medicare & Medicaid Services",
+      "url": "https://public-inspection.federalregister.gov/2026-19366.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19366/agency-information-collection-activities-proposals-submissions-and-approvals",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19366.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19366"
+    },
+    {
+      "id": "fr-pi-2026-19367",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Capital Construction Fund Revision",
+      "summary": "Maritime Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19367.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19367/capital-construction-fund-revision",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19367.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Maritime Administration"
+      ],
+      "documentType": "Proposed Rule",
+      "documentNumber": "2026-19367"
+    },
+    {
+      "id": "fr-pi-2026-19368",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Public Service Loan Forgiveness and Temporary Expanded Public Service Loan Forgiveness Certification and Application",
+      "summary": "Education Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19368.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19368/agency-information-collection-activities-proposals-submissions-and-approvals-public-service-loan",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19368.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Education Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19368"
+    },
+    {
+      "id": "fr-pi-2026-19370",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Anthropomorphic Test Devices: Test Device for Human Occupant Restraint 50th Percentile Adult Male Dummy",
+      "summary": "National Highway Traffic Safety Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19370.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19370/anthropomorphic-test-devices-test-device-for-human-occupant-restraint-50th-percentile-adult-male",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19370.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Highway Traffic Safety Administration"
+      ],
+      "documentType": "Proposed Rule",
+      "documentNumber": "2026-19370"
+    },
+    {
+      "id": "fr-pi-2026-19372",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Certain Brake Drums from the People's Republic of China",
+      "summary": "International Trade Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19372.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19372/antidumping-or-countervailing-duty-investigations-orders-or-reviews-certain-brake-drums-from-the",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19372.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "International Trade Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19372"
+    },
+    {
+      "id": "fr-pi-2026-19373",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Certain Frozen Fish Fillets from the Socialist Republic of Vietnam",
+      "summary": "International Trade Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19373.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19373/antidumping-or-countervailing-duty-investigations-orders-or-reviews-certain-frozen-fish-fillets-from",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19373.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "International Trade Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19373"
+    },
+    {
+      "id": "fr-pi-2026-19374",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Sales at Less Than Fair Value; Determinations, Investigations, etc.: Certain Linear Hydraulic Cylinders and Parts Thereof from Canada, the People's Republic of China, India, the Republic of Korea, and Mexico",
+      "summary": "International Trade Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19374.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19374/sales-at-less-than-fair-value-determinations-investigations-etc-certain-linear-hydraulic-cylinders",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19374.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "International Trade Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19374"
+    },
+    {
+      "id": "fr-pi-2026-19375",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Polyethylene Terephthalate Resin from the Sultanate of Oman",
+      "summary": "International Trade Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19375.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19375/antidumping-or-countervailing-duty-investigations-orders-or-reviews-polyethylene-terephthalate-resin",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19375.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "International Trade Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19375"
+    },
+    {
+      "id": "fr-pi-2026-19376",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Steel Wire Garment Hangers from the People's Republic of China and the Socialist Republic of Vietnam",
+      "summary": "International Trade Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19376.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19376/antidumping-or-countervailing-duty-investigations-orders-or-reviews-steel-wire-garment-hangers-from",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19376.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "International Trade Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19376"
+    },
+    {
+      "id": "fr-pi-2026-19377",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Large Diameter Welded Pipe from Canada",
+      "summary": "International Trade Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19377.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19377/antidumping-or-countervailing-duty-investigations-orders-or-reviews-large-diameter-welded-pipe-from",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19377.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "International Trade Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19377"
+    },
+    {
+      "id": "fr-pi-2026-19378",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Sales at Less Than Fair Value; Determinations, Investigations, etc.: Certain Fatty Acids from Indonesia",
+      "summary": "International Trade Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19378.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19378/sales-at-less-than-fair-value-determinations-investigations-etc-certain-fatty-acids-from-indonesia",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19378.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "International Trade Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19378"
+    },
+    {
+      "id": "fr-pi-2026-19379",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Sales at Less Than Fair Value; Determinations, Investigations, etc.: Certain Fatty Acids from Malaysia",
+      "summary": "International Trade Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19379.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19379/sales-at-less-than-fair-value-determinations-investigations-etc-certain-fatty-acids-from-malaysia",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19379.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "International Trade Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19379"
+    },
+    {
+      "id": "fr-pi-2026-19380",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Reissuance of the Grant of Authority: Phillips 66 Co., Subzone 165A, Borger, TX",
+      "summary": "Foreign-Trade Zones Board",
+      "url": "https://public-inspection.federalregister.gov/2026-19380.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19380/reissuance-of-the-grant-of-authority-phillips-66-co-subzone-165a-borger-tx",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19380.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Foreign-Trade Zones Board"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19380"
+    },
+    {
+      "id": "fr-pi-2026-19381",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Paperwork Submissions under the Coastal Zone Management Act Federal Consistency Requirements",
+      "summary": "National Oceanic and Atmospheric Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19381.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19381/agency-information-collection-activities-proposals-submissions-and-approvals-paperwork-submissions",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19381.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Oceanic and Atmospheric Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19381"
+    },
+    {
+      "id": "fr-pi-2026-19382",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Forged Steel Fluid End Blocks from Italy",
+      "summary": "International Trade Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19382.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19382/antidumping-or-countervailing-duty-investigations-orders-or-reviews-forged-steel-fluid-end-blocks",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19382.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "International Trade Administration"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19382"
+    },
+    {
+      "id": "fr-pi-2026-19383",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Hearings, Meetings, Proceedings, etc.: National Cancer Institute",
+      "summary": "National Institutes of Health",
+      "url": "https://public-inspection.federalregister.gov/2026-19383.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19383/hearings-meetings-proceedings-etc-national-cancer-institute",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19383.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Institutes of Health"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19383"
+    },
+    {
+      "id": "fr-pi-2026-19384",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Privacy Act Complaints, Concerns or Questions Form",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19384.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19384/agency-information-collection-activities-proposals-submissions-and-approvals-privacy-act-complaints",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19384.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19384"
+    },
+    {
+      "id": "fr-pi-2026-19385",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Notice of Enforcement Discretion for Operating Power Reactors and Gaseous Diffusion Plants, NRC Enforcement Policy",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19385.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19385/agency-information-collection-activities-proposals-submissions-and-approvals-notice-of-enforcement",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19385.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19385"
+    },
+    {
+      "id": "fr-pi-2026-19386",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Criteria for Guidance of States and NRC in Discontinuance of NRC Regulatory Authority and Assumption Thereof by States through Agreement, Maintenance of Existing Agreement State Programs, etc.",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19386.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19386/agency-information-collection-activities-proposals-submissions-and-approvals-criteria-for-guidance",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19386.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19386"
+    },
+    {
+      "id": "fr-pi-2026-19387",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: FHA-Insured Mortgage Loan Servicing Involving the Loss Mitigation Programs",
+      "summary": "Housing and Urban Development Department",
+      "url": "https://public-inspection.federalregister.gov/2026-19387.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19387/agency-information-collection-activities-proposals-submissions-and-approvals-fha-insured-mortgage",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19387.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Housing and Urban Development Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19387"
+    },
+    {
+      "id": "fr-pi-2026-19388",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Order: Temporary Conditional Exemptive Relief",
+      "summary": "Securities and Exchange Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-19388.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19388/order-temporary-conditional-exemptive-relief",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19388.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Securities and Exchange Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-19388"
+    },
+    {
+      "id": "fr-pi-2026-19389",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Softwood Lumber Board Assessment Rate Clarification and Changes to Membership",
+      "summary": "Agricultural Marketing Service",
+      "url": "https://public-inspection.federalregister.gov/2026-19389.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19389/softwood-lumber-board-assessment-rate-clarification-and-changes-to-membership",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19389.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Agricultural Marketing Service"
+      ],
+      "documentType": "Rule",
+      "documentNumber": "2026-19389"
+    },
+    {
+      "id": "fr-pi-2026-19390",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Fisheries of the Exclusive Economic Zone Off Alaska: ''Other Rockfish'' in the Aleutian Islands Subarea of the Bering Sea and Aleutian Islands Management Area",
+      "summary": "National Oceanic and Atmospheric Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19390.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19390/fisheries-of-the-exclusive-economic-zone-off-alaska-other-rockfish-in-the-aleutian-islands-subarea",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19390.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Oceanic and Atmospheric Administration"
+      ],
+      "documentType": "Rule",
+      "documentNumber": "2026-19390"
+    },
+    {
+      "id": "fr-pi-2026-19391",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T08:45:00.000-04:00",
+      "title": "Airspace Designations and Reporting Points: Ottawa, IL",
+      "summary": "Federal Aviation Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-19391.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19391/airspace-designations-and-reporting-points-ottawa-il",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19391.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Aviation Administration"
+      ],
+      "documentType": "Rule",
+      "documentNumber": "2026-19391"
+    },
+    {
+      "id": "fr-pi-2026-19417",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T11:15:00.000-04:00",
+      "title": "Saltwater Angling and Recreation, U.S.; Restoration Efforts (EO 14430)",
+      "summary": "Executive Office of the President",
+      "url": "https://public-inspection.federalregister.gov/2026-19417.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19417/saltwater-angling-and-recreation-us-restoration-efforts-eo-14430",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19417.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "documentType": "Presidential Document",
+      "documentNumber": "2026-19417"
+    },
+    {
+      "id": "fr-pi-2026-19416",
+      "kind": "public_inspection",
+      "when": "2026-09-22",
+      "until": null,
+      "filedAt": "2026-09-21T11:15:00.000-04:00",
+      "title": "Hunting Heritage, U.S.; Reinvigoration Efforts (EO 14429)",
+      "summary": "Executive Office of the President",
+      "url": "https://public-inspection.federalregister.gov/2026-19416.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19416/hunting-heritage-us-reinvigoration-efforts-eo-14429",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-19416.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "documentType": "Presidential Document",
+      "documentNumber": "2026-19416"
+    },
+    {
+      "id": "fr-pres-2026-19335",
+      "kind": "presidential_doc",
+      "when": "2026-09-21",
+      "until": null,
+      "signedAt": null,
+      "title": "Providing Meaningful Water Quality Improvements Through Collaboration and Oversight of Federal Support",
+      "summary": "Presidential Document",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19335.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/21/2026-19335/providing-meaningful-water-quality-improvements-through-collaboration-and-oversight-of-federal",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19335.pdf",
+      "source": "Federal Register presidential documents (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+      "urgency": "recent",
+      "documentType": "Presidential Document"
     },
     {
       "id": "fr-pres-2026-18739",
@@ -2293,6 +2770,54 @@
       "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-10/pdf/2026-18567.pdf",
       "htmlUrl": "https://www.federalregister.gov/documents/2026/09/10/2026-18567/promoting-fair-competition-in-livestock-markets-and-expanding-market-access-for-american-meat",
       "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-10/pdf/2026-18567.pdf",
+      "source": "Federal Register presidential documents (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+      "urgency": "recent",
+      "documentType": "Presidential Document"
+    },
+    {
+      "id": "fr-pres-2026-19336",
+      "kind": "presidential_doc",
+      "when": "2026-09-21",
+      "until": null,
+      "signedAt": null,
+      "title": "Restoring Reciprocity in Government Procurement",
+      "summary": "Presidential Document",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19336.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/21/2026-19336/restoring-reciprocity-in-government-procurement",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19336.pdf",
+      "source": "Federal Register presidential documents (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+      "urgency": "recent",
+      "documentType": "Presidential Document"
+    },
+    {
+      "id": "fr-pres-2026-19334",
+      "kind": "presidential_doc",
+      "when": "2026-09-21",
+      "until": null,
+      "signedAt": null,
+      "title": "National POW/MIA Recognition Day, 2026",
+      "summary": "Presidential Document",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19334.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/21/2026-19334/national-powmia-recognition-day-2026",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19334.pdf",
+      "source": "Federal Register presidential documents (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+      "urgency": "recent",
+      "documentType": "Presidential Document"
+    },
+    {
+      "id": "fr-pres-2026-19333",
+      "kind": "presidential_doc",
+      "when": "2026-09-21",
+      "until": null,
+      "signedAt": null,
+      "title": "Constitution Day, Citizenship Day, and Constitution Week, 2026",
+      "summary": "Presidential Document",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19333.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/21/2026-19333/constitution-day-citizenship-day-and-constitution-week-2026",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19333.pdf",
       "source": "Federal Register presidential documents (PDF)",
       "sourceUrl": "https://www.federalregister.gov/presidential-documents",
       "urgency": "recent",
@@ -2459,13 +2984,32 @@
       "documentType": "Presidential Document"
     },
     {
+      "id": "fr-comment-2026-19290",
+      "kind": "comment_deadline",
+      "when": "2026-10-01",
+      "until": "2026-10-01",
+      "title": "Privacy Act Regulations",
+      "summary": "Commodity Futures Trading Commission",
+      "url": "http://www.regulations.gov/commenton/CFTC-2026-0893-0002",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/21/2026-19290/privacy-act-regulations",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19290.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Commodity Futures Trading Commission"
+      ],
+      "documentNumber": "2026-19290",
+      "documentType": "Proposed Rule"
+    },
+    {
       "id": "fr-comment-2026-19162",
       "kind": "comment_deadline",
       "when": "2026-10-19",
       "until": "2026-10-19",
       "title": "Federal Acquisition Regulation: Revolutionary FAR Overhaul Parts 8, 12, 13, 15, 38, 44, and 51",
       "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
-      "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1913",
+      "url": "http://www.regulations.gov/commenton/FAR-2026-0003-0001",
       "htmlUrl": "https://www.federalregister.gov/documents/2026/09/18/2026-19162/federal-acquisition-regulation-revolutionary-far-overhaul-parts-8-12-13-15-38-44-and-51",
       "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-18/pdf/2026-19162.pdf",
       "source": "Federal Register proposed rule (comments close)",
@@ -2488,7 +3032,7 @@
       "until": "2026-10-19",
       "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 16, 17, and 35",
       "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
-      "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1914",
+      "url": "http://www.regulations.gov/commenton/FAR-2026-0006-0001",
       "htmlUrl": "https://www.federalregister.gov/documents/2026/09/18/2026-19160/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-16-17-and",
       "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-18/pdf/2026-19160.pdf",
       "source": "Federal Register proposed rule (comments close)",
@@ -2511,7 +3055,7 @@
       "until": "2026-10-19",
       "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 9, 27, and 47",
       "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
-      "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1911",
+      "url": "http://www.regulations.gov/commenton/FAR-2026-0011-0001",
       "htmlUrl": "https://www.federalregister.gov/documents/2026/09/18/2026-19159/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-9-27-and",
       "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-18/pdf/2026-19159.pdf",
       "source": "Federal Register proposed rule (comments close)",
@@ -2534,7 +3078,7 @@
       "until": "2026-10-19",
       "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 14, 28, 36, and 52",
       "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration",
-      "url": "http://www.regulations.gov/commenton/FAR_FRDOC_0001-1912",
+      "url": "http://www.regulations.gov/commenton/FAR-2026-0010-0001",
       "htmlUrl": "https://www.federalregister.gov/documents/2026/09/18/2026-19158/federal-acquisition-regulation-revolutionary-federal-acquisition-regulation-overhaul-parts-14-28-36",
       "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-18/pdf/2026-19158.pdf",
       "source": "Federal Register proposed rule (comments close)",
@@ -3609,6 +4153,104 @@
       "documentType": "Proposed Rule"
     },
     {
+      "id": "fr-comment-2026-17183",
+      "kind": "comment_deadline",
+      "when": "2026-10-20",
+      "until": "2026-10-20",
+      "title": "Regulation Crypto Assets",
+      "summary": "Securities and Exchange Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-21/pdf/2026-17183.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/21/2026-17183/regulation-crypto-assets",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-21/pdf/2026-17183.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Securities and Exchange Commission"
+      ],
+      "documentNumber": "2026-17183",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-17163",
+      "kind": "comment_deadline",
+      "when": "2026-10-20",
+      "until": "2026-10-20",
+      "title": "Request for Comment on the Listing of Compute Derivatives Contracts",
+      "summary": "Commodity Futures Trading Commission",
+      "url": "http://www.regulations.gov/commenton/CFTC-2026-1850-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/21/2026-17163/request-for-comment-on-the-listing-of-compute-derivatives-contracts",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-21/pdf/2026-17163.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Commodity Futures Trading Commission"
+      ],
+      "documentNumber": "2026-17163",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-17123",
+      "kind": "comment_deadline",
+      "when": "2026-10-20",
+      "until": "2026-10-20",
+      "title": "Guidance on Eligible Investments for Trump Accounts",
+      "summary": "Treasury Department, Internal Revenue Service",
+      "url": "http://www.regulations.gov/commenton/IRS-2026-1090-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/21/2026-17123/guidance-on-eligible-investments-for-trump-accounts",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-21/pdf/2026-17123.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Treasury Department",
+        "Internal Revenue Service"
+      ],
+      "documentNumber": "2026-17123",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-17119",
+      "kind": "comment_deadline",
+      "when": "2026-10-20",
+      "until": "2026-10-20",
+      "title": "Genealogy Program Regulations To Clarify the Impact of Federal Records Requirements",
+      "summary": "Homeland Security Department",
+      "url": "http://www.regulations.gov/commenton/USCIS-2026-0331-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/21/2026-17119/genealogy-program-regulations-to-clarify-the-impact-of-federal-records-requirements",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-21/pdf/2026-17119.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Homeland Security Department"
+      ],
+      "documentNumber": "2026-17119",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-17108",
+      "kind": "comment_deadline",
+      "when": "2026-10-20",
+      "until": "2026-10-20",
+      "title": "Withdrawal of International Airport Designation of Chalk Seaplane Base",
+      "summary": "Homeland Security Department, Energy Department, U.S. Customs and Border Protection",
+      "url": "http://www.regulations.gov/commenton/USCBP-2026-0892-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/21/2026-17108/withdrawal-of-international-airport-designation-of-chalk-seaplane-base",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-21/pdf/2026-17108.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Homeland Security Department",
+        "Energy Department",
+        "U.S. Customs and Border Protection"
+      ],
+      "documentNumber": "2026-17108",
+      "documentType": "Proposed Rule"
+    },
+    {
       "id": "fr-comment-2026-17079",
       "kind": "comment_deadline",
       "when": "2026-10-05",
@@ -3731,7 +4373,7 @@
       "until": "2026-09-21",
       "title": "Proposed Deletion From the National Priorities List",
       "summary": "Environmental Protection Agency",
-      "url": "http://www.regulations.gov/commenton/EPA-HQ-OLEM-2025-2499-0001",
+      "url": "http://www.regulations.gov/commenton/EPA-HQ-OLEM-2026-3994-0001",
       "htmlUrl": "https://www.federalregister.gov/documents/2026/08/20/2026-16994/proposed-deletion-from-the-national-priorities-list",
       "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-20/pdf/2026-16994.pdf",
       "source": "Federal Register proposed rule (comments close)",
@@ -5227,6 +5869,24 @@
       ],
       "documentNumber": "2026-11545",
       "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-sun-2026-19243-2026-09-24",
+      "kind": "sunshine_meeting",
+      "when": "2026-09-24",
+      "until": "2026-09-24",
+      "title": "Sunshine Act Meetings",
+      "summary": "Securities and Exchange Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19243.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/21/2026-19243/sunshine-act-meetings",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19243.pdf",
+      "source": "Federal Register Sunshine Act meeting",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Securities and Exchange Commission"
+      ],
+      "documentNumber": "2026-19243"
     },
     {
       "id": "fr-sun-2026-17738-2026-10-05",
