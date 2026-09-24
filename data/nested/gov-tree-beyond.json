@@ -41,32 +41,32 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-09-23T17:53:04.704Z",
-      "asOf": "2026-09-23T17:52:37.642Z",
-      "nodesWithHeat": 0,
-      "nodesWithDirectHeat": 0,
-      "rawEventCount": 332,
+      "enrichedAt": "2026-09-24T17:53:05.349Z",
+      "asOf": "2026-09-24T17:52:49.059Z",
+      "nodesWithHeat": 4,
+      "nodesWithDirectHeat": 2,
+      "rawEventCount": 326,
       "matched": {
         "chamber": 0,
         "presidential": 0,
-        "publicInspection": 0,
+        "publicInspection": 3,
         "commentDeadlines": 0,
         "sunshine": 0,
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 106,
-      "unmatchedCommentDeadlines": 139,
+      "unmatchedPublicInspection": 102,
+      "unmatchedCommentDeadlines": 141,
       "unmatchedSunshine": 1,
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 1,
+          "count": 2,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
           "ok": true,
-          "count": 1,
+          "count": 0,
           "url": "https://clerk.house.gov/"
         },
         "majorityLeader": {
@@ -76,42 +76,42 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 106,
+          "count": 105,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
           "count": 22,
-          "since": "2026-09-09",
+          "since": "2026-09-10",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 139,
-          "start": "2026-09-23",
-          "end": "2026-10-22",
+          "count": 141,
+          "start": "2026-09-24",
+          "end": "2026-10-23",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
           "count": 1,
-          "start": "2026-09-23",
-          "end": "2026-10-22",
+          "start": "2026-09-24",
+          "end": "2026-10-23",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
-          "count": 21,
-          "start": "2026-09-23",
-          "end": "2026-10-22",
+          "count": 14,
+          "start": "2026-09-24",
+          "end": "2026-10-23",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
           "count": 0,
-          "start": "2026-09-23",
-          "end": "2026-10-22",
+          "start": "2026-09-24",
+          "end": "2026-10-23",
           "congress": 119,
           "calendarIds": 0,
           "skipped404": [],
@@ -120,8 +120,8 @@
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-09-23",
-          "end": "2026-10-22",
+          "start": "2026-09-24",
+          "end": "2026-10-23",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -140,7 +140,58 @@
       "usgm": null,
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
-    "heat": null,
+    "heat": {
+      "asOf": "2026-09-24T17:52:49.059Z",
+      "count": 3,
+      "rolledUp": true,
+      "events": [
+        {
+          "id": "fr-pi-2026-19689",
+          "kind": "public_inspection",
+          "when": "2026-09-25",
+          "until": null,
+          "filedAt": "2026-09-23T16:15:00.000-04:00",
+          "signedAt": null,
+          "title": "Meetings; Sunshine Act",
+          "summary": "Legal Services Corporation (from lower in the map)",
+          "url": "https://public-inspection.federalregister.gov/2026-19689.pdf",
+          "source": "Federal Register public inspection (PDF)",
+          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+          "urgency": "upcoming",
+          "bill": null
+        },
+        {
+          "id": "fr-pi-2026-19640",
+          "kind": "public_inspection",
+          "when": "2026-09-25",
+          "until": null,
+          "filedAt": "2026-09-24T08:45:00.000-04:00",
+          "signedAt": null,
+          "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: President's Volunteer Service Award",
+          "summary": "Corporation for National and Community Service (from lower in the map)",
+          "url": "https://public-inspection.federalregister.gov/2026-19640.pdf",
+          "source": "Federal Register public inspection (PDF)",
+          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+          "urgency": "upcoming",
+          "bill": null
+        },
+        {
+          "id": "fr-pi-2026-19641",
+          "kind": "public_inspection",
+          "when": "2026-09-25",
+          "until": null,
+          "filedAt": "2026-09-24T08:45:00.000-04:00",
+          "signedAt": null,
+          "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: AmeriCorps Seniors Application Instructions, Progress Reporting, Independent Living and Respite Surveys",
+          "summary": "Corporation for National and Community Service (from lower in the map)",
+          "url": "https://public-inspection.federalregister.gov/2026-19641.pdf",
+          "source": "Federal Register public inspection (PDF)",
+          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+          "urgency": "upcoming",
+          "bill": null
+        }
+      ]
+    },
     "children": [
       {
         "id": "product-chartered",
@@ -154,7 +205,58 @@
           "usgm": null,
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
-        "heat": null,
+        "heat": {
+          "asOf": "2026-09-24T17:52:49.059Z",
+          "count": 3,
+          "rolledUp": true,
+          "events": [
+            {
+              "id": "fr-pi-2026-19689",
+              "kind": "public_inspection",
+              "when": "2026-09-25",
+              "until": null,
+              "filedAt": "2026-09-23T16:15:00.000-04:00",
+              "signedAt": null,
+              "title": "Meetings; Sunshine Act",
+              "summary": "Legal Services Corporation (from lower in the map)",
+              "url": "https://public-inspection.federalregister.gov/2026-19689.pdf",
+              "source": "Federal Register public inspection (PDF)",
+              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-pi-2026-19640",
+              "kind": "public_inspection",
+              "when": "2026-09-25",
+              "until": null,
+              "filedAt": "2026-09-24T08:45:00.000-04:00",
+              "signedAt": null,
+              "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: President's Volunteer Service Award",
+              "summary": "Corporation for National and Community Service (from lower in the map)",
+              "url": "https://public-inspection.federalregister.gov/2026-19640.pdf",
+              "source": "Federal Register public inspection (PDF)",
+              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-pi-2026-19641",
+              "kind": "public_inspection",
+              "when": "2026-09-25",
+              "until": null,
+              "filedAt": "2026-09-24T08:45:00.000-04:00",
+              "signedAt": null,
+              "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: AmeriCorps Seniors Application Instructions, Progress Reporting, Independent Living and Respite Surveys",
+              "summary": "Corporation for National and Community Service (from lower in the map)",
+              "url": "https://public-inspection.federalregister.gov/2026-19641.pdf",
+              "source": "Federal Register public inspection (PDF)",
+              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+              "urgency": "upcoming",
+              "bill": null
+            }
+          ]
+        },
         "children": [
           {
             "id": "gsa-1697",
@@ -989,7 +1091,28 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": null,
+            "heat": {
+              "asOf": "2026-09-24T17:52:49.059Z",
+              "count": 1,
+              "rolledUp": false,
+              "events": [
+                {
+                  "id": "fr-pi-2026-19689",
+                  "kind": "public_inspection",
+                  "when": "2026-09-25",
+                  "until": null,
+                  "filedAt": "2026-09-23T16:15:00.000-04:00",
+                  "signedAt": null,
+                  "title": "Meetings; Sunshine Act",
+                  "summary": "Legal Services Corporation",
+                  "url": "https://public-inspection.federalregister.gov/2026-19689.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                }
+              ]
+            },
             "children": []
           },
           {
@@ -1749,7 +1872,43 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": null,
+            "heat": {
+              "asOf": "2026-09-24T17:52:49.059Z",
+              "count": 2,
+              "rolledUp": false,
+              "events": [
+                {
+                  "id": "fr-pi-2026-19640",
+                  "kind": "public_inspection",
+                  "when": "2026-09-25",
+                  "until": null,
+                  "filedAt": "2026-09-24T08:45:00.000-04:00",
+                  "signedAt": null,
+                  "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: President's Volunteer Service Award",
+                  "summary": "Corporation for National and Community Service",
+                  "url": "https://public-inspection.federalregister.gov/2026-19640.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-pi-2026-19641",
+                  "kind": "public_inspection",
+                  "when": "2026-09-25",
+                  "until": null,
+                  "filedAt": "2026-09-24T08:45:00.000-04:00",
+                  "signedAt": null,
+                  "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: AmeriCorps Seniors Application Instructions, Progress Reporting, Independent Living and Respite Surveys",
+                  "summary": "Corporation for National and Community Service",
+                  "url": "https://public-inspection.federalregister.gov/2026-19641.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                }
+              ]
+            },
             "children": [],
             "spending": {
               "obligatedAmount": 988415591.27,
