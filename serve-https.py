@@ -1,5 +1,68 @@
 #!/usr/bin/env python3
 """Serve GovDash over HTTPS on all interfaces for Mac + phone LAN preview."""
+# --- preview-ctl guard v2: begin ---
+# Managed by ~/bin/preview-ctl.py. Two hazards this removes:
+#   1. The launching terminal can go away while the server runs on. Writing an
+#      access-log line to a dead pipe would raise mid-response and leave the
+#      port open and silent. Make stdio unable to raise.
+#   2. A browser or phone that walks away mid-response is normal, not an error.
+#      Left alone it writes a traceback per disconnect into the log.
+import socketserver as _pc_ss
+import ssl as _pc_ssl
+import sys as _pc_sys
+
+
+class _PcQuiet:
+    def __init__(self, stream):
+        self._stream = stream
+
+    def write(self, data):
+        try:
+            return self._stream.write(data)
+        except Exception:
+            return len(data) if isinstance(data, (str, bytes)) else 0
+
+    def flush(self):
+        try:
+            self._stream.flush()
+        except Exception:
+            pass
+
+    def isatty(self):
+        try:
+            return self._stream.isatty()
+        except Exception:
+            return False
+
+    def fileno(self):
+        return self._stream.fileno()
+
+    def __getattr__(self, name):
+        return getattr(self._stream, name)
+
+
+_pc_sys.stdout = _PcQuiet(_pc_sys.stdout)
+_pc_sys.stderr = _PcQuiet(_pc_sys.stderr)
+
+_PC_QUIET_ERRORS = (
+    BrokenPipeError,
+    ConnectionResetError,
+    ConnectionAbortedError,
+    TimeoutError,
+    _pc_ssl.SSLError,
+)
+_pc_handle_error = _pc_ss.BaseServer.handle_error
+
+
+def _pc_quiet_handle_error(self, request, client_address):
+    if isinstance(_pc_sys.exc_info()[1], _PC_QUIET_ERRORS):
+        return
+    return _pc_handle_error(self, request, client_address)
+
+
+_pc_ss.BaseServer.handle_error = _pc_quiet_handle_error
+# --- preview-ctl guard v2: end ---
+
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 from urllib.error import HTTPError
