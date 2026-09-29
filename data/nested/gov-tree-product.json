@@ -80,18 +80,18 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-09-29T13:40:27.354Z",
-      "asOf": "2026-09-29T13:40:11.033Z",
+      "enrichedAt": "2026-09-29T18:40:55.105Z",
+      "asOf": "2026-09-29T18:40:38.133Z",
       "nodesWithHeat": 110,
-      "nodesWithDirectHeat": 57,
-      "rawEventCount": 319,
+      "nodesWithDirectHeat": 58,
+      "rawEventCount": 318,
       "matched": {
-        "chamber": 43,
+        "chamber": 42,
         "presidential": 11,
-        "publicInspection": 107,
+        "publicInspection": 108,
         "commentDeadlines": 113,
         "sunshine": 3,
-        "hearings": 15,
+        "hearings": 14,
         "scotus": 1
       },
       "unmatchedPublicInspection": 20,
@@ -100,7 +100,7 @@
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 2,
+          "count": 1,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
@@ -115,7 +115,7 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 127,
+          "count": 128,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
@@ -141,7 +141,7 @@
         },
         "senateHearings": {
           "ok": true,
-          "count": 15,
+          "count": 14,
           "start": "2026-09-29",
           "end": "2026-10-28",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
@@ -297,8 +297,8 @@
       "note": "Product root: curated for the citizen map. Full Crosswalk nest preserved in gov-tree-full.json."
     },
     "heat": {
-      "asOf": "2026-09-29T13:40:11.033Z",
-      "count": 248,
+      "asOf": "2026-09-29T18:40:38.133Z",
+      "count": 249,
       "rolledUp": true,
       "events": [
         {
@@ -418,7 +418,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-09-29T13:40:11.033Z",
+          "asOf": "2026-09-29T18:40:38.133Z",
           "count": 24,
           "rolledUp": true,
           "events": [
@@ -468,21 +468,6 @@
               "bill": null
             },
             {
-              "id": "senate-hearing-338792",
-              "kind": "hearing",
-              "when": "2026-10-01",
-              "until": null,
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Business meeting to consider S.5289, to protect the right to the free exercise of religion, and the nominations of Daniel Lewis Ballou, to be United States District Judge for the Eastern District of Kentucky, Richard Wesley Bennett, to be United States District Judge for the Southern District of Texas, Courtney Leigh Coker, to be United States District Judge for the Northern District of Texas, Trevor Scott Pemberton, to be United States District Judge for the Northern District of Oklahoma, Kyle Frederick Reardon, to be United States District Judge for the District of Alaska, and Zachary Paul West, to be United States District Judge for the Eastern District of Oklahoma.",
-              "summary": "Judiciary · Open Business Meeting · 10:15 AM · SH-216 (from lower in the map)",
-              "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-              "source": "Senate.gov committee hearings XML",
-              "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
               "id": "senate-hearing-338794",
               "kind": "hearing",
               "when": "2026-10-01",
@@ -491,6 +476,21 @@
               "signedAt": null,
               "title": "To receive a closed briefing on an update on Venezuela.",
               "summary": "Foreign Relations · Closed Hearing · 10:30 AM · SVC-217 (from lower in the map)",
+              "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+              "source": "Senate.gov committee hearings XML",
+              "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "senate-hearing-338770",
+              "kind": "hearing",
+              "when": "2026-09-30",
+              "until": null,
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Business meeting to consider the nominations of Nicole Saphier, of New Jersey, to be Medical Director in the Regular Corps of the Public Health Service, subject to qualifications therefor as provided by law and regulations, and to be Surgeon General of the Public Health Service, Timothy Westlake, of Wisconsin, to be Assistant Secretary for Mental Health and Substance Use, and Mary Lazare, of Florida, to be Assistant Secretary for Aging, all of the Department of Health and Human Services, and Loren E. Sweatt, of Virginia, and Douglas Ralph, of Kentucky, both to be a Member of the National Mediation Board.",
+              "summary": "Health, Education, Labor, and Pensions · Open Business Meeting · 09:45 AM · SD-430 (from lower in the map)",
               "url": "https://www.senate.gov/committees/hearings_meetings.htm",
               "source": "Senate.gov committee hearings XML",
               "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
@@ -1091,7 +1091,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 24,
               "rolledUp": true,
               "events": [
@@ -1141,21 +1141,6 @@
                   "bill": null
                 },
                 {
-                  "id": "senate-hearing-338792",
-                  "kind": "hearing",
-                  "when": "2026-10-01",
-                  "until": null,
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Business meeting to consider S.5289, to protect the right to the free exercise of religion, and the nominations of Daniel Lewis Ballou, to be United States District Judge for the Eastern District of Kentucky, Richard Wesley Bennett, to be United States District Judge for the Southern District of Texas, Courtney Leigh Coker, to be United States District Judge for the Northern District of Texas, Trevor Scott Pemberton, to be United States District Judge for the Northern District of Oklahoma, Kyle Frederick Reardon, to be United States District Judge for the District of Alaska, and Zachary Paul West, to be United States District Judge for the Eastern District of Oklahoma.",
-                  "summary": "Judiciary · Open Business Meeting · 10:15 AM · SH-216 (from lower in the map)",
-                  "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-                  "source": "Senate.gov committee hearings XML",
-                  "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
                   "id": "senate-hearing-338794",
                   "kind": "hearing",
                   "when": "2026-10-01",
@@ -1164,6 +1149,21 @@
                   "signedAt": null,
                   "title": "To receive a closed briefing on an update on Venezuela.",
                   "summary": "Foreign Relations · Closed Hearing · 10:30 AM · SVC-217 (from lower in the map)",
+                  "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+                  "source": "Senate.gov committee hearings XML",
+                  "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "senate-hearing-338770",
+                  "kind": "hearing",
+                  "when": "2026-09-30",
+                  "until": null,
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Business meeting to consider the nominations of Nicole Saphier, of New Jersey, to be Medical Director in the Regular Corps of the Public Health Service, subject to qualifications therefor as provided by law and regulations, and to be Surgeon General of the Public Health Service, Timothy Westlake, of Wisconsin, to be Assistant Secretary for Mental Health and Substance Use, and Mary Lazare, of Florida, to be Assistant Secretary for Aging, all of the Department of Health and Human Services, and Loren E. Sweatt, of Virginia, and Douglas Ralph, of Kentucky, both to be a Member of the National Mediation Board.",
+                  "summary": "Health, Education, Labor, and Pensions · Open Business Meeting · 09:45 AM · SD-430 (from lower in the map)",
                   "url": "https://www.senate.gov/committees/hearings_meetings.htm",
                   "source": "Senate.gov committee hearings XML",
                   "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
@@ -1322,7 +1322,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-09-29T13:40:11.033Z",
+                  "asOf": "2026-09-29T18:40:38.133Z",
                   "count": 12,
                   "rolledUp": false,
                   "events": [
@@ -1638,7 +1638,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-09-29T13:40:11.033Z",
+                  "asOf": "2026-09-29T18:40:38.133Z",
                   "count": 12,
                   "rolledUp": false,
                   "events": [
@@ -1666,21 +1666,6 @@
                       "signedAt": null,
                       "title": "Hearings to examine the nominations of Jeremy Wiggins, of the District of Columbia, to be an Assistant Secretary of the Treasury, Matthew Jones, of Virginia, to be an Assistant Secretary of Housing and Urban Development, and David Slade, of Florida, to be First Vice President, and Michael Rigas, of Virginia, to be a Member of the Board of Directors, both of the Export-Import Bank of the United States.",
                       "summary": "Banking, Housing, and Urban Affairs · Open Hearing · 10:00 AM · SD-538",
-                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-                      "source": "Senate.gov committee hearings XML",
-                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "senate-hearing-338792",
-                      "kind": "hearing",
-                      "when": "2026-10-01",
-                      "until": null,
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Business meeting to consider S.5289, to protect the right to the free exercise of religion, and the nominations of Daniel Lewis Ballou, to be United States District Judge for the Eastern District of Kentucky, Richard Wesley Bennett, to be United States District Judge for the Southern District of Texas, Courtney Leigh Coker, to be United States District Judge for the Northern District of Texas, Trevor Scott Pemberton, to be United States District Judge for the Northern District of Oklahoma, Kyle Frederick Reardon, to be United States District Judge for the District of Alaska, and Zachary Paul West, to be United States District Judge for the Eastern District of Oklahoma.",
-                      "summary": "Judiciary · Open Business Meeting · 10:15 AM · SH-216",
                       "url": "https://www.senate.gov/committees/hearings_meetings.htm",
                       "source": "Senate.gov committee hearings XML",
                       "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
@@ -1808,17 +1793,32 @@
                       "bill": null
                     },
                     {
-                      "id": "senate-next-2026-09-29T10:00:00-04:00",
-                      "kind": "floor_session",
-                      "when": "2026-09-29T10:00:00-04:00",
+                      "id": "senate-hearing-338784",
+                      "kind": "hearing",
+                      "when": "2026-09-29",
                       "until": null,
                       "filedAt": null,
                       "signedAt": null,
-                      "title": "Senate next convenes",
-                      "summary": "",
-                      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-                      "source": "Senate.gov floor schedule XML",
-                      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
+                      "title": "Oversight hearings to examine Jack Smith's authority and Republicans and related matters.",
+                      "summary": "Judiciary · Open Hearing · 09:00 AM · SH-216",
+                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+                      "source": "Senate.gov committee hearings XML",
+                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "senate-hearing-338783",
+                      "kind": "hearing",
+                      "when": "2026-09-29",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Oversight hearings to examine the United States Patent and Trademark Office.",
+                      "summary": "Judiciary · Open Hearing · 02:30 PM · SD-562",
+                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+                      "source": "Senate.gov committee hearings XML",
+                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
                       "urgency": "upcoming",
                       "bill": null
                     }
@@ -2763,8 +2763,8 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-09-29T13:40:11.033Z",
-          "count": 158,
+          "asOf": "2026-09-29T18:40:38.133Z",
+          "count": 159,
           "rolledUp": true,
           "events": [
             {
@@ -2884,8 +2884,8 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
-              "count": 16,
+              "asOf": "2026-09-29T18:40:38.133Z",
+              "count": 17,
               "rolledUp": false,
               "events": [
                 {
@@ -3095,71 +3095,27 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-29T13:40:11.033Z",
-                  "count": 5,
-                  "rolledUp": true,
+                  "asOf": "2026-09-29T18:40:38.133Z",
+                  "count": 6,
+                  "rolledUp": false,
                   "events": [
                     {
-                      "id": "fr-comment-2026-19162",
-                      "kind": "comment_deadline",
-                      "when": "2026-10-19",
-                      "until": "2026-10-19",
-                      "filedAt": null,
+                      "id": "fr-pi-2026-20093",
+                      "kind": "public_inspection",
+                      "when": "2026-09-30",
+                      "until": null,
+                      "filedAt": "2026-09-29T11:15:00.000-04:00",
                       "signedAt": null,
-                      "title": "Federal Acquisition Regulation: Revolutionary FAR Overhaul Parts 8, 12, 13, 15, 38, 44, and 51",
-                      "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAR-2026-0003-0001",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-19160",
-                      "kind": "comment_deadline",
-                      "when": "2026-10-19",
-                      "until": "2026-10-19",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 16, 17, and 35",
-                      "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAR-2026-0006-0001",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-19159",
-                      "kind": "comment_deadline",
-                      "when": "2026-10-19",
-                      "until": "2026-10-19",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 9, 27, and 47",
-                      "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAR-2026-0011-0001",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-19158",
-                      "kind": "comment_deadline",
-                      "when": "2026-10-19",
-                      "until": "2026-10-19",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Federal Acquisition Regulation: Revolutionary Federal Acquisition Regulation Overhaul Parts 14, 28, 36, and 52",
-                      "summary": "Management and Budget Office, Federal Procurement Policy Office, Defense Department, General Services Administration, National Aeronautics and Space Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAR-2026-0010-0001",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
+                      "title": "Special Observances: Gold Star Mother's and Family's Day (Proc. 11070)",
+                      "summary": "Executive Office of the President",
+                      "url": "https://public-inspection.federalregister.gov/2026-20093.pdf",
+                      "source": "Federal Register public inspection (PDF)",
+                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                       "urgency": "upcoming",
                       "bill": null
                     }
-                  ]
+                  ],
+                  "hasChildHeat": true
                 },
                 "children": [
                   {
@@ -3296,7 +3252,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-29T13:40:11.033Z",
+                      "asOf": "2026-09-29T18:40:38.133Z",
                       "count": 5,
                       "rolledUp": false,
                       "events": [
@@ -3942,7 +3898,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 6,
               "rolledUp": true,
               "events": [
@@ -4074,7 +4030,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-29T13:40:11.033Z",
+                  "asOf": "2026-09-29T18:40:38.133Z",
                   "count": 6,
                   "rolledUp": true,
                   "events": [
@@ -4180,7 +4136,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-29T13:40:11.033Z",
+                      "asOf": "2026-09-29T18:40:38.133Z",
                       "count": 6,
                       "rolledUp": true,
                       "events": [
@@ -5534,7 +5490,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 2,
                           "rolledUp": true,
                           "events": [
@@ -5674,7 +5630,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-29T13:40:11.033Z",
+                              "asOf": "2026-09-29T18:40:38.133Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -5816,7 +5772,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -5862,7 +5818,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-29T13:40:11.033Z",
+                              "asOf": "2026-09-29T18:40:38.133Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -6329,7 +6285,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 3,
                           "rolledUp": true,
                           "events": [
@@ -6442,7 +6398,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-29T13:40:11.033Z",
+                              "asOf": "2026-09-29T18:40:38.133Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -6505,7 +6461,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-29T13:40:11.033Z",
+                              "asOf": "2026-09-29T18:40:38.133Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -6880,7 +6836,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 17,
               "rolledUp": true,
               "events": [
@@ -7001,7 +6957,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-29T13:40:11.033Z",
+                  "asOf": "2026-09-29T18:40:38.133Z",
                   "count": 17,
                   "rolledUp": true,
                   "events": [
@@ -7122,7 +7078,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-29T13:40:11.033Z",
+                      "asOf": "2026-09-29T18:40:38.133Z",
                       "count": 17,
                       "rolledUp": true,
                       "events": [
@@ -7243,7 +7199,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 17,
                           "rolledUp": true,
                           "events": [
@@ -7861,7 +7817,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-29T13:40:11.033Z",
+                              "asOf": "2026-09-29T18:40:38.133Z",
                               "count": 1,
                               "rolledUp": true,
                               "events": [
@@ -7942,7 +7898,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-09-29T13:40:11.033Z",
+                                  "asOf": "2026-09-29T18:40:38.133Z",
                                   "count": 1,
                                   "rolledUp": true,
                                   "events": [
@@ -8050,7 +8006,7 @@
                                       "usgm": null
                                     },
                                     "heat": {
-                                      "asOf": "2026-09-29T13:40:11.033Z",
+                                      "asOf": "2026-09-29T18:40:38.133Z",
                                       "count": 1,
                                       "rolledUp": false,
                                       "events": [
@@ -8179,7 +8135,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-29T13:40:11.033Z",
+                              "asOf": "2026-09-29T18:40:38.133Z",
                               "count": 1,
                               "rolledUp": true,
                               "events": [
@@ -8277,7 +8233,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-09-29T13:40:11.033Z",
+                                  "asOf": "2026-09-29T18:40:38.133Z",
                                   "count": 1,
                                   "rolledUp": false,
                                   "events": [
@@ -8529,7 +8485,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-29T13:40:11.033Z",
+                              "asOf": "2026-09-29T18:40:38.133Z",
                               "count": 7,
                               "rolledUp": true,
                               "events": [
@@ -8680,7 +8636,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-09-29T13:40:11.033Z",
+                                  "asOf": "2026-09-29T18:40:38.133Z",
                                   "count": 7,
                                   "rolledUp": false,
                                   "events": [
@@ -9029,7 +8985,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-29T13:40:11.033Z",
+                              "asOf": "2026-09-29T18:40:38.133Z",
                               "count": 7,
                               "rolledUp": true,
                               "events": [
@@ -9120,7 +9076,7 @@
                                   "usgm": null
                                 },
                                 "heat": {
-                                  "asOf": "2026-09-29T13:40:11.033Z",
+                                  "asOf": "2026-09-29T18:40:38.133Z",
                                   "count": 7,
                                   "rolledUp": true,
                                   "events": [
@@ -9313,7 +9269,7 @@
                                       }
                                     },
                                     "heat": {
-                                      "asOf": "2026-09-29T13:40:11.033Z",
+                                      "asOf": "2026-09-29T18:40:38.133Z",
                                       "count": 7,
                                       "rolledUp": false,
                                       "events": [
@@ -9532,7 +9488,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-29T13:40:11.033Z",
+                              "asOf": "2026-09-29T18:40:38.133Z",
                               "count": 1,
                               "rolledUp": true,
                               "events": [
@@ -9624,7 +9580,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-09-29T13:40:11.033Z",
+                                  "asOf": "2026-09-29T18:40:38.133Z",
                                   "count": 1,
                                   "rolledUp": false,
                                   "events": [
@@ -23670,7 +23626,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 5,
               "rolledUp": true,
               "events": [
@@ -23761,7 +23717,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-29T13:40:11.033Z",
+                  "asOf": "2026-09-29T18:40:38.133Z",
                   "count": 5,
                   "rolledUp": true,
                   "events": [
@@ -26397,7 +26353,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-29T13:40:11.033Z",
+                      "asOf": "2026-09-29T18:40:38.133Z",
                       "count": 5,
                       "rolledUp": false,
                       "events": [
@@ -26729,7 +26685,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 19,
               "rolledUp": true,
               "events": [
@@ -26850,7 +26806,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-29T13:40:11.033Z",
+                  "asOf": "2026-09-29T18:40:38.133Z",
                   "count": 19,
                   "rolledUp": true,
                   "events": [
@@ -26996,7 +26952,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-29T13:40:11.033Z",
+                      "asOf": "2026-09-29T18:40:38.133Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -27347,7 +27303,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-29T13:40:11.033Z",
+                      "asOf": "2026-09-29T18:40:38.133Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -27574,7 +27530,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-29T13:40:11.033Z",
+                      "asOf": "2026-09-29T18:40:38.133Z",
                       "count": 3,
                       "rolledUp": false,
                       "events": [
@@ -28445,7 +28401,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-29T13:40:11.033Z",
+                      "asOf": "2026-09-29T18:40:38.133Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -28581,7 +28537,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-29T13:40:11.033Z",
+                      "asOf": "2026-09-29T18:40:38.133Z",
                       "count": 5,
                       "rolledUp": false,
                       "events": [
@@ -28890,7 +28846,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-09-29T13:40:11.033Z",
+                      "asOf": "2026-09-29T18:40:38.133Z",
                       "count": 6,
                       "rolledUp": false,
                       "events": [
@@ -29237,7 +29193,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 7,
               "rolledUp": true,
               "events": [
@@ -29343,7 +29299,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-29T13:40:11.033Z",
+                  "asOf": "2026-09-29T18:40:38.133Z",
                   "count": 7,
                   "rolledUp": true,
                   "events": [
@@ -29449,7 +29405,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-29T13:40:11.033Z",
+                      "asOf": "2026-09-29T18:40:38.133Z",
                       "count": 7,
                       "rolledUp": true,
                       "events": [
@@ -30962,7 +30918,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 6,
                           "rolledUp": false,
                           "events": [
@@ -31110,7 +31066,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -31724,7 +31680,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -33488,7 +33444,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 2,
               "rolledUp": true,
               "events": [
@@ -33585,7 +33541,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-29T13:40:11.033Z",
+                  "asOf": "2026-09-29T18:40:38.133Z",
                   "count": 2,
                   "rolledUp": true,
                   "events": [
@@ -33646,7 +33602,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-29T13:40:11.033Z",
+                      "asOf": "2026-09-29T18:40:38.133Z",
                       "count": 2,
                       "rolledUp": true,
                       "events": [
@@ -35065,7 +35021,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -35147,7 +35103,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -35596,7 +35552,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 3,
               "rolledUp": true,
               "events": [
@@ -35672,7 +35628,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-29T13:40:11.033Z",
+                  "asOf": "2026-09-29T18:40:38.133Z",
                   "count": 3,
                   "rolledUp": true,
                   "events": [
@@ -35748,7 +35704,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-29T13:40:11.033Z",
+                      "asOf": "2026-09-29T18:40:38.133Z",
                       "count": 3,
                       "rolledUp": true,
                       "events": [
@@ -36347,7 +36303,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -37231,7 +37187,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -39894,7 +39850,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 17,
               "rolledUp": true,
               "events": [
@@ -40015,7 +39971,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-29T13:40:11.033Z",
+                  "asOf": "2026-09-29T18:40:38.133Z",
                   "count": 17,
                   "rolledUp": true,
                   "events": [
@@ -40136,7 +40092,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-29T13:40:11.033Z",
+                      "asOf": "2026-09-29T18:40:38.133Z",
                       "count": 17,
                       "rolledUp": true,
                       "events": [
@@ -40257,7 +40213,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 13,
                           "rolledUp": true,
                           "events": [
@@ -40445,7 +40401,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-09-29T13:40:11.033Z",
+                              "asOf": "2026-09-29T18:40:38.133Z",
                               "count": 12,
                               "rolledUp": false,
                               "events": [
@@ -40531,7 +40487,7 @@
                                   "until": null,
                                   "filedAt": "2026-09-29T08:45:00.000-04:00",
                                   "signedAt": null,
-                                  "title": "Repatriation of Cultural Items: Boston Children’s Museum, Boston, MA",
+                                  "title": "Repatriation of Cultural Items: Boston Children's Museum, Boston, MA",
                                   "summary": "National Park Service",
                                   "url": "https://public-inspection.federalregister.gov/2026-19992.pdf",
                                   "source": "Federal Register public inspection (PDF)",
@@ -40713,7 +40669,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-09-29T13:40:11.033Z",
+                              "asOf": "2026-09-29T18:40:38.133Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -41131,7 +41087,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 4,
                           "rolledUp": true,
                           "events": [
@@ -41229,7 +41185,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-09-29T13:40:11.033Z",
+                              "asOf": "2026-09-29T18:40:38.133Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -41339,7 +41295,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-09-29T13:40:11.033Z",
+                              "asOf": "2026-09-29T18:40:38.133Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -41434,7 +41390,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-09-29T13:40:11.033Z",
+                              "asOf": "2026-09-29T18:40:38.133Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -42546,7 +42502,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 20,
               "rolledUp": true,
               "events": [
@@ -42693,7 +42649,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-29T13:40:11.033Z",
+                  "asOf": "2026-09-29T18:40:38.133Z",
                   "count": 20,
                   "rolledUp": true,
                   "events": [
@@ -42866,7 +42822,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-29T13:40:11.033Z",
+                      "asOf": "2026-09-29T18:40:38.133Z",
                       "count": 20,
                       "rolledUp": true,
                       "events": [
@@ -43138,7 +43094,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 4,
                           "rolledUp": true,
                           "events": [
@@ -43256,7 +43212,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-09-29T13:40:11.033Z",
+                              "asOf": "2026-09-29T18:40:38.133Z",
                               "count": 4,
                               "rolledUp": false,
                               "events": [
@@ -43461,7 +43417,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 3,
                           "rolledUp": false,
                           "events": [
@@ -43590,7 +43546,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 3,
                           "rolledUp": true,
                           "events": [
@@ -43666,7 +43622,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-29T13:40:11.033Z",
+                              "asOf": "2026-09-29T18:40:38.133Z",
                               "count": 3,
                               "rolledUp": true,
                               "events": [
@@ -43742,7 +43698,7 @@
                                   "usgm": null
                                 },
                                 "heat": {
-                                  "asOf": "2026-09-29T13:40:11.033Z",
+                                  "asOf": "2026-09-29T18:40:38.133Z",
                                   "count": 3,
                                   "rolledUp": false,
                                   "events": [
@@ -44151,7 +44107,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -44249,7 +44205,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-09-29T13:40:11.033Z",
+                              "asOf": "2026-09-29T18:40:38.133Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -44665,7 +44621,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 9,
                           "rolledUp": false,
                           "events": [
@@ -45189,7 +45145,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 44,
               "rolledUp": true,
               "events": [
@@ -45310,7 +45266,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-09-29T13:40:11.033Z",
+                  "asOf": "2026-09-29T18:40:38.133Z",
                   "count": 44,
                   "rolledUp": true,
                   "events": [
@@ -45431,7 +45387,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-09-29T13:40:11.033Z",
+                      "asOf": "2026-09-29T18:40:38.133Z",
                       "count": 44,
                       "rolledUp": true,
                       "events": [
@@ -45883,7 +45839,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 4,
                           "rolledUp": false,
                           "events": [
@@ -46026,7 +45982,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -46226,7 +46182,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 5,
                           "rolledUp": false,
                           "events": [
@@ -46742,7 +46698,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-09-29T13:40:11.033Z",
+                          "asOf": "2026-09-29T18:40:38.133Z",
                           "count": 33,
                           "rolledUp": false,
                           "events": [
@@ -49627,7 +49583,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-09-29T13:40:11.033Z",
+          "asOf": "2026-09-29T18:40:38.133Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -50236,7 +50192,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -51337,7 +51293,7 @@
           "note": "Product door: Crosswalk Independent Federal Agencies + major non-Cabinet agencies + government corporations shelf. Constitutionally many report through the Executive; shown separately for citizen clarity."
         },
         "heat": {
-          "asOf": "2026-09-29T13:40:11.033Z",
+          "asOf": "2026-09-29T18:40:38.133Z",
           "count": 65,
           "rolledUp": true,
           "events": [
@@ -52681,7 +52637,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 7,
               "rolledUp": false,
               "events": [
@@ -53994,7 +53950,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 5,
               "rolledUp": false,
               "events": [
@@ -54460,7 +54416,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -54537,7 +54493,7 @@
               "note": "Product shelf: GSE / government corporation entities lifted from Crosswalk Industry bucket."
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 5,
               "rolledUp": true,
               "events": [
@@ -55149,7 +55105,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-09-29T13:40:11.033Z",
+                  "asOf": "2026-09-29T18:40:38.133Z",
                   "count": 3,
                   "rolledUp": false,
                   "events": [
@@ -56263,7 +56219,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-09-29T13:40:11.033Z",
+                  "asOf": "2026-09-29T18:40:38.133Z",
                   "count": 2,
                   "rolledUp": false,
                   "events": [
@@ -57386,7 +57342,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -62306,7 +62262,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -62555,7 +62511,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -63249,7 +63205,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 12,
               "rolledUp": false,
               "events": [
@@ -64775,7 +64731,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 5,
               "rolledUp": false,
               "events": [
@@ -66222,7 +66178,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -66738,7 +66694,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -68335,7 +68291,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -68579,7 +68535,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 12,
               "rolledUp": false,
               "events": [
@@ -69138,7 +69094,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-09-29T13:40:11.033Z",
+              "asOf": "2026-09-29T18:40:38.133Z",
               "count": 3,
               "rolledUp": false,
               "events": [

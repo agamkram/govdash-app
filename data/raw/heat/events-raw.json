@@ -1,9 +1,9 @@
 {
-  "fetchedAt": "2026-09-29T13:40:11.033Z",
+  "fetchedAt": "2026-09-29T18:40:38.133Z",
   "sources": {
     "senateFloor": {
       "ok": true,
-      "count": 2,
+      "count": 1,
       "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
     },
     "houseClerk": {
@@ -18,7 +18,7 @@
     },
     "publicInspection": {
       "ok": true,
-      "count": 127,
+      "count": 128,
       "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
     },
     "presidential": {
@@ -44,7 +44,7 @@
     },
     "senateHearings": {
       "ok": true,
-      "count": 15,
+      "count": 14,
       "start": "2026-09-29",
       "end": "2026-10-28",
       "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
@@ -80,19 +80,6 @@
       "source": "Senate.gov floor schedule XML",
       "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
       "urgency": "recent"
-    },
-    {
-      "id": "senate-next-2026-09-29T10:00:00-04:00",
-      "kind": "floor_session",
-      "chamber": "Senate",
-      "when": "2026-09-29T10:00:00-04:00",
-      "until": null,
-      "title": "Senate next convenes",
-      "summary": "",
-      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-      "source": "Senate.gov floor schedule XML",
-      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-      "urgency": "upcoming"
     },
     {
       "id": "house-next-2026-10-01T15:30:00.000Z",
@@ -1433,7 +1420,7 @@
       "when": "2026-09-30",
       "until": null,
       "filedAt": "2026-09-29T08:45:00.000-04:00",
-      "title": "Culturally Significant Objects Imported for Exhibition: Making History: Manet’s ''Execution of Maximilian'' from the National Gallery, London",
+      "title": "Culturally Significant Objects Imported for Exhibition: Making History: Manet's ''Execution of Maximilian'' from the National Gallery, London",
       "summary": "State Department",
       "url": "https://public-inspection.federalregister.gov/2026-19975.pdf",
       "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19975/culturally-significant-objects-imported-for-exhibition-making-history-manets-execution-of-maximilian",
@@ -1773,7 +1760,7 @@
       "when": "2026-09-30",
       "until": null,
       "filedAt": "2026-09-29T08:45:00.000-04:00",
-      "title": "Repatriation of Cultural Items: Boston Children’s Museum, Boston, MA",
+      "title": "Repatriation of Cultural Items: Boston Children's Museum, Boston, MA",
       "summary": "National Park Service",
       "url": "https://public-inspection.federalregister.gov/2026-19992.pdf",
       "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-19992/repatriation-of-cultural-items-boston-childrens-museum-boston-ma",
@@ -3206,6 +3193,26 @@
       ],
       "documentType": "Proposed Rule",
       "documentNumber": "2026-20078"
+    },
+    {
+      "id": "fr-pi-2026-20093",
+      "kind": "public_inspection",
+      "when": "2026-09-30",
+      "until": null,
+      "filedAt": "2026-09-29T11:15:00.000-04:00",
+      "title": "Special Observances: Gold Star Mother's and Family's Day (Proc. 11070)",
+      "summary": "Executive Office of the President",
+      "url": "https://public-inspection.federalregister.gov/2026-20093.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-20093/special-observances-gold-star-mothers-and-familys-day-proc-11070",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-20093.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Executive Office of the President"
+      ],
+      "documentType": "Presidential Document",
+      "documentNumber": "2026-20093"
     },
     {
       "id": "fr-pres-2026-19555",
@@ -5976,20 +5983,6 @@
       "until": null,
       "title": "Hearings to examine the nominations of Jeremy Wiggins, of the District of Columbia, to be an Assistant Secretary of the Treasury, Matthew Jones, of Virginia, to be an Assistant Secretary of Housing and Urban Development, and David Slade, of Florida, to be First Vice President, and Michael Rigas, of Virginia, to be a Member of the Board of Directors, both of the Export-Import Bank of the United States.",
       "summary": "Banking, Housing, and Urban Affairs · Open Hearing · 10:00 AM · SD-538",
-      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-      "source": "Senate.gov committee hearings XML",
-      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-      "urgency": "upcoming"
-    },
-    {
-      "id": "senate-hearing-338792",
-      "kind": "hearing",
-      "chamber": "Senate",
-      "committee": "Judiciary",
-      "when": "2026-10-01",
-      "until": null,
-      "title": "Business meeting to consider S.5289, to protect the right to the free exercise of religion, and the nominations of Daniel Lewis Ballou, to be United States District Judge for the Eastern District of Kentucky, Richard Wesley Bennett, to be United States District Judge for the Southern District of Texas, Courtney Leigh Coker, to be United States District Judge for the Northern District of Texas, Trevor Scott Pemberton, to be United States District Judge for the Northern District of Oklahoma, Kyle Frederick Reardon, to be United States District Judge for the District of Alaska, and Zachary Paul West, to be United States District Judge for the Eastern District of Oklahoma.",
-      "summary": "Judiciary · Open Business Meeting · 10:15 AM · SH-216",
       "url": "https://www.senate.gov/committees/hearings_meetings.htm",
       "source": "Senate.gov committee hearings XML",
       "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
