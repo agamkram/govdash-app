@@ -41,27 +41,27 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-09-30T18:28:05.368Z",
-      "asOf": "2026-09-30T18:27:44.791Z",
-      "nodesWithHeat": 3,
-      "nodesWithDirectHeat": 1,
-      "rawEventCount": 262,
+      "enrichedAt": "2026-10-01T18:55:53.161Z",
+      "asOf": "2026-10-01T18:55:33.861Z",
+      "nodesWithHeat": 0,
+      "nodesWithDirectHeat": 0,
+      "rawEventCount": 240,
       "matched": {
         "chamber": 0,
         "presidential": 0,
         "publicInspection": 0,
         "commentDeadlines": 0,
-        "sunshine": 1,
+        "sunshine": 0,
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 112,
-      "unmatchedCommentDeadlines": 121,
+      "unmatchedPublicInspection": 96,
+      "unmatchedCommentDeadlines": 124,
       "unmatchedSunshine": 3,
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 2,
+          "count": 3,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
@@ -76,42 +76,42 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 112,
+          "count": 96,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
           "count": 10,
-          "since": "2026-09-16",
+          "since": "2026-09-17",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 121,
-          "start": "2026-09-30",
-          "end": "2026-10-29",
+          "count": 124,
+          "start": "2026-10-01",
+          "end": "2026-10-30",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
-          "count": 4,
-          "start": "2026-09-30",
-          "end": "2026-10-29",
+          "count": 3,
+          "start": "2026-10-01",
+          "end": "2026-10-30",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
-          "count": 10,
-          "start": "2026-09-30",
-          "end": "2026-10-29",
+          "count": 1,
+          "start": "2026-10-01",
+          "end": "2026-10-30",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
           "count": 1,
-          "start": "2026-09-30",
-          "end": "2026-10-29",
+          "start": "2026-10-01",
+          "end": "2026-10-30",
           "congress": 119,
           "calendarIds": 1,
           "skipped404": [],
@@ -120,8 +120,8 @@
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-09-30",
-          "end": "2026-10-29",
+          "start": "2026-10-01",
+          "end": "2026-10-30",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -140,28 +140,7 @@
       "usgm": null,
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
-    "heat": {
-      "asOf": "2026-09-30T18:27:44.791Z",
-      "count": 1,
-      "rolledUp": true,
-      "events": [
-        {
-          "id": "fr-sun-2026-19689-2026-09-30",
-          "kind": "sunshine_meeting",
-          "when": "2026-09-30",
-          "until": "2026-09-30",
-          "filedAt": null,
-          "signedAt": null,
-          "title": "Sunshine Act Meetings",
-          "summary": "Legal Services Corporation (from lower in the map)",
-          "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-25/pdf/2026-19689.pdf",
-          "source": "Federal Register Sunshine Act meeting",
-          "sourceUrl": "https://www.federalregister.gov/",
-          "urgency": "upcoming",
-          "bill": null
-        }
-      ]
-    },
+    "heat": null,
     "children": [
       {
         "id": "product-chartered",
@@ -175,28 +154,7 @@
           "usgm": null,
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
-        "heat": {
-          "asOf": "2026-09-30T18:27:44.791Z",
-          "count": 1,
-          "rolledUp": true,
-          "events": [
-            {
-              "id": "fr-sun-2026-19689-2026-09-30",
-              "kind": "sunshine_meeting",
-              "when": "2026-09-30",
-              "until": "2026-09-30",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Sunshine Act Meetings",
-              "summary": "Legal Services Corporation (from lower in the map)",
-              "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-25/pdf/2026-19689.pdf",
-              "source": "Federal Register Sunshine Act meeting",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            }
-          ]
-        },
+        "heat": null,
         "children": [
           {
             "id": "gsa-1697",
@@ -1031,28 +989,7 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": {
-              "asOf": "2026-09-30T18:27:44.791Z",
-              "count": 1,
-              "rolledUp": false,
-              "events": [
-                {
-                  "id": "fr-sun-2026-19689-2026-09-30",
-                  "kind": "sunshine_meeting",
-                  "when": "2026-09-30",
-                  "until": "2026-09-30",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Sunshine Act Meetings",
-                  "summary": "Legal Services Corporation",
-                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-25/pdf/2026-19689.pdf",
-                  "source": "Federal Register Sunshine Act meeting",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                }
-              ]
-            },
+            "heat": null,
             "children": []
           },
           {
