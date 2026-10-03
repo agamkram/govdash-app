@@ -80,17 +80,17 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-10-02T18:30:03.663Z",
-      "asOf": "2026-10-02T18:29:40.711Z",
-      "nodesWithHeat": 107,
-      "nodesWithDirectHeat": 62,
-      "rawEventCount": 249,
+      "enrichedAt": "2026-10-03T17:20:27.541Z",
+      "asOf": "2026-10-03T17:20:09.844Z",
+      "nodesWithHeat": 106,
+      "nodesWithDirectHeat": 61,
+      "rawEventCount": 246,
       "matched": {
-        "chamber": 3,
+        "chamber": 2,
         "presidential": 15,
-        "publicInspection": 100,
-        "commentDeadlines": 114,
-        "sunshine": 2,
+        "publicInspection": 101,
+        "commentDeadlines": 110,
+        "sunshine": 3,
         "hearings": 1,
         "scotus": 1
       },
@@ -100,7 +100,7 @@
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 2,
+          "count": 1,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
@@ -115,42 +115,42 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 107,
+          "count": 108,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
           "count": 15,
-          "since": "2026-09-18",
+          "since": "2026-09-19",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 119,
-          "start": "2026-10-02",
-          "end": "2026-10-31",
+          "count": 115,
+          "start": "2026-10-03",
+          "end": "2026-11-01",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
-          "count": 3,
-          "start": "2026-10-02",
-          "end": "2026-10-31",
+          "count": 4,
+          "start": "2026-10-03",
+          "end": "2026-11-01",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
           "count": 0,
-          "start": "2026-10-02",
-          "end": "2026-10-31",
+          "start": "2026-10-03",
+          "end": "2026-11-01",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
           "count": 1,
-          "start": "2026-10-02",
-          "end": "2026-10-31",
+          "start": "2026-10-03",
+          "end": "2026-11-01",
           "congress": 119,
           "calendarIds": 1,
           "skipped404": [],
@@ -159,8 +159,8 @@
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-10-02",
-          "end": "2026-10-31",
+          "start": "2026-10-03",
+          "end": "2026-11-01",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -208,8 +208,8 @@
       "note": "Synthetic root. Crosswalk branches attach under Parent=[Branch]."
     },
     "heat": {
-      "asOf": "2026-10-02T18:29:40.711Z",
-      "count": 224,
+      "asOf": "2026-10-03T17:20:09.844Z",
+      "count": 220,
       "rolledUp": true,
       "events": [
         {
@@ -355,8 +355,8 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-10-02T18:29:40.711Z",
-          "count": 181,
+          "asOf": "2026-10-03T17:20:09.844Z",
+          "count": 177,
           "rolledUp": true,
           "events": [
             {
@@ -607,7 +607,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -2224,7 +2224,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -2339,10 +2339,25 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 19,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-pres-2026-20439",
+                  "kind": "presidential_doc",
+                  "when": "2026-10-05",
+                  "until": null,
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Presidential Determination on the Revocation of Presidential Determinations Related to Lebanon",
+                  "summary": "Presidential Document",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20439.pdf",
+                  "source": "Federal Register presidential documents (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+                  "urgency": "recent",
+                  "bill": null
+                },
                 {
                   "id": "fr-pres-2026-20321",
                   "kind": "presidential_doc",
@@ -2507,21 +2522,6 @@
                   "sourceUrl": "https://www.federalregister.gov/presidential-documents",
                   "urgency": "recent",
                   "bill": null
-                },
-                {
-                  "id": "fr-pres-2026-19336",
-                  "kind": "presidential_doc",
-                  "when": "2026-09-21",
-                  "until": null,
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Restoring Reciprocity in Government Procurement",
-                  "summary": "Presidential Document",
-                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19336.pdf",
-                  "source": "Federal Register presidential documents (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/presidential-documents",
-                  "urgency": "recent",
-                  "bill": null
                 }
               ],
               "hasChildHeat": true
@@ -2565,7 +2565,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-02T18:29:40.711Z",
+                  "asOf": "2026-10-03T17:20:09.844Z",
                   "count": 7,
                   "rolledUp": false,
                   "events": [
@@ -2722,7 +2722,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-02T18:29:40.711Z",
+                      "asOf": "2026-10-03T17:20:09.844Z",
                       "count": 4,
                       "rolledUp": false,
                       "events": [
@@ -2913,7 +2913,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-02T18:29:40.711Z",
+                      "asOf": "2026-10-03T17:20:09.844Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -3060,7 +3060,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-02T18:29:40.711Z",
+                      "asOf": "2026-10-03T17:20:09.844Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -3578,7 +3578,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 5,
               "rolledUp": true,
               "events": [
@@ -3695,7 +3695,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-02T18:29:40.711Z",
+                  "asOf": "2026-10-03T17:20:09.844Z",
                   "count": 5,
                   "rolledUp": true,
                   "events": [
@@ -3786,7 +3786,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-02T18:29:40.711Z",
+                      "asOf": "2026-10-03T17:20:09.844Z",
                       "count": 5,
                       "rolledUp": true,
                       "events": [
@@ -5098,7 +5098,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
+                          "asOf": "2026-10-03T17:20:09.844Z",
                           "count": 2,
                           "rolledUp": true,
                           "events": [
@@ -5238,7 +5238,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-02T18:29:40.711Z",
+                              "asOf": "2026-10-03T17:20:09.844Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -5380,7 +5380,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
+                          "asOf": "2026-10-03T17:20:09.844Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -5426,7 +5426,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-02T18:29:40.711Z",
+                              "asOf": "2026-10-03T17:20:09.844Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -5893,7 +5893,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
+                          "asOf": "2026-10-03T17:20:09.844Z",
                           "count": 2,
                           "rolledUp": true,
                           "events": [
@@ -5991,7 +5991,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-02T18:29:40.711Z",
+                              "asOf": "2026-10-03T17:20:09.844Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -6054,7 +6054,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-02T18:29:40.711Z",
+                              "asOf": "2026-10-03T17:20:09.844Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -6414,8 +6414,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
-              "count": 23,
+              "asOf": "2026-10-03T17:20:09.844Z",
+              "count": 24,
               "rolledUp": true,
               "events": [
                 {
@@ -6535,8 +6535,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-02T18:29:40.711Z",
-                  "count": 23,
+                  "asOf": "2026-10-03T17:20:09.844Z",
+                  "count": 24,
                   "rolledUp": true,
                   "events": [
                     {
@@ -6656,8 +6656,8 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-02T18:29:40.711Z",
-                      "count": 23,
+                      "asOf": "2026-10-03T17:20:09.844Z",
+                      "count": 24,
                       "rolledUp": true,
                       "events": [
                         {
@@ -6777,8 +6777,8 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
-                          "count": 23,
+                          "asOf": "2026-10-03T17:20:09.844Z",
+                          "count": 24,
                           "rolledUp": true,
                           "events": [
                             {
@@ -7395,7 +7395,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-02T18:29:40.711Z",
+                              "asOf": "2026-10-03T17:20:09.844Z",
                               "count": 3,
                               "rolledUp": true,
                               "events": [
@@ -7506,7 +7506,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-10-02T18:29:40.711Z",
+                                  "asOf": "2026-10-03T17:20:09.844Z",
                                   "count": 3,
                                   "rolledUp": true,
                                   "events": [
@@ -7644,7 +7644,7 @@
                                       "usgm": null
                                     },
                                     "heat": {
-                                      "asOf": "2026-10-02T18:29:40.711Z",
+                                      "asOf": "2026-10-03T17:20:09.844Z",
                                       "count": 3,
                                       "rolledUp": false,
                                       "events": [
@@ -8111,7 +8111,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-02T18:29:40.711Z",
+                              "asOf": "2026-10-03T17:20:09.844Z",
                               "count": 11,
                               "rolledUp": true,
                               "events": [
@@ -8262,7 +8262,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-10-02T18:29:40.711Z",
+                                  "asOf": "2026-10-03T17:20:09.844Z",
                                   "count": 11,
                                   "rolledUp": false,
                                   "events": [
@@ -8671,8 +8671,8 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-02T18:29:40.711Z",
-                              "count": 9,
+                              "asOf": "2026-10-03T17:20:09.844Z",
+                              "count": 10,
                               "rolledUp": true,
                               "events": [
                                 {
@@ -8762,8 +8762,8 @@
                                   "usgm": null
                                 },
                                 "heat": {
-                                  "asOf": "2026-10-02T18:29:40.711Z",
-                                  "count": 9,
+                                  "asOf": "2026-10-03T17:20:09.844Z",
+                                  "count": 10,
                                   "rolledUp": true,
                                   "events": [
                                     {
@@ -8955,8 +8955,8 @@
                                       }
                                     },
                                     "heat": {
-                                      "asOf": "2026-10-02T18:29:40.711Z",
-                                      "count": 9,
+                                      "asOf": "2026-10-03T17:20:09.844Z",
+                                      "count": 10,
                                       "rolledUp": false,
                                       "events": [
                                         {
@@ -9016,6 +9016,21 @@
                                           "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2024-0050-0080",
                                           "source": "Federal Register proposed rule (comments close)",
                                           "sourceUrl": "https://www.federalregister.gov/",
+                                          "urgency": "upcoming",
+                                          "bill": null
+                                        },
+                                        {
+                                          "id": "fr-pi-2026-20435",
+                                          "kind": "public_inspection",
+                                          "when": "2026-10-06",
+                                          "until": null,
+                                          "filedAt": "2026-10-02T16:15:00.000-04:00",
+                                          "signedAt": null,
+                                          "title": "Reef Fish Fishery of the Gulf of America; Amendment 62",
+                                          "summary": "National Oceanic and Atmospheric Administration",
+                                          "url": "https://public-inspection.federalregister.gov/2026-20435.pdf",
+                                          "source": "Federal Register public inspection (PDF)",
+                                          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                                           "urgency": "upcoming",
                                           "bill": null
                                         },
@@ -26109,8 +26124,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
-              "count": 24,
+              "asOf": "2026-10-03T17:20:09.844Z",
+              "count": 23,
               "rolledUp": false,
               "events": [
                 {
@@ -26156,8 +26171,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-02T18:29:40.711Z",
-                  "count": 23,
+                  "asOf": "2026-10-03T17:20:09.844Z",
+                  "count": 22,
                   "rolledUp": true,
                   "events": [
                     {
@@ -26302,7 +26317,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-02T18:29:40.711Z",
+                      "asOf": "2026-10-03T17:20:09.844Z",
                       "count": 5,
                       "rolledUp": false,
                       "events": [
@@ -26564,7 +26579,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-02T18:29:40.711Z",
+                      "asOf": "2026-10-03T17:20:09.844Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -26734,7 +26749,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-02T18:29:40.711Z",
+                      "asOf": "2026-10-03T17:20:09.844Z",
                       "count": 3,
                       "rolledUp": false,
                       "events": [
@@ -27911,7 +27926,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-02T18:29:40.711Z",
+                      "asOf": "2026-10-03T17:20:09.844Z",
                       "count": 5,
                       "rolledUp": false,
                       "events": [
@@ -28069,7 +28084,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-02T18:29:40.711Z",
+                      "asOf": "2026-10-03T17:20:09.844Z",
                       "count": 4,
                       "rolledUp": false,
                       "events": [
@@ -28286,8 +28301,8 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-02T18:29:40.711Z",
-                      "count": 4,
+                      "asOf": "2026-10-03T17:20:09.844Z",
+                      "count": 3,
                       "rolledUp": false,
                       "events": [
                         {
@@ -28330,21 +28345,6 @@
                           "title": "Radiology Devices; Reclassification of Digital Breast Tomosynthesis System",
                           "summary": "Health and Human Services Department, Food and Drug Administration",
                           "url": "http://www.regulations.gov/commenton/FDA-2026-N-7630-0001",
-                          "source": "Federal Register proposed rule (comments close)",
-                          "sourceUrl": "https://www.federalregister.gov/",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-comment-2026-15671",
-                          "kind": "comment_deadline",
-                          "when": "2026-10-02",
-                          "until": "2026-10-02",
-                          "filedAt": null,
-                          "signedAt": null,
-                          "title": "Modification of Certain Terminology in Title 21; Reopening of the Comment Period",
-                          "summary": "Health and Human Services Department, Food and Drug Administration",
-                          "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-03/pdf/2026-15671.pdf",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
@@ -28603,7 +28603,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 11,
               "rolledUp": true,
               "events": [
@@ -28724,7 +28724,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-02T18:29:40.711Z",
+                  "asOf": "2026-10-03T17:20:09.844Z",
                   "count": 11,
                   "rolledUp": true,
                   "events": [
@@ -28845,7 +28845,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-02T18:29:40.711Z",
+                      "asOf": "2026-10-03T17:20:09.844Z",
                       "count": 11,
                       "rolledUp": true,
                       "events": [
@@ -30373,7 +30373,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
+                          "asOf": "2026-10-03T17:20:09.844Z",
                           "count": 8,
                           "rolledUp": false,
                           "events": [
@@ -30551,7 +30551,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
+                          "asOf": "2026-10-03T17:20:09.844Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -30770,7 +30770,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
+                          "asOf": "2026-10-03T17:20:09.844Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -31201,7 +31201,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -32965,7 +32965,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 2,
               "rolledUp": true,
               "events": [
@@ -33062,7 +33062,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-02T18:29:40.711Z",
+                  "asOf": "2026-10-03T17:20:09.844Z",
                   "count": 2,
                   "rolledUp": true,
                   "events": [
@@ -33123,7 +33123,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-02T18:29:40.711Z",
+                      "asOf": "2026-10-03T17:20:09.844Z",
                       "count": 2,
                       "rolledUp": true,
                       "events": [
@@ -34542,7 +34542,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
+                          "asOf": "2026-10-03T17:20:09.844Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -34624,7 +34624,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
+                          "asOf": "2026-10-03T17:20:09.844Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -35073,7 +35073,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 1,
               "rolledUp": true,
               "events": [
@@ -35119,7 +35119,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-02T18:29:40.711Z",
+                  "asOf": "2026-10-03T17:20:09.844Z",
                   "count": 1,
                   "rolledUp": true,
                   "events": [
@@ -35165,7 +35165,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-02T18:29:40.711Z",
+                      "asOf": "2026-10-03T17:20:09.844Z",
                       "count": 1,
                       "rolledUp": true,
                       "events": [
@@ -36582,7 +36582,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
+                          "asOf": "2026-10-03T17:20:09.844Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -39245,7 +39245,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 6,
               "rolledUp": true,
               "events": [
@@ -39273,7 +39273,7 @@
                   "signedAt": null,
                   "title": "Oil and Gas and Sulfur Operations on the Outer Continental Shelf-Revisions to the Requirements for Exploratory Drilling on the Arctic Outer Continental Shelf",
                   "summary": "Interior Department, Safety and Environmental Enforcement Bureau, Ocean Energy Management Bureau (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/BOEM_FRDOC_0001-0797",
+                  "url": "http://www.regulations.gov/commenton/BSEE-2026-0133-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
@@ -39351,7 +39351,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-02T18:29:40.711Z",
+                  "asOf": "2026-10-03T17:20:09.844Z",
                   "count": 6,
                   "rolledUp": true,
                   "events": [
@@ -39379,7 +39379,7 @@
                       "signedAt": null,
                       "title": "Oil and Gas and Sulfur Operations on the Outer Continental Shelf-Revisions to the Requirements for Exploratory Drilling on the Arctic Outer Continental Shelf",
                       "summary": "Interior Department, Safety and Environmental Enforcement Bureau, Ocean Energy Management Bureau (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/BOEM_FRDOC_0001-0797",
+                      "url": "http://www.regulations.gov/commenton/BSEE-2026-0133-0001",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
@@ -39457,7 +39457,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-02T18:29:40.711Z",
+                      "asOf": "2026-10-03T17:20:09.844Z",
                       "count": 6,
                       "rolledUp": true,
                       "events": [
@@ -39485,7 +39485,7 @@
                           "signedAt": null,
                           "title": "Oil and Gas and Sulfur Operations on the Outer Continental Shelf-Revisions to the Requirements for Exploratory Drilling on the Arctic Outer Continental Shelf",
                           "summary": "Interior Department, Safety and Environmental Enforcement Bureau, Ocean Energy Management Bureau (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/BOEM_FRDOC_0001-0797",
+                          "url": "http://www.regulations.gov/commenton/BSEE-2026-0133-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
@@ -39563,7 +39563,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
+                          "asOf": "2026-10-03T17:20:09.844Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -39773,7 +39773,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-10-02T18:29:40.711Z",
+                              "asOf": "2026-10-03T17:20:09.844Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -40191,7 +40191,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
+                          "asOf": "2026-10-03T17:20:09.844Z",
                           "count": 5,
                           "rolledUp": true,
                           "events": [
@@ -40204,7 +40204,7 @@
                               "signedAt": null,
                               "title": "Oil and Gas and Sulfur Operations on the Outer Continental Shelf-Revisions to the Requirements for Exploratory Drilling on the Arctic Outer Continental Shelf",
                               "summary": "Interior Department, Safety and Environmental Enforcement Bureau, Ocean Energy Management Bureau (from lower in the map)",
-                              "url": "http://www.regulations.gov/commenton/BOEM_FRDOC_0001-0797",
+                              "url": "http://www.regulations.gov/commenton/BSEE-2026-0133-0001",
                               "source": "Federal Register proposed rule (comments close)",
                               "sourceUrl": "https://www.federalregister.gov/",
                               "urgency": "upcoming",
@@ -40378,7 +40378,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-10-02T18:29:40.711Z",
+                              "asOf": "2026-10-03T17:20:09.844Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -40391,7 +40391,7 @@
                                   "signedAt": null,
                                   "title": "Oil and Gas and Sulfur Operations on the Outer Continental Shelf-Revisions to the Requirements for Exploratory Drilling on the Arctic Outer Continental Shelf",
                                   "summary": "Interior Department, Safety and Environmental Enforcement Bureau, Ocean Energy Management Bureau",
-                                  "url": "http://www.regulations.gov/commenton/BOEM_FRDOC_0001-0797",
+                                  "url": "http://www.regulations.gov/commenton/BSEE-2026-0133-0001",
                                   "source": "Federal Register proposed rule (comments close)",
                                   "sourceUrl": "https://www.federalregister.gov/",
                                   "urgency": "upcoming",
@@ -40473,7 +40473,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-10-02T18:29:40.711Z",
+                              "asOf": "2026-10-03T17:20:09.844Z",
                               "count": 3,
                               "rolledUp": false,
                               "events": [
@@ -40486,7 +40486,7 @@
                                   "signedAt": null,
                                   "title": "Oil and Gas and Sulfur Operations on the Outer Continental Shelf-Revisions to the Requirements for Exploratory Drilling on the Arctic Outer Continental Shelf",
                                   "summary": "Interior Department, Safety and Environmental Enforcement Bureau, Ocean Energy Management Bureau",
-                                  "url": "http://www.regulations.gov/commenton/BOEM_FRDOC_0001-0797",
+                                  "url": "http://www.regulations.gov/commenton/BSEE-2026-0133-0001",
                                   "source": "Federal Register proposed rule (comments close)",
                                   "sourceUrl": "https://www.federalregister.gov/",
                                   "urgency": "upcoming",
@@ -40601,7 +40601,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-10-02T18:29:40.711Z",
+                              "asOf": "2026-10-03T17:20:09.844Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -41636,7 +41636,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 13,
               "rolledUp": true,
               "events": [
@@ -41757,7 +41757,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-02T18:29:40.711Z",
+                  "asOf": "2026-10-03T17:20:09.844Z",
                   "count": 13,
                   "rolledUp": true,
                   "events": [
@@ -41930,7 +41930,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-02T18:29:40.711Z",
+                      "asOf": "2026-10-03T17:20:09.844Z",
                       "count": 13,
                       "rolledUp": true,
                       "events": [
@@ -42202,7 +42202,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
+                          "asOf": "2026-10-03T17:20:09.844Z",
                           "count": 4,
                           "rolledUp": true,
                           "events": [
@@ -42320,7 +42320,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-10-02T18:29:40.711Z",
+                              "asOf": "2026-10-03T17:20:09.844Z",
                               "count": 4,
                               "rolledUp": false,
                               "events": [
@@ -42525,7 +42525,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
+                          "asOf": "2026-10-03T17:20:09.844Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -43047,7 +43047,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
+                          "asOf": "2026-10-03T17:20:09.844Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -43145,7 +43145,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-02T18:29:40.711Z",
+                              "asOf": "2026-10-03T17:20:09.844Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -43561,7 +43561,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
+                          "asOf": "2026-10-03T17:20:09.844Z",
                           "count": 6,
                           "rolledUp": false,
                           "events": [
@@ -44040,8 +44040,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
-              "count": 45,
+              "asOf": "2026-10-03T17:20:09.844Z",
+              "count": 41,
               "rolledUp": true,
               "events": [
                 {
@@ -44161,8 +44161,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-02T18:29:40.711Z",
-                  "count": 45,
+                  "asOf": "2026-10-03T17:20:09.844Z",
+                  "count": 41,
                   "rolledUp": true,
                   "events": [
                     {
@@ -44282,8 +44282,8 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-02T18:29:40.711Z",
-                      "count": 44,
+                      "asOf": "2026-10-03T17:20:09.844Z",
+                      "count": 40,
                       "rolledUp": true,
                       "events": [
                         {
@@ -44734,7 +44734,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
+                          "asOf": "2026-10-03T17:20:09.844Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -44846,28 +44846,7 @@
                             "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
                           }
                         },
-                        "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
-                          "count": 1,
-                          "rolledUp": false,
-                          "events": [
-                            {
-                              "id": "fr-comment-2026-15724",
-                              "kind": "comment_deadline",
-                              "when": "2026-10-02",
-                              "until": "2026-10-02",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "High-Speed Train Noise Emission Standards",
-                              "summary": "Transportation Department, Federal Railroad Administration",
-                              "url": "http://www.regulations.gov/commenton/FRA-2025-0786-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            }
-                          ]
-                        },
+                        "heat": null,
                         "children": [],
                         "spending": {
                           "obligatedAmount": 9986682723.22,
@@ -44950,7 +44929,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
+                          "asOf": "2026-10-03T17:20:09.844Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -45068,7 +45047,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
+                          "asOf": "2026-10-03T17:20:09.844Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -45524,8 +45503,8 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-02T18:29:40.711Z",
-                          "count": 38,
+                          "asOf": "2026-10-03T17:20:09.844Z",
+                          "count": 35,
                           "rolledUp": false,
                           "events": [
                             {
@@ -46052,51 +46031,6 @@
                               "sourceUrl": "https://www.federalregister.gov/",
                               "urgency": "upcoming",
                               "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-17957",
-                              "kind": "comment_deadline",
-                              "when": "2026-10-02",
-                              "until": "2026-10-02",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Establishment of Special Air Traffic Rules in the Vicinity of President Donald J. Trump International Airport (DJT)",
-                              "summary": "Transportation Department, Federal Aviation Administration",
-                              "url": "http://www.regulations.gov/commenton/FAA-2026-10827-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-16804",
-                              "kind": "comment_deadline",
-                              "when": "2026-10-02",
-                              "until": "2026-10-02",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Establishment of Class E Airspace; Trading Bay Production Airport, Trading Bay, AK",
-                              "summary": "Transportation Department, Federal Aviation Administration",
-                              "url": "http://www.regulations.gov/commenton/FAA-2026-5150-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-16795",
-                              "kind": "comment_deadline",
-                              "when": "2026-10-02",
-                              "until": "2026-10-02",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Airworthiness Directives; The Boeing Company Airplanes",
-                              "summary": "Transportation Department, Federal Aviation Administration",
-                              "url": "http://www.regulations.gov/commenton/FAA-2026-7237-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
                             }
                           ]
                         },
@@ -46454,7 +46388,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-02T18:29:40.711Z",
+                      "asOf": "2026-10-03T17:20:09.844Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -48580,7 +48514,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 11,
               "rolledUp": false,
               "events": [
@@ -49741,7 +49675,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 6,
               "rolledUp": false,
               "events": [
@@ -50673,7 +50607,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 6,
               "rolledUp": false,
               "events": [
@@ -51928,7 +51862,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -52676,7 +52610,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-10-02T18:29:40.711Z",
+          "asOf": "2026-10-03T17:20:09.844Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -53285,7 +53219,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -54397,8 +54331,8 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-10-02T18:29:40.711Z",
-          "count": 4,
+          "asOf": "2026-10-03T17:20:09.844Z",
+          "count": 3,
           "rolledUp": true,
           "events": [
             {
@@ -54444,21 +54378,6 @@
               "source": "Senate.gov floor schedule XML",
               "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
               "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "senate-floor-2026-10-01T10:30:06-04:00",
-              "kind": "floor_session",
-              "when": "2026-10-01T10:30:06-04:00",
-              "until": "2026-10-01T10:30:41-04:00",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Senate floor (recent)",
-              "summary": "Has adjourned (from lower in the map)",
-              "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-              "source": "Senate.gov floor schedule XML",
-              "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-              "urgency": "recent",
               "bill": null
             }
           ]
@@ -55040,8 +54959,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
-              "count": 4,
+              "asOf": "2026-10-03T17:20:09.844Z",
+              "count": 3,
               "rolledUp": true,
               "events": [
                 {
@@ -55087,21 +55006,6 @@
                   "source": "Senate.gov floor schedule XML",
                   "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
                   "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "senate-floor-2026-10-01T10:30:06-04:00",
-                  "kind": "floor_session",
-                  "when": "2026-10-01T10:30:06-04:00",
-                  "until": "2026-10-01T10:30:41-04:00",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Senate floor (recent)",
-                  "summary": "Has adjourned (from lower in the map)",
-                  "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-                  "source": "Senate.gov floor schedule XML",
-                  "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-                  "urgency": "recent",
                   "bill": null
                 }
               ]
@@ -55241,7 +55145,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-10-02T18:29:40.711Z",
+                  "asOf": "2026-10-03T17:20:09.844Z",
                   "count": 2,
                   "rolledUp": false,
                   "events": [
@@ -55407,8 +55311,8 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-10-02T18:29:40.711Z",
-                  "count": 2,
+                  "asOf": "2026-10-03T17:20:09.844Z",
+                  "count": 1,
                   "rolledUp": false,
                   "events": [
                     {
@@ -55424,21 +55328,6 @@
                       "source": "Senate.gov floor schedule XML",
                       "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
                       "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "senate-floor-2026-10-01T10:30:06-04:00",
-                      "kind": "floor_session",
-                      "when": "2026-10-01T10:30:06-04:00",
-                      "until": "2026-10-01T10:30:41-04:00",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Senate floor (recent)",
-                      "summary": "Has adjourned",
-                      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-                      "source": "Senate.gov floor schedule XML",
-                      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-                      "urgency": "recent",
                       "bill": null
                     }
                   ]
@@ -56382,8 +56271,8 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-10-02T18:29:40.711Z",
-          "count": 33,
+          "asOf": "2026-10-03T17:20:09.844Z",
+          "count": 34,
           "rolledUp": true,
           "events": [
             {
@@ -57726,7 +57615,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -58544,7 +58433,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -59015,7 +58904,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -59451,7 +59340,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -63377,7 +63266,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -63794,10 +63683,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
-              "count": 2,
+              "asOf": "2026-10-03T17:20:09.844Z",
+              "count": 3,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-20296",
+                  "kind": "comment_deadline",
+                  "when": "2026-10-15",
+                  "until": "2026-10-15",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Safety Standard for Lithium-Ion Batteries Used in Micromobility Products and Electrical Systems of Micromobility Products Containing Such Batteries",
+                  "summary": "Consumer Product Safety Commission",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20296.pdf",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-pi-2026-20296",
                   "kind": "public_inspection",
@@ -64308,7 +64212,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -64771,7 +64675,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -65916,7 +65820,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -66175,7 +66079,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -66419,7 +66323,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 12,
               "rolledUp": false,
               "events": [
@@ -66449,6 +66353,21 @@
                   "summary": "Securities and Exchange Commission",
                   "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-21/pdf/2026-17183.pdf",
                   "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-sun-2026-20396-2026-10-07",
+                  "kind": "sunshine_meeting",
+                  "when": "2026-10-07",
+                  "until": "2026-10-07",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Sunshine Act Meetings",
+                  "summary": "Securities and Exchange Commission",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20396.pdf",
+                  "source": "Federal Register Sunshine Act meeting",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
@@ -66583,21 +66502,6 @@
                   "title": "Self-Regulatory Organizations; Proposed Rule Changes: The Nasdaq Stock Market LLC",
                   "summary": "Securities and Exchange Commission",
                   "url": "https://public-inspection.federalregister.gov/2026-20303.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-pi-2026-20304",
-                  "kind": "public_inspection",
-                  "when": "2026-10-05",
-                  "until": null,
-                  "filedAt": "2026-10-02T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Self-Regulatory Organizations; Proposed Rule Changes: Nasdaq PHLX LLC",
-                  "summary": "Securities and Exchange Commission",
-                  "url": "https://public-inspection.federalregister.gov/2026-20304.pdf",
                   "source": "Federal Register public inspection (PDF)",
                   "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                   "urgency": "upcoming",
@@ -67298,7 +67202,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-10-02T18:29:40.711Z",
+          "asOf": "2026-10-03T17:20:09.844Z",
           "count": 5,
           "rolledUp": true,
           "events": [
@@ -68235,7 +68139,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -70985,7 +70889,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-02T18:29:40.711Z",
+              "asOf": "2026-10-03T17:20:09.844Z",
               "count": 1,
               "rolledUp": false,
               "events": [

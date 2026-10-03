@@ -1,9 +1,9 @@
 {
-  "fetchedAt": "2026-10-02T18:29:40.711Z",
+  "fetchedAt": "2026-10-03T17:20:09.844Z",
   "sources": {
     "senateFloor": {
       "ok": true,
-      "count": 2,
+      "count": 1,
       "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
     },
     "houseClerk": {
@@ -18,42 +18,42 @@
     },
     "publicInspection": {
       "ok": true,
-      "count": 107,
+      "count": 108,
       "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
     },
     "presidential": {
       "ok": true,
       "count": 15,
-      "since": "2026-09-18",
+      "since": "2026-09-19",
       "url": "https://www.federalregister.gov/presidential-documents"
     },
     "commentDeadlines": {
       "ok": true,
-      "count": 119,
-      "start": "2026-10-02",
-      "end": "2026-10-31",
+      "count": 115,
+      "start": "2026-10-03",
+      "end": "2026-11-01",
       "type": "PRORULE",
       "url": "https://www.federalregister.gov/"
     },
     "sunshine": {
       "ok": true,
-      "count": 3,
-      "start": "2026-10-02",
-      "end": "2026-10-31",
+      "count": 4,
+      "start": "2026-10-03",
+      "end": "2026-11-01",
       "url": "https://www.federalregister.gov/"
     },
     "senateHearings": {
       "ok": true,
       "count": 0,
-      "start": "2026-10-02",
-      "end": "2026-10-31",
+      "start": "2026-10-03",
+      "end": "2026-11-01",
       "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
     },
     "houseHearings": {
       "ok": true,
       "count": 1,
-      "start": "2026-10-02",
-      "end": "2026-10-31",
+      "start": "2026-10-03",
+      "end": "2026-11-01",
       "congress": 119,
       "calendarIds": 1,
       "skipped404": [],
@@ -62,25 +62,12 @@
     "scotus": {
       "ok": true,
       "count": 1,
-      "start": "2026-10-02",
-      "end": "2026-10-31",
+      "start": "2026-10-03",
+      "end": "2026-11-01",
       "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
     }
   },
   "events": [
-    {
-      "id": "senate-floor-2026-10-01T10:30:06-04:00",
-      "kind": "floor_session",
-      "chamber": "Senate",
-      "when": "2026-10-01T10:30:06-04:00",
-      "until": "2026-10-01T10:30:41-04:00",
-      "title": "Senate floor (recent)",
-      "summary": "Has adjourned",
-      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-      "source": "Senate.gov floor schedule XML",
-      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-      "urgency": "recent"
-    },
     {
       "id": "senate-next-2026-10-05T16:00:00-04:00",
       "kind": "floor_session",
@@ -2248,6 +2235,26 @@
       "documentNumber": "2026-20439"
     },
     {
+      "id": "fr-pi-2026-20435",
+      "kind": "public_inspection",
+      "when": "2026-10-06",
+      "until": null,
+      "filedAt": "2026-10-02T16:15:00.000-04:00",
+      "title": "Reef Fish Fishery of the Gulf of America; Amendment 62",
+      "summary": "National Oceanic and Atmospheric Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-20435.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-20435/reef-fish-fishery-of-the-gulf-of-america-amendment-62",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-20435.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Oceanic and Atmospheric Administration"
+      ],
+      "documentType": "Rule",
+      "documentNumber": "2026-20435"
+    },
+    {
       "id": "fr-pres-2026-20321",
       "kind": "presidential_doc",
       "when": "2026-10-02",
@@ -2354,6 +2361,22 @@
       "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19335.pdf",
       "htmlUrl": "https://www.federalregister.gov/documents/2026/09/21/2026-19335/providing-meaningful-water-quality-improvements-through-collaboration-and-oversight-of-federal",
       "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19335.pdf",
+      "source": "Federal Register presidential documents (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+      "urgency": "recent",
+      "documentType": "Presidential Document"
+    },
+    {
+      "id": "fr-pres-2026-20439",
+      "kind": "presidential_doc",
+      "when": "2026-10-05",
+      "until": null,
+      "signedAt": null,
+      "title": "Presidential Determination on the Revocation of Presidential Determinations Related to Lebanon",
+      "summary": "Presidential Document",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20439.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/05/2026-20439/presidential-determination-on-the-revocation-of-presidential-determinations-related-to-lebanon",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20439.pdf",
       "source": "Federal Register presidential documents (PDF)",
       "sourceUrl": "https://www.federalregister.gov/presidential-documents",
       "urgency": "recent",
@@ -2472,20 +2495,23 @@
       "documentType": "Presidential Document"
     },
     {
-      "id": "fr-pres-2026-19251",
-      "kind": "presidential_doc",
-      "when": "2026-09-18",
-      "until": null,
-      "signedAt": null,
-      "title": "Presidential Determination on Major Drug Transit or Major Illicit Drug Producing Countries for Fiscal Year 2027",
-      "summary": "Presidential Document",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-18/pdf/2026-19251.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/18/2026-19251/presidential-determination-on-major-drug-transit-or-major-illicit-drug-producing-countries-for",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-18/pdf/2026-19251.pdf",
-      "source": "Federal Register presidential documents (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/presidential-documents",
-      "urgency": "recent",
-      "documentType": "Presidential Document"
+      "id": "fr-comment-2026-20296",
+      "kind": "comment_deadline",
+      "when": "2026-10-15",
+      "until": "2026-10-15",
+      "title": "Safety Standard for Lithium-Ion Batteries Used in Micromobility Products and Electrical Systems of Micromobility Products Containing Such Batteries",
+      "summary": "Consumer Product Safety Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20296.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/05/2026-20296/safety-standard-for-lithium-ion-batteries-used-in-micromobility-products-and-electrical-systems-of",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20296.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Consumer Product Safety Commission"
+      ],
+      "documentNumber": "2026-20296",
+      "documentType": "Proposed Rule"
     },
     {
       "id": "fr-comment-2026-20124",
@@ -3742,26 +3768,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-17957",
-      "kind": "comment_deadline",
-      "when": "2026-10-02",
-      "until": "2026-10-02",
-      "title": "Establishment of Special Air Traffic Rules in the Vicinity of President Donald J. Trump International Airport (DJT)",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2026-10827-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/02/2026-17957/establishment-of-special-air-traffic-rules-in-the-vicinity-of-president-donald-j-trump-international",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-02/pdf/2026-17957.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-17957",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-17867",
       "kind": "comment_deadline",
       "when": "2026-10-16",
@@ -4198,26 +4204,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-16804",
-      "kind": "comment_deadline",
-      "when": "2026-10-02",
-      "until": "2026-10-02",
-      "title": "Establishment of Class E Airspace; Trading Bay Production Airport, Trading Bay, AK",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2026-5150-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/18/2026-16804/establishment-of-class-e-airspace-trading-bay-production-airport-trading-bay-ak",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-18/pdf/2026-16804.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-16804",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-16796",
       "kind": "comment_deadline",
       "when": "2026-10-19",
@@ -4234,26 +4220,6 @@
         "Treasury Department"
       ],
       "documentNumber": "2026-16796",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-16795",
-      "kind": "comment_deadline",
-      "when": "2026-10-02",
-      "until": "2026-10-02",
-      "title": "Airworthiness Directives; The Boeing Company Airplanes",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2026-7237-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/18/2026-16795/airworthiness-directives-the-boeing-company-airplanes",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-18/pdf/2026-16795.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-16795",
       "documentType": "Proposed Rule"
     },
     {
@@ -4581,7 +4547,7 @@
       "until": "2026-10-05",
       "title": "Oil and Gas and Sulfur Operations on the Outer Continental Shelf-Revisions to the Requirements for Exploratory Drilling on the Arctic Outer Continental Shelf",
       "summary": "Interior Department, Safety and Environmental Enforcement Bureau, Ocean Energy Management Bureau",
-      "url": "http://www.regulations.gov/commenton/BOEM_FRDOC_0001-0797",
+      "url": "http://www.regulations.gov/commenton/BSEE-2026-0133-0001",
       "htmlUrl": "https://www.federalregister.gov/documents/2026/08/06/2026-15953/oil-and-gas-and-sulfur-operations-on-the-outer-continental-shelf-revisions-to-the-requirements-for",
       "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-06/pdf/2026-15953.pdf",
       "source": "Federal Register proposed rule (comments close)",
@@ -4753,46 +4719,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-15724",
-      "kind": "comment_deadline",
-      "when": "2026-10-02",
-      "until": "2026-10-02",
-      "title": "High-Speed Train Noise Emission Standards",
-      "summary": "Transportation Department, Federal Railroad Administration",
-      "url": "http://www.regulations.gov/commenton/FRA-2025-0786-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/03/2026-15724/high-speed-train-noise-emission-standards",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-03/pdf/2026-15724.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Railroad Administration"
-      ],
-      "documentNumber": "2026-15724",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-15671",
-      "kind": "comment_deadline",
-      "when": "2026-10-02",
-      "until": "2026-10-02",
-      "title": "Modification of Certain Terminology in Title 21; Reopening of the Comment Period",
-      "summary": "Health and Human Services Department, Food and Drug Administration",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-08-03/pdf/2026-15671.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/03/2026-15671/modification-of-certain-terminology-in-title-21-reopening-of-the-comment-period",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-03/pdf/2026-15671.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Health and Human Services Department",
-        "Food and Drug Administration"
-      ],
-      "documentNumber": "2026-15671",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-14115",
       "kind": "comment_deadline",
       "when": "2026-10-13",
@@ -4850,6 +4776,24 @@
       ],
       "documentNumber": "2026-12644",
       "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-sun-2026-20396-2026-10-07",
+      "kind": "sunshine_meeting",
+      "when": "2026-10-07",
+      "until": "2026-10-07",
+      "title": "Sunshine Act Meetings",
+      "summary": "Securities and Exchange Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20396.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/05/2026-20396/sunshine-act-meetings",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20396.pdf",
+      "source": "Federal Register Sunshine Act meeting",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Securities and Exchange Commission"
+      ],
+      "documentNumber": "2026-20396"
     },
     {
       "id": "fr-sun-2026-20285-2026-10-07",
