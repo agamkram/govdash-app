@@ -41,27 +41,27 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-10-08T19:18:48.959Z",
-      "asOf": "2026-10-08T19:18:29.655Z",
+      "enrichedAt": "2026-10-09T18:51:33.192Z",
+      "asOf": "2026-10-09T18:51:09.287Z",
       "nodesWithHeat": 3,
       "nodesWithDirectHeat": 1,
-      "rawEventCount": 224,
+      "rawEventCount": 246,
       "matched": {
         "chamber": 0,
         "presidential": 0,
-        "publicInspection": 1,
+        "publicInspection": 0,
         "commentDeadlines": 0,
-        "sunshine": 0,
+        "sunshine": 1,
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 89,
+      "unmatchedPublicInspection": 106,
       "unmatchedCommentDeadlines": 120,
-      "unmatchedSunshine": 3,
+      "unmatchedSunshine": 5,
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 1,
+          "count": 2,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
@@ -76,52 +76,52 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 90,
+          "count": 106,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
-          "count": 8,
-          "since": "2026-09-24",
+          "count": 9,
+          "since": "2026-09-25",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
           "count": 120,
-          "start": "2026-10-08",
-          "end": "2026-11-06",
+          "start": "2026-10-09",
+          "end": "2026-11-07",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
-          "count": 3,
-          "start": "2026-10-08",
-          "end": "2026-11-06",
+          "count": 6,
+          "start": "2026-10-09",
+          "end": "2026-11-07",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
           "count": 0,
-          "start": "2026-10-08",
-          "end": "2026-11-06",
+          "start": "2026-10-09",
+          "end": "2026-11-07",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
-          "count": 0,
-          "start": "2026-10-08",
-          "end": "2026-11-06",
+          "count": 1,
+          "start": "2026-10-09",
+          "end": "2026-11-07",
           "congress": 119,
-          "calendarIds": 0,
+          "calendarIds": 1,
           "skipped404": [],
           "url": "https://api.congress.gov/v3/committee-meeting/119/house"
         },
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-10-08",
-          "end": "2026-11-06",
+          "start": "2026-10-09",
+          "end": "2026-11-07",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -141,22 +141,22 @@
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
     "heat": {
-      "asOf": "2026-10-08T19:18:29.655Z",
+      "asOf": "2026-10-09T18:51:09.287Z",
       "count": 1,
       "rolledUp": true,
       "events": [
         {
-          "id": "fr-pi-2026-20788",
-          "kind": "public_inspection",
-          "when": "2026-10-09",
-          "until": null,
-          "filedAt": "2026-10-07T16:15:00.000-04:00",
+          "id": "fr-sun-2026-20788-2026-10-21",
+          "kind": "sunshine_meeting",
+          "when": "2026-10-21",
+          "until": "2026-10-21",
+          "filedAt": null,
           "signedAt": null,
-          "title": "Meetings; Sunshine Act",
+          "title": "Sunshine Act Meetings",
           "summary": "Legal Services Corporation (from lower in the map)",
-          "url": "https://public-inspection.federalregister.gov/2026-20788.pdf",
-          "source": "Federal Register public inspection (PDF)",
-          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+          "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-09/pdf/2026-20788.pdf",
+          "source": "Federal Register Sunshine Act meeting",
+          "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         }
@@ -176,22 +176,22 @@
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
         "heat": {
-          "asOf": "2026-10-08T19:18:29.655Z",
+          "asOf": "2026-10-09T18:51:09.287Z",
           "count": 1,
           "rolledUp": true,
           "events": [
             {
-              "id": "fr-pi-2026-20788",
-              "kind": "public_inspection",
-              "when": "2026-10-09",
-              "until": null,
-              "filedAt": "2026-10-07T16:15:00.000-04:00",
+              "id": "fr-sun-2026-20788-2026-10-21",
+              "kind": "sunshine_meeting",
+              "when": "2026-10-21",
+              "until": "2026-10-21",
+              "filedAt": null,
               "signedAt": null,
-              "title": "Meetings; Sunshine Act",
+              "title": "Sunshine Act Meetings",
               "summary": "Legal Services Corporation (from lower in the map)",
-              "url": "https://public-inspection.federalregister.gov/2026-20788.pdf",
-              "source": "Federal Register public inspection (PDF)",
-              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+              "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-09/pdf/2026-20788.pdf",
+              "source": "Federal Register Sunshine Act meeting",
+              "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             }
@@ -1032,22 +1032,22 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-08T19:18:29.655Z",
+              "asOf": "2026-10-09T18:51:09.287Z",
               "count": 1,
               "rolledUp": false,
               "events": [
                 {
-                  "id": "fr-pi-2026-20788",
-                  "kind": "public_inspection",
-                  "when": "2026-10-09",
-                  "until": null,
-                  "filedAt": "2026-10-07T16:15:00.000-04:00",
+                  "id": "fr-sun-2026-20788-2026-10-21",
+                  "kind": "sunshine_meeting",
+                  "when": "2026-10-21",
+                  "until": "2026-10-21",
+                  "filedAt": null,
                   "signedAt": null,
-                  "title": "Meetings; Sunshine Act",
+                  "title": "Sunshine Act Meetings",
                   "summary": "Legal Services Corporation",
-                  "url": "https://public-inspection.federalregister.gov/2026-20788.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-09/pdf/2026-20788.pdf",
+                  "source": "Federal Register Sunshine Act meeting",
+                  "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
                 }
