@@ -80,27 +80,27 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-10-10T17:53:50.924Z",
-      "asOf": "2026-10-10T17:53:35.534Z",
-      "nodesWithHeat": 99,
-      "nodesWithDirectHeat": 51,
-      "rawEventCount": 242,
+      "enrichedAt": "2026-10-11T18:08:45.946Z",
+      "asOf": "2026-10-11T18:08:33.193Z",
+      "nodesWithHeat": 101,
+      "nodesWithDirectHeat": 53,
+      "rawEventCount": 250,
       "matched": {
-        "chamber": 3,
+        "chamber": 2,
         "presidential": 11,
         "publicInspection": 90,
-        "commentDeadlines": 105,
-        "sunshine": 3,
+        "commentDeadlines": 112,
+        "sunshine": 4,
         "hearings": 1,
         "scotus": 1
       },
       "unmatchedPublicInspection": 18,
-      "unmatchedCommentDeadlines": 7,
+      "unmatchedCommentDeadlines": 8,
       "unmatchedSunshine": 3,
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 2,
+          "count": 1,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
@@ -121,36 +121,36 @@
         "presidential": {
           "ok": true,
           "count": 11,
-          "since": "2026-09-26",
+          "since": "2026-09-27",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 112,
-          "start": "2026-10-10",
-          "end": "2026-11-08",
+          "count": 120,
+          "start": "2026-10-11",
+          "end": "2026-11-09",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
-          "count": 6,
-          "start": "2026-10-10",
-          "end": "2026-11-08",
+          "count": 7,
+          "start": "2026-10-11",
+          "end": "2026-11-09",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
           "count": 0,
-          "start": "2026-10-10",
-          "end": "2026-11-08",
+          "start": "2026-10-11",
+          "end": "2026-11-09",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
           "count": 1,
-          "start": "2026-10-10",
-          "end": "2026-11-08",
+          "start": "2026-10-11",
+          "end": "2026-11-09",
           "congress": 119,
           "calendarIds": 1,
           "skipped404": [],
@@ -159,8 +159,8 @@
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-10-10",
-          "end": "2026-11-08",
+          "start": "2026-10-11",
+          "end": "2026-11-09",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -297,95 +297,95 @@
       "note": "Product root: curated for the citizen map. Full Crosswalk nest preserved in gov-tree-full.json."
     },
     "heat": {
-      "asOf": "2026-10-10T17:53:35.534Z",
-      "count": 195,
+      "asOf": "2026-10-11T18:08:33.193Z",
+      "count": 201,
       "rolledUp": true,
       "events": [
         {
-          "id": "fr-comment-2026-20545",
+          "id": "fr-comment-2026-18261",
           "kind": "comment_deadline",
-          "when": "2026-11-06",
-          "until": "2026-11-06",
+          "when": "2026-11-09",
+          "until": "2026-11-09",
           "filedAt": null,
           "signedAt": null,
-          "title": "Drawbridge Operation Regulation; Bay St. Louis, Bay St. Louis, MS; Back Bay of Biloxi, Biloxi, MS; Pascagoula River, Pascagoula, MS; Three Mile Creek, Mobile, AL; Chickasaw Creek, Saraland, AL.",
-          "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/USCG-2026-0889-0001",
+          "title": "National Petroleum Reserve in Alaska Production Site Development",
+          "summary": "Interior Department, Land Management Bureau (from lower in the map)",
+          "url": "http://www.regulations.gov/commenton/BLM-2026-0133-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-19360",
+          "id": "fr-comment-2026-19708",
           "kind": "comment_deadline",
-          "when": "2026-11-06",
-          "until": "2026-11-06",
+          "when": "2026-11-09",
+          "until": "2026-11-09",
           "filedAt": null,
           "signedAt": null,
-          "title": "Airworthiness Directives; Airbus SAS Airplanes",
+          "title": "Amendment of Class E Airspace; Del Rio, TX",
           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-8807-0001",
+          "url": "http://www.regulations.gov/commenton/FAA-2026-12310-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-19355",
+          "id": "fr-comment-2026-19411",
           "kind": "comment_deadline",
-          "when": "2026-11-06",
-          "until": "2026-11-06",
+          "when": "2026-11-09",
+          "until": "2026-11-09",
           "filedAt": null,
           "signedAt": null,
-          "title": "Airworthiness Directives; Airbus SAS Airplanes",
+          "title": "Airworthiness Directives; Textron Aviation, Inc. (Type Certificate Previously Held by Cessna Aircraft Company) Airplanes",
           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-8809-0001",
+          "url": "http://www.regulations.gov/commenton/FAA-2026-8818-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-19345",
+          "id": "fr-comment-2026-18366",
           "kind": "comment_deadline",
-          "when": "2026-11-06",
-          "until": "2026-11-06",
+          "when": "2026-11-09",
+          "until": "2026-11-09",
           "filedAt": null,
           "signedAt": null,
-          "title": "Airworthiness Directives; Bell Textron Canada Limited Helicopters",
-          "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-11783-0001",
+          "title": "Improving the Effectiveness of the Robocall Mitigation Database; Call Authentication Trust Anchor; Advanced Methods To Target and Eliminate Unlawful Robocalls",
+          "summary": "Federal Communications Commission (from lower in the map)",
+          "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-09/pdf/2026-18366.pdf",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-19343",
-          "kind": "comment_deadline",
-          "when": "2026-11-06",
-          "until": "2026-11-06",
+          "id": "fr-sun-2026-19874-2026-11-09",
+          "kind": "sunshine_meeting",
+          "when": "2026-11-09",
+          "until": "2026-11-09",
           "filedAt": null,
           "signedAt": null,
-          "title": "Airworthiness Directives; Leonardo S.p.a. Helicopters",
-          "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-8817-0001",
-          "source": "Federal Register proposed rule (comments close)",
+          "title": "Sunshine Act Meetings",
+          "summary": "National Council on Disability (from lower in the map)",
+          "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-29/pdf/2026-19874.pdf",
+          "source": "Federal Register Sunshine Act meeting",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-20611",
+          "id": "fr-comment-2026-20612",
           "kind": "comment_deadline",
-          "when": "2026-11-06",
-          "until": "2026-11-06",
+          "when": "2026-11-09",
+          "until": "2026-11-09",
           "filedAt": null,
           "signedAt": null,
-          "title": "Approval and Promulgation of State Air Quality Plans for Designated Facilities and Pollutants; West Virginia; Negative Declarations for Existing Large Municipal Waste Combustors and Other Solid Waste Incinerators",
+          "title": "Air Quality Plan; Arizona; Maricopa County Air Quality Department; New Source Review; Emission Reduction Credits-Rule 204",
           "summary": "Environmental Protection Agency (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/EPA-R03-OAR-2026-6205-0001",
+          "url": "http://www.regulations.gov/commenton/EPA-R09-OAR-2026-4654-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
@@ -418,8 +418,8 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-10-10T17:53:35.534Z",
-          "count": 4,
+          "asOf": "2026-10-11T18:08:33.193Z",
+          "count": 3,
           "rolledUp": true,
           "events": [
             {
@@ -465,21 +465,6 @@
               "source": "Office of the Clerk, U.S. House",
               "sourceUrl": "https://clerk.house.gov/",
               "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "senate-floor-2026-10-09T13:30:01-04:00",
-              "kind": "floor_session",
-              "when": "2026-10-09T13:30:01-04:00",
-              "until": "2026-10-09T13:30:39-04:00",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Senate floor (recent)",
-              "summary": "Has adjourned (from lower in the map)",
-              "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-              "source": "Senate.gov floor schedule XML",
-              "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-              "urgency": "recent",
               "bill": null
             }
           ]
@@ -1061,8 +1046,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
-              "count": 4,
+              "asOf": "2026-10-11T18:08:33.193Z",
+              "count": 3,
               "rolledUp": true,
               "events": [
                 {
@@ -1108,21 +1093,6 @@
                   "source": "Office of the Clerk, U.S. House",
                   "sourceUrl": "https://clerk.house.gov/",
                   "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "senate-floor-2026-10-09T13:30:01-04:00",
-                  "kind": "floor_session",
-                  "when": "2026-10-09T13:30:01-04:00",
-                  "until": "2026-10-09T13:30:39-04:00",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Senate floor (recent)",
-                  "summary": "Has adjourned (from lower in the map)",
-                  "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-                  "source": "Senate.gov floor schedule XML",
-                  "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-                  "urgency": "recent",
                   "bill": null
                 }
               ]
@@ -1262,7 +1232,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-10-10T17:53:35.534Z",
+                  "asOf": "2026-10-11T18:08:33.193Z",
                   "count": 2,
                   "rolledUp": false,
                   "events": [
@@ -1428,8 +1398,8 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-10-10T17:53:35.534Z",
-                  "count": 2,
+                  "asOf": "2026-10-11T18:08:33.193Z",
+                  "count": 1,
                   "rolledUp": false,
                   "events": [
                     {
@@ -1445,21 +1415,6 @@
                       "source": "Senate.gov floor schedule XML",
                       "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
                       "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "senate-floor-2026-10-09T13:30:01-04:00",
-                      "kind": "floor_session",
-                      "when": "2026-10-09T13:30:01-04:00",
-                      "until": "2026-10-09T13:30:39-04:00",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Senate floor (recent)",
-                      "summary": "Has adjourned",
-                      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-                      "source": "Senate.gov floor schedule XML",
-                      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-                      "urgency": "recent",
                       "bill": null
                     }
                   ]
@@ -2403,10 +2358,55 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-10-10T17:53:35.534Z",
-          "count": 130,
+          "asOf": "2026-10-11T18:08:33.193Z",
+          "count": 133,
           "rolledUp": true,
           "events": [
+            {
+              "id": "fr-comment-2026-18261",
+              "kind": "comment_deadline",
+              "when": "2026-11-09",
+              "until": "2026-11-09",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "National Petroleum Reserve in Alaska Production Site Development",
+              "summary": "Interior Department, Land Management Bureau (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/BLM-2026-0133-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-19708",
+              "kind": "comment_deadline",
+              "when": "2026-11-09",
+              "until": "2026-11-09",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Amendment of Class E Airspace; Del Rio, TX",
+              "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/FAA-2026-12310-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-19411",
+              "kind": "comment_deadline",
+              "when": "2026-11-09",
+              "until": "2026-11-09",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Airworthiness Directives; Textron Aviation, Inc. (Type Certificate Previously Held by Cessna Aircraft Company) Airplanes",
+              "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/FAA-2026-8818-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
             {
               "id": "fr-comment-2026-20545",
               "kind": "comment_deadline",
@@ -2451,51 +2451,6 @@
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
-            },
-            {
-              "id": "fr-comment-2026-19345",
-              "kind": "comment_deadline",
-              "when": "2026-11-06",
-              "until": "2026-11-06",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Airworthiness Directives; Bell Textron Canada Limited Helicopters",
-              "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/FAA-2026-11783-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-19343",
-              "kind": "comment_deadline",
-              "when": "2026-11-06",
-              "until": "2026-11-06",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Airworthiness Directives; Leonardo S.p.a. Helicopters",
-              "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/FAA-2026-8817-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-20371",
-              "kind": "comment_deadline",
-              "when": "2026-11-04",
-              "until": "2026-11-04",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Proposal of Special Measure Prohibiting the Transmittal of Funds Regarding Transactions Involving the A7 Network's Sub-Agents",
-              "summary": "Treasury Department, Financial Crimes Enforcement Network (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/FINCEN-2026-0265-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
             }
           ]
         },
@@ -2524,7 +2479,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 17,
               "rolledUp": false,
               "events": [
@@ -2735,7 +2690,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-10T17:53:35.534Z",
+                  "asOf": "2026-10-11T18:08:33.193Z",
                   "count": 6,
                   "rolledUp": false,
                   "events": [
@@ -2907,7 +2862,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-10T17:53:35.534Z",
+                      "asOf": "2026-10-11T18:08:33.193Z",
                       "count": 4,
                       "rolledUp": false,
                       "events": [
@@ -3538,7 +3493,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 3,
               "rolledUp": true,
               "events": [
@@ -3625,7 +3580,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-10T17:53:35.534Z",
+                  "asOf": "2026-10-11T18:08:33.193Z",
                   "count": 3,
                   "rolledUp": true,
                   "events": [
@@ -3686,7 +3641,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-10T17:53:35.534Z",
+                      "asOf": "2026-10-11T18:08:33.193Z",
                       "count": 3,
                       "rolledUp": true,
                       "events": [
@@ -5205,7 +5160,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-10T17:53:35.534Z",
+                          "asOf": "2026-10-11T18:08:33.193Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -5251,7 +5206,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-10T17:53:35.534Z",
+                              "asOf": "2026-10-11T18:08:33.193Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -5718,7 +5673,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-10T17:53:35.534Z",
+                          "asOf": "2026-10-11T18:08:33.193Z",
                           "count": 2,
                           "rolledUp": true,
                           "events": [
@@ -5816,7 +5771,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-10T17:53:35.534Z",
+                              "asOf": "2026-10-11T18:08:33.193Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -5879,7 +5834,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-10T17:53:35.534Z",
+                              "asOf": "2026-10-11T18:08:33.193Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -6239,7 +6194,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 17,
               "rolledUp": true,
               "events": [
@@ -6360,7 +6315,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-10T17:53:35.534Z",
+                  "asOf": "2026-10-11T18:08:33.193Z",
                   "count": 17,
                   "rolledUp": true,
                   "events": [
@@ -6481,7 +6436,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-10T17:53:35.534Z",
+                      "asOf": "2026-10-11T18:08:33.193Z",
                       "count": 17,
                       "rolledUp": true,
                       "events": [
@@ -6602,7 +6557,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-10T17:53:35.534Z",
+                          "asOf": "2026-10-11T18:08:33.193Z",
                           "count": 17,
                           "rolledUp": true,
                           "events": [
@@ -7220,7 +7175,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-10T17:53:35.534Z",
+                              "asOf": "2026-10-11T18:08:33.193Z",
                               "count": 2,
                               "rolledUp": true,
                               "events": [
@@ -7316,7 +7271,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-10-10T17:53:35.534Z",
+                                  "asOf": "2026-10-11T18:08:33.193Z",
                                   "count": 2,
                                   "rolledUp": true,
                                   "events": [
@@ -7439,7 +7394,7 @@
                                       "usgm": null
                                     },
                                     "heat": {
-                                      "asOf": "2026-10-10T17:53:35.534Z",
+                                      "asOf": "2026-10-11T18:08:33.193Z",
                                       "count": 2,
                                       "rolledUp": false,
                                       "events": [
@@ -7583,7 +7538,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-10T17:53:35.534Z",
+                              "asOf": "2026-10-11T18:08:33.193Z",
                               "count": 1,
                               "rolledUp": true,
                               "events": [
@@ -7681,7 +7636,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-10-10T17:53:35.534Z",
+                                  "asOf": "2026-10-11T18:08:33.193Z",
                                   "count": 1,
                                   "rolledUp": false,
                                   "events": [
@@ -7933,7 +7888,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-10T17:53:35.534Z",
+                              "asOf": "2026-10-11T18:08:33.193Z",
                               "count": 2,
                               "rolledUp": true,
                               "events": [
@@ -8054,7 +8009,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-10-10T17:53:35.534Z",
+                                  "asOf": "2026-10-11T18:08:33.193Z",
                                   "count": 2,
                                   "rolledUp": false,
                                   "events": [
@@ -8328,7 +8283,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-10T17:53:35.534Z",
+                              "asOf": "2026-10-11T18:08:33.193Z",
                               "count": 12,
                               "rolledUp": true,
                               "events": [
@@ -8419,7 +8374,7 @@
                                   "usgm": null
                                 },
                                 "heat": {
-                                  "asOf": "2026-10-10T17:53:35.534Z",
+                                  "asOf": "2026-10-11T18:08:33.193Z",
                                   "count": 12,
                                   "rolledUp": true,
                                   "events": [
@@ -8612,7 +8567,7 @@
                                       }
                                     },
                                     "heat": {
-                                      "asOf": "2026-10-10T17:53:35.534Z",
+                                      "asOf": "2026-10-11T18:08:33.193Z",
                                       "count": 12,
                                       "rolledUp": false,
                                       "events": [
@@ -23002,7 +22957,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 7,
               "rolledUp": true,
               "events": [
@@ -23093,7 +23048,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-10T17:53:35.534Z",
+                  "asOf": "2026-10-11T18:08:33.193Z",
                   "count": 7,
                   "rolledUp": true,
                   "events": [
@@ -25729,7 +25684,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-10T17:53:35.534Z",
+                      "asOf": "2026-10-11T18:08:33.193Z",
                       "count": 7,
                       "rolledUp": false,
                       "events": [
@@ -26091,7 +26046,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 9,
               "rolledUp": false,
               "events": [
@@ -26138,7 +26093,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-10T17:53:35.534Z",
+                  "asOf": "2026-10-11T18:08:33.193Z",
                   "count": 8,
                   "rolledUp": true,
                   "events": [
@@ -26284,7 +26239,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-10T17:53:35.534Z",
+                      "asOf": "2026-10-11T18:08:33.193Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -26811,7 +26766,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-10T17:53:35.534Z",
+                      "asOf": "2026-10-11T18:08:33.193Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -27767,7 +27722,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-10T17:53:35.534Z",
+                      "asOf": "2026-10-11T18:08:33.193Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -28031,7 +27986,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-10T17:53:35.534Z",
+                      "asOf": "2026-10-11T18:08:33.193Z",
                       "count": 4,
                       "rolledUp": false,
                       "events": [
@@ -28348,7 +28303,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 14,
               "rolledUp": true,
               "events": [
@@ -28469,7 +28424,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-10T17:53:35.534Z",
+                  "asOf": "2026-10-11T18:08:33.193Z",
                   "count": 14,
                   "rolledUp": true,
                   "events": [
@@ -28590,7 +28545,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-10T17:53:35.534Z",
+                      "asOf": "2026-10-11T18:08:33.193Z",
                       "count": 14,
                       "rolledUp": true,
                       "events": [
@@ -30118,7 +30073,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-10T17:53:35.534Z",
+                          "asOf": "2026-10-11T18:08:33.193Z",
                           "count": 12,
                           "rolledUp": false,
                           "events": [
@@ -30356,7 +30311,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-10T17:53:35.534Z",
+                          "asOf": "2026-10-11T18:08:33.193Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -30985,7 +30940,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -32749,7 +32704,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 4,
               "rolledUp": true,
               "events": [
@@ -32876,7 +32831,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-10T17:53:35.534Z",
+                  "asOf": "2026-10-11T18:08:33.193Z",
                   "count": 4,
                   "rolledUp": true,
                   "events": [
@@ -32967,7 +32922,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-10T17:53:35.534Z",
+                      "asOf": "2026-10-11T18:08:33.193Z",
                       "count": 4,
                       "rolledUp": true,
                       "events": [
@@ -33833,7 +33788,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-10T17:53:35.534Z",
+                          "asOf": "2026-10-11T18:08:33.193Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -34498,7 +34453,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-10T17:53:35.534Z",
+                          "asOf": "2026-10-11T18:08:33.193Z",
                           "count": 3,
                           "rolledUp": false,
                           "events": [
@@ -34977,7 +34932,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 1,
               "rolledUp": true,
               "events": [
@@ -35023,7 +34978,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-10T17:53:35.534Z",
+                  "asOf": "2026-10-11T18:08:33.193Z",
                   "count": 1,
                   "rolledUp": true,
                   "events": [
@@ -35069,7 +35024,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-10T17:53:35.534Z",
+                      "asOf": "2026-10-11T18:08:33.193Z",
                       "count": 1,
                       "rolledUp": true,
                       "events": [
@@ -36486,7 +36441,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-10T17:53:35.534Z",
+                          "asOf": "2026-10-11T18:08:33.193Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -39149,10 +39104,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
-              "count": 3,
+              "asOf": "2026-10-11T18:08:33.193Z",
+              "count": 4,
               "rolledUp": true,
               "events": [
+                {
+                  "id": "fr-comment-2026-18261",
+                  "kind": "comment_deadline",
+                  "when": "2026-11-09",
+                  "until": "2026-11-09",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "National Petroleum Reserve in Alaska Production Site Development",
+                  "summary": "Interior Department, Land Management Bureau (from lower in the map)",
+                  "url": "http://www.regulations.gov/commenton/BLM-2026-0133-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-17902",
                   "kind": "comment_deadline",
@@ -39225,10 +39195,25 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-10T17:53:35.534Z",
-                  "count": 3,
+                  "asOf": "2026-10-11T18:08:33.193Z",
+                  "count": 4,
                   "rolledUp": true,
                   "events": [
+                    {
+                      "id": "fr-comment-2026-18261",
+                      "kind": "comment_deadline",
+                      "when": "2026-11-09",
+                      "until": "2026-11-09",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "National Petroleum Reserve in Alaska Production Site Development",
+                      "summary": "Interior Department, Land Management Bureau (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/BLM-2026-0133-0001",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
                     {
                       "id": "fr-comment-2026-17902",
                       "kind": "comment_deadline",
@@ -39301,10 +39286,25 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-10T17:53:35.534Z",
-                      "count": 3,
+                      "asOf": "2026-10-11T18:08:33.193Z",
+                      "count": 4,
                       "rolledUp": true,
                       "events": [
+                        {
+                          "id": "fr-comment-2026-18261",
+                          "kind": "comment_deadline",
+                          "when": "2026-11-09",
+                          "until": "2026-11-09",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "National Petroleum Reserve in Alaska Production Site Development",
+                          "summary": "Interior Department, Land Management Bureau (from lower in the map)",
+                          "url": "http://www.regulations.gov/commenton/BLM-2026-0133-0001",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
                         {
                           "id": "fr-comment-2026-17902",
                           "kind": "comment_deadline",
@@ -39377,7 +39377,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-10T17:53:35.534Z",
+                          "asOf": "2026-10-11T18:08:33.193Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -39505,7 +39505,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-10-10T17:53:35.534Z",
+                              "asOf": "2026-10-11T18:08:33.193Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -40005,10 +40005,25 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-10T17:53:35.534Z",
-                          "count": 1,
+                          "asOf": "2026-10-11T18:08:33.193Z",
+                          "count": 2,
                           "rolledUp": true,
                           "events": [
+                            {
+                              "id": "fr-comment-2026-18261",
+                              "kind": "comment_deadline",
+                              "when": "2026-11-09",
+                              "until": "2026-11-09",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "National Petroleum Reserve in Alaska Production Site Development",
+                              "summary": "Interior Department, Land Management Bureau (from lower in the map)",
+                              "url": "http://www.regulations.gov/commenton/BLM-2026-0133-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
                             {
                               "id": "fr-pi-2026-20892",
                               "kind": "public_inspection",
@@ -40072,7 +40087,28 @@
                                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
                               }
                             },
-                            "heat": null,
+                            "heat": {
+                              "asOf": "2026-10-11T18:08:33.193Z",
+                              "count": 1,
+                              "rolledUp": false,
+                              "events": [
+                                {
+                                  "id": "fr-comment-2026-18261",
+                                  "kind": "comment_deadline",
+                                  "when": "2026-11-09",
+                                  "until": "2026-11-09",
+                                  "filedAt": null,
+                                  "signedAt": null,
+                                  "title": "National Petroleum Reserve in Alaska Production Site Development",
+                                  "summary": "Interior Department, Land Management Bureau",
+                                  "url": "http://www.regulations.gov/commenton/BLM-2026-0133-0001",
+                                  "source": "Federal Register proposed rule (comments close)",
+                                  "sourceUrl": "https://www.federalregister.gov/",
+                                  "urgency": "upcoming",
+                                  "bill": null
+                                }
+                              ]
+                            },
                             "children": [],
                             "spending": {
                               "obligatedAmount": 591914075.75,
@@ -40147,7 +40183,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-10-10T17:53:35.534Z",
+                              "asOf": "2026-10-11T18:08:33.193Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -40399,7 +40435,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-10T17:53:35.534Z",
+                          "asOf": "2026-10-11T18:08:33.193Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -40530,7 +40566,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-10T17:53:35.534Z",
+                              "asOf": "2026-10-11T18:08:33.193Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -41375,7 +41411,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 11,
               "rolledUp": true,
               "events": [
@@ -41522,7 +41558,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-10T17:53:35.534Z",
+                  "asOf": "2026-10-11T18:08:33.193Z",
                   "count": 11,
                   "rolledUp": true,
                   "events": [
@@ -41695,7 +41731,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-10T17:53:35.534Z",
+                      "asOf": "2026-10-11T18:08:33.193Z",
                       "count": 11,
                       "rolledUp": true,
                       "events": [
@@ -41967,7 +42003,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-10T17:53:35.534Z",
+                          "asOf": "2026-10-11T18:08:33.193Z",
                           "count": 4,
                           "rolledUp": true,
                           "events": [
@@ -42085,7 +42121,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-10-10T17:53:35.534Z",
+                              "asOf": "2026-10-11T18:08:33.193Z",
                               "count": 4,
                               "rolledUp": false,
                               "events": [
@@ -42290,7 +42326,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-10T17:53:35.534Z",
+                          "asOf": "2026-10-11T18:08:33.193Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -42797,7 +42833,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-10T17:53:35.534Z",
+                          "asOf": "2026-10-11T18:08:33.193Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -42895,7 +42931,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-10T17:53:35.534Z",
+                              "asOf": "2026-10-11T18:08:33.193Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -43311,7 +43347,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-10T17:53:35.534Z",
+                          "asOf": "2026-10-11T18:08:33.193Z",
                           "count": 5,
                           "rolledUp": false,
                           "events": [
@@ -43775,10 +43811,40 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
-              "count": 42,
+              "asOf": "2026-10-11T18:08:33.193Z",
+              "count": 44,
               "rolledUp": true,
               "events": [
+                {
+                  "id": "fr-comment-2026-19708",
+                  "kind": "comment_deadline",
+                  "when": "2026-11-09",
+                  "until": "2026-11-09",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Amendment of Class E Airspace; Del Rio, TX",
+                  "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
+                  "url": "http://www.regulations.gov/commenton/FAA-2026-12310-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-19411",
+                  "kind": "comment_deadline",
+                  "when": "2026-11-09",
+                  "until": "2026-11-09",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Airworthiness Directives; Textron Aviation, Inc. (Type Certificate Previously Held by Cessna Aircraft Company) Airplanes",
+                  "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
+                  "url": "http://www.regulations.gov/commenton/FAA-2026-8818-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-19360",
                   "kind": "comment_deadline",
@@ -43804,36 +43870,6 @@
                   "title": "Airworthiness Directives; Airbus SAS Airplanes",
                   "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
                   "url": "http://www.regulations.gov/commenton/FAA-2026-8809-0001",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-19345",
-                  "kind": "comment_deadline",
-                  "when": "2026-11-06",
-                  "until": "2026-11-06",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Airworthiness Directives; Bell Textron Canada Limited Helicopters",
-                  "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FAA-2026-11783-0001",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-19343",
-                  "kind": "comment_deadline",
-                  "when": "2026-11-06",
-                  "until": "2026-11-06",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Airworthiness Directives; Leonardo S.p.a. Helicopters",
-                  "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FAA-2026-8817-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
@@ -43896,10 +43932,40 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-10T17:53:35.534Z",
-                  "count": 42,
+                  "asOf": "2026-10-11T18:08:33.193Z",
+                  "count": 44,
                   "rolledUp": true,
                   "events": [
+                    {
+                      "id": "fr-comment-2026-19708",
+                      "kind": "comment_deadline",
+                      "when": "2026-11-09",
+                      "until": "2026-11-09",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Amendment of Class E Airspace; Del Rio, TX",
+                      "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/FAA-2026-12310-0001",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "fr-comment-2026-19411",
+                      "kind": "comment_deadline",
+                      "when": "2026-11-09",
+                      "until": "2026-11-09",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Airworthiness Directives; Textron Aviation, Inc. (Type Certificate Previously Held by Cessna Aircraft Company) Airplanes",
+                      "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/FAA-2026-8818-0001",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
                     {
                       "id": "fr-comment-2026-19360",
                       "kind": "comment_deadline",
@@ -43925,36 +43991,6 @@
                       "title": "Airworthiness Directives; Airbus SAS Airplanes",
                       "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
                       "url": "http://www.regulations.gov/commenton/FAA-2026-8809-0001",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-19345",
-                      "kind": "comment_deadline",
-                      "when": "2026-11-06",
-                      "until": "2026-11-06",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Airworthiness Directives; Bell Textron Canada Limited Helicopters",
-                      "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAA-2026-11783-0001",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-19343",
-                      "kind": "comment_deadline",
-                      "when": "2026-11-06",
-                      "until": "2026-11-06",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Airworthiness Directives; Leonardo S.p.a. Helicopters",
-                      "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAA-2026-8817-0001",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
@@ -44017,10 +44053,40 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-10T17:53:35.534Z",
-                      "count": 40,
+                      "asOf": "2026-10-11T18:08:33.193Z",
+                      "count": 42,
                       "rolledUp": true,
                       "events": [
+                        {
+                          "id": "fr-comment-2026-19708",
+                          "kind": "comment_deadline",
+                          "when": "2026-11-09",
+                          "until": "2026-11-09",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Amendment of Class E Airspace; Del Rio, TX",
+                          "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
+                          "url": "http://www.regulations.gov/commenton/FAA-2026-12310-0001",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
+                        {
+                          "id": "fr-comment-2026-19411",
+                          "kind": "comment_deadline",
+                          "when": "2026-11-09",
+                          "until": "2026-11-09",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Airworthiness Directives; Textron Aviation, Inc. (Type Certificate Previously Held by Cessna Aircraft Company) Airplanes",
+                          "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
+                          "url": "http://www.regulations.gov/commenton/FAA-2026-8818-0001",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
                         {
                           "id": "fr-comment-2026-19360",
                           "kind": "comment_deadline",
@@ -44046,36 +44112,6 @@
                           "title": "Airworthiness Directives; Airbus SAS Airplanes",
                           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
                           "url": "http://www.regulations.gov/commenton/FAA-2026-8809-0001",
-                          "source": "Federal Register proposed rule (comments close)",
-                          "sourceUrl": "https://www.federalregister.gov/",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-comment-2026-19345",
-                          "kind": "comment_deadline",
-                          "when": "2026-11-06",
-                          "until": "2026-11-06",
-                          "filedAt": null,
-                          "signedAt": null,
-                          "title": "Airworthiness Directives; Bell Textron Canada Limited Helicopters",
-                          "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/FAA-2026-11783-0001",
-                          "source": "Federal Register proposed rule (comments close)",
-                          "sourceUrl": "https://www.federalregister.gov/",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-comment-2026-19343",
-                          "kind": "comment_deadline",
-                          "when": "2026-11-06",
-                          "until": "2026-11-06",
-                          "filedAt": null,
-                          "signedAt": null,
-                          "title": "Airworthiness Directives; Leonardo S.p.a. Helicopters",
-                          "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/FAA-2026-8817-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
@@ -44408,7 +44444,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-10T17:53:35.534Z",
+                          "asOf": "2026-10-11T18:08:33.193Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -44731,7 +44767,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-10T17:53:35.534Z",
+                          "asOf": "2026-10-11T18:08:33.193Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -45187,10 +45223,40 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-10T17:53:35.534Z",
-                          "count": 38,
+                          "asOf": "2026-10-11T18:08:33.193Z",
+                          "count": 40,
                           "rolledUp": false,
                           "events": [
+                            {
+                              "id": "fr-comment-2026-19708",
+                              "kind": "comment_deadline",
+                              "when": "2026-11-09",
+                              "until": "2026-11-09",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Amendment of Class E Airspace; Del Rio, TX",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-12310-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-19411",
+                              "kind": "comment_deadline",
+                              "when": "2026-11-09",
+                              "until": "2026-11-09",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Airworthiness Directives; Textron Aviation, Inc. (Type Certificate Previously Held by Cessna Aircraft Company) Airplanes",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-8818-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
                             {
                               "id": "fr-comment-2026-19360",
                               "kind": "comment_deadline",
@@ -46143,7 +46209,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-10T17:53:35.534Z",
+                      "asOf": "2026-10-11T18:08:33.193Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -48183,7 +48249,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-10-10T17:53:35.534Z",
+          "asOf": "2026-10-11T18:08:33.193Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -48792,7 +48858,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -49893,10 +49959,85 @@
           "note": "Product door: Crosswalk Independent Federal Agencies + major non-Cabinet agencies + government corporations shelf. Constitutionally many report through the Executive; shown separately for citizen clarity."
         },
         "heat": {
-          "asOf": "2026-10-10T17:53:35.534Z",
-          "count": 60,
+          "asOf": "2026-10-11T18:08:33.193Z",
+          "count": 64,
           "rolledUp": true,
           "events": [
+            {
+              "id": "fr-comment-2026-18366",
+              "kind": "comment_deadline",
+              "when": "2026-11-09",
+              "until": "2026-11-09",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Improving the Effectiveness of the Robocall Mitigation Database; Call Authentication Trust Anchor; Advanced Methods To Target and Eliminate Unlawful Robocalls",
+              "summary": "Federal Communications Commission (from lower in the map)",
+              "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-09/pdf/2026-18366.pdf",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-sun-2026-19874-2026-11-09",
+              "kind": "sunshine_meeting",
+              "when": "2026-11-09",
+              "until": "2026-11-09",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Sunshine Act Meetings",
+              "summary": "National Council on Disability (from lower in the map)",
+              "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-29/pdf/2026-19874.pdf",
+              "source": "Federal Register Sunshine Act meeting",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-20612",
+              "kind": "comment_deadline",
+              "when": "2026-11-09",
+              "until": "2026-11-09",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Air Quality Plan; Arizona; Maricopa County Air Quality Department; New Source Review; Emission Reduction Credits-Rule 204",
+              "summary": "Environmental Protection Agency (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/EPA-R09-OAR-2026-4654-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-19568",
+              "kind": "comment_deadline",
+              "when": "2026-11-09",
+              "until": "2026-11-09",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Regulatory Enhancements for Reactor Licensing, Decommissioning, and Operational Oversight",
+              "summary": "Nuclear Regulatory Commission (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/NRC-2025-1138-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-18424",
+              "kind": "comment_deadline",
+              "when": "2026-11-09",
+              "until": "2026-11-09",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Political Contributions by Certain Investment Advisers",
+              "summary": "Securities and Exchange Commission (from lower in the map)",
+              "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-10/pdf/2026-18424.pdf",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
             {
               "id": "fr-comment-2026-20611",
               "kind": "comment_deadline",
@@ -49907,81 +50048,6 @@
               "title": "Approval and Promulgation of State Air Quality Plans for Designated Facilities and Pollutants; West Virginia; Negative Declarations for Existing Large Municipal Waste Combustors and Other Solid Waste Incinerators",
               "summary": "Environmental Protection Agency (from lower in the map)",
               "url": "http://www.regulations.gov/commenton/EPA-R03-OAR-2026-6205-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-20468",
-              "kind": "comment_deadline",
-              "when": "2026-11-05",
-              "until": "2026-11-05",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Initial Air Quality Designations for the 2024 Revised Primary Annual Fine Particle (PM2.5) National Ambient Air Quality Standards (NAAQS)",
-              "summary": "Environmental Protection Agency (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/EPA-HQ-OAR-2024-0078-0003",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-20509",
-              "kind": "comment_deadline",
-              "when": "2026-11-04",
-              "until": "2026-11-04",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Loans to Executive Officers, Directors, and Principal Shareholders of Member Banks: Bank Holding Companies",
-              "summary": "Federal Reserve System (from lower in the map)",
-              "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-07/pdf/2026-20509.pdf",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-20735",
-              "kind": "comment_deadline",
-              "when": "2026-11-04",
-              "until": "2026-11-04",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Extensions of Credit to Insiders",
-              "summary": "Federal Deposit Insurance Corporation (from lower in the map)",
-              "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-09/pdf/2026-20735.pdf",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-20317",
-              "kind": "comment_deadline",
-              "when": "2026-11-04",
-              "until": "2026-11-04",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "General Services Administration Acquisition Regulation; GSAR Implementation of Executive Order 14275, Acquisition of Utility Services",
-              "summary": "General Services Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/GSA-GSAR-2026-0595-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-20335",
-              "kind": "comment_deadline",
-              "when": "2026-11-04",
-              "until": "2026-11-04",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Exemptions From Materials Licensing",
-              "summary": "Nuclear Regulatory Commission (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/NRC-2025-1568-0002",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
@@ -51237,10 +51303,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
-              "count": 3,
+              "asOf": "2026-10-11T18:08:33.193Z",
+              "count": 4,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-18366",
+                  "kind": "comment_deadline",
+                  "when": "2026-11-09",
+                  "until": "2026-11-09",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Improving the Effectiveness of the Robocall Mitigation Database; Call Authentication Trust Anchor; Advanced Methods To Target and Eliminate Unlawful Robocalls",
+                  "summary": "Federal Communications Commission",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-09/pdf/2026-18366.pdf",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-20038",
                   "kind": "comment_deadline",
@@ -51690,7 +51771,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -51893,7 +51974,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -52547,7 +52628,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -52983,7 +53064,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -53060,7 +53141,7 @@
               "note": "Product shelf: GSE / government corporation entities lifted from Crosswalk Industry bucket."
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 3,
               "rolledUp": true,
               "events": [
@@ -53642,7 +53723,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-10-10T17:53:35.534Z",
+                  "asOf": "2026-10-11T18:08:33.193Z",
                   "count": 3,
                   "rolledUp": false,
                   "events": [
@@ -55843,7 +55924,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -57855,7 +57936,28 @@
               },
               "usgm": null
             },
-            "heat": null,
+            "heat": {
+              "asOf": "2026-10-11T18:08:33.193Z",
+              "count": 1,
+              "rolledUp": false,
+              "events": [
+                {
+                  "id": "fr-sun-2026-19874-2026-11-09",
+                  "kind": "sunshine_meeting",
+                  "when": "2026-11-09",
+                  "until": "2026-11-09",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Sunshine Act Meetings",
+                  "summary": "National Council on Disability",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-29/pdf/2026-19874.pdf",
+                  "source": "Federal Register Sunshine Act meeting",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                }
+              ]
+            },
             "children": [],
             "spending": {
               "obligatedAmount": 0,
@@ -60763,7 +60865,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -61165,7 +61267,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -61676,10 +61778,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
-              "count": 13,
+              "asOf": "2026-10-11T18:08:33.193Z",
+              "count": 14,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-20612",
+                  "kind": "comment_deadline",
+                  "when": "2026-11-09",
+                  "until": "2026-11-09",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Air Quality Plan; Arizona; Maricopa County Air Quality Department; New Source Review; Emission Reduction Credits-Rule 204",
+                  "summary": "Environmental Protection Agency",
+                  "url": "http://www.regulations.gov/commenton/EPA-R09-OAR-2026-4654-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-20611",
                   "kind": "comment_deadline",
@@ -63217,7 +63334,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 6,
               "rolledUp": false,
               "events": [
@@ -64679,10 +64796,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
-              "count": 3,
+              "asOf": "2026-10-11T18:08:33.193Z",
+              "count": 4,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-19568",
+                  "kind": "comment_deadline",
+                  "when": "2026-11-09",
+                  "until": "2026-11-09",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Regulatory Enhancements for Reactor Licensing, Decommissioning, and Operational Oversight",
+                  "summary": "Nuclear Regulatory Commission",
+                  "url": "http://www.regulations.gov/commenton/NRC-2025-1138-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-20335",
                   "kind": "comment_deadline",
@@ -66548,7 +66680,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -67060,10 +67192,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 12,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-18424",
+                  "kind": "comment_deadline",
+                  "when": "2026-11-09",
+                  "until": "2026-11-09",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Political Contributions by Certain Investment Advisers",
+                  "summary": "Securities and Exchange Commission",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-10/pdf/2026-18424.pdf",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-18190",
                   "kind": "comment_deadline",
@@ -67224,21 +67371,6 @@
                   "title": "Joint Industry Plan: Filing and Order of Summary Effectiveness on a Temporary Basis Not To Exceed 120 Days of Proposed Twenty-Ninth Amendment to the National Market System Plan to Address Extraordinary Market Volatility to Revise the Time for Calculating the Consolidated Price in Connection with Overnight Trading",
                   "summary": "Securities and Exchange Commission",
                   "url": "https://public-inspection.federalregister.gov/2026-20799.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-pi-2026-20800",
-                  "kind": "public_inspection",
-                  "when": "2026-10-13",
-                  "until": null,
-                  "filedAt": "2026-10-09T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Self-Regulatory Organizations; Proposed Rule Changes: The Nasdaq Stock Market LLC",
-                  "summary": "Securities and Exchange Commission",
-                  "url": "https://public-inspection.federalregister.gov/2026-20800.pdf",
                   "source": "Federal Register public inspection (PDF)",
                   "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                   "urgency": "upcoming",
@@ -67619,7 +67751,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-10T17:53:35.534Z",
+              "asOf": "2026-10-11T18:08:33.193Z",
               "count": 1,
               "rolledUp": false,
               "events": [

@@ -1,9 +1,9 @@
 {
-  "fetchedAt": "2026-10-10T17:53:35.534Z",
+  "fetchedAt": "2026-10-11T18:08:33.193Z",
   "sources": {
     "senateFloor": {
       "ok": true,
-      "count": 2,
+      "count": 1,
       "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
     },
     "houseClerk": {
@@ -24,36 +24,36 @@
     "presidential": {
       "ok": true,
       "count": 11,
-      "since": "2026-09-26",
+      "since": "2026-09-27",
       "url": "https://www.federalregister.gov/presidential-documents"
     },
     "commentDeadlines": {
       "ok": true,
-      "count": 112,
-      "start": "2026-10-10",
-      "end": "2026-11-08",
+      "count": 120,
+      "start": "2026-10-11",
+      "end": "2026-11-09",
       "type": "PRORULE",
       "url": "https://www.federalregister.gov/"
     },
     "sunshine": {
       "ok": true,
-      "count": 6,
-      "start": "2026-10-10",
-      "end": "2026-11-08",
+      "count": 7,
+      "start": "2026-10-11",
+      "end": "2026-11-09",
       "url": "https://www.federalregister.gov/"
     },
     "senateHearings": {
       "ok": true,
       "count": 0,
-      "start": "2026-10-10",
-      "end": "2026-11-08",
+      "start": "2026-10-11",
+      "end": "2026-11-09",
       "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
     },
     "houseHearings": {
       "ok": true,
       "count": 1,
-      "start": "2026-10-10",
-      "end": "2026-11-08",
+      "start": "2026-10-11",
+      "end": "2026-11-09",
       "congress": 119,
       "calendarIds": 1,
       "skipped404": [],
@@ -62,25 +62,12 @@
     "scotus": {
       "ok": true,
       "count": 1,
-      "start": "2026-10-10",
-      "end": "2026-11-08",
+      "start": "2026-10-11",
+      "end": "2026-11-09",
       "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
     }
   },
   "events": [
-    {
-      "id": "senate-floor-2026-10-09T13:30:01-04:00",
-      "kind": "floor_session",
-      "chamber": "Senate",
-      "when": "2026-10-09T13:30:01-04:00",
-      "until": "2026-10-09T13:30:39-04:00",
-      "title": "Senate floor (recent)",
-      "summary": "Has adjourned",
-      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-      "source": "Senate.gov floor schedule XML",
-      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-      "urgency": "recent"
-    },
     {
       "id": "senate-next-2026-10-13T15:30:00-04:00",
       "kind": "floor_session",
@@ -2483,6 +2470,44 @@
       "documentType": "Proposed Rule"
     },
     {
+      "id": "fr-comment-2026-20660",
+      "kind": "comment_deadline",
+      "when": "2026-11-09",
+      "until": "2026-11-09",
+      "title": "Optional Practical Training Fees",
+      "summary": "Homeland Security Department",
+      "url": "http://www.regulations.gov/commenton/ICEB-2026-0100-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/08/2026-20660/optional-practical-training-fees",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-08/pdf/2026-20660.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Homeland Security Department"
+      ],
+      "documentNumber": "2026-20660",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-20612",
+      "kind": "comment_deadline",
+      "when": "2026-11-09",
+      "until": "2026-11-09",
+      "title": "Air Quality Plan; Arizona; Maricopa County Air Quality Department; New Source Review; Emission Reduction Credits-Rule 204",
+      "summary": "Environmental Protection Agency",
+      "url": "http://www.regulations.gov/commenton/EPA-R09-OAR-2026-4654-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/08/2026-20612/air-quality-plan-arizona-maricopa-county-air-quality-department-new-source-review-emission-reduction",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-08/pdf/2026-20612.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Environmental Protection Agency"
+      ],
+      "documentNumber": "2026-20612",
+      "documentType": "Proposed Rule"
+    },
+    {
       "id": "fr-comment-2026-20611",
       "kind": "comment_deadline",
       "when": "2026-11-06",
@@ -2912,6 +2937,26 @@
       "documentType": "Proposed Rule"
     },
     {
+      "id": "fr-comment-2026-19708",
+      "kind": "comment_deadline",
+      "when": "2026-11-09",
+      "until": "2026-11-09",
+      "title": "Amendment of Class E Airspace; Del Rio, TX",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-12310-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/25/2026-19708/amendment-of-class-e-airspace-del-rio-tx",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-25/pdf/2026-19708.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-19708",
+      "documentType": "Proposed Rule"
+    },
+    {
       "id": "fr-comment-2026-19667",
       "kind": "comment_deadline",
       "when": "2026-10-26",
@@ -2928,6 +2973,25 @@
         "Environmental Protection Agency"
       ],
       "documentNumber": "2026-19667",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-19568",
+      "kind": "comment_deadline",
+      "when": "2026-11-09",
+      "until": "2026-11-09",
+      "title": "Regulatory Enhancements for Reactor Licensing, Decommissioning, and Operational Oversight",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "http://www.regulations.gov/commenton/NRC-2025-1138-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/24/2026-19568/regulatory-enhancements-for-reactor-licensing-decommissioning-and-operational-oversight",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-24/pdf/2026-19568.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentNumber": "2026-19568",
       "documentType": "Proposed Rule"
     },
     {
@@ -3006,6 +3070,26 @@
         "Coast Guard"
       ],
       "documentNumber": "2026-19430",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-19411",
+      "kind": "comment_deadline",
+      "when": "2026-11-09",
+      "until": "2026-11-09",
+      "title": "Airworthiness Directives; Textron Aviation, Inc. (Type Certificate Previously Held by Cessna Aircraft Company) Airplanes",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-8818-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/23/2026-19411/airworthiness-directives-textron-aviation-inc-type-certificate-previously-held-by-cessna-aircraft",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-23/pdf/2026-19411.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-19411",
       "documentType": "Proposed Rule"
     },
     {
@@ -3951,6 +4035,25 @@
       "documentType": "Proposed Rule"
     },
     {
+      "id": "fr-comment-2026-18424",
+      "kind": "comment_deadline",
+      "when": "2026-11-09",
+      "until": "2026-11-09",
+      "title": "Political Contributions by Certain Investment Advisers",
+      "summary": "Securities and Exchange Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-10/pdf/2026-18424.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/10/2026-18424/political-contributions-by-certain-investment-advisers",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-10/pdf/2026-18424.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Securities and Exchange Commission"
+      ],
+      "documentNumber": "2026-18424",
+      "documentType": "Proposed Rule"
+    },
+    {
       "id": "fr-comment-2026-18376",
       "kind": "comment_deadline",
       "when": "2026-10-26",
@@ -4008,6 +4111,45 @@
         "Federal Aviation Administration"
       ],
       "documentNumber": "2026-18372",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-18366",
+      "kind": "comment_deadline",
+      "when": "2026-11-09",
+      "until": "2026-11-09",
+      "title": "Improving the Effectiveness of the Robocall Mitigation Database; Call Authentication Trust Anchor; Advanced Methods To Target and Eliminate Unlawful Robocalls",
+      "summary": "Federal Communications Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-09/pdf/2026-18366.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/09/2026-18366/improving-the-effectiveness-of-the-robocall-mitigation-database-call-authentication-trust-anchor",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-09/pdf/2026-18366.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Communications Commission"
+      ],
+      "documentNumber": "2026-18366",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-18261",
+      "kind": "comment_deadline",
+      "when": "2026-11-09",
+      "until": "2026-11-09",
+      "title": "National Petroleum Reserve in Alaska Production Site Development",
+      "summary": "Interior Department, Land Management Bureau",
+      "url": "http://www.regulations.gov/commenton/BLM-2026-0133-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/08/2026-18261/national-petroleum-reserve-in-alaska-production-site-development",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-08/pdf/2026-18261.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Interior Department",
+        "Land Management Bureau"
+      ],
+      "documentNumber": "2026-18261",
       "documentType": "Proposed Rule"
     },
     {
@@ -4752,6 +4894,24 @@
         "Securities and Exchange Commission"
       ],
       "documentNumber": "2026-19935"
+    },
+    {
+      "id": "fr-sun-2026-19874-2026-11-09",
+      "kind": "sunshine_meeting",
+      "when": "2026-11-09",
+      "until": "2026-11-09",
+      "title": "Sunshine Act Meetings",
+      "summary": "National Council on Disability",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-29/pdf/2026-19874.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/29/2026-19874/sunshine-act-meetings",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-29/pdf/2026-19874.pdf",
+      "source": "Federal Register Sunshine Act meeting",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Council on Disability"
+      ],
+      "documentNumber": "2026-19874"
     },
     {
       "id": "fr-sun-2026-19715-2026-11-02",
