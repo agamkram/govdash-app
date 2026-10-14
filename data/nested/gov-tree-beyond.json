@@ -41,27 +41,27 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-10-13T19:53:45.993Z",
-      "asOf": "2026-10-13T19:53:23.386Z",
+      "enrichedAt": "2026-10-14T18:03:25.854Z",
+      "asOf": "2026-10-14T18:03:02.736Z",
       "nodesWithHeat": 4,
       "nodesWithDirectHeat": 2,
-      "rawEventCount": 273,
+      "rawEventCount": 218,
       "matched": {
         "chamber": 0,
         "presidential": 0,
-        "publicInspection": 1,
+        "publicInspection": 2,
         "commentDeadlines": 0,
         "sunshine": 1,
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 125,
-      "unmatchedCommentDeadlines": 122,
-      "unmatchedSunshine": 7,
+      "unmatchedPublicInspection": 77,
+      "unmatchedCommentDeadlines": 113,
+      "unmatchedSunshine": 8,
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 3,
+          "count": 2,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
@@ -76,42 +76,42 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 126,
+          "count": 79,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
-          "count": 11,
-          "since": "2026-09-29",
+          "count": 12,
+          "since": "2026-09-30",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 122,
-          "start": "2026-10-13",
-          "end": "2026-11-11",
+          "count": 113,
+          "start": "2026-10-14",
+          "end": "2026-11-12",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
-          "count": 8,
-          "start": "2026-10-13",
-          "end": "2026-11-11",
+          "count": 9,
+          "start": "2026-10-14",
+          "end": "2026-11-12",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
           "count": 0,
-          "start": "2026-10-13",
-          "end": "2026-11-11",
+          "start": "2026-10-14",
+          "end": "2026-11-12",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
           "count": 1,
-          "start": "2026-10-13",
-          "end": "2026-11-11",
+          "start": "2026-10-14",
+          "end": "2026-11-12",
           "congress": 119,
           "calendarIds": 1,
           "skipped404": [],
@@ -120,8 +120,8 @@
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-10-13",
-          "end": "2026-11-11",
+          "start": "2026-10-14",
+          "end": "2026-11-12",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -141,8 +141,8 @@
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
     "heat": {
-      "asOf": "2026-10-13T19:53:23.386Z",
-      "count": 2,
+      "asOf": "2026-10-14T18:03:02.736Z",
+      "count": 3,
       "rolledUp": true,
       "events": [
         {
@@ -161,15 +161,30 @@
           "bill": null
         },
         {
-          "id": "fr-pi-2026-21002",
+          "id": "fr-pi-2026-21064",
           "kind": "public_inspection",
-          "when": "2026-10-14",
+          "when": "2026-10-15",
           "until": null,
-          "filedAt": "2026-10-13T08:45:00.000-04:00",
+          "filedAt": "2026-10-14T08:45:00.000-04:00",
           "signedAt": null,
-          "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: AmeriCorps VISTA Criminal History Acknowledgement Form",
-          "summary": "Corporation for National and Community Service (from lower in the map)",
-          "url": "https://public-inspection.federalregister.gov/2026-21002.pdf",
+          "title": "Hearings, Meetings, Proceedings, etc.: Arts Advisory Panel",
+          "summary": "National Endowment for the Arts (from lower in the map)",
+          "url": "https://public-inspection.federalregister.gov/2026-21064.pdf",
+          "source": "Federal Register public inspection (PDF)",
+          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+          "urgency": "upcoming",
+          "bill": null
+        },
+        {
+          "id": "fr-pi-2026-21065",
+          "kind": "public_inspection",
+          "when": "2026-10-15",
+          "until": null,
+          "filedAt": "2026-10-14T08:45:00.000-04:00",
+          "signedAt": null,
+          "title": "Hearings, Meetings, Proceedings, etc.: National Council on the Arts",
+          "summary": "National Endowment for the Arts (from lower in the map)",
+          "url": "https://public-inspection.federalregister.gov/2026-21065.pdf",
           "source": "Federal Register public inspection (PDF)",
           "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
           "urgency": "upcoming",
@@ -191,8 +206,8 @@
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
         "heat": {
-          "asOf": "2026-10-13T19:53:23.386Z",
-          "count": 2,
+          "asOf": "2026-10-14T18:03:02.736Z",
+          "count": 3,
           "rolledUp": true,
           "events": [
             {
@@ -211,15 +226,30 @@
               "bill": null
             },
             {
-              "id": "fr-pi-2026-21002",
+              "id": "fr-pi-2026-21064",
               "kind": "public_inspection",
-              "when": "2026-10-14",
+              "when": "2026-10-15",
               "until": null,
-              "filedAt": "2026-10-13T08:45:00.000-04:00",
+              "filedAt": "2026-10-14T08:45:00.000-04:00",
               "signedAt": null,
-              "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: AmeriCorps VISTA Criminal History Acknowledgement Form",
-              "summary": "Corporation for National and Community Service (from lower in the map)",
-              "url": "https://public-inspection.federalregister.gov/2026-21002.pdf",
+              "title": "Hearings, Meetings, Proceedings, etc.: Arts Advisory Panel",
+              "summary": "National Endowment for the Arts (from lower in the map)",
+              "url": "https://public-inspection.federalregister.gov/2026-21064.pdf",
+              "source": "Federal Register public inspection (PDF)",
+              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-pi-2026-21065",
+              "kind": "public_inspection",
+              "when": "2026-10-15",
+              "until": null,
+              "filedAt": "2026-10-14T08:45:00.000-04:00",
+              "signedAt": null,
+              "title": "Hearings, Meetings, Proceedings, etc.: National Council on the Arts",
+              "summary": "National Endowment for the Arts (from lower in the map)",
+              "url": "https://public-inspection.federalregister.gov/2026-21065.pdf",
               "source": "Federal Register public inspection (PDF)",
               "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
               "urgency": "upcoming",
@@ -1062,7 +1092,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-13T19:53:23.386Z",
+              "asOf": "2026-10-14T18:03:02.736Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -1108,7 +1138,43 @@
               "sam": null,
               "usgm": null
             },
-            "heat": null,
+            "heat": {
+              "asOf": "2026-10-14T18:03:02.736Z",
+              "count": 2,
+              "rolledUp": false,
+              "events": [
+                {
+                  "id": "fr-pi-2026-21064",
+                  "kind": "public_inspection",
+                  "when": "2026-10-15",
+                  "until": null,
+                  "filedAt": "2026-10-14T08:45:00.000-04:00",
+                  "signedAt": null,
+                  "title": "Hearings, Meetings, Proceedings, etc.: Arts Advisory Panel",
+                  "summary": "National Endowment for the Arts",
+                  "url": "https://public-inspection.federalregister.gov/2026-21064.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-pi-2026-21065",
+                  "kind": "public_inspection",
+                  "when": "2026-10-15",
+                  "until": null,
+                  "filedAt": "2026-10-14T08:45:00.000-04:00",
+                  "signedAt": null,
+                  "title": "Hearings, Meetings, Proceedings, etc.: National Council on the Arts",
+                  "summary": "National Endowment for the Arts",
+                  "url": "https://public-inspection.federalregister.gov/2026-21065.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                }
+              ]
+            },
             "children": []
           },
           {
@@ -1842,28 +1908,7 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": {
-              "asOf": "2026-10-13T19:53:23.386Z",
-              "count": 1,
-              "rolledUp": false,
-              "events": [
-                {
-                  "id": "fr-pi-2026-21002",
-                  "kind": "public_inspection",
-                  "when": "2026-10-14",
-                  "until": null,
-                  "filedAt": "2026-10-13T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: AmeriCorps VISTA Criminal History Acknowledgement Form",
-                  "summary": "Corporation for National and Community Service",
-                  "url": "https://public-inspection.federalregister.gov/2026-21002.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                }
-              ]
-            },
+            "heat": null,
             "children": [],
             "spending": {
               "obligatedAmount": 988415591.27,
