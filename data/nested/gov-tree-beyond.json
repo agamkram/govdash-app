@@ -41,27 +41,27 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-10-14T18:03:25.854Z",
-      "asOf": "2026-10-14T18:03:02.736Z",
-      "nodesWithHeat": 4,
-      "nodesWithDirectHeat": 2,
-      "rawEventCount": 218,
+      "enrichedAt": "2026-10-15T17:48:17.449Z",
+      "asOf": "2026-10-15T17:47:53.527Z",
+      "nodesWithHeat": 3,
+      "nodesWithDirectHeat": 1,
+      "rawEventCount": 273,
       "matched": {
         "chamber": 0,
         "presidential": 0,
-        "publicInspection": 2,
+        "publicInspection": 0,
         "commentDeadlines": 0,
         "sunshine": 1,
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 77,
-      "unmatchedCommentDeadlines": 113,
-      "unmatchedSunshine": 8,
+      "unmatchedPublicInspection": 132,
+      "unmatchedCommentDeadlines": 117,
+      "unmatchedSunshine": 6,
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 2,
+          "count": 3,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
@@ -76,42 +76,42 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 79,
+          "count": 132,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
-          "count": 12,
-          "since": "2026-09-30",
+          "count": 11,
+          "since": "2026-10-01",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 113,
-          "start": "2026-10-14",
-          "end": "2026-11-12",
+          "count": 117,
+          "start": "2026-10-15",
+          "end": "2026-11-13",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
-          "count": 9,
-          "start": "2026-10-14",
-          "end": "2026-11-12",
+          "count": 7,
+          "start": "2026-10-15",
+          "end": "2026-11-13",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
           "count": 0,
-          "start": "2026-10-14",
-          "end": "2026-11-12",
+          "start": "2026-10-15",
+          "end": "2026-11-13",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
           "count": 1,
-          "start": "2026-10-14",
-          "end": "2026-11-12",
+          "start": "2026-10-15",
+          "end": "2026-11-13",
           "congress": 119,
           "calendarIds": 1,
           "skipped404": [],
@@ -120,8 +120,8 @@
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-10-14",
-          "end": "2026-11-12",
+          "start": "2026-10-15",
+          "end": "2026-11-13",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -141,8 +141,8 @@
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
     "heat": {
-      "asOf": "2026-10-14T18:03:02.736Z",
-      "count": 3,
+      "asOf": "2026-10-15T17:47:53.527Z",
+      "count": 1,
       "rolledUp": true,
       "events": [
         {
@@ -157,36 +157,6 @@
           "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-09/pdf/2026-20788.pdf",
           "source": "Federal Register Sunshine Act meeting",
           "sourceUrl": "https://www.federalregister.gov/",
-          "urgency": "upcoming",
-          "bill": null
-        },
-        {
-          "id": "fr-pi-2026-21064",
-          "kind": "public_inspection",
-          "when": "2026-10-15",
-          "until": null,
-          "filedAt": "2026-10-14T08:45:00.000-04:00",
-          "signedAt": null,
-          "title": "Hearings, Meetings, Proceedings, etc.: Arts Advisory Panel",
-          "summary": "National Endowment for the Arts (from lower in the map)",
-          "url": "https://public-inspection.federalregister.gov/2026-21064.pdf",
-          "source": "Federal Register public inspection (PDF)",
-          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-          "urgency": "upcoming",
-          "bill": null
-        },
-        {
-          "id": "fr-pi-2026-21065",
-          "kind": "public_inspection",
-          "when": "2026-10-15",
-          "until": null,
-          "filedAt": "2026-10-14T08:45:00.000-04:00",
-          "signedAt": null,
-          "title": "Hearings, Meetings, Proceedings, etc.: National Council on the Arts",
-          "summary": "National Endowment for the Arts (from lower in the map)",
-          "url": "https://public-inspection.federalregister.gov/2026-21065.pdf",
-          "source": "Federal Register public inspection (PDF)",
-          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
           "urgency": "upcoming",
           "bill": null
         }
@@ -206,8 +176,8 @@
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
         "heat": {
-          "asOf": "2026-10-14T18:03:02.736Z",
-          "count": 3,
+          "asOf": "2026-10-15T17:47:53.527Z",
+          "count": 1,
           "rolledUp": true,
           "events": [
             {
@@ -222,36 +192,6 @@
               "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-09/pdf/2026-20788.pdf",
               "source": "Federal Register Sunshine Act meeting",
               "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-pi-2026-21064",
-              "kind": "public_inspection",
-              "when": "2026-10-15",
-              "until": null,
-              "filedAt": "2026-10-14T08:45:00.000-04:00",
-              "signedAt": null,
-              "title": "Hearings, Meetings, Proceedings, etc.: Arts Advisory Panel",
-              "summary": "National Endowment for the Arts (from lower in the map)",
-              "url": "https://public-inspection.federalregister.gov/2026-21064.pdf",
-              "source": "Federal Register public inspection (PDF)",
-              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-pi-2026-21065",
-              "kind": "public_inspection",
-              "when": "2026-10-15",
-              "until": null,
-              "filedAt": "2026-10-14T08:45:00.000-04:00",
-              "signedAt": null,
-              "title": "Hearings, Meetings, Proceedings, etc.: National Council on the Arts",
-              "summary": "National Endowment for the Arts (from lower in the map)",
-              "url": "https://public-inspection.federalregister.gov/2026-21065.pdf",
-              "source": "Federal Register public inspection (PDF)",
-              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
               "urgency": "upcoming",
               "bill": null
             }
@@ -1092,7 +1032,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-14T18:03:02.736Z",
+              "asOf": "2026-10-15T17:47:53.527Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -1138,43 +1078,7 @@
               "sam": null,
               "usgm": null
             },
-            "heat": {
-              "asOf": "2026-10-14T18:03:02.736Z",
-              "count": 2,
-              "rolledUp": false,
-              "events": [
-                {
-                  "id": "fr-pi-2026-21064",
-                  "kind": "public_inspection",
-                  "when": "2026-10-15",
-                  "until": null,
-                  "filedAt": "2026-10-14T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Hearings, Meetings, Proceedings, etc.: Arts Advisory Panel",
-                  "summary": "National Endowment for the Arts",
-                  "url": "https://public-inspection.federalregister.gov/2026-21064.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-pi-2026-21065",
-                  "kind": "public_inspection",
-                  "when": "2026-10-15",
-                  "until": null,
-                  "filedAt": "2026-10-14T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Hearings, Meetings, Proceedings, etc.: National Council on the Arts",
-                  "summary": "National Endowment for the Arts",
-                  "url": "https://public-inspection.federalregister.gov/2026-21065.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                }
-              ]
-            },
+            "heat": null,
             "children": []
           },
           {
