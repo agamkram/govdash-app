@@ -1,9 +1,9 @@
 {
-  "fetchedAt": "2026-10-16T17:30:15.521Z",
+  "fetchedAt": "2026-10-17T16:29:07.428Z",
   "sources": {
     "senateFloor": {
       "ok": true,
-      "count": 2,
+      "count": 1,
       "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
     },
     "houseClerk": {
@@ -18,42 +18,42 @@
     },
     "publicInspection": {
       "ok": true,
-      "count": 147,
+      "count": 150,
       "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
     },
     "presidential": {
       "ok": true,
-      "count": 11,
-      "since": "2026-10-02",
+      "count": 9,
+      "since": "2026-10-03",
       "url": "https://www.federalregister.gov/presidential-documents"
     },
     "commentDeadlines": {
       "ok": true,
-      "count": 117,
-      "start": "2026-10-16",
-      "end": "2026-11-14",
+      "count": 110,
+      "start": "2026-10-17",
+      "end": "2026-11-15",
       "type": "PRORULE",
       "url": "https://www.federalregister.gov/"
     },
     "sunshine": {
       "ok": true,
-      "count": 5,
-      "start": "2026-10-16",
-      "end": "2026-11-14",
+      "count": 6,
+      "start": "2026-10-17",
+      "end": "2026-11-15",
       "url": "https://www.federalregister.gov/"
     },
     "senateHearings": {
       "ok": true,
       "count": 0,
-      "start": "2026-10-16",
-      "end": "2026-11-14",
+      "start": "2026-10-17",
+      "end": "2026-11-15",
       "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
     },
     "houseHearings": {
       "ok": true,
       "count": 1,
-      "start": "2026-10-16",
-      "end": "2026-11-14",
+      "start": "2026-10-17",
+      "end": "2026-11-15",
       "congress": 119,
       "calendarIds": 1,
       "skipped404": [],
@@ -62,25 +62,12 @@
     "scotus": {
       "ok": true,
       "count": 1,
-      "start": "2026-10-16",
-      "end": "2026-11-14",
+      "start": "2026-10-17",
+      "end": "2026-11-15",
       "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
     }
   },
   "events": [
-    {
-      "id": "senate-floor-2026-10-15T09:30:01-04:00",
-      "kind": "floor_session",
-      "chamber": "Senate",
-      "when": "2026-10-15T09:30:01-04:00",
-      "until": "2026-10-15T09:30:27-04:00",
-      "title": "Senate floor (recent)",
-      "summary": "Has adjourned",
-      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-      "source": "Senate.gov floor schedule XML",
-      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-      "urgency": "recent"
-    },
     {
       "id": "senate-next-2026-10-19T09:00:00-04:00",
       "kind": "floor_session",
@@ -2294,7 +2281,7 @@
       "when": "2026-10-19",
       "until": null,
       "filedAt": "2026-10-16T08:45:00.000-04:00",
-      "title": "Interpretation of ''Flammable Liquid Fuels'' with Respect to Fuel Additives",
+      "title": "Interpretation of ``Flammable Liquid Fuels'' with Respect to Fuel Additives",
       "summary": "Consumer Product Safety Commission",
       "url": "https://public-inspection.federalregister.gov/2026-21348.pdf",
       "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-21348/interpretation-of-flammable-liquid-fuels-with-respect-to-fuel-additives",
@@ -2834,7 +2821,7 @@
       "when": "2026-10-19",
       "until": null,
       "filedAt": "2026-10-16T08:45:00.000-04:00",
-      "title": "Further Definition of ''Swap'' to Exclude Casino-Style Gambling Products",
+      "title": "Further Definition of ``Swap'' to Exclude Casino-Style Gambling Products",
       "summary": "Commodity Futures Trading Commission",
       "url": "https://public-inspection.federalregister.gov/2026-21376.pdf",
       "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-21376/further-definition-of-swap-to-exclude-casino-style-gambling-products",
@@ -2854,7 +2841,7 @@
       "when": "2026-10-19",
       "until": null,
       "filedAt": "2026-10-16T08:45:00.000-04:00",
-      "title": "Further Definition of ''Swap'' - Inclusions",
+      "title": "Further Definition of ``Swap'' - Inclusions",
       "summary": "Commodity Futures Trading Commission",
       "url": "https://public-inspection.federalregister.gov/2026-21377.pdf",
       "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-21377/further-definition-of-swap---inclusions",
@@ -3049,6 +3036,66 @@
       "documentNumber": "2026-21432"
     },
     {
+      "id": "fr-pi-2026-21449",
+      "kind": "public_inspection",
+      "when": "2026-10-20",
+      "until": null,
+      "filedAt": "2026-10-16T16:15:00.000-04:00",
+      "title": "Meetings; Sunshine Act",
+      "summary": "Legal Services Corporation",
+      "url": "https://public-inspection.federalregister.gov/2026-21449.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-21449/meetings-sunshine-act",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-21449.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Legal Services Corporation"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-21449"
+    },
+    {
+      "id": "fr-pi-2026-21450",
+      "kind": "public_inspection",
+      "when": "2026-10-20",
+      "until": null,
+      "filedAt": "2026-10-16T16:15:00.000-04:00",
+      "title": "Atlantic Highly Migratory Species: Atlantic Bluefin Tuna Fisheries; Closure of the General Category October through November Fishery for 2026",
+      "summary": "National Oceanic and Atmospheric Administration",
+      "url": "https://public-inspection.federalregister.gov/2026-21450.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-21450/atlantic-highly-migratory-species-atlantic-bluefin-tuna-fisheries-closure-of-the-general-category",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-21450.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Oceanic and Atmospheric Administration"
+      ],
+      "documentType": "Rule",
+      "documentNumber": "2026-21450"
+    },
+    {
+      "id": "fr-pi-2026-21420",
+      "kind": "public_inspection",
+      "when": "2026-10-20",
+      "until": null,
+      "filedAt": "2026-10-16T16:15:00.000-04:00",
+      "title": "Medicare Program: Implementation of Sections 6219, 6220, and 6224 of the Consolidated Appropriations Act, 2026",
+      "summary": "Centers for Medicare & Medicaid Services",
+      "url": "https://public-inspection.federalregister.gov/2026-21420.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-21420/medicare-program-implementation-of-sections-6219-6220-and-6224-of-the-consolidated-appropriations",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-21420.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "documentType": "Proposed Rule",
+      "documentNumber": "2026-21420"
+    },
+    {
       "id": "fr-pres-2026-20855",
       "kind": "presidential_doc",
       "when": "2026-10-09",
@@ -3065,48 +3112,48 @@
       "documentType": "Presidential Document"
     },
     {
-      "id": "fr-pres-2026-20321",
+      "id": "fr-pres-2026-21432",
       "kind": "presidential_doc",
-      "when": "2026-10-02",
+      "when": "2026-10-19",
       "until": null,
       "signedAt": null,
-      "title": "Inaugurating the Era of Super Intelligence",
+      "title": "Continuation of the National Emergency With Respect to the Democratic Republic of the Congo",
       "summary": "Presidential Document",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-02/pdf/2026-20321.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/02/2026-20321/inaugurating-the-era-of-super-intelligence",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-02/pdf/2026-20321.pdf",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21432.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/19/2026-21432/continuation-of-the-national-emergency-with-respect-to-the-democratic-republic-of-the-congo",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21432.pdf",
       "source": "Federal Register presidential documents (PDF)",
       "sourceUrl": "https://www.federalregister.gov/presidential-documents",
       "urgency": "recent",
       "documentType": "Presidential Document"
     },
     {
-      "id": "fr-pres-2026-20320",
+      "id": "fr-pres-2026-21431",
       "kind": "presidential_doc",
-      "when": "2026-10-02",
+      "when": "2026-10-19",
       "until": null,
       "signedAt": null,
-      "title": "Eliminating Disease-Carrying Pests and Restoring Enjoyment of the Great Outdoors",
+      "title": "Continuation of the National Emergency With Respect to Sudan",
       "summary": "Presidential Document",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-02/pdf/2026-20320.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/02/2026-20320/eliminating-disease-carrying-pests-and-restoring-enjoyment-of-the-great-outdoors",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-02/pdf/2026-20320.pdf",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21431.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/19/2026-21431/continuation-of-the-national-emergency-with-respect-to-sudan",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21431.pdf",
       "source": "Federal Register presidential documents (PDF)",
       "sourceUrl": "https://www.federalregister.gov/presidential-documents",
       "urgency": "recent",
       "documentType": "Presidential Document"
     },
     {
-      "id": "fr-pres-2026-20319",
+      "id": "fr-pres-2026-21430",
       "kind": "presidential_doc",
-      "when": "2026-10-02",
+      "when": "2026-10-19",
       "until": null,
       "signedAt": null,
-      "title": "Streamlining Access to Government Services Through America.gov",
+      "title": "Continuation of the National Emergency With Respect to Significant Narcotics Traffickers Centered in Colombia",
       "summary": "Presidential Document",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-02/pdf/2026-20319.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/02/2026-20319/streamlining-access-to-government-services-through-americagov",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-02/pdf/2026-20319.pdf",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21430.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/19/2026-21430/continuation-of-the-national-emergency-with-respect-to-significant-narcotics-traffickers-centered-in",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21430.pdf",
       "source": "Federal Register presidential documents (PDF)",
       "sourceUrl": "https://www.federalregister.gov/presidential-documents",
       "urgency": "recent",
@@ -3187,38 +3234,6 @@
       "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20439.pdf",
       "htmlUrl": "https://www.federalregister.gov/documents/2026/10/05/2026-20439/presidential-determination-on-the-revocation-of-presidential-determinations-related-to-lebanon",
       "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20439.pdf",
-      "source": "Federal Register presidential documents (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/presidential-documents",
-      "urgency": "recent",
-      "documentType": "Presidential Document"
-    },
-    {
-      "id": "fr-pres-2026-20322",
-      "kind": "presidential_doc",
-      "when": "2026-10-02",
-      "until": null,
-      "signedAt": null,
-      "title": "Continuation of the National Emergency With Respect to the Situation in and in Relation to Syria",
-      "summary": "Presidential Document",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-02/pdf/2026-20322.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/02/2026-20322/continuation-of-the-national-emergency-with-respect-to-the-situation-in-and-in-relation-to-syria",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-02/pdf/2026-20322.pdf",
-      "source": "Federal Register presidential documents (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/presidential-documents",
-      "urgency": "recent",
-      "documentType": "Presidential Document"
-    },
-    {
-      "id": "fr-pres-2026-20318",
-      "kind": "presidential_doc",
-      "when": "2026-10-02",
-      "until": null,
-      "signedAt": null,
-      "title": "Presidential Determination on Refugee Admissions for Fiscal Year 2027",
-      "summary": "Presidential Document",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-02/pdf/2026-20318.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/02/2026-20318/presidential-determination-on-refugee-admissions-for-fiscal-year-2027",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-02/pdf/2026-20318.pdf",
       "source": "Federal Register presidential documents (PDF)",
       "sourceUrl": "https://www.federalregister.gov/presidential-documents",
       "urgency": "recent",
@@ -3699,7 +3714,7 @@
       "until": "2026-11-02",
       "title": "Decennial Census of the Population of Americans; Proposed Residence Criteria and Proposed Regulations for Demographic Questions; Extension of Comment Period",
       "summary": "Commerce Department, Census Bureau",
-      "url": "http://www.regulations.gov/commenton/USBC_FRDOC_0001-0076",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20328.pdf",
       "htmlUrl": "https://www.federalregister.gov/documents/2026/10/05/2026-20328/decennial-census-of-the-population-of-americans-proposed-residence-criteria-and-proposed-regulations",
       "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20328.pdf",
       "source": "Federal Register proposed rule (comments close)",
@@ -3748,26 +3763,6 @@
         "Transportation Department"
       ],
       "documentNumber": "2026-20169",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-20124",
-      "kind": "comment_deadline",
-      "when": "2026-10-16",
-      "until": "2026-10-16",
-      "title": "Safety Zone; Sector Mobile Captain of the Port Zone, Mobile, AL",
-      "summary": "Homeland Security Department, Coast Guard",
-      "url": "http://www.regulations.gov/commenton/USCG-2026-1214-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/01/2026-20124/safety-zone-sector-mobile-captain-of-the-port-zone-mobile-al",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-01/pdf/2026-20124.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Homeland Security Department",
-        "Coast Guard"
-      ],
-      "documentNumber": "2026-20124",
       "documentType": "Proposed Rule"
     },
     {
@@ -4849,26 +4844,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-18574",
-      "kind": "comment_deadline",
-      "when": "2026-10-16",
-      "until": "2026-10-16",
-      "title": "Information Reporting Regarding Qualified Opportunity Zones and Updated Qualified Opportunity Fund Certification and Decertification Procedures",
-      "summary": "Treasury Department, Internal Revenue Service",
-      "url": "http://www.regulations.gov/commenton/IRS-2026-1223-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/11/2026-18574/information-reporting-regarding-qualified-opportunity-zones-and-updated-qualified-opportunity-fund",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-11/pdf/2026-18574.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Treasury Department",
-        "Internal Revenue Service"
-      ],
-      "documentNumber": "2026-18574",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-18552",
       "kind": "comment_deadline",
       "when": "2026-11-10",
@@ -5223,46 +5198,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-17867",
-      "kind": "comment_deadline",
-      "when": "2026-10-16",
-      "until": "2026-10-16",
-      "title": "Amendment of Class D Airspace and Class E Airspace Over New Haven, CT",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2026-9967-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/01/2026-17867/amendment-of-class-d-airspace-and-class-e-airspace-over-new-haven-ct",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-01/pdf/2026-17867.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-17867",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-17840",
-      "kind": "comment_deadline",
-      "when": "2026-10-16",
-      "until": "2026-10-16",
-      "title": "Airworthiness Directives; Airbus Helicopters",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2026-8790-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/01/2026-17840/airworthiness-directives-airbus-helicopters",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-01/pdf/2026-17840.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-17840",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-17655",
       "kind": "comment_deadline",
       "when": "2026-10-27",
@@ -5440,66 +5375,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-16769",
-      "kind": "comment_deadline",
-      "when": "2026-10-16",
-      "until": "2026-10-16",
-      "title": "Proposed Removal of a Reporting Requirement for Trusts Whose Charitable Contribution Deductions Are Solely for Contributions Made by Passthrough Entities",
-      "summary": "Treasury Department, Internal Revenue Service",
-      "url": "http://www.regulations.gov/commenton/IRS-2026-0991-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/17/2026-16769/proposed-removal-of-a-reporting-requirement-for-trusts-whose-charitable-contribution-deductions-are",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-17/pdf/2026-16769.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Treasury Department",
-        "Internal Revenue Service"
-      ],
-      "documentNumber": "2026-16769",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-16729",
-      "kind": "comment_deadline",
-      "when": "2026-10-16",
-      "until": "2026-10-16",
-      "title": "Medical Devices; Classification of Accessories Distinct From Other Devices; Proposed List of Accessories Suitable for Class I; Request for Comments",
-      "summary": "Health and Human Services Department, Food and Drug Administration",
-      "url": "http://www.regulations.gov/commenton/FDA-2025-N-6224-0011",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/17/2026-16729/medical-devices-classification-of-accessories-distinct-from-other-devices-proposed-list-of",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-17/pdf/2026-16729.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Health and Human Services Department",
-        "Food and Drug Administration"
-      ],
-      "documentNumber": "2026-16729",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-16728",
-      "kind": "comment_deadline",
-      "when": "2026-10-16",
-      "until": "2026-10-16",
-      "title": "Gastroenterology-Urology Devices; Reclassification of Diagnostic Endoscopic Light Source Systems To Be Renamed Cystoscopic Systems Intended as an Aid for Detection of Bladder Cancer",
-      "summary": "Health and Human Services Department, Food and Drug Administration",
-      "url": "http://www.regulations.gov/commenton/FDA-2026-N-8249-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/08/17/2026-16728/gastroenterology-urology-devices-reclassification-of-diagnostic-endoscopic-light-source-systems-to",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-08-17/pdf/2026-16728.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Health and Human Services Department",
-        "Food and Drug Administration"
-      ],
-      "documentNumber": "2026-16728",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-16569",
       "kind": "comment_deadline",
       "when": "2026-11-12",
@@ -5538,6 +5413,42 @@
       ],
       "documentNumber": "2026-12644",
       "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-sun-2026-21384-2026-10-22",
+      "kind": "sunshine_meeting",
+      "when": "2026-10-22",
+      "until": "2026-10-22",
+      "title": "Sunshine Act Meeting",
+      "summary": "Consumer Product Safety Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21384.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/19/2026-21384/sunshine-act-meeting",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21384.pdf",
+      "source": "Federal Register Sunshine Act meeting",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Consumer Product Safety Commission"
+      ],
+      "documentNumber": "2026-21384"
+    },
+    {
+      "id": "fr-sun-2026-21259-2026-10-27",
+      "kind": "sunshine_meeting",
+      "when": "2026-10-27",
+      "until": "2026-10-27",
+      "title": "Sunshine Act Meetings",
+      "summary": "Federal Maritime Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21259.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/19/2026-21259/sunshine-act-meetings",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21259.pdf",
+      "source": "Federal Register Sunshine Act meeting",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Maritime Commission"
+      ],
+      "documentNumber": "2026-21259"
     },
     {
       "id": "fr-sun-2026-20788-2026-10-21",
@@ -5610,24 +5521,6 @@
         "National Council on Disability"
       ],
       "documentNumber": "2026-19874"
-    },
-    {
-      "id": "fr-sun-2026-19715-2026-11-02",
-      "kind": "sunshine_meeting",
-      "when": "2026-11-02",
-      "until": "2026-11-02",
-      "title": "Sunshine Act Meetings",
-      "summary": "Nuclear Regulatory Commission",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-25/pdf/2026-19715.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/25/2026-19715/sunshine-act-meetings",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-25/pdf/2026-19715.pdf",
-      "source": "Federal Register Sunshine Act meeting",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Nuclear Regulatory Commission"
-      ],
-      "documentNumber": "2026-19715"
     },
     {
       "id": "house-hearing-119583",

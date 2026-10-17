@@ -80,27 +80,27 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-10-16T17:30:29.920Z",
-      "asOf": "2026-10-16T17:30:15.521Z",
+      "enrichedAt": "2026-10-17T16:29:22.506Z",
+      "asOf": "2026-10-17T16:29:07.428Z",
       "nodesWithHeat": 101,
       "nodesWithDirectHeat": 54,
-      "rawEventCount": 285,
+      "rawEventCount": 279,
       "matched": {
-        "chamber": 3,
-        "presidential": 11,
-        "publicInspection": 122,
-        "commentDeadlines": 108,
-        "sunshine": 4,
+        "chamber": 2,
+        "presidential": 9,
+        "publicInspection": 124,
+        "commentDeadlines": 101,
+        "sunshine": 5,
         "hearings": 1,
         "scotus": 1
       },
-      "unmatchedPublicInspection": 25,
+      "unmatchedPublicInspection": 26,
       "unmatchedCommentDeadlines": 9,
       "unmatchedSunshine": 1,
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 2,
+          "count": 1,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
@@ -115,42 +115,42 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 147,
+          "count": 150,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
-          "count": 11,
-          "since": "2026-10-02",
+          "count": 9,
+          "since": "2026-10-03",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 117,
-          "start": "2026-10-16",
-          "end": "2026-11-14",
+          "count": 110,
+          "start": "2026-10-17",
+          "end": "2026-11-15",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
-          "count": 5,
-          "start": "2026-10-16",
-          "end": "2026-11-14",
+          "count": 6,
+          "start": "2026-10-17",
+          "end": "2026-11-15",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
           "count": 0,
-          "start": "2026-10-16",
-          "end": "2026-11-14",
+          "start": "2026-10-17",
+          "end": "2026-11-15",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
           "count": 1,
-          "start": "2026-10-16",
-          "end": "2026-11-14",
+          "start": "2026-10-17",
+          "end": "2026-11-15",
           "congress": 119,
           "calendarIds": 1,
           "skipped404": [],
@@ -159,8 +159,8 @@
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-10-16",
-          "end": "2026-11-14",
+          "start": "2026-10-17",
+          "end": "2026-11-15",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -297,8 +297,8 @@
       "note": "Product root: curated for the citizen map. Full Crosswalk nest preserved in gov-tree-full.json."
     },
     "heat": {
-      "asOf": "2026-10-16T17:30:15.521Z",
-      "count": 238,
+      "asOf": "2026-10-17T16:29:07.428Z",
+      "count": 231,
       "rolledUp": true,
       "events": [
         {
@@ -418,8 +418,8 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-10-16T17:30:15.521Z",
-          "count": 4,
+          "asOf": "2026-10-17T16:29:07.428Z",
+          "count": 3,
           "rolledUp": true,
           "events": [
             {
@@ -465,21 +465,6 @@
               "source": "Senate.gov floor schedule XML",
               "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
               "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "senate-floor-2026-10-15T09:30:01-04:00",
-              "kind": "floor_session",
-              "when": "2026-10-15T09:30:01-04:00",
-              "until": "2026-10-15T09:30:27-04:00",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Senate floor (recent)",
-              "summary": "Has adjourned (from lower in the map)",
-              "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-              "source": "Senate.gov floor schedule XML",
-              "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-              "urgency": "recent",
               "bill": null
             }
           ]
@@ -1061,8 +1046,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
-              "count": 4,
+              "asOf": "2026-10-17T16:29:07.428Z",
+              "count": 3,
               "rolledUp": true,
               "events": [
                 {
@@ -1108,21 +1093,6 @@
                   "source": "Senate.gov floor schedule XML",
                   "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
                   "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "senate-floor-2026-10-15T09:30:01-04:00",
-                  "kind": "floor_session",
-                  "when": "2026-10-15T09:30:01-04:00",
-                  "until": "2026-10-15T09:30:27-04:00",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Senate floor (recent)",
-                  "summary": "Has adjourned (from lower in the map)",
-                  "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-                  "source": "Senate.gov floor schedule XML",
-                  "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-                  "urgency": "recent",
                   "bill": null
                 }
               ]
@@ -1262,7 +1232,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-10-16T17:30:15.521Z",
+                  "asOf": "2026-10-17T16:29:07.428Z",
                   "count": 2,
                   "rolledUp": false,
                   "events": [
@@ -1428,8 +1398,8 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-10-16T17:30:15.521Z",
-                  "count": 2,
+                  "asOf": "2026-10-17T16:29:07.428Z",
+                  "count": 1,
                   "rolledUp": false,
                   "events": [
                     {
@@ -1445,21 +1415,6 @@
                       "source": "Senate.gov floor schedule XML",
                       "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
                       "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "senate-floor-2026-10-15T09:30:01-04:00",
-                      "kind": "floor_session",
-                      "when": "2026-10-15T09:30:01-04:00",
-                      "until": "2026-10-15T09:30:27-04:00",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Senate floor (recent)",
-                      "summary": "Has adjourned",
-                      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-                      "source": "Senate.gov floor schedule XML",
-                      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-                      "urgency": "recent",
                       "bill": null
                     }
                   ]
@@ -2403,8 +2358,8 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-10-16T17:30:15.521Z",
-          "count": 151,
+          "asOf": "2026-10-17T16:29:07.428Z",
+          "count": 144,
           "rolledUp": true,
           "events": [
             {
@@ -2524,10 +2479,55 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
-              "count": 19,
+              "asOf": "2026-10-17T16:29:07.428Z",
+              "count": 17,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-pres-2026-21432",
+                  "kind": "presidential_doc",
+                  "when": "2026-10-19",
+                  "until": null,
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Continuation of the National Emergency With Respect to the Democratic Republic of the Congo",
+                  "summary": "Presidential Document",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21432.pdf",
+                  "source": "Federal Register presidential documents (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+                  "urgency": "recent",
+                  "bill": null
+                },
+                {
+                  "id": "fr-pres-2026-21431",
+                  "kind": "presidential_doc",
+                  "when": "2026-10-19",
+                  "until": null,
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Continuation of the National Emergency With Respect to Sudan",
+                  "summary": "Presidential Document",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21431.pdf",
+                  "source": "Federal Register presidential documents (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+                  "urgency": "recent",
+                  "bill": null
+                },
+                {
+                  "id": "fr-pres-2026-21430",
+                  "kind": "presidential_doc",
+                  "when": "2026-10-19",
+                  "until": null,
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Continuation of the National Emergency With Respect to Significant Narcotics Traffickers Centered in Colombia",
+                  "summary": "Presidential Document",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21430.pdf",
+                  "source": "Federal Register presidential documents (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+                  "urgency": "recent",
+                  "bill": null
+                },
                 {
                   "id": "fr-pres-2026-21061",
                   "kind": "presidential_doc",
@@ -2617,81 +2617,6 @@
                   "sourceUrl": "https://www.federalregister.gov/presidential-documents",
                   "urgency": "recent",
                   "bill": null
-                },
-                {
-                  "id": "fr-pres-2026-20321",
-                  "kind": "presidential_doc",
-                  "when": "2026-10-02",
-                  "until": null,
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Inaugurating the Era of Super Intelligence",
-                  "summary": "Presidential Document",
-                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-02/pdf/2026-20321.pdf",
-                  "source": "Federal Register presidential documents (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/presidential-documents",
-                  "urgency": "recent",
-                  "bill": null
-                },
-                {
-                  "id": "fr-pres-2026-20320",
-                  "kind": "presidential_doc",
-                  "when": "2026-10-02",
-                  "until": null,
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Eliminating Disease-Carrying Pests and Restoring Enjoyment of the Great Outdoors",
-                  "summary": "Presidential Document",
-                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-02/pdf/2026-20320.pdf",
-                  "source": "Federal Register presidential documents (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/presidential-documents",
-                  "urgency": "recent",
-                  "bill": null
-                },
-                {
-                  "id": "fr-pres-2026-20319",
-                  "kind": "presidential_doc",
-                  "when": "2026-10-02",
-                  "until": null,
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Streamlining Access to Government Services Through America.gov",
-                  "summary": "Presidential Document",
-                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-02/pdf/2026-20319.pdf",
-                  "source": "Federal Register presidential documents (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/presidential-documents",
-                  "urgency": "recent",
-                  "bill": null
-                },
-                {
-                  "id": "fr-pres-2026-20322",
-                  "kind": "presidential_doc",
-                  "when": "2026-10-02",
-                  "until": null,
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Continuation of the National Emergency With Respect to the Situation in and in Relation to Syria",
-                  "summary": "Presidential Document",
-                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-02/pdf/2026-20322.pdf",
-                  "source": "Federal Register presidential documents (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/presidential-documents",
-                  "urgency": "recent",
-                  "bill": null
-                },
-                {
-                  "id": "fr-pres-2026-20318",
-                  "kind": "presidential_doc",
-                  "when": "2026-10-02",
-                  "until": null,
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Presidential Determination on Refugee Admissions for Fiscal Year 2027",
-                  "summary": "Presidential Document",
-                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-02/pdf/2026-20318.pdf",
-                  "source": "Federal Register presidential documents (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/presidential-documents",
-                  "urgency": "recent",
-                  "bill": null
                 }
               ],
               "hasChildHeat": true
@@ -2735,7 +2660,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-16T17:30:15.521Z",
+                  "asOf": "2026-10-17T16:29:07.428Z",
                   "count": 8,
                   "rolledUp": false,
                   "events": [
@@ -2922,7 +2847,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-16T17:30:15.521Z",
+                      "asOf": "2026-10-17T16:29:07.428Z",
                       "count": 5,
                       "rolledUp": false,
                       "events": [
@@ -3568,7 +3493,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 10,
               "rolledUp": true,
               "events": [
@@ -3715,7 +3640,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-16T17:30:15.521Z",
+                  "asOf": "2026-10-17T16:29:07.428Z",
                   "count": 10,
                   "rolledUp": true,
                   "events": [
@@ -3836,7 +3761,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-16T17:30:15.521Z",
+                      "asOf": "2026-10-17T16:29:07.428Z",
                       "count": 10,
                       "rolledUp": true,
                       "events": [
@@ -5205,7 +5130,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-16T17:30:15.521Z",
+                          "asOf": "2026-10-17T16:29:07.428Z",
                           "count": 2,
                           "rolledUp": true,
                           "events": [
@@ -5266,7 +5191,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-16T17:30:15.521Z",
+                              "asOf": "2026-10-17T16:29:07.428Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -5366,7 +5291,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-16T17:30:15.521Z",
+                              "asOf": "2026-10-17T16:29:07.428Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -5493,7 +5418,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-16T17:30:15.521Z",
+                          "asOf": "2026-10-17T16:29:07.428Z",
                           "count": 6,
                           "rolledUp": true,
                           "events": [
@@ -5584,7 +5509,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-16T17:30:15.521Z",
+                              "asOf": "2026-10-17T16:29:07.428Z",
                               "count": 6,
                               "rolledUp": false,
                               "events": [
@@ -6126,7 +6051,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-16T17:30:15.521Z",
+                          "asOf": "2026-10-17T16:29:07.428Z",
                           "count": 2,
                           "rolledUp": true,
                           "events": [
@@ -6224,7 +6149,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-16T17:30:15.521Z",
+                              "asOf": "2026-10-17T16:29:07.428Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -6287,7 +6212,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-16T17:30:15.521Z",
+                              "asOf": "2026-10-17T16:29:07.428Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -6647,8 +6572,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
-              "count": 21,
+              "asOf": "2026-10-17T16:29:07.428Z",
+              "count": 22,
               "rolledUp": true,
               "events": [
                 {
@@ -6675,7 +6600,7 @@
                   "signedAt": null,
                   "title": "Decennial Census of the Population of Americans; Proposed Residence Criteria and Proposed Regulations for Demographic Questions; Extension of Comment Period",
                   "summary": "Commerce Department, Census Bureau (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/USBC_FRDOC_0001-0076",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20328.pdf",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
@@ -6712,6 +6637,21 @@
                   "bill": null
                 },
                 {
+                  "id": "fr-pi-2026-21450",
+                  "kind": "public_inspection",
+                  "when": "2026-10-20",
+                  "until": null,
+                  "filedAt": "2026-10-16T16:15:00.000-04:00",
+                  "signedAt": null,
+                  "title": "Atlantic Highly Migratory Species: Atlantic Bluefin Tuna Fisheries; Closure of the General Category October through November Fishery for 2026",
+                  "summary": "National Oceanic and Atmospheric Administration (from lower in the map)",
+                  "url": "https://public-inspection.federalregister.gov/2026-21450.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
                   "id": "fr-pi-2026-21357",
                   "kind": "public_inspection",
                   "when": "2026-10-19",
@@ -6721,21 +6661,6 @@
                   "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Quarterly Survey of Transactions in Selected Services and Intellectual Property with Foreign Persons",
                   "summary": "Economic Analysis Bureau (from lower in the map)",
                   "url": "https://public-inspection.federalregister.gov/2026-21357.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-pi-2026-21271",
-                  "kind": "public_inspection",
-                  "when": "2026-10-19",
-                  "until": null,
-                  "filedAt": "2026-10-16T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Fine Denier Polyester Staple Fiber from India",
-                  "summary": "International Trade Administration (from lower in the map)",
-                  "url": "https://public-inspection.federalregister.gov/2026-21271.pdf",
                   "source": "Federal Register public inspection (PDF)",
                   "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                   "urgency": "upcoming",
@@ -6768,8 +6693,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-16T17:30:15.521Z",
-                  "count": 21,
+                  "asOf": "2026-10-17T16:29:07.428Z",
+                  "count": 22,
                   "rolledUp": true,
                   "events": [
                     {
@@ -6796,7 +6721,7 @@
                       "signedAt": null,
                       "title": "Decennial Census of the Population of Americans; Proposed Residence Criteria and Proposed Regulations for Demographic Questions; Extension of Comment Period",
                       "summary": "Commerce Department, Census Bureau (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/USBC_FRDOC_0001-0076",
+                      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20328.pdf",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
@@ -6833,6 +6758,21 @@
                       "bill": null
                     },
                     {
+                      "id": "fr-pi-2026-21450",
+                      "kind": "public_inspection",
+                      "when": "2026-10-20",
+                      "until": null,
+                      "filedAt": "2026-10-16T16:15:00.000-04:00",
+                      "signedAt": null,
+                      "title": "Atlantic Highly Migratory Species: Atlantic Bluefin Tuna Fisheries; Closure of the General Category October through November Fishery for 2026",
+                      "summary": "National Oceanic and Atmospheric Administration (from lower in the map)",
+                      "url": "https://public-inspection.federalregister.gov/2026-21450.pdf",
+                      "source": "Federal Register public inspection (PDF)",
+                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
                       "id": "fr-pi-2026-21357",
                       "kind": "public_inspection",
                       "when": "2026-10-19",
@@ -6842,21 +6782,6 @@
                       "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Quarterly Survey of Transactions in Selected Services and Intellectual Property with Foreign Persons",
                       "summary": "Economic Analysis Bureau (from lower in the map)",
                       "url": "https://public-inspection.federalregister.gov/2026-21357.pdf",
-                      "source": "Federal Register public inspection (PDF)",
-                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-pi-2026-21271",
-                      "kind": "public_inspection",
-                      "when": "2026-10-19",
-                      "until": null,
-                      "filedAt": "2026-10-16T08:45:00.000-04:00",
-                      "signedAt": null,
-                      "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Fine Denier Polyester Staple Fiber from India",
-                      "summary": "International Trade Administration (from lower in the map)",
-                      "url": "https://public-inspection.federalregister.gov/2026-21271.pdf",
                       "source": "Federal Register public inspection (PDF)",
                       "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                       "urgency": "upcoming",
@@ -6889,8 +6814,8 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-16T17:30:15.521Z",
-                      "count": 21,
+                      "asOf": "2026-10-17T16:29:07.428Z",
+                      "count": 22,
                       "rolledUp": true,
                       "events": [
                         {
@@ -6917,7 +6842,7 @@
                           "signedAt": null,
                           "title": "Decennial Census of the Population of Americans; Proposed Residence Criteria and Proposed Regulations for Demographic Questions; Extension of Comment Period",
                           "summary": "Commerce Department, Census Bureau (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/USBC_FRDOC_0001-0076",
+                          "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20328.pdf",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
@@ -6954,6 +6879,21 @@
                           "bill": null
                         },
                         {
+                          "id": "fr-pi-2026-21450",
+                          "kind": "public_inspection",
+                          "when": "2026-10-20",
+                          "until": null,
+                          "filedAt": "2026-10-16T16:15:00.000-04:00",
+                          "signedAt": null,
+                          "title": "Atlantic Highly Migratory Species: Atlantic Bluefin Tuna Fisheries; Closure of the General Category October through November Fishery for 2026",
+                          "summary": "National Oceanic and Atmospheric Administration (from lower in the map)",
+                          "url": "https://public-inspection.federalregister.gov/2026-21450.pdf",
+                          "source": "Federal Register public inspection (PDF)",
+                          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
+                        {
                           "id": "fr-pi-2026-21357",
                           "kind": "public_inspection",
                           "when": "2026-10-19",
@@ -6963,21 +6903,6 @@
                           "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Quarterly Survey of Transactions in Selected Services and Intellectual Property with Foreign Persons",
                           "summary": "Economic Analysis Bureau (from lower in the map)",
                           "url": "https://public-inspection.federalregister.gov/2026-21357.pdf",
-                          "source": "Federal Register public inspection (PDF)",
-                          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-pi-2026-21271",
-                          "kind": "public_inspection",
-                          "when": "2026-10-19",
-                          "until": null,
-                          "filedAt": "2026-10-16T08:45:00.000-04:00",
-                          "signedAt": null,
-                          "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Fine Denier Polyester Staple Fiber from India",
-                          "summary": "International Trade Administration (from lower in the map)",
-                          "url": "https://public-inspection.federalregister.gov/2026-21271.pdf",
                           "source": "Federal Register public inspection (PDF)",
                           "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                           "urgency": "upcoming",
@@ -7010,8 +6935,8 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-16T17:30:15.521Z",
-                          "count": 21,
+                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "count": 22,
                           "rolledUp": true,
                           "events": [
                             {
@@ -7038,7 +6963,7 @@
                               "signedAt": null,
                               "title": "Decennial Census of the Population of Americans; Proposed Residence Criteria and Proposed Regulations for Demographic Questions; Extension of Comment Period",
                               "summary": "Commerce Department, Census Bureau (from lower in the map)",
-                              "url": "http://www.regulations.gov/commenton/USBC_FRDOC_0001-0076",
+                              "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20328.pdf",
                               "source": "Federal Register proposed rule (comments close)",
                               "sourceUrl": "https://www.federalregister.gov/",
                               "urgency": "upcoming",
@@ -7075,6 +7000,21 @@
                               "bill": null
                             },
                             {
+                              "id": "fr-pi-2026-21450",
+                              "kind": "public_inspection",
+                              "when": "2026-10-20",
+                              "until": null,
+                              "filedAt": "2026-10-16T16:15:00.000-04:00",
+                              "signedAt": null,
+                              "title": "Atlantic Highly Migratory Species: Atlantic Bluefin Tuna Fisheries; Closure of the General Category October through November Fishery for 2026",
+                              "summary": "National Oceanic and Atmospheric Administration (from lower in the map)",
+                              "url": "https://public-inspection.federalregister.gov/2026-21450.pdf",
+                              "source": "Federal Register public inspection (PDF)",
+                              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
                               "id": "fr-pi-2026-21357",
                               "kind": "public_inspection",
                               "when": "2026-10-19",
@@ -7084,21 +7024,6 @@
                               "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Quarterly Survey of Transactions in Selected Services and Intellectual Property with Foreign Persons",
                               "summary": "Economic Analysis Bureau (from lower in the map)",
                               "url": "https://public-inspection.federalregister.gov/2026-21357.pdf",
-                              "source": "Federal Register public inspection (PDF)",
-                              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-pi-2026-21271",
-                              "kind": "public_inspection",
-                              "when": "2026-10-19",
-                              "until": null,
-                              "filedAt": "2026-10-16T08:45:00.000-04:00",
-                              "signedAt": null,
-                              "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Fine Denier Polyester Staple Fiber from India",
-                              "summary": "International Trade Administration (from lower in the map)",
-                              "url": "https://public-inspection.federalregister.gov/2026-21271.pdf",
                               "source": "Federal Register public inspection (PDF)",
                               "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                               "urgency": "upcoming",
@@ -7628,7 +7553,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-16T17:30:15.521Z",
+                              "asOf": "2026-10-17T16:29:07.428Z",
                               "count": 2,
                               "rolledUp": true,
                               "events": [
@@ -7641,7 +7566,7 @@
                                   "signedAt": null,
                                   "title": "Decennial Census of the Population of Americans; Proposed Residence Criteria and Proposed Regulations for Demographic Questions; Extension of Comment Period",
                                   "summary": "Commerce Department, Census Bureau (from lower in the map)",
-                                  "url": "http://www.regulations.gov/commenton/USBC_FRDOC_0001-0076",
+                                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20328.pdf",
                                   "source": "Federal Register proposed rule (comments close)",
                                   "sourceUrl": "https://www.federalregister.gov/",
                                   "urgency": "upcoming",
@@ -7724,7 +7649,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-10-16T17:30:15.521Z",
+                                  "asOf": "2026-10-17T16:29:07.428Z",
                                   "count": 2,
                                   "rolledUp": true,
                                   "events": [
@@ -7737,7 +7662,7 @@
                                       "signedAt": null,
                                       "title": "Decennial Census of the Population of Americans; Proposed Residence Criteria and Proposed Regulations for Demographic Questions; Extension of Comment Period",
                                       "summary": "Commerce Department, Census Bureau (from lower in the map)",
-                                      "url": "http://www.regulations.gov/commenton/USBC_FRDOC_0001-0076",
+                                      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20328.pdf",
                                       "source": "Federal Register proposed rule (comments close)",
                                       "sourceUrl": "https://www.federalregister.gov/",
                                       "urgency": "upcoming",
@@ -7785,7 +7710,7 @@
                                       "usgm": null
                                     },
                                     "heat": {
-                                      "asOf": "2026-10-16T17:30:15.521Z",
+                                      "asOf": "2026-10-17T16:29:07.428Z",
                                       "count": 1,
                                       "rolledUp": false,
                                       "events": [
@@ -7868,7 +7793,7 @@
                                       "usgm": null
                                     },
                                     "heat": {
-                                      "asOf": "2026-10-16T17:30:15.521Z",
+                                      "asOf": "2026-10-17T16:29:07.428Z",
                                       "count": 1,
                                       "rolledUp": false,
                                       "events": [
@@ -7881,7 +7806,7 @@
                                           "signedAt": null,
                                           "title": "Decennial Census of the Population of Americans; Proposed Residence Criteria and Proposed Regulations for Demographic Questions; Extension of Comment Period",
                                           "summary": "Commerce Department, Census Bureau",
-                                          "url": "http://www.regulations.gov/commenton/USBC_FRDOC_0001-0076",
+                                          "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20328.pdf",
                                           "source": "Federal Register proposed rule (comments close)",
                                           "sourceUrl": "https://www.federalregister.gov/",
                                           "urgency": "upcoming",
@@ -8305,7 +8230,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-16T17:30:15.521Z",
+                              "asOf": "2026-10-17T16:29:07.428Z",
                               "count": 12,
                               "rolledUp": true,
                               "events": [
@@ -8456,7 +8381,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-10-16T17:30:15.521Z",
+                                  "asOf": "2026-10-17T16:29:07.428Z",
                                   "count": 12,
                                   "rolledUp": false,
                                   "events": [
@@ -8880,8 +8805,8 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-16T17:30:15.521Z",
-                              "count": 7,
+                              "asOf": "2026-10-17T16:29:07.428Z",
+                              "count": 8,
                               "rolledUp": true,
                               "events": [
                                 {
@@ -8930,15 +8855,15 @@
                                   "bill": null
                                 },
                                 {
-                                  "id": "fr-pi-2026-21349",
+                                  "id": "fr-pi-2026-21450",
                                   "kind": "public_inspection",
-                                  "when": "2026-10-19",
+                                  "when": "2026-10-20",
                                   "until": null,
-                                  "filedAt": "2026-10-16T08:45:00.000-04:00",
+                                  "filedAt": "2026-10-16T16:15:00.000-04:00",
                                   "signedAt": null,
-                                  "title": "Hearings, Meetings, Proceedings, etc.: Pacific Fishery Management Council",
+                                  "title": "Atlantic Highly Migratory Species: Atlantic Bluefin Tuna Fisheries; Closure of the General Category October through November Fishery for 2026",
                                   "summary": "National Oceanic and Atmospheric Administration (from lower in the map)",
-                                  "url": "https://public-inspection.federalregister.gov/2026-21349.pdf",
+                                  "url": "https://public-inspection.federalregister.gov/2026-21450.pdf",
                                   "source": "Federal Register public inspection (PDF)",
                                   "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                                   "urgency": "upcoming",
@@ -8971,8 +8896,8 @@
                                   "usgm": null
                                 },
                                 "heat": {
-                                  "asOf": "2026-10-16T17:30:15.521Z",
-                                  "count": 7,
+                                  "asOf": "2026-10-17T16:29:07.428Z",
+                                  "count": 8,
                                   "rolledUp": true,
                                   "events": [
                                     {
@@ -9021,15 +8946,15 @@
                                       "bill": null
                                     },
                                     {
-                                      "id": "fr-pi-2026-21349",
+                                      "id": "fr-pi-2026-21450",
                                       "kind": "public_inspection",
-                                      "when": "2026-10-19",
+                                      "when": "2026-10-20",
                                       "until": null,
-                                      "filedAt": "2026-10-16T08:45:00.000-04:00",
+                                      "filedAt": "2026-10-16T16:15:00.000-04:00",
                                       "signedAt": null,
-                                      "title": "Hearings, Meetings, Proceedings, etc.: Pacific Fishery Management Council",
+                                      "title": "Atlantic Highly Migratory Species: Atlantic Bluefin Tuna Fisheries; Closure of the General Category October through November Fishery for 2026",
                                       "summary": "National Oceanic and Atmospheric Administration (from lower in the map)",
-                                      "url": "https://public-inspection.federalregister.gov/2026-21349.pdf",
+                                      "url": "https://public-inspection.federalregister.gov/2026-21450.pdf",
                                       "source": "Federal Register public inspection (PDF)",
                                       "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                                       "urgency": "upcoming",
@@ -9164,8 +9089,8 @@
                                       }
                                     },
                                     "heat": {
-                                      "asOf": "2026-10-16T17:30:15.521Z",
-                                      "count": 7,
+                                      "asOf": "2026-10-17T16:29:07.428Z",
+                                      "count": 8,
                                       "rolledUp": false,
                                       "events": [
                                         {
@@ -9210,6 +9135,21 @@
                                           "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1651-0003",
                                           "source": "Federal Register proposed rule (comments close)",
                                           "sourceUrl": "https://www.federalregister.gov/",
+                                          "urgency": "upcoming",
+                                          "bill": null
+                                        },
+                                        {
+                                          "id": "fr-pi-2026-21450",
+                                          "kind": "public_inspection",
+                                          "when": "2026-10-20",
+                                          "until": null,
+                                          "filedAt": "2026-10-16T16:15:00.000-04:00",
+                                          "signedAt": null,
+                                          "title": "Atlantic Highly Migratory Species: Atlantic Bluefin Tuna Fisheries; Closure of the General Category October through November Fishery for 2026",
+                                          "summary": "National Oceanic and Atmospheric Administration",
+                                          "url": "https://public-inspection.federalregister.gov/2026-21450.pdf",
+                                          "source": "Federal Register public inspection (PDF)",
+                                          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                                           "urgency": "upcoming",
                                           "bill": null
                                         },
@@ -23479,7 +23419,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 7,
               "rolledUp": true,
               "events": [
@@ -23570,7 +23510,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-16T17:30:15.521Z",
+                  "asOf": "2026-10-17T16:29:07.428Z",
                   "count": 7,
                   "rolledUp": true,
                   "events": [
@@ -26206,7 +26146,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-16T17:30:15.521Z",
+                      "asOf": "2026-10-17T16:29:07.428Z",
                       "count": 7,
                       "rolledUp": false,
                       "events": [
@@ -26568,8 +26508,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
-              "count": 4,
+              "asOf": "2026-10-17T16:29:07.428Z",
+              "count": 3,
               "rolledUp": true,
               "events": [
                 {
@@ -26603,32 +26543,17 @@
                   "bill": null
                 },
                 {
-                  "id": "fr-comment-2026-16729",
-                  "kind": "comment_deadline",
-                  "when": "2026-10-16",
-                  "until": "2026-10-16",
-                  "filedAt": null,
+                  "id": "fr-pi-2026-21420",
+                  "kind": "public_inspection",
+                  "when": "2026-10-20",
+                  "until": null,
+                  "filedAt": "2026-10-16T16:15:00.000-04:00",
                   "signedAt": null,
-                  "title": "Medical Devices; Classification of Accessories Distinct From Other Devices; Proposed List of Accessories Suitable for Class I; Request for Comments",
-                  "summary": "Health and Human Services Department, Food and Drug Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FDA-2025-N-6224-0011",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-16728",
-                  "kind": "comment_deadline",
-                  "when": "2026-10-16",
-                  "until": "2026-10-16",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Gastroenterology-Urology Devices; Reclassification of Diagnostic Endoscopic Light Source Systems To Be Renamed Cystoscopic Systems Intended as an Aid for Detection of Bladder Cancer",
-                  "summary": "Health and Human Services Department, Food and Drug Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FDA-2026-N-8249-0001",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
+                  "title": "Medicare Program: Implementation of Sections 6219, 6220, and 6224 of the Consolidated Appropriations Act, 2026",
+                  "summary": "Centers for Medicare & Medicaid Services (from lower in the map)",
+                  "url": "https://public-inspection.federalregister.gov/2026-21420.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                   "urgency": "upcoming",
                   "bill": null
                 }
@@ -26659,8 +26584,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-16T17:30:15.521Z",
-                  "count": 4,
+                  "asOf": "2026-10-17T16:29:07.428Z",
+                  "count": 3,
                   "rolledUp": true,
                   "events": [
                     {
@@ -26694,32 +26619,17 @@
                       "bill": null
                     },
                     {
-                      "id": "fr-comment-2026-16729",
-                      "kind": "comment_deadline",
-                      "when": "2026-10-16",
-                      "until": "2026-10-16",
-                      "filedAt": null,
+                      "id": "fr-pi-2026-21420",
+                      "kind": "public_inspection",
+                      "when": "2026-10-20",
+                      "until": null,
+                      "filedAt": "2026-10-16T16:15:00.000-04:00",
                       "signedAt": null,
-                      "title": "Medical Devices; Classification of Accessories Distinct From Other Devices; Proposed List of Accessories Suitable for Class I; Request for Comments",
-                      "summary": "Health and Human Services Department, Food and Drug Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FDA-2025-N-6224-0011",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-16728",
-                      "kind": "comment_deadline",
-                      "when": "2026-10-16",
-                      "until": "2026-10-16",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Gastroenterology-Urology Devices; Reclassification of Diagnostic Endoscopic Light Source Systems To Be Renamed Cystoscopic Systems Intended as an Aid for Detection of Bladder Cancer",
-                      "summary": "Health and Human Services Department, Food and Drug Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FDA-2026-N-8249-0001",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
+                      "title": "Medicare Program: Implementation of Sections 6219, 6220, and 6224 of the Consolidated Appropriations Act, 2026",
+                      "summary": "Centers for Medicare & Medicaid Services (from lower in the map)",
+                      "url": "https://public-inspection.federalregister.gov/2026-21420.pdf",
+                      "source": "Federal Register public inspection (PDF)",
+                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                       "urgency": "upcoming",
                       "bill": null
                     }
@@ -26775,7 +26685,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-16T17:30:15.521Z",
+                      "asOf": "2026-10-17T16:29:07.428Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -27125,7 +27035,28 @@
                       "sam": null,
                       "usgm": null
                     },
-                    "heat": null,
+                    "heat": {
+                      "asOf": "2026-10-17T16:29:07.428Z",
+                      "count": 1,
+                      "rolledUp": false,
+                      "events": [
+                        {
+                          "id": "fr-pi-2026-21420",
+                          "kind": "public_inspection",
+                          "when": "2026-10-20",
+                          "until": null,
+                          "filedAt": "2026-10-16T16:15:00.000-04:00",
+                          "signedAt": null,
+                          "title": "Medicare Program: Implementation of Sections 6219, 6220, and 6224 of the Consolidated Appropriations Act, 2026",
+                          "summary": "Centers for Medicare & Medicaid Services",
+                          "url": "https://public-inspection.federalregister.gov/2026-21420.pdf",
+                          "source": "Federal Register public inspection (PDF)",
+                          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                          "urgency": "upcoming",
+                          "bill": null
+                        }
+                      ]
+                    },
                     "children": [],
                     "spending": {
                       "obligatedAmount": 1698678045698.52,
@@ -28479,43 +28410,7 @@
                         ]
                       }
                     },
-                    "heat": {
-                      "asOf": "2026-10-16T17:30:15.521Z",
-                      "count": 2,
-                      "rolledUp": false,
-                      "events": [
-                        {
-                          "id": "fr-comment-2026-16729",
-                          "kind": "comment_deadline",
-                          "when": "2026-10-16",
-                          "until": "2026-10-16",
-                          "filedAt": null,
-                          "signedAt": null,
-                          "title": "Medical Devices; Classification of Accessories Distinct From Other Devices; Proposed List of Accessories Suitable for Class I; Request for Comments",
-                          "summary": "Health and Human Services Department, Food and Drug Administration",
-                          "url": "http://www.regulations.gov/commenton/FDA-2025-N-6224-0011",
-                          "source": "Federal Register proposed rule (comments close)",
-                          "sourceUrl": "https://www.federalregister.gov/",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-comment-2026-16728",
-                          "kind": "comment_deadline",
-                          "when": "2026-10-16",
-                          "until": "2026-10-16",
-                          "filedAt": null,
-                          "signedAt": null,
-                          "title": "Gastroenterology-Urology Devices; Reclassification of Diagnostic Endoscopic Light Source Systems To Be Renamed Cystoscopic Systems Intended as an Aid for Detection of Bladder Cancer",
-                          "summary": "Health and Human Services Department, Food and Drug Administration",
-                          "url": "http://www.regulations.gov/commenton/FDA-2026-N-8249-0001",
-                          "source": "Federal Register proposed rule (comments close)",
-                          "sourceUrl": "https://www.federalregister.gov/",
-                          "urgency": "upcoming",
-                          "bill": null
-                        }
-                      ]
-                    },
+                    "heat": null,
                     "children": [],
                     "spending": {
                       "obligatedAmount": 711255104.25,
@@ -28767,8 +28662,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
-              "count": 13,
+              "asOf": "2026-10-17T16:29:07.428Z",
+              "count": 12,
               "rolledUp": true,
               "events": [
                 {
@@ -28873,8 +28768,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-16T17:30:15.521Z",
-                  "count": 13,
+                  "asOf": "2026-10-17T16:29:07.428Z",
+                  "count": 12,
                   "rolledUp": true,
                   "events": [
                     {
@@ -28979,8 +28874,8 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-16T17:30:15.521Z",
-                      "count": 13,
+                      "asOf": "2026-10-17T16:29:07.428Z",
+                      "count": 12,
                       "rolledUp": true,
                       "events": [
                         {
@@ -30492,8 +30387,8 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-16T17:30:15.521Z",
-                          "count": 12,
+                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "count": 11,
                           "rolledUp": false,
                           "events": [
                             {
@@ -30660,21 +30555,6 @@
                               "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                               "urgency": "upcoming",
                               "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-20124",
-                              "kind": "comment_deadline",
-                              "when": "2026-10-16",
-                              "until": "2026-10-16",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Safety Zone; Sector Mobile Captain of the Port Zone, Mobile, AL",
-                              "summary": "Homeland Security Department, Coast Guard",
-                              "url": "http://www.regulations.gov/commenton/USCG-2026-1214-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
                             }
                           ]
                         },
@@ -30730,7 +30610,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-16T17:30:15.521Z",
+                          "asOf": "2026-10-17T16:29:07.428Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -33072,7 +32952,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 12,
               "rolledUp": true,
               "events": [
@@ -33199,7 +33079,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-16T17:30:15.521Z",
+                  "asOf": "2026-10-17T16:29:07.428Z",
                   "count": 12,
                   "rolledUp": true,
                   "events": [
@@ -33290,7 +33170,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-16T17:30:15.521Z",
+                      "asOf": "2026-10-17T16:29:07.428Z",
                       "count": 12,
                       "rolledUp": true,
                       "events": [
@@ -34800,7 +34680,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-16T17:30:15.521Z",
+                          "asOf": "2026-10-17T16:29:07.428Z",
                           "count": 12,
                           "rolledUp": false,
                           "events": [
@@ -35414,7 +35294,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 3,
               "rolledUp": true,
               "events": [
@@ -35490,7 +35370,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-16T17:30:15.521Z",
+                  "asOf": "2026-10-17T16:29:07.428Z",
                   "count": 3,
                   "rolledUp": true,
                   "events": [
@@ -35566,7 +35446,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-16T17:30:15.521Z",
+                      "asOf": "2026-10-17T16:29:07.428Z",
                       "count": 2,
                       "rolledUp": true,
                       "events": [
@@ -35899,7 +35779,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-16T17:30:15.521Z",
+                          "asOf": "2026-10-17T16:29:07.428Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -37019,7 +36899,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-16T17:30:15.521Z",
+                          "asOf": "2026-10-17T16:29:07.428Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -37448,7 +37328,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-16T17:30:15.521Z",
+                      "asOf": "2026-10-17T16:29:07.428Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -39703,7 +39583,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 6,
               "rolledUp": true,
               "events": [
@@ -39824,7 +39704,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-16T17:30:15.521Z",
+                  "asOf": "2026-10-17T16:29:07.428Z",
                   "count": 6,
                   "rolledUp": true,
                   "events": [
@@ -39945,7 +39825,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-16T17:30:15.521Z",
+                      "asOf": "2026-10-17T16:29:07.428Z",
                       "count": 6,
                       "rolledUp": true,
                       "events": [
@@ -40066,7 +39946,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-16T17:30:15.521Z",
+                          "asOf": "2026-10-17T16:29:07.428Z",
                           "count": 4,
                           "rolledUp": true,
                           "events": [
@@ -40239,7 +40119,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-10-16T17:30:15.521Z",
+                              "asOf": "2026-10-17T16:29:07.428Z",
                               "count": 3,
                               "rolledUp": false,
                               "events": [
@@ -40372,7 +40252,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-10-16T17:30:15.521Z",
+                              "asOf": "2026-10-17T16:29:07.428Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -40790,7 +40670,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-16T17:30:15.521Z",
+                          "asOf": "2026-10-17T16:29:07.428Z",
                           "count": 2,
                           "rolledUp": true,
                           "events": [
@@ -40873,7 +40753,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-10-16T17:30:15.521Z",
+                              "asOf": "2026-10-17T16:29:07.428Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -40968,7 +40848,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-10-16T17:30:15.521Z",
+                              "asOf": "2026-10-17T16:29:07.428Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -42154,8 +42034,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
-              "count": 7,
+              "asOf": "2026-10-17T16:29:07.428Z",
+              "count": 5,
               "rolledUp": true,
               "events": [
                 {
@@ -42286,8 +42166,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-16T17:30:15.521Z",
-                  "count": 7,
+                  "asOf": "2026-10-17T16:29:07.428Z",
+                  "count": 5,
                   "rolledUp": true,
                   "events": [
                     {
@@ -42444,8 +42324,8 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-16T17:30:15.521Z",
-                      "count": 7,
+                      "asOf": "2026-10-17T16:29:07.428Z",
+                      "count": 5,
                       "rolledUp": true,
                       "events": [
                         {
@@ -43378,7 +43258,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-16T17:30:15.521Z",
+                          "asOf": "2026-10-17T16:29:07.428Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -43476,7 +43356,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-16T17:30:15.521Z",
+                              "asOf": "2026-10-17T16:29:07.428Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -43892,8 +43772,8 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-16T17:30:15.521Z",
-                          "count": 6,
+                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "count": 4,
                           "rolledUp": false,
                           "events": [
                             {
@@ -43953,36 +43833,6 @@
                               "url": "https://public-inspection.federalregister.gov/2026-21267.pdf",
                               "source": "Federal Register public inspection (PDF)",
                               "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-18574",
-                              "kind": "comment_deadline",
-                              "when": "2026-10-16",
-                              "until": "2026-10-16",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Information Reporting Regarding Qualified Opportunity Zones and Updated Qualified Opportunity Fund Certification and Decertification Procedures",
-                              "summary": "Treasury Department, Internal Revenue Service",
-                              "url": "http://www.regulations.gov/commenton/IRS-2026-1223-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-16769",
-                              "kind": "comment_deadline",
-                              "when": "2026-10-16",
-                              "until": "2026-10-16",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Proposed Removal of a Reporting Requirement for Trusts Whose Charitable Contribution Deductions Are Solely for Contributions Made by Passthrough Entities",
-                              "summary": "Treasury Department, Internal Revenue Service",
-                              "url": "http://www.regulations.gov/commenton/IRS-2026-0991-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
                               "urgency": "upcoming",
                               "bill": null
                             }
@@ -44371,8 +44221,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
-              "count": 49,
+              "asOf": "2026-10-17T16:29:07.428Z",
+              "count": 47,
               "rolledUp": true,
               "events": [
                 {
@@ -44492,8 +44342,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-16T17:30:15.521Z",
-                  "count": 49,
+                  "asOf": "2026-10-17T16:29:07.428Z",
+                  "count": 47,
                   "rolledUp": true,
                   "events": [
                     {
@@ -44613,8 +44463,8 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-16T17:30:15.521Z",
-                      "count": 49,
+                      "asOf": "2026-10-17T16:29:07.428Z",
+                      "count": 47,
                       "rolledUp": true,
                       "events": [
                         {
@@ -45004,7 +44854,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-16T17:30:15.521Z",
+                          "asOf": "2026-10-17T16:29:07.428Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -45327,7 +45177,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-16T17:30:15.521Z",
+                          "asOf": "2026-10-17T16:29:07.428Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -45637,7 +45487,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-16T17:30:15.521Z",
+                          "asOf": "2026-10-17T16:29:07.428Z",
                           "count": 3,
                           "rolledUp": false,
                           "events": [
@@ -45849,8 +45699,8 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-16T17:30:15.521Z",
-                          "count": 43,
+                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "count": 41,
                           "rolledUp": false,
                           "events": [
                             {
@@ -46463,36 +46313,6 @@
                               "title": "Airworthiness Directives; Airbus Canada Limited Partnership (Type Certificate Previously Held by C Series Aircraft Limited Partnership (CSALP); Bombardier, Inc.) Airplanes",
                               "summary": "Transportation Department, Federal Aviation Administration",
                               "url": "http://www.regulations.gov/commenton/FAA-2026-8794-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-17867",
-                              "kind": "comment_deadline",
-                              "when": "2026-10-16",
-                              "until": "2026-10-16",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Amendment of Class D Airspace and Class E Airspace Over New Haven, CT",
-                              "summary": "Transportation Department, Federal Aviation Administration",
-                              "url": "http://www.regulations.gov/commenton/FAA-2026-9967-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-17840",
-                              "kind": "comment_deadline",
-                              "when": "2026-10-16",
-                              "until": "2026-10-16",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Airworthiness Directives; Airbus Helicopters",
-                              "summary": "Transportation Department, Federal Aviation Administration",
-                              "url": "http://www.regulations.gov/commenton/FAA-2026-8790-0001",
                               "source": "Federal Register proposed rule (comments close)",
                               "sourceUrl": "https://www.federalregister.gov/",
                               "urgency": "upcoming",
@@ -48884,7 +48704,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-10-16T17:30:15.521Z",
+          "asOf": "2026-10-17T16:29:07.428Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -49493,7 +49313,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -50594,8 +50414,8 @@
           "note": "Product door: Crosswalk Independent Federal Agencies + major non-Cabinet agencies + government corporations shelf. Constitutionally many report through the Executive; shown separately for citizen clarity."
         },
         "heat": {
-          "asOf": "2026-10-16T17:30:15.521Z",
-          "count": 82,
+          "asOf": "2026-10-17T16:29:07.428Z",
+          "count": 83,
           "rolledUp": true,
           "events": [
             {
@@ -51938,7 +51758,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 12,
               "rolledUp": false,
               "events": [
@@ -52876,10 +52696,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
-              "count": 1,
+              "asOf": "2026-10-17T16:29:07.428Z",
+              "count": 2,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-sun-2026-21259-2026-10-27",
+                  "kind": "sunshine_meeting",
+                  "when": "2026-10-27",
+                  "until": "2026-10-27",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Sunshine Act Meetings",
+                  "summary": "Federal Maritime Commission",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21259.pdf",
+                  "source": "Federal Register Sunshine Act meeting",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-pi-2026-21259",
                   "kind": "public_inspection",
@@ -53347,7 +53182,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -53586,7 +53421,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -53774,7 +53609,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -53836,7 +53671,7 @@
               "note": "Product shelf: GSE / government corporation entities lifted from Crosswalk Industry bucket."
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 5,
               "rolledUp": true,
               "events": [
@@ -54125,7 +53960,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-10-16T17:30:15.521Z",
+                  "asOf": "2026-10-17T16:29:07.428Z",
                   "count": 1,
                   "rolledUp": false,
                   "events": [
@@ -54469,7 +54304,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-10-16T17:30:15.521Z",
+                  "asOf": "2026-10-17T16:29:07.428Z",
                   "count": 1,
                   "rolledUp": false,
                   "events": [
@@ -55553,7 +55388,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-10-16T17:30:15.521Z",
+                  "asOf": "2026-10-17T16:29:07.428Z",
                   "count": 3,
                   "rolledUp": false,
                   "events": [
@@ -56691,7 +56526,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -58298,7 +58133,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -58725,7 +58560,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -61668,7 +61503,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -61709,7 +61544,7 @@
                   "until": null,
                   "filedAt": "2026-10-16T08:45:00.000-04:00",
                   "signedAt": null,
-                  "title": "Further Definition of ''Swap'' to Exclude Casino-Style Gambling Products",
+                  "title": "Further Definition of ``Swap'' to Exclude Casino-Style Gambling Products",
                   "summary": "Commodity Futures Trading Commission",
                   "url": "https://public-inspection.federalregister.gov/2026-21376.pdf",
                   "source": "Federal Register public inspection (PDF)",
@@ -61724,7 +61559,7 @@
                   "until": null,
                   "filedAt": "2026-10-16T08:45:00.000-04:00",
                   "signedAt": null,
-                  "title": "Further Definition of ''Swap'' - Inclusions",
+                  "title": "Further Definition of ``Swap'' - Inclusions",
                   "summary": "Commodity Futures Trading Commission",
                   "url": "https://public-inspection.federalregister.gov/2026-21377.pdf",
                   "source": "Federal Register public inspection (PDF)",
@@ -62100,10 +61935,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
-              "count": 2,
+              "asOf": "2026-10-17T16:29:07.428Z",
+              "count": 3,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-sun-2026-21384-2026-10-22",
+                  "kind": "sunshine_meeting",
+                  "when": "2026-10-22",
+                  "until": "2026-10-22",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Sunshine Act Meeting",
+                  "summary": "Consumer Product Safety Commission",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-19/pdf/2026-21384.pdf",
+                  "source": "Federal Register Sunshine Act meeting",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-pi-2026-21384",
                   "kind": "public_inspection",
@@ -62126,7 +61976,7 @@
                   "until": null,
                   "filedAt": "2026-10-16T08:45:00.000-04:00",
                   "signedAt": null,
-                  "title": "Interpretation of ''Flammable Liquid Fuels'' with Respect to Fuel Additives",
+                  "title": "Interpretation of ``Flammable Liquid Fuels'' with Respect to Fuel Additives",
                   "summary": "Consumer Product Safety Commission",
                   "url": "https://public-inspection.federalregister.gov/2026-21348.pdf",
                   "source": "Federal Register public inspection (PDF)",
@@ -62626,7 +62476,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 13,
               "rolledUp": false,
               "events": [
@@ -64167,7 +64017,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 7,
               "rolledUp": false,
               "events": [
@@ -65644,8 +65494,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
-              "count": 6,
+              "asOf": "2026-10-17T16:29:07.428Z",
+              "count": 5,
               "rolledUp": false,
               "events": [
                 {
@@ -65689,21 +65539,6 @@
                   "summary": "Nuclear Regulatory Commission",
                   "url": "http://www.regulations.gov/commenton/NRC-2025-1568-0002",
                   "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-sun-2026-19715-2026-11-02",
-                  "kind": "sunshine_meeting",
-                  "when": "2026-11-02",
-                  "until": "2026-11-02",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Sunshine Act Meetings",
-                  "summary": "Nuclear Regulatory Commission",
-                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-25/pdf/2026-19715.pdf",
-                  "source": "Federal Register Sunshine Act meeting",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
@@ -66220,7 +66055,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 7,
               "rolledUp": false,
               "events": [
@@ -67669,7 +67504,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -68181,7 +68016,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 9,
               "rolledUp": false,
               "events": [
@@ -68695,7 +68530,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-16T17:30:15.521Z",
+              "asOf": "2026-10-17T16:29:07.428Z",
               "count": 2,
               "rolledUp": false,
               "events": [
