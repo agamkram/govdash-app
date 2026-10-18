@@ -80,22 +80,22 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-10-17T16:29:28.306Z",
-      "asOf": "2026-10-17T16:29:07.428Z",
+      "enrichedAt": "2026-10-18T16:35:23.207Z",
+      "asOf": "2026-10-18T16:34:59.757Z",
       "nodesWithHeat": 103,
       "nodesWithDirectHeat": 56,
-      "rawEventCount": 279,
+      "rawEventCount": 291,
       "matched": {
         "chamber": 2,
         "presidential": 9,
         "publicInspection": 127,
-        "commentDeadlines": 101,
+        "commentDeadlines": 111,
         "sunshine": 6,
         "hearings": 1,
         "scotus": 1
       },
       "unmatchedPublicInspection": 23,
-      "unmatchedCommentDeadlines": 9,
+      "unmatchedCommentDeadlines": 11,
       "unmatchedSunshine": 0,
       "sources": {
         "senateFloor": {
@@ -121,36 +121,36 @@
         "presidential": {
           "ok": true,
           "count": 9,
-          "since": "2026-10-03",
+          "since": "2026-10-04",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 110,
-          "start": "2026-10-17",
-          "end": "2026-11-15",
+          "count": 122,
+          "start": "2026-10-18",
+          "end": "2026-11-16",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
           "count": 6,
-          "start": "2026-10-17",
-          "end": "2026-11-15",
+          "start": "2026-10-18",
+          "end": "2026-11-16",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
           "count": 0,
-          "start": "2026-10-17",
-          "end": "2026-11-15",
+          "start": "2026-10-18",
+          "end": "2026-11-16",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
           "count": 1,
-          "start": "2026-10-17",
-          "end": "2026-11-15",
+          "start": "2026-10-18",
+          "end": "2026-11-16",
           "congress": 119,
           "calendarIds": 1,
           "skipped404": [],
@@ -159,8 +159,8 @@
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-10-17",
-          "end": "2026-11-15",
+          "start": "2026-10-18",
+          "end": "2026-11-16",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -208,95 +208,95 @@
       "note": "Synthetic root. Crosswalk branches attach under Parent=[Branch]."
     },
     "heat": {
-      "asOf": "2026-10-17T16:29:07.428Z",
-      "count": 235,
+      "asOf": "2026-10-18T16:34:59.757Z",
+      "count": 245,
       "rolledUp": true,
       "events": [
         {
-          "id": "fr-comment-2026-21004",
+          "id": "fr-comment-2026-21205",
           "kind": "comment_deadline",
-          "when": "2026-11-13",
-          "until": "2026-11-13",
+          "when": "2026-11-16",
+          "until": "2026-11-16",
           "filedAt": null,
           "signedAt": null,
-          "title": "Further Reducing Bureaucracy and Burden From the Administration for Native Americans",
-          "summary": "Health and Human Services Department, Children and Families Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/ACF_FRDOC_0001-0172",
+          "title": "Fishery Management Plans of St. Croix and St. Thomas and St. John; Spiny Lobster Management Measures",
+          "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
+          "url": "http://www.regulations.gov/commenton/NOAA_FRDOC_0001-7708",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-19892",
+          "id": "fr-comment-2026-20202",
           "kind": "comment_deadline",
-          "when": "2026-11-13",
-          "until": "2026-11-13",
+          "when": "2026-11-16",
+          "until": "2026-11-16",
           "filedAt": null,
           "signedAt": null,
-          "title": "Airworthiness Directives; Leonardo S.p.a. Helicopters",
+          "title": "Amendment of Class D and E Airspace, Revocation of Class E Airspace; Montgomery, AL",
           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-11788-0001",
+          "url": "http://www.regulations.gov/commenton/FAA-2026-8948-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-19890",
+          "id": "fr-comment-2026-20076",
           "kind": "comment_deadline",
-          "when": "2026-11-13",
-          "until": "2026-11-13",
+          "when": "2026-11-16",
+          "until": "2026-11-16",
           "filedAt": null,
           "signedAt": null,
-          "title": "Airworthiness Directives; Airbus Helicopters Deutschland GmbH (AHD) Helicopters",
+          "title": "Airworthiness Directives; Embraer S.A. Airplanes",
           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-11790-0001",
+          "url": "http://www.regulations.gov/commenton/FAA-2026-11796-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-18799",
+          "id": "fr-comment-2026-19987",
           "kind": "comment_deadline",
-          "when": "2026-11-13",
-          "until": "2026-11-13",
+          "when": "2026-11-16",
+          "until": "2026-11-16",
           "filedAt": null,
           "signedAt": null,
-          "title": "Use of Certain Restricted Category Aircraft for the Transport of Firefighters for Wildfire Suppression",
+          "title": "Airworthiness Directives; Airbus Helicopters",
           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-10991-0001",
+          "url": "http://www.regulations.gov/commenton/FAA-2026-11795-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-20964",
+          "id": "fr-comment-2026-19972",
           "kind": "comment_deadline",
-          "when": "2026-11-13",
-          "until": "2026-11-13",
+          "when": "2026-11-16",
+          "until": "2026-11-16",
           "filedAt": null,
           "signedAt": null,
-          "title": "Trichloroethylene (TCE); Regulation Under the Toxic Substances Control Act (TSCA); Compliance Date Extensions",
+          "title": "Airworthiness Directives; Vulcanair S.p.A. Airplanes",
+          "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
+          "url": "http://www.regulations.gov/commenton/FAA-2026-11794-0001",
+          "source": "Federal Register proposed rule (comments close)",
+          "sourceUrl": "https://www.federalregister.gov/",
+          "urgency": "upcoming",
+          "bill": null
+        },
+        {
+          "id": "fr-comment-2026-19027",
+          "kind": "comment_deadline",
+          "when": "2026-11-16",
+          "until": "2026-11-16",
+          "filedAt": null,
+          "signedAt": null,
+          "title": "Indiana: Approval of State Coal Combustion Residuals Permit Program",
           "summary": "Environmental Protection Agency (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/EPA-HQ-OPPT-2026-7327-0001",
-          "source": "Federal Register proposed rule (comments close)",
-          "sourceUrl": "https://www.federalregister.gov/",
-          "urgency": "upcoming",
-          "bill": null
-        },
-        {
-          "id": "fr-comment-2026-21031",
-          "kind": "comment_deadline",
-          "when": "2026-11-13",
-          "until": "2026-11-13",
-          "filedAt": null,
-          "signedAt": null,
-          "title": "AP1000 Design Certification Renewal",
-          "summary": "Nuclear Regulatory Commission (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/NRC-2026-2377-0001",
+          "url": "http://www.regulations.gov/commenton/EPA-HQ-OLEM-2026-4326-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
@@ -355,95 +355,95 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-10-17T16:29:07.428Z",
-          "count": 182,
+          "asOf": "2026-10-18T16:34:59.757Z",
+          "count": 192,
           "rolledUp": true,
           "events": [
             {
-              "id": "fr-comment-2026-21004",
+              "id": "fr-comment-2026-21205",
               "kind": "comment_deadline",
-              "when": "2026-11-13",
-              "until": "2026-11-13",
+              "when": "2026-11-16",
+              "until": "2026-11-16",
               "filedAt": null,
               "signedAt": null,
-              "title": "Further Reducing Bureaucracy and Burden From the Administration for Native Americans",
-              "summary": "Health and Human Services Department, Children and Families Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/ACF_FRDOC_0001-0172",
+              "title": "Fishery Management Plans of St. Croix and St. Thomas and St. John; Spiny Lobster Management Measures",
+              "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/NOAA_FRDOC_0001-7708",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-19892",
+              "id": "fr-comment-2026-20202",
               "kind": "comment_deadline",
-              "when": "2026-11-13",
-              "until": "2026-11-13",
+              "when": "2026-11-16",
+              "until": "2026-11-16",
               "filedAt": null,
               "signedAt": null,
-              "title": "Airworthiness Directives; Leonardo S.p.a. Helicopters",
+              "title": "Amendment of Class D and E Airspace, Revocation of Class E Airspace; Montgomery, AL",
               "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/FAA-2026-11788-0001",
+              "url": "http://www.regulations.gov/commenton/FAA-2026-8948-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-19890",
+              "id": "fr-comment-2026-20076",
               "kind": "comment_deadline",
-              "when": "2026-11-13",
-              "until": "2026-11-13",
+              "when": "2026-11-16",
+              "until": "2026-11-16",
               "filedAt": null,
               "signedAt": null,
-              "title": "Airworthiness Directives; Airbus Helicopters Deutschland GmbH (AHD) Helicopters",
+              "title": "Airworthiness Directives; Embraer S.A. Airplanes",
               "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/FAA-2026-11790-0001",
+              "url": "http://www.regulations.gov/commenton/FAA-2026-11796-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-18799",
+              "id": "fr-comment-2026-19987",
               "kind": "comment_deadline",
-              "when": "2026-11-13",
-              "until": "2026-11-13",
+              "when": "2026-11-16",
+              "until": "2026-11-16",
               "filedAt": null,
               "signedAt": null,
-              "title": "Use of Certain Restricted Category Aircraft for the Transport of Firefighters for Wildfire Suppression",
+              "title": "Airworthiness Directives; Airbus Helicopters",
               "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/FAA-2026-10991-0001",
+              "url": "http://www.regulations.gov/commenton/FAA-2026-11795-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-20964",
+              "id": "fr-comment-2026-19972",
               "kind": "comment_deadline",
-              "when": "2026-11-13",
-              "until": "2026-11-13",
+              "when": "2026-11-16",
+              "until": "2026-11-16",
               "filedAt": null,
               "signedAt": null,
-              "title": "Trichloroethylene (TCE); Regulation Under the Toxic Substances Control Act (TSCA); Compliance Date Extensions",
+              "title": "Airworthiness Directives; Vulcanair S.p.A. Airplanes",
+              "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/FAA-2026-11794-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-19027",
+              "kind": "comment_deadline",
+              "when": "2026-11-16",
+              "until": "2026-11-16",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Indiana: Approval of State Coal Combustion Residuals Permit Program",
               "summary": "Environmental Protection Agency (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/EPA-HQ-OPPT-2026-7327-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-21031",
-              "kind": "comment_deadline",
-              "when": "2026-11-13",
-              "until": "2026-11-13",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "AP1000 Design Certification Renewal",
-              "summary": "Nuclear Regulatory Commission (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/NRC-2026-2377-0001",
+              "url": "http://www.regulations.gov/commenton/EPA-HQ-OLEM-2026-4326-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
@@ -607,7 +607,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -2303,7 +2303,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 17,
               "rolledUp": false,
               "events": [
@@ -2484,7 +2484,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-17T16:29:07.428Z",
+                  "asOf": "2026-10-18T16:34:59.757Z",
                   "count": 8,
                   "rolledUp": false,
                   "events": [
@@ -2671,7 +2671,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-17T16:29:07.428Z",
+                      "asOf": "2026-10-18T16:34:59.757Z",
                       "count": 5,
                       "rolledUp": false,
                       "events": [
@@ -3500,7 +3500,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 10,
               "rolledUp": true,
               "events": [
@@ -3647,7 +3647,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-17T16:29:07.428Z",
+                  "asOf": "2026-10-18T16:34:59.757Z",
                   "count": 10,
                   "rolledUp": true,
                   "events": [
@@ -3768,7 +3768,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-17T16:29:07.428Z",
+                      "asOf": "2026-10-18T16:34:59.757Z",
                       "count": 10,
                       "rolledUp": true,
                       "events": [
@@ -5110,7 +5110,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "asOf": "2026-10-18T16:34:59.757Z",
                           "count": 2,
                           "rolledUp": true,
                           "events": [
@@ -5171,7 +5171,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-17T16:29:07.428Z",
+                              "asOf": "2026-10-18T16:34:59.757Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -5271,7 +5271,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-17T16:29:07.428Z",
+                              "asOf": "2026-10-18T16:34:59.757Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -5398,7 +5398,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "asOf": "2026-10-18T16:34:59.757Z",
                           "count": 6,
                           "rolledUp": true,
                           "events": [
@@ -5489,7 +5489,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-17T16:29:07.428Z",
+                              "asOf": "2026-10-18T16:34:59.757Z",
                               "count": 6,
                               "rolledUp": false,
                               "events": [
@@ -6031,7 +6031,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "asOf": "2026-10-18T16:34:59.757Z",
                           "count": 2,
                           "rolledUp": true,
                           "events": [
@@ -6129,7 +6129,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-17T16:29:07.428Z",
+                              "asOf": "2026-10-18T16:34:59.757Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -6192,7 +6192,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-17T16:29:07.428Z",
+                              "asOf": "2026-10-18T16:34:59.757Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -6552,10 +6552,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
-              "count": 22,
+              "asOf": "2026-10-18T16:34:59.757Z",
+              "count": 23,
               "rolledUp": true,
               "events": [
+                {
+                  "id": "fr-comment-2026-21205",
+                  "kind": "comment_deadline",
+                  "when": "2026-11-16",
+                  "until": "2026-11-16",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Fishery Management Plans of St. Croix and St. Thomas and St. John; Spiny Lobster Management Measures",
+                  "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
+                  "url": "http://www.regulations.gov/commenton/NOAA_FRDOC_0001-7708",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-20863",
                   "kind": "comment_deadline",
@@ -6617,21 +6632,6 @@
                   "bill": null
                 },
                 {
-                  "id": "fr-pi-2026-21450",
-                  "kind": "public_inspection",
-                  "when": "2026-10-20",
-                  "until": null,
-                  "filedAt": "2026-10-16T16:15:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Atlantic Highly Migratory Species: Atlantic Bluefin Tuna Fisheries; Closure of the General Category October through November Fishery for 2026",
-                  "summary": "National Oceanic and Atmospheric Administration (from lower in the map)",
-                  "url": "https://public-inspection.federalregister.gov/2026-21450.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
                   "id": "fr-pi-2026-21357",
                   "kind": "public_inspection",
                   "when": "2026-10-19",
@@ -6673,10 +6673,25 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-17T16:29:07.428Z",
-                  "count": 22,
+                  "asOf": "2026-10-18T16:34:59.757Z",
+                  "count": 23,
                   "rolledUp": true,
                   "events": [
+                    {
+                      "id": "fr-comment-2026-21205",
+                      "kind": "comment_deadline",
+                      "when": "2026-11-16",
+                      "until": "2026-11-16",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Fishery Management Plans of St. Croix and St. Thomas and St. John; Spiny Lobster Management Measures",
+                      "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/NOAA_FRDOC_0001-7708",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
                     {
                       "id": "fr-comment-2026-20863",
                       "kind": "comment_deadline",
@@ -6738,21 +6753,6 @@
                       "bill": null
                     },
                     {
-                      "id": "fr-pi-2026-21450",
-                      "kind": "public_inspection",
-                      "when": "2026-10-20",
-                      "until": null,
-                      "filedAt": "2026-10-16T16:15:00.000-04:00",
-                      "signedAt": null,
-                      "title": "Atlantic Highly Migratory Species: Atlantic Bluefin Tuna Fisheries; Closure of the General Category October through November Fishery for 2026",
-                      "summary": "National Oceanic and Atmospheric Administration (from lower in the map)",
-                      "url": "https://public-inspection.federalregister.gov/2026-21450.pdf",
-                      "source": "Federal Register public inspection (PDF)",
-                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
                       "id": "fr-pi-2026-21357",
                       "kind": "public_inspection",
                       "when": "2026-10-19",
@@ -6794,10 +6794,25 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-17T16:29:07.428Z",
-                      "count": 22,
+                      "asOf": "2026-10-18T16:34:59.757Z",
+                      "count": 23,
                       "rolledUp": true,
                       "events": [
+                        {
+                          "id": "fr-comment-2026-21205",
+                          "kind": "comment_deadline",
+                          "when": "2026-11-16",
+                          "until": "2026-11-16",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Fishery Management Plans of St. Croix and St. Thomas and St. John; Spiny Lobster Management Measures",
+                          "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
+                          "url": "http://www.regulations.gov/commenton/NOAA_FRDOC_0001-7708",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
                         {
                           "id": "fr-comment-2026-20863",
                           "kind": "comment_deadline",
@@ -6859,21 +6874,6 @@
                           "bill": null
                         },
                         {
-                          "id": "fr-pi-2026-21450",
-                          "kind": "public_inspection",
-                          "when": "2026-10-20",
-                          "until": null,
-                          "filedAt": "2026-10-16T16:15:00.000-04:00",
-                          "signedAt": null,
-                          "title": "Atlantic Highly Migratory Species: Atlantic Bluefin Tuna Fisheries; Closure of the General Category October through November Fishery for 2026",
-                          "summary": "National Oceanic and Atmospheric Administration (from lower in the map)",
-                          "url": "https://public-inspection.federalregister.gov/2026-21450.pdf",
-                          "source": "Federal Register public inspection (PDF)",
-                          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
                           "id": "fr-pi-2026-21357",
                           "kind": "public_inspection",
                           "when": "2026-10-19",
@@ -6915,10 +6915,25 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-17T16:29:07.428Z",
-                          "count": 22,
+                          "asOf": "2026-10-18T16:34:59.757Z",
+                          "count": 23,
                           "rolledUp": true,
                           "events": [
+                            {
+                              "id": "fr-comment-2026-21205",
+                              "kind": "comment_deadline",
+                              "when": "2026-11-16",
+                              "until": "2026-11-16",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Fishery Management Plans of St. Croix and St. Thomas and St. John; Spiny Lobster Management Measures",
+                              "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
+                              "url": "http://www.regulations.gov/commenton/NOAA_FRDOC_0001-7708",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
                             {
                               "id": "fr-comment-2026-20863",
                               "kind": "comment_deadline",
@@ -6976,21 +6991,6 @@
                               "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1651-0003",
                               "source": "Federal Register proposed rule (comments close)",
                               "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-pi-2026-21450",
-                              "kind": "public_inspection",
-                              "when": "2026-10-20",
-                              "until": null,
-                              "filedAt": "2026-10-16T16:15:00.000-04:00",
-                              "signedAt": null,
-                              "title": "Atlantic Highly Migratory Species: Atlantic Bluefin Tuna Fisheries; Closure of the General Category October through November Fishery for 2026",
-                              "summary": "National Oceanic and Atmospheric Administration (from lower in the map)",
-                              "url": "https://public-inspection.federalregister.gov/2026-21450.pdf",
-                              "source": "Federal Register public inspection (PDF)",
-                              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                               "urgency": "upcoming",
                               "bill": null
                             },
@@ -7533,7 +7533,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-17T16:29:07.428Z",
+                              "asOf": "2026-10-18T16:34:59.757Z",
                               "count": 2,
                               "rolledUp": true,
                               "events": [
@@ -7629,7 +7629,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-10-17T16:29:07.428Z",
+                                  "asOf": "2026-10-18T16:34:59.757Z",
                                   "count": 2,
                                   "rolledUp": true,
                                   "events": [
@@ -7690,7 +7690,7 @@
                                       "usgm": null
                                     },
                                     "heat": {
-                                      "asOf": "2026-10-17T16:29:07.428Z",
+                                      "asOf": "2026-10-18T16:34:59.757Z",
                                       "count": 1,
                                       "rolledUp": false,
                                       "events": [
@@ -7773,7 +7773,7 @@
                                       "usgm": null
                                     },
                                     "heat": {
-                                      "asOf": "2026-10-17T16:29:07.428Z",
+                                      "asOf": "2026-10-18T16:34:59.757Z",
                                       "count": 1,
                                       "rolledUp": false,
                                       "events": [
@@ -8210,7 +8210,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-17T16:29:07.428Z",
+                              "asOf": "2026-10-18T16:34:59.757Z",
                               "count": 12,
                               "rolledUp": true,
                               "events": [
@@ -8361,7 +8361,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-10-17T16:29:07.428Z",
+                                  "asOf": "2026-10-18T16:34:59.757Z",
                                   "count": 12,
                                   "rolledUp": false,
                                   "events": [
@@ -8785,10 +8785,25 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-17T16:29:07.428Z",
-                              "count": 8,
+                              "asOf": "2026-10-18T16:34:59.757Z",
+                              "count": 9,
                               "rolledUp": true,
                               "events": [
+                                {
+                                  "id": "fr-comment-2026-21205",
+                                  "kind": "comment_deadline",
+                                  "when": "2026-11-16",
+                                  "until": "2026-11-16",
+                                  "filedAt": null,
+                                  "signedAt": null,
+                                  "title": "Fishery Management Plans of St. Croix and St. Thomas and St. John; Spiny Lobster Management Measures",
+                                  "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
+                                  "url": "http://www.regulations.gov/commenton/NOAA_FRDOC_0001-7708",
+                                  "source": "Federal Register proposed rule (comments close)",
+                                  "sourceUrl": "https://www.federalregister.gov/",
+                                  "urgency": "upcoming",
+                                  "bill": null
+                                },
                                 {
                                   "id": "fr-comment-2026-20863",
                                   "kind": "comment_deadline",
@@ -8833,21 +8848,6 @@
                                   "sourceUrl": "https://www.federalregister.gov/",
                                   "urgency": "upcoming",
                                   "bill": null
-                                },
-                                {
-                                  "id": "fr-pi-2026-21450",
-                                  "kind": "public_inspection",
-                                  "when": "2026-10-20",
-                                  "until": null,
-                                  "filedAt": "2026-10-16T16:15:00.000-04:00",
-                                  "signedAt": null,
-                                  "title": "Atlantic Highly Migratory Species: Atlantic Bluefin Tuna Fisheries; Closure of the General Category October through November Fishery for 2026",
-                                  "summary": "National Oceanic and Atmospheric Administration (from lower in the map)",
-                                  "url": "https://public-inspection.federalregister.gov/2026-21450.pdf",
-                                  "source": "Federal Register public inspection (PDF)",
-                                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                                  "urgency": "upcoming",
-                                  "bill": null
                                 }
                               ]
                             },
@@ -8876,10 +8876,25 @@
                                   "usgm": null
                                 },
                                 "heat": {
-                                  "asOf": "2026-10-17T16:29:07.428Z",
-                                  "count": 8,
+                                  "asOf": "2026-10-18T16:34:59.757Z",
+                                  "count": 9,
                                   "rolledUp": true,
                                   "events": [
+                                    {
+                                      "id": "fr-comment-2026-21205",
+                                      "kind": "comment_deadline",
+                                      "when": "2026-11-16",
+                                      "until": "2026-11-16",
+                                      "filedAt": null,
+                                      "signedAt": null,
+                                      "title": "Fishery Management Plans of St. Croix and St. Thomas and St. John; Spiny Lobster Management Measures",
+                                      "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
+                                      "url": "http://www.regulations.gov/commenton/NOAA_FRDOC_0001-7708",
+                                      "source": "Federal Register proposed rule (comments close)",
+                                      "sourceUrl": "https://www.federalregister.gov/",
+                                      "urgency": "upcoming",
+                                      "bill": null
+                                    },
                                     {
                                       "id": "fr-comment-2026-20863",
                                       "kind": "comment_deadline",
@@ -8922,21 +8937,6 @@
                                       "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1651-0003",
                                       "source": "Federal Register proposed rule (comments close)",
                                       "sourceUrl": "https://www.federalregister.gov/",
-                                      "urgency": "upcoming",
-                                      "bill": null
-                                    },
-                                    {
-                                      "id": "fr-pi-2026-21450",
-                                      "kind": "public_inspection",
-                                      "when": "2026-10-20",
-                                      "until": null,
-                                      "filedAt": "2026-10-16T16:15:00.000-04:00",
-                                      "signedAt": null,
-                                      "title": "Atlantic Highly Migratory Species: Atlantic Bluefin Tuna Fisheries; Closure of the General Category October through November Fishery for 2026",
-                                      "summary": "National Oceanic and Atmospheric Administration (from lower in the map)",
-                                      "url": "https://public-inspection.federalregister.gov/2026-21450.pdf",
-                                      "source": "Federal Register public inspection (PDF)",
-                                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                                       "urgency": "upcoming",
                                       "bill": null
                                     }
@@ -9069,10 +9069,25 @@
                                       }
                                     },
                                     "heat": {
-                                      "asOf": "2026-10-17T16:29:07.428Z",
-                                      "count": 8,
+                                      "asOf": "2026-10-18T16:34:59.757Z",
+                                      "count": 9,
                                       "rolledUp": false,
                                       "events": [
+                                        {
+                                          "id": "fr-comment-2026-21205",
+                                          "kind": "comment_deadline",
+                                          "when": "2026-11-16",
+                                          "until": "2026-11-16",
+                                          "filedAt": null,
+                                          "signedAt": null,
+                                          "title": "Fishery Management Plans of St. Croix and St. Thomas and St. John; Spiny Lobster Management Measures",
+                                          "summary": "Commerce Department, National Oceanic and Atmospheric Administration",
+                                          "url": "http://www.regulations.gov/commenton/NOAA_FRDOC_0001-7708",
+                                          "source": "Federal Register proposed rule (comments close)",
+                                          "sourceUrl": "https://www.federalregister.gov/",
+                                          "urgency": "upcoming",
+                                          "bill": null
+                                        },
                                         {
                                           "id": "fr-comment-2026-20863",
                                           "kind": "comment_deadline",
@@ -23362,7 +23377,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 7,
               "rolledUp": true,
               "events": [
@@ -23453,7 +23468,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-17T16:29:07.428Z",
+                  "asOf": "2026-10-18T16:34:59.757Z",
                   "count": 7,
                   "rolledUp": true,
                   "events": [
@@ -26089,7 +26104,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-17T16:29:07.428Z",
+                      "asOf": "2026-10-18T16:34:59.757Z",
                       "count": 7,
                       "rolledUp": false,
                       "events": [
@@ -26451,7 +26466,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 3,
               "rolledUp": true,
               "events": [
@@ -26527,7 +26542,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-17T16:29:07.428Z",
+                  "asOf": "2026-10-18T16:34:59.757Z",
                   "count": 3,
                   "rolledUp": true,
                   "events": [
@@ -26628,7 +26643,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-10-17T16:29:07.428Z",
+                      "asOf": "2026-10-18T16:34:59.757Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -26979,7 +26994,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-17T16:29:07.428Z",
+                      "asOf": "2026-10-18T16:34:59.757Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -28605,7 +28620,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 12,
               "rolledUp": true,
               "events": [
@@ -28711,7 +28726,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-17T16:29:07.428Z",
+                  "asOf": "2026-10-18T16:34:59.757Z",
                   "count": 12,
                   "rolledUp": true,
                   "events": [
@@ -28817,7 +28832,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-17T16:29:07.428Z",
+                      "asOf": "2026-10-18T16:34:59.757Z",
                       "count": 12,
                       "rolledUp": true,
                       "events": [
@@ -30330,7 +30345,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "asOf": "2026-10-18T16:34:59.757Z",
                           "count": 11,
                           "rolledUp": false,
                           "events": [
@@ -30553,7 +30568,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "asOf": "2026-10-18T16:34:59.757Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -32895,7 +32910,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 12,
               "rolledUp": true,
               "events": [
@@ -33022,7 +33037,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-17T16:29:07.428Z",
+                  "asOf": "2026-10-18T16:34:59.757Z",
                   "count": 12,
                   "rolledUp": true,
                   "events": [
@@ -33113,7 +33128,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-17T16:29:07.428Z",
+                      "asOf": "2026-10-18T16:34:59.757Z",
                       "count": 12,
                       "rolledUp": true,
                       "events": [
@@ -34623,7 +34638,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "asOf": "2026-10-18T16:34:59.757Z",
                           "count": 12,
                           "rolledUp": false,
                           "events": [
@@ -35237,7 +35252,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 3,
               "rolledUp": true,
               "events": [
@@ -35313,7 +35328,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-17T16:29:07.428Z",
+                  "asOf": "2026-10-18T16:34:59.757Z",
                   "count": 3,
                   "rolledUp": true,
                   "events": [
@@ -35389,7 +35404,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-17T16:29:07.428Z",
+                      "asOf": "2026-10-18T16:34:59.757Z",
                       "count": 2,
                       "rolledUp": true,
                       "events": [
@@ -35722,7 +35737,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "asOf": "2026-10-18T16:34:59.757Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -36842,7 +36857,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "asOf": "2026-10-18T16:34:59.757Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -37271,7 +37286,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-17T16:29:07.428Z",
+                      "asOf": "2026-10-18T16:34:59.757Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -39526,7 +39541,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 6,
               "rolledUp": true,
               "events": [
@@ -39647,7 +39662,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-17T16:29:07.428Z",
+                  "asOf": "2026-10-18T16:34:59.757Z",
                   "count": 6,
                   "rolledUp": true,
                   "events": [
@@ -39768,7 +39783,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-17T16:29:07.428Z",
+                      "asOf": "2026-10-18T16:34:59.757Z",
                       "count": 6,
                       "rolledUp": true,
                       "events": [
@@ -39889,7 +39904,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "asOf": "2026-10-18T16:34:59.757Z",
                           "count": 4,
                           "rolledUp": true,
                           "events": [
@@ -40062,7 +40077,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-10-17T16:29:07.428Z",
+                              "asOf": "2026-10-18T16:34:59.757Z",
                               "count": 3,
                               "rolledUp": false,
                               "events": [
@@ -40195,7 +40210,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-10-17T16:29:07.428Z",
+                              "asOf": "2026-10-18T16:34:59.757Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -40613,7 +40628,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "asOf": "2026-10-18T16:34:59.757Z",
                           "count": 2,
                           "rolledUp": true,
                           "events": [
@@ -40696,7 +40711,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-10-17T16:29:07.428Z",
+                              "asOf": "2026-10-18T16:34:59.757Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -40791,7 +40806,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-10-17T16:29:07.428Z",
+                              "asOf": "2026-10-18T16:34:59.757Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -41977,7 +41992,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 5,
               "rolledUp": true,
               "events": [
@@ -42083,7 +42098,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-17T16:29:07.428Z",
+                  "asOf": "2026-10-18T16:34:59.757Z",
                   "count": 5,
                   "rolledUp": true,
                   "events": [
@@ -42241,7 +42256,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-17T16:29:07.428Z",
+                      "asOf": "2026-10-18T16:34:59.757Z",
                       "count": 5,
                       "rolledUp": true,
                       "events": [
@@ -43175,7 +43190,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "asOf": "2026-10-18T16:34:59.757Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -43273,7 +43288,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-10-17T16:29:07.428Z",
+                              "asOf": "2026-10-18T16:34:59.757Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -43689,7 +43704,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "asOf": "2026-10-18T16:34:59.757Z",
                           "count": 4,
                           "rolledUp": false,
                           "events": [
@@ -44138,65 +44153,65 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
-              "count": 47,
+              "asOf": "2026-10-18T16:34:59.757Z",
+              "count": 54,
               "rolledUp": true,
               "events": [
                 {
-                  "id": "fr-comment-2026-19892",
+                  "id": "fr-comment-2026-20202",
                   "kind": "comment_deadline",
-                  "when": "2026-11-13",
-                  "until": "2026-11-13",
+                  "when": "2026-11-16",
+                  "until": "2026-11-16",
                   "filedAt": null,
                   "signedAt": null,
-                  "title": "Airworthiness Directives; Leonardo S.p.a. Helicopters",
+                  "title": "Amendment of Class D and E Airspace, Revocation of Class E Airspace; Montgomery, AL",
                   "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FAA-2026-11788-0001",
+                  "url": "http://www.regulations.gov/commenton/FAA-2026-8948-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
                 },
                 {
-                  "id": "fr-comment-2026-19890",
+                  "id": "fr-comment-2026-20076",
                   "kind": "comment_deadline",
-                  "when": "2026-11-13",
-                  "until": "2026-11-13",
+                  "when": "2026-11-16",
+                  "until": "2026-11-16",
                   "filedAt": null,
                   "signedAt": null,
-                  "title": "Airworthiness Directives; Airbus Helicopters Deutschland GmbH (AHD) Helicopters",
+                  "title": "Airworthiness Directives; Embraer S.A. Airplanes",
                   "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FAA-2026-11790-0001",
+                  "url": "http://www.regulations.gov/commenton/FAA-2026-11796-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
                 },
                 {
-                  "id": "fr-comment-2026-18799",
+                  "id": "fr-comment-2026-19987",
                   "kind": "comment_deadline",
-                  "when": "2026-11-13",
-                  "until": "2026-11-13",
+                  "when": "2026-11-16",
+                  "until": "2026-11-16",
                   "filedAt": null,
                   "signedAt": null,
-                  "title": "Use of Certain Restricted Category Aircraft for the Transport of Firefighters for Wildfire Suppression",
+                  "title": "Airworthiness Directives; Airbus Helicopters",
                   "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FAA-2026-10991-0001",
+                  "url": "http://www.regulations.gov/commenton/FAA-2026-11795-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
                 },
                 {
-                  "id": "fr-comment-2026-19815",
+                  "id": "fr-comment-2026-19972",
                   "kind": "comment_deadline",
-                  "when": "2026-11-12",
-                  "until": "2026-11-12",
+                  "when": "2026-11-16",
+                  "until": "2026-11-16",
                   "filedAt": null,
                   "signedAt": null,
-                  "title": "Establishment, Modification, and Revocation of Class E Airspace; Alaska, AK",
+                  "title": "Airworthiness Directives; Vulcanair S.p.A. Airplanes",
                   "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FAA-2024-2333-0007",
+                  "url": "http://www.regulations.gov/commenton/FAA-2026-11794-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
@@ -44259,65 +44274,65 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-10-17T16:29:07.428Z",
-                  "count": 47,
+                  "asOf": "2026-10-18T16:34:59.757Z",
+                  "count": 54,
                   "rolledUp": true,
                   "events": [
                     {
-                      "id": "fr-comment-2026-19892",
+                      "id": "fr-comment-2026-20202",
                       "kind": "comment_deadline",
-                      "when": "2026-11-13",
-                      "until": "2026-11-13",
+                      "when": "2026-11-16",
+                      "until": "2026-11-16",
                       "filedAt": null,
                       "signedAt": null,
-                      "title": "Airworthiness Directives; Leonardo S.p.a. Helicopters",
+                      "title": "Amendment of Class D and E Airspace, Revocation of Class E Airspace; Montgomery, AL",
                       "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAA-2026-11788-0001",
+                      "url": "http://www.regulations.gov/commenton/FAA-2026-8948-0001",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
                       "bill": null
                     },
                     {
-                      "id": "fr-comment-2026-19890",
+                      "id": "fr-comment-2026-20076",
                       "kind": "comment_deadline",
-                      "when": "2026-11-13",
-                      "until": "2026-11-13",
+                      "when": "2026-11-16",
+                      "until": "2026-11-16",
                       "filedAt": null,
                       "signedAt": null,
-                      "title": "Airworthiness Directives; Airbus Helicopters Deutschland GmbH (AHD) Helicopters",
+                      "title": "Airworthiness Directives; Embraer S.A. Airplanes",
                       "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAA-2026-11790-0001",
+                      "url": "http://www.regulations.gov/commenton/FAA-2026-11796-0001",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
                       "bill": null
                     },
                     {
-                      "id": "fr-comment-2026-18799",
+                      "id": "fr-comment-2026-19987",
                       "kind": "comment_deadline",
-                      "when": "2026-11-13",
-                      "until": "2026-11-13",
+                      "when": "2026-11-16",
+                      "until": "2026-11-16",
                       "filedAt": null,
                       "signedAt": null,
-                      "title": "Use of Certain Restricted Category Aircraft for the Transport of Firefighters for Wildfire Suppression",
+                      "title": "Airworthiness Directives; Airbus Helicopters",
                       "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAA-2026-10991-0001",
+                      "url": "http://www.regulations.gov/commenton/FAA-2026-11795-0001",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
                       "bill": null
                     },
                     {
-                      "id": "fr-comment-2026-19815",
+                      "id": "fr-comment-2026-19972",
                       "kind": "comment_deadline",
-                      "when": "2026-11-12",
-                      "until": "2026-11-12",
+                      "when": "2026-11-16",
+                      "until": "2026-11-16",
                       "filedAt": null,
                       "signedAt": null,
-                      "title": "Establishment, Modification, and Revocation of Class E Airspace; Alaska, AK",
+                      "title": "Airworthiness Directives; Vulcanair S.p.A. Airplanes",
                       "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAA-2024-2333-0007",
+                      "url": "http://www.regulations.gov/commenton/FAA-2026-11794-0001",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
@@ -44380,65 +44395,65 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-10-17T16:29:07.428Z",
-                      "count": 47,
+                      "asOf": "2026-10-18T16:34:59.757Z",
+                      "count": 54,
                       "rolledUp": true,
                       "events": [
                         {
-                          "id": "fr-comment-2026-19892",
+                          "id": "fr-comment-2026-20202",
                           "kind": "comment_deadline",
-                          "when": "2026-11-13",
-                          "until": "2026-11-13",
+                          "when": "2026-11-16",
+                          "until": "2026-11-16",
                           "filedAt": null,
                           "signedAt": null,
-                          "title": "Airworthiness Directives; Leonardo S.p.a. Helicopters",
+                          "title": "Amendment of Class D and E Airspace, Revocation of Class E Airspace; Montgomery, AL",
                           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/FAA-2026-11788-0001",
+                          "url": "http://www.regulations.gov/commenton/FAA-2026-8948-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
                           "bill": null
                         },
                         {
-                          "id": "fr-comment-2026-19890",
+                          "id": "fr-comment-2026-20076",
                           "kind": "comment_deadline",
-                          "when": "2026-11-13",
-                          "until": "2026-11-13",
+                          "when": "2026-11-16",
+                          "until": "2026-11-16",
                           "filedAt": null,
                           "signedAt": null,
-                          "title": "Airworthiness Directives; Airbus Helicopters Deutschland GmbH (AHD) Helicopters",
+                          "title": "Airworthiness Directives; Embraer S.A. Airplanes",
                           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/FAA-2026-11790-0001",
+                          "url": "http://www.regulations.gov/commenton/FAA-2026-11796-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
                           "bill": null
                         },
                         {
-                          "id": "fr-comment-2026-18799",
+                          "id": "fr-comment-2026-19987",
                           "kind": "comment_deadline",
-                          "when": "2026-11-13",
-                          "until": "2026-11-13",
+                          "when": "2026-11-16",
+                          "until": "2026-11-16",
                           "filedAt": null,
                           "signedAt": null,
-                          "title": "Use of Certain Restricted Category Aircraft for the Transport of Firefighters for Wildfire Suppression",
+                          "title": "Airworthiness Directives; Airbus Helicopters",
                           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/FAA-2026-10991-0001",
+                          "url": "http://www.regulations.gov/commenton/FAA-2026-11795-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
                           "bill": null
                         },
                         {
-                          "id": "fr-comment-2026-19815",
+                          "id": "fr-comment-2026-19972",
                           "kind": "comment_deadline",
-                          "when": "2026-11-12",
-                          "until": "2026-11-12",
+                          "when": "2026-11-16",
+                          "until": "2026-11-16",
                           "filedAt": null,
                           "signedAt": null,
-                          "title": "Establishment, Modification, and Revocation of Class E Airspace; Alaska, AK",
+                          "title": "Airworthiness Directives; Vulcanair S.p.A. Airplanes",
                           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/FAA-2024-2333-0007",
+                          "url": "http://www.regulations.gov/commenton/FAA-2026-11794-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
@@ -44771,7 +44786,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "asOf": "2026-10-18T16:34:59.757Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -45094,7 +45109,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "asOf": "2026-10-18T16:34:59.757Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -45404,7 +45419,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-17T16:29:07.428Z",
+                          "asOf": "2026-10-18T16:34:59.757Z",
                           "count": 3,
                           "rolledUp": false,
                           "events": [
@@ -45616,10 +45631,115 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-10-17T16:29:07.428Z",
-                          "count": 41,
+                          "asOf": "2026-10-18T16:34:59.757Z",
+                          "count": 48,
                           "rolledUp": false,
                           "events": [
+                            {
+                              "id": "fr-comment-2026-20202",
+                              "kind": "comment_deadline",
+                              "when": "2026-11-16",
+                              "until": "2026-11-16",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Amendment of Class D and E Airspace, Revocation of Class E Airspace; Montgomery, AL",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-8948-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-20076",
+                              "kind": "comment_deadline",
+                              "when": "2026-11-16",
+                              "until": "2026-11-16",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Airworthiness Directives; Embraer S.A. Airplanes",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-11796-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-19987",
+                              "kind": "comment_deadline",
+                              "when": "2026-11-16",
+                              "until": "2026-11-16",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Airworthiness Directives; Airbus Helicopters",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-11795-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-19972",
+                              "kind": "comment_deadline",
+                              "when": "2026-11-16",
+                              "until": "2026-11-16",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Airworthiness Directives; Vulcanair S.p.A. Airplanes",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-11794-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-19971",
+                              "kind": "comment_deadline",
+                              "when": "2026-11-16",
+                              "until": "2026-11-16",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Airworthiness Directives; Airbus Helicopters Deutschland GmbH (AHD) Helicopters",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-11792-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-19970",
+                              "kind": "comment_deadline",
+                              "when": "2026-11-16",
+                              "until": "2026-11-16",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Airworthiness Directives; Bell Textron Canada Limited Helicopters",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-11791-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-19960",
+                              "kind": "comment_deadline",
+                              "when": "2026-11-16",
+                              "until": "2026-11-16",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Airworthiness Directives; Airbus SAS Airplanes",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-11793-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
                             {
                               "id": "fr-comment-2026-19892",
                               "kind": "comment_deadline",
@@ -48696,10 +48816,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
-              "count": 13,
+              "asOf": "2026-10-18T16:34:59.757Z",
+              "count": 14,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-19027",
+                  "kind": "comment_deadline",
+                  "when": "2026-11-16",
+                  "until": "2026-11-16",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Indiana: Approval of State Coal Combustion Residuals Permit Program",
+                  "summary": "Environmental Protection Agency",
+                  "url": "http://www.regulations.gov/commenton/EPA-HQ-OLEM-2026-4326-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-20964",
                   "kind": "comment_deadline",
@@ -49887,7 +50022,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 7,
               "rolledUp": false,
               "events": [
@@ -50834,7 +50969,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 5,
               "rolledUp": false,
               "events": [
@@ -51098,10 +51233,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
-              "count": 7,
+              "asOf": "2026-10-18T16:34:59.757Z",
+              "count": 8,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-18944",
+                  "kind": "comment_deadline",
+                  "when": "2026-11-16",
+                  "until": "2026-11-16",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Federal Employees Health Benefits Program: Optimizing FEHB Plan Offerings",
+                  "summary": "Personnel Management Office",
+                  "url": "http://www.regulations.gov/commenton/OPM-2026-0661-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-pi-2026-21316",
                   "kind": "public_inspection",
@@ -52185,7 +52335,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -52948,7 +53098,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-10-17T16:29:07.428Z",
+          "asOf": "2026-10-18T16:34:59.757Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -53557,7 +53707,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -54669,7 +54819,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-10-17T16:29:07.428Z",
+          "asOf": "2026-10-18T16:34:59.757Z",
           "count": 3,
           "rolledUp": true,
           "events": [
@@ -54696,7 +54846,7 @@
               "filedAt": null,
               "signedAt": null,
               "title": "House next session",
-              "summary": "October 19th, 2026 at 10:00 AM (from lower in the map)",
+              "summary": "Tomorrow at 10:00 AM (from lower in the map)",
               "url": "https://clerk.house.gov/",
               "source": "Office of the Clerk, U.S. House",
               "sourceUrl": "https://clerk.house.gov/",
@@ -55297,7 +55447,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 3,
               "rolledUp": true,
               "events": [
@@ -55324,7 +55474,7 @@
                   "filedAt": null,
                   "signedAt": null,
                   "title": "House next session",
-                  "summary": "October 19th, 2026 at 10:00 AM (from lower in the map)",
+                  "summary": "Tomorrow at 10:00 AM (from lower in the map)",
                   "url": "https://clerk.house.gov/",
                   "source": "Office of the Clerk, U.S. House",
                   "sourceUrl": "https://clerk.house.gov/",
@@ -55483,7 +55633,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-10-17T16:29:07.428Z",
+                  "asOf": "2026-10-18T16:34:59.757Z",
                   "count": 2,
                   "rolledUp": false,
                   "events": [
@@ -55510,7 +55660,7 @@
                       "filedAt": null,
                       "signedAt": null,
                       "title": "House next session",
-                      "summary": "October 19th, 2026 at 10:00 AM",
+                      "summary": "Tomorrow at 10:00 AM",
                       "url": "https://clerk.house.gov/",
                       "source": "Office of the Clerk, U.S. House",
                       "sourceUrl": "https://clerk.house.gov/",
@@ -55649,7 +55799,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-10-17T16:29:07.428Z",
+                  "asOf": "2026-10-18T16:34:59.757Z",
                   "count": 1,
                   "rolledUp": false,
                   "events": [
@@ -56609,7 +56759,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-10-17T16:29:07.428Z",
+          "asOf": "2026-10-18T16:34:59.757Z",
           "count": 40,
           "rolledUp": true,
           "events": [
@@ -57953,7 +58103,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 12,
               "rolledUp": false,
               "events": [
@@ -58891,7 +59041,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -59377,7 +59527,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -59616,7 +59766,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -59804,7 +59954,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -60795,7 +60945,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -61222,7 +61372,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -63772,7 +63922,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -64204,7 +64354,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -66284,7 +66434,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -66796,7 +66946,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 9,
               "rolledUp": false,
               "events": [
@@ -67630,7 +67780,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-10-17T16:29:07.428Z",
+          "asOf": "2026-10-18T16:34:59.757Z",
           "count": 9,
           "rolledUp": true,
           "events": [
@@ -68259,7 +68409,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -68603,7 +68753,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -69318,7 +69468,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -70718,7 +70868,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -71380,7 +71530,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-17T16:29:07.428Z",
+              "asOf": "2026-10-18T16:34:59.757Z",
               "count": 3,
               "rolledUp": false,
               "events": [
