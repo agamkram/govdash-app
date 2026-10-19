@@ -41,27 +41,27 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-10-18T16:35:24.193Z",
-      "asOf": "2026-10-18T16:34:59.757Z",
-      "nodesWithHeat": 4,
-      "nodesWithDirectHeat": 2,
-      "rawEventCount": 291,
+      "enrichedAt": "2026-10-19T19:22:09.930Z",
+      "asOf": "2026-10-19T19:21:50.662Z",
+      "nodesWithHeat": 3,
+      "nodesWithDirectHeat": 1,
+      "rawEventCount": 226,
       "matched": {
         "chamber": 0,
         "presidential": 0,
-        "publicInspection": 3,
+        "publicInspection": 1,
         "commentDeadlines": 0,
         "sunshine": 1,
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 147,
-      "unmatchedCommentDeadlines": 122,
+      "unmatchedPublicInspection": 81,
+      "unmatchedCommentDeadlines": 124,
       "unmatchedSunshine": 5,
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 1,
+          "count": 2,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
@@ -76,42 +76,42 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 150,
+          "count": 82,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
           "count": 9,
-          "since": "2026-10-04",
+          "since": "2026-10-05",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 122,
-          "start": "2026-10-18",
-          "end": "2026-11-16",
+          "count": 124,
+          "start": "2026-10-19",
+          "end": "2026-11-17",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
           "count": 6,
-          "start": "2026-10-18",
-          "end": "2026-11-16",
+          "start": "2026-10-19",
+          "end": "2026-11-17",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
           "count": 0,
-          "start": "2026-10-18",
-          "end": "2026-11-16",
+          "start": "2026-10-19",
+          "end": "2026-11-17",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
           "count": 1,
-          "start": "2026-10-18",
-          "end": "2026-11-16",
+          "start": "2026-10-19",
+          "end": "2026-11-17",
           "congress": 119,
           "calendarIds": 1,
           "skipped404": [],
@@ -120,8 +120,8 @@
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-10-18",
-          "end": "2026-11-16",
+          "start": "2026-10-19",
+          "end": "2026-11-17",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -141,8 +141,8 @@
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
     "heat": {
-      "asOf": "2026-10-18T16:34:59.757Z",
-      "count": 4,
+      "asOf": "2026-10-19T19:21:50.662Z",
+      "count": 2,
       "rolledUp": true,
       "events": [
         {
@@ -174,36 +174,6 @@
           "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
           "urgency": "upcoming",
           "bill": null
-        },
-        {
-          "id": "fr-pi-2026-21254",
-          "kind": "public_inspection",
-          "when": "2026-10-19",
-          "until": null,
-          "filedAt": "2026-10-16T08:45:00.000-04:00",
-          "signedAt": null,
-          "title": "Revisions to Performance Area One of the Performance Criteria",
-          "summary": "Legal Services Corporation (from lower in the map)",
-          "url": "https://public-inspection.federalregister.gov/2026-21254.pdf",
-          "source": "Federal Register public inspection (PDF)",
-          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-          "urgency": "upcoming",
-          "bill": null
-        },
-        {
-          "id": "fr-pi-2026-21303",
-          "kind": "public_inspection",
-          "when": "2026-10-19",
-          "until": null,
-          "filedAt": "2026-10-16T08:45:00.000-04:00",
-          "signedAt": null,
-          "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: National Civilian Community Corps Service Project Application",
-          "summary": "Corporation for National and Community Service (from lower in the map)",
-          "url": "https://public-inspection.federalregister.gov/2026-21303.pdf",
-          "source": "Federal Register public inspection (PDF)",
-          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-          "urgency": "upcoming",
-          "bill": null
         }
       ]
     },
@@ -221,8 +191,8 @@
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
         "heat": {
-          "asOf": "2026-10-18T16:34:59.757Z",
-          "count": 4,
+          "asOf": "2026-10-19T19:21:50.662Z",
+          "count": 2,
           "rolledUp": true,
           "events": [
             {
@@ -250,36 +220,6 @@
               "title": "Meetings; Sunshine Act",
               "summary": "Legal Services Corporation (from lower in the map)",
               "url": "https://public-inspection.federalregister.gov/2026-21449.pdf",
-              "source": "Federal Register public inspection (PDF)",
-              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-pi-2026-21254",
-              "kind": "public_inspection",
-              "when": "2026-10-19",
-              "until": null,
-              "filedAt": "2026-10-16T08:45:00.000-04:00",
-              "signedAt": null,
-              "title": "Revisions to Performance Area One of the Performance Criteria",
-              "summary": "Legal Services Corporation (from lower in the map)",
-              "url": "https://public-inspection.federalregister.gov/2026-21254.pdf",
-              "source": "Federal Register public inspection (PDF)",
-              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-pi-2026-21303",
-              "kind": "public_inspection",
-              "when": "2026-10-19",
-              "until": null,
-              "filedAt": "2026-10-16T08:45:00.000-04:00",
-              "signedAt": null,
-              "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: National Civilian Community Corps Service Project Application",
-              "summary": "Corporation for National and Community Service (from lower in the map)",
-              "url": "https://public-inspection.federalregister.gov/2026-21303.pdf",
               "source": "Federal Register public inspection (PDF)",
               "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
               "urgency": "upcoming",
@@ -1122,8 +1062,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-18T16:34:59.757Z",
-              "count": 3,
+              "asOf": "2026-10-19T19:21:50.662Z",
+              "count": 2,
               "rolledUp": false,
               "events": [
                 {
@@ -1151,21 +1091,6 @@
                   "title": "Meetings; Sunshine Act",
                   "summary": "Legal Services Corporation",
                   "url": "https://public-inspection.federalregister.gov/2026-21449.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-pi-2026-21254",
-                  "kind": "public_inspection",
-                  "when": "2026-10-19",
-                  "until": null,
-                  "filedAt": "2026-10-16T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Revisions to Performance Area One of the Performance Criteria",
-                  "summary": "Legal Services Corporation",
-                  "url": "https://public-inspection.federalregister.gov/2026-21254.pdf",
                   "source": "Federal Register public inspection (PDF)",
                   "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                   "urgency": "upcoming",
@@ -1932,28 +1857,7 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": {
-              "asOf": "2026-10-18T16:34:59.757Z",
-              "count": 1,
-              "rolledUp": false,
-              "events": [
-                {
-                  "id": "fr-pi-2026-21303",
-                  "kind": "public_inspection",
-                  "when": "2026-10-19",
-                  "until": null,
-                  "filedAt": "2026-10-16T08:45:00.000-04:00",
-                  "signedAt": null,
-                  "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: National Civilian Community Corps Service Project Application",
-                  "summary": "Corporation for National and Community Service",
-                  "url": "https://public-inspection.federalregister.gov/2026-21303.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                }
-              ]
-            },
+            "heat": null,
             "children": [],
             "spending": {
               "obligatedAmount": 988415591.27,
