@@ -17,7 +17,7 @@
       ]
     },
     "workforce": {
-      "asOf": "202607",
+      "asOf": "202608",
       "source": "OPM Federal Workforce Data (EHRI Status)",
       "matched": {
         "subelement": 8,
@@ -25,23 +25,23 @@
         "department": 0
       },
       "nodesWithCount": 11,
-      "enrichedAt": "2026-09-18T15:34:30.027Z"
+      "enrichedAt": "2026-10-23T18:19:49.927Z"
     },
     "spending": {
       "source": "USAspending.gov toptier + sub-agency",
-      "fetchedAt": "2026-08-10T04:49:07.619Z",
+      "fetchedAt": "2026-10-23T18:16:41.596Z",
       "matchedDirect": 4,
       "matchedSubtier": 0,
       "nodesWithSpending": 6,
       "toptier": 4,
       "subtier": 0,
       "rollup": 2,
-      "enrichedAt": "2026-08-14T21:38:55.021Z",
+      "enrichedAt": "2026-10-23T18:17:09.227Z",
       "note": "Toptier on Cabinet / independent. Subtier on descendants when the name matches. Honest blanks otherwise. Parents keep their own toptier total."
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-10-22T18:02:06.878Z",
+      "enrichedAt": "2026-10-23T18:22:18.407Z",
       "asOf": "2026-10-22T18:01:48.142Z",
       "nodesWithHeat": 3,
       "nodesWithDirectHeat": 1,
@@ -367,12 +367,12 @@
             "heat": null,
             "children": [],
             "spending": {
-              "obligatedAmount": 736067.78,
-              "outlayAmount": 1579642.34,
-              "budgetAuthorityAmount": 41525134.33,
+              "obligatedAmount": 4241107.26,
+              "outlayAmount": 2121090.59,
+              "budgetAuthorityAmount": 42276073.41,
               "fiscalYear": "2026",
-              "fiscalQuarter": "3",
-              "asOf": "FY2026 Q3",
+              "fiscalQuarter": "4",
+              "asOf": "FY2026 Q4",
               "source": "USAspending.gov (toptier agencies)",
               "grain": "toptier",
               "agencyName": "Barry Goldwater Scholarship and Excellence In Education Foundation",
@@ -384,7 +384,7 @@
             },
             "workforce": {
               "count": 2,
-              "asOf": "202607",
+              "asOf": "202608",
               "source": "OPM Federal Workforce Data (EHRI Status)",
               "level": "subelement",
               "opmCode": "GE00",
@@ -855,8 +855,8 @@
               "outlayAmount": 0,
               "budgetAuthorityAmount": 0,
               "fiscalYear": "2026",
-              "fiscalQuarter": "3",
-              "asOf": "FY2026 Q3",
+              "fiscalQuarter": "4",
+              "asOf": "FY2026 Q4",
               "source": "USAspending.gov (toptier agencies)",
               "grain": "toptier",
               "agencyName": "John F. Kennedy Center for the Performing Arts",
@@ -867,8 +867,8 @@
               "rolledUp": false
             },
             "workforce": {
-              "count": 48,
-              "asOf": "202607",
+              "count": 49,
+              "asOf": "202608",
               "source": "OPM Federal Workforce Data (EHRI Status)",
               "level": "subelement",
               "opmCode": "SM04",
@@ -1156,8 +1156,8 @@
             "heat": null,
             "children": [],
             "workforce": {
-              "count": 613,
-              "asOf": "202607",
+              "count": 611,
+              "asOf": "202608",
               "source": "OPM Federal Workforce Data (EHRI Status)",
               "level": "subelement",
               "opmCode": "SM01",
@@ -1606,12 +1606,12 @@
             "heat": null,
             "children": [],
             "spending": {
-              "obligatedAmount": 7067400.26,
-              "outlayAmount": 6131581.42,
-              "budgetAuthorityAmount": 34442577.9,
+              "obligatedAmount": 8461829.83,
+              "outlayAmount": 8634696.29,
+              "budgetAuthorityAmount": 35918886.48,
               "fiscalYear": "2026",
-              "fiscalQuarter": "3",
-              "asOf": "FY2026 Q3",
+              "fiscalQuarter": "4",
+              "asOf": "FY2026 Q4",
               "source": "USAspending.gov (toptier agencies)",
               "grain": "toptier",
               "agencyName": "African Development Foundation",
@@ -1623,7 +1623,7 @@
             },
             "workforce": {
               "count": 21,
-              "asOf": "202607",
+              "asOf": "202608",
               "source": "OPM Federal Workforce Data (EHRI Status)",
               "level": "subelement",
               "opmCode": "AN00",
@@ -1815,12 +1815,12 @@
             "heat": null,
             "children": [],
             "spending": {
-              "obligatedAmount": 988415591.27,
-              "outlayAmount": 924074869.61,
-              "budgetAuthorityAmount": 2743435670.06,
+              "obligatedAmount": 1587153612.6,
+              "outlayAmount": 1195241351.04,
+              "budgetAuthorityAmount": 2950225346.89,
               "fiscalYear": "2026",
-              "fiscalQuarter": "3",
-              "asOf": "FY2026 Q3",
+              "fiscalQuarter": "4",
+              "asOf": "FY2026 Q4",
               "source": "USAspending.gov (toptier agencies)",
               "grain": "toptier",
               "agencyName": "Corporation for National and Community Service",
@@ -1832,7 +1832,7 @@
             },
             "workforce": {
               "count": 373,
-              "asOf": "202607",
+              "asOf": "202608",
               "source": "OPM Federal Workforce Data (EHRI Status)",
               "level": "subelement",
               "opmCode": "KS00",
@@ -1998,8 +1998,8 @@
             "heat": null,
             "children": [],
             "workforce": {
-              "count": 90,
-              "asOf": "202607",
+              "count": 85,
+              "asOf": "202608",
               "source": "OPM Federal Workforce Data (EHRI Status)",
               "level": "subelement",
               "opmCode": "HD00",
@@ -2244,12 +2244,12 @@
           }
         ],
         "spending": {
-          "obligatedAmount": 996219059.31,
-          "outlayAmount": 931786093.37,
-          "budgetAuthorityAmount": 2819403382.29,
+          "obligatedAmount": 1599856549.6899998,
+          "outlayAmount": 1205997137.92,
+          "budgetAuthorityAmount": 3028420306.7799997,
           "fiscalYear": null,
           "fiscalQuarter": null,
-          "asOf": "FY2026 Q3",
+          "asOf": "FY2026 Q4",
           "source": "USAspending.gov (toptier agencies)",
           "grain": "rollup",
           "agencyName": null,
@@ -2260,8 +2260,8 @@
           "rolledUp": true
         },
         "workforce": {
-          "count": 1147,
-          "asOf": "202607",
+          "count": 1141,
+          "asOf": "202608",
           "source": "OPM Federal Workforce Data (EHRI Status)",
           "level": "rollup",
           "opmCode": null,
@@ -5496,8 +5496,8 @@
             "heat": null,
             "children": [],
             "workforce": {
-              "count": 22,
-              "asOf": "202607",
+              "count": 21,
+              "asOf": "202608",
               "source": "OPM Federal Workforce Data (EHRI Status)",
               "level": "subelement",
               "opmCode": "GX00",
@@ -5533,7 +5533,7 @@
             "children": [],
             "workforce": {
               "count": 15,
-              "asOf": "202607",
+              "asOf": "202608",
               "source": "OPM Federal Workforce Data (EHRI Status)",
               "level": "subelement",
               "opmCode": "GY00",
@@ -5714,8 +5714,8 @@
           }
         ],
         "workforce": {
-          "count": 37,
-          "asOf": "202607",
+          "count": 36,
+          "asOf": "202608",
           "source": "OPM Federal Workforce Data (EHRI Status)",
           "level": "rollup",
           "opmCode": null,
@@ -5726,12 +5726,12 @@
       }
     ],
     "spending": {
-      "obligatedAmount": 996219059.31,
-      "outlayAmount": 931786093.37,
-      "budgetAuthorityAmount": 2819403382.29,
+      "obligatedAmount": 1599856549.6899998,
+      "outlayAmount": 1205997137.92,
+      "budgetAuthorityAmount": 3028420306.7799997,
       "fiscalYear": null,
       "fiscalQuarter": null,
-      "asOf": "FY2026 Q3",
+      "asOf": "FY2026 Q4",
       "source": "USAspending.gov (toptier agencies)",
       "grain": "rollup",
       "agencyName": null,
@@ -5742,8 +5742,8 @@
       "rolledUp": true
     },
     "workforce": {
-      "count": 1184,
-      "asOf": "202607",
+      "count": 1177,
+      "asOf": "202608",
       "source": "OPM Federal Workforce Data (EHRI Status)",
       "level": "rollup",
       "opmCode": null,

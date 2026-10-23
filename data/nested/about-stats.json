@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T15:34:30.536Z",
+  "generatedAt": "2026-10-23T18:19:50.416Z",
   "nodes": 1598,
   "leaves": 1291,
   "leafPct": "80.8",
@@ -8,17 +8,17 @@
   "independents": 102,
   "shorts": 1010,
   "maxDepth": 11,
-  "opmAsOf": "202607",
-  "opmAsOfLabel": "Jul 2026",
-  "spendPeriod": "FY2026 Q3",
-  "spendPeriodNote": "FY2026 Q3 + sub-agency FY2026",
+  "opmAsOf": "202608",
+  "opmAsOfLabel": "Aug 2026",
+  "spendPeriod": "FY2026 Q4",
+  "spendPeriodNote": "FY2026 Q4 + sub-agency FY2026",
   "wfShown": 574,
   "wfBlank": 1024,
   "wfPct": "35.9",
-  "wfDirect": 435,
-  "wfRoll": 139,
+  "wfDirect": 433,
+  "wfRoll": 141,
   "wfLevel": {
-    "subelement": 406,
+    "subelement": 404,
     "agency": 22,
     "department": 7
   },
@@ -199,11 +199,11 @@
   "wfMatchRows": [
     {
       "label": "subelement",
-      "count": 406
+      "count": 404
     },
     {
       "label": "rollup",
-      "count": 139
+      "count": 141
     },
     {
       "label": "agency",
@@ -239,10 +239,10 @@
       "nodes": 23,
       "leaves": 20,
       "withSpend": 4,
-      "wf": 213,
-      "wfFmt": "213",
-      "obligated": 697601535.22,
-      "obligatedFmt": "$698M"
+      "wf": 202,
+      "wfFmt": "202",
+      "obligated": 852850761.54,
+      "obligatedFmt": "$853M"
     },
     {
       "short": "Executive",
@@ -250,10 +250,10 @@
       "nodes": 1087,
       "leaves": 822,
       "withSpend": 186,
-      "wf": 1211072,
-      "wfFmt": "1,211,072",
-      "obligated": 6541821540873.569,
-      "obligatedFmt": "$6.54T"
+      "wf": 1211176,
+      "wfFmt": "1,211,176",
+      "obligated": 7939061349259.601,
+      "obligatedFmt": "$7.94T"
     },
     {
       "short": "Judicial",
@@ -261,8 +261,8 @@
       "nodes": 38,
       "leaves": 30,
       "withSpend": 0,
-      "wf": 168,
-      "wfFmt": "168",
+      "wf": 160,
+      "wfFmt": "160",
       "obligated": null,
       "obligatedFmt": "—"
     },
@@ -272,10 +272,10 @@
       "nodes": 298,
       "leaves": 270,
       "withSpend": 83,
-      "wf": 127679,
-      "wfFmt": "127,679",
-      "obligated": 1642195338697.67,
-      "obligatedFmt": "$1.64T"
+      "wf": 128035,
+      "wfFmt": "128,035",
+      "obligated": 2011196375618.6199,
+      "obligatedFmt": "$2.01T"
     },
     {
       "short": "Chartered",
@@ -283,10 +283,10 @@
       "nodes": 34,
       "leaves": 33,
       "withSpend": 5,
-      "wf": 1147,
-      "wfFmt": "1,147",
-      "obligated": 996219059.31,
-      "obligatedFmt": "$996M"
+      "wf": 1141,
+      "wfFmt": "1,141",
+      "obligated": 1599856549.6899998,
+      "obligatedFmt": "$1.6B"
     },
     {
       "short": "International",
@@ -294,8 +294,8 @@
       "nodes": 117,
       "leaves": 116,
       "withSpend": 0,
-      "wf": 37,
-      "wfFmt": "37",
+      "wf": 36,
+      "wfFmt": "36",
       "obligated": null,
       "obligatedFmt": "—"
     }
@@ -304,170 +304,170 @@
     {
       "label": "VA",
       "name": "US Department of Veterans Affairs (VA)",
-      "wf": 446459,
-      "wfFmt": "446,459",
-      "obligated": 333932040708.53,
-      "obligatedFmt": "$333.9B",
+      "wf": 447225,
+      "wfFmt": "447,225",
+      "obligated": 407386240133.17,
+      "obligatedFmt": "$407.4B",
       "grain": "toptier",
       "beneath": 56
     },
     {
       "label": "DHS",
       "name": "US Department of Homeland Security (DHS)",
-      "wf": 225490,
-      "wfFmt": "225,490",
-      "obligated": 343433469352.11,
-      "obligatedFmt": "$343.4B",
+      "wf": 225574,
+      "wfFmt": "225,574",
+      "obligated": 378045848260.19,
+      "obligatedFmt": "$378.0B",
       "grain": "toptier",
       "beneath": 62
     },
     {
       "label": "USN",
       "name": "US Department of the Navy (USN)",
-      "wf": 200903,
-      "wfFmt": "200,903",
-      "obligated": 91526841252.21,
-      "obligatedFmt": "$91.5B",
+      "wf": 201088,
+      "wfFmt": "201,088",
+      "obligated": 134358025409.29,
+      "obligatedFmt": "$134.4B",
       "grain": "subtier",
       "beneath": 74
     },
     {
       "label": "Army (USA)",
       "name": "US Department of the Army (USA)",
-      "wf": 186285,
-      "wfFmt": "186,285",
-      "obligated": 68410528392.5,
-      "obligatedFmt": "$68.4B",
+      "wf": 184828,
+      "wfFmt": "184,828",
+      "obligated": 89727550513.2,
+      "obligatedFmt": "$89.7B",
       "grain": "subtier",
       "beneath": 94
     },
     {
       "label": "USAF",
       "name": "US Department of the Air Force (USAF)",
-      "wf": 151165,
-      "wfFmt": "151,165",
-      "obligated": 67730311071.08,
-      "obligatedFmt": "$67.7B",
+      "wf": 151547,
+      "wfFmt": "151,547",
+      "obligated": 87036055660,
+      "obligatedFmt": "$87.0B",
       "grain": "subtier",
       "beneath": 83
     },
     {
       "label": "DOJ",
       "name": "US Department of Justice (DOJ)",
-      "wf": 107331,
-      "wfFmt": "107,331",
-      "obligated": 41817732831.82,
-      "obligatedFmt": "$41.8B",
+      "wf": 107516,
+      "wfFmt": "107,516",
+      "obligated": 50791077566.03,
+      "obligatedFmt": "$50.8B",
       "grain": "toptier",
       "beneath": 49
     },
     {
       "label": "TD",
       "name": "US Department of the Treasury (TD)",
-      "wf": 83411,
-      "wfFmt": "83,411",
-      "obligated": 1697183126709.08,
-      "obligatedFmt": "$1.70T",
+      "wf": 83321,
+      "wfFmt": "83,321",
+      "obligated": 1979847631401.85,
+      "obligatedFmt": "$1.98T",
       "grain": "toptier",
       "beneath": 43
     },
     {
       "label": "USDA",
       "name": "US Department of Agriculture (USDA)",
-      "wf": 77996,
-      "wfFmt": "77,996",
-      "obligated": 184247778864.11,
-      "obligatedFmt": "$184.2B",
+      "wf": 77496,
+      "wfFmt": "77,496",
+      "obligated": 222668268585.14,
+      "obligatedFmt": "$222.7B",
       "grain": "toptier",
       "beneath": 61
     },
     {
       "label": "HHS",
       "name": "US Department of Health and Human Services (HHS)",
-      "wf": 72896,
-      "wfFmt": "72,896",
-      "obligated": 2220752284024.05,
-      "obligatedFmt": "$2.22T",
+      "wf": 72783,
+      "wfFmt": "72,783",
+      "obligated": 2803832148217.51,
+      "obligatedFmt": "$2.80T",
       "grain": "toptier",
       "beneath": 40
     },
     {
       "label": "DOI",
       "name": "US Department of the Interior (DOI)",
-      "wf": 59933,
-      "wfFmt": "59,933",
-      "obligated": 27388590442.89,
-      "obligatedFmt": "$27.4B",
+      "wf": 59776,
+      "wfFmt": "59,776",
+      "obligated": 37802479770.8,
+      "obligatedFmt": "$37.8B",
       "grain": "toptier",
       "beneath": 42
     },
     {
       "label": "DOT",
       "name": "US Department of Transportation (DOT)",
-      "wf": 52914,
-      "wfFmt": "52,914",
-      "obligated": 99763049749.85,
-      "obligatedFmt": "$99.8B",
+      "wf": 52791,
+      "wfFmt": "52,791",
+      "obligated": 130943299917.7,
+      "obligatedFmt": "$130.9B",
       "grain": "toptier",
       "beneath": 33
     },
     {
       "label": "DOC",
       "name": "US Department of Commerce (DOC)",
-      "wf": 41199,
-      "wfFmt": "41,199",
-      "obligated": 14125533232.38,
-      "obligatedFmt": "$14.1B",
+      "wf": 41256,
+      "wfFmt": "41,256",
+      "obligated": 19226511182.64,
+      "obligatedFmt": "$19.2B",
       "grain": "toptier",
       "beneath": 40
     },
     {
       "label": "DOE",
       "name": "US Department of Energy (DOE)",
-      "wf": 12029,
-      "wfFmt": "12,029",
-      "obligated": 57957437429.46,
-      "obligatedFmt": "$58.0B",
+      "wf": 12048,
+      "wfFmt": "12,048",
+      "obligated": 69357515371.15,
+      "obligatedFmt": "$69.4B",
       "grain": "toptier",
       "beneath": 93
     },
     {
       "label": "DOS",
       "name": "US Department of State (DOS)",
-      "wf": 11320,
-      "wfFmt": "11,320",
-      "obligated": 25748657742.43,
-      "obligatedFmt": "$25.7B",
+      "wf": 11252,
+      "wfFmt": "11,252",
+      "obligated": 36469466323.23,
+      "obligatedFmt": "$36.5B",
       "grain": "toptier",
       "beneath": 67
     },
     {
       "label": "DOL",
       "name": "US Department of Labor (DOL)",
-      "wf": 11074,
-      "wfFmt": "11,074",
-      "obligated": 51690322896.24,
-      "obligatedFmt": "$51.7B",
+      "wf": 11112,
+      "wfFmt": "11,112",
+      "obligated": 64085183681.3,
+      "obligatedFmt": "$64.1B",
       "grain": "toptier",
       "beneath": 43
     },
     {
       "label": "HUD",
       "name": "US Department of Housing and Urban Development (HUD)",
-      "wf": 5851,
-      "wfFmt": "5,851",
-      "obligated": 71314359385.02,
-      "obligatedFmt": "$71.3B",
+      "wf": 5841,
+      "wfFmt": "5,841",
+      "obligated": 81262723504.95,
+      "obligatedFmt": "$81.3B",
       "grain": "toptier",
       "beneath": 48
     },
     {
       "label": "ED",
       "name": "US Department of Education (ED)",
-      "wf": 2279,
-      "wfFmt": "2,279",
-      "obligated": 86921868148.44,
-      "obligatedFmt": "$86.9B",
+      "wf": 2294,
+      "wfFmt": "2,294",
+      "obligated": 117683993968.02,
+      "obligatedFmt": "$117.7B",
       "grain": "toptier",
       "beneath": 49
     },
@@ -476,8 +476,8 @@
       "name": "US Department of Defense (DOD)",
       "wf": 21,
       "wfFmt": "21",
-      "obligated": 1285021806246.13,
-      "obligatedFmt": "$1.29T",
+      "obligated": 1538724925218.07,
+      "obligatedFmt": "$1.54T",
       "grain": "toptier",
       "beneath": 329
     }
@@ -485,20 +485,20 @@
   "chartered": {
     "nodes": 34,
     "leaves": 33,
-    "wf": 1147,
-    "obligatedFmt": "$996M"
+    "wf": 1141,
+    "obligatedFmt": "$1.6B"
   },
   "international": {
     "nodes": 117,
     "leaves": 116,
-    "wf": 37,
+    "wf": 36,
     "obligatedFmt": "—"
   },
   "bar": {
     "spendDirectPct": "13.7",
     "spendRollPct": "3.8",
-    "wfDirectPct": "27.2",
-    "wfRollPct": "8.7"
+    "wfDirectPct": "27.1",
+    "wfRollPct": "8.8"
   },
   "fmt": {
     "nodes": "1,598",
@@ -514,8 +514,8 @@
     "spendTop": "99",
     "spendSub": "120",
     "spendRoll": "60",
-    "wfDirect": "435",
-    "wfRoll": "139",
+    "wfDirect": "433",
+    "wfRoll": "141",
     "shorts": "1,010",
     "independents": "102"
   }
