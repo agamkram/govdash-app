@@ -61,101 +61,9 @@ async function fetchRes(url, headers) {
   throw lastErr;
 }
 
-function isSenateGov(url) {
-  try {
-    const host = new URL(url).hostname;
-    return host === "senate.gov" || host.endsWith(".senate.gov");
-  } catch {
-    return false;
-  }
-}
-
-// Senate.gov's edge now answers script clients with 403 and still serves a
-// browser. One browser is reused for the floor schedule and the hearings feed.
-let senateBrowserPromise;
-
-async function senateBrowser() {
-  if (!senateBrowserPromise) {
-    senateBrowserPromise = (async () => {
-      let chromium;
-      try {
-        ({ chromium } = await import("playwright"));
-      } catch (e) {
-        throw new Error(
-          "Senate.gov blocked the script (HTTP 403). The bake needs Playwright's Chromium. " +
-            (e?.message || e)
-        );
-      }
-      // Senate.gov blocks script clients and Playwright's headless shell.
-      // Use the installed Google Chrome, headed, under xvfb on the bake runner.
-      return chromium.launch({
-        channel: "chrome",
-        headless: false,
-        ignoreDefaultArgs: ["--enable-automation"],
-        args: ["--disable-blink-features=AutomationControlled"],
-      });
-    })();
-  }
-  return senateBrowserPromise;
-}
-
-async function closeSenateBrowser() {
-  if (!senateBrowserPromise) return;
-  const pending = senateBrowserPromise;
-  senateBrowserPromise = null;
-  try {
-    const browser = await pending;
-    await browser.close();
-  } catch {
-    /* launch already failed */
-  }
-}
-
-async function getTextViaBrowser(url) {
-  const browser = await senateBrowser();
-  const page = await browser.newPage({
-    userAgent:
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-    viewport: { width: 1280, height: 800 },
-  });
-  await page.addInitScript(() => {
-    Object.defineProperty(navigator, "webdriver", { get: () => undefined });
-  });
-  try {
-    const res = await page.goto(url, {
-      waitUntil: "domcontentloaded",
-      timeout: 45000,
-    });
-    const status = res ? res.status() : 0;
-    const body = res ? await res.text() : "";
-    if (status < 200 || status >= 300) {
-      const err = new Error(`${url} → HTTP ${status}`);
-      err.httpStatus = status;
-      throw err;
-    }
-    const head = body.slice(0, 400);
-    if (/Access Denied|potential security risk/i.test(head)) {
-      throw new Error(`${url} → browser got a block page`);
-    }
-    return body;
-  } finally {
-    await page.close();
-  }
-}
-
 async function getText(url) {
-  try {
-    const r = await fetchRes(url, { Accept: "*/*" });
-    return r.text();
-  } catch (e) {
-    if (e?.httpStatus === 403 && isSenateGov(url)) {
-      console.warn(
-        `Senate.gov returned 403 to the script. Opening a browser: ${url}`
-      );
-      return getTextViaBrowser(url);
-    }
-    throw e;
-  }
+  const r = await fetchRes(url, { Accept: "*/*" });
+  return r.text();
 }
 
 async function getJson(url) {
@@ -1092,24 +1000,17 @@ async function main() {
       console.warn(`  - ${k}: ${s.error || "failed"}`);
     }
   }
-  await closeSenateBrowser();
-
   if (coreFailed.length) {
     console.error(
       "Core Heat sources failed — re-run with --force before enrich:heat (do not commit this bake)."
     );
-    for (const [k, s] of coreFailed) {
-      console.error(`::error::${k}: ${s.error || "failed"}`);
-    }
     process.exit(1);
   }
 
   console.log("Next: npm run enrich:heat");
 }
 
-main()
-  .catch((e) => {
-    console.error(e);
-    process.exitCode = 1;
-  })
-  .finally(() => closeSenateBrowser());
+main().catch((e) => {
+  console.error(e);
+  process.exit(1);
+});
