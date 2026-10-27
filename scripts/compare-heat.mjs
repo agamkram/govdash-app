@@ -131,6 +131,22 @@ async function main() {
     );
   }
 
+  const staleLabels = {
+    senateFloor: "Senate floor",
+    senateHearings: "Senate hearings",
+  };
+  const stale = Object.entries(aMeta.sources || {})
+    .filter(([, s]) => s && s.stale)
+    .map(([k, s]) => {
+      const name = staleLabels[k] || k;
+      return `${name}: kept ${s.count ?? "?"} from ${s.keptFrom || "the last good download"}`;
+    });
+  if (stale.length) {
+    console.log("");
+    console.log("Kept the last good copy. That source refused this run:");
+    for (const line of stale) console.log(`  - ${line}`);
+  }
+
   const pulse = [
     ["House", (n) => n === "US House of Representatives"],
     ["Senate", (n) => n === "US Senate"],

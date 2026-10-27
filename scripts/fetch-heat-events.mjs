@@ -684,6 +684,35 @@ function parseScotusCalendars(html, start, end) {
   return events;
 }
 
+async function loadPreviousPack() {
+  try {
+    return JSON.parse(await readFile(EVENTS_PATH, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
+/** Senate.gov refused. Put the last good events back so the map does not go blank. */
+function keepLastGood(pack, previous, key, match) {
+  const source = pack.sources[key];
+  if (!source || source.ok !== false || !previous) return false;
+  const prevSource = previous.sources?.[key];
+  if (!prevSource || (prevSource.ok !== true && prevSource.stale !== true)) {
+    return false;
+  }
+  const events = (previous.events || []).filter(match);
+  pack.events.push(...events);
+  pack.sources[key] = {
+    ...prevSource,
+    ok: true,
+    stale: true,
+    count: events.length,
+    keptFrom: prevSource.keptFrom || previous.fetchedAt || null,
+    error: source.error,
+  };
+  return true;
+}
+
 async function main() {
   const opts = parseArgs(process.argv.slice(2));
   await mkdir(OUT, { recursive: true });
@@ -976,6 +1005,34 @@ async function main() {
   } catch (e) {
     pack.sources.scotus = { ok: false, error: String(e.message || e) };
     console.warn("SCOTUS calendar failed:", e.message || e);
+  }
+
+  const previous = await loadPreviousPack();
+  if (
+    keepLastGood(
+      pack,
+      previous,
+      "senateFloor",
+      (e) => e?.kind === "floor_session" && e?.chamber === "Senate"
+    )
+  ) {
+    const s = pack.sources.senateFloor;
+    console.warn(
+      `Senate floor: kept ${s.count} events from ${s.keptFrom}. Senate.gov refused a new download.`
+    );
+  }
+  if (
+    keepLastGood(
+      pack,
+      previous,
+      "senateHearings",
+      (e) => e?.kind === "hearing" && e?.chamber === "Senate"
+    )
+  ) {
+    const s = pack.sources.senateHearings;
+    console.warn(
+      `Senate hearings: kept ${s.count} events from ${s.keptFrom}. Senate.gov refused a new download.`
+    );
   }
 
   await writeFile(EVENTS_PATH, JSON.stringify(pack, null, 2));
