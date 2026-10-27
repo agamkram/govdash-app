@@ -1,10 +1,13 @@
 {
-  "fetchedAt": "2026-10-27T18:29:37.426Z",
+  "fetchedAt": "2026-10-27T18:43:59.076Z",
   "sources": {
     "senateFloor": {
       "ok": true,
       "count": 2,
-      "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
+      "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
+      "stale": true,
+      "keptFrom": "2026-10-27T18:29:37.426Z",
+      "error": "https://www.senate.gov/legislative/schedule/floor_schedule.xml → HTTP 403"
     },
     "houseClerk": {
       "ok": true,
@@ -47,7 +50,10 @@
       "count": 0,
       "start": "2026-10-27",
       "end": "2026-11-25",
-      "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
+      "url": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+      "stale": true,
+      "keptFrom": "2026-10-27T18:29:37.426Z",
+      "error": "https://www.senate.gov/general/committee_schedules/hearings.xml → HTTP 403"
     },
     "houseHearings": {
       "ok": true,
@@ -68,32 +74,6 @@
     }
   },
   "events": [
-    {
-      "id": "senate-floor-2026-10-26T17:30:01-04:00",
-      "kind": "floor_session",
-      "chamber": "Senate",
-      "when": "2026-10-26T17:30:01-04:00",
-      "until": "2026-10-26T17:30:38-04:00",
-      "title": "Senate floor (recent)",
-      "summary": "Has adjourned",
-      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-      "source": "Senate.gov floor schedule XML",
-      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-      "urgency": "recent"
-    },
-    {
-      "id": "senate-next-2026-10-29T14:00:00-04:00",
-      "kind": "floor_session",
-      "chamber": "Senate",
-      "when": "2026-10-29T14:00:00-04:00",
-      "until": null,
-      "title": "Senate next convenes",
-      "summary": "",
-      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-      "source": "Senate.gov floor schedule XML",
-      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-      "urgency": "upcoming"
-    },
     {
       "id": "house-next-2026-10-29T16:00:00.000Z",
       "kind": "floor_session",
@@ -4801,6 +4781,32 @@
       "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx",
       "source": "Supreme Court calendars and lists",
       "sourceUrl": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx",
+      "urgency": "upcoming"
+    },
+    {
+      "id": "senate-floor-2026-10-26T17:30:01-04:00",
+      "kind": "floor_session",
+      "chamber": "Senate",
+      "when": "2026-10-26T17:30:01-04:00",
+      "until": "2026-10-26T17:30:38-04:00",
+      "title": "Senate floor (recent)",
+      "summary": "Has adjourned",
+      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
+      "source": "Senate.gov floor schedule XML",
+      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
+      "urgency": "recent"
+    },
+    {
+      "id": "senate-next-2026-10-29T14:00:00-04:00",
+      "kind": "floor_session",
+      "chamber": "Senate",
+      "when": "2026-10-29T14:00:00-04:00",
+      "until": null,
+      "title": "Senate next convenes",
+      "summary": "",
+      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
+      "source": "Senate.gov floor schedule XML",
+      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
       "urgency": "upcoming"
     }
   ]

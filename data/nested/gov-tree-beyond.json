@@ -41,8 +41,8 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-10-27T18:30:15.551Z",
-      "asOf": "2026-10-27T18:29:37.426Z",
+      "enrichedAt": "2026-10-27T18:44:18.706Z",
+      "asOf": "2026-10-27T18:43:59.076Z",
       "nodesWithHeat": 3,
       "nodesWithDirectHeat": 1,
       "rawEventCount": 243,
@@ -62,7 +62,10 @@
         "senateFloor": {
           "ok": true,
           "count": 2,
-          "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
+          "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
+          "stale": true,
+          "keptFrom": "2026-10-27T18:29:37.426Z",
+          "error": "https://www.senate.gov/legislative/schedule/floor_schedule.xml → HTTP 403"
         },
         "houseClerk": {
           "ok": true,
@@ -105,7 +108,10 @@
           "count": 0,
           "start": "2026-10-27",
           "end": "2026-11-25",
-          "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
+          "url": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+          "stale": true,
+          "keptFrom": "2026-10-27T18:29:37.426Z",
+          "error": "https://www.senate.gov/general/committee_schedules/hearings.xml → HTTP 403"
         },
         "houseHearings": {
           "ok": true,
@@ -141,7 +147,7 @@
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
     "heat": {
-      "asOf": "2026-10-27T18:29:37.426Z",
+      "asOf": "2026-10-27T18:43:59.076Z",
       "count": 1,
       "rolledUp": true,
       "events": [
@@ -176,7 +182,7 @@
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
         "heat": {
-          "asOf": "2026-10-27T18:29:37.426Z",
+          "asOf": "2026-10-27T18:43:59.076Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -1032,7 +1038,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-10-27T18:29:37.426Z",
+              "asOf": "2026-10-27T18:43:59.076Z",
               "count": 1,
               "rolledUp": false,
               "events": [
