@@ -86,7 +86,12 @@ async function senateBrowser() {
             (e?.message || e)
         );
       }
-      return chromium.launch({ headless: true });
+      // Full Chrome, not the headless shell. Senate.gov blocks the shell.
+      // The bake starts this under xvfb on Linux, where there is no screen.
+      return chromium.launch({
+        headless: false,
+        args: ["--disable-blink-features=AutomationControlled"],
+      });
     })();
   }
   return senateBrowserPromise;

@@ -78,11 +78,15 @@ jobs:
         continue-on-error: true
         run: |
           set -euo pipefail
-          if npm run fetch:heat-events -- --force; then
+          # Full Chrome needs a display. xvfb is installed with Playwright's deps.
+          run_fetch() {
+            xvfb-run --auto-servernum npm run fetch:heat-events -- --force
+          }
+          if run_fetch; then
             echo "Fetch succeeded."
           else
             echo "Fetch exited non-zero (core source failed: floor / clerk / public inspection / presidential). Retrying once with --force..."
-            npm run fetch:heat-events -- --force
+            run_fetch
           fi
 
       - name: Enrich Heat onto the tree
