@@ -86,10 +86,12 @@ async function senateBrowser() {
             (e?.message || e)
         );
       }
-      // Full Chrome, not the headless shell. Senate.gov blocks the shell.
-      // The bake starts this under xvfb on Linux, where there is no screen.
+      // Senate.gov blocks script clients and Playwright's headless shell.
+      // Use the installed Google Chrome, headed, under xvfb on the bake runner.
       return chromium.launch({
+        channel: "chrome",
         headless: false,
+        ignoreDefaultArgs: ["--enable-automation"],
         args: ["--disable-blink-features=AutomationControlled"],
       });
     })();
@@ -111,7 +113,14 @@ async function closeSenateBrowser() {
 
 async function getTextViaBrowser(url) {
   const browser = await senateBrowser();
-  const page = await browser.newPage();
+  const page = await browser.newPage({
+    userAgent:
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    viewport: { width: 1280, height: 800 },
+  });
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, "webdriver", { get: () => undefined });
+  });
   try {
     const res = await page.goto(url, {
       waitUntil: "domcontentloaded",
