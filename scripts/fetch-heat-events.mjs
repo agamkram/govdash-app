@@ -20,8 +20,13 @@ const UA = "GovDash/1 (citizen map; +https://govdash.markmaga.com)";
 const CONGRESS_API = "https://api.congress.gov/v3";
 
 function parseArgs(argv) {
-  const opts = { force: false };
-  for (const a of argv) if (a === "--force") opts.force = true;
+  const opts = { force: false, senateFloorFile: null, senateHearingsFile: null };
+  for (let i = 0; i < argv.length; i++) {
+    const a = argv[i];
+    if (a === "--force") opts.force = true;
+    else if (a === "--senate-floor-file") opts.senateFloorFile = argv[++i];
+    else if (a === "--senate-hearings-file") opts.senateHearingsFile = argv[++i];
+  }
   return opts;
 }
 
@@ -732,11 +737,13 @@ async function main() {
     events: [],
   };
 
-  // Senate floor
+  // Senate floor. A saved copy can stand in when Senate.gov refuses the script.
   try {
-    const xml = await getText(
-      "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
-    );
+    const xml = opts.senateFloorFile
+      ? await readFile(opts.senateFloorFile, "utf8")
+      : await getText(
+          "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
+        );
     const list = parseSenateFloorXml(xml);
     pack.sources.senateFloor = {
       ok: true,
@@ -744,7 +751,11 @@ async function main() {
       url: "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
     };
     pack.events.push(...list);
-    console.log(`Senate floor: ${list.length} events`);
+    console.log(
+      opts.senateFloorFile
+        ? `Senate floor: ${list.length} events (saved page)`
+        : `Senate floor: ${list.length} events`
+    );
   } catch (e) {
     pack.sources.senateFloor = { ok: false, error: String(e.message || e) };
     console.warn("Senate floor failed:", e.message || e);
@@ -943,9 +954,11 @@ async function main() {
 
   // Senate committee hearings (chamber box — committees are not map places).
   try {
-    const xml = await getText(
-      "https://www.senate.gov/general/committee_schedules/hearings.xml"
-    );
+    const xml = opts.senateHearingsFile
+      ? await readFile(opts.senateHearingsFile, "utf8")
+      : await getText(
+          "https://www.senate.gov/general/committee_schedules/hearings.xml"
+        );
     const list = parseSenateHearingsXml(xml, start, end);
     pack.sources.senateHearings = {
       ok: true,
