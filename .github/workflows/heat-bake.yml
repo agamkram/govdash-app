@@ -62,6 +62,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install Chromium for Senate.gov
+        run: npx playwright install --with-deps chromium
+
       - name: Require CONGRESS_API_KEY secret
         run: |
           if [ -z "${CONGRESS_API_KEY}" ]; then
