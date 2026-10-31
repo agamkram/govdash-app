@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-30T18:39:20.014Z",
+  "fetchedAt": "2026-10-31T17:48:19.437Z",
   "sources": {
     "senateFloor": {
       "ok": true,
@@ -21,28 +21,28 @@
     },
     "publicInspection": {
       "ok": true,
-      "count": 105,
+      "count": 108,
       "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
     },
     "presidential": {
       "ok": true,
-      "count": 10,
-      "since": "2026-10-16",
+      "count": 12,
+      "since": "2026-10-17",
       "url": "https://www.federalregister.gov/presidential-documents"
     },
     "commentDeadlines": {
       "ok": true,
-      "count": 121,
-      "start": "2026-10-30",
-      "end": "2026-11-28",
+      "count": 114,
+      "start": "2026-10-31",
+      "end": "2026-11-29",
       "type": "PRORULE",
       "url": "https://www.federalregister.gov/"
     },
     "sunshine": {
       "ok": true,
       "count": 5,
-      "start": "2026-10-30",
-      "end": "2026-11-28",
+      "start": "2026-10-31",
+      "end": "2026-11-29",
       "url": "https://www.federalregister.gov/"
     },
     "senateHearings": {
@@ -58,8 +58,8 @@
     "houseHearings": {
       "ok": true,
       "count": 1,
-      "start": "2026-10-30",
-      "end": "2026-11-28",
+      "start": "2026-10-31",
+      "end": "2026-11-29",
       "congress": 119,
       "calendarIds": 1,
       "skipped404": [],
@@ -68,8 +68,8 @@
     "scotus": {
       "ok": true,
       "count": 1,
-      "start": "2026-10-30",
-      "end": "2026-11-28",
+      "start": "2026-10-31",
+      "end": "2026-11-29",
       "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
     }
   },
@@ -2188,6 +2188,66 @@
       "documentNumber": "2026-22393"
     },
     {
+      "id": "fr-pi-2026-22381",
+      "kind": "public_inspection",
+      "when": "2026-11-03",
+      "until": null,
+      "filedAt": "2026-10-30T16:15:00.000-04:00",
+      "title": "Medicare and Medicaid Programs: Organ Procurement Organizations Conditions for Coverage",
+      "summary": "Centers for Medicare & Medicaid Services",
+      "url": "https://public-inspection.federalregister.gov/2026-22381.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-22381/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-22381.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "documentType": "Rule",
+      "documentNumber": "2026-22381"
+    },
+    {
+      "id": "fr-pi-2026-22407",
+      "kind": "public_inspection",
+      "when": "2026-11-03",
+      "until": null,
+      "filedAt": "2026-10-30T16:15:00.000-04:00",
+      "title": "Meetings; Sunshine Act",
+      "summary": "Equal Employment Opportunity Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-22407.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-22407/meetings-sunshine-act",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-22407.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Equal Employment Opportunity Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-22407"
+    },
+    {
+      "id": "fr-pi-2026-22441",
+      "kind": "public_inspection",
+      "when": "2026-11-03",
+      "until": null,
+      "filedAt": "2026-10-30T16:15:00.000-04:00",
+      "title": "Meetings; Sunshine Act",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-22441.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-22441/meetings-sunshine-act",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-22441.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-22441"
+    },
+    {
       "id": "fr-pres-2026-22051",
       "kind": "presidential_doc",
       "when": "2026-10-28",
@@ -2230,6 +2290,38 @@
       "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21599.pdf",
       "htmlUrl": "https://www.federalregister.gov/documents/2026/10/21/2026-21599/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026",
       "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21599.pdf",
+      "source": "Federal Register presidential documents (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+      "urgency": "recent",
+      "documentType": "Presidential Document"
+    },
+    {
+      "id": "fr-pres-2026-22386",
+      "kind": "presidential_doc",
+      "when": "2026-11-02",
+      "until": null,
+      "signedAt": null,
+      "title": "Delegation of Authority Under Section 8335 of the National Defense Authorization Act for Fiscal Year 2026",
+      "summary": "Presidential Document",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-02/pdf/2026-22386.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/02/2026-22386/delegation-of-authority-under-section-8335-of-the-national-defense-authorization-act-for-fiscal-year",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-02/pdf/2026-22386.pdf",
+      "source": "Federal Register presidential documents (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+      "urgency": "recent",
+      "documentType": "Presidential Document"
+    },
+    {
+      "id": "fr-pres-2026-22385",
+      "kind": "presidential_doc",
+      "when": "2026-11-02",
+      "until": null,
+      "signedAt": null,
+      "title": "Adjusting Imports of Robotics, Industrial Machinery, and Their Parts and Components Into the United States",
+      "summary": "Presidential Document",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-02/pdf/2026-22385.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/02/2026-22385/adjusting-imports-of-robotics-industrial-machinery-and-their-parts-and-components-into-the-united",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-02/pdf/2026-22385.pdf",
       "source": "Federal Register presidential documents (PDF)",
       "sourceUrl": "https://www.federalregister.gov/presidential-documents",
       "urgency": "recent",
@@ -3636,44 +3728,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-20078",
-      "kind": "comment_deadline",
-      "when": "2026-10-30",
-      "until": "2026-10-30",
-      "title": "Petition for Rulemaking of Malik Tony Singleton",
-      "summary": "Federal Trade Commission",
-      "url": "http://www.regulations.gov/commenton/FTC-2026-1453-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/30/2026-20078/petition-for-rulemaking-of-malik-tony-singleton",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-30/pdf/2026-20078.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Federal Trade Commission"
-      ],
-      "documentNumber": "2026-20078",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-20038",
-      "kind": "comment_deadline",
-      "when": "2026-10-30",
-      "until": "2026-10-30",
-      "title": "Television Broadcasting Services Savannah, Georgia",
-      "summary": "Federal Communications Commission",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-30/pdf/2026-20038.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/30/2026-20038/television-broadcasting-services-savannah-georgia",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-30/pdf/2026-20038.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Federal Communications Commission"
-      ],
-      "documentNumber": "2026-20038",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-19987",
       "kind": "comment_deadline",
       "when": "2026-11-16",
@@ -4090,25 +4144,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-19361",
-      "kind": "comment_deadline",
-      "when": "2026-10-30",
-      "until": "2026-10-30",
-      "title": "Periodic Reporting",
-      "summary": "Postal Regulatory Commission",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-22/pdf/2026-19361.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/22/2026-19361/periodic-reporting",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-22/pdf/2026-19361.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Postal Regulatory Commission"
-      ],
-      "documentNumber": "2026-19361",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-19360",
       "kind": "comment_deadline",
       "when": "2026-11-06",
@@ -4441,86 +4476,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-18899",
-      "kind": "comment_deadline",
-      "when": "2026-10-30",
-      "until": "2026-10-30",
-      "title": "Amendment of Class E Airspace Over Pittsfield, ME",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2026-11422-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/15/2026-18899/amendment-of-class-e-airspace-over-pittsfield-me",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-15/pdf/2026-18899.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-18899",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-18860",
-      "kind": "comment_deadline",
-      "when": "2026-10-30",
-      "until": "2026-10-30",
-      "title": "Establishment of United States Area Navigation Route T-337 and Amendment of Very High Frequency Omnidirectional Range Federal Airways V-101 and V-484 Near Twin Falls, ID",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2026-11287-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/15/2026-18860/establishment-of-united-states-area-navigation-route-t-337-and-amendment-of-very-high-frequency",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-15/pdf/2026-18860.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-18860",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-18850",
-      "kind": "comment_deadline",
-      "when": "2026-10-30",
-      "until": "2026-10-30",
-      "title": "Airworthiness Directives; Airbus Defence and Space GmbH Airplanes",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2026-8802-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/15/2026-18850/airworthiness-directives-airbus-defence-and-space-gmbh-airplanes",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-15/pdf/2026-18850.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-18850",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-18804",
-      "kind": "comment_deadline",
-      "when": "2026-10-30",
-      "until": "2026-10-30",
-      "title": "Modification of Class D and Class E Airspace Areas; Roberts Field/Redmond Municipal Airport, Redmond, OR",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2025-5141-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/15/2026-18804/modification-of-class-d-and-class-e-airspace-areas-roberts-fieldredmond-municipal-airport-redmond-or",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-15/pdf/2026-18804.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-18804",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-18799",
       "kind": "comment_deadline",
       "when": "2026-11-13",
@@ -4715,6 +4670,42 @@
       "documentType": "Proposed Rule"
     },
     {
+      "id": "fr-sun-2026-22278-2026-11-05",
+      "kind": "sunshine_meeting",
+      "when": "2026-11-05",
+      "until": "2026-11-05",
+      "title": "Sunshine Act Meetings",
+      "summary": "Unified Carrier Registration Plan",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-02/pdf/2026-22278.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/02/2026-22278/sunshine-act-meetings",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-02/pdf/2026-22278.pdf",
+      "source": "Federal Register Sunshine Act meeting",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Unified Carrier Registration Plan"
+      ],
+      "documentNumber": "2026-22278"
+    },
+    {
+      "id": "fr-sun-2026-22276-2026-11-05",
+      "kind": "sunshine_meeting",
+      "when": "2026-11-05",
+      "until": "2026-11-05",
+      "title": "Sunshine Act Meetings",
+      "summary": "Unified Carrier Registration Plan",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-02/pdf/2026-22276.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/02/2026-22276/sunshine-act-meetings",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-02/pdf/2026-22276.pdf",
+      "source": "Federal Register Sunshine Act meeting",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Unified Carrier Registration Plan"
+      ],
+      "documentNumber": "2026-22276"
+    },
+    {
       "id": "fr-sun-2026-21980-2026-11-10",
       "kind": "sunshine_meeting",
       "when": "2026-11-10",
@@ -4767,42 +4758,6 @@
         "Morris K. Udall and Stewart L. Udall Foundation"
       ],
       "documentNumber": "2026-21844"
-    },
-    {
-      "id": "fr-sun-2026-21825-2026-10-30",
-      "kind": "sunshine_meeting",
-      "when": "2026-10-30",
-      "until": "2026-10-30",
-      "title": "Sunshine Act Meetings",
-      "summary": "Equal Employment Opportunity Commission",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21825.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/26/2026-21825/sunshine-act-meetings",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21825.pdf",
-      "source": "Federal Register Sunshine Act meeting",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Equal Employment Opportunity Commission"
-      ],
-      "documentNumber": "2026-21825"
-    },
-    {
-      "id": "fr-sun-2026-21749-2026-10-30",
-      "kind": "sunshine_meeting",
-      "when": "2026-10-30",
-      "until": "2026-10-30",
-      "title": "Sunshine Act Meetings",
-      "summary": "Legal Services Corporation",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21749.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/26/2026-21749/sunshine-act-meetings",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21749.pdf",
-      "source": "Federal Register Sunshine Act meeting",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Legal Services Corporation"
-      ],
-      "documentNumber": "2026-21749"
     },
     {
       "id": "house-hearing-119588",
