@@ -41,23 +41,23 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-11-02T22:48:59.740Z",
-      "asOf": "2026-11-02T22:48:31.250Z",
-      "nodesWithHeat": 3,
-      "nodesWithDirectHeat": 1,
-      "rawEventCount": 237,
+      "enrichedAt": "2026-11-03T20:31:31.631Z",
+      "asOf": "2026-11-03T20:31:08.710Z",
+      "nodesWithHeat": 0,
+      "nodesWithDirectHeat": 0,
+      "rawEventCount": 238,
       "matched": {
         "chamber": 0,
         "presidential": 0,
-        "publicInspection": 1,
+        "publicInspection": 0,
         "commentDeadlines": 0,
         "sunshine": 0,
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 80,
-      "unmatchedCommentDeadlines": 133,
-      "unmatchedSunshine": 5,
+      "unmatchedPublicInspection": 92,
+      "unmatchedCommentDeadlines": 125,
+      "unmatchedSunshine": 7,
       "sources": {
         "senateFloor": {
           "ok": true,
@@ -79,28 +79,28 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 81,
+          "count": 92,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
-          "count": 12,
-          "since": "2026-10-19",
+          "count": 9,
+          "since": "2026-10-20",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 133,
-          "start": "2026-11-02",
-          "end": "2026-12-01",
+          "count": 125,
+          "start": "2026-11-03",
+          "end": "2026-12-02",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
-          "count": 5,
-          "start": "2026-11-02",
-          "end": "2026-12-01",
+          "count": 7,
+          "start": "2026-11-03",
+          "end": "2026-12-02",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
@@ -116,8 +116,8 @@
         "houseHearings": {
           "ok": true,
           "count": 1,
-          "start": "2026-11-02",
-          "end": "2026-12-01",
+          "start": "2026-11-03",
+          "end": "2026-12-02",
           "congress": 119,
           "calendarIds": 1,
           "skipped404": [],
@@ -125,9 +125,9 @@
         },
         "scotus": {
           "ok": true,
-          "count": 2,
-          "start": "2026-11-02",
-          "end": "2026-12-01",
+          "count": 1,
+          "start": "2026-11-03",
+          "end": "2026-12-02",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -146,28 +146,7 @@
       "usgm": null,
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
-    "heat": {
-      "asOf": "2026-11-02T22:48:31.250Z",
-      "count": 1,
-      "rolledUp": true,
-      "events": [
-        {
-          "id": "fr-pi-2026-22428",
-          "kind": "public_inspection",
-          "when": "2026-11-03",
-          "until": null,
-          "filedAt": "2026-11-02T08:45:00.000-05:00",
-          "signedAt": null,
-          "title": "Hearings, Meetings, Proceedings, etc.: National Council on the Humanities",
-          "summary": "National Endowment for the Humanities (from lower in the map)",
-          "url": "https://public-inspection.federalregister.gov/2026-22428.pdf",
-          "source": "Federal Register public inspection (PDF)",
-          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-          "urgency": "upcoming",
-          "bill": null
-        }
-      ]
-    },
+    "heat": null,
     "children": [
       {
         "id": "product-chartered",
@@ -181,28 +160,7 @@
           "usgm": null,
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
-        "heat": {
-          "asOf": "2026-11-02T22:48:31.250Z",
-          "count": 1,
-          "rolledUp": true,
-          "events": [
-            {
-              "id": "fr-pi-2026-22428",
-              "kind": "public_inspection",
-              "when": "2026-11-03",
-              "until": null,
-              "filedAt": "2026-11-02T08:45:00.000-05:00",
-              "signedAt": null,
-              "title": "Hearings, Meetings, Proceedings, etc.: National Council on the Humanities",
-              "summary": "National Endowment for the Humanities (from lower in the map)",
-              "url": "https://public-inspection.federalregister.gov/2026-22428.pdf",
-              "source": "Federal Register public inspection (PDF)",
-              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-              "urgency": "upcoming",
-              "bill": null
-            }
-          ]
-        },
+        "heat": null,
         "children": [
           {
             "id": "gsa-1697",
@@ -1063,28 +1021,7 @@
               "sam": null,
               "usgm": null
             },
-            "heat": {
-              "asOf": "2026-11-02T22:48:31.250Z",
-              "count": 1,
-              "rolledUp": false,
-              "events": [
-                {
-                  "id": "fr-pi-2026-22428",
-                  "kind": "public_inspection",
-                  "when": "2026-11-03",
-                  "until": null,
-                  "filedAt": "2026-11-02T08:45:00.000-05:00",
-                  "signedAt": null,
-                  "title": "Hearings, Meetings, Proceedings, etc.: National Council on the Humanities",
-                  "summary": "National Endowment for the Humanities",
-                  "url": "https://public-inspection.federalregister.gov/2026-22428.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                }
-              ]
-            },
+            "heat": null,
             "children": []
           },
           {
