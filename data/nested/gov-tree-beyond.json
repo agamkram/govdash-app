@@ -41,22 +41,22 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-11-03T20:31:31.631Z",
-      "asOf": "2026-11-03T20:31:08.710Z",
-      "nodesWithHeat": 0,
-      "nodesWithDirectHeat": 0,
-      "rawEventCount": 238,
+      "enrichedAt": "2026-11-04T20:50:59.249Z",
+      "asOf": "2026-11-04T20:50:43.981Z",
+      "nodesWithHeat": 3,
+      "nodesWithDirectHeat": 1,
+      "rawEventCount": 261,
       "matched": {
         "chamber": 0,
         "presidential": 0,
-        "publicInspection": 0,
+        "publicInspection": 4,
         "commentDeadlines": 0,
         "sunshine": 0,
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 92,
-      "unmatchedCommentDeadlines": 125,
+      "unmatchedPublicInspection": 108,
+      "unmatchedCommentDeadlines": 127,
       "unmatchedSunshine": 7,
       "sources": {
         "senateFloor": {
@@ -79,28 +79,28 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 92,
+          "count": 112,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
           "count": 9,
-          "since": "2026-10-20",
+          "since": "2026-10-21",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 125,
-          "start": "2026-11-03",
-          "end": "2026-12-02",
+          "count": 127,
+          "start": "2026-11-04",
+          "end": "2026-12-03",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
           "count": 7,
-          "start": "2026-11-03",
-          "end": "2026-12-02",
+          "start": "2026-11-04",
+          "end": "2026-12-03",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
@@ -115,19 +115,19 @@
         },
         "houseHearings": {
           "ok": true,
-          "count": 1,
-          "start": "2026-11-03",
-          "end": "2026-12-02",
+          "count": 2,
+          "start": "2026-11-04",
+          "end": "2026-12-03",
           "congress": 119,
-          "calendarIds": 1,
+          "calendarIds": 2,
           "skipped404": [],
           "url": "https://api.congress.gov/v3/committee-meeting/119/house"
         },
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-11-03",
-          "end": "2026-12-02",
+          "start": "2026-11-04",
+          "end": "2026-12-03",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -146,7 +146,73 @@
       "usgm": null,
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
-    "heat": null,
+    "heat": {
+      "asOf": "2026-11-04T20:50:43.981Z",
+      "count": 4,
+      "rolledUp": true,
+      "events": [
+        {
+          "id": "fr-pi-2026-22542",
+          "kind": "public_inspection",
+          "when": "2026-11-05",
+          "until": null,
+          "filedAt": "2026-11-04T08:45:00.000-05:00",
+          "signedAt": null,
+          "title": "Pro Bono Innovation Fund Process for Applying For 2027 Grants",
+          "summary": "Legal Services Corporation (from lower in the map)",
+          "url": "https://public-inspection.federalregister.gov/2026-22542.pdf",
+          "source": "Federal Register public inspection (PDF)",
+          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+          "urgency": "upcoming",
+          "bill": null
+        },
+        {
+          "id": "fr-pi-2026-22543",
+          "kind": "public_inspection",
+          "when": "2026-11-05",
+          "until": null,
+          "filedAt": "2026-11-04T08:45:00.000-05:00",
+          "signedAt": null,
+          "title": "Application Process for Subgranting Special Grant Funds",
+          "summary": "Legal Services Corporation (from lower in the map)",
+          "url": "https://public-inspection.federalregister.gov/2026-22543.pdf",
+          "source": "Federal Register public inspection (PDF)",
+          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+          "urgency": "upcoming",
+          "bill": null
+        },
+        {
+          "id": "fr-pi-2026-22649",
+          "kind": "public_inspection",
+          "when": "2026-11-05",
+          "until": null,
+          "filedAt": "2026-11-04T08:45:00.000-05:00",
+          "signedAt": null,
+          "title": "Cost Standards and Procedures; Purchasing and Property Management",
+          "summary": "Legal Services Corporation (from lower in the map)",
+          "url": "https://public-inspection.federalregister.gov/2026-22649.pdf",
+          "source": "Federal Register public inspection (PDF)",
+          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+          "urgency": "upcoming",
+          "bill": null
+        },
+        {
+          "id": "fr-pi-2026-22650",
+          "kind": "public_inspection",
+          "when": "2026-11-05",
+          "until": null,
+          "filedAt": "2026-11-04T08:45:00.000-05:00",
+          "signedAt": null,
+          "title": "Purchasing and Property Management",
+          "summary": "Legal Services Corporation (from lower in the map)",
+          "url": "https://public-inspection.federalregister.gov/2026-22650.pdf",
+          "source": "Federal Register public inspection (PDF)",
+          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+          "urgency": "upcoming",
+          "bill": null
+        }
+      ]
+    },
     "children": [
       {
         "id": "product-chartered",
@@ -160,7 +226,73 @@
           "usgm": null,
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
-        "heat": null,
+        "heat": {
+          "asOf": "2026-11-04T20:50:43.981Z",
+          "count": 4,
+          "rolledUp": true,
+          "events": [
+            {
+              "id": "fr-pi-2026-22542",
+              "kind": "public_inspection",
+              "when": "2026-11-05",
+              "until": null,
+              "filedAt": "2026-11-04T08:45:00.000-05:00",
+              "signedAt": null,
+              "title": "Pro Bono Innovation Fund Process for Applying For 2027 Grants",
+              "summary": "Legal Services Corporation (from lower in the map)",
+              "url": "https://public-inspection.federalregister.gov/2026-22542.pdf",
+              "source": "Federal Register public inspection (PDF)",
+              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-pi-2026-22543",
+              "kind": "public_inspection",
+              "when": "2026-11-05",
+              "until": null,
+              "filedAt": "2026-11-04T08:45:00.000-05:00",
+              "signedAt": null,
+              "title": "Application Process for Subgranting Special Grant Funds",
+              "summary": "Legal Services Corporation (from lower in the map)",
+              "url": "https://public-inspection.federalregister.gov/2026-22543.pdf",
+              "source": "Federal Register public inspection (PDF)",
+              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-pi-2026-22649",
+              "kind": "public_inspection",
+              "when": "2026-11-05",
+              "until": null,
+              "filedAt": "2026-11-04T08:45:00.000-05:00",
+              "signedAt": null,
+              "title": "Cost Standards and Procedures; Purchasing and Property Management",
+              "summary": "Legal Services Corporation (from lower in the map)",
+              "url": "https://public-inspection.federalregister.gov/2026-22649.pdf",
+              "source": "Federal Register public inspection (PDF)",
+              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-pi-2026-22650",
+              "kind": "public_inspection",
+              "when": "2026-11-05",
+              "until": null,
+              "filedAt": "2026-11-04T08:45:00.000-05:00",
+              "signedAt": null,
+              "title": "Purchasing and Property Management",
+              "summary": "Legal Services Corporation (from lower in the map)",
+              "url": "https://public-inspection.federalregister.gov/2026-22650.pdf",
+              "source": "Federal Register public inspection (PDF)",
+              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+              "urgency": "upcoming",
+              "bill": null
+            }
+          ]
+        },
         "children": [
           {
             "id": "gsa-1697",
@@ -995,7 +1127,73 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": null,
+            "heat": {
+              "asOf": "2026-11-04T20:50:43.981Z",
+              "count": 4,
+              "rolledUp": false,
+              "events": [
+                {
+                  "id": "fr-pi-2026-22542",
+                  "kind": "public_inspection",
+                  "when": "2026-11-05",
+                  "until": null,
+                  "filedAt": "2026-11-04T08:45:00.000-05:00",
+                  "signedAt": null,
+                  "title": "Pro Bono Innovation Fund Process for Applying For 2027 Grants",
+                  "summary": "Legal Services Corporation",
+                  "url": "https://public-inspection.federalregister.gov/2026-22542.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-pi-2026-22543",
+                  "kind": "public_inspection",
+                  "when": "2026-11-05",
+                  "until": null,
+                  "filedAt": "2026-11-04T08:45:00.000-05:00",
+                  "signedAt": null,
+                  "title": "Application Process for Subgranting Special Grant Funds",
+                  "summary": "Legal Services Corporation",
+                  "url": "https://public-inspection.federalregister.gov/2026-22543.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-pi-2026-22649",
+                  "kind": "public_inspection",
+                  "when": "2026-11-05",
+                  "until": null,
+                  "filedAt": "2026-11-04T08:45:00.000-05:00",
+                  "signedAt": null,
+                  "title": "Cost Standards and Procedures; Purchasing and Property Management",
+                  "summary": "Legal Services Corporation",
+                  "url": "https://public-inspection.federalregister.gov/2026-22649.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-pi-2026-22650",
+                  "kind": "public_inspection",
+                  "when": "2026-11-05",
+                  "until": null,
+                  "filedAt": "2026-11-04T08:45:00.000-05:00",
+                  "signedAt": null,
+                  "title": "Purchasing and Property Management",
+                  "summary": "Legal Services Corporation",
+                  "url": "https://public-inspection.federalregister.gov/2026-22650.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                }
+              ]
+            },
             "children": []
           },
           {
