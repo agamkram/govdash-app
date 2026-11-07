@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-11-06T20:27:59.105Z",
+  "fetchedAt": "2026-11-07T18:50:10.868Z",
   "sources": {
     "senateFloor": {
       "ok": true,
@@ -16,33 +16,33 @@
     },
     "majorityLeader": {
       "ok": true,
-      "count": 0,
+      "count": 15,
       "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm"
     },
     "publicInspection": {
       "ok": true,
-      "count": 102,
+      "count": 103,
       "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
     },
     "presidential": {
       "ok": true,
       "count": 13,
-      "since": "2026-10-23",
+      "since": "2026-10-24",
       "url": "https://www.federalregister.gov/presidential-documents"
     },
     "commentDeadlines": {
       "ok": true,
-      "count": 118,
-      "start": "2026-11-06",
-      "end": "2026-12-05",
+      "count": 110,
+      "start": "2026-11-07",
+      "end": "2026-12-06",
       "type": "PRORULE",
       "url": "https://www.federalregister.gov/"
     },
     "sunshine": {
       "ok": true,
       "count": 5,
-      "start": "2026-11-06",
-      "end": "2026-12-05",
+      "start": "2026-11-07",
+      "end": "2026-12-06",
       "url": "https://www.federalregister.gov/"
     },
     "senateHearings": {
@@ -58,8 +58,8 @@
     "houseHearings": {
       "ok": true,
       "count": 5,
-      "start": "2026-11-06",
-      "end": "2026-12-05",
+      "start": "2026-11-07",
+      "end": "2026-12-06",
       "congress": 119,
       "calendarIds": 5,
       "skipped404": [],
@@ -68,8 +68,8 @@
     "scotus": {
       "ok": true,
       "count": 1,
-      "start": "2026-11-06",
-      "end": "2026-12-05",
+      "start": "2026-11-07",
+      "end": "2026-12-06",
       "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
     }
   },
@@ -86,6 +86,216 @@
       "source": "Office of the Clerk, U.S. House",
       "sourceUrl": "https://clerk.house.gov/",
       "urgency": "upcoming"
+    },
+    {
+      "id": "house-ml-HR3978",
+      "kind": "house_schedule",
+      "chamber": "House",
+      "when": "NOVEMBER 9",
+      "until": null,
+      "title": "H.R. 3978 — Nuclear REFUEL",
+      "summary": "Majority Leader weekly schedule",
+      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "source": "House Majority Leader weekly schedule",
+      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "urgency": "upcoming",
+      "bill": "H.R. 3978"
+    },
+    {
+      "id": "house-ml-HR5549",
+      "kind": "house_schedule",
+      "chamber": "House",
+      "when": "NOVEMBER 9",
+      "until": null,
+      "title": "H.R. 5549 — Efficient Nuclear Licensing Hearings Act",
+      "summary": "Majority Leader weekly schedule",
+      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "source": "House Majority Leader weekly schedule",
+      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "urgency": "upcoming",
+      "bill": "H.R. 5549"
+    },
+    {
+      "id": "house-ml-HR9084",
+      "kind": "house_schedule",
+      "chamber": "House",
+      "when": "NOVEMBER 9",
+      "until": null,
+      "title": "H.R. 9084 — Department of Energy Nuclear Transparency Act",
+      "summary": "Majority Leader weekly schedule",
+      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "source": "House Majority Leader weekly schedule",
+      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "urgency": "upcoming",
+      "bill": "H.R. 9084"
+    },
+    {
+      "id": "house-ml-HR9612",
+      "kind": "house_schedule",
+      "chamber": "House",
+      "when": "NOVEMBER 9",
+      "until": null,
+      "title": "H.R. 9612 — American Enrichment Deployment Act",
+      "summary": "Majority Leader weekly schedule",
+      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "source": "House Majority Leader weekly schedule",
+      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "urgency": "upcoming",
+      "bill": "H.R. 9612"
+    },
+    {
+      "id": "house-ml-HR9613",
+      "kind": "house_schedule",
+      "chamber": "House",
+      "when": "NOVEMBER 9",
+      "until": null,
+      "title": "H.R. 9613 — Nuclear Advisory Committee Reform Act",
+      "summary": "Majority Leader weekly schedule",
+      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "source": "House Majority Leader weekly schedule",
+      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "urgency": "upcoming",
+      "bill": "H.R. 9613"
+    },
+    {
+      "id": "house-ml-HR9614",
+      "kind": "house_schedule",
+      "chamber": "House",
+      "when": "NOVEMBER 9",
+      "until": null,
+      "title": "H.R. 9614 — NRC Staff Pay Alignment Act",
+      "summary": "Majority Leader weekly schedule",
+      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "source": "House Majority Leader weekly schedule",
+      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "urgency": "upcoming",
+      "bill": "H.R. 9614"
+    },
+    {
+      "id": "house-ml-HR8552",
+      "kind": "house_schedule",
+      "chamber": "House",
+      "when": "NOVEMBER 9",
+      "until": null,
+      "title": "H.R. 8552 — Veterans’ Compensation Cost-of-Living Adjustment Act of 2026",
+      "summary": "Majority Leader weekly schedule",
+      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "source": "House Majority Leader weekly schedule",
+      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "urgency": "upcoming",
+      "bill": "H.R. 8552"
+    },
+    {
+      "id": "house-ml-HR10329",
+      "kind": "house_schedule",
+      "chamber": "House",
+      "when": "NOVEMBER 9",
+      "until": null,
+      "title": "H.R. 10329 — Combating Foreign Threats to Main Street Act of 2026",
+      "summary": "Majority Leader weekly schedule",
+      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "source": "House Majority Leader weekly schedule",
+      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "urgency": "upcoming",
+      "bill": "H.R. 10329"
+    },
+    {
+      "id": "house-ml-HR10355",
+      "kind": "house_schedule",
+      "chamber": "House",
+      "when": "NOVEMBER 9",
+      "until": null,
+      "title": "H.R. 10355 — Disaster Loan Outreach Consistency Act",
+      "summary": "Majority Leader weekly schedule",
+      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "source": "House Majority Leader weekly schedule",
+      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "urgency": "upcoming",
+      "bill": "H.R. 10355"
+    },
+    {
+      "id": "house-ml-HR10371",
+      "kind": "house_schedule",
+      "chamber": "House",
+      "when": "NOVEMBER 9",
+      "until": null,
+      "title": "H.R. 10371 — Ensuring SBA Implementation of GAO Recommendations Act of 2026",
+      "summary": "Majority Leader weekly schedule",
+      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "source": "House Majority Leader weekly schedule",
+      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "urgency": "upcoming",
+      "bill": "H.R. 10371"
+    },
+    {
+      "id": "house-ml-HR10353",
+      "kind": "house_schedule",
+      "chamber": "House",
+      "when": "NOVEMBER 9",
+      "until": null,
+      "title": "H.R. 10353 — SBIC Reporting Modernization Act of 2026",
+      "summary": "Majority Leader weekly schedule",
+      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "source": "House Majority Leader weekly schedule",
+      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "urgency": "upcoming",
+      "bill": "H.R. 10353"
+    },
+    {
+      "id": "house-ml-HR10238",
+      "kind": "house_schedule",
+      "chamber": "House",
+      "when": "NOVEMBER 9",
+      "until": null,
+      "title": "H.R. 10238 — Cybersecurity for Small Businesses Act of 2026",
+      "summary": "Majority Leader weekly schedule",
+      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "source": "House Majority Leader weekly schedule",
+      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "urgency": "upcoming",
+      "bill": "H.R. 10238"
+    },
+    {
+      "id": "house-ml-HR9718",
+      "kind": "house_schedule",
+      "chamber": "House",
+      "when": "NOVEMBER 9",
+      "until": null,
+      "title": "H.R. 9718 — Reshoring American Manufacturing Act of 2026",
+      "summary": "Majority Leader weekly schedule",
+      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "source": "House Majority Leader weekly schedule",
+      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "urgency": "upcoming",
+      "bill": "H.R. 9718"
+    },
+    {
+      "id": "house-ml-HR10375",
+      "kind": "house_schedule",
+      "chamber": "House",
+      "when": "NOVEMBER 9",
+      "until": null,
+      "title": "H.R. 10375 — 504 Modernization and Small Manufacturer Enhancement Act",
+      "summary": "Majority Leader weekly schedule",
+      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "source": "House Majority Leader weekly schedule",
+      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "urgency": "upcoming",
+      "bill": "H.R. 10375"
+    },
+    {
+      "id": "house-ml-HR1013",
+      "kind": "house_schedule",
+      "chamber": "House",
+      "when": "NOVEMBER 9",
+      "until": null,
+      "title": "H.R. 1013 — Retirement Fairness for Charities and Educational Institutions Act of 2025",
+      "summary": "Majority Leader weekly schedule",
+      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "source": "House Majority Leader weekly schedule",
+      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+      "urgency": "upcoming",
+      "bill": "H.R. 1013"
     },
     {
       "id": "fr-pi-2026-22743",
@@ -2128,6 +2338,26 @@
       "documentNumber": "2026-22900"
     },
     {
+      "id": "fr-pi-2026-22933",
+      "kind": "public_inspection",
+      "when": "2026-11-10",
+      "until": null,
+      "filedAt": "2026-11-06T16:15:00.000-05:00",
+      "title": "Performance Review Board Members",
+      "summary": "Commerce Department",
+      "url": "https://public-inspection.federalregister.gov/2026-22933.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-22933/performance-review-board-members",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-22933.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Commerce Department"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-22933"
+    },
+    {
       "id": "fr-pres-2026-22051",
       "kind": "presidential_doc",
       "when": "2026-10-28",
@@ -2334,26 +2564,6 @@
       "sourceUrl": "https://www.federalregister.gov/presidential-documents",
       "urgency": "recent",
       "documentType": "Presidential Document"
-    },
-    {
-      "id": "fr-comment-2026-22614",
-      "kind": "comment_deadline",
-      "when": "2026-11-06",
-      "until": "2026-11-06",
-      "title": "Safety Zone; FRL Inaugural Invitational eFoil Exhibition Race, Miami Marine Stadium Basin, Miami, FL; Correction",
-      "summary": "Homeland Security Department, Coast Guard",
-      "url": "http://www.regulations.gov/commenton/USCG-2026-1162-0004",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/05/2026-22614/safety-zone-frl-inaugural-invitational-efoil-exhibition-race-miami-marine-stadium-basin-miami-fl",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-05/pdf/2026-22614.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Homeland Security Department",
-        "Coast Guard"
-      ],
-      "documentNumber": "2026-22614",
-      "documentType": "Proposed Rule"
     },
     {
       "id": "fr-comment-2026-22337",
@@ -3408,45 +3618,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-20611",
-      "kind": "comment_deadline",
-      "when": "2026-11-06",
-      "until": "2026-11-06",
-      "title": "Approval and Promulgation of State Air Quality Plans for Designated Facilities and Pollutants; West Virginia; Negative Declarations for Existing Large Municipal Waste Combustors and Other Solid Waste Incinerators",
-      "summary": "Environmental Protection Agency",
-      "url": "http://www.regulations.gov/commenton/EPA-R03-OAR-2026-6205-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/07/2026-20611/approval-and-promulgation-of-state-air-quality-plans-for-designated-facilities-and-pollutants-west",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-07/pdf/2026-20611.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Environmental Protection Agency"
-      ],
-      "documentNumber": "2026-20611",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-20545",
-      "kind": "comment_deadline",
-      "when": "2026-11-06",
-      "until": "2026-11-06",
-      "title": "Drawbridge Operation Regulation; Bay St. Louis, Bay St. Louis, MS; Back Bay of Biloxi, Biloxi, MS; Pascagoula River, Pascagoula, MS; Three Mile Creek, Mobile, AL; Chickasaw Creek, Saraland, AL.",
-      "summary": "Homeland Security Department, Coast Guard",
-      "url": "http://www.regulations.gov/commenton/USCG-2026-0889-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/07/2026-20545/drawbridge-operation-regulation-bay-st-louis-bay-st-louis-ms-back-bay-of-biloxi-biloxi-ms-pascagoula",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-07/pdf/2026-20545.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Homeland Security Department",
-        "Coast Guard"
-      ],
-      "documentNumber": "2026-20545",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-20543",
       "kind": "comment_deadline",
       "when": "2026-11-23",
@@ -3464,25 +3635,6 @@
         "Federal Aviation Administration"
       ],
       "documentNumber": "2026-20543",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-20532",
-      "kind": "comment_deadline",
-      "when": "2026-11-06",
-      "until": "2026-11-06",
-      "title": "Privacy Act of 1974; Implementation",
-      "summary": "Justice Department",
-      "url": "http://www.regulations.gov/commenton/DOJ_FRDOC_0001-0334",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/07/2026-20532/privacy-act-of-1974-implementation",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-07/pdf/2026-20532.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Justice Department"
-      ],
-      "documentNumber": "2026-20532",
       "documentType": "Proposed Rule"
     },
     {
@@ -4253,86 +4405,6 @@
         "Maritime Administration"
       ],
       "documentNumber": "2026-19367",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-19360",
-      "kind": "comment_deadline",
-      "when": "2026-11-06",
-      "until": "2026-11-06",
-      "title": "Airworthiness Directives; Airbus SAS Airplanes",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2026-8807-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/22/2026-19360/airworthiness-directives-airbus-sas-airplanes",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-22/pdf/2026-19360.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-19360",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-19355",
-      "kind": "comment_deadline",
-      "when": "2026-11-06",
-      "until": "2026-11-06",
-      "title": "Airworthiness Directives; Airbus SAS Airplanes",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2026-8809-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/22/2026-19355/airworthiness-directives-airbus-sas-airplanes",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-22/pdf/2026-19355.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-19355",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-19345",
-      "kind": "comment_deadline",
-      "when": "2026-11-06",
-      "until": "2026-11-06",
-      "title": "Airworthiness Directives; Bell Textron Canada Limited Helicopters",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2026-11783-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/22/2026-19345/airworthiness-directives-bell-textron-canada-limited-helicopters",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-22/pdf/2026-19345.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-19345",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-19343",
-      "kind": "comment_deadline",
-      "when": "2026-11-06",
-      "until": "2026-11-06",
-      "title": "Airworthiness Directives; Leonardo S.p.a. Helicopters",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2026-8817-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/22/2026-19343/airworthiness-directives-leonardo-spa-helicopters",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-22/pdf/2026-19343.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-19343",
       "documentType": "Proposed Rule"
     },
     {

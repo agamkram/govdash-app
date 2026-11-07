@@ -80,22 +80,22 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-11-06T20:28:22.546Z",
-      "asOf": "2026-11-06T20:27:59.105Z",
+      "enrichedAt": "2026-11-07T18:54:18.637Z",
+      "asOf": "2026-11-07T18:50:10.868Z",
       "nodesWithHeat": 101,
       "nodesWithDirectHeat": 57,
-      "rawEventCount": 247,
+      "rawEventCount": 255,
       "matched": {
-        "chamber": 3,
+        "chamber": 18,
         "presidential": 13,
         "publicInspection": 89,
-        "commentDeadlines": 109,
+        "commentDeadlines": 102,
         "sunshine": 5,
         "hearings": 5,
         "scotus": 1
       },
-      "unmatchedPublicInspection": 13,
-      "unmatchedCommentDeadlines": 9,
+      "unmatchedPublicInspection": 14,
+      "unmatchedCommentDeadlines": 8,
       "unmatchedSunshine": 0,
       "sources": {
         "senateFloor": {
@@ -113,33 +113,33 @@
         },
         "majorityLeader": {
           "ok": true,
-          "count": 0,
+          "count": 15,
           "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm"
         },
         "publicInspection": {
           "ok": true,
-          "count": 102,
+          "count": 103,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
           "count": 13,
-          "since": "2026-10-23",
+          "since": "2026-10-24",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 118,
-          "start": "2026-11-06",
-          "end": "2026-12-05",
+          "count": 110,
+          "start": "2026-11-07",
+          "end": "2026-12-06",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
           "count": 5,
-          "start": "2026-11-06",
-          "end": "2026-12-05",
+          "start": "2026-11-07",
+          "end": "2026-12-06",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
@@ -155,8 +155,8 @@
         "houseHearings": {
           "ok": true,
           "count": 5,
-          "start": "2026-11-06",
-          "end": "2026-12-05",
+          "start": "2026-11-07",
+          "end": "2026-12-06",
           "congress": 119,
           "calendarIds": 5,
           "skipped404": [],
@@ -165,8 +165,8 @@
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-11-06",
-          "end": "2026-12-05",
+          "start": "2026-11-07",
+          "end": "2026-12-06",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -214,8 +214,8 @@
       "note": "Synthetic root. Crosswalk branches attach under Parent=[Branch]."
     },
     "heat": {
-      "asOf": "2026-11-06T20:27:59.105Z",
-      "count": 205,
+      "asOf": "2026-11-07T18:50:10.868Z",
+      "count": 204,
       "rolledUp": true,
       "events": [
         {
@@ -361,8 +361,8 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-06T20:27:59.105Z",
-          "count": 157,
+          "asOf": "2026-11-07T18:50:10.868Z",
+          "count": 150,
           "rolledUp": true,
           "events": [
             {
@@ -2243,7 +2243,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 12,
               "rolledUp": false,
               "events": [
@@ -3351,7 +3351,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 4,
               "rolledUp": true,
               "events": [
@@ -3468,7 +3468,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-06T20:27:59.105Z",
+                  "asOf": "2026-11-07T18:50:10.868Z",
                   "count": 4,
                   "rolledUp": true,
                   "events": [
@@ -3559,7 +3559,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-06T20:27:59.105Z",
+                      "asOf": "2026-11-07T18:50:10.868Z",
                       "count": 4,
                       "rolledUp": true,
                       "events": [
@@ -4871,7 +4871,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
+                          "asOf": "2026-11-07T18:50:10.868Z",
                           "count": 3,
                           "rolledUp": true,
                           "events": [
@@ -4947,7 +4947,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-06T20:27:59.105Z",
+                              "asOf": "2026-11-07T18:50:10.868Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -5047,7 +5047,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-06T20:27:59.105Z",
+                              "asOf": "2026-11-07T18:50:10.868Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -5660,7 +5660,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
+                          "asOf": "2026-11-07T18:50:10.868Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -5800,7 +5800,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-06T20:27:59.105Z",
+                              "asOf": "2026-11-07T18:50:10.868Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -6160,7 +6160,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 17,
               "rolledUp": true,
               "events": [
@@ -6281,7 +6281,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-06T20:27:59.105Z",
+                  "asOf": "2026-11-07T18:50:10.868Z",
                   "count": 17,
                   "rolledUp": true,
                   "events": [
@@ -6402,7 +6402,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-06T20:27:59.105Z",
+                      "asOf": "2026-11-07T18:50:10.868Z",
                       "count": 17,
                       "rolledUp": true,
                       "events": [
@@ -6523,7 +6523,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
+                          "asOf": "2026-11-07T18:50:10.868Z",
                           "count": 17,
                           "rolledUp": true,
                           "events": [
@@ -7406,7 +7406,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-06T20:27:59.105Z",
+                              "asOf": "2026-11-07T18:50:10.868Z",
                               "count": 1,
                               "rolledUp": true,
                               "events": [
@@ -7504,7 +7504,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-11-06T20:27:59.105Z",
+                                  "asOf": "2026-11-07T18:50:10.868Z",
                                   "count": 1,
                                   "rolledUp": false,
                                   "events": [
@@ -7626,7 +7626,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-06T20:27:59.105Z",
+                              "asOf": "2026-11-07T18:50:10.868Z",
                               "count": 1,
                               "rolledUp": true,
                               "events": [
@@ -7697,7 +7697,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-11-06T20:27:59.105Z",
+                                  "asOf": "2026-11-07T18:50:10.868Z",
                                   "count": 1,
                                   "rolledUp": false,
                                   "events": [
@@ -7798,7 +7798,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-06T20:27:59.105Z",
+                              "asOf": "2026-11-07T18:50:10.868Z",
                               "count": 10,
                               "rolledUp": true,
                               "events": [
@@ -7949,7 +7949,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-11-06T20:27:59.105Z",
+                                  "asOf": "2026-11-07T18:50:10.868Z",
                                   "count": 10,
                                   "rolledUp": false,
                                   "events": [
@@ -8101,7 +8101,7 @@
                                       "usgm": null
                                     },
                                     "heat": {
-                                      "asOf": "2026-11-06T20:27:59.105Z",
+                                      "asOf": "2026-11-07T18:50:10.868Z",
                                       "count": 2,
                                       "rolledUp": false,
                                       "events": [
@@ -8350,7 +8350,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-06T20:27:59.105Z",
+                              "asOf": "2026-11-07T18:50:10.868Z",
                               "count": 5,
                               "rolledUp": true,
                               "events": [
@@ -8441,7 +8441,7 @@
                                   "usgm": null
                                 },
                                 "heat": {
-                                  "asOf": "2026-11-06T20:27:59.105Z",
+                                  "asOf": "2026-11-07T18:50:10.868Z",
                                   "count": 5,
                                   "rolledUp": true,
                                   "events": [
@@ -8634,7 +8634,7 @@
                                       }
                                     },
                                     "heat": {
-                                      "asOf": "2026-11-06T20:27:59.105Z",
+                                      "asOf": "2026-11-07T18:50:10.868Z",
                                       "count": 5,
                                       "rolledUp": false,
                                       "events": [
@@ -22902,7 +22902,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 8,
               "rolledUp": true,
               "events": [
@@ -22993,7 +22993,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-06T20:27:59.105Z",
+                  "asOf": "2026-11-07T18:50:10.868Z",
                   "count": 8,
                   "rolledUp": true,
                   "events": [
@@ -25629,7 +25629,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-06T20:27:59.105Z",
+                      "asOf": "2026-11-07T18:50:10.868Z",
                       "count": 8,
                       "rolledUp": false,
                       "events": [
@@ -26006,7 +26006,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 17,
               "rolledUp": false,
               "events": [
@@ -26068,7 +26068,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-06T20:27:59.105Z",
+                  "asOf": "2026-11-07T18:50:10.868Z",
                   "count": 15,
                   "rolledUp": true,
                   "events": [
@@ -26214,7 +26214,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-06T20:27:59.105Z",
+                      "asOf": "2026-11-07T18:50:10.868Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -26565,7 +26565,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-06T20:27:59.105Z",
+                      "asOf": "2026-11-07T18:50:10.868Z",
                       "count": 6,
                       "rolledUp": false,
                       "events": [
@@ -26852,7 +26852,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-06T20:27:59.105Z",
+                      "asOf": "2026-11-07T18:50:10.868Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -27808,7 +27808,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-06T20:27:59.105Z",
+                      "asOf": "2026-11-07T18:50:10.868Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -27906,7 +27906,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-06T20:27:59.105Z",
+                      "asOf": "2026-11-07T18:50:10.868Z",
                       "count": 4,
                       "rolledUp": false,
                       "events": [
@@ -28123,7 +28123,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-06T20:27:59.105Z",
+                      "asOf": "2026-11-07T18:50:10.868Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -28395,8 +28395,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
-              "count": 9,
+              "asOf": "2026-11-07T18:50:10.868Z",
+              "count": 7,
               "rolledUp": true,
               "events": [
                 {
@@ -28516,8 +28516,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-06T20:27:59.105Z",
-                  "count": 9,
+                  "asOf": "2026-11-07T18:50:10.868Z",
+                  "count": 7,
                   "rolledUp": true,
                   "events": [
                     {
@@ -28637,8 +28637,8 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-06T20:27:59.105Z",
-                      "count": 9,
+                      "asOf": "2026-11-07T18:50:10.868Z",
+                      "count": 7,
                       "rolledUp": true,
                       "events": [
                         {
@@ -30165,8 +30165,8 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
-                          "count": 7,
+                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "count": 5,
                           "rolledUp": false,
                           "events": [
                             {
@@ -30243,36 +30243,6 @@
                               "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                               "urgency": "upcoming",
                               "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-22614",
-                              "kind": "comment_deadline",
-                              "when": "2026-11-06",
-                              "until": "2026-11-06",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Safety Zone; FRL Inaugural Invitational eFoil Exhibition Race, Miami Marine Stadium Basin, Miami, FL; Correction",
-                              "summary": "Homeland Security Department, Coast Guard",
-                              "url": "http://www.regulations.gov/commenton/USCG-2026-1162-0004",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-20545",
-                              "kind": "comment_deadline",
-                              "when": "2026-11-06",
-                              "until": "2026-11-06",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Drawbridge Operation Regulation; Bay St. Louis, Bay St. Louis, MS; Back Bay of Biloxi, Biloxi, MS; Pascagoula River, Pascagoula, MS; Three Mile Creek, Mobile, AL; Chickasaw Creek, Saraland, AL.",
-                              "summary": "Homeland Security Department, Coast Guard",
-                              "url": "http://www.regulations.gov/commenton/USCG-2026-0889-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
                             }
                           ]
                         },
@@ -30328,7 +30298,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
+                          "asOf": "2026-11-07T18:50:10.868Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -30957,7 +30927,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -32706,7 +32676,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 4,
               "rolledUp": true,
               "events": [
@@ -32833,7 +32803,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-06T20:27:59.105Z",
+                  "asOf": "2026-11-07T18:50:10.868Z",
                   "count": 4,
                   "rolledUp": true,
                   "events": [
@@ -32924,7 +32894,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-06T20:27:59.105Z",
+                      "asOf": "2026-11-07T18:50:10.868Z",
                       "count": 4,
                       "rolledUp": true,
                       "events": [
@@ -33015,7 +32985,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
+                          "asOf": "2026-11-07T18:50:10.868Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -33061,7 +33031,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-06T20:27:59.105Z",
+                              "asOf": "2026-11-07T18:50:10.868Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -34415,7 +34385,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
+                          "asOf": "2026-11-07T18:50:10.868Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -34512,7 +34482,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
+                          "asOf": "2026-11-07T18:50:10.868Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -39049,7 +39019,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 5,
               "rolledUp": true,
               "events": [
@@ -39155,7 +39125,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-06T20:27:59.105Z",
+                  "asOf": "2026-11-07T18:50:10.868Z",
                   "count": 5,
                   "rolledUp": true,
                   "events": [
@@ -39261,7 +39231,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-06T20:27:59.105Z",
+                      "asOf": "2026-11-07T18:50:10.868Z",
                       "count": 5,
                       "rolledUp": true,
                       "events": [
@@ -39367,7 +39337,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
+                          "asOf": "2026-11-07T18:50:10.868Z",
                           "count": 4,
                           "rolledUp": true,
                           "events": [
@@ -39540,7 +39510,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-06T20:27:59.105Z",
+                              "asOf": "2026-11-07T18:50:10.868Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -39658,7 +39628,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-06T20:27:59.105Z",
+                              "asOf": "2026-11-07T18:50:10.868Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -40091,7 +40061,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
+                          "asOf": "2026-11-07T18:50:10.868Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -40159,7 +40129,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-06T20:27:59.105Z",
+                              "asOf": "2026-11-07T18:50:10.868Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -41399,7 +41369,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 7,
               "rolledUp": true,
               "events": [
@@ -41520,7 +41490,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-06T20:27:59.105Z",
+                  "asOf": "2026-11-07T18:50:10.868Z",
                   "count": 7,
                   "rolledUp": true,
                   "events": [
@@ -41693,7 +41663,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-06T20:27:59.105Z",
+                      "asOf": "2026-11-07T18:50:10.868Z",
                       "count": 7,
                       "rolledUp": true,
                       "events": [
@@ -42642,7 +42612,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
+                          "asOf": "2026-11-07T18:50:10.868Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -42740,7 +42710,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-06T20:27:59.105Z",
+                              "asOf": "2026-11-07T18:50:10.868Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -42861,7 +42831,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
+                          "asOf": "2026-11-07T18:50:10.868Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -43009,7 +42979,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-06T20:27:59.105Z",
+                              "asOf": "2026-11-07T18:50:10.868Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -43198,7 +43168,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
+                          "asOf": "2026-11-07T18:50:10.868Z",
                           "count": 5,
                           "rolledUp": false,
                           "events": [
@@ -43662,8 +43632,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
-              "count": 49,
+              "asOf": "2026-11-07T18:50:10.868Z",
+              "count": 45,
               "rolledUp": true,
               "events": [
                 {
@@ -43783,8 +43753,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-06T20:27:59.105Z",
-                  "count": 49,
+                  "asOf": "2026-11-07T18:50:10.868Z",
+                  "count": 45,
                   "rolledUp": true,
                   "events": [
                     {
@@ -43904,8 +43874,8 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-06T20:27:59.105Z",
-                      "count": 48,
+                      "asOf": "2026-11-07T18:50:10.868Z",
+                      "count": 44,
                       "rolledUp": true,
                       "events": [
                         {
@@ -44295,7 +44265,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
+                          "asOf": "2026-11-07T18:50:10.868Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -44392,7 +44362,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
+                          "asOf": "2026-11-07T18:50:10.868Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -44654,7 +44624,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
+                          "asOf": "2026-11-07T18:50:10.868Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -44964,7 +44934,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
+                          "asOf": "2026-11-07T18:50:10.868Z",
                           "count": 3,
                           "rolledUp": false,
                           "events": [
@@ -45176,8 +45146,8 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
-                          "count": 39,
+                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "count": 35,
                           "rolledUp": false,
                           "events": [
                             {
@@ -45704,66 +45674,6 @@
                               "sourceUrl": "https://www.federalregister.gov/",
                               "urgency": "upcoming",
                               "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-19360",
-                              "kind": "comment_deadline",
-                              "when": "2026-11-06",
-                              "until": "2026-11-06",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Airworthiness Directives; Airbus SAS Airplanes",
-                              "summary": "Transportation Department, Federal Aviation Administration",
-                              "url": "http://www.regulations.gov/commenton/FAA-2026-8807-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-19355",
-                              "kind": "comment_deadline",
-                              "when": "2026-11-06",
-                              "until": "2026-11-06",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Airworthiness Directives; Airbus SAS Airplanes",
-                              "summary": "Transportation Department, Federal Aviation Administration",
-                              "url": "http://www.regulations.gov/commenton/FAA-2026-8809-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-19345",
-                              "kind": "comment_deadline",
-                              "when": "2026-11-06",
-                              "until": "2026-11-06",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Airworthiness Directives; Bell Textron Canada Limited Helicopters",
-                              "summary": "Transportation Department, Federal Aviation Administration",
-                              "url": "http://www.regulations.gov/commenton/FAA-2026-11783-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-19343",
-                              "kind": "comment_deadline",
-                              "when": "2026-11-06",
-                              "until": "2026-11-06",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Airworthiness Directives; Leonardo S.p.a. Helicopters",
-                              "summary": "Transportation Department, Federal Aviation Administration",
-                              "url": "http://www.regulations.gov/commenton/FAA-2026-8817-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
                             }
                           ]
                         },
@@ -45925,7 +45835,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-06T20:27:59.105Z",
+                          "asOf": "2026-11-07T18:50:10.868Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -46142,7 +46052,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-06T20:27:59.105Z",
+                      "asOf": "2026-11-07T18:50:10.868Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -48268,8 +48178,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
-              "count": 14,
+              "asOf": "2026-11-07T18:50:10.868Z",
+              "count": 13,
               "rolledUp": false,
               "events": [
                 {
@@ -48462,21 +48372,6 @@
                   "title": "Air Quality Plan; Arizona; Maricopa County Air Quality Department; New Source Review; Emission Reduction Credits-Rule 204",
                   "summary": "Environmental Protection Agency",
                   "url": "http://www.regulations.gov/commenton/EPA-R09-OAR-2026-4654-0001",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-20611",
-                  "kind": "comment_deadline",
-                  "when": "2026-11-06",
-                  "until": "2026-11-06",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Approval and Promulgation of State Air Quality Plans for Designated Facilities and Pollutants; West Virginia; Negative Declarations for Existing Large Municipal Waste Combustors and Other Solid Waste Incinerators",
-                  "summary": "Environmental Protection Agency",
-                  "url": "http://www.regulations.gov/commenton/EPA-R03-OAR-2026-6205-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
@@ -49474,7 +49369,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -50331,7 +50226,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 5,
               "rolledUp": false,
               "events": [
@@ -50595,7 +50490,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -51622,7 +51517,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -52370,7 +52265,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-06T20:27:59.105Z",
+          "asOf": "2026-11-07T18:50:10.868Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -52979,7 +52874,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -54081,8 +53976,8 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-06T20:27:59.105Z",
-          "count": 8,
+          "asOf": "2026-11-07T18:50:10.868Z",
+          "count": 14,
           "rolledUp": true,
           "events": [
             {
@@ -54754,8 +54649,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
-              "count": 8,
+              "asOf": "2026-11-07T18:50:10.868Z",
+              "count": 14,
               "rolledUp": true,
               "events": [
                 {
@@ -54985,8 +54880,8 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-11-06T20:27:59.105Z",
-                  "count": 6,
+                  "asOf": "2026-11-07T18:50:10.868Z",
+                  "count": 12,
                   "rolledUp": false,
                   "events": [
                     {
@@ -55078,6 +54973,96 @@
                       "sourceUrl": "https://clerk.house.gov/",
                       "urgency": "upcoming",
                       "bill": null
+                    },
+                    {
+                      "id": "house-ml-HR3978",
+                      "kind": "house_schedule",
+                      "when": "NOVEMBER 9",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "H.R. 3978 — Nuclear REFUEL",
+                      "summary": "Majority Leader weekly schedule",
+                      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+                      "source": "House Majority Leader weekly schedule",
+                      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+                      "urgency": "upcoming",
+                      "bill": "H.R. 3978"
+                    },
+                    {
+                      "id": "house-ml-HR5549",
+                      "kind": "house_schedule",
+                      "when": "NOVEMBER 9",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "H.R. 5549 — Efficient Nuclear Licensing Hearings Act",
+                      "summary": "Majority Leader weekly schedule",
+                      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+                      "source": "House Majority Leader weekly schedule",
+                      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+                      "urgency": "upcoming",
+                      "bill": "H.R. 5549"
+                    },
+                    {
+                      "id": "house-ml-HR9084",
+                      "kind": "house_schedule",
+                      "when": "NOVEMBER 9",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "H.R. 9084 — Department of Energy Nuclear Transparency Act",
+                      "summary": "Majority Leader weekly schedule",
+                      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+                      "source": "House Majority Leader weekly schedule",
+                      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+                      "urgency": "upcoming",
+                      "bill": "H.R. 9084"
+                    },
+                    {
+                      "id": "house-ml-HR9612",
+                      "kind": "house_schedule",
+                      "when": "NOVEMBER 9",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "H.R. 9612 — American Enrichment Deployment Act",
+                      "summary": "Majority Leader weekly schedule",
+                      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+                      "source": "House Majority Leader weekly schedule",
+                      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+                      "urgency": "upcoming",
+                      "bill": "H.R. 9612"
+                    },
+                    {
+                      "id": "house-ml-HR9613",
+                      "kind": "house_schedule",
+                      "when": "NOVEMBER 9",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "H.R. 9613 — Nuclear Advisory Committee Reform Act",
+                      "summary": "Majority Leader weekly schedule",
+                      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+                      "source": "House Majority Leader weekly schedule",
+                      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+                      "urgency": "upcoming",
+                      "bill": "H.R. 9613"
+                    },
+                    {
+                      "id": "house-ml-HR9614",
+                      "kind": "house_schedule",
+                      "when": "NOVEMBER 9",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "H.R. 9614 — NRC Staff Pay Alignment Act",
+                      "summary": "Majority Leader weekly schedule",
+                      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+                      "source": "House Majority Leader weekly schedule",
+                      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
+                      "urgency": "upcoming",
+                      "bill": "H.R. 9614"
                     }
                   ]
                 },
@@ -55211,7 +55196,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-11-06T20:27:59.105Z",
+                  "asOf": "2026-11-07T18:50:10.868Z",
                   "count": 2,
                   "rolledUp": false,
                   "events": [
@@ -56186,7 +56171,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-06T20:27:59.105Z",
+          "asOf": "2026-11-07T18:50:10.868Z",
           "count": 34,
           "rolledUp": true,
           "events": [
@@ -57530,7 +57515,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 7,
               "rolledUp": false,
               "events": [
@@ -58843,7 +58828,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -59279,7 +59264,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -60102,7 +60087,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -62967,7 +62952,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -63247,7 +63232,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -63634,7 +63619,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -64620,7 +64605,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -65765,7 +65750,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -66232,7 +66217,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 12,
               "rolledUp": false,
               "events": [
@@ -67111,7 +67096,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-06T20:27:59.105Z",
+          "asOf": "2026-11-07T18:50:10.868Z",
           "count": 5,
           "rolledUp": true,
           "events": [
@@ -68048,7 +68033,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -69724,7 +69709,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -70789,7 +70774,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-06T20:27:59.105Z",
+              "asOf": "2026-11-07T18:50:10.868Z",
               "count": 2,
               "rolledUp": false,
               "events": [

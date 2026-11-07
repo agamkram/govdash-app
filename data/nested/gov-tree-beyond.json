@@ -41,11 +41,11 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-11-06T20:28:23.361Z",
-      "asOf": "2026-11-06T20:27:59.105Z",
+      "enrichedAt": "2026-11-07T18:54:19.331Z",
+      "asOf": "2026-11-07T18:50:10.868Z",
       "nodesWithHeat": 0,
       "nodesWithDirectHeat": 0,
-      "rawEventCount": 247,
+      "rawEventCount": 255,
       "matched": {
         "chamber": 0,
         "presidential": 0,
@@ -55,8 +55,8 @@
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 102,
-      "unmatchedCommentDeadlines": 118,
+      "unmatchedPublicInspection": 103,
+      "unmatchedCommentDeadlines": 110,
       "unmatchedSunshine": 5,
       "sources": {
         "senateFloor": {
@@ -74,33 +74,33 @@
         },
         "majorityLeader": {
           "ok": true,
-          "count": 0,
+          "count": 15,
           "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm"
         },
         "publicInspection": {
           "ok": true,
-          "count": 102,
+          "count": 103,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
           "count": 13,
-          "since": "2026-10-23",
+          "since": "2026-10-24",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 118,
-          "start": "2026-11-06",
-          "end": "2026-12-05",
+          "count": 110,
+          "start": "2026-11-07",
+          "end": "2026-12-06",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
           "count": 5,
-          "start": "2026-11-06",
-          "end": "2026-12-05",
+          "start": "2026-11-07",
+          "end": "2026-12-06",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
@@ -116,8 +116,8 @@
         "houseHearings": {
           "ok": true,
           "count": 5,
-          "start": "2026-11-06",
-          "end": "2026-12-05",
+          "start": "2026-11-07",
+          "end": "2026-12-06",
           "congress": 119,
           "calendarIds": 5,
           "skipped404": [],
@@ -126,8 +126,8 @@
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-11-06",
-          "end": "2026-12-05",
+          "start": "2026-11-07",
+          "end": "2026-12-06",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
