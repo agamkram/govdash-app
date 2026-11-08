@@ -80,22 +80,22 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-11-07T18:54:13.203Z",
-      "asOf": "2026-11-07T18:50:10.868Z",
-      "nodesWithHeat": 101,
-      "nodesWithDirectHeat": 57,
-      "rawEventCount": 255,
+      "enrichedAt": "2026-11-08T18:52:26.899Z",
+      "asOf": "2026-11-08T18:52:12.383Z",
+      "nodesWithHeat": 102,
+      "nodesWithDirectHeat": 58,
+      "rawEventCount": 273,
       "matched": {
         "chamber": 18,
         "presidential": 13,
         "publicInspection": 89,
-        "commentDeadlines": 102,
-        "sunshine": 5,
+        "commentDeadlines": 116,
+        "sunshine": 7,
         "hearings": 5,
         "scotus": 1
       },
       "unmatchedPublicInspection": 14,
-      "unmatchedCommentDeadlines": 8,
+      "unmatchedCommentDeadlines": 10,
       "unmatchedSunshine": 0,
       "sources": {
         "senateFloor": {
@@ -124,22 +124,22 @@
         "presidential": {
           "ok": true,
           "count": 13,
-          "since": "2026-10-24",
+          "since": "2026-10-25",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 110,
-          "start": "2026-11-07",
-          "end": "2026-12-06",
+          "count": 126,
+          "start": "2026-11-08",
+          "end": "2026-12-07",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
-          "count": 5,
-          "start": "2026-11-07",
-          "end": "2026-12-06",
+          "count": 7,
+          "start": "2026-11-08",
+          "end": "2026-12-07",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
@@ -155,8 +155,8 @@
         "houseHearings": {
           "ok": true,
           "count": 5,
-          "start": "2026-11-07",
-          "end": "2026-12-06",
+          "start": "2026-11-08",
+          "end": "2026-12-07",
           "congress": 119,
           "calendarIds": 5,
           "skipped404": [],
@@ -165,8 +165,8 @@
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-11-07",
-          "end": "2026-12-06",
+          "start": "2026-11-08",
+          "end": "2026-12-07",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -303,95 +303,95 @@
       "note": "Product root: curated for the citizen map. Full Crosswalk nest preserved in gov-tree-full.json."
     },
     "heat": {
-      "asOf": "2026-11-07T18:50:10.868Z",
-      "count": 204,
+      "asOf": "2026-11-08T18:52:12.383Z",
+      "count": 218,
       "rolledUp": true,
       "events": [
         {
-          "id": "fr-comment-2026-21155",
+          "id": "fr-comment-2026-21939",
           "kind": "comment_deadline",
-          "when": "2026-12-04",
-          "until": "2026-12-04",
+          "when": "2026-12-07",
+          "until": "2026-12-07",
           "filedAt": null,
           "signedAt": null,
-          "title": "Renewable Fuel Standard (RFS) Program: Reallocation of Additional 2025 Small Refinery Exemptions",
+          "title": "Exemptions To Permit Circumvention of Access Controls on Copyrighted Works",
+          "summary": "Library of Congress, Copyright Office, Library of Congress (from lower in the map)",
+          "url": "http://www.regulations.gov/commenton/COLC-2026-0199-0001",
+          "source": "Federal Register proposed rule (comments close)",
+          "sourceUrl": "https://www.federalregister.gov/",
+          "urgency": "upcoming",
+          "bill": null
+        },
+        {
+          "id": "fr-comment-2026-22734",
+          "kind": "comment_deadline",
+          "when": "2026-12-07",
+          "until": "2026-12-07",
+          "filedAt": null,
+          "signedAt": null,
+          "title": "Drawbridge Operation Regulation; Harlem River, Between the Boroughs of Manhattan and the Bronx, New York City, New York",
+          "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+          "url": "http://www.regulations.gov/commenton/USCG-2026-1338-0001",
+          "source": "Federal Register proposed rule (comments close)",
+          "sourceUrl": "https://www.federalregister.gov/",
+          "urgency": "upcoming",
+          "bill": null
+        },
+        {
+          "id": "fr-comment-2026-20650",
+          "kind": "comment_deadline",
+          "when": "2026-12-07",
+          "until": "2026-12-07",
+          "filedAt": null,
+          "signedAt": null,
+          "title": "Low-Value Shipments",
+          "summary": "Homeland Security Department, U.S. Customs and Border Protection (from lower in the map)",
+          "url": "http://www.regulations.gov/commenton/USCBP-2026-0298-0001",
+          "source": "Federal Register proposed rule (comments close)",
+          "sourceUrl": "https://www.federalregister.gov/",
+          "urgency": "upcoming",
+          "bill": null
+        },
+        {
+          "id": "fr-comment-2026-18282",
+          "kind": "comment_deadline",
+          "when": "2026-12-07",
+          "until": "2026-12-07",
+          "filedAt": null,
+          "signedAt": null,
+          "title": "Unleashing Unlicensed Spectrum for Direct-to-Device",
+          "summary": "Federal Communications Commission (from lower in the map)",
+          "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-08/pdf/2026-18282.pdf",
+          "source": "Federal Register proposed rule (comments close)",
+          "sourceUrl": "https://www.federalregister.gov/",
+          "urgency": "upcoming",
+          "bill": null
+        },
+        {
+          "id": "fr-comment-2026-22581",
+          "kind": "comment_deadline",
+          "when": "2026-12-07",
+          "until": "2026-12-07",
+          "filedAt": null,
+          "signedAt": null,
+          "title": "Petition for Rulemaking of New Hope Now",
+          "summary": "Federal Trade Commission (from lower in the map)",
+          "url": "http://www.regulations.gov/commenton/FTC-2026-1783-0001",
+          "source": "Federal Register proposed rule (comments close)",
+          "sourceUrl": "https://www.federalregister.gov/",
+          "urgency": "upcoming",
+          "bill": null
+        },
+        {
+          "id": "fr-comment-2026-22592",
+          "kind": "comment_deadline",
+          "when": "2026-12-07",
+          "until": "2026-12-07",
+          "filedAt": null,
+          "signedAt": null,
+          "title": "Air Plan Approval; District of Columbia; Enhanced Vehicle Emission Inspection and Maintenance (I/M) Program Revision and Basic I/M Program Certification for Moderate Nonattainment Areas Under the 2015 Ozone NAAQS",
           "summary": "Environmental Protection Agency (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/EPA-HQ-OAR-2024-0505-0951",
-          "source": "Federal Register proposed rule (comments close)",
-          "sourceUrl": "https://www.federalregister.gov/",
-          "urgency": "upcoming",
-          "bill": null
-        },
-        {
-          "id": "fr-comment-C1-2026-20360",
-          "kind": "comment_deadline",
-          "when": "2026-12-04",
-          "until": "2026-12-04",
-          "filedAt": null,
-          "signedAt": null,
-          "title": "Interval Fund Modernization; Expansion of Multiple Share Class to Registered Closed-End Management Investment Companies and Business Development Companies",
-          "summary": "Securities and Exchange Commission (from lower in the map)",
-          "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/C1-2026-20360.pdf",
-          "source": "Federal Register proposed rule (comments close)",
-          "sourceUrl": "https://www.federalregister.gov/",
-          "urgency": "upcoming",
-          "bill": null
-        },
-        {
-          "id": "fr-comment-2026-20360",
-          "kind": "comment_deadline",
-          "when": "2026-12-04",
-          "until": "2026-12-04",
-          "filedAt": null,
-          "signedAt": null,
-          "title": "Interval Fund Modernization; Expansion of Multiple Share Class to Registered Closed-End Management Investment Companies and Business Development Companies",
-          "summary": "Securities and Exchange Commission (from lower in the map)",
-          "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20360.pdf",
-          "source": "Federal Register proposed rule (comments close)",
-          "sourceUrl": "https://www.federalregister.gov/",
-          "urgency": "upcoming",
-          "bill": null
-        },
-        {
-          "id": "fr-comment-2026-21387",
-          "kind": "comment_deadline",
-          "when": "2026-12-03",
-          "until": "2026-12-03",
-          "filedAt": null,
-          "signedAt": null,
-          "title": "Airworthiness Directives; Airbus Helicopters",
-          "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-11814-0001",
-          "source": "Federal Register proposed rule (comments close)",
-          "sourceUrl": "https://www.federalregister.gov/",
-          "urgency": "upcoming",
-          "bill": null
-        },
-        {
-          "id": "fr-comment-2026-21334",
-          "kind": "comment_deadline",
-          "when": "2026-12-03",
-          "until": "2026-12-03",
-          "filedAt": null,
-          "signedAt": null,
-          "title": "Airworthiness Directives; Airbus SAS Airplanes",
-          "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-11813-0001",
-          "source": "Federal Register proposed rule (comments close)",
-          "sourceUrl": "https://www.federalregister.gov/",
-          "urgency": "upcoming",
-          "bill": null
-        },
-        {
-          "id": "fr-comment-2026-21298",
-          "kind": "comment_deadline",
-          "when": "2026-12-03",
-          "until": "2026-12-03",
-          "filedAt": null,
-          "signedAt": null,
-          "title": "Airworthiness Directives; Pratt & Whitney RTX Corporation (Type Certificate Previously Held by Pratt & Whitney Division United Technologies Corporation) Engines",
-          "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-11811-0001",
+          "url": "http://www.regulations.gov/commenton/EPA-R03-OAR-2026-1024-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
@@ -424,10 +424,25 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-07T18:50:10.868Z",
-          "count": 14,
+          "asOf": "2026-11-08T18:52:12.383Z",
+          "count": 15,
           "rolledUp": true,
           "events": [
+            {
+              "id": "fr-comment-2026-21939",
+              "kind": "comment_deadline",
+              "when": "2026-12-07",
+              "until": "2026-12-07",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Exemptions To Permit Circumvention of Access Controls on Copyrighted Works",
+              "summary": "Library of Congress, Copyright Office, Library of Congress (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/COLC-2026-0199-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
             {
               "id": "house-hearing-119593",
               "kind": "hearing",
@@ -501,21 +516,6 @@
               "source": "Senate.gov floor schedule XML",
               "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
               "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "senate-floor-2026-10-26T17:30:01-04:00",
-              "kind": "floor_session",
-              "when": "2026-10-26T17:30:01-04:00",
-              "until": "2026-10-26T17:30:38-04:00",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Senate floor (recent)",
-              "summary": "Has adjourned (from lower in the map)",
-              "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-              "source": "Senate.gov floor schedule XML",
-              "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-              "urgency": "recent",
               "bill": null
             }
           ]
@@ -1097,7 +1097,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 14,
               "rolledUp": true,
               "events": [
@@ -1328,7 +1328,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-11-07T18:50:10.868Z",
+                  "asOf": "2026-11-08T18:52:12.383Z",
                   "count": 12,
                   "rolledUp": false,
                   "events": [
@@ -1415,7 +1415,7 @@
                       "filedAt": null,
                       "signedAt": null,
                       "title": "House next session",
-                      "summary": "November 9th, 2026 at 12:00 PM",
+                      "summary": "Tomorrow at 12:00 PM",
                       "url": "https://clerk.house.gov/",
                       "source": "Office of the Clerk, U.S. House",
                       "sourceUrl": "https://clerk.house.gov/",
@@ -1644,7 +1644,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-11-07T18:50:10.868Z",
+                  "asOf": "2026-11-08T18:52:12.383Z",
                   "count": 2,
                   "rolledUp": false,
                   "events": [
@@ -2500,7 +2500,28 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": null,
+            "heat": {
+              "asOf": "2026-11-08T18:52:12.383Z",
+              "count": 1,
+              "rolledUp": false,
+              "events": [
+                {
+                  "id": "fr-comment-2026-21939",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-07",
+                  "until": "2026-12-07",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Exemptions To Permit Circumvention of Access Controls on Copyrighted Works",
+                  "summary": "Library of Congress, Copyright Office, Library of Congress",
+                  "url": "http://www.regulations.gov/commenton/COLC-2026-0199-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                }
+              ]
+            },
             "children": []
           },
           {
@@ -2619,10 +2640,40 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-07T18:50:10.868Z",
-          "count": 127,
+          "asOf": "2026-11-08T18:52:12.383Z",
+          "count": 131,
           "rolledUp": true,
           "events": [
+            {
+              "id": "fr-comment-2026-22734",
+              "kind": "comment_deadline",
+              "when": "2026-12-07",
+              "until": "2026-12-07",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Drawbridge Operation Regulation; Harlem River, Between the Boroughs of Manhattan and the Bronx, New York City, New York",
+              "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/USCG-2026-1338-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-20650",
+              "kind": "comment_deadline",
+              "when": "2026-12-07",
+              "until": "2026-12-07",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Low-Value Shipments",
+              "summary": "Homeland Security Department, U.S. Customs and Border Protection (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/USCBP-2026-0298-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
             {
               "id": "fr-comment-2026-21387",
               "kind": "comment_deadline",
@@ -2682,36 +2733,6 @@
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
-            },
-            {
-              "id": "fr-comment-2026-20251",
-              "kind": "comment_deadline",
-              "when": "2026-12-01",
-              "until": "2026-12-01",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Big Cypress National Preserve; Off-Road Motor Vehicles",
-              "summary": "Interior Department, National Park Service (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/NPS-2026-0199-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-20277",
-              "kind": "comment_deadline",
-              "when": "2026-12-01",
-              "until": "2026-12-01",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Federal Scholarship Tax Credit",
-              "summary": "Treasury Department, Internal Revenue Service (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/IRS-2026-1354-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
             }
           ]
         },
@@ -2740,7 +2761,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 12,
               "rolledUp": false,
               "events": [
@@ -3665,7 +3686,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 4,
               "rolledUp": true,
               "events": [
@@ -3782,7 +3803,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-07T18:50:10.868Z",
+                  "asOf": "2026-11-08T18:52:12.383Z",
                   "count": 4,
                   "rolledUp": true,
                   "events": [
@@ -3873,7 +3894,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-07T18:50:10.868Z",
+                      "asOf": "2026-11-08T18:52:12.383Z",
                       "count": 4,
                       "rolledUp": true,
                       "events": [
@@ -5212,7 +5233,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "asOf": "2026-11-08T18:52:12.383Z",
                           "count": 3,
                           "rolledUp": true,
                           "events": [
@@ -5288,7 +5309,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-07T18:50:10.868Z",
+                              "asOf": "2026-11-08T18:52:12.383Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -5388,7 +5409,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-07T18:50:10.868Z",
+                              "asOf": "2026-11-08T18:52:12.383Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -6001,7 +6022,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "asOf": "2026-11-08T18:52:12.383Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -6141,7 +6162,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-07T18:50:10.868Z",
+                              "asOf": "2026-11-08T18:52:12.383Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -6501,7 +6522,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 17,
               "rolledUp": true,
               "events": [
@@ -6622,7 +6643,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-07T18:50:10.868Z",
+                  "asOf": "2026-11-08T18:52:12.383Z",
                   "count": 17,
                   "rolledUp": true,
                   "events": [
@@ -6743,7 +6764,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-07T18:50:10.868Z",
+                      "asOf": "2026-11-08T18:52:12.383Z",
                       "count": 17,
                       "rolledUp": true,
                       "events": [
@@ -6864,7 +6885,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "asOf": "2026-11-08T18:52:12.383Z",
                           "count": 17,
                           "rolledUp": true,
                           "events": [
@@ -7747,7 +7768,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-07T18:50:10.868Z",
+                              "asOf": "2026-11-08T18:52:12.383Z",
                               "count": 1,
                               "rolledUp": true,
                               "events": [
@@ -7845,7 +7866,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-11-07T18:50:10.868Z",
+                                  "asOf": "2026-11-08T18:52:12.383Z",
                                   "count": 1,
                                   "rolledUp": false,
                                   "events": [
@@ -7967,7 +7988,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-07T18:50:10.868Z",
+                              "asOf": "2026-11-08T18:52:12.383Z",
                               "count": 1,
                               "rolledUp": true,
                               "events": [
@@ -8038,7 +8059,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-11-07T18:50:10.868Z",
+                                  "asOf": "2026-11-08T18:52:12.383Z",
                                   "count": 1,
                                   "rolledUp": false,
                                   "events": [
@@ -8139,7 +8160,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-07T18:50:10.868Z",
+                              "asOf": "2026-11-08T18:52:12.383Z",
                               "count": 10,
                               "rolledUp": true,
                               "events": [
@@ -8290,7 +8311,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-11-07T18:50:10.868Z",
+                                  "asOf": "2026-11-08T18:52:12.383Z",
                                   "count": 10,
                                   "rolledUp": false,
                                   "events": [
@@ -8442,7 +8463,7 @@
                                       "usgm": null
                                     },
                                     "heat": {
-                                      "asOf": "2026-11-07T18:50:10.868Z",
+                                      "asOf": "2026-11-08T18:52:12.383Z",
                                       "count": 2,
                                       "rolledUp": false,
                                       "events": [
@@ -8691,7 +8712,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-07T18:50:10.868Z",
+                              "asOf": "2026-11-08T18:52:12.383Z",
                               "count": 5,
                               "rolledUp": true,
                               "events": [
@@ -8782,7 +8803,7 @@
                                   "usgm": null
                                 },
                                 "heat": {
-                                  "asOf": "2026-11-07T18:50:10.868Z",
+                                  "asOf": "2026-11-08T18:52:12.383Z",
                                   "count": 5,
                                   "rolledUp": true,
                                   "events": [
@@ -8975,7 +8996,7 @@
                                       }
                                     },
                                     "heat": {
-                                      "asOf": "2026-11-07T18:50:10.868Z",
+                                      "asOf": "2026-11-08T18:52:12.383Z",
                                       "count": 5,
                                       "rolledUp": false,
                                       "events": [
@@ -23280,7 +23301,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 8,
               "rolledUp": true,
               "events": [
@@ -23371,7 +23392,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-07T18:50:10.868Z",
+                  "asOf": "2026-11-08T18:52:12.383Z",
                   "count": 8,
                   "rolledUp": true,
                   "events": [
@@ -26007,7 +26028,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-07T18:50:10.868Z",
+                      "asOf": "2026-11-08T18:52:12.383Z",
                       "count": 8,
                       "rolledUp": false,
                       "events": [
@@ -26384,8 +26405,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
-              "count": 17,
+              "asOf": "2026-11-08T18:52:12.383Z",
+              "count": 19,
               "rolledUp": false,
               "events": [
                 {
@@ -26446,10 +26467,40 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-07T18:50:10.868Z",
-                  "count": 15,
+                  "asOf": "2026-11-08T18:52:12.383Z",
+                  "count": 17,
                   "rolledUp": true,
                   "events": [
+                    {
+                      "id": "fr-comment-2026-20613",
+                      "kind": "comment_deadline",
+                      "when": "2026-12-07",
+                      "until": "2026-12-07",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Clinical Laboratory Improvement Amendments of 1988 (CLIA); Virtual Access, Gynecologic Cytology Proficiency Testing (PT), Personnel Qualifications, and Other Changes",
+                      "summary": "Health and Human Services Department, Centers for Medicare & Medicaid Services (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/CMS-2026-3235-0001",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "fr-comment-2026-19349",
+                      "kind": "comment_deadline",
+                      "when": "2026-12-07",
+                      "until": "2026-12-07",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Nonclinical Testing Terminology",
+                      "summary": "Health and Human Services Department, Food and Drug Administration (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/FDA-2026-N-5347-0001",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
                     {
                       "id": "fr-comment-2026-22123",
                       "kind": "comment_deadline",
@@ -26509,36 +26560,6 @@
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
                       "bill": null
-                    },
-                    {
-                      "id": "fr-pi-2026-22812",
-                      "kind": "public_inspection",
-                      "when": "2026-11-10",
-                      "until": null,
-                      "filedAt": "2026-11-05T16:15:00.000-05:00",
-                      "signedAt": null,
-                      "title": "Medicare and Medicaid Programs: Cutting Administrative Requirements for Excellence in Patient Care",
-                      "summary": "Centers for Medicare & Medicaid Services (from lower in the map)",
-                      "url": "https://public-inspection.federalregister.gov/2026-22812.pdf",
-                      "source": "Federal Register public inspection (PDF)",
-                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-pi-2026-22743",
-                      "kind": "public_inspection",
-                      "when": "2026-11-09",
-                      "until": null,
-                      "filedAt": "2026-11-04T17:00:00.000-05:00",
-                      "signedAt": null,
-                      "title": "Medicare and Medicaid Programs: Calendar Year 2027 Payment Policies under the Physician Fee Schedule and Other Changes to Part B Payment and Coverage Policies; Medicare Shared Savings Program Requirements; etc.",
-                      "summary": "Centers for Medicare & Medicaid Services (from lower in the map)",
-                      "url": "https://public-inspection.federalregister.gov/2026-22743.pdf",
-                      "source": "Federal Register public inspection (PDF)",
-                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                      "urgency": "upcoming",
-                      "bill": null
                     }
                   ]
                 },
@@ -26592,7 +26613,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-07T18:50:10.868Z",
+                      "asOf": "2026-11-08T18:52:12.383Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -26943,10 +26964,25 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-07T18:50:10.868Z",
-                      "count": 6,
+                      "asOf": "2026-11-08T18:52:12.383Z",
+                      "count": 7,
                       "rolledUp": false,
                       "events": [
+                        {
+                          "id": "fr-comment-2026-20613",
+                          "kind": "comment_deadline",
+                          "when": "2026-12-07",
+                          "until": "2026-12-07",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Clinical Laboratory Improvement Amendments of 1988 (CLIA); Virtual Access, Gynecologic Cytology Proficiency Testing (PT), Personnel Qualifications, and Other Changes",
+                          "summary": "Health and Human Services Department, Centers for Medicare & Medicaid Services",
+                          "url": "http://www.regulations.gov/commenton/CMS-2026-3235-0001",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
                         {
                           "id": "fr-comment-2026-19535",
                           "kind": "comment_deadline",
@@ -27230,7 +27266,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-07T18:50:10.868Z",
+                      "asOf": "2026-11-08T18:52:12.383Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -28186,7 +28222,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-07T18:50:10.868Z",
+                      "asOf": "2026-11-08T18:52:12.383Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -28284,7 +28320,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-07T18:50:10.868Z",
+                      "asOf": "2026-11-08T18:52:12.383Z",
                       "count": 4,
                       "rolledUp": false,
                       "events": [
@@ -28501,10 +28537,25 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-07T18:50:10.868Z",
-                      "count": 1,
+                      "asOf": "2026-11-08T18:52:12.383Z",
+                      "count": 2,
                       "rolledUp": false,
                       "events": [
+                        {
+                          "id": "fr-comment-2026-19349",
+                          "kind": "comment_deadline",
+                          "when": "2026-12-07",
+                          "until": "2026-12-07",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Nonclinical Testing Terminology",
+                          "summary": "Health and Human Services Department, Food and Drug Administration",
+                          "url": "http://www.regulations.gov/commenton/FDA-2026-N-5347-0001",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
                         {
                           "id": "fr-comment-2026-20721",
                           "kind": "comment_deadline",
@@ -28773,10 +28824,40 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
-              "count": 7,
+              "asOf": "2026-11-08T18:52:12.383Z",
+              "count": 9,
               "rolledUp": true,
               "events": [
+                {
+                  "id": "fr-comment-2026-22734",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-07",
+                  "until": "2026-12-07",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Drawbridge Operation Regulation; Harlem River, Between the Boroughs of Manhattan and the Bronx, New York City, New York",
+                  "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+                  "url": "http://www.regulations.gov/commenton/USCG-2026-1338-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-20650",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-07",
+                  "until": "2026-12-07",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Low-Value Shipments",
+                  "summary": "Homeland Security Department, U.S. Customs and Border Protection (from lower in the map)",
+                  "url": "http://www.regulations.gov/commenton/USCBP-2026-0298-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-17926",
                   "kind": "comment_deadline",
@@ -28836,36 +28917,6 @@
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
-                },
-                {
-                  "id": "fr-pi-2026-22733",
-                  "kind": "public_inspection",
-                  "when": "2026-11-09",
-                  "until": null,
-                  "filedAt": "2026-11-06T08:45:00.000-05:00",
-                  "signedAt": null,
-                  "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
-                  "summary": "Coast Guard (from lower in the map)",
-                  "url": "https://public-inspection.federalregister.gov/2026-22733.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-pi-C1-2026-19414",
-                  "kind": "public_inspection",
-                  "when": "2026-11-09",
-                  "until": null,
-                  "filedAt": "2026-11-06T08:45:00.000-05:00",
-                  "signedAt": null,
-                  "title": "Electronic Export Manifest for Truck Cargo Test",
-                  "summary": "U.S. Customs and Border Protection (from lower in the map)",
-                  "url": "https://public-inspection.federalregister.gov/C1-2026-19414.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
                 }
               ]
             },
@@ -28894,10 +28945,40 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-07T18:50:10.868Z",
-                  "count": 7,
+                  "asOf": "2026-11-08T18:52:12.383Z",
+                  "count": 9,
                   "rolledUp": true,
                   "events": [
+                    {
+                      "id": "fr-comment-2026-22734",
+                      "kind": "comment_deadline",
+                      "when": "2026-12-07",
+                      "until": "2026-12-07",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Drawbridge Operation Regulation; Harlem River, Between the Boroughs of Manhattan and the Bronx, New York City, New York",
+                      "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/USCG-2026-1338-0001",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "fr-comment-2026-20650",
+                      "kind": "comment_deadline",
+                      "when": "2026-12-07",
+                      "until": "2026-12-07",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Low-Value Shipments",
+                      "summary": "Homeland Security Department, U.S. Customs and Border Protection (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/USCBP-2026-0298-0001",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
                     {
                       "id": "fr-comment-2026-17926",
                       "kind": "comment_deadline",
@@ -28957,36 +29038,6 @@
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
                       "bill": null
-                    },
-                    {
-                      "id": "fr-pi-2026-22733",
-                      "kind": "public_inspection",
-                      "when": "2026-11-09",
-                      "until": null,
-                      "filedAt": "2026-11-06T08:45:00.000-05:00",
-                      "signedAt": null,
-                      "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
-                      "summary": "Coast Guard (from lower in the map)",
-                      "url": "https://public-inspection.federalregister.gov/2026-22733.pdf",
-                      "source": "Federal Register public inspection (PDF)",
-                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-pi-C1-2026-19414",
-                      "kind": "public_inspection",
-                      "when": "2026-11-09",
-                      "until": null,
-                      "filedAt": "2026-11-06T08:45:00.000-05:00",
-                      "signedAt": null,
-                      "title": "Electronic Export Manifest for Truck Cargo Test",
-                      "summary": "U.S. Customs and Border Protection (from lower in the map)",
-                      "url": "https://public-inspection.federalregister.gov/C1-2026-19414.pdf",
-                      "source": "Federal Register public inspection (PDF)",
-                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                      "urgency": "upcoming",
-                      "bill": null
                     }
                   ]
                 },
@@ -29015,10 +29066,40 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-07T18:50:10.868Z",
-                      "count": 7,
+                      "asOf": "2026-11-08T18:52:12.383Z",
+                      "count": 9,
                       "rolledUp": true,
                       "events": [
+                        {
+                          "id": "fr-comment-2026-22734",
+                          "kind": "comment_deadline",
+                          "when": "2026-12-07",
+                          "until": "2026-12-07",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Drawbridge Operation Regulation; Harlem River, Between the Boroughs of Manhattan and the Bronx, New York City, New York",
+                          "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
+                          "url": "http://www.regulations.gov/commenton/USCG-2026-1338-0001",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
+                        {
+                          "id": "fr-comment-2026-20650",
+                          "kind": "comment_deadline",
+                          "when": "2026-12-07",
+                          "until": "2026-12-07",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Low-Value Shipments",
+                          "summary": "Homeland Security Department, U.S. Customs and Border Protection (from lower in the map)",
+                          "url": "http://www.regulations.gov/commenton/USCBP-2026-0298-0001",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
                         {
                           "id": "fr-comment-2026-17926",
                           "kind": "comment_deadline",
@@ -29076,36 +29157,6 @@
                           "url": "http://www.regulations.gov/commenton/USCG-2026-1162-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-pi-2026-22733",
-                          "kind": "public_inspection",
-                          "when": "2026-11-09",
-                          "until": null,
-                          "filedAt": "2026-11-06T08:45:00.000-05:00",
-                          "signedAt": null,
-                          "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals",
-                          "summary": "Coast Guard (from lower in the map)",
-                          "url": "https://public-inspection.federalregister.gov/2026-22733.pdf",
-                          "source": "Federal Register public inspection (PDF)",
-                          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-pi-C1-2026-19414",
-                          "kind": "public_inspection",
-                          "when": "2026-11-09",
-                          "until": null,
-                          "filedAt": "2026-11-06T08:45:00.000-05:00",
-                          "signedAt": null,
-                          "title": "Electronic Export Manifest for Truck Cargo Test",
-                          "summary": "U.S. Customs and Border Protection (from lower in the map)",
-                          "url": "https://public-inspection.federalregister.gov/C1-2026-19414.pdf",
-                          "source": "Federal Register public inspection (PDF)",
-                          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                           "urgency": "upcoming",
                           "bill": null
                         }
@@ -30543,10 +30594,25 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
-                          "count": 5,
+                          "asOf": "2026-11-08T18:52:12.383Z",
+                          "count": 6,
                           "rolledUp": false,
                           "events": [
+                            {
+                              "id": "fr-comment-2026-22734",
+                              "kind": "comment_deadline",
+                              "when": "2026-12-07",
+                              "until": "2026-12-07",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Drawbridge Operation Regulation; Harlem River, Between the Boroughs of Manhattan and the Bronx, New York City, New York",
+                              "summary": "Homeland Security Department, Coast Guard",
+                              "url": "http://www.regulations.gov/commenton/USCG-2026-1338-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
                             {
                               "id": "fr-comment-2026-21918",
                               "kind": "comment_deadline",
@@ -30676,10 +30742,25 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
-                          "count": 2,
+                          "asOf": "2026-11-08T18:52:12.383Z",
+                          "count": 3,
                           "rolledUp": false,
                           "events": [
+                            {
+                              "id": "fr-comment-2026-20650",
+                              "kind": "comment_deadline",
+                              "when": "2026-12-07",
+                              "until": "2026-12-07",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Low-Value Shipments",
+                              "summary": "Homeland Security Department, U.S. Customs and Border Protection",
+                              "url": "http://www.regulations.gov/commenton/USCBP-2026-0298-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
                             {
                               "id": "fr-comment-2026-17926",
                               "kind": "comment_deadline",
@@ -31305,7 +31386,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -33054,7 +33135,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 4,
               "rolledUp": true,
               "events": [
@@ -33181,7 +33262,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-07T18:50:10.868Z",
+                  "asOf": "2026-11-08T18:52:12.383Z",
                   "count": 4,
                   "rolledUp": true,
                   "events": [
@@ -33272,7 +33353,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-07T18:50:10.868Z",
+                      "asOf": "2026-11-08T18:52:12.383Z",
                       "count": 4,
                       "rolledUp": true,
                       "events": [
@@ -33363,7 +33444,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "asOf": "2026-11-08T18:52:12.383Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -33409,7 +33490,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-07T18:50:10.868Z",
+                              "asOf": "2026-11-08T18:52:12.383Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -34763,7 +34844,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "asOf": "2026-11-08T18:52:12.383Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -34860,7 +34941,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "asOf": "2026-11-08T18:52:12.383Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -39397,7 +39478,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 5,
               "rolledUp": true,
               "events": [
@@ -39503,7 +39584,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-07T18:50:10.868Z",
+                  "asOf": "2026-11-08T18:52:12.383Z",
                   "count": 5,
                   "rolledUp": true,
                   "events": [
@@ -39609,7 +39690,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-07T18:50:10.868Z",
+                      "asOf": "2026-11-08T18:52:12.383Z",
                       "count": 5,
                       "rolledUp": true,
                       "events": [
@@ -39715,7 +39796,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "asOf": "2026-11-08T18:52:12.383Z",
                           "count": 4,
                           "rolledUp": true,
                           "events": [
@@ -39888,7 +39969,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-07T18:50:10.868Z",
+                              "asOf": "2026-11-08T18:52:12.383Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -40006,7 +40087,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-07T18:50:10.868Z",
+                              "asOf": "2026-11-08T18:52:12.383Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -40439,7 +40520,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "asOf": "2026-11-08T18:52:12.383Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -40507,7 +40588,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-07T18:50:10.868Z",
+                              "asOf": "2026-11-08T18:52:12.383Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -41747,7 +41828,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 7,
               "rolledUp": true,
               "events": [
@@ -41894,7 +41975,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-07T18:50:10.868Z",
+                  "asOf": "2026-11-08T18:52:12.383Z",
                   "count": 7,
                   "rolledUp": true,
                   "events": [
@@ -42067,7 +42148,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-07T18:50:10.868Z",
+                      "asOf": "2026-11-08T18:52:12.383Z",
                       "count": 7,
                       "rolledUp": true,
                       "events": [
@@ -43016,7 +43097,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "asOf": "2026-11-08T18:52:12.383Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -43114,7 +43195,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-07T18:50:10.868Z",
+                              "asOf": "2026-11-08T18:52:12.383Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -43235,7 +43316,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "asOf": "2026-11-08T18:52:12.383Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -43383,7 +43464,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-07T18:50:10.868Z",
+                              "asOf": "2026-11-08T18:52:12.383Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -43572,7 +43653,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "asOf": "2026-11-08T18:52:12.383Z",
                           "count": 5,
                           "rolledUp": false,
                           "events": [
@@ -44036,7 +44117,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 45,
               "rolledUp": true,
               "events": [
@@ -44157,7 +44238,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-07T18:50:10.868Z",
+                  "asOf": "2026-11-08T18:52:12.383Z",
                   "count": 45,
                   "rolledUp": true,
                   "events": [
@@ -44278,7 +44359,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-07T18:50:10.868Z",
+                      "asOf": "2026-11-08T18:52:12.383Z",
                       "count": 44,
                       "rolledUp": true,
                       "events": [
@@ -44669,7 +44750,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "asOf": "2026-11-08T18:52:12.383Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -44766,7 +44847,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "asOf": "2026-11-08T18:52:12.383Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -45028,7 +45109,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "asOf": "2026-11-08T18:52:12.383Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -45338,7 +45419,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "asOf": "2026-11-08T18:52:12.383Z",
                           "count": 3,
                           "rolledUp": false,
                           "events": [
@@ -45550,7 +45631,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "asOf": "2026-11-08T18:52:12.383Z",
                           "count": 35,
                           "rolledUp": false,
                           "events": [
@@ -46239,7 +46320,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-07T18:50:10.868Z",
+                          "asOf": "2026-11-08T18:52:12.383Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -46482,7 +46563,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-07T18:50:10.868Z",
+                      "asOf": "2026-11-08T18:52:12.383Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -48507,7 +48588,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-07T18:50:10.868Z",
+          "asOf": "2026-11-08T18:52:12.383Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -49116,7 +49197,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -50207,95 +50288,95 @@
           "note": "Product door: Crosswalk Independent Federal Agencies + major non-Cabinet agencies + government corporations shelf. Constitutionally many report through the Executive; shown separately for citizen clarity."
         },
         "heat": {
-          "asOf": "2026-11-07T18:50:10.868Z",
-          "count": 62,
+          "asOf": "2026-11-08T18:52:12.383Z",
+          "count": 71,
           "rolledUp": true,
           "events": [
             {
-              "id": "fr-comment-2026-21155",
+              "id": "fr-comment-2026-18282",
               "kind": "comment_deadline",
-              "when": "2026-12-04",
-              "until": "2026-12-04",
+              "when": "2026-12-07",
+              "until": "2026-12-07",
               "filedAt": null,
               "signedAt": null,
-              "title": "Renewable Fuel Standard (RFS) Program: Reallocation of Additional 2025 Small Refinery Exemptions",
-              "summary": "Environmental Protection Agency (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/EPA-HQ-OAR-2024-0505-0951",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-C1-2026-20360",
-              "kind": "comment_deadline",
-              "when": "2026-12-04",
-              "until": "2026-12-04",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Interval Fund Modernization; Expansion of Multiple Share Class to Registered Closed-End Management Investment Companies and Business Development Companies",
-              "summary": "Securities and Exchange Commission (from lower in the map)",
-              "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/C1-2026-20360.pdf",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-20360",
-              "kind": "comment_deadline",
-              "when": "2026-12-04",
-              "until": "2026-12-04",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Interval Fund Modernization; Expansion of Multiple Share Class to Registered Closed-End Management Investment Companies and Business Development Companies",
-              "summary": "Securities and Exchange Commission (from lower in the map)",
-              "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20360.pdf",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-22337",
-              "kind": "comment_deadline",
-              "when": "2026-12-02",
-              "until": "2026-12-02",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Unleashing the Power of Unlicensed Ultra-Wideband Devices; Petition of Robert Bosch LLC for Amendment of the Part 15 Subpart F Ultra-Wideband Rules; and Petition of Alliance for Automative Innovation et al. To Amend Part 15 of the FCC's Rules To Permit the Operation of Certain Ultra-Wideband Devices",
+              "title": "Unleashing Unlicensed Spectrum for Direct-to-Device",
               "summary": "Federal Communications Commission (from lower in the map)",
-              "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-02/pdf/2026-22337.pdf",
+              "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-08/pdf/2026-18282.pdf",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-22295",
+              "id": "fr-comment-2026-22581",
               "kind": "comment_deadline",
-              "when": "2026-12-02",
-              "until": "2026-12-02",
+              "when": "2026-12-07",
+              "until": "2026-12-07",
               "filedAt": null,
               "signedAt": null,
-              "title": "Significant New Use Rules on Certain Chemical Substances (26-7)",
+              "title": "Petition for Rulemaking of New Hope Now",
+              "summary": "Federal Trade Commission (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/FTC-2026-1783-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-22592",
+              "kind": "comment_deadline",
+              "when": "2026-12-07",
+              "until": "2026-12-07",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Air Plan Approval; District of Columbia; Enhanced Vehicle Emission Inspection and Maintenance (I/M) Program Revision and Basic I/M Program Certification for Moderate Nonattainment Areas Under the 2015 Ozone NAAQS",
               "summary": "Environmental Protection Agency (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/EPA-HQ-OPPT-2026-5974-0001",
+              "url": "http://www.regulations.gov/commenton/EPA-R03-OAR-2026-1024-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-19899",
+              "id": "fr-comment-2026-22588",
               "kind": "comment_deadline",
-              "when": "2026-11-30",
-              "until": "2026-11-30",
+              "when": "2026-12-07",
+              "until": "2026-12-07",
               "filedAt": null,
               "signedAt": null,
-              "title": "Application Procedures for Board-Supervised Insured Depository Institutions Seeking Approval for a Subsidiary To Issue Payment Stablecoins",
-              "summary": "Federal Reserve System (from lower in the map)",
-              "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-29/pdf/2026-19899.pdf",
+              "title": "Air Quality Implementation Plans; California; San Joaquin Valley; 2015 8-Hour Ozone Nonattainment Area Requirements; and California Consumer Products Regulations",
+              "summary": "Environmental Protection Agency (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/EPA-R09-OAR-2026-8252-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-22585",
+              "kind": "comment_deadline",
+              "when": "2026-12-07",
+              "until": "2026-12-07",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Approval and Promulgation of State Plans for Designated Facilities and Pollutants; Arizona; Control of Emissions From Existing Municipal Solid Waste Landfills",
+              "summary": "Environmental Protection Agency (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/EPA-R09-OAR-2026-5710-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-22583",
+              "kind": "comment_deadline",
+              "when": "2026-12-07",
+              "until": "2026-12-07",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Approval and Promulgation of Delegation of Authority for Designated Facilities and Pollutants; Allegheny County; Delegation of Authority of the Federal Plan for Existing Municipal Solid Waste Landfills",
+              "summary": "Environmental Protection Agency (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/EPA-R03-OAR-2026-5021-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
@@ -51551,10 +51632,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
-              "count": 7,
+              "asOf": "2026-11-08T18:52:12.383Z",
+              "count": 8,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-18282",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-07",
+                  "until": "2026-12-07",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Unleashing Unlicensed Spectrum for Direct-to-Device",
+                  "summary": "Federal Communications Commission",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-08/pdf/2026-18282.pdf",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-22337",
                   "kind": "comment_deadline",
@@ -52864,7 +52960,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -53300,10 +53396,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
-              "count": 2,
+              "asOf": "2026-11-08T18:52:12.383Z",
+              "count": 3,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-22581",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-07",
+                  "until": "2026-12-07",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Petition for Rulemaking of New Hope Now",
+                  "summary": "Federal Trade Commission",
+                  "url": "http://www.regulations.gov/commenton/FTC-2026-1783-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-20143",
                   "kind": "comment_deadline",
@@ -53377,7 +53488,7 @@
               "note": "Product shelf: GSE / government corporation entities lifted from Crosswalk Industry bucket."
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 5,
               "rolledUp": true,
               "events": [
@@ -53989,7 +54100,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-11-07T18:50:10.868Z",
+                  "asOf": "2026-11-08T18:52:12.383Z",
                   "count": 2,
                   "rolledUp": false,
                   "events": [
@@ -54771,7 +54882,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-11-07T18:50:10.868Z",
+                  "asOf": "2026-11-08T18:52:12.383Z",
                   "count": 1,
                   "rolledUp": false,
                   "events": [
@@ -55109,7 +55220,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-11-07T18:50:10.868Z",
+                  "asOf": "2026-11-08T18:52:12.383Z",
                   "count": 2,
                   "rolledUp": false,
                   "events": [
@@ -56049,7 +56160,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -60848,7 +60959,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -61128,7 +61239,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -61515,8 +61626,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
-              "count": 4,
+              "asOf": "2026-11-08T18:52:12.383Z",
+              "count": 5,
               "rolledUp": false,
               "events": [
                 {
@@ -61530,6 +61641,21 @@
                   "summary": "Consumer Product Safety Commission",
                   "url": "http://www.regulations.gov/commenton/CPSC-2026-0463-0001",
                   "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-sun-2026-22828-2026-11-18",
+                  "kind": "sunshine_meeting",
+                  "when": "2026-11-18",
+                  "until": "2026-11-18",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Sunshine Act Meeting",
+                  "summary": "Consumer Product Safety Commission",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-09/pdf/2026-22828.pdf",
+                  "source": "Federal Register Sunshine Act meeting",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
@@ -62071,10 +62197,85 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
-              "count": 13,
+              "asOf": "2026-11-08T18:52:12.383Z",
+              "count": 18,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-22592",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-07",
+                  "until": "2026-12-07",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Air Plan Approval; District of Columbia; Enhanced Vehicle Emission Inspection and Maintenance (I/M) Program Revision and Basic I/M Program Certification for Moderate Nonattainment Areas Under the 2015 Ozone NAAQS",
+                  "summary": "Environmental Protection Agency",
+                  "url": "http://www.regulations.gov/commenton/EPA-R03-OAR-2026-1024-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-22588",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-07",
+                  "until": "2026-12-07",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Air Quality Implementation Plans; California; San Joaquin Valley; 2015 8-Hour Ozone Nonattainment Area Requirements; and California Consumer Products Regulations",
+                  "summary": "Environmental Protection Agency",
+                  "url": "http://www.regulations.gov/commenton/EPA-R09-OAR-2026-8252-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-22585",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-07",
+                  "until": "2026-12-07",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Approval and Promulgation of State Plans for Designated Facilities and Pollutants; Arizona; Control of Emissions From Existing Municipal Solid Waste Landfills",
+                  "summary": "Environmental Protection Agency",
+                  "url": "http://www.regulations.gov/commenton/EPA-R09-OAR-2026-5710-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-22583",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-07",
+                  "until": "2026-12-07",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Approval and Promulgation of Delegation of Authority for Designated Facilities and Pollutants; Allegheny County; Delegation of Authority of the Federal Plan for Existing Municipal Solid Waste Landfills",
+                  "summary": "Environmental Protection Agency",
+                  "url": "http://www.regulations.gov/commenton/EPA-R03-OAR-2026-5021-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-21618",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-07",
+                  "until": "2026-12-07",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Utah Underground Injection Control Program; Class VI Primacy",
+                  "summary": "Environmental Protection Agency",
+                  "url": "http://www.regulations.gov/commenton/EPA-HQ-OW-2026-0496-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-21155",
                   "kind": "comment_deadline",
@@ -63612,7 +63813,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -64561,7 +64762,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -65035,10 +65236,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
-              "count": 5,
+              "asOf": "2026-11-08T18:52:12.383Z",
+              "count": 6,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-sun-2026-22441-2026-12-07",
+                  "kind": "sunshine_meeting",
+                  "when": "2026-12-07",
+                  "until": "2026-12-07",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Sunshine Act Meetings",
+                  "summary": "Nuclear Regulatory Commission",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-03/pdf/2026-22441.pdf",
+                  "source": "Federal Register Sunshine Act meeting",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-21690",
                   "kind": "comment_deadline",
@@ -65596,7 +65812,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -66985,7 +67201,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -67452,10 +67668,40 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 12,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-20474",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-07",
+                  "until": "2026-12-07",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Investment Adviser Performance-Based Compensation Modernization",
+                  "summary": "Securities and Exchange Commission",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-06/pdf/2026-20474.pdf",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-20466",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-07",
+                  "until": "2026-12-07",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Adviser and Regulated Fund Custody Rules; Crypto Custody Rules",
+                  "summary": "Securities and Exchange Commission",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-06/pdf/2026-20466.pdf",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-C1-2026-20360",
                   "kind": "comment_deadline",
@@ -67601,36 +67847,6 @@
                   "title": "Self-Regulatory Organizations; Proposed Rule Changes: Investors Exchange LLC",
                   "summary": "Securities and Exchange Commission",
                   "url": "https://public-inspection.federalregister.gov/2026-22752.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-pi-2026-22753",
-                  "kind": "public_inspection",
-                  "when": "2026-11-09",
-                  "until": null,
-                  "filedAt": "2026-11-06T08:45:00.000-05:00",
-                  "signedAt": null,
-                  "title": "Self-Regulatory Organizations; Proposed Rule Changes: Investors Exchange LLC",
-                  "summary": "Securities and Exchange Commission",
-                  "url": "https://public-inspection.federalregister.gov/2026-22753.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-pi-2026-22754",
-                  "kind": "public_inspection",
-                  "when": "2026-11-09",
-                  "until": null,
-                  "filedAt": "2026-11-06T08:45:00.000-05:00",
-                  "signedAt": null,
-                  "title": "Self-Regulatory Organizations; Proposed Rule Changes: MIAX Sapphire, LLC",
-                  "summary": "Securities and Exchange Commission",
-                  "url": "https://public-inspection.federalregister.gov/2026-22754.pdf",
                   "source": "Federal Register public inspection (PDF)",
                   "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                   "urgency": "upcoming",
@@ -68011,7 +68227,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-07T18:50:10.868Z",
+              "asOf": "2026-11-08T18:52:12.383Z",
               "count": 1,
               "rolledUp": false,
               "events": [
