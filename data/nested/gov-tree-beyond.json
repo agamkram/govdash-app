@@ -41,11 +41,11 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-11-10T20:53:15.098Z",
-      "asOf": "2026-11-10T20:52:56.172Z",
+      "enrichedAt": "2026-11-11T21:27:45.824Z",
+      "asOf": "2026-11-11T21:27:21.843Z",
       "nodesWithHeat": 3,
       "nodesWithDirectHeat": 1,
-      "rawEventCount": 300,
+      "rawEventCount": 304,
       "matched": {
         "chamber": 0,
         "presidential": 0,
@@ -55,17 +55,14 @@
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 122,
+      "unmatchedPublicInspection": 123,
       "unmatchedCommentDeadlines": 125,
-      "unmatchedSunshine": 7,
+      "unmatchedSunshine": 2,
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 0,
-          "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-          "stale": true,
-          "keptFrom": "2026-11-09T23:27:47.292Z",
-          "error": "https://www.senate.gov/legislative/schedule/floor_schedule.xml → HTTP 403"
+          "count": 3,
+          "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
           "ok": true,
@@ -79,52 +76,52 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 123,
+          "count": 124,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
-          "count": 13,
-          "since": "2026-10-27",
+          "count": 14,
+          "since": "2026-10-28",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
           "count": 125,
-          "start": "2026-11-10",
-          "end": "2026-12-09",
+          "start": "2026-11-11",
+          "end": "2026-12-10",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
-          "count": 7,
-          "start": "2026-11-10",
-          "end": "2026-12-09",
+          "count": 2,
+          "start": "2026-11-11",
+          "end": "2026-12-10",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
-          "count": 12,
-          "start": "2026-11-10",
-          "end": "2026-12-09",
+          "count": 13,
+          "start": "2026-11-11",
+          "end": "2026-12-10",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
-          "count": 4,
-          "start": "2026-11-10",
-          "end": "2026-12-09",
+          "count": 7,
+          "start": "2026-11-11",
+          "end": "2026-12-10",
           "congress": 119,
-          "calendarIds": 4,
+          "calendarIds": 7,
           "skipped404": [],
           "url": "https://api.congress.gov/v3/committee-meeting/119/house"
         },
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-11-10",
-          "end": "2026-12-09",
+          "start": "2026-11-11",
+          "end": "2026-12-10",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -144,7 +141,7 @@
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
     "heat": {
-      "asOf": "2026-11-10T20:52:56.172Z",
+      "asOf": "2026-11-11T21:27:21.843Z",
       "count": 1,
       "rolledUp": true,
       "events": [
@@ -2244,7 +2241,7 @@
           "note": "∞ map door: Crosswalk International Governmental Organizations. Not U.S. agencies; tables the United States sits at."
         },
         "heat": {
-          "asOf": "2026-11-10T20:52:56.172Z",
+          "asOf": "2026-11-11T21:27:21.843Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -5562,7 +5559,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 1,
               "rolledUp": false,
               "events": [

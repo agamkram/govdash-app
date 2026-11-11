@@ -80,31 +80,28 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-11-10T20:53:14.435Z",
-      "asOf": "2026-11-10T20:52:56.172Z",
-      "nodesWithHeat": 102,
-      "nodesWithDirectHeat": 57,
-      "rawEventCount": 300,
+      "enrichedAt": "2026-11-11T21:27:44.938Z",
+      "asOf": "2026-11-11T21:27:21.843Z",
+      "nodesWithHeat": 101,
+      "nodesWithDirectHeat": 56,
+      "rawEventCount": 304,
       "matched": {
-        "chamber": 15,
-        "presidential": 13,
-        "publicInspection": 113,
-        "commentDeadlines": 116,
-        "sunshine": 7,
-        "hearings": 16,
+        "chamber": 18,
+        "presidential": 14,
+        "publicInspection": 114,
+        "commentDeadlines": 117,
+        "sunshine": 2,
+        "hearings": 20,
         "scotus": 1
       },
       "unmatchedPublicInspection": 10,
-      "unmatchedCommentDeadlines": 9,
+      "unmatchedCommentDeadlines": 8,
       "unmatchedSunshine": 0,
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 0,
-          "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-          "stale": true,
-          "keptFrom": "2026-11-09T23:27:47.292Z",
-          "error": "https://www.senate.gov/legislative/schedule/floor_schedule.xml → HTTP 403"
+          "count": 3,
+          "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
           "ok": true,
@@ -118,52 +115,52 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 123,
+          "count": 124,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
-          "count": 13,
-          "since": "2026-10-27",
+          "count": 14,
+          "since": "2026-10-28",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
           "count": 125,
-          "start": "2026-11-10",
-          "end": "2026-12-09",
+          "start": "2026-11-11",
+          "end": "2026-12-10",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
-          "count": 7,
-          "start": "2026-11-10",
-          "end": "2026-12-09",
+          "count": 2,
+          "start": "2026-11-11",
+          "end": "2026-12-10",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
-          "count": 12,
-          "start": "2026-11-10",
-          "end": "2026-12-09",
+          "count": 13,
+          "start": "2026-11-11",
+          "end": "2026-12-10",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
-          "count": 4,
-          "start": "2026-11-10",
-          "end": "2026-12-09",
+          "count": 7,
+          "start": "2026-11-11",
+          "end": "2026-12-10",
           "congress": 119,
-          "calendarIds": 4,
+          "calendarIds": 7,
           "skipped404": [],
           "url": "https://api.congress.gov/v3/committee-meeting/119/house"
         },
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-11-10",
-          "end": "2026-12-09",
+          "start": "2026-11-11",
+          "end": "2026-12-10",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -211,8 +208,8 @@
       "note": "Synthetic root. Crosswalk branches attach under Parent=[Branch]."
     },
     "heat": {
-      "asOf": "2026-11-10T20:52:56.172Z",
-      "count": 250,
+      "asOf": "2026-11-11T21:27:21.843Z",
+      "count": 247,
       "rolledUp": true,
       "events": [
         {
@@ -358,8 +355,8 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-10T20:52:56.172Z",
-          "count": 172,
+          "asOf": "2026-11-11T21:27:21.843Z",
+          "count": 174,
           "rolledUp": true,
           "events": [
             {
@@ -2240,10 +2237,25 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 13,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-pres-2026-23113",
+                  "kind": "presidential_doc",
+                  "when": "2026-11-12",
+                  "until": null,
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Establishment of the Oval Office National Monument",
+                  "summary": "Presidential Document",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-12/pdf/2026-23113.pdf",
+                  "source": "Federal Register presidential documents (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+                  "urgency": "recent",
+                  "bill": null
+                },
                 {
                   "id": "fr-pres-2026-22789",
                   "kind": "presidential_doc",
@@ -2408,21 +2420,6 @@
                   "sourceUrl": "https://www.federalregister.gov/presidential-documents",
                   "urgency": "recent",
                   "bill": null
-                },
-                {
-                  "id": "fr-pres-2026-22050",
-                  "kind": "presidential_doc",
-                  "when": "2026-10-28",
-                  "until": null,
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "National Seafood Month, 2026",
-                  "summary": "Presidential Document",
-                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-28/pdf/2026-22050.pdf",
-                  "source": "Federal Register presidential documents (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/presidential-documents",
-                  "urgency": "recent",
-                  "bill": null
                 }
               ],
               "hasChildHeat": true
@@ -2466,7 +2463,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-10T20:52:56.172Z",
+                  "asOf": "2026-11-11T21:27:21.843Z",
                   "count": 1,
                   "rolledUp": false,
                   "events": [
@@ -3370,7 +3367,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 6,
               "rolledUp": true,
               "events": [
@@ -3517,7 +3514,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-10T20:52:56.172Z",
+                  "asOf": "2026-11-11T21:27:21.843Z",
                   "count": 6,
                   "rolledUp": true,
                   "events": [
@@ -3638,7 +3635,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-10T20:52:56.172Z",
+                      "asOf": "2026-11-11T21:27:21.843Z",
                       "count": 6,
                       "rolledUp": true,
                       "events": [
@@ -4980,7 +4977,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-10T20:52:56.172Z",
+                          "asOf": "2026-11-11T21:27:21.843Z",
                           "count": 5,
                           "rolledUp": true,
                           "events": [
@@ -5086,7 +5083,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-10T20:52:56.172Z",
+                              "asOf": "2026-11-11T21:27:21.843Z",
                               "count": 3,
                               "rolledUp": false,
                               "events": [
@@ -5216,7 +5213,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-10T20:52:56.172Z",
+                              "asOf": "2026-11-11T21:27:21.843Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -5358,7 +5355,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-10T20:52:56.172Z",
+                          "asOf": "2026-11-11T21:27:21.843Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -5404,7 +5401,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-10T20:52:56.172Z",
+                              "asOf": "2026-11-11T21:27:21.843Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -6329,7 +6326,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 11,
               "rolledUp": true,
               "events": [
@@ -6450,7 +6447,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-10T20:52:56.172Z",
+                  "asOf": "2026-11-11T21:27:21.843Z",
                   "count": 11,
                   "rolledUp": true,
                   "events": [
@@ -6571,7 +6568,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-10T20:52:56.172Z",
+                      "asOf": "2026-11-11T21:27:21.843Z",
                       "count": 11,
                       "rolledUp": true,
                       "events": [
@@ -6692,7 +6689,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-10T20:52:56.172Z",
+                          "asOf": "2026-11-11T21:27:21.843Z",
                           "count": 11,
                           "rolledUp": true,
                           "events": [
@@ -7883,7 +7880,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-10T20:52:56.172Z",
+                              "asOf": "2026-11-11T21:27:21.843Z",
                               "count": 2,
                               "rolledUp": true,
                               "events": [
@@ -8004,7 +8001,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-11-10T20:52:56.172Z",
+                                  "asOf": "2026-11-11T21:27:21.843Z",
                                   "count": 2,
                                   "rolledUp": false,
                                   "events": [
@@ -8278,7 +8275,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-10T20:52:56.172Z",
+                              "asOf": "2026-11-11T21:27:21.843Z",
                               "count": 8,
                               "rolledUp": true,
                               "events": [
@@ -8369,7 +8366,7 @@
                                   "usgm": null
                                 },
                                 "heat": {
-                                  "asOf": "2026-11-10T20:52:56.172Z",
+                                  "asOf": "2026-11-11T21:27:21.843Z",
                                   "count": 8,
                                   "rolledUp": true,
                                   "events": [
@@ -8562,7 +8559,7 @@
                                       }
                                     },
                                     "heat": {
-                                      "asOf": "2026-11-10T20:52:56.172Z",
+                                      "asOf": "2026-11-11T21:27:21.843Z",
                                       "count": 8,
                                       "rolledUp": false,
                                       "events": [
@@ -8796,7 +8793,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-10T20:52:56.172Z",
+                              "asOf": "2026-11-11T21:27:21.843Z",
                               "count": 1,
                               "rolledUp": true,
                               "events": [
@@ -8934,7 +8931,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-11-10T20:52:56.172Z",
+                                  "asOf": "2026-11-11T21:27:21.843Z",
                                   "count": 1,
                                   "rolledUp": false,
                                   "events": [
@@ -22917,7 +22914,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 5,
               "rolledUp": true,
               "events": [
@@ -23008,7 +23005,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-10T20:52:56.172Z",
+                  "asOf": "2026-11-11T21:27:21.843Z",
                   "count": 5,
                   "rolledUp": true,
                   "events": [
@@ -25644,7 +25641,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-10T20:52:56.172Z",
+                      "asOf": "2026-11-11T21:27:21.843Z",
                       "count": 5,
                       "rolledUp": false,
                       "events": [
@@ -25976,8 +25973,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
-              "count": 20,
+              "asOf": "2026-11-11T21:27:21.843Z",
+              "count": 22,
               "rolledUp": false,
               "events": [
                 {
@@ -26023,10 +26020,40 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-10T20:52:56.172Z",
-                  "count": 19,
+                  "asOf": "2026-11-11T21:27:21.843Z",
+                  "count": 21,
                   "rolledUp": true,
                   "events": [
+                    {
+                      "id": "fr-comment-2026-22944",
+                      "kind": "comment_deadline",
+                      "when": "2026-12-10",
+                      "until": "2026-12-10",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Modification to Work Requirements for Able-Bodied Adults",
+                      "summary": "Agriculture Department, Food and Nutrition Administration (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/FNA-2026-0628-0001",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "fr-comment-2026-22936",
+                      "kind": "comment_deadline",
+                      "when": "2026-12-10",
+                      "until": "2026-12-10",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Supplemental Nutrition Assistance Program: Reforming Categorical Eligibility",
+                      "summary": "Agriculture Department, Food and Nutrition Administration (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/FNA-2026-0661-0001",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
                     {
                       "id": "fr-comment-2026-16296",
                       "kind": "comment_deadline",
@@ -26086,36 +26113,6 @@
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
                       "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-19535",
-                      "kind": "comment_deadline",
-                      "when": "2026-11-23",
-                      "until": "2026-11-23",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Request for Information; Medicare Part D Reasonable and Relevant Pharmacy Contracting Standards",
-                      "summary": "Health and Human Services Department, Centers for Medicare & Medicaid Services (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/CMS-2026-3037-0001",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-20721",
-                      "kind": "comment_deadline",
-                      "when": "2026-11-23",
-                      "until": "2026-11-23",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Requirements for Additional Traceability Records for Certain Foods: Enforcement Policy for Certain Retail Food Establishments and Restaurants; Draft Guidance for Industry; Availability",
-                      "summary": "Health and Human Services Department, Food and Drug Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FDA-2025-D-6952-0001",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
                     }
                   ]
                 },
@@ -26169,7 +26166,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-10T20:52:56.172Z",
+                      "asOf": "2026-11-11T21:27:21.843Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -26520,7 +26517,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-10T20:52:56.172Z",
+                      "asOf": "2026-11-11T21:27:21.843Z",
                       "count": 3,
                       "rolledUp": false,
                       "events": [
@@ -26839,7 +26836,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-10T20:52:56.172Z",
+                      "asOf": "2026-11-11T21:27:21.843Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -27733,7 +27730,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-10T20:52:56.172Z",
+                      "asOf": "2026-11-11T21:27:21.843Z",
                       "count": 3,
                       "rolledUp": false,
                       "events": [
@@ -27861,7 +27858,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-10T20:52:56.172Z",
+                      "asOf": "2026-11-11T21:27:21.843Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -28033,10 +28030,40 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-10T20:52:56.172Z",
-                      "count": 8,
+                      "asOf": "2026-11-11T21:27:21.843Z",
+                      "count": 10,
                       "rolledUp": false,
                       "events": [
+                        {
+                          "id": "fr-comment-2026-22944",
+                          "kind": "comment_deadline",
+                          "when": "2026-12-10",
+                          "until": "2026-12-10",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Modification to Work Requirements for Able-Bodied Adults",
+                          "summary": "Agriculture Department, Food and Nutrition Administration",
+                          "url": "http://www.regulations.gov/commenton/FNA-2026-0628-0001",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
+                        {
+                          "id": "fr-comment-2026-22936",
+                          "kind": "comment_deadline",
+                          "when": "2026-12-10",
+                          "until": "2026-12-10",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Supplemental Nutrition Assistance Program: Reforming Categorical Eligibility",
+                          "summary": "Agriculture Department, Food and Nutrition Administration",
+                          "url": "http://www.regulations.gov/commenton/FNA-2026-0661-0001",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
                         {
                           "id": "fr-comment-2026-16296",
                           "kind": "comment_deadline",
@@ -28410,7 +28437,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 8,
               "rolledUp": true,
               "events": [
@@ -28531,7 +28558,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-10T20:52:56.172Z",
+                  "asOf": "2026-11-11T21:27:21.843Z",
                   "count": 8,
                   "rolledUp": true,
                   "events": [
@@ -28652,7 +28679,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-10T20:52:56.172Z",
+                      "asOf": "2026-11-11T21:27:21.843Z",
                       "count": 8,
                       "rolledUp": true,
                       "events": [
@@ -30180,7 +30207,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-10T20:52:56.172Z",
+                          "asOf": "2026-11-11T21:27:21.843Z",
                           "count": 6,
                           "rolledUp": false,
                           "events": [
@@ -30328,7 +30355,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-10T20:52:56.172Z",
+                          "asOf": "2026-11-11T21:27:21.843Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -30956,7 +30983,28 @@
                 ]
               }
             },
-            "heat": null,
+            "heat": {
+              "asOf": "2026-11-11T21:27:21.843Z",
+              "count": 1,
+              "rolledUp": false,
+              "events": [
+                {
+                  "id": "fr-pi-2026-23003",
+                  "kind": "public_inspection",
+                  "when": "2026-11-12",
+                  "until": null,
+                  "filedAt": "2026-11-10T16:15:00.000-05:00",
+                  "signedAt": null,
+                  "title": "Housing and Community Development Act: Verification of Eligible Status",
+                  "summary": "Housing and Urban Development Department",
+                  "url": "https://public-inspection.federalregister.gov/2026-23003.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                }
+              ]
+            },
             "children": [
               {
                 "id": "gsa-580",
@@ -32685,7 +32733,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 7,
               "rolledUp": true,
               "events": [
@@ -32842,7 +32890,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-10T20:52:56.172Z",
+                  "asOf": "2026-11-11T21:27:21.843Z",
                   "count": 7,
                   "rolledUp": true,
                   "events": [
@@ -32963,7 +33011,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-10T20:52:56.172Z",
+                      "asOf": "2026-11-11T21:27:21.843Z",
                       "count": 7,
                       "rolledUp": true,
                       "events": [
@@ -34442,7 +34490,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-10T20:52:56.172Z",
+                          "asOf": "2026-11-11T21:27:21.843Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -34539,7 +34587,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-10T20:52:56.172Z",
+                          "asOf": "2026-11-11T21:27:21.843Z",
                           "count": 5,
                           "rolledUp": false,
                           "events": [
@@ -35048,7 +35096,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 7,
               "rolledUp": true,
               "events": [
@@ -35139,7 +35187,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-10T20:52:56.172Z",
+                  "asOf": "2026-11-11T21:27:21.843Z",
                   "count": 7,
                   "rolledUp": true,
                   "events": [
@@ -35230,7 +35278,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-10T20:52:56.172Z",
+                      "asOf": "2026-11-11T21:27:21.843Z",
                       "count": 7,
                       "rolledUp": true,
                       "events": [
@@ -35844,7 +35892,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-10T20:52:56.172Z",
+                          "asOf": "2026-11-11T21:27:21.843Z",
                           "count": 7,
                           "rolledUp": false,
                           "events": [
@@ -39445,7 +39493,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 14,
               "rolledUp": true,
               "events": [
@@ -39566,7 +39614,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-10T20:52:56.172Z",
+                  "asOf": "2026-11-11T21:27:21.843Z",
                   "count": 14,
                   "rolledUp": true,
                   "events": [
@@ -39687,7 +39735,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-10T20:52:56.172Z",
+                      "asOf": "2026-11-11T21:27:21.843Z",
                       "count": 14,
                       "rolledUp": true,
                       "events": [
@@ -39808,7 +39856,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-10T20:52:56.172Z",
+                          "asOf": "2026-11-11T21:27:21.843Z",
                           "count": 13,
                           "rolledUp": true,
                           "events": [
@@ -39996,7 +40044,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-10T20:52:56.172Z",
+                              "asOf": "2026-11-11T21:27:21.843Z",
                               "count": 12,
                               "rolledUp": false,
                               "events": [
@@ -40264,7 +40312,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-10T20:52:56.172Z",
+                              "asOf": "2026-11-11T21:27:21.843Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -40682,7 +40730,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-10T20:52:56.172Z",
+                          "asOf": "2026-11-11T21:27:21.843Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -40750,7 +40798,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-10T20:52:56.172Z",
+                              "asOf": "2026-11-11T21:27:21.843Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -41990,7 +42038,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 5,
               "rolledUp": true,
               "events": [
@@ -42081,7 +42129,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-10T20:52:56.172Z",
+                  "asOf": "2026-11-11T21:27:21.843Z",
                   "count": 5,
                   "rolledUp": true,
                   "events": [
@@ -42224,7 +42272,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-10T20:52:56.172Z",
+                      "asOf": "2026-11-11T21:27:21.843Z",
                       "count": 5,
                       "rolledUp": true,
                       "events": [
@@ -43615,7 +43663,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-10T20:52:56.172Z",
+                          "asOf": "2026-11-11T21:27:21.843Z",
                           "count": 5,
                           "rolledUp": false,
                           "events": [
@@ -44079,7 +44127,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 45,
               "rolledUp": true,
               "events": [
@@ -44200,7 +44248,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-10T20:52:56.172Z",
+                  "asOf": "2026-11-11T21:27:21.843Z",
                   "count": 45,
                   "rolledUp": true,
                   "events": [
@@ -44321,7 +44369,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-10T20:52:56.172Z",
+                      "asOf": "2026-11-11T21:27:21.843Z",
                       "count": 45,
                       "rolledUp": true,
                       "events": [
@@ -44850,7 +44898,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-10T20:52:56.172Z",
+                          "asOf": "2026-11-11T21:27:21.843Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -45035,7 +45083,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-10T20:52:56.172Z",
+                          "asOf": "2026-11-11T21:27:21.843Z",
                           "count": 3,
                           "rolledUp": false,
                           "events": [
@@ -45360,7 +45408,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-10T20:52:56.172Z",
+                          "asOf": "2026-11-11T21:27:21.843Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -45557,7 +45605,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-10T20:52:56.172Z",
+                          "asOf": "2026-11-11T21:27:21.843Z",
                           "count": 36,
                           "rolledUp": false,
                           "events": [
@@ -46261,7 +46309,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-10T20:52:56.172Z",
+                          "asOf": "2026-11-11T21:27:21.843Z",
                           "count": 3,
                           "rolledUp": false,
                           "events": [
@@ -48613,8 +48661,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
-              "count": 17,
+              "asOf": "2026-11-11T21:27:21.843Z",
+              "count": 16,
               "rolledUp": false,
               "events": [
                 {
@@ -48852,21 +48900,6 @@
                   "title": "National Emission Standards for Hazardous Air Pollutants for Gasoline Distribution Facilities and Standards of Performance for Bulk Gasoline Terminals Reconsideration",
                   "summary": "Environmental Protection Agency",
                   "url": "http://www.regulations.gov/commenton/EPA-HQ-OAR-2025-0302-0001",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-18552",
-                  "kind": "comment_deadline",
-                  "when": "2026-11-10",
-                  "until": "2026-11-10",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Wisconsin: Approval of State Coal Combustion Residuals Permit Program",
-                  "summary": "Environmental Protection Agency",
-                  "url": "http://www.regulations.gov/commenton/EPA-HQ-OLEM-2026-4324-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
@@ -50700,7 +50733,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 6,
               "rolledUp": false,
               "events": [
@@ -50979,7 +51012,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -52021,7 +52054,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -52814,7 +52847,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-10T20:52:56.172Z",
+          "asOf": "2026-11-11T21:27:21.843Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -53423,7 +53456,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -54525,7 +54558,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-10T20:52:56.172Z",
+          "asOf": "2026-11-11T21:27:21.843Z",
           "count": 25,
           "rolledUp": true,
           "events": [
@@ -54575,47 +54608,47 @@
               "bill": null
             },
             {
-              "id": "senate-hearing-338800",
+              "id": "house-hearing-119596",
               "kind": "hearing",
-              "when": "2026-11-18",
+              "when": "2026-11-18T19:15:00Z",
               "until": null,
               "filedAt": null,
               "signedAt": null,
-              "title": "Hearings to examine the nomination of Dennis Kirk, of Virginia, to be Inspector General, Department of the Interior.",
-              "summary": "Energy and Natural Resources · Open Hearing · 09:30 AM · SD-366 (from lower in the map)",
-              "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-              "source": "Senate.gov committee hearings XML",
-              "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+              "title": "Psychedelic-Assisted Therapies for Veterans: The Path Forward",
+              "summary": "House Veterans' Affairs Subcommittee on Health · Hearing · Scheduled · Cannon House Office Building 360 (from lower in the map)",
+              "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119596",
+              "source": "Congress.gov committee meeting API",
+              "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "senate-hearing-338823",
+              "id": "house-hearing-119594",
               "kind": "hearing",
-              "when": "2026-11-18",
+              "when": "2026-11-18T19:00:00Z",
               "until": null,
               "filedAt": null,
               "signedAt": null,
-              "title": "Hearings to examine a bridge, not a barrier, focusing on reforming the safety net to reward work.",
-              "summary": "Aging · Open Hearing · 03:30 PM · SH-216 (from lower in the map)",
-              "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-              "source": "Senate.gov committee hearings XML",
-              "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+              "title": "“Oversight of the Bureau of Alcohol, Tobacco, Firearms and Explosives’ Out-of-Business Records Retention Practices”",
+              "summary": "House Oversight and Government Reform Subcommittee on Federal Law Enforcement · Hearing · Scheduled · Rayburn House Office Building 2154 (from lower in the map)",
+              "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119594",
+              "source": "Congress.gov committee meeting API",
+              "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "senate-hearing-338821",
+              "id": "house-hearing-119597",
               "kind": "hearing",
-              "when": "2026-11-17",
+              "when": "2026-11-18T15:00:00Z",
               "until": null,
               "filedAt": null,
               "signedAt": null,
-              "title": "Hearings to examine the nomination of Hung Cao, of Virginia, to be Secretary of the Navy.",
-              "summary": "Armed Services · Open Hearing · 09:30 AM · SD-G50 (from lower in the map)",
-              "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-              "source": "Senate.gov committee hearings XML",
-              "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+              "title": "“Protecting Main Street, Securing America: Examining Cybersecurity Challenges for Small Business Contractors.”",
+              "summary": "House Small Business Subcommittee on Contracting and Infrastructure · Hearing · Scheduled · Rayburn House Office Building 2360 (from lower in the map)",
+              "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119597",
+              "source": "Congress.gov committee meeting API",
+              "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
               "urgency": "upcoming",
               "bill": null
             }
@@ -55198,7 +55231,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 24,
               "rolledUp": true,
               "events": [
@@ -55233,62 +55266,62 @@
                   "bill": null
                 },
                 {
-                  "id": "senate-hearing-338800",
+                  "id": "house-hearing-119596",
                   "kind": "hearing",
-                  "when": "2026-11-18",
+                  "when": "2026-11-18T19:15:00Z",
                   "until": null,
                   "filedAt": null,
                   "signedAt": null,
-                  "title": "Hearings to examine the nomination of Dennis Kirk, of Virginia, to be Inspector General, Department of the Interior.",
-                  "summary": "Energy and Natural Resources · Open Hearing · 09:30 AM · SD-366 (from lower in the map)",
-                  "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-                  "source": "Senate.gov committee hearings XML",
-                  "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "senate-hearing-338823",
-                  "kind": "hearing",
-                  "when": "2026-11-18",
-                  "until": null,
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Hearings to examine a bridge, not a barrier, focusing on reforming the safety net to reward work.",
-                  "summary": "Aging · Open Hearing · 03:30 PM · SH-216 (from lower in the map)",
-                  "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-                  "source": "Senate.gov committee hearings XML",
-                  "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "senate-hearing-338821",
-                  "kind": "hearing",
-                  "when": "2026-11-17",
-                  "until": null,
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Hearings to examine the nomination of Hung Cao, of Virginia, to be Secretary of the Navy.",
-                  "summary": "Armed Services · Open Hearing · 09:30 AM · SD-G50 (from lower in the map)",
-                  "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-                  "source": "Senate.gov committee hearings XML",
-                  "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "house-hearing-119588",
-                  "kind": "hearing",
-                  "when": "2026-11-13T15:00:00Z",
-                  "until": null,
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "\"Workers in Charge: Restoring Choice and Accountability in the Workplace\"",
-                  "summary": "House Education and Workforce · Hearing · Scheduled (from lower in the map)",
-                  "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119588",
+                  "title": "Psychedelic-Assisted Therapies for Veterans: The Path Forward",
+                  "summary": "House Veterans' Affairs Subcommittee on Health · Hearing · Scheduled · Cannon House Office Building 360 (from lower in the map)",
+                  "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119596",
                   "source": "Congress.gov committee meeting API",
                   "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "house-hearing-119594",
+                  "kind": "hearing",
+                  "when": "2026-11-18T19:00:00Z",
+                  "until": null,
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "“Oversight of the Bureau of Alcohol, Tobacco, Firearms and Explosives’ Out-of-Business Records Retention Practices”",
+                  "summary": "House Oversight and Government Reform Subcommittee on Federal Law Enforcement · Hearing · Scheduled · Rayburn House Office Building 2154 (from lower in the map)",
+                  "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119594",
+                  "source": "Congress.gov committee meeting API",
+                  "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "house-hearing-119597",
+                  "kind": "hearing",
+                  "when": "2026-11-18T15:00:00Z",
+                  "until": null,
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "“Protecting Main Street, Securing America: Examining Cybersecurity Challenges for Small Business Contractors.”",
+                  "summary": "House Small Business Subcommittee on Contracting and Infrastructure · Hearing · Scheduled · Rayburn House Office Building 2360 (from lower in the map)",
+                  "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119597",
+                  "source": "Congress.gov committee meeting API",
+                  "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "senate-hearing-338831",
+                  "kind": "hearing",
+                  "when": "2026-11-18",
+                  "until": null,
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Business meeting to consider the nominations of Justin Bytheway, of Utah, to be Ambassador to the Kingdom of Tonga, William Flens, of the District of Columbia, a Career Member of the Senior Foreign Service, Class of Minister-Counselor, to be Ambassador to the Republic of Chad, Douglas Holder, of Florida, to be Ambassador to the Republic of Bulgaria, Marc Dillard, of Virginia, a Career Member of the Senior Foreign Service, Class of Minister-Counselor, to be Ambassador to the Republic of Madagascar, and to serve concurrently and without additional compensation as Ambassador to the Union of the Comoros, Jessica Long, of Virginia, a Career Member of the Senior Foreign Service, Class of Minister-Counselor, to be Ambassador to the Islamic Republic of Mauritania, William Grayson, of California, to be Ambassador to the Republic of Indonesia, Mark Abreu, of Florida, to be Ambassador to the Republic of El Salvador, Nicholas Checker, of Wisconsin, to be Ambassador to the Republic of Rwanda, Michael Young, of Utah, to be Ambassador to the Republic of Serbia, Ronald Johnson, of Massachusetts, to be Ambassador to Bosnia and Herzegovina, Julia Nesheiwat, of Florida, to be Ambassador-at-Large for the Arctic (New Position), Peter McCoy, of South Carolina, to be Ambassador to Montenegro, Nathaniel Morris, of Kentucky, to be Ambassador to the Republic of Colombia, Keith Noreika, of Pennsylvania, to be Ambassador to the Republic of Lithuania, and Jennifer Johnson-Carroll, of Florida, to be Ambassador to the Republic of Trinidad and Tobago, all of the Department of State, and Sarah B. Rogers, of New York, to be Chief Executive Officer of the United States Agency for Global Media, and Rebekah Jurata, of California, to be United States Executive Director of the International Monetary Fund.",
+                  "summary": "Foreign Relations · Open Business Meeting · 09:00 AM · S-116 (from lower in the map)",
+                  "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+                  "source": "Senate.gov committee hearings XML",
+                  "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
                   "urgency": "upcoming",
                   "bill": null
                 }
@@ -55429,7 +55462,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-11-10T20:52:56.172Z",
+                  "asOf": "2026-11-11T21:27:21.843Z",
                   "count": 12,
                   "rolledUp": false,
                   "events": [
@@ -55443,6 +55476,51 @@
                       "title": "HEARING",
                       "summary": "[object Object] · Hearing · Scheduled · Capitol HVC 210",
                       "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119593",
+                      "source": "Congress.gov committee meeting API",
+                      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "house-hearing-119596",
+                      "kind": "hearing",
+                      "when": "2026-11-18T19:15:00Z",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Psychedelic-Assisted Therapies for Veterans: The Path Forward",
+                      "summary": "House Veterans' Affairs Subcommittee on Health · Hearing · Scheduled · Cannon House Office Building 360",
+                      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119596",
+                      "source": "Congress.gov committee meeting API",
+                      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "house-hearing-119594",
+                      "kind": "hearing",
+                      "when": "2026-11-18T19:00:00Z",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "“Oversight of the Bureau of Alcohol, Tobacco, Firearms and Explosives’ Out-of-Business Records Retention Practices”",
+                      "summary": "House Oversight and Government Reform Subcommittee on Federal Law Enforcement · Hearing · Scheduled · Rayburn House Office Building 2154",
+                      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119594",
+                      "source": "Congress.gov committee meeting API",
+                      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "house-hearing-119597",
+                      "kind": "hearing",
+                      "when": "2026-11-18T15:00:00Z",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "“Protecting Main Street, Securing America: Examining Cybersecurity Challenges for Small Business Contractors.”",
+                      "summary": "House Small Business Subcommittee on Contracting and Infrastructure · Hearing · Scheduled · Rayburn House Office Building 2360",
+                      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119597",
                       "source": "Congress.gov committee meeting API",
                       "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
                       "urgency": "upcoming",
@@ -55567,51 +55645,6 @@
                       "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
                       "urgency": "upcoming",
                       "bill": "H.R. 9613"
-                    },
-                    {
-                      "id": "house-ml-HR9614",
-                      "kind": "house_schedule",
-                      "when": "NOVEMBER 9",
-                      "until": null,
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "H.R. 9614 — NRC Staff Pay Alignment Act",
-                      "summary": "Majority Leader weekly schedule",
-                      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
-                      "source": "House Majority Leader weekly schedule",
-                      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
-                      "urgency": "upcoming",
-                      "bill": "H.R. 9614"
-                    },
-                    {
-                      "id": "house-ml-HR8552",
-                      "kind": "house_schedule",
-                      "when": "NOVEMBER 9",
-                      "until": null,
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "H.R. 8552 — Veterans’ Compensation Cost-of-Living Adjustment Act of 2026",
-                      "summary": "Majority Leader weekly schedule",
-                      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
-                      "source": "House Majority Leader weekly schedule",
-                      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
-                      "urgency": "upcoming",
-                      "bill": "H.R. 8552"
-                    },
-                    {
-                      "id": "house-ml-HR10329",
-                      "kind": "house_schedule",
-                      "when": "NOVEMBER 9",
-                      "until": null,
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "H.R. 10329 — Combating Foreign Threats to Main Street Act of 2026",
-                      "summary": "Majority Leader weekly schedule",
-                      "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
-                      "source": "House Majority Leader weekly schedule",
-                      "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
-                      "urgency": "upcoming",
-                      "bill": "H.R. 10329"
                     }
                   ]
                 },
@@ -55745,7 +55778,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-11-10T20:52:56.172Z",
+                  "asOf": "2026-11-11T21:27:21.843Z",
                   "count": 12,
                   "rolledUp": false,
                   "events": [
@@ -55758,6 +55791,21 @@
                       "signedAt": null,
                       "title": "Hearings to examine the nominations of William Toti, of Florida, to be Under Secretary of the Navy, and Richard Breckenridge, of New Hampshire, to be an Assistant Secretary of the Navy, both of the Department of Defense.",
                       "summary": "Armed Services · Open Hearing · 09:45 AM · SD-G50",
+                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+                      "source": "Senate.gov committee hearings XML",
+                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "senate-hearing-338831",
+                      "kind": "hearing",
+                      "when": "2026-11-18",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Business meeting to consider the nominations of Justin Bytheway, of Utah, to be Ambassador to the Kingdom of Tonga, William Flens, of the District of Columbia, a Career Member of the Senior Foreign Service, Class of Minister-Counselor, to be Ambassador to the Republic of Chad, Douglas Holder, of Florida, to be Ambassador to the Republic of Bulgaria, Marc Dillard, of Virginia, a Career Member of the Senior Foreign Service, Class of Minister-Counselor, to be Ambassador to the Republic of Madagascar, and to serve concurrently and without additional compensation as Ambassador to the Union of the Comoros, Jessica Long, of Virginia, a Career Member of the Senior Foreign Service, Class of Minister-Counselor, to be Ambassador to the Islamic Republic of Mauritania, William Grayson, of California, to be Ambassador to the Republic of Indonesia, Mark Abreu, of Florida, to be Ambassador to the Republic of El Salvador, Nicholas Checker, of Wisconsin, to be Ambassador to the Republic of Rwanda, Michael Young, of Utah, to be Ambassador to the Republic of Serbia, Ronald Johnson, of Massachusetts, to be Ambassador to Bosnia and Herzegovina, Julia Nesheiwat, of Florida, to be Ambassador-at-Large for the Arctic (New Position), Peter McCoy, of South Carolina, to be Ambassador to Montenegro, Nathaniel Morris, of Kentucky, to be Ambassador to the Republic of Colombia, Keith Noreika, of Pennsylvania, to be Ambassador to the Republic of Lithuania, and Jennifer Johnson-Carroll, of Florida, to be Ambassador to the Republic of Trinidad and Tobago, all of the Department of State, and Sarah B. Rogers, of New York, to be Chief Executive Officer of the United States Agency for Global Media, and Rebekah Jurata, of California, to be United States Executive Director of the International Monetary Fund.",
+                      "summary": "Foreign Relations · Open Business Meeting · 09:00 AM · S-116",
                       "url": "https://www.senate.gov/committees/hearings_meetings.htm",
                       "source": "Senate.gov committee hearings XML",
                       "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
@@ -55780,6 +55828,51 @@
                       "bill": null
                     },
                     {
+                      "id": "senate-hearing-338830",
+                      "kind": "hearing",
+                      "when": "2026-11-18",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Business meeting to consider the nominations of Mark Priebe, of Virginia, to be Inspector General, Department of Education, Heidi Overton, of New Mexico, to be Commissioner of Food and Drugs, Department of Health and Human Services, Michael Doyle, of Pennsylvania, to be a Member of the Occupational Safety and Health Review Commission, Catherine Eschbach, of Texas, to be General Counsel of the Equal Employment Opportunity Commission, and James O'Neill, of Texas, to be Director of the National Science Foundation.",
+                      "summary": "Health, Education, Labor, and Pensions · Open Business Meeting · 09:45 AM · SD-430",
+                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+                      "source": "Senate.gov committee hearings XML",
+                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "senate-hearing-338824",
+                      "kind": "hearing",
+                      "when": "2026-11-18",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Hearings to examine the reality of Social Security.",
+                      "summary": "Budget · Open Hearing · 11:00 AM · SD-608",
+                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+                      "source": "Senate.gov committee hearings XML",
+                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "senate-hearing-338828",
+                      "kind": "hearing",
+                      "when": "2026-11-18",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Hearings to examine pending nominations.",
+                      "summary": "Judiciary · Open Hearing · 11:00 AM · SD-G50",
+                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+                      "source": "Senate.gov committee hearings XML",
+                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
                       "id": "senate-hearing-338823",
                       "kind": "hearing",
                       "when": "2026-11-18",
@@ -55788,6 +55881,51 @@
                       "signedAt": null,
                       "title": "Hearings to examine a bridge, not a barrier, focusing on reforming the safety net to reward work.",
                       "summary": "Aging · Open Hearing · 03:30 PM · SH-216",
+                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+                      "source": "Senate.gov committee hearings XML",
+                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "senate-hearing-338825",
+                      "kind": "hearing",
+                      "when": "2026-11-18",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Hearings to examine VA accountability and transparency, focusing on examining the current and future path of VA's electronic health record modernization program.",
+                      "summary": "Veterans' Affairs · Open Hearing · 04:00 PM · SD-106",
+                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+                      "source": "Senate.gov committee hearings XML",
+                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "senate-hearing-338829",
+                      "kind": "hearing",
+                      "when": "2026-11-17",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Hearings to examine the nominations of Ashley Stow, of Texas, and Andrew Woodson, of Virginia, both to be a Member of the Federal Election Commission.",
+                      "summary": "Rules and Administration · Open Hearing · Time to be announced. · SR-301",
+                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+                      "source": "Senate.gov committee hearings XML",
+                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "senate-hearing-338827",
+                      "kind": "hearing",
+                      "when": "2026-11-17",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Business meeting to consider S.5289, to protect the right to the free exercise of religion, and the nominations of Lee Philip Rudofsky, of Arkansas, to be United States Circuit Judge for the Eighth Circuit, Robert E. Long, Jr., to be United States District Judge for the Middle District of Florida, Peter M. Mansfield, to be United States District Judge for the Eastern District of Louisiana, Jesus A. Osete, to be United States District Judge for the Western District of Missouri, Trevor Scott Pemberton, to be United States District Judge for the Northern District of Oklahoma, Zachary Paul West, to be United States District Judge for the Eastern District of Oklahoma, Stephen Husk, of Virginia, to be a Commissioner of the United States Parole Commission, and Samuel King Lee, to be United States Attorney for the Eastern District of Tennessee, Gretchen C.F. Shappert, of Virginia, to be United States Attorney for the District of Guam and concurrently United States Attorney for the District of the Northern Mariana Islands, Robert Troester, to be United States Attorney for the Western District of Oklahoma, Reid McAlister Creswell, to be United States Marshal for the District of South Carolina, James Christopher Edge, to be United States Marshal for the Western District of North Carolina, Christopher Walter Inabinett, to be United States Marshal for the Middle District of Alabama, and James Richard Jackson, of Texas, to be United States Marshal for the Eastern District of Texas, all of the Department of Justice; to be immediately followed by an open hearing in SH-216 to examine how competition and transparency lowers prescription drug costs.",
+                      "summary": "Judiciary · Open Business Meeting · 09:00 AM · SH-216",
                       "url": "https://www.senate.gov/committees/hearings_meetings.htm",
                       "source": "Senate.gov committee hearings XML",
                       "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
@@ -55810,119 +55948,14 @@
                       "bill": null
                     },
                     {
-                      "id": "senate-hearing-338820",
+                      "id": "senate-hearing-338826",
                       "kind": "hearing",
-                      "when": "2026-11-16",
+                      "when": "2026-11-17",
                       "until": null,
                       "filedAt": null,
                       "signedAt": null,
-                      "title": "To receive a briefing on generation victory, focusing on how Ukraine is educating students in wartime.",
-                      "summary": "Commission on Security and Cooperation in Europe · Open Hearing · 11:00 AM · RHOB-2247",
-                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-                      "source": "Senate.gov committee hearings XML",
-                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "senate-hearing-338806",
-                      "kind": "hearing",
-                      "when": "2026-11-10",
-                      "until": null,
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Hearings to examine the nominations of Nick Oberheiden, of Texas, to be Ambassador to the Arab Republic of Egypt, Peter Snyder, of Virginia, to be Ambassador to the Republic of Ecuador, Kimberly Greenwood, of Tennessee, to be Ambassador to Barbados, and to serve concurrently and without additional compensation as Ambassador to the Federation of Saint Kitts and Nevis, Saint Lucia, Antigua and Barbuda, the Commonwealth of Dominica, Grenada, and Saint Vincent and the Grenadines, Paul Kalmbach, of Ohio, to be Ambassador to the Republic of Paraguay, Jane Lynch, of North Carolina, to be Ambassador at Large for International Religious Freedom, Wesley Hunt, of Texas, to be Ambassador to the Kingdom of Saudi Arabia, Dino LaVerghetta, of Virginia, to be Ambassador to the State of Kuwait, Devin Kennington, of California, to be Ambassador to the Federal Republic of Somalia, Junaid Munir, of Michigan, a Career Member of the Senior Foreign Service, Class of Minister-Counselor, to be Ambassador to the Republic of Djibouti, and Paul Watzlavick, of Texas, a Career Member of the Senior Foreign Service, Class of Counselor, to be Ambassador to the Republic of Suriname, all of the Department of State.",
-                      "summary": "Foreign Relations · Open Hearing · 10:00 AM · SD-419",
-                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-                      "source": "Senate.gov committee hearings XML",
-                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "senate-hearing-338803",
-                      "kind": "hearing",
-                      "when": "2026-11-10",
-                      "until": null,
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Hearings to examine the nominations of Leslie Becera, of Virginia, to be an Assistant Secretary of Transportation, Danielle Thumann Severs, of North Carolina, to be a Member of the Federal Communications Commission, and Joshua Shoemaker, of Virginia, to be Chief Financial Officer, and Robert Steinau, of Maryland, to be Inspector General, both of the National Aeronautics and Space Administration.",
-                      "summary": "Commerce, Science, and Transportation · Open Hearing · 10:30 AM · SR-253",
-                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-                      "source": "Senate.gov committee hearings XML",
-                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "senate-hearing-338802",
-                      "kind": "hearing",
-                      "when": "2026-11-10",
-                      "until": null,
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Hearings to examine the nomination of Justin Schwab, of the District of Columbia, to be an Assistant Administrator of the Environmental Protection Agency.",
-                      "summary": "Environment and Public Works · Open Hearing · 10:30 AM · SD-406",
-                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-                      "source": "Senate.gov committee hearings XML",
-                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "senate-hearing-338801",
-                      "kind": "hearing",
-                      "when": "2026-11-10",
-                      "until": null,
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Hearings to examine the nomination of Catherine Eschbach, of Texas, to be General Counsel of the Equal Employment Opportunity Commission.",
-                      "summary": "Health, Education, Labor, and Pensions · Open Hearing · 10:45 AM · SD-430",
-                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-                      "source": "Senate.gov committee hearings XML",
-                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "senate-hearing-338805",
-                      "kind": "hearing",
-                      "when": "2026-11-10",
-                      "until": null,
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Hearings to examine the nominations of Francis Browne, of the District of Columbia, to be an Under Secretary, and Robert Stebbins, of New York, to be General Counsel, both of the Department of the Treasury, and Christopher Abbott, of Virginia, to be an Assistant Secretary of Commerce.",
-                      "summary": "Finance · Open Hearing · 11:00 AM · SD-215",
-                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-                      "source": "Senate.gov committee hearings XML",
-                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "senate-hearing-338807",
-                      "kind": "hearing",
-                      "when": "2026-11-10",
-                      "until": null,
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Business meeting to consider S.5289, to protect the right to the free exercise of religion, and the nominations of Lee Philip Rudofsky, of Arkansas, to be United States Circuit Judge for the Eighth Circuit, Daniel Lewis Ballou, to be United States District Judge for the Eastern District of Kentucky, Richard Wesley Bennett, to be United States District Judge for the Southern District of Texas, Courtney Leigh Coker, to be United States District Judge for the Northern District of Texas, Robert E. Long, Jr., to be United States District Judge for the Middle District of Florida, Peter M. Mansfield, to be United States District Judge for the Eastern District of Louisiana, Jesus A. Osete, to be United States District Judge for the Western District of Missouri, Trevor Scott Pemberton, to be United States District Judge for the Northern District of Oklahoma, Kyle Frederick Reardon, to be United States District Judge for the District of Alaska, Zachary Paul West, to be United States District Judge for the Eastern District of Oklahoma, and Stephen Husk, of Virginia, to be a Commissioner of the United States Parole Commission, and Samuel King Lee, to be United States Attorney for the Eastern District of Tennessee, Gretchen C.F. Shappert, of Virginia, to be United States Attorney for the District of Guam and concurrently United States Attorney for the District of the Northern Mariana Islands, Robert Troester, to be United States Attorney for the Western District of Oklahoma, Reid McAlister Creswell, to be United States Marshal for the District of South Carolina, James Christopher Edge, to be United States Marshal for the Western District of North Carolina, Christopher Walter Inabinett, to be United States Marshal for the Middle District of Alabama, and James Richard Jackson, to be United States Marshal for the Eastern District of Texas, all of the Department of Justice; to be immediately followed by an open hearing in SD-562 to examine the nominations of Gregory Todd Butler, of Mississippi, to be United States Circuit Judge for the Fifth Circuit, Samuel D. Adkisson, to be United States District Judge for the Eastern District of Tennessee, Philip Axt, to be United States District Judge for the District of North Dakota, Bradford J. Kelley, to be United States District Judge for the Eastern District of Louisiana, and Arthur Kleinschmidt, of Virginia, to be an Assistant Attorney General, Department of Justice.",
-                      "summary": "Judiciary · Open Business Meeting · 11:00 AM · SD-562",
-                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-                      "source": "Senate.gov committee hearings XML",
-                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "senate-hearing-338804",
-                      "kind": "hearing",
-                      "when": "2026-11-10",
-                      "until": null,
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Hearings to examine the nominations of Gregory Ibach, of Nebraska, to be Under Secretary of Agriculture for Trade and Foreign Agricultural Affairs, Department of Agriculture, and Carl Bednarski, of Michigan, John Grunewald II, of Oklahoma, and James Russell Middleton, of Virginia, each to be a Member of the Farm Credit Administration Board, Farm Credit Administration.",
-                      "summary": "Agriculture, Nutrition, and Forestry · Open Hearing · 11:45 AM · SD-106",
+                      "title": "Hearings to examine Roblox and online gaming, focusing on digital playgrounds endangering America's children.",
+                      "summary": "Judiciary · Open Hearing · 02:30 PM · SD-562",
                       "url": "https://www.senate.gov/committees/hearings_meetings.htm",
                       "source": "Senate.gov committee hearings XML",
                       "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
@@ -56752,7 +56785,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -56891,8 +56924,8 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-10T20:52:56.172Z",
-          "count": 45,
+          "asOf": "2026-11-11T21:27:21.843Z",
+          "count": 42,
           "rolledUp": true,
           "events": [
             {
@@ -57492,7 +57525,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -58015,7 +58048,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 1,
               "rolledUp": true,
               "events": [
@@ -58087,7 +58120,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-10T20:52:56.172Z",
+                  "asOf": "2026-11-11T21:27:21.843Z",
                   "count": 1,
                   "rolledUp": false,
                   "events": [
@@ -58313,7 +58346,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 9,
               "rolledUp": false,
               "events": [
@@ -58719,7 +58752,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -59227,7 +59260,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -59698,7 +59731,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -60134,7 +60167,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -60986,28 +61019,7 @@
               },
               "usgm": null
             },
-            "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
-              "count": 1,
-              "rolledUp": false,
-              "events": [
-                {
-                  "id": "fr-sun-2026-21844-2026-11-10",
-                  "kind": "sunshine_meeting",
-                  "when": "2026-11-10",
-                  "until": "2026-11-10",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Sunshine Act Meetings",
-                  "summary": "Morris K. Udall and Stewart L. Udall Foundation",
-                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-27/pdf/2026-21844.pdf",
-                  "source": "Federal Register Sunshine Act meeting",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                }
-              ]
-            },
+            "heat": null,
             "children": [],
             "spending": {
               "obligatedAmount": 8924583.67,
@@ -61191,7 +61203,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -63735,7 +63747,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -64153,7 +64165,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -64540,8 +64552,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
-              "count": 4,
+              "asOf": "2026-11-11T21:27:21.843Z",
+              "count": 2,
               "rolledUp": false,
               "events": [
                 {
@@ -64569,36 +64581,6 @@
                   "title": "Sunshine Act Meeting",
                   "summary": "Consumer Product Safety Commission",
                   "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-09/pdf/2026-22828.pdf",
-                  "source": "Federal Register Sunshine Act meeting",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-sun-2026-22661-2026-11-10",
-                  "kind": "sunshine_meeting",
-                  "when": "2026-11-10",
-                  "until": "2026-11-10",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Sunshine Act Meeting",
-                  "summary": "Consumer Product Safety Commission",
-                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-06/pdf/2026-22661.pdf",
-                  "source": "Federal Register Sunshine Act meeting",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-sun-2026-21980-2026-11-10",
-                  "kind": "sunshine_meeting",
-                  "when": "2026-11-10",
-                  "until": "2026-11-10",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Sunshine Act Meeting",
-                  "summary": "Consumer Product Safety Commission",
-                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-28/pdf/2026-21980.pdf",
                   "source": "Federal Register Sunshine Act meeting",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
@@ -65526,7 +65508,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -66671,7 +66653,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -67153,7 +67135,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 12,
               "rolledUp": false,
               "events": [
@@ -68032,8 +68014,8 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-10T20:52:56.172Z",
-          "count": 6,
+          "asOf": "2026-11-11T21:27:21.843Z",
+          "count": 4,
           "rolledUp": true,
           "events": [
             {
@@ -68093,36 +68075,6 @@
               "url": "https://public-inspection.federalregister.gov/2026-23064.pdf",
               "source": "Federal Register public inspection (PDF)",
               "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-sun-2026-22900-2026-11-10",
-              "kind": "sunshine_meeting",
-              "when": "2026-11-10",
-              "until": "2026-11-10",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Sunshine Act Meetings",
-              "summary": "Tennessee Valley Authority (from lower in the map)",
-              "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-10/pdf/2026-22900.pdf",
-              "source": "Federal Register Sunshine Act meeting",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-sun-2026-22393-2026-11-10",
-              "kind": "sunshine_meeting",
-              "when": "2026-11-10",
-              "until": "2026-11-10",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Sunshine Act Meetings",
-              "summary": "Postal Service (from lower in the map)",
-              "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-03/pdf/2026-22393.pdf",
-              "source": "Federal Register Sunshine Act meeting",
-              "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             }
@@ -68984,7 +68936,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -70659,28 +70611,7 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
-              "count": 1,
-              "rolledUp": false,
-              "events": [
-                {
-                  "id": "fr-sun-2026-22900-2026-11-10",
-                  "kind": "sunshine_meeting",
-                  "when": "2026-11-10",
-                  "until": "2026-11-10",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Sunshine Act Meetings",
-                  "summary": "Tennessee Valley Authority",
-                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-10/pdf/2026-22900.pdf",
-                  "source": "Federal Register Sunshine Act meeting",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                }
-              ]
-            },
+            "heat": null,
             "children": []
           },
           {
@@ -71725,8 +71656,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
-              "count": 3,
+              "asOf": "2026-11-11T21:27:21.843Z",
+              "count": 2,
               "rolledUp": false,
               "events": [
                 {
@@ -71756,21 +71687,6 @@
                   "url": "https://public-inspection.federalregister.gov/2026-23064.pdf",
                   "source": "Federal Register public inspection (PDF)",
                   "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-sun-2026-22393-2026-11-10",
-                  "kind": "sunshine_meeting",
-                  "when": "2026-11-10",
-                  "until": "2026-11-10",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Sunshine Act Meetings",
-                  "summary": "Postal Service",
-                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-03/pdf/2026-22393.pdf",
-                  "source": "Federal Register Sunshine Act meeting",
-                  "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
                 }
@@ -71917,7 +71833,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-10T20:52:56.172Z",
+          "asOf": "2026-11-11T21:27:21.843Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -75235,7 +75151,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-11-10T20:52:56.172Z",
+              "asOf": "2026-11-11T21:27:21.843Z",
               "count": 1,
               "rolledUp": false,
               "events": [
