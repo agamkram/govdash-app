@@ -41,32 +41,32 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-11-11T21:27:45.824Z",
-      "asOf": "2026-11-11T21:27:21.843Z",
-      "nodesWithHeat": 3,
-      "nodesWithDirectHeat": 1,
-      "rawEventCount": 304,
+      "enrichedAt": "2026-11-12T21:29:42.197Z",
+      "asOf": "2026-11-12T21:29:20.980Z",
+      "nodesWithHeat": 0,
+      "nodesWithDirectHeat": 0,
+      "rawEventCount": 312,
       "matched": {
         "chamber": 0,
         "presidential": 0,
-        "publicInspection": 1,
+        "publicInspection": 0,
         "commentDeadlines": 0,
         "sunshine": 0,
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 123,
+      "unmatchedPublicInspection": 125,
       "unmatchedCommentDeadlines": 125,
       "unmatchedSunshine": 2,
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 3,
+          "count": 1,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
           "ok": true,
-          "count": 0,
+          "count": 1,
           "url": "https://clerk.house.gov/"
         },
         "majorityLeader": {
@@ -76,52 +76,52 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 124,
+          "count": 125,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
-          "count": 14,
-          "since": "2026-10-28",
+          "count": 10,
+          "since": "2026-10-29",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
           "count": 125,
-          "start": "2026-11-11",
-          "end": "2026-12-10",
+          "start": "2026-11-12",
+          "end": "2026-12-11",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
           "count": 2,
-          "start": "2026-11-11",
-          "end": "2026-12-10",
+          "start": "2026-11-12",
+          "end": "2026-12-11",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
-          "count": 13,
-          "start": "2026-11-11",
-          "end": "2026-12-10",
+          "count": 17,
+          "start": "2026-11-12",
+          "end": "2026-12-11",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
-          "count": 7,
-          "start": "2026-11-11",
-          "end": "2026-12-10",
+          "count": 15,
+          "start": "2026-11-12",
+          "end": "2026-12-11",
           "congress": 119,
-          "calendarIds": 7,
+          "calendarIds": 15,
           "skipped404": [],
           "url": "https://api.congress.gov/v3/committee-meeting/119/house"
         },
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-11-11",
-          "end": "2026-12-10",
+          "start": "2026-11-12",
+          "end": "2026-12-11",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -140,28 +140,7 @@
       "usgm": null,
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
-    "heat": {
-      "asOf": "2026-11-11T21:27:21.843Z",
-      "count": 1,
-      "rolledUp": true,
-      "events": [
-        {
-          "id": "fr-pi-2026-23077",
-          "kind": "public_inspection",
-          "when": "2026-11-12",
-          "until": null,
-          "filedAt": "2026-11-10T08:45:00.000-05:00",
-          "signedAt": null,
-          "title": "Environmental Assessments; Availability, etc.: Reconstruction of the Fort Hancock-El Porvenir International Bridge, Rio Grande Rectification Project, Hudspeth County, TX; Finding of No Significant Impact",
-          "summary": "International Boundary and Water Commission, United States and Mexico (from lower in the map)",
-          "url": "https://public-inspection.federalregister.gov/2026-23077.pdf",
-          "source": "Federal Register public inspection (PDF)",
-          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-          "urgency": "upcoming",
-          "bill": null
-        }
-      ]
-    },
+    "heat": null,
     "children": [
       {
         "id": "product-chartered",
@@ -2240,28 +2219,7 @@
           "usgm": null,
           "note": "∞ map door: Crosswalk International Governmental Organizations. Not U.S. agencies; tables the United States sits at."
         },
-        "heat": {
-          "asOf": "2026-11-11T21:27:21.843Z",
-          "count": 1,
-          "rolledUp": true,
-          "events": [
-            {
-              "id": "fr-pi-2026-23077",
-              "kind": "public_inspection",
-              "when": "2026-11-12",
-              "until": null,
-              "filedAt": "2026-11-10T08:45:00.000-05:00",
-              "signedAt": null,
-              "title": "Environmental Assessments; Availability, etc.: Reconstruction of the Fort Hancock-El Porvenir International Bridge, Rio Grande Rectification Project, Hudspeth County, TX; Finding of No Significant Impact",
-              "summary": "International Boundary and Water Commission, United States and Mexico (from lower in the map)",
-              "url": "https://public-inspection.federalregister.gov/2026-23077.pdf",
-              "source": "Federal Register public inspection (PDF)",
-              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-              "urgency": "upcoming",
-              "bill": null
-            }
-          ]
-        },
+        "heat": null,
         "children": [
           {
             "id": "gsa-1168",
@@ -5558,28 +5516,7 @@
               },
               "usgm": null
             },
-            "heat": {
-              "asOf": "2026-11-11T21:27:21.843Z",
-              "count": 1,
-              "rolledUp": false,
-              "events": [
-                {
-                  "id": "fr-pi-2026-23077",
-                  "kind": "public_inspection",
-                  "when": "2026-11-12",
-                  "until": null,
-                  "filedAt": "2026-11-10T08:45:00.000-05:00",
-                  "signedAt": null,
-                  "title": "Environmental Assessments; Availability, etc.: Reconstruction of the Fort Hancock-El Porvenir International Bridge, Rio Grande Rectification Project, Hudspeth County, TX; Finding of No Significant Impact",
-                  "summary": "International Boundary and Water Commission, United States and Mexico",
-                  "url": "https://public-inspection.federalregister.gov/2026-23077.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                }
-              ]
-            },
+            "heat": null,
             "children": []
           },
           {
