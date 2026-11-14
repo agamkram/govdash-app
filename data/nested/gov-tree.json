@@ -80,27 +80,27 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-11-13T20:55:33.139Z",
-      "asOf": "2026-11-13T20:55:11.247Z",
+      "enrichedAt": "2026-11-14T19:13:39.924Z",
+      "asOf": "2026-11-14T19:13:18.204Z",
       "nodesWithHeat": 90,
       "nodesWithDirectHeat": 50,
-      "rawEventCount": 292,
+      "rawEventCount": 294,
       "matched": {
-        "chamber": 18,
-        "presidential": 11,
-        "publicInspection": 94,
-        "commentDeadlines": 112,
-        "sunshine": 2,
-        "hearings": 33,
+        "chamber": 17,
+        "presidential": 12,
+        "publicInspection": 95,
+        "commentDeadlines": 107,
+        "sunshine": 3,
+        "hearings": 39,
         "scotus": 1
       },
       "unmatchedPublicInspection": 13,
-      "unmatchedCommentDeadlines": 8,
+      "unmatchedCommentDeadlines": 7,
       "unmatchedSunshine": 0,
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 2,
+          "count": 1,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
@@ -115,42 +115,42 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 107,
+          "count": 108,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
-          "count": 11,
-          "since": "2026-10-30",
+          "count": 12,
+          "since": "2026-10-31",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 120,
-          "start": "2026-11-13",
-          "end": "2026-12-12",
+          "count": 114,
+          "start": "2026-11-14",
+          "end": "2026-12-13",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
-          "count": 2,
-          "start": "2026-11-13",
-          "end": "2026-12-12",
+          "count": 3,
+          "start": "2026-11-14",
+          "end": "2026-12-13",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
-          "count": 17,
-          "start": "2026-11-13",
-          "end": "2026-12-12",
+          "count": 23,
+          "start": "2026-11-14",
+          "end": "2026-12-13",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
           "count": 16,
-          "start": "2026-11-13",
-          "end": "2026-12-12",
+          "start": "2026-11-14",
+          "end": "2026-12-13",
           "congress": 119,
           "calendarIds": 16,
           "skipped404": [],
@@ -159,8 +159,8 @@
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-11-13",
-          "end": "2026-12-12",
+          "start": "2026-11-14",
+          "end": "2026-12-13",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -208,10 +208,25 @@
       "note": "Synthetic root. Crosswalk branches attach under Parent=[Branch]."
     },
     "heat": {
-      "asOf": "2026-11-13T20:55:11.247Z",
-      "count": 223,
+      "asOf": "2026-11-14T19:13:18.204Z",
+      "count": 221,
       "rolledUp": true,
       "events": [
+        {
+          "id": "fr-comment-2026-23239",
+          "kind": "comment_deadline",
+          "when": "2026-12-10",
+          "until": "2026-12-10",
+          "filedAt": null,
+          "signedAt": null,
+          "title": "Federal Motor Vehicle Safety Standards; Modernization of FMVSS No. 108 To Accommodate ADS-Equipped Vehicles",
+          "summary": "Transportation Department, National Highway Traffic Safety Administration (from lower in the map)",
+          "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23239.pdf",
+          "source": "Federal Register proposed rule (comments close)",
+          "sourceUrl": "https://www.federalregister.gov/",
+          "urgency": "upcoming",
+          "bill": null
+        },
         {
           "id": "fr-comment-2026-22826",
           "kind": "comment_deadline",
@@ -286,21 +301,6 @@
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
-        },
-        {
-          "id": "fr-comment-2026-21154",
-          "kind": "comment_deadline",
-          "when": "2026-12-08",
-          "until": "2026-12-08",
-          "filedAt": null,
-          "signedAt": null,
-          "title": "Powered Air Purifying Respirators (PAPRs) in Underground Mines",
-          "summary": "Labor Department, Mine Safety and Health Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/MSHA-2025-0089-0016",
-          "source": "Federal Register proposed rule (comments close)",
-          "sourceUrl": "https://www.federalregister.gov/",
-          "urgency": "upcoming",
-          "bill": null
         }
       ]
     },
@@ -355,10 +355,25 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-13T20:55:11.247Z",
-          "count": 156,
+          "asOf": "2026-11-14T19:13:18.204Z",
+          "count": 153,
           "rolledUp": true,
           "events": [
+            {
+              "id": "fr-comment-2026-23239",
+              "kind": "comment_deadline",
+              "when": "2026-12-10",
+              "until": "2026-12-10",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Federal Motor Vehicle Safety Standards; Modernization of FMVSS No. 108 To Accommodate ADS-Equipped Vehicles",
+              "summary": "Transportation Department, National Highway Traffic Safety Administration (from lower in the map)",
+              "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23239.pdf",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
             {
               "id": "fr-comment-2026-22826",
               "kind": "comment_deadline",
@@ -429,21 +444,6 @@
               "title": "Flight Abort Burden Reducing Clarification on End of Flight Safety Limits",
               "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
               "url": "http://www.regulations.gov/commenton/FAA-2026-9943-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-21154",
-              "kind": "comment_deadline",
-              "when": "2026-12-08",
-              "until": "2026-12-08",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Powered Air Purifying Respirators (PAPRs) in Underground Mines",
-              "summary": "Labor Department, Mine Safety and Health Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/MSHA-2025-0089-0016",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
@@ -2158,7 +2158,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -2258,10 +2258,40 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
-              "count": 13,
+              "asOf": "2026-11-14T19:13:18.204Z",
+              "count": 14,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-pres-2026-23349",
+                  "kind": "presidential_doc",
+                  "when": "2026-11-16",
+                  "until": null,
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Presidential Determination Concerning Wildfire Suppression Activities in the United States",
+                  "summary": "Presidential Document",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23349.pdf",
+                  "source": "Federal Register presidential documents (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+                  "urgency": "recent",
+                  "bill": null
+                },
+                {
+                  "id": "fr-pres-2026-23348",
+                  "kind": "presidential_doc",
+                  "when": "2026-11-16",
+                  "until": null,
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Veterans Day, 2026",
+                  "summary": "Presidential Document",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23348.pdf",
+                  "source": "Federal Register presidential documents (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+                  "urgency": "recent",
+                  "bill": null
+                },
                 {
                   "id": "fr-pres-2026-23233",
                   "kind": "presidential_doc",
@@ -2411,21 +2441,6 @@
                   "sourceUrl": "https://www.federalregister.gov/presidential-documents",
                   "urgency": "recent",
                   "bill": null
-                },
-                {
-                  "id": "fr-pres-2026-22292",
-                  "kind": "presidential_doc",
-                  "when": "2026-10-30",
-                  "until": null,
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Further Modifying the Scope of Products of Canada Subject to the Additional Duties Imposed To Offset Canadian Discrimination Against the Commerce of the United States With Respect to Motor Vehicles",
-                  "summary": "Presidential Document",
-                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-30/pdf/2026-22292.pdf",
-                  "source": "Federal Register presidential documents (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/presidential-documents",
-                  "urgency": "recent",
-                  "bill": null
                 }
               ],
               "hasChildHeat": true
@@ -2469,7 +2484,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-13T20:55:11.247Z",
+                  "asOf": "2026-11-14T19:13:18.204Z",
                   "count": 2,
                   "rolledUp": false,
                   "events": [
@@ -3388,7 +3403,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 3,
               "rolledUp": true,
               "events": [
@@ -3490,7 +3505,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-13T20:55:11.247Z",
+                  "asOf": "2026-11-14T19:13:18.204Z",
                   "count": 3,
                   "rolledUp": true,
                   "events": [
@@ -3566,7 +3581,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-13T20:55:11.247Z",
+                      "asOf": "2026-11-14T19:13:18.204Z",
                       "count": 3,
                       "rolledUp": true,
                       "events": [
@@ -4863,7 +4878,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-13T20:55:11.247Z",
+                          "asOf": "2026-11-14T19:13:18.204Z",
                           "count": 3,
                           "rolledUp": true,
                           "events": [
@@ -4939,7 +4954,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-13T20:55:11.247Z",
+                              "asOf": "2026-11-14T19:13:18.204Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -5039,7 +5054,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-13T20:55:11.247Z",
+                              "asOf": "2026-11-14T19:13:18.204Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -6110,7 +6125,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 20,
               "rolledUp": true,
               "events": [
@@ -6231,7 +6246,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-13T20:55:11.247Z",
+                  "asOf": "2026-11-14T19:13:18.204Z",
                   "count": 20,
                   "rolledUp": true,
                   "events": [
@@ -6352,7 +6367,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-13T20:55:11.247Z",
+                      "asOf": "2026-11-14T19:13:18.204Z",
                       "count": 20,
                       "rolledUp": true,
                       "events": [
@@ -6473,7 +6488,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-13T20:55:11.247Z",
+                          "asOf": "2026-11-14T19:13:18.204Z",
                           "count": 20,
                           "rolledUp": true,
                           "events": [
@@ -7664,7 +7679,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-13T20:55:11.247Z",
+                              "asOf": "2026-11-14T19:13:18.204Z",
                               "count": 12,
                               "rolledUp": true,
                               "events": [
@@ -7815,7 +7830,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-11-13T20:55:11.247Z",
+                                  "asOf": "2026-11-14T19:13:18.204Z",
                                   "count": 12,
                                   "rolledUp": false,
                                   "events": [
@@ -8239,7 +8254,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-13T20:55:11.247Z",
+                              "asOf": "2026-11-14T19:13:18.204Z",
                               "count": 8,
                               "rolledUp": true,
                               "events": [
@@ -8330,7 +8345,7 @@
                                   "usgm": null
                                 },
                                 "heat": {
-                                  "asOf": "2026-11-13T20:55:11.247Z",
+                                  "asOf": "2026-11-14T19:13:18.204Z",
                                   "count": 8,
                                   "rolledUp": true,
                                   "events": [
@@ -8523,7 +8538,7 @@
                                       }
                                     },
                                     "heat": {
-                                      "asOf": "2026-11-13T20:55:11.247Z",
+                                      "asOf": "2026-11-14T19:13:18.204Z",
                                       "count": 8,
                                       "rolledUp": false,
                                       "events": [
@@ -22836,7 +22851,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 7,
               "rolledUp": true,
               "events": [
@@ -22927,7 +22942,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-13T20:55:11.247Z",
+                  "asOf": "2026-11-14T19:13:18.204Z",
                   "count": 7,
                   "rolledUp": true,
                   "events": [
@@ -25563,7 +25578,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-13T20:55:11.247Z",
+                      "asOf": "2026-11-14T19:13:18.204Z",
                       "count": 7,
                       "rolledUp": false,
                       "events": [
@@ -25925,8 +25940,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
-              "count": 19,
+              "asOf": "2026-11-14T19:13:18.204Z",
+              "count": 18,
               "rolledUp": false,
               "events": [
                 {
@@ -25972,8 +25987,8 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-13T20:55:11.247Z",
-                  "count": 18,
+                  "asOf": "2026-11-14T19:13:18.204Z",
+                  "count": 17,
                   "rolledUp": true,
                   "events": [
                     {
@@ -26118,8 +26133,8 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-13T20:55:11.247Z",
-                      "count": 3,
+                      "asOf": "2026-11-14T19:13:18.204Z",
+                      "count": 2,
                       "rolledUp": false,
                       "events": [
                         {
@@ -26149,21 +26164,6 @@
                           "url": "https://public-inspection.federalregister.gov/2026-23279.pdf",
                           "source": "Federal Register public inspection (PDF)",
                           "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-comment-2026-21004",
-                          "kind": "comment_deadline",
-                          "when": "2026-11-13",
-                          "until": "2026-11-13",
-                          "filedAt": null,
-                          "signedAt": null,
-                          "title": "Further Reducing Bureaucracy and Burden From the Administration for Native Americans",
-                          "summary": "Health and Human Services Department, Children and Families Administration",
-                          "url": "http://www.regulations.gov/commenton/ACF-2026-0826-0001",
-                          "source": "Federal Register proposed rule (comments close)",
-                          "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
                           "bill": null
                         }
@@ -26484,7 +26484,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-13T20:55:11.247Z",
+                      "asOf": "2026-11-14T19:13:18.204Z",
                       "count": 5,
                       "rolledUp": false,
                       "events": [
@@ -26756,7 +26756,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-13T20:55:11.247Z",
+                      "asOf": "2026-11-14T19:13:18.204Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -27804,7 +27804,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-13T20:55:11.247Z",
+                      "asOf": "2026-11-14T19:13:18.204Z",
                       "count": 3,
                       "rolledUp": false,
                       "events": [
@@ -28006,7 +28006,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-13T20:55:11.247Z",
+                      "asOf": "2026-11-14T19:13:18.204Z",
                       "count": 5,
                       "rolledUp": false,
                       "events": [
@@ -28338,7 +28338,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 9,
               "rolledUp": true,
               "events": [
@@ -28459,7 +28459,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-13T20:55:11.247Z",
+                  "asOf": "2026-11-14T19:13:18.204Z",
                   "count": 9,
                   "rolledUp": true,
                   "events": [
@@ -28580,7 +28580,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-13T20:55:11.247Z",
+                      "asOf": "2026-11-14T19:13:18.204Z",
                       "count": 9,
                       "rolledUp": true,
                       "events": [
@@ -30108,7 +30108,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-13T20:55:11.247Z",
+                          "asOf": "2026-11-14T19:13:18.204Z",
                           "count": 7,
                           "rolledUp": false,
                           "events": [
@@ -30271,7 +30271,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-13T20:55:11.247Z",
+                          "asOf": "2026-11-14T19:13:18.204Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -30900,7 +30900,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -32649,7 +32649,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 3,
               "rolledUp": true,
               "events": [
@@ -32761,7 +32761,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-13T20:55:11.247Z",
+                  "asOf": "2026-11-14T19:13:18.204Z",
                   "count": 3,
                   "rolledUp": true,
                   "events": [
@@ -32837,7 +32837,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-13T20:55:11.247Z",
+                      "asOf": "2026-11-14T19:13:18.204Z",
                       "count": 3,
                       "rolledUp": true,
                       "events": [
@@ -34271,7 +34271,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-13T20:55:11.247Z",
+                          "asOf": "2026-11-14T19:13:18.204Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -34368,7 +34368,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-13T20:55:11.247Z",
+                          "asOf": "2026-11-14T19:13:18.204Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -34817,7 +34817,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 4,
               "rolledUp": true,
               "events": [
@@ -34908,7 +34908,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-13T20:55:11.247Z",
+                  "asOf": "2026-11-14T19:13:18.204Z",
                   "count": 4,
                   "rolledUp": true,
                   "events": [
@@ -34999,7 +34999,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-13T20:55:11.247Z",
+                      "asOf": "2026-11-14T19:13:18.204Z",
                       "count": 4,
                       "rolledUp": true,
                       "events": [
@@ -35466,7 +35466,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-13T20:55:11.247Z",
+                          "asOf": "2026-11-14T19:13:18.204Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -35649,7 +35649,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-13T20:55:11.247Z",
+                          "asOf": "2026-11-14T19:13:18.204Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -36518,7 +36518,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-13T20:55:11.247Z",
+                          "asOf": "2026-11-14T19:13:18.204Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -39181,7 +39181,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 5,
               "rolledUp": true,
               "events": [
@@ -39287,7 +39287,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-13T20:55:11.247Z",
+                  "asOf": "2026-11-14T19:13:18.204Z",
                   "count": 5,
                   "rolledUp": true,
                   "events": [
@@ -39393,7 +39393,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-13T20:55:11.247Z",
+                      "asOf": "2026-11-14T19:13:18.204Z",
                       "count": 5,
                       "rolledUp": true,
                       "events": [
@@ -39499,7 +39499,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-13T20:55:11.247Z",
+                          "asOf": "2026-11-14T19:13:18.204Z",
                           "count": 5,
                           "rolledUp": true,
                           "events": [
@@ -39687,7 +39687,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-13T20:55:11.247Z",
+                              "asOf": "2026-11-14T19:13:18.204Z",
                               "count": 3,
                               "rolledUp": false,
                               "events": [
@@ -39820,7 +39820,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-13T20:55:11.247Z",
+                              "asOf": "2026-11-14T19:13:18.204Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -41519,7 +41519,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 4,
               "rolledUp": true,
               "events": [
@@ -41610,7 +41610,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-13T20:55:11.247Z",
+                  "asOf": "2026-11-14T19:13:18.204Z",
                   "count": 4,
                   "rolledUp": true,
                   "events": [
@@ -41753,7 +41753,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-13T20:55:11.247Z",
+                      "asOf": "2026-11-14T19:13:18.204Z",
                       "count": 4,
                       "rolledUp": true,
                       "events": [
@@ -43144,7 +43144,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-13T20:55:11.247Z",
+                          "asOf": "2026-11-14T19:13:18.204Z",
                           "count": 4,
                           "rolledUp": false,
                           "events": [
@@ -43593,10 +43593,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
-              "count": 42,
+              "asOf": "2026-11-14T19:13:18.204Z",
+              "count": 40,
               "rolledUp": true,
               "events": [
+                {
+                  "id": "fr-comment-2026-23239",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-10",
+                  "until": "2026-12-10",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Federal Motor Vehicle Safety Standards; Modernization of FMVSS No. 108 To Accommodate ADS-Equipped Vehicles",
+                  "summary": "Transportation Department, National Highway Traffic Safety Administration (from lower in the map)",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23239.pdf",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-22784",
                   "kind": "comment_deadline",
@@ -43671,21 +43686,6 @@
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-19367",
-                  "kind": "comment_deadline",
-                  "when": "2026-11-23",
-                  "until": "2026-11-23",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Capital Construction Fund Revision",
-                  "summary": "Transportation Department, Maritime Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/MARAD-2026-1552-0001",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
                 }
               ]
             },
@@ -43714,10 +43714,25 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-13T20:55:11.247Z",
-                  "count": 42,
+                  "asOf": "2026-11-14T19:13:18.204Z",
+                  "count": 40,
                   "rolledUp": true,
                   "events": [
+                    {
+                      "id": "fr-comment-2026-23239",
+                      "kind": "comment_deadline",
+                      "when": "2026-12-10",
+                      "until": "2026-12-10",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Federal Motor Vehicle Safety Standards; Modernization of FMVSS No. 108 To Accommodate ADS-Equipped Vehicles",
+                      "summary": "Transportation Department, National Highway Traffic Safety Administration (from lower in the map)",
+                      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23239.pdf",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
                     {
                       "id": "fr-comment-2026-22784",
                       "kind": "comment_deadline",
@@ -43792,21 +43807,6 @@
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
                       "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-19367",
-                      "kind": "comment_deadline",
-                      "when": "2026-11-23",
-                      "until": "2026-11-23",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Capital Construction Fund Revision",
-                      "summary": "Transportation Department, Maritime Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/MARAD-2026-1552-0001",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
                     }
                   ]
                 },
@@ -43835,10 +43835,25 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-13T20:55:11.247Z",
-                      "count": 42,
+                      "asOf": "2026-11-14T19:13:18.204Z",
+                      "count": 40,
                       "rolledUp": true,
                       "events": [
+                        {
+                          "id": "fr-comment-2026-23239",
+                          "kind": "comment_deadline",
+                          "when": "2026-12-10",
+                          "until": "2026-12-10",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Federal Motor Vehicle Safety Standards; Modernization of FMVSS No. 108 To Accommodate ADS-Equipped Vehicles",
+                          "summary": "Transportation Department, National Highway Traffic Safety Administration (from lower in the map)",
+                          "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23239.pdf",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
                         {
                           "id": "fr-comment-2026-22784",
                           "kind": "comment_deadline",
@@ -43909,21 +43924,6 @@
                           "title": "Federal Motor Vehicle Safety Standards; Modernization of FMVSS No. 108 To Accommodate ADS-Equipped Vehicles",
                           "summary": "Transportation Department, National Highway Traffic Safety Administration (from lower in the map)",
                           "url": "http://www.regulations.gov/commenton/NHTSA-2026-1519-0001",
-                          "source": "Federal Register proposed rule (comments close)",
-                          "sourceUrl": "https://www.federalregister.gov/",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-comment-2026-19367",
-                          "kind": "comment_deadline",
-                          "when": "2026-11-23",
-                          "until": "2026-11-23",
-                          "filedAt": null,
-                          "signedAt": null,
-                          "title": "Capital Construction Fund Revision",
-                          "summary": "Transportation Department, Maritime Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/MARAD-2026-1552-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
@@ -44287,7 +44287,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-13T20:55:11.247Z",
+                          "asOf": "2026-11-14T19:13:18.204Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -44385,7 +44385,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-13T20:55:11.247Z",
+                          "asOf": "2026-11-14T19:13:18.204Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -44570,10 +44570,25 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-13T20:55:11.247Z",
-                          "count": 4,
+                          "asOf": "2026-11-14T19:13:18.204Z",
+                          "count": 5,
                           "rolledUp": false,
                           "events": [
+                            {
+                              "id": "fr-comment-2026-23239",
+                              "kind": "comment_deadline",
+                              "when": "2026-12-10",
+                              "until": "2026-12-10",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Federal Motor Vehicle Safety Standards; Modernization of FMVSS No. 108 To Accommodate ADS-Equipped Vehicles",
+                              "summary": "Transportation Department, National Highway Traffic Safety Administration",
+                              "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23239.pdf",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
                             {
                               "id": "fr-comment-2026-21794",
                               "kind": "comment_deadline",
@@ -44910,7 +44925,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-13T20:55:11.247Z",
+                          "asOf": "2026-11-14T19:13:18.204Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -45092,8 +45107,8 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-13T20:55:11.247Z",
-                          "count": 34,
+                          "asOf": "2026-11-14T19:13:18.204Z",
+                          "count": 31,
                           "rolledUp": false,
                           "events": [
                             {
@@ -45560,51 +45575,6 @@
                               "sourceUrl": "https://www.federalregister.gov/",
                               "urgency": "upcoming",
                               "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-19892",
-                              "kind": "comment_deadline",
-                              "when": "2026-11-13",
-                              "until": "2026-11-13",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Airworthiness Directives; Leonardo S.p.a. Helicopters",
-                              "summary": "Transportation Department, Federal Aviation Administration",
-                              "url": "http://www.regulations.gov/commenton/FAA-2026-11788-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-19890",
-                              "kind": "comment_deadline",
-                              "when": "2026-11-13",
-                              "until": "2026-11-13",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Airworthiness Directives; Airbus Helicopters Deutschland GmbH (AHD) Helicopters",
-                              "summary": "Transportation Department, Federal Aviation Administration",
-                              "url": "http://www.regulations.gov/commenton/FAA-2026-11790-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-18799",
-                              "kind": "comment_deadline",
-                              "when": "2026-11-13",
-                              "until": "2026-11-13",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Use of Certain Restricted Category Aircraft for the Transport of Firefighters for Wildfire Suppression",
-                              "summary": "Transportation Department, Federal Aviation Administration",
-                              "url": "http://www.regulations.gov/commenton/FAA-2026-10991-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
                             }
                           ]
                         },
@@ -45766,7 +45736,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-13T20:55:11.247Z",
+                          "asOf": "2026-11-14T19:13:18.204Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -48088,8 +48058,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
-              "count": 15,
+              "asOf": "2026-11-14T19:13:18.204Z",
+              "count": 14,
               "rolledUp": false,
               "events": [
                 {
@@ -48297,21 +48267,6 @@
                   "title": "Indiana: Approval of State Coal Combustion Residuals Permit Program",
                   "summary": "Environmental Protection Agency",
                   "url": "http://www.regulations.gov/commenton/EPA-HQ-OLEM-2026-4326-0001",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-20964",
-                  "kind": "comment_deadline",
-                  "when": "2026-11-13",
-                  "until": "2026-11-13",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Trichloroethylene (TCE); Regulation Under the Toxic Substances Control Act (TSCA); Compliance Date Extensions",
-                  "summary": "Environmental Protection Agency",
-                  "url": "http://www.regulations.gov/commenton/EPA-HQ-OPPT-2026-7327-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
@@ -50145,7 +50100,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 5,
               "rolledUp": false,
               "events": [
@@ -50180,6 +50135,21 @@
                   "bill": null
                 },
                 {
+                  "id": "fr-pi-2026-23381",
+                  "kind": "public_inspection",
+                  "when": "2026-11-17",
+                  "until": null,
+                  "filedAt": "2026-11-13T16:15:00.000-05:00",
+                  "signedAt": null,
+                  "title": "Meetings; Sunshine Act",
+                  "summary": "Nuclear Regulatory Commission",
+                  "url": "https://public-inspection.federalregister.gov/2026-23381.pdf",
+                  "source": "Federal Register public inspection (PDF)",
+                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
                   "id": "fr-pi-2026-23236",
                   "kind": "public_inspection",
                   "when": "2026-11-16",
@@ -50206,21 +50176,6 @@
                   "url": "https://public-inspection.federalregister.gov/2026-23200.pdf",
                   "source": "Federal Register public inspection (PDF)",
                   "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-21031",
-                  "kind": "comment_deadline",
-                  "when": "2026-11-13",
-                  "until": "2026-11-13",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "AP1000 Design Certification Renewal",
-                  "summary": "Nuclear Regulatory Commission",
-                  "url": "http://www.regulations.gov/commenton/NRC-2026-2377-0001",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
                 }
@@ -50409,7 +50364,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -51421,7 +51376,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -52199,7 +52154,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-13T20:55:11.247Z",
+          "asOf": "2026-11-14T19:13:18.204Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -52808,7 +52763,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -53910,7 +53865,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-13T20:55:11.247Z",
+          "asOf": "2026-11-14T19:13:18.204Z",
           "count": 25,
           "rolledUp": true,
           "events": [
@@ -54583,7 +54538,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 24,
               "rolledUp": true,
               "events": [
@@ -54814,7 +54769,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-11-13T20:55:11.247Z",
+                  "asOf": "2026-11-14T19:13:18.204Z",
                   "count": 12,
                   "rolledUp": false,
                   "events": [
@@ -55130,7 +55085,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-11-13T20:55:11.247Z",
+                  "asOf": "2026-11-14T19:13:18.204Z",
                   "count": 12,
                   "rolledUp": false,
                   "events": [
@@ -55165,6 +55120,51 @@
                       "bill": null
                     },
                     {
+                      "id": "senate-hearing-338841",
+                      "kind": "hearing",
+                      "when": "2026-11-19",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Business meeting to consider certain pending nominations.",
+                      "summary": "Banking, Housing, and Urban Affairs · Open Business Meeting · 10:00 AM · SD-538",
+                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+                      "source": "Senate.gov committee hearings XML",
+                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "senate-hearing-338840",
+                      "kind": "hearing",
+                      "when": "2026-11-19",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Hearings to examine certain pending nominations.",
+                      "summary": "Foreign Relations · Open Hearing · 10:00 AM · SD-419",
+                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+                      "source": "Senate.gov committee hearings XML",
+                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "senate-hearing-338842",
+                      "kind": "hearing",
+                      "when": "2026-11-18",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Business meeting to consider pending calendar business.",
+                      "summary": "Veterans' Affairs · Open Business Meeting · Time to be announced. · S-216",
+                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+                      "source": "Senate.gov committee hearings XML",
+                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
                       "id": "senate-hearing-338831",
                       "kind": "hearing",
                       "when": "2026-11-18",
@@ -55188,6 +55188,21 @@
                       "signedAt": null,
                       "title": "Hearings to examine the nominations of Dennis Kirk, of Virginia, to be Inspector General, Department of the Interior, and Toby Deen, of Colorado, to be an Assistant Secretary of Energy (Hydrocarbons and Geothermal Energy).",
                       "summary": "Energy and Natural Resources · Open Hearing · 09:30 AM · SD-366",
+                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+                      "source": "Senate.gov committee hearings XML",
+                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "senate-hearing-338845",
+                      "kind": "hearing",
+                      "when": "2026-11-18",
+                      "until": null,
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Business meeting to consider pending calendar business.",
+                      "summary": "Environment and Public Works · Open Business Meeting · 09:30 AM · SD-406",
                       "url": "https://www.senate.gov/committees/hearings_meetings.htm",
                       "source": "Senate.gov committee hearings XML",
                       "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
@@ -55248,66 +55263,6 @@
                       "signedAt": null,
                       "title": "Hearings to examine pending nominations.",
                       "summary": "Judiciary · Open Hearing · 11:00 AM · SD-G50",
-                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-                      "source": "Senate.gov committee hearings XML",
-                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "senate-hearing-338835",
-                      "kind": "hearing",
-                      "when": "2026-11-18",
-                      "until": null,
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Hearings to examine the nominations of Gary Lawkowski, of Virginia, to be General Counsel, and Joseph Weirsky, of Virginia, to be Director of the National Counterterrorism Center, both of the Office of the Director of National Intelligence.",
-                      "summary": "Intelligence · Open Hearing · 03:00 PM · SH-430",
-                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-                      "source": "Senate.gov committee hearings XML",
-                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "senate-hearing-338823",
-                      "kind": "hearing",
-                      "when": "2026-11-18",
-                      "until": null,
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Hearings to examine a bridge, not a barrier, focusing on reforming the safety net to reward work.",
-                      "summary": "Aging · Open Hearing · 03:30 PM · SH-216",
-                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-                      "source": "Senate.gov committee hearings XML",
-                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "senate-hearing-338825",
-                      "kind": "hearing",
-                      "when": "2026-11-18",
-                      "until": null,
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Hearings to examine VA accountability and transparency, focusing on examining the current and future path of VA's electronic health record modernization program.",
-                      "summary": "Veterans' Affairs · Open Hearing · 04:00 PM · SD-106",
-                      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-                      "source": "Senate.gov committee hearings XML",
-                      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "senate-hearing-338829",
-                      "kind": "hearing",
-                      "when": "2026-11-17",
-                      "until": null,
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Hearings to examine the nominations of Ashley Stow, of Texas, and Andrew Woodson, of Virginia, both to be a Member of the Federal Election Commission.",
-                      "summary": "Rules and Administration · Open Hearing · Time to be announced. · SR-301",
                       "url": "https://www.senate.gov/committees/hearings_meetings.htm",
                       "source": "Senate.gov committee hearings XML",
                       "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
@@ -56137,7 +56092,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -56276,8 +56231,8 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-13T20:55:11.247Z",
-          "count": 39,
+          "asOf": "2026-11-14T19:13:18.204Z",
+          "count": 40,
           "rolledUp": true,
           "events": [
             {
@@ -57620,7 +57575,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 9,
               "rolledUp": false,
               "events": [
@@ -58963,7 +58918,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 5,
               "rolledUp": false,
               "events": [
@@ -59429,7 +59384,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -61039,10 +60994,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
-              "count": 5,
+              "asOf": "2026-11-14T19:13:18.204Z",
+              "count": 6,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-sun-2026-23210-2026-11-17",
+                  "kind": "sunshine_meeting",
+                  "when": "2026-11-17",
+                  "until": "2026-11-17",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Sunshine Act Meetings",
+                  "summary": "National Credit Union Administration",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23210.pdf",
+                  "source": "Federal Register Sunshine Act meeting",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-pi-2026-23210",
                   "kind": "public_inspection",
@@ -63192,7 +63162,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -63472,7 +63442,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -63874,7 +63844,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -64845,7 +64815,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -65975,7 +65945,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -66457,7 +66427,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 8,
               "rolledUp": false,
               "events": [
@@ -67276,7 +67246,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-13T20:55:11.247Z",
+          "asOf": "2026-11-14T19:13:18.204Z",
           "count": 2,
           "rolledUp": true,
           "events": [
@@ -68168,7 +68138,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-13T20:55:11.247Z",
+              "asOf": "2026-11-14T19:13:18.204Z",
               "count": 2,
               "rolledUp": false,
               "events": [

@@ -1,9 +1,9 @@
 {
-  "fetchedAt": "2026-11-13T20:55:11.247Z",
+  "fetchedAt": "2026-11-14T19:13:18.204Z",
   "sources": {
     "senateFloor": {
       "ok": true,
-      "count": 2,
+      "count": 1,
       "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
     },
     "houseClerk": {
@@ -18,42 +18,42 @@
     },
     "publicInspection": {
       "ok": true,
-      "count": 107,
+      "count": 108,
       "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
     },
     "presidential": {
       "ok": true,
-      "count": 11,
-      "since": "2026-10-30",
+      "count": 12,
+      "since": "2026-10-31",
       "url": "https://www.federalregister.gov/presidential-documents"
     },
     "commentDeadlines": {
       "ok": true,
-      "count": 120,
-      "start": "2026-11-13",
-      "end": "2026-12-12",
+      "count": 114,
+      "start": "2026-11-14",
+      "end": "2026-12-13",
       "type": "PRORULE",
       "url": "https://www.federalregister.gov/"
     },
     "sunshine": {
       "ok": true,
-      "count": 2,
-      "start": "2026-11-13",
-      "end": "2026-12-12",
+      "count": 3,
+      "start": "2026-11-14",
+      "end": "2026-12-13",
       "url": "https://www.federalregister.gov/"
     },
     "senateHearings": {
       "ok": true,
-      "count": 17,
-      "start": "2026-11-13",
-      "end": "2026-12-12",
+      "count": 23,
+      "start": "2026-11-14",
+      "end": "2026-12-13",
       "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
     },
     "houseHearings": {
       "ok": true,
       "count": 16,
-      "start": "2026-11-13",
-      "end": "2026-12-12",
+      "start": "2026-11-14",
+      "end": "2026-12-13",
       "congress": 119,
       "calendarIds": 16,
       "skipped404": [],
@@ -62,25 +62,12 @@
     "scotus": {
       "ok": true,
       "count": 1,
-      "start": "2026-11-13",
-      "end": "2026-12-12",
+      "start": "2026-11-14",
+      "end": "2026-12-13",
       "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
     }
   },
   "events": [
-    {
-      "id": "senate-floor-2026-11-12T12:00:00-05:00",
-      "kind": "floor_session",
-      "chamber": "Senate",
-      "when": "2026-11-12T12:00:00-05:00",
-      "until": "2026-11-12T16:52:00-05:00",
-      "title": "Senate floor (recent)",
-      "summary": "Has adjourned",
-      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-      "source": "Senate.gov floor schedule XML",
-      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-      "urgency": "recent"
-    },
     {
       "id": "senate-next-2026-11-16T15:00:00-05:00",
       "kind": "floor_session",
@@ -108,214 +95,214 @@
       "urgency": "upcoming"
     },
     {
-      "id": "house-ml-HR3978",
+      "id": "house-ml-HR7954",
       "kind": "house_schedule",
       "chamber": "House",
-      "when": "NOVEMBER 9",
+      "when": "NOVEMBER 16",
       "until": null,
-      "title": "H.R. 3978 — Nuclear REFUEL",
+      "title": "H.R. 7954 — Don Young Doug LaMalfa Indian Buffalo Management Act",
       "summary": "Majority Leader weekly schedule",
       "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "source": "House Majority Leader weekly schedule",
       "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "urgency": "upcoming",
-      "bill": "H.R. 3978"
+      "bill": "H.R. 7954"
     },
     {
-      "id": "house-ml-HR5549",
+      "id": "house-ml-HR8195",
       "kind": "house_schedule",
       "chamber": "House",
-      "when": "NOVEMBER 9",
+      "when": "NOVEMBER 16",
       "until": null,
-      "title": "H.R. 5549 — Efficient Nuclear Licensing Hearings Act",
+      "title": "H.R. 8195 — Responsible Cormorant Management and Control Act of 2026",
       "summary": "Majority Leader weekly schedule",
       "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "source": "House Majority Leader weekly schedule",
       "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "urgency": "upcoming",
-      "bill": "H.R. 5549"
+      "bill": "H.R. 8195"
     },
     {
-      "id": "house-ml-HR9084",
+      "id": "house-ml-HR8483",
       "kind": "house_schedule",
       "chamber": "House",
-      "when": "NOVEMBER 9",
+      "when": "NOVEMBER 16",
       "until": null,
-      "title": "H.R. 9084 — Department of Energy Nuclear Transparency Act",
+      "title": "H.R. 8483 — Barona Group of Capitan Grande Band of Mission Indians Land Transfer Act of 2026",
       "summary": "Majority Leader weekly schedule",
       "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "source": "House Majority Leader weekly schedule",
       "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "urgency": "upcoming",
-      "bill": "H.R. 9084"
+      "bill": "H.R. 8483"
     },
     {
-      "id": "house-ml-HR9612",
+      "id": "house-ml-HR9600",
       "kind": "house_schedule",
       "chamber": "House",
-      "when": "NOVEMBER 9",
+      "when": "NOVEMBER 16",
       "until": null,
-      "title": "H.R. 9612 — American Enrichment Deployment Act",
+      "title": "H.R. 9600 — Common Sense 250 Act of 2026",
       "summary": "Majority Leader weekly schedule",
       "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "source": "House Majority Leader weekly schedule",
       "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "urgency": "upcoming",
-      "bill": "H.R. 9612"
+      "bill": "H.R. 9600"
     },
     {
-      "id": "house-ml-HR9613",
+      "id": "house-ml-HR10136",
       "kind": "house_schedule",
       "chamber": "House",
-      "when": "NOVEMBER 9",
+      "when": "NOVEMBER 16",
       "until": null,
-      "title": "H.R. 9613 — Nuclear Advisory Committee Reform Act",
+      "title": "H.R. 10136 — Crossett Experimental Forest Act of 2026",
       "summary": "Majority Leader weekly schedule",
       "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "source": "House Majority Leader weekly schedule",
       "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "urgency": "upcoming",
-      "bill": "H.R. 9613"
+      "bill": "H.R. 10136"
     },
     {
-      "id": "house-ml-HR9614",
+      "id": "house-ml-HR9640",
       "kind": "house_schedule",
       "chamber": "House",
-      "when": "NOVEMBER 9",
+      "when": "NOVEMBER 16",
       "until": null,
-      "title": "H.R. 9614 — NRC Staff Pay Alignment Act",
+      "title": "H.R. 9640 — Earth MRI Reauthorization Act of 2026",
       "summary": "Majority Leader weekly schedule",
       "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "source": "House Majority Leader weekly schedule",
       "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "urgency": "upcoming",
-      "bill": "H.R. 9614"
+      "bill": "H.R. 9640"
     },
     {
-      "id": "house-ml-HR8552",
+      "id": "house-ml-HR9785",
       "kind": "house_schedule",
       "chamber": "House",
-      "when": "NOVEMBER 9",
+      "when": "NOVEMBER 16",
       "until": null,
-      "title": "H.R. 8552 — Veterans’ Compensation Cost-of-Living Adjustment Act of 2026",
+      "title": "H.R. 9785 — South Dakota Water Feasibility Studies Act",
       "summary": "Majority Leader weekly schedule",
       "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "source": "House Majority Leader weekly schedule",
       "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "urgency": "upcoming",
-      "bill": "H.R. 8552"
+      "bill": "H.R. 9785"
     },
     {
-      "id": "house-ml-HR10329",
+      "id": "house-ml-HR9269",
       "kind": "house_schedule",
       "chamber": "House",
-      "when": "NOVEMBER 9",
+      "when": "NOVEMBER 16",
       "until": null,
-      "title": "H.R. 10329 — Combating Foreign Threats to Main Street Act of 2026",
+      "title": "H.R. 9269 — Renewing the African American Civil Rights Network Act",
       "summary": "Majority Leader weekly schedule",
       "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "source": "House Majority Leader weekly schedule",
       "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "urgency": "upcoming",
-      "bill": "H.R. 10329"
+      "bill": "H.R. 9269"
     },
     {
-      "id": "house-ml-HR10355",
+      "id": "house-ml-HR2400",
       "kind": "house_schedule",
       "chamber": "House",
-      "when": "NOVEMBER 9",
+      "when": "NOVEMBER 16",
       "until": null,
-      "title": "H.R. 10355 — Disaster Loan Outreach Consistency Act",
+      "title": "H.R. 2400 — Pit River Land Transfer Act of 2026",
       "summary": "Majority Leader weekly schedule",
       "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "source": "House Majority Leader weekly schedule",
       "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "urgency": "upcoming",
-      "bill": "H.R. 10355"
+      "bill": "H.R. 2400"
     },
     {
-      "id": "house-ml-HR10371",
+      "id": "house-ml-HR7254",
       "kind": "house_schedule",
       "chamber": "House",
-      "when": "NOVEMBER 9",
+      "when": "NOVEMBER 16",
       "until": null,
-      "title": "H.R. 10371 — Ensuring SBA Implementation of GAO Recommendations Act of 2026",
+      "title": "H.R. 7254 — To amend the National Trails System Act to direct the Secretary of the Interior to conduct a study on the feasibility of",
       "summary": "Majority Leader weekly schedule",
       "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "source": "House Majority Leader weekly schedule",
       "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "urgency": "upcoming",
-      "bill": "H.R. 10371"
+      "bill": "H.R. 7254"
     },
     {
-      "id": "house-ml-HR10353",
+      "id": "house-ml-HR5490",
       "kind": "house_schedule",
       "chamber": "House",
-      "when": "NOVEMBER 9",
+      "when": "NOVEMBER 16",
       "until": null,
-      "title": "H.R. 10353 — SBIC Reporting Modernization Act of 2026",
+      "title": "H.R. 5490 — Dismantle Foreign Scam Syndicates Act",
       "summary": "Majority Leader weekly schedule",
       "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "source": "House Majority Leader weekly schedule",
       "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "urgency": "upcoming",
-      "bill": "H.R. 10353"
+      "bill": "H.R. 5490"
     },
     {
-      "id": "house-ml-HR10238",
+      "id": "house-ml-HR4464",
       "kind": "house_schedule",
       "chamber": "House",
-      "when": "NOVEMBER 9",
+      "when": "NOVEMBER 16",
       "until": null,
-      "title": "H.R. 10238 — Cybersecurity for Small Businesses Act of 2026",
+      "title": "H.R. 4464 — Preventive Health Savings Act",
       "summary": "Majority Leader weekly schedule",
       "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "source": "House Majority Leader weekly schedule",
       "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "urgency": "upcoming",
-      "bill": "H.R. 10238"
+      "bill": "H.R. 4464"
     },
     {
-      "id": "house-ml-HR9718",
+      "id": "house-ml-HR7934",
       "kind": "house_schedule",
       "chamber": "House",
-      "when": "NOVEMBER 9",
+      "when": "NOVEMBER 16",
       "until": null,
-      "title": "H.R. 9718 — Reshoring American Manufacturing Act of 2026",
+      "title": "H.R. 7934 — Settlement Agreement Information Database Act of 2026",
       "summary": "Majority Leader weekly schedule",
       "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "source": "House Majority Leader weekly schedule",
       "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "urgency": "upcoming",
-      "bill": "H.R. 9718"
+      "bill": "H.R. 7934"
     },
     {
-      "id": "house-ml-HR10375",
+      "id": "house-ml-HR5267",
       "kind": "house_schedule",
       "chamber": "House",
-      "when": "NOVEMBER 9",
+      "when": "NOVEMBER 16",
       "until": null,
-      "title": "H.R. 10375 — 504 Modernization and Small Manufacturer Enhancement Act",
+      "title": "H.R. 5267 — American Franchise Act",
       "summary": "Majority Leader weekly schedule",
       "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "source": "House Majority Leader weekly schedule",
       "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "urgency": "upcoming",
-      "bill": "H.R. 10375"
+      "bill": "H.R. 5267"
     },
     {
-      "id": "house-ml-HR1013",
+      "id": "house-ml-HR3495",
       "kind": "house_schedule",
       "chamber": "House",
-      "when": "NOVEMBER 9",
+      "when": "NOVEMBER 16",
       "until": null,
-      "title": "H.R. 1013 — Retirement Fairness for Charities and Educational Institutions Act of 2025",
+      "title": "H.R. 3495 — Direct Seller and Real Estate Agent Harmonization Act",
       "summary": "Majority Leader weekly schedule",
       "url": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "source": "House Majority Leader weekly schedule",
       "sourceUrl": "https://www.majorityleader.gov/schedule/weekly-schedule.htm",
       "urgency": "upcoming",
-      "bill": "H.R. 1013"
+      "bill": "H.R. 3495"
     },
     {
       "id": "fr-pi-2026-23084",
@@ -2458,6 +2445,58 @@
       "documentNumber": "2026-23359"
     },
     {
+      "id": "fr-pi-2026-23381",
+      "kind": "public_inspection",
+      "when": "2026-11-17",
+      "until": null,
+      "filedAt": "2026-11-13T16:15:00.000-05:00",
+      "title": "Meetings; Sunshine Act",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "https://public-inspection.federalregister.gov/2026-23381.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-23381/meetings-sunshine-act",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-23381.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentType": "Notice",
+      "documentNumber": "2026-23381"
+    },
+    {
+      "id": "fr-pres-2026-23349",
+      "kind": "presidential_doc",
+      "when": "2026-11-16",
+      "until": null,
+      "signedAt": null,
+      "title": "Presidential Determination Concerning Wildfire Suppression Activities in the United States",
+      "summary": "Presidential Document",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23349.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/16/2026-23349/presidential-determination-concerning-wildfire-suppression-activities-in-the-united-states",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23349.pdf",
+      "source": "Federal Register presidential documents (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+      "urgency": "recent",
+      "documentType": "Presidential Document"
+    },
+    {
+      "id": "fr-pres-2026-23348",
+      "kind": "presidential_doc",
+      "when": "2026-11-16",
+      "until": null,
+      "signedAt": null,
+      "title": "Veterans Day, 2026",
+      "summary": "Presidential Document",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23348.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/16/2026-23348/veterans-day-2026",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23348.pdf",
+      "source": "Federal Register presidential documents (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+      "urgency": "recent",
+      "documentType": "Presidential Document"
+    },
+    {
       "id": "fr-pres-2026-23233",
       "kind": "presidential_doc",
       "when": "2026-11-13",
@@ -2618,20 +2657,24 @@
       "documentType": "Presidential Document"
     },
     {
-      "id": "fr-pres-2026-22292",
-      "kind": "presidential_doc",
-      "when": "2026-10-30",
-      "until": null,
-      "signedAt": null,
-      "title": "Further Modifying the Scope of Products of Canada Subject to the Additional Duties Imposed To Offset Canadian Discrimination Against the Commerce of the United States With Respect to Motor Vehicles",
-      "summary": "Presidential Document",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-30/pdf/2026-22292.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/30/2026-22292/further-modifying-the-scope-of-products-of-canada-subject-to-the-additional-duties-imposed-to-offset",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-30/pdf/2026-22292.pdf",
-      "source": "Federal Register presidential documents (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/presidential-documents",
-      "urgency": "recent",
-      "documentType": "Presidential Document"
+      "id": "fr-comment-2026-23239",
+      "kind": "comment_deadline",
+      "when": "2026-12-10",
+      "until": "2026-12-10",
+      "title": "Federal Motor Vehicle Safety Standards; Modernization of FMVSS No. 108 To Accommodate ADS-Equipped Vehicles",
+      "summary": "Transportation Department, National Highway Traffic Safety Administration",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23239.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/16/2026-23239/federal-motor-vehicle-safety-standards-modernization-of-fmvss-no-108-to-accommodate-ads-equipped",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23239.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "National Highway Traffic Safety Administration"
+      ],
+      "documentNumber": "2026-23239",
+      "documentType": "Proposed Rule"
     },
     {
       "id": "fr-comment-2026-22944",
@@ -3725,25 +3768,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-21031",
-      "kind": "comment_deadline",
-      "when": "2026-11-13",
-      "until": "2026-11-13",
-      "title": "AP1000 Design Certification Renewal",
-      "summary": "Nuclear Regulatory Commission",
-      "url": "http://www.regulations.gov/commenton/NRC-2026-2377-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/14/2026-21031/ap1000-design-certification-renewal",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-14/pdf/2026-21031.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Nuclear Regulatory Commission"
-      ],
-      "documentNumber": "2026-21031",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-21012",
       "kind": "comment_deadline",
       "when": "2026-11-30",
@@ -3784,26 +3808,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-21004",
-      "kind": "comment_deadline",
-      "when": "2026-11-13",
-      "until": "2026-11-13",
-      "title": "Further Reducing Bureaucracy and Burden From the Administration for Native Americans",
-      "summary": "Health and Human Services Department, Children and Families Administration",
-      "url": "http://www.regulations.gov/commenton/ACF-2026-0826-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/14/2026-21004/further-reducing-bureaucracy-and-burden-from-the-administration-for-native-americans",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-14/pdf/2026-21004.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Health and Human Services Department",
-        "Children and Families Administration"
-      ],
-      "documentNumber": "2026-21004",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-21000",
       "kind": "comment_deadline",
       "when": "2026-11-19",
@@ -3820,44 +3824,6 @@
         "Postal Regulatory Commission"
       ],
       "documentNumber": "2026-21000",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-20964",
-      "kind": "comment_deadline",
-      "when": "2026-11-13",
-      "until": "2026-11-13",
-      "title": "Trichloroethylene (TCE); Regulation Under the Toxic Substances Control Act (TSCA); Compliance Date Extensions",
-      "summary": "Environmental Protection Agency",
-      "url": "http://www.regulations.gov/commenton/EPA-HQ-OPPT-2026-7327-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/14/2026-20964/trichloroethylene-tce-regulation-under-the-toxic-substances-control-act-tsca-compliance-date",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-14/pdf/2026-20964.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Environmental Protection Agency"
-      ],
-      "documentNumber": "2026-20964",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-20941",
-      "kind": "comment_deadline",
-      "when": "2026-11-13",
-      "until": "2026-11-13",
-      "title": "Removing Deference to Prior USCIS Determinations of Eligibility",
-      "summary": "Homeland Security Department",
-      "url": "http://www.regulations.gov/commenton/USCIS-2026-0529-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/14/2026-20941/removing-deference-to-prior-uscis-determinations-of-eligibility",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-14/pdf/2026-20941.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Homeland Security Department"
-      ],
-      "documentNumber": "2026-20941",
       "documentType": "Proposed Rule"
     },
     {
@@ -4514,46 +4480,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-19892",
-      "kind": "comment_deadline",
-      "when": "2026-11-13",
-      "until": "2026-11-13",
-      "title": "Airworthiness Directives; Leonardo S.p.a. Helicopters",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2026-11788-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/29/2026-19892/airworthiness-directives-leonardo-spa-helicopters",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-29/pdf/2026-19892.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-19892",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-19890",
-      "kind": "comment_deadline",
-      "when": "2026-11-13",
-      "until": "2026-11-13",
-      "title": "Airworthiness Directives; Airbus Helicopters Deutschland GmbH (AHD) Helicopters",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2026-11790-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/29/2026-19890/airworthiness-directives-airbus-helicopters-deutschland-gmbh-ahd-helicopters",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-29/pdf/2026-19890.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-19890",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-19860",
       "kind": "comment_deadline",
       "when": "2026-11-30",
@@ -4904,26 +4830,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-18799",
-      "kind": "comment_deadline",
-      "when": "2026-11-13",
-      "until": "2026-11-13",
-      "title": "Use of Certain Restricted Category Aircraft for the Transport of Firefighters for Wildfire Suppression",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2026-10991-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/14/2026-18799/use-of-certain-restricted-category-aircraft-for-the-transport-of-firefighters-for-wildfire",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-14/pdf/2026-18799.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-18799",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-18282",
       "kind": "comment_deadline",
       "when": "2026-12-07",
@@ -4983,6 +4889,24 @@
       "documentType": "Proposed Rule"
     },
     {
+      "id": "fr-sun-2026-23210-2026-11-17",
+      "kind": "sunshine_meeting",
+      "when": "2026-11-17",
+      "until": "2026-11-17",
+      "title": "Sunshine Act Meetings",
+      "summary": "National Credit Union Administration",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23210.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/16/2026-23210/sunshine-act-meetings",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23210.pdf",
+      "source": "Federal Register Sunshine Act meeting",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Credit Union Administration"
+      ],
+      "documentNumber": "2026-23210"
+    },
+    {
       "id": "fr-sun-2026-22828-2026-11-18",
       "kind": "sunshine_meeting",
       "when": "2026-11-18",
@@ -5019,6 +4943,20 @@
       "documentNumber": "2026-22441"
     },
     {
+      "id": "senate-hearing-338844",
+      "kind": "hearing",
+      "chamber": "Senate",
+      "committee": "Agriculture, Nutrition, and Forestry",
+      "when": "2026-11-16",
+      "until": null,
+      "title": "Business meeting to consider pending calendar business.",
+      "summary": "Agriculture, Nutrition, and Forestry · Open Business Meeting · Time to be announced. · S-216",
+      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+      "source": "Senate.gov committee hearings XML",
+      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+      "urgency": "upcoming"
+    },
+    {
       "id": "senate-hearing-338820",
       "kind": "hearing",
       "chamber": "Senate",
@@ -5027,20 +4965,6 @@
       "until": null,
       "title": "To receive a briefing on generation victory, focusing on how Ukraine is educating students in wartime.",
       "summary": "Commission on Security and Cooperation in Europe · Open Hearing · 11:00 AM · RHOB-2247",
-      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-      "source": "Senate.gov committee hearings XML",
-      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-      "urgency": "upcoming"
-    },
-    {
-      "id": "senate-hearing-338829",
-      "kind": "hearing",
-      "chamber": "Senate",
-      "committee": "Rules and Administration",
-      "when": "2026-11-17",
-      "until": null,
-      "title": "Hearings to examine the nominations of Ashley Stow, of Texas, and Andrew Woodson, of Virginia, both to be a Member of the Federal Election Commission.",
-      "summary": "Rules and Administration · Open Hearing · Time to be announced. · SR-301",
       "url": "https://www.senate.gov/committees/hearings_meetings.htm",
       "source": "Senate.gov committee hearings XML",
       "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
@@ -5075,6 +4999,20 @@
       "urgency": "upcoming"
     },
     {
+      "id": "senate-hearing-338829",
+      "kind": "hearing",
+      "chamber": "Senate",
+      "committee": "Rules and Administration",
+      "when": "2026-11-17",
+      "until": null,
+      "title": "Hearings to examine the nominations of Ashley Stow, of Texas, and Andrew Woodson, of Virginia, both to be a Member of the Federal Election Commission.",
+      "summary": "Rules and Administration · Open Hearing · 10:30 AM · SR-301",
+      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+      "source": "Senate.gov committee hearings XML",
+      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+      "urgency": "upcoming"
+    },
+    {
       "id": "senate-hearing-338826",
       "kind": "hearing",
       "chamber": "Senate",
@@ -5103,6 +5041,20 @@
       "urgency": "upcoming"
     },
     {
+      "id": "senate-hearing-338842",
+      "kind": "hearing",
+      "chamber": "Senate",
+      "committee": "Veterans' Affairs",
+      "when": "2026-11-18",
+      "until": null,
+      "title": "Business meeting to consider pending calendar business.",
+      "summary": "Veterans' Affairs · Open Business Meeting · Time to be announced. · S-216",
+      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+      "source": "Senate.gov committee hearings XML",
+      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+      "urgency": "upcoming"
+    },
+    {
       "id": "senate-hearing-338831",
       "kind": "hearing",
       "chamber": "Senate",
@@ -5125,6 +5077,20 @@
       "until": null,
       "title": "Hearings to examine the nominations of Dennis Kirk, of Virginia, to be Inspector General, Department of the Interior, and Toby Deen, of Colorado, to be an Assistant Secretary of Energy (Hydrocarbons and Geothermal Energy).",
       "summary": "Energy and Natural Resources · Open Hearing · 09:30 AM · SD-366",
+      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+      "source": "Senate.gov committee hearings XML",
+      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+      "urgency": "upcoming"
+    },
+    {
+      "id": "senate-hearing-338845",
+      "kind": "hearing",
+      "chamber": "Senate",
+      "committee": "Environment and Public Works",
+      "when": "2026-11-18",
+      "until": null,
+      "title": "Business meeting to consider pending calendar business.",
+      "summary": "Environment and Public Works · Open Business Meeting · 09:30 AM · SD-406",
       "url": "https://www.senate.gov/committees/hearings_meetings.htm",
       "source": "Senate.gov committee hearings XML",
       "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
@@ -5181,6 +5147,20 @@
       "until": null,
       "title": "Hearings to examine pending nominations.",
       "summary": "Judiciary · Open Hearing · 11:00 AM · SD-G50",
+      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+      "source": "Senate.gov committee hearings XML",
+      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+      "urgency": "upcoming"
+    },
+    {
+      "id": "senate-hearing-338843",
+      "kind": "hearing",
+      "chamber": "Senate",
+      "committee": "Indian Affairs",
+      "when": "2026-11-18",
+      "until": null,
+      "title": "Business meeting to consider pending calendar business.",
+      "summary": "Indian Affairs · Open Business Meeting · 02:30 PM · SD-628",
       "url": "https://www.senate.gov/committees/hearings_meetings.htm",
       "source": "Senate.gov committee hearings XML",
       "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
@@ -5257,20 +5237,32 @@
       "urgency": "upcoming"
     },
     {
-      "id": "house-hearing-119588",
+      "id": "senate-hearing-338841",
       "kind": "hearing",
-      "chamber": "House",
-      "committee": "House Education and Workforce",
-      "when": "2026-11-13T15:00:00Z",
+      "chamber": "Senate",
+      "committee": "Banking, Housing, and Urban Affairs",
+      "when": "2026-11-19",
       "until": null,
-      "title": "\"Workers in Charge: Restoring Choice and Accountability in the Workplace\"",
-      "summary": "House Education and Workforce · Hearing · Scheduled",
-      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119588",
-      "source": "Congress.gov committee meeting API",
-      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
-      "urgency": "upcoming",
-      "eventId": "119588",
-      "meetingType": "Hearing"
+      "title": "Business meeting to consider certain pending nominations.",
+      "summary": "Banking, Housing, and Urban Affairs · Open Business Meeting · 10:00 AM · SD-538",
+      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+      "source": "Senate.gov committee hearings XML",
+      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+      "urgency": "upcoming"
+    },
+    {
+      "id": "senate-hearing-338840",
+      "kind": "hearing",
+      "chamber": "Senate",
+      "committee": "Foreign Relations",
+      "when": "2026-11-19",
+      "until": null,
+      "title": "Hearings to examine certain pending nominations.",
+      "summary": "Foreign Relations · Open Hearing · 10:00 AM · SD-419",
+      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+      "source": "Senate.gov committee hearings XML",
+      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+      "urgency": "upcoming"
     },
     {
       "id": "house-hearing-118862",
@@ -5286,6 +5278,22 @@
       "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
       "urgency": "upcoming",
       "eventId": "118862",
+      "meetingType": "Meeting"
+    },
+    {
+      "id": "house-hearing-119609",
+      "kind": "hearing",
+      "chamber": "House",
+      "committee": "House Intelligence (Permanent Select)",
+      "when": "2026-11-17T22:15:00Z",
+      "until": null,
+      "title": "Business Meeting to Consider: Release of Unclassified Report on the Committee's Open Investigation and Additional Matters",
+      "summary": "House Intelligence (Permanent Select) · Meeting · Scheduled · Capitol ---------",
+      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119609",
+      "source": "Congress.gov committee meeting API",
+      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+      "urgency": "upcoming",
+      "eventId": "119609",
       "meetingType": "Meeting"
     },
     {
