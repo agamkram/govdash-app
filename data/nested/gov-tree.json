@@ -80,16 +80,16 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-11-14T19:13:39.924Z",
-      "asOf": "2026-11-14T19:13:18.204Z",
-      "nodesWithHeat": 90,
-      "nodesWithDirectHeat": 50,
-      "rawEventCount": 294,
+      "enrichedAt": "2026-11-15T19:49:48.670Z",
+      "asOf": "2026-11-15T19:49:32.004Z",
+      "nodesWithHeat": 97,
+      "nodesWithDirectHeat": 55,
+      "rawEventCount": 310,
       "matched": {
         "chamber": 17,
         "presidential": 12,
         "publicInspection": 95,
-        "commentDeadlines": 107,
+        "commentDeadlines": 123,
         "sunshine": 3,
         "hearings": 39,
         "scotus": 1
@@ -121,36 +121,36 @@
         "presidential": {
           "ok": true,
           "count": 12,
-          "since": "2026-10-31",
+          "since": "2026-11-01",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 114,
-          "start": "2026-11-14",
-          "end": "2026-12-13",
+          "count": 130,
+          "start": "2026-11-15",
+          "end": "2026-12-14",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
           "count": 3,
-          "start": "2026-11-14",
-          "end": "2026-12-13",
+          "start": "2026-11-15",
+          "end": "2026-12-14",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
           "count": 23,
-          "start": "2026-11-14",
-          "end": "2026-12-13",
+          "start": "2026-11-15",
+          "end": "2026-12-14",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
           "count": 16,
-          "start": "2026-11-14",
-          "end": "2026-12-13",
+          "start": "2026-11-15",
+          "end": "2026-12-14",
           "congress": 119,
           "calendarIds": 16,
           "skipped404": [],
@@ -159,8 +159,8 @@
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-11-14",
-          "end": "2026-12-13",
+          "start": "2026-11-15",
+          "end": "2026-12-14",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -208,95 +208,95 @@
       "note": "Synthetic root. Crosswalk branches attach under Parent=[Branch]."
     },
     "heat": {
-      "asOf": "2026-11-14T19:13:18.204Z",
-      "count": 221,
+      "asOf": "2026-11-15T19:49:32.004Z",
+      "count": 238,
       "rolledUp": true,
       "events": [
         {
-          "id": "fr-comment-2026-23239",
+          "id": "fr-comment-2026-23086",
           "kind": "comment_deadline",
-          "when": "2026-12-10",
-          "until": "2026-12-10",
+          "when": "2026-12-14",
+          "until": "2026-12-14",
           "filedAt": null,
           "signedAt": null,
-          "title": "Federal Motor Vehicle Safety Standards; Modernization of FMVSS No. 108 To Accommodate ADS-Equipped Vehicles",
-          "summary": "Transportation Department, National Highway Traffic Safety Administration (from lower in the map)",
-          "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23239.pdf",
+          "title": "Horse Protection",
+          "summary": "Agriculture Department, Animal and Plant Health Inspection Service (from lower in the map)",
+          "url": "http://www.regulations.gov/commenton/APHIS-2026-0067-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-22826",
+          "id": "fr-comment-2026-23033",
           "kind": "comment_deadline",
-          "when": "2026-12-09",
-          "until": "2026-12-09",
+          "when": "2026-12-14",
+          "until": "2026-12-14",
           "filedAt": null,
           "signedAt": null,
-          "title": "Pecans Grown in the States of Alabama, Arkansas, Arizona, California, Florida, Georgia, Kansas, Louisiana, Missouri, Mississippi, North Carolina, New Mexico, Oklahoma, South Carolina, and Texas; Changes to Membership and Handling Requirements",
-          "summary": "Agriculture Department, Agricultural Marketing Service (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/AMS-SC-25-0881-0001",
+          "title": "Rangeland Management",
+          "summary": "Agriculture Department, Forest Service (from lower in the map)",
+          "url": "http://www.regulations.gov/commenton/FS-2026-0199-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-22815",
+          "id": "fr-comment-2026-23020",
           "kind": "comment_deadline",
-          "when": "2026-12-09",
-          "until": "2026-12-09",
+          "when": "2026-12-14",
+          "until": "2026-12-14",
           "filedAt": null,
           "signedAt": null,
-          "title": "Pacific Island Fisheries; Commercial Fishing in the Pacific Remote Islands Marine National Monument Expansion",
+          "title": "Coral, Coral Reefs, and Live/Hardbottom Habitats of the South Atlantic and the Shrimp Fishery of the South Atlantic Region; Amendments 11/12",
           "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-2410-0001",
+          "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1750-0428",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-22784",
+          "id": "fr-comment-2026-20884",
           "kind": "comment_deadline",
-          "when": "2026-12-09",
-          "until": "2026-12-09",
+          "when": "2026-12-14",
+          "until": "2026-12-14",
           "filedAt": null,
           "signedAt": null,
-          "title": "Conditional Expected Casualty Exception for Failures Resulting in an Uncontrolled Atmospheric Return",
-          "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-9942-0001",
+          "title": "Advance Traveler Information for Rail",
+          "summary": "Homeland Security Department, U.S. Customs and Border Protection (from lower in the map)",
+          "url": "http://www.regulations.gov/commenton/USCBP-2026-0992-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-22783",
+          "id": "fr-comment-2026-23145",
           "kind": "comment_deadline",
-          "when": "2026-12-09",
-          "until": "2026-12-09",
+          "when": "2026-12-14",
+          "until": "2026-12-14",
           "filedAt": null,
           "signedAt": null,
-          "title": "Flight Safety Limits Objectives Burden Reducing Clarification",
-          "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-9937-0001",
+          "title": "Oil and Gas and Sulfur Operations in the Outer Continental Shelf-Revisions to the Requirements for Exploratory Drilling on the Arctic Outer Continental Shelf; Reopening of Comment Period",
+          "summary": "Interior Department, Safety and Environmental Enforcement Bureau, Ocean Energy Management Bureau (from lower in the map)",
+          "url": "http://www.regulations.gov/commenton/BSEE_FRDOC_0001-0330",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-22782",
+          "id": "fr-comment-2026-22042",
           "kind": "comment_deadline",
-          "when": "2026-12-09",
-          "until": "2026-12-09",
+          "when": "2026-12-14",
+          "until": "2026-12-14",
           "filedAt": null,
           "signedAt": null,
-          "title": "Flight Abort Burden Reducing Clarification on End of Flight Safety Limits",
+          "title": "Establishment of Class D Airspace; Winter Haven, FL",
           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-9943-0001",
+          "url": "http://www.regulations.gov/commenton/FAA-2026-13869-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
@@ -355,95 +355,95 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-14T19:13:18.204Z",
-          "count": 153,
+          "asOf": "2026-11-15T19:49:32.004Z",
+          "count": 163,
           "rolledUp": true,
           "events": [
             {
-              "id": "fr-comment-2026-23239",
+              "id": "fr-comment-2026-23086",
               "kind": "comment_deadline",
-              "when": "2026-12-10",
-              "until": "2026-12-10",
+              "when": "2026-12-14",
+              "until": "2026-12-14",
               "filedAt": null,
               "signedAt": null,
-              "title": "Federal Motor Vehicle Safety Standards; Modernization of FMVSS No. 108 To Accommodate ADS-Equipped Vehicles",
-              "summary": "Transportation Department, National Highway Traffic Safety Administration (from lower in the map)",
-              "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-16/pdf/2026-23239.pdf",
+              "title": "Horse Protection",
+              "summary": "Agriculture Department, Animal and Plant Health Inspection Service (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/APHIS-2026-0067-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-22826",
+              "id": "fr-comment-2026-23033",
               "kind": "comment_deadline",
-              "when": "2026-12-09",
-              "until": "2026-12-09",
+              "when": "2026-12-14",
+              "until": "2026-12-14",
               "filedAt": null,
               "signedAt": null,
-              "title": "Pecans Grown in the States of Alabama, Arkansas, Arizona, California, Florida, Georgia, Kansas, Louisiana, Missouri, Mississippi, North Carolina, New Mexico, Oklahoma, South Carolina, and Texas; Changes to Membership and Handling Requirements",
-              "summary": "Agriculture Department, Agricultural Marketing Service (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/AMS-SC-25-0881-0001",
+              "title": "Rangeland Management",
+              "summary": "Agriculture Department, Forest Service (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/FS-2026-0199-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-22815",
+              "id": "fr-comment-2026-23020",
               "kind": "comment_deadline",
-              "when": "2026-12-09",
-              "until": "2026-12-09",
+              "when": "2026-12-14",
+              "until": "2026-12-14",
               "filedAt": null,
               "signedAt": null,
-              "title": "Pacific Island Fisheries; Commercial Fishing in the Pacific Remote Islands Marine National Monument Expansion",
+              "title": "Coral, Coral Reefs, and Live/Hardbottom Habitats of the South Atlantic and the Shrimp Fishery of the South Atlantic Region; Amendments 11/12",
               "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-2410-0001",
+              "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1750-0428",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-22784",
+              "id": "fr-comment-2026-20884",
               "kind": "comment_deadline",
-              "when": "2026-12-09",
-              "until": "2026-12-09",
+              "when": "2026-12-14",
+              "until": "2026-12-14",
               "filedAt": null,
               "signedAt": null,
-              "title": "Conditional Expected Casualty Exception for Failures Resulting in an Uncontrolled Atmospheric Return",
-              "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/FAA-2026-9942-0001",
+              "title": "Advance Traveler Information for Rail",
+              "summary": "Homeland Security Department, U.S. Customs and Border Protection (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/USCBP-2026-0992-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-22783",
+              "id": "fr-comment-2026-23145",
               "kind": "comment_deadline",
-              "when": "2026-12-09",
-              "until": "2026-12-09",
+              "when": "2026-12-14",
+              "until": "2026-12-14",
               "filedAt": null,
               "signedAt": null,
-              "title": "Flight Safety Limits Objectives Burden Reducing Clarification",
-              "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/FAA-2026-9937-0001",
+              "title": "Oil and Gas and Sulfur Operations in the Outer Continental Shelf-Revisions to the Requirements for Exploratory Drilling on the Arctic Outer Continental Shelf; Reopening of Comment Period",
+              "summary": "Interior Department, Safety and Environmental Enforcement Bureau, Ocean Energy Management Bureau (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/BSEE_FRDOC_0001-0330",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-22782",
+              "id": "fr-comment-2026-22042",
               "kind": "comment_deadline",
-              "when": "2026-12-09",
-              "until": "2026-12-09",
+              "when": "2026-12-14",
+              "until": "2026-12-14",
               "filedAt": null,
               "signedAt": null,
-              "title": "Flight Abort Burden Reducing Clarification on End of Flight Safety Limits",
+              "title": "Establishment of Class D Airspace; Winter Haven, FL",
               "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/FAA-2026-9943-0001",
+              "url": "http://www.regulations.gov/commenton/FAA-2026-13869-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
@@ -2158,7 +2158,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -2258,7 +2258,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 14,
               "rolledUp": false,
               "events": [
@@ -2484,7 +2484,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-14T19:13:18.204Z",
+                  "asOf": "2026-11-15T19:49:32.004Z",
                   "count": 2,
                   "rolledUp": false,
                   "events": [
@@ -3403,10 +3403,40 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
-              "count": 3,
+              "asOf": "2026-11-15T19:49:32.004Z",
+              "count": 5,
               "rolledUp": true,
               "events": [
+                {
+                  "id": "fr-comment-2026-23086",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-14",
+                  "until": "2026-12-14",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Horse Protection",
+                  "summary": "Agriculture Department, Animal and Plant Health Inspection Service (from lower in the map)",
+                  "url": "http://www.regulations.gov/commenton/APHIS-2026-0067-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-23033",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-14",
+                  "until": "2026-12-14",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Rangeland Management",
+                  "summary": "Agriculture Department, Forest Service (from lower in the map)",
+                  "url": "http://www.regulations.gov/commenton/FS-2026-0199-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-22826",
                   "kind": "comment_deadline",
@@ -3505,10 +3535,40 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-14T19:13:18.204Z",
-                  "count": 3,
+                  "asOf": "2026-11-15T19:49:32.004Z",
+                  "count": 5,
                   "rolledUp": true,
                   "events": [
+                    {
+                      "id": "fr-comment-2026-23086",
+                      "kind": "comment_deadline",
+                      "when": "2026-12-14",
+                      "until": "2026-12-14",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Horse Protection",
+                      "summary": "Agriculture Department, Animal and Plant Health Inspection Service (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/APHIS-2026-0067-0001",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "fr-comment-2026-23033",
+                      "kind": "comment_deadline",
+                      "when": "2026-12-14",
+                      "until": "2026-12-14",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Rangeland Management",
+                      "summary": "Agriculture Department, Forest Service (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/FS-2026-0199-0001",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
                     {
                       "id": "fr-comment-2026-22826",
                       "kind": "comment_deadline",
@@ -3581,10 +3641,40 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-14T19:13:18.204Z",
-                      "count": 3,
+                      "asOf": "2026-11-15T19:49:32.004Z",
+                      "count": 5,
                       "rolledUp": true,
                       "events": [
+                        {
+                          "id": "fr-comment-2026-23086",
+                          "kind": "comment_deadline",
+                          "when": "2026-12-14",
+                          "until": "2026-12-14",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Horse Protection",
+                          "summary": "Agriculture Department, Animal and Plant Health Inspection Service (from lower in the map)",
+                          "url": "http://www.regulations.gov/commenton/APHIS-2026-0067-0001",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
+                        {
+                          "id": "fr-comment-2026-23033",
+                          "kind": "comment_deadline",
+                          "when": "2026-12-14",
+                          "until": "2026-12-14",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Rangeland Management",
+                          "summary": "Agriculture Department, Forest Service (from lower in the map)",
+                          "url": "http://www.regulations.gov/commenton/FS-2026-0199-0001",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
                         {
                           "id": "fr-comment-2026-22826",
                           "kind": "comment_deadline",
@@ -4878,10 +4968,25 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-14T19:13:18.204Z",
-                          "count": 3,
+                          "asOf": "2026-11-15T19:49:32.004Z",
+                          "count": 4,
                           "rolledUp": true,
                           "events": [
+                            {
+                              "id": "fr-comment-2026-23086",
+                              "kind": "comment_deadline",
+                              "when": "2026-12-14",
+                              "until": "2026-12-14",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Horse Protection",
+                              "summary": "Agriculture Department, Animal and Plant Health Inspection Service (from lower in the map)",
+                              "url": "http://www.regulations.gov/commenton/APHIS-2026-0067-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
                             {
                               "id": "fr-comment-2026-22826",
                               "kind": "comment_deadline",
@@ -4954,7 +5059,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-14T19:13:18.204Z",
+                              "asOf": "2026-11-15T19:49:32.004Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -5054,10 +5159,25 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-14T19:13:18.204Z",
-                              "count": 2,
+                              "asOf": "2026-11-15T19:49:32.004Z",
+                              "count": 3,
                               "rolledUp": false,
                               "events": [
+                                {
+                                  "id": "fr-comment-2026-23086",
+                                  "kind": "comment_deadline",
+                                  "when": "2026-12-14",
+                                  "until": "2026-12-14",
+                                  "filedAt": null,
+                                  "signedAt": null,
+                                  "title": "Horse Protection",
+                                  "summary": "Agriculture Department, Animal and Plant Health Inspection Service",
+                                  "url": "http://www.regulations.gov/commenton/APHIS-2026-0067-0001",
+                                  "source": "Federal Register proposed rule (comments close)",
+                                  "sourceUrl": "https://www.federalregister.gov/",
+                                  "urgency": "upcoming",
+                                  "bill": null
+                                },
                                 {
                                   "id": "fr-comment-2026-19532",
                                   "kind": "comment_deadline",
@@ -5195,7 +5315,28 @@
                           "sam": null,
                           "usgm": null
                         },
-                        "heat": null,
+                        "heat": {
+                          "asOf": "2026-11-15T19:49:32.004Z",
+                          "count": 1,
+                          "rolledUp": true,
+                          "events": [
+                            {
+                              "id": "fr-comment-2026-23033",
+                              "kind": "comment_deadline",
+                              "when": "2026-12-14",
+                              "until": "2026-12-14",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Rangeland Management",
+                              "summary": "Agriculture Department, Forest Service (from lower in the map)",
+                              "url": "http://www.regulations.gov/commenton/FS-2026-0199-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            }
+                          ]
+                        },
                         "children": [
                           {
                             "id": "gsa-90",
@@ -5220,7 +5361,28 @@
                               "sam": null,
                               "usgm": null
                             },
-                            "heat": null,
+                            "heat": {
+                              "asOf": "2026-11-15T19:49:32.004Z",
+                              "count": 1,
+                              "rolledUp": false,
+                              "events": [
+                                {
+                                  "id": "fr-comment-2026-23033",
+                                  "kind": "comment_deadline",
+                                  "when": "2026-12-14",
+                                  "until": "2026-12-14",
+                                  "filedAt": null,
+                                  "signedAt": null,
+                                  "title": "Rangeland Management",
+                                  "summary": "Agriculture Department, Forest Service",
+                                  "url": "http://www.regulations.gov/commenton/FS-2026-0199-0001",
+                                  "source": "Federal Register proposed rule (comments close)",
+                                  "sourceUrl": "https://www.federalregister.gov/",
+                                  "urgency": "upcoming",
+                                  "bill": null
+                                }
+                              ]
+                            },
                             "children": [],
                             "spending": {
                               "obligatedAmount": 6775485070.07,
@@ -6125,10 +6287,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
-              "count": 20,
+              "asOf": "2026-11-15T19:49:32.004Z",
+              "count": 21,
               "rolledUp": true,
               "events": [
+                {
+                  "id": "fr-comment-2026-23020",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-14",
+                  "until": "2026-12-14",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Coral, Coral Reefs, and Live/Hardbottom Habitats of the South Atlantic and the Shrimp Fishery of the South Atlantic Region; Amendments 11/12",
+                  "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
+                  "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1750-0428",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-22815",
                   "kind": "comment_deadline",
@@ -6203,21 +6380,6 @@
                   "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                   "urgency": "upcoming",
                   "bill": null
-                },
-                {
-                  "id": "fr-pi-2026-23253",
-                  "kind": "public_inspection",
-                  "when": "2026-11-16",
-                  "until": null,
-                  "filedAt": "2026-11-13T08:45:00.000-05:00",
-                  "signedAt": null,
-                  "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Diamond Sawblades and Parts Thereof from the People's Republic of China",
-                  "summary": "International Trade Administration (from lower in the map)",
-                  "url": "https://public-inspection.federalregister.gov/2026-23253.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
                 }
               ]
             },
@@ -6246,10 +6408,25 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-14T19:13:18.204Z",
-                  "count": 20,
+                  "asOf": "2026-11-15T19:49:32.004Z",
+                  "count": 21,
                   "rolledUp": true,
                   "events": [
+                    {
+                      "id": "fr-comment-2026-23020",
+                      "kind": "comment_deadline",
+                      "when": "2026-12-14",
+                      "until": "2026-12-14",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Coral, Coral Reefs, and Live/Hardbottom Habitats of the South Atlantic and the Shrimp Fishery of the South Atlantic Region; Amendments 11/12",
+                      "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1750-0428",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
                     {
                       "id": "fr-comment-2026-22815",
                       "kind": "comment_deadline",
@@ -6324,21 +6501,6 @@
                       "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                       "urgency": "upcoming",
                       "bill": null
-                    },
-                    {
-                      "id": "fr-pi-2026-23253",
-                      "kind": "public_inspection",
-                      "when": "2026-11-16",
-                      "until": null,
-                      "filedAt": "2026-11-13T08:45:00.000-05:00",
-                      "signedAt": null,
-                      "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Diamond Sawblades and Parts Thereof from the People's Republic of China",
-                      "summary": "International Trade Administration (from lower in the map)",
-                      "url": "https://public-inspection.federalregister.gov/2026-23253.pdf",
-                      "source": "Federal Register public inspection (PDF)",
-                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                      "urgency": "upcoming",
-                      "bill": null
                     }
                   ]
                 },
@@ -6367,10 +6529,25 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-14T19:13:18.204Z",
-                      "count": 20,
+                      "asOf": "2026-11-15T19:49:32.004Z",
+                      "count": 21,
                       "rolledUp": true,
                       "events": [
+                        {
+                          "id": "fr-comment-2026-23020",
+                          "kind": "comment_deadline",
+                          "when": "2026-12-14",
+                          "until": "2026-12-14",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Coral, Coral Reefs, and Live/Hardbottom Habitats of the South Atlantic and the Shrimp Fishery of the South Atlantic Region; Amendments 11/12",
+                          "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
+                          "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1750-0428",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
                         {
                           "id": "fr-comment-2026-22815",
                           "kind": "comment_deadline",
@@ -6445,21 +6622,6 @@
                           "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                           "urgency": "upcoming",
                           "bill": null
-                        },
-                        {
-                          "id": "fr-pi-2026-23253",
-                          "kind": "public_inspection",
-                          "when": "2026-11-16",
-                          "until": null,
-                          "filedAt": "2026-11-13T08:45:00.000-05:00",
-                          "signedAt": null,
-                          "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Diamond Sawblades and Parts Thereof from the People's Republic of China",
-                          "summary": "International Trade Administration (from lower in the map)",
-                          "url": "https://public-inspection.federalregister.gov/2026-23253.pdf",
-                          "source": "Federal Register public inspection (PDF)",
-                          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                          "urgency": "upcoming",
-                          "bill": null
                         }
                       ]
                     },
@@ -6488,10 +6650,25 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-14T19:13:18.204Z",
-                          "count": 20,
+                          "asOf": "2026-11-15T19:49:32.004Z",
+                          "count": 21,
                           "rolledUp": true,
                           "events": [
+                            {
+                              "id": "fr-comment-2026-23020",
+                              "kind": "comment_deadline",
+                              "when": "2026-12-14",
+                              "until": "2026-12-14",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Coral, Coral Reefs, and Live/Hardbottom Habitats of the South Atlantic and the Shrimp Fishery of the South Atlantic Region; Amendments 11/12",
+                              "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
+                              "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1750-0428",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
                             {
                               "id": "fr-comment-2026-22815",
                               "kind": "comment_deadline",
@@ -6562,21 +6739,6 @@
                               "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Scope Ruling Applications Filed",
                               "summary": "International Trade Administration (from lower in the map)",
                               "url": "https://public-inspection.federalregister.gov/2026-23250.pdf",
-                              "source": "Federal Register public inspection (PDF)",
-                              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-pi-2026-23253",
-                              "kind": "public_inspection",
-                              "when": "2026-11-16",
-                              "until": null,
-                              "filedAt": "2026-11-13T08:45:00.000-05:00",
-                              "signedAt": null,
-                              "title": "Antidumping or Countervailing Duty Investigations, Orders, or Reviews: Diamond Sawblades and Parts Thereof from the People's Republic of China",
-                              "summary": "International Trade Administration (from lower in the map)",
-                              "url": "https://public-inspection.federalregister.gov/2026-23253.pdf",
                               "source": "Federal Register public inspection (PDF)",
                               "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                               "urgency": "upcoming",
@@ -7679,7 +7841,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-14T19:13:18.204Z",
+                              "asOf": "2026-11-15T19:49:32.004Z",
                               "count": 12,
                               "rolledUp": true,
                               "events": [
@@ -7830,7 +7992,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-11-14T19:13:18.204Z",
+                                  "asOf": "2026-11-15T19:49:32.004Z",
                                   "count": 12,
                                   "rolledUp": false,
                                   "events": [
@@ -8254,10 +8416,25 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-14T19:13:18.204Z",
-                              "count": 8,
+                              "asOf": "2026-11-15T19:49:32.004Z",
+                              "count": 9,
                               "rolledUp": true,
                               "events": [
+                                {
+                                  "id": "fr-comment-2026-23020",
+                                  "kind": "comment_deadline",
+                                  "when": "2026-12-14",
+                                  "until": "2026-12-14",
+                                  "filedAt": null,
+                                  "signedAt": null,
+                                  "title": "Coral, Coral Reefs, and Live/Hardbottom Habitats of the South Atlantic and the Shrimp Fishery of the South Atlantic Region; Amendments 11/12",
+                                  "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
+                                  "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1750-0428",
+                                  "source": "Federal Register proposed rule (comments close)",
+                                  "sourceUrl": "https://www.federalregister.gov/",
+                                  "urgency": "upcoming",
+                                  "bill": null
+                                },
                                 {
                                   "id": "fr-comment-2026-22815",
                                   "kind": "comment_deadline",
@@ -8302,21 +8479,6 @@
                                   "sourceUrl": "https://www.federalregister.gov/",
                                   "urgency": "upcoming",
                                   "bill": null
-                                },
-                                {
-                                  "id": "fr-comment-2026-21205",
-                                  "kind": "comment_deadline",
-                                  "when": "2026-11-16",
-                                  "until": "2026-11-16",
-                                  "filedAt": null,
-                                  "signedAt": null,
-                                  "title": "Fishery Management Plans of St. Croix and St. Thomas and St. John; Spiny Lobster Management Measures",
-                                  "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
-                                  "url": "http://www.regulations.gov/commenton/NOAA_FRDOC_0001-7708",
-                                  "source": "Federal Register proposed rule (comments close)",
-                                  "sourceUrl": "https://www.federalregister.gov/",
-                                  "urgency": "upcoming",
-                                  "bill": null
                                 }
                               ]
                             },
@@ -8345,10 +8507,25 @@
                                   "usgm": null
                                 },
                                 "heat": {
-                                  "asOf": "2026-11-14T19:13:18.204Z",
-                                  "count": 8,
+                                  "asOf": "2026-11-15T19:49:32.004Z",
+                                  "count": 9,
                                   "rolledUp": true,
                                   "events": [
+                                    {
+                                      "id": "fr-comment-2026-23020",
+                                      "kind": "comment_deadline",
+                                      "when": "2026-12-14",
+                                      "until": "2026-12-14",
+                                      "filedAt": null,
+                                      "signedAt": null,
+                                      "title": "Coral, Coral Reefs, and Live/Hardbottom Habitats of the South Atlantic and the Shrimp Fishery of the South Atlantic Region; Amendments 11/12",
+                                      "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
+                                      "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1750-0428",
+                                      "source": "Federal Register proposed rule (comments close)",
+                                      "sourceUrl": "https://www.federalregister.gov/",
+                                      "urgency": "upcoming",
+                                      "bill": null
+                                    },
                                     {
                                       "id": "fr-comment-2026-22815",
                                       "kind": "comment_deadline",
@@ -8389,21 +8566,6 @@
                                       "title": "Coral, Coral Reefs, and Live/Hardbottom Habitats of the South Atlantic and the Shrimp Fishery of the South Atlantic Region; Amendments 11/12",
                                       "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
                                       "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1750-0001",
-                                      "source": "Federal Register proposed rule (comments close)",
-                                      "sourceUrl": "https://www.federalregister.gov/",
-                                      "urgency": "upcoming",
-                                      "bill": null
-                                    },
-                                    {
-                                      "id": "fr-comment-2026-21205",
-                                      "kind": "comment_deadline",
-                                      "when": "2026-11-16",
-                                      "until": "2026-11-16",
-                                      "filedAt": null,
-                                      "signedAt": null,
-                                      "title": "Fishery Management Plans of St. Croix and St. Thomas and St. John; Spiny Lobster Management Measures",
-                                      "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
-                                      "url": "http://www.regulations.gov/commenton/NOAA_FRDOC_0001-7708",
                                       "source": "Federal Register proposed rule (comments close)",
                                       "sourceUrl": "https://www.federalregister.gov/",
                                       "urgency": "upcoming",
@@ -8538,10 +8700,25 @@
                                       }
                                     },
                                     "heat": {
-                                      "asOf": "2026-11-14T19:13:18.204Z",
-                                      "count": 8,
+                                      "asOf": "2026-11-15T19:49:32.004Z",
+                                      "count": 9,
                                       "rolledUp": false,
                                       "events": [
+                                        {
+                                          "id": "fr-comment-2026-23020",
+                                          "kind": "comment_deadline",
+                                          "when": "2026-12-14",
+                                          "until": "2026-12-14",
+                                          "filedAt": null,
+                                          "signedAt": null,
+                                          "title": "Coral, Coral Reefs, and Live/Hardbottom Habitats of the South Atlantic and the Shrimp Fishery of the South Atlantic Region; Amendments 11/12",
+                                          "summary": "Commerce Department, National Oceanic and Atmospheric Administration",
+                                          "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1750-0428",
+                                          "source": "Federal Register proposed rule (comments close)",
+                                          "sourceUrl": "https://www.federalregister.gov/",
+                                          "urgency": "upcoming",
+                                          "bill": null
+                                        },
                                         {
                                           "id": "fr-comment-2026-22815",
                                           "kind": "comment_deadline",
@@ -22851,7 +23028,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 7,
               "rolledUp": true,
               "events": [
@@ -22942,7 +23119,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-14T19:13:18.204Z",
+                  "asOf": "2026-11-15T19:49:32.004Z",
                   "count": 7,
                   "rolledUp": true,
                   "events": [
@@ -25578,7 +25755,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-14T19:13:18.204Z",
+                      "asOf": "2026-11-15T19:49:32.004Z",
                       "count": 7,
                       "rolledUp": false,
                       "events": [
@@ -25940,7 +26117,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 18,
               "rolledUp": false,
               "events": [
@@ -25987,7 +26164,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-14T19:13:18.204Z",
+                  "asOf": "2026-11-15T19:49:32.004Z",
                   "count": 17,
                   "rolledUp": true,
                   "events": [
@@ -26133,7 +26310,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-14T19:13:18.204Z",
+                      "asOf": "2026-11-15T19:49:32.004Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -26484,7 +26661,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-14T19:13:18.204Z",
+                      "asOf": "2026-11-15T19:49:32.004Z",
                       "count": 5,
                       "rolledUp": false,
                       "events": [
@@ -26756,7 +26933,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-14T19:13:18.204Z",
+                      "asOf": "2026-11-15T19:49:32.004Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -27804,7 +27981,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-14T19:13:18.204Z",
+                      "asOf": "2026-11-15T19:49:32.004Z",
                       "count": 3,
                       "rolledUp": false,
                       "events": [
@@ -28006,7 +28183,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-14T19:13:18.204Z",
+                      "asOf": "2026-11-15T19:49:32.004Z",
                       "count": 5,
                       "rolledUp": false,
                       "events": [
@@ -28338,10 +28515,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
-              "count": 9,
+              "asOf": "2026-11-15T19:49:32.004Z",
+              "count": 10,
               "rolledUp": true,
               "events": [
+                {
+                  "id": "fr-comment-2026-20884",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-14",
+                  "until": "2026-12-14",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Advance Traveler Information for Rail",
+                  "summary": "Homeland Security Department, U.S. Customs and Border Protection (from lower in the map)",
+                  "url": "http://www.regulations.gov/commenton/USCBP-2026-0992-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-22734",
                   "kind": "comment_deadline",
@@ -28416,21 +28608,6 @@
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-21305",
-                  "kind": "comment_deadline",
-                  "when": "2026-11-18",
-                  "until": "2026-11-18",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Safety Zone; FRL Inaugural Invitational eFoil Exhibition Race, Miami Marine Stadium Basin, Miami, FL",
-                  "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/USCG-2026-1162-0001",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
                 }
               ]
             },
@@ -28459,10 +28636,25 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-14T19:13:18.204Z",
-                  "count": 9,
+                  "asOf": "2026-11-15T19:49:32.004Z",
+                  "count": 10,
                   "rolledUp": true,
                   "events": [
+                    {
+                      "id": "fr-comment-2026-20884",
+                      "kind": "comment_deadline",
+                      "when": "2026-12-14",
+                      "until": "2026-12-14",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Advance Traveler Information for Rail",
+                      "summary": "Homeland Security Department, U.S. Customs and Border Protection (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/USCBP-2026-0992-0001",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
                     {
                       "id": "fr-comment-2026-22734",
                       "kind": "comment_deadline",
@@ -28537,21 +28729,6 @@
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
                       "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-21305",
-                      "kind": "comment_deadline",
-                      "when": "2026-11-18",
-                      "until": "2026-11-18",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Safety Zone; FRL Inaugural Invitational eFoil Exhibition Race, Miami Marine Stadium Basin, Miami, FL",
-                      "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/USCG-2026-1162-0001",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
                     }
                   ]
                 },
@@ -28580,10 +28757,25 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-14T19:13:18.204Z",
-                      "count": 9,
+                      "asOf": "2026-11-15T19:49:32.004Z",
+                      "count": 10,
                       "rolledUp": true,
                       "events": [
+                        {
+                          "id": "fr-comment-2026-20884",
+                          "kind": "comment_deadline",
+                          "when": "2026-12-14",
+                          "until": "2026-12-14",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Advance Traveler Information for Rail",
+                          "summary": "Homeland Security Department, U.S. Customs and Border Protection (from lower in the map)",
+                          "url": "http://www.regulations.gov/commenton/USCBP-2026-0992-0001",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
                         {
                           "id": "fr-comment-2026-22734",
                           "kind": "comment_deadline",
@@ -28654,21 +28846,6 @@
                           "title": "Drawbridge Operation Regulation; Manitowoc River, Manitowoc, WI",
                           "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
                           "url": "http://www.regulations.gov/commenton/USCG-2024-0407-0005",
-                          "source": "Federal Register proposed rule (comments close)",
-                          "sourceUrl": "https://www.federalregister.gov/",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-comment-2026-21305",
-                          "kind": "comment_deadline",
-                          "when": "2026-11-18",
-                          "until": "2026-11-18",
-                          "filedAt": null,
-                          "signedAt": null,
-                          "title": "Safety Zone; FRL Inaugural Invitational eFoil Exhibition Race, Miami Marine Stadium Basin, Miami, FL",
-                          "summary": "Homeland Security Department, Coast Guard (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/USCG-2026-1162-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
@@ -30108,7 +30285,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-14T19:13:18.204Z",
+                          "asOf": "2026-11-15T19:49:32.004Z",
                           "count": 7,
                           "rolledUp": false,
                           "events": [
@@ -30271,10 +30448,25 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-14T19:13:18.204Z",
-                          "count": 2,
+                          "asOf": "2026-11-15T19:49:32.004Z",
+                          "count": 3,
                           "rolledUp": false,
                           "events": [
+                            {
+                              "id": "fr-comment-2026-20884",
+                              "kind": "comment_deadline",
+                              "when": "2026-12-14",
+                              "until": "2026-12-14",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Advance Traveler Information for Rail",
+                              "summary": "Homeland Security Department, U.S. Customs and Border Protection",
+                              "url": "http://www.regulations.gov/commenton/USCBP-2026-0992-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
                             {
                               "id": "fr-comment-2026-20650",
                               "kind": "comment_deadline",
@@ -30900,7 +31092,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -32649,7 +32841,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 3,
               "rolledUp": true,
               "events": [
@@ -32761,7 +32953,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-14T19:13:18.204Z",
+                  "asOf": "2026-11-15T19:49:32.004Z",
                   "count": 3,
                   "rolledUp": true,
                   "events": [
@@ -32837,7 +33029,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-14T19:13:18.204Z",
+                      "asOf": "2026-11-15T19:49:32.004Z",
                       "count": 3,
                       "rolledUp": true,
                       "events": [
@@ -34271,7 +34463,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-14T19:13:18.204Z",
+                          "asOf": "2026-11-15T19:49:32.004Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -34368,7 +34560,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-14T19:13:18.204Z",
+                          "asOf": "2026-11-15T19:49:32.004Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -34817,7 +35009,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 4,
               "rolledUp": true,
               "events": [
@@ -34908,7 +35100,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-14T19:13:18.204Z",
+                  "asOf": "2026-11-15T19:49:32.004Z",
                   "count": 4,
                   "rolledUp": true,
                   "events": [
@@ -34999,7 +35191,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-14T19:13:18.204Z",
+                      "asOf": "2026-11-15T19:49:32.004Z",
                       "count": 4,
                       "rolledUp": true,
                       "events": [
@@ -35466,7 +35658,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-14T19:13:18.204Z",
+                          "asOf": "2026-11-15T19:49:32.004Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -35649,7 +35841,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-14T19:13:18.204Z",
+                          "asOf": "2026-11-15T19:49:32.004Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -36518,7 +36710,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-14T19:13:18.204Z",
+                          "asOf": "2026-11-15T19:49:32.004Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -39181,10 +39373,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
-              "count": 5,
+              "asOf": "2026-11-15T19:49:32.004Z",
+              "count": 7,
               "rolledUp": true,
               "events": [
+                {
+                  "id": "fr-comment-2026-23145",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-14",
+                  "until": "2026-12-14",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Oil and Gas and Sulfur Operations in the Outer Continental Shelf-Revisions to the Requirements for Exploratory Drilling on the Arctic Outer Continental Shelf; Reopening of Comment Period",
+                  "summary": "Interior Department, Safety and Environmental Enforcement Bureau, Ocean Energy Management Bureau (from lower in the map)",
+                  "url": "http://www.regulations.gov/commenton/BSEE_FRDOC_0001-0330",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-20251",
                   "kind": "comment_deadline",
@@ -39287,10 +39494,25 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-14T19:13:18.204Z",
-                  "count": 5,
+                  "asOf": "2026-11-15T19:49:32.004Z",
+                  "count": 7,
                   "rolledUp": true,
                   "events": [
+                    {
+                      "id": "fr-comment-2026-23145",
+                      "kind": "comment_deadline",
+                      "when": "2026-12-14",
+                      "until": "2026-12-14",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Oil and Gas and Sulfur Operations in the Outer Continental Shelf-Revisions to the Requirements for Exploratory Drilling on the Arctic Outer Continental Shelf; Reopening of Comment Period",
+                      "summary": "Interior Department, Safety and Environmental Enforcement Bureau, Ocean Energy Management Bureau (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/BSEE_FRDOC_0001-0330",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
                     {
                       "id": "fr-comment-2026-20251",
                       "kind": "comment_deadline",
@@ -39393,10 +39615,25 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-14T19:13:18.204Z",
-                      "count": 5,
+                      "asOf": "2026-11-15T19:49:32.004Z",
+                      "count": 7,
                       "rolledUp": true,
                       "events": [
+                        {
+                          "id": "fr-comment-2026-23145",
+                          "kind": "comment_deadline",
+                          "when": "2026-12-14",
+                          "until": "2026-12-14",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Oil and Gas and Sulfur Operations in the Outer Continental Shelf-Revisions to the Requirements for Exploratory Drilling on the Arctic Outer Continental Shelf; Reopening of Comment Period",
+                          "summary": "Interior Department, Safety and Environmental Enforcement Bureau, Ocean Energy Management Bureau (from lower in the map)",
+                          "url": "http://www.regulations.gov/commenton/BSEE_FRDOC_0001-0330",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
                         {
                           "id": "fr-comment-2026-20251",
                           "kind": "comment_deadline",
@@ -39499,7 +39736,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-14T19:13:18.204Z",
+                          "asOf": "2026-11-15T19:49:32.004Z",
                           "count": 5,
                           "rolledUp": true,
                           "events": [
@@ -39687,7 +39924,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-14T19:13:18.204Z",
+                              "asOf": "2026-11-15T19:49:32.004Z",
                               "count": 3,
                               "rolledUp": false,
                               "events": [
@@ -39820,7 +40057,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-14T19:13:18.204Z",
+                              "asOf": "2026-11-15T19:49:32.004Z",
                               "count": 2,
                               "rolledUp": false,
                               "events": [
@@ -40252,7 +40489,28 @@
                           "sam": null,
                           "usgm": null
                         },
-                        "heat": null,
+                        "heat": {
+                          "asOf": "2026-11-15T19:49:32.004Z",
+                          "count": 2,
+                          "rolledUp": true,
+                          "events": [
+                            {
+                              "id": "fr-comment-2026-23145",
+                              "kind": "comment_deadline",
+                              "when": "2026-12-14",
+                              "until": "2026-12-14",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Oil and Gas and Sulfur Operations in the Outer Continental Shelf-Revisions to the Requirements for Exploratory Drilling on the Arctic Outer Continental Shelf; Reopening of Comment Period",
+                              "summary": "Interior Department, Safety and Environmental Enforcement Bureau, Ocean Energy Management Bureau (from lower in the map)",
+                              "url": "http://www.regulations.gov/commenton/BSEE_FRDOC_0001-0330",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            }
+                          ]
+                        },
                         "children": [
                           {
                             "id": "gsa-639",
@@ -40373,7 +40631,28 @@
                                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
                               }
                             },
-                            "heat": null,
+                            "heat": {
+                              "asOf": "2026-11-15T19:49:32.004Z",
+                              "count": 1,
+                              "rolledUp": false,
+                              "events": [
+                                {
+                                  "id": "fr-comment-2026-23145",
+                                  "kind": "comment_deadline",
+                                  "when": "2026-12-14",
+                                  "until": "2026-12-14",
+                                  "filedAt": null,
+                                  "signedAt": null,
+                                  "title": "Oil and Gas and Sulfur Operations in the Outer Continental Shelf-Revisions to the Requirements for Exploratory Drilling on the Arctic Outer Continental Shelf; Reopening of Comment Period",
+                                  "summary": "Interior Department, Safety and Environmental Enforcement Bureau, Ocean Energy Management Bureau",
+                                  "url": "http://www.regulations.gov/commenton/BSEE_FRDOC_0001-0330",
+                                  "source": "Federal Register proposed rule (comments close)",
+                                  "sourceUrl": "https://www.federalregister.gov/",
+                                  "urgency": "upcoming",
+                                  "bill": null
+                                }
+                              ]
+                            },
                             "children": [],
                             "spending": {
                               "obligatedAmount": 22177054.38,
@@ -40437,7 +40716,28 @@
                                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
                               }
                             },
-                            "heat": null,
+                            "heat": {
+                              "asOf": "2026-11-15T19:49:32.004Z",
+                              "count": 1,
+                              "rolledUp": false,
+                              "events": [
+                                {
+                                  "id": "fr-comment-2026-23145",
+                                  "kind": "comment_deadline",
+                                  "when": "2026-12-14",
+                                  "until": "2026-12-14",
+                                  "filedAt": null,
+                                  "signedAt": null,
+                                  "title": "Oil and Gas and Sulfur Operations in the Outer Continental Shelf-Revisions to the Requirements for Exploratory Drilling on the Arctic Outer Continental Shelf; Reopening of Comment Period",
+                                  "summary": "Interior Department, Safety and Environmental Enforcement Bureau, Ocean Energy Management Bureau",
+                                  "url": "http://www.regulations.gov/commenton/BSEE_FRDOC_0001-0330",
+                                  "source": "Federal Register proposed rule (comments close)",
+                                  "sourceUrl": "https://www.federalregister.gov/",
+                                  "urgency": "upcoming",
+                                  "bill": null
+                                }
+                              ]
+                            },
                             "children": [],
                             "spending": {
                               "obligatedAmount": 84750725.79,
@@ -41519,7 +41819,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 4,
               "rolledUp": true,
               "events": [
@@ -41610,7 +41910,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-14T19:13:18.204Z",
+                  "asOf": "2026-11-15T19:49:32.004Z",
                   "count": 4,
                   "rolledUp": true,
                   "events": [
@@ -41753,7 +42053,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-14T19:13:18.204Z",
+                      "asOf": "2026-11-15T19:49:32.004Z",
                       "count": 4,
                       "rolledUp": true,
                       "events": [
@@ -43144,7 +43444,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-14T19:13:18.204Z",
+                          "asOf": "2026-11-15T19:49:32.004Z",
                           "count": 4,
                           "rolledUp": false,
                           "events": [
@@ -43593,10 +43893,40 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
-              "count": 40,
+              "asOf": "2026-11-15T19:49:32.004Z",
+              "count": 42,
               "rolledUp": true,
               "events": [
+                {
+                  "id": "fr-comment-2026-22042",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-14",
+                  "until": "2026-12-14",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Establishment of Class D Airspace; Winter Haven, FL",
+                  "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
+                  "url": "http://www.regulations.gov/commenton/FAA-2026-13869-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-21932",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-14",
+                  "until": "2026-12-14",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Airworthiness Directives; Airbus Helicopters",
+                  "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
+                  "url": "http://www.regulations.gov/commenton/FAA-2026-11818-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-23239",
                   "kind": "comment_deadline",
@@ -43637,36 +43967,6 @@
                   "title": "Flight Safety Limits Objectives Burden Reducing Clarification",
                   "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
                   "url": "http://www.regulations.gov/commenton/FAA-2026-9937-0001",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-22782",
-                  "kind": "comment_deadline",
-                  "when": "2026-12-09",
-                  "until": "2026-12-09",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Flight Abort Burden Reducing Clarification on End of Flight Safety Limits",
-                  "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FAA-2026-9943-0001",
-                  "source": "Federal Register proposed rule (comments close)",
-                  "sourceUrl": "https://www.federalregister.gov/",
-                  "urgency": "upcoming",
-                  "bill": null
-                },
-                {
-                  "id": "fr-comment-2026-21387",
-                  "kind": "comment_deadline",
-                  "when": "2026-12-03",
-                  "until": "2026-12-03",
-                  "filedAt": null,
-                  "signedAt": null,
-                  "title": "Airworthiness Directives; Airbus Helicopters",
-                  "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FAA-2026-11814-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
@@ -43714,10 +44014,40 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-14T19:13:18.204Z",
-                  "count": 40,
+                  "asOf": "2026-11-15T19:49:32.004Z",
+                  "count": 42,
                   "rolledUp": true,
                   "events": [
+                    {
+                      "id": "fr-comment-2026-22042",
+                      "kind": "comment_deadline",
+                      "when": "2026-12-14",
+                      "until": "2026-12-14",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Establishment of Class D Airspace; Winter Haven, FL",
+                      "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/FAA-2026-13869-0001",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
+                    {
+                      "id": "fr-comment-2026-21932",
+                      "kind": "comment_deadline",
+                      "when": "2026-12-14",
+                      "until": "2026-12-14",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Airworthiness Directives; Airbus Helicopters",
+                      "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/FAA-2026-11818-0001",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
                     {
                       "id": "fr-comment-2026-23239",
                       "kind": "comment_deadline",
@@ -43758,36 +44088,6 @@
                       "title": "Flight Safety Limits Objectives Burden Reducing Clarification",
                       "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
                       "url": "http://www.regulations.gov/commenton/FAA-2026-9937-0001",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-22782",
-                      "kind": "comment_deadline",
-                      "when": "2026-12-09",
-                      "until": "2026-12-09",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Flight Abort Burden Reducing Clarification on End of Flight Safety Limits",
-                      "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAA-2026-9943-0001",
-                      "source": "Federal Register proposed rule (comments close)",
-                      "sourceUrl": "https://www.federalregister.gov/",
-                      "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "fr-comment-2026-21387",
-                      "kind": "comment_deadline",
-                      "when": "2026-12-03",
-                      "until": "2026-12-03",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Airworthiness Directives; Airbus Helicopters",
-                      "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAA-2026-11814-0001",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
@@ -43835,10 +44135,40 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-14T19:13:18.204Z",
-                      "count": 40,
+                      "asOf": "2026-11-15T19:49:32.004Z",
+                      "count": 42,
                       "rolledUp": true,
                       "events": [
+                        {
+                          "id": "fr-comment-2026-22042",
+                          "kind": "comment_deadline",
+                          "when": "2026-12-14",
+                          "until": "2026-12-14",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Establishment of Class D Airspace; Winter Haven, FL",
+                          "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
+                          "url": "http://www.regulations.gov/commenton/FAA-2026-13869-0001",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
+                        {
+                          "id": "fr-comment-2026-21932",
+                          "kind": "comment_deadline",
+                          "when": "2026-12-14",
+                          "until": "2026-12-14",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Airworthiness Directives; Airbus Helicopters",
+                          "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
+                          "url": "http://www.regulations.gov/commenton/FAA-2026-11818-0001",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
                         {
                           "id": "fr-comment-2026-23239",
                           "kind": "comment_deadline",
@@ -43879,36 +44209,6 @@
                           "title": "Flight Safety Limits Objectives Burden Reducing Clarification",
                           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
                           "url": "http://www.regulations.gov/commenton/FAA-2026-9937-0001",
-                          "source": "Federal Register proposed rule (comments close)",
-                          "sourceUrl": "https://www.federalregister.gov/",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-comment-2026-22782",
-                          "kind": "comment_deadline",
-                          "when": "2026-12-09",
-                          "until": "2026-12-09",
-                          "filedAt": null,
-                          "signedAt": null,
-                          "title": "Flight Abort Burden Reducing Clarification on End of Flight Safety Limits",
-                          "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/FAA-2026-9943-0001",
-                          "source": "Federal Register proposed rule (comments close)",
-                          "sourceUrl": "https://www.federalregister.gov/",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-comment-2026-21387",
-                          "kind": "comment_deadline",
-                          "when": "2026-12-03",
-                          "until": "2026-12-03",
-                          "filedAt": null,
-                          "signedAt": null,
-                          "title": "Airworthiness Directives; Airbus Helicopters",
-                          "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/FAA-2026-11814-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
@@ -44287,7 +44587,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-14T19:13:18.204Z",
+                          "asOf": "2026-11-15T19:49:32.004Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -44385,7 +44685,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-14T19:13:18.204Z",
+                          "asOf": "2026-11-15T19:49:32.004Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -44570,7 +44870,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-14T19:13:18.204Z",
+                          "asOf": "2026-11-15T19:49:32.004Z",
                           "count": 5,
                           "rolledUp": false,
                           "events": [
@@ -44925,7 +45225,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-14T19:13:18.204Z",
+                          "asOf": "2026-11-15T19:49:32.004Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -45107,10 +45407,40 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-14T19:13:18.204Z",
-                          "count": 31,
+                          "asOf": "2026-11-15T19:49:32.004Z",
+                          "count": 33,
                           "rolledUp": false,
                           "events": [
+                            {
+                              "id": "fr-comment-2026-22042",
+                              "kind": "comment_deadline",
+                              "when": "2026-12-14",
+                              "until": "2026-12-14",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Establishment of Class D Airspace; Winter Haven, FL",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-13869-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-21932",
+                              "kind": "comment_deadline",
+                              "when": "2026-12-14",
+                              "until": "2026-12-14",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Airworthiness Directives; Airbus Helicopters",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-11818-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
                             {
                               "id": "fr-comment-2026-22784",
                               "kind": "comment_deadline",
@@ -45736,7 +46066,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-14T19:13:18.204Z",
+                          "asOf": "2026-11-15T19:49:32.004Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -48058,10 +48388,40 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
-              "count": 14,
+              "asOf": "2026-11-15T19:49:32.004Z",
+              "count": 16,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-23124",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-14",
+                  "until": "2026-12-14",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Air Plan Approval; Oregon Department of Environmental Quality; Emission Standards and Controls for Sources Emitting Gasoline Vapors",
+                  "summary": "Environmental Protection Agency",
+                  "url": "http://www.regulations.gov/commenton/EPA-R10-OAR-2026-2972-0014",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-22085",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-14",
+                  "until": "2026-12-14",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Alaska Underground Injection Control (UIC) Program; Class VI Primacy",
+                  "summary": "Environmental Protection Agency",
+                  "url": "http://www.regulations.gov/commenton/EPA-HQ-OW-2026-4588-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-22592",
                   "kind": "comment_deadline",
@@ -50100,7 +50460,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 5,
               "rolledUp": false,
               "events": [
@@ -50364,7 +50724,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -51376,7 +51736,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -52154,7 +52514,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-14T19:13:18.204Z",
+          "asOf": "2026-11-15T19:49:32.004Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -52763,7 +53123,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -53865,7 +54225,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-14T19:13:18.204Z",
+          "asOf": "2026-11-15T19:49:32.004Z",
           "count": 25,
           "rolledUp": true,
           "events": [
@@ -54538,7 +54898,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 24,
               "rolledUp": true,
               "events": [
@@ -54769,7 +55129,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-11-14T19:13:18.204Z",
+                  "asOf": "2026-11-15T19:49:32.004Z",
                   "count": 12,
                   "rolledUp": false,
                   "events": [
@@ -55085,7 +55445,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-11-14T19:13:18.204Z",
+                  "asOf": "2026-11-15T19:49:32.004Z",
                   "count": 12,
                   "rolledUp": false,
                   "events": [
@@ -56092,7 +56452,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -56231,95 +56591,95 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-14T19:13:18.204Z",
-          "count": 40,
+          "asOf": "2026-11-15T19:49:32.004Z",
+          "count": 46,
           "rolledUp": true,
           "events": [
             {
-              "id": "fr-comment-2026-18282",
+              "id": "fr-comment-2026-21067",
               "kind": "comment_deadline",
-              "when": "2026-12-07",
-              "until": "2026-12-07",
+              "when": "2026-12-14",
+              "until": "2026-12-14",
               "filedAt": null,
               "signedAt": null,
-              "title": "Unleashing Unlicensed Spectrum for Direct-to-Device",
-              "summary": "Federal Communications Commission (from lower in the map)",
-              "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-08/pdf/2026-18282.pdf",
+              "title": "Investigation Into Conditions Affecting Shipping in the Foreign Trade and Denial of Entry of Vessels Into Spanish Ports and Proposed Remedies To Meet or Adjust the Unfavorable Conditions",
+              "summary": "Federal Maritime Commission (from lower in the map)",
+              "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-15/pdf/2026-21067.pdf",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-22581",
+              "id": "fr-comment-2026-21089",
               "kind": "comment_deadline",
-              "when": "2026-12-07",
-              "until": "2026-12-07",
+              "when": "2026-12-14",
+              "until": "2026-12-14",
               "filedAt": null,
               "signedAt": null,
-              "title": "Petition for Rulemaking of New Hope Now",
-              "summary": "Federal Trade Commission (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/FTC-2026-1783-0001",
+              "title": "Central Liquidity Facility",
+              "summary": "National Credit Union Administration (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/NCUA-2026-1889-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-20474",
+              "id": "fr-comment-2026-21088",
               "kind": "comment_deadline",
-              "when": "2026-12-07",
-              "until": "2026-12-07",
+              "when": "2026-12-14",
+              "until": "2026-12-14",
               "filedAt": null,
               "signedAt": null,
-              "title": "Investment Adviser Performance-Based Compensation Modernization",
+              "title": "Powers of Federal Credit Unions",
+              "summary": "National Credit Union Administration (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/NCUA-2026-1883-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-21087",
+              "kind": "comment_deadline",
+              "when": "2026-12-14",
+              "until": "2026-12-14",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Corporate Credit Unions; Fidelity Bond and Insurance Coverage for Federally Insured Credit Unions",
+              "summary": "National Credit Union Administration (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/NCUA-2026-1882-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-20888",
+              "kind": "comment_deadline",
+              "when": "2026-12-14",
+              "until": "2026-12-14",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Regulation Crypto Asset Transactions and Regulation Crypto Asset Markets",
+              "summary": "Commodity Futures Trading Commission (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/CFTC-2026-2179-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-21037",
+              "kind": "comment_deadline",
+              "when": "2026-12-14",
+              "until": "2026-12-14",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Investment Company Cross Trading",
               "summary": "Securities and Exchange Commission (from lower in the map)",
-              "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-06/pdf/2026-20474.pdf",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-20466",
-              "kind": "comment_deadline",
-              "when": "2026-12-07",
-              "until": "2026-12-07",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Adviser and Regulated Fund Custody Rules; Crypto Custody Rules",
-              "summary": "Securities and Exchange Commission (from lower in the map)",
-              "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-06/pdf/2026-20466.pdf",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-C1-2026-20360",
-              "kind": "comment_deadline",
-              "when": "2026-12-04",
-              "until": "2026-12-04",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Interval Fund Modernization; Expansion of Multiple Share Class to Registered Closed-End Management Investment Companies and Business Development Companies",
-              "summary": "Securities and Exchange Commission (from lower in the map)",
-              "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/C1-2026-20360.pdf",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-20360",
-              "kind": "comment_deadline",
-              "when": "2026-12-04",
-              "until": "2026-12-04",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Interval Fund Modernization; Expansion of Multiple Share Class to Registered Closed-End Management Investment Companies and Business Development Companies",
-              "summary": "Securities and Exchange Commission (from lower in the map)",
-              "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-05/pdf/2026-20360.pdf",
+              "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-15/pdf/2026-21037.pdf",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
@@ -57575,7 +57935,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 9,
               "rolledUp": false,
               "events": [
@@ -58467,7 +58827,28 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": null,
+            "heat": {
+              "asOf": "2026-11-15T19:49:32.004Z",
+              "count": 1,
+              "rolledUp": false,
+              "events": [
+                {
+                  "id": "fr-comment-2026-21067",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-14",
+                  "until": "2026-12-14",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Investigation Into Conditions Affecting Shipping in the Foreign Trade and Denial of Entry of Vessels Into Spanish Ports and Proposed Remedies To Meet or Adjust the Unfavorable Conditions",
+                  "summary": "Federal Maritime Commission",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-15/pdf/2026-21067.pdf",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                }
+              ]
+            },
             "children": [],
             "spending": {
               "obligatedAmount": 32353199.83,
@@ -58918,7 +59299,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 5,
               "rolledUp": false,
               "events": [
@@ -59384,7 +59765,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -60994,10 +61375,55 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
-              "count": 6,
+              "asOf": "2026-11-15T19:49:32.004Z",
+              "count": 9,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-21089",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-14",
+                  "until": "2026-12-14",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Central Liquidity Facility",
+                  "summary": "National Credit Union Administration",
+                  "url": "http://www.regulations.gov/commenton/NCUA-2026-1889-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-21088",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-14",
+                  "until": "2026-12-14",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Powers of Federal Credit Unions",
+                  "summary": "National Credit Union Administration",
+                  "url": "http://www.regulations.gov/commenton/NCUA-2026-1883-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-21087",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-14",
+                  "until": "2026-12-14",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Corporate Credit Unions; Fidelity Bond and Insurance Coverage for Federally Insured Credit Unions",
+                  "summary": "National Credit Union Administration",
+                  "url": "http://www.regulations.gov/commenton/NCUA-2026-1882-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-sun-2026-23210-2026-11-17",
                   "kind": "sunshine_meeting",
@@ -63162,7 +63588,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -63442,10 +63868,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
-              "count": 2,
+              "asOf": "2026-11-15T19:49:32.004Z",
+              "count": 3,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-20888",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-14",
+                  "until": "2026-12-14",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Regulation Crypto Asset Transactions and Regulation Crypto Asset Markets",
+                  "summary": "Commodity Futures Trading Commission",
+                  "url": "http://www.regulations.gov/commenton/CFTC-2026-2179-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-21377",
                   "kind": "comment_deadline",
@@ -63844,7 +64285,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -64815,7 +65256,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -65945,7 +66386,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -66427,10 +66868,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
-              "count": 8,
+              "asOf": "2026-11-15T19:49:32.004Z",
+              "count": 9,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-21037",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-14",
+                  "until": "2026-12-14",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Investment Company Cross Trading",
+                  "summary": "Securities and Exchange Commission",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-15/pdf/2026-21037.pdf",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-20474",
                   "kind": "comment_deadline",
@@ -67246,10 +67702,25 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-14T19:13:18.204Z",
-          "count": 2,
+          "asOf": "2026-11-15T19:49:32.004Z",
+          "count": 3,
           "rolledUp": true,
           "events": [
+            {
+              "id": "fr-comment-2026-23064",
+              "kind": "comment_deadline",
+              "when": "2026-12-14",
+              "until": "2026-12-14",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Authorization To Manufacture and Distribute Postage Evidencing Systems",
+              "summary": "Postal Service (from lower in the map)",
+              "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-12/pdf/2026-23064.pdf",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
             {
               "id": "fr-comment-2026-19310",
               "kind": "comment_deadline",
@@ -68138,7 +68609,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-14T19:13:18.204Z",
+              "asOf": "2026-11-15T19:49:32.004Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -70857,7 +71328,28 @@
                 "govinfoUrl": "https://www.govinfo.gov/app/collection/govman"
               }
             },
-            "heat": null,
+            "heat": {
+              "asOf": "2026-11-15T19:49:32.004Z",
+              "count": 1,
+              "rolledUp": false,
+              "events": [
+                {
+                  "id": "fr-comment-2026-23064",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-14",
+                  "until": "2026-12-14",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Authorization To Manufacture and Distribute Postage Evidencing Systems",
+                  "summary": "Postal Service",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-12/pdf/2026-23064.pdf",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                }
+              ]
+            },
             "children": [],
             "workforce": {
               "count": 14,
