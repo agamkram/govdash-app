@@ -1,9 +1,9 @@
 {
-  "fetchedAt": "2026-11-20T21:51:41.794Z",
+  "fetchedAt": "2026-11-21T20:34:25.518Z",
   "sources": {
     "senateFloor": {
       "ok": true,
-      "count": 1,
+      "count": 2,
       "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
     },
     "houseClerk": {
@@ -18,68 +18,81 @@
     },
     "publicInspection": {
       "ok": true,
-      "count": 93,
+      "count": 94,
       "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
     },
     "presidential": {
       "ok": true,
-      "count": 6,
-      "since": "2026-11-06",
+      "count": 4,
+      "since": "2026-11-07",
       "url": "https://www.federalregister.gov/presidential-documents"
     },
     "commentDeadlines": {
       "ok": true,
-      "count": 121,
-      "start": "2026-11-20",
-      "end": "2026-12-19",
+      "count": 115,
+      "start": "2026-11-21",
+      "end": "2026-12-20",
       "type": "PRORULE",
       "url": "https://www.federalregister.gov/"
     },
     "sunshine": {
       "ok": true,
-      "count": 3,
-      "start": "2026-11-20",
-      "end": "2026-12-19",
+      "count": 6,
+      "start": "2026-11-21",
+      "end": "2026-12-20",
       "url": "https://www.federalregister.gov/"
     },
     "senateHearings": {
       "ok": true,
-      "count": 6,
-      "start": "2026-11-20",
-      "end": "2026-12-19",
+      "count": 5,
+      "start": "2026-11-21",
+      "end": "2026-12-20",
       "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
     },
     "houseHearings": {
       "ok": true,
-      "count": 1,
-      "start": "2026-11-20",
-      "end": "2026-12-19",
+      "count": 0,
+      "start": "2026-11-21",
+      "end": "2026-12-20",
       "congress": 119,
-      "calendarIds": 1,
+      "calendarIds": 0,
       "skipped404": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house"
     },
     "scotus": {
       "ok": true,
       "count": 1,
-      "start": "2026-11-20",
-      "end": "2026-12-19",
+      "start": "2026-11-21",
+      "end": "2026-12-20",
       "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
     }
   },
   "events": [
     {
-      "id": "senate-floor-2026-11-19T10:00:00-05:00",
+      "id": "senate-floor-2026-11-20T10:00:00-05:00",
       "kind": "floor_session",
       "chamber": "Senate",
-      "when": "2026-11-19T10:00:00-05:00",
-      "until": "2026-11-19T23:15:00-05:00",
+      "when": "2026-11-20T10:00:00-05:00",
+      "until": "2026-11-20T17:17:00-05:00",
       "title": "Senate floor (recent)",
       "summary": "Has adjourned",
       "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
       "source": "Senate.gov floor schedule XML",
       "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
       "urgency": "recent"
+    },
+    {
+      "id": "senate-next-2026-11-24T15:00:00-05:00",
+      "kind": "floor_session",
+      "chamber": "Senate",
+      "when": "2026-11-24T15:00:00-05:00",
+      "until": null,
+      "title": "Senate next convenes",
+      "summary": "",
+      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
+      "source": "Senate.gov floor schedule XML",
+      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
+      "urgency": "upcoming"
     },
     {
       "id": "house-next-2026-11-24T17:00:00.000Z",
@@ -2165,6 +2178,26 @@
       "documentNumber": "2026-23881"
     },
     {
+      "id": "fr-pi-2026-23960",
+      "kind": "public_inspection",
+      "when": "2026-11-25",
+      "until": null,
+      "filedAt": "2026-11-20T17:13:00.000-05:00",
+      "title": "Medicare Program: Contract Year 2028 Policy and Technical Changes to the Medicare Advantage Program, Medicare Prescription Drug Benefit Program, and Programs of All Inclusive Care for the Elderly",
+      "summary": "Centers for Medicare & Medicaid Services",
+      "url": "https://public-inspection.federalregister.gov/2026-23960.pdf",
+      "htmlUrl": "https://www.federalregister.gov/public-inspection/2026-23960/medicare-program-contract-year-2028-policy-and-technical-changes-to-the-medicare-advantage-program",
+      "pdfUrl": "https://public-inspection.federalregister.gov/2026-23960.pdf",
+      "source": "Federal Register public inspection (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
+      "urgency": "upcoming",
+      "agencies": [
+        "Centers for Medicare & Medicaid Services"
+      ],
+      "documentType": "Proposed Rule",
+      "documentNumber": "2026-23960"
+    },
+    {
       "id": "fr-pres-2026-23349",
       "kind": "presidential_doc",
       "when": "2026-11-16",
@@ -2223,38 +2256,6 @@
       "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-12/pdf/2026-23113.pdf",
       "htmlUrl": "https://www.federalregister.gov/documents/2026/11/12/2026-23113/establishment-of-the-oval-office-national-monument",
       "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-12/pdf/2026-23113.pdf",
-      "source": "Federal Register presidential documents (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/presidential-documents",
-      "urgency": "recent",
-      "documentType": "Presidential Document"
-    },
-    {
-      "id": "fr-pres-2026-22789",
-      "kind": "presidential_doc",
-      "when": "2026-11-06",
-      "until": null,
-      "signedAt": null,
-      "title": "The American Declaration of Freedom in Space",
-      "summary": "Presidential Document",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-06/pdf/2026-22789.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/06/2026-22789/the-american-declaration-of-freedom-in-space",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-06/pdf/2026-22789.pdf",
-      "source": "Federal Register presidential documents (PDF)",
-      "sourceUrl": "https://www.federalregister.gov/presidential-documents",
-      "urgency": "recent",
-      "documentType": "Presidential Document"
-    },
-    {
-      "id": "fr-pres-2026-22787",
-      "kind": "presidential_doc",
-      "when": "2026-11-06",
-      "until": null,
-      "signedAt": null,
-      "title": "Anti-Communism Week, 2026",
-      "summary": "Presidential Document",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-06/pdf/2026-22787.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/06/2026-22787/anti-communism-week-2026",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-06/pdf/2026-22787.pdf",
       "source": "Federal Register presidential documents (PDF)",
       "sourceUrl": "https://www.federalregister.gov/presidential-documents",
       "urgency": "recent",
@@ -3433,45 +3434,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-21510",
-      "kind": "comment_deadline",
-      "when": "2026-11-20",
-      "until": "2026-11-20",
-      "title": "Petition for Rulemaking of Jason Plotzker",
-      "summary": "Federal Trade Commission",
-      "url": "http://www.regulations.gov/commenton/FTC-2026-1618-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/21/2026-21510/petition-for-rulemaking-of-jason-plotzker",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21510.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Federal Trade Commission"
-      ],
-      "documentNumber": "2026-21510",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-21507",
-      "kind": "comment_deadline",
-      "when": "2026-11-20",
-      "until": "2026-11-20",
-      "title": "Fisheries of the Exclusive Economic Zone Off Alaska; Modify Groundfish Season Timing in the Bering Sea and Aleutian Islands and Gulf of Alaska Groundfish Fisheries",
-      "summary": "Commerce Department, National Oceanic and Atmospheric Administration",
-      "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-1948-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/21/2026-21507/fisheries-of-the-exclusive-economic-zone-off-alaska-modify-groundfish-season-timing-in-the-bering",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21507.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Commerce Department",
-        "National Oceanic and Atmospheric Administration"
-      ],
-      "documentNumber": "2026-21507",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-C1-2026-20360",
       "kind": "comment_deadline",
       "when": "2026-12-04",
@@ -4082,26 +4044,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-20473",
-      "kind": "comment_deadline",
-      "when": "2026-11-20",
-      "until": "2026-11-20",
-      "title": "Modification of Class E Airspace; Gunnison-Crested Butte Regional Airport, Gunnison, CO",
-      "summary": "Transportation Department, Federal Aviation Administration",
-      "url": "http://www.regulations.gov/commenton/FAA-2026-7241-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/06/2026-20473/modification-of-class-e-airspace-gunnison-crested-butte-regional-airport-gunnison-co",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-06/pdf/2026-20473.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "Federal Aviation Administration"
-      ],
-      "documentNumber": "2026-20473",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-20466",
       "kind": "comment_deadline",
       "when": "2026-12-07",
@@ -4395,25 +4337,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-19546",
-      "kind": "comment_deadline",
-      "when": "2026-11-20",
-      "until": "2026-11-20",
-      "title": "Small Business Size Standards",
-      "summary": "Small Business Administration",
-      "url": "http://www.regulations.gov/commenton/SBA-2026-0199-2726",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/24/2026-19546/small-business-size-standards",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-24/pdf/2026-19546.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Small Business Administration"
-      ],
-      "documentNumber": "2026-19546",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-19535",
       "kind": "comment_deadline",
       "when": "2026-11-23",
@@ -4532,44 +4455,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-19260",
-      "kind": "comment_deadline",
-      "when": "2026-11-20",
-      "until": "2026-11-20",
-      "title": "Rescission of Rule 14a-8's Federal Regulation of Shareholder Proposals and Amendments to Rule 14a-4",
-      "summary": "Securities and Exchange Commission",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19260.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/21/2026-19260/rescission-of-rule-14a-8s-federal-regulation-of-shareholder-proposals-and-amendments-to-rule-14a-4",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19260.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Securities and Exchange Commission"
-      ],
-      "documentNumber": "2026-19260",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-19259",
-      "kind": "comment_deadline",
-      "when": "2026-11-20",
-      "until": "2026-11-20",
-      "title": "Proxy Solicitation Modernization",
-      "summary": "Securities and Exchange Commission",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19259.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/09/21/2026-19259/proxy-solicitation-modernization",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-09-21/pdf/2026-19259.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Securities and Exchange Commission"
-      ],
-      "documentNumber": "2026-19259",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-18282",
       "kind": "comment_deadline",
       "when": "2026-12-07",
@@ -4627,6 +4512,60 @@
       ],
       "documentNumber": "2026-16296",
       "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-sun-2026-23819-2026-11-23",
+      "kind": "sunshine_meeting",
+      "when": "2026-11-23",
+      "until": "2026-11-23",
+      "title": "Sunshine Act Meetings",
+      "summary": "Nuclear Regulatory Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-23/pdf/2026-23819.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/23/2026-23819/sunshine-act-meetings",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-23/pdf/2026-23819.pdf",
+      "source": "Federal Register Sunshine Act meeting",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Nuclear Regulatory Commission"
+      ],
+      "documentNumber": "2026-23819"
+    },
+    {
+      "id": "fr-sun-2026-23787-2026-12-15",
+      "kind": "sunshine_meeting",
+      "when": "2026-12-15",
+      "until": "2026-12-15",
+      "title": "Sunshine Act Meetings",
+      "summary": "Election Assistance Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-23/pdf/2026-23787.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/23/2026-23787/sunshine-act-meetings",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-23/pdf/2026-23787.pdf",
+      "source": "Federal Register Sunshine Act meeting",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Election Assistance Commission"
+      ],
+      "documentNumber": "2026-23787"
+    },
+    {
+      "id": "fr-sun-2026-23787-2026-12-08",
+      "kind": "sunshine_meeting",
+      "when": "2026-12-08",
+      "until": "2026-12-08",
+      "title": "Sunshine Act Meetings",
+      "summary": "Election Assistance Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-23/pdf/2026-23787.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/23/2026-23787/sunshine-act-meetings",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-23/pdf/2026-23787.pdf",
+      "source": "Federal Register Sunshine Act meeting",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Election Assistance Commission"
+      ],
+      "documentNumber": "2026-23787"
     },
     {
       "id": "fr-sun-2026-23683-2026-12-10",
@@ -4687,24 +4626,10 @@
       "kind": "hearing",
       "chamber": "Senate",
       "committee": "Commerce, Science, and Transportation",
-      "when": "2026-11-24",
+      "when": "2026-12-01",
       "until": null,
       "title": "Hearings to examine the nominations of Peter A. Feldman, of the District of Columbia, to be a Commissioner of the Consumer Product Safety Commission, Christopher Mufarrige, of Texas, to be a Federal Trade Commissioner, and Loren Smith, Jr., of Virginia, to be an Assistant Secretary of Transportation.",
       "summary": "Commerce, Science, and Transportation · Open Hearing · 10:00 AM · SR-253",
-      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
-      "source": "Senate.gov committee hearings XML",
-      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
-      "urgency": "upcoming"
-    },
-    {
-      "id": "senate-hearing-338849",
-      "kind": "hearing",
-      "chamber": "Senate",
-      "committee": "Judiciary",
-      "when": "2026-11-24",
-      "until": null,
-      "title": "Business meeting to consider S.5289, to protect the right to the free exercise of religion, and the nominations of Trevor Scott Pemberton, to be United States District Judge for the Northern District of Oklahoma, Zachary Paul West, to be United States District Judge for the Eastern District of Oklahoma, and Scott Krueger, of Indiana, to be United States Marshal for the Northern District of Indiana.",
-      "summary": "Judiciary · Open Business Meeting · 10:15 AM · SH-216",
       "url": "https://www.senate.gov/committees/hearings_meetings.htm",
       "source": "Senate.gov committee hearings XML",
       "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
@@ -4765,25 +4690,6 @@
       "source": "Senate.gov committee hearings XML",
       "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
       "urgency": "upcoming"
-    },
-    {
-      "id": "house-hearing-119593",
-      "kind": "hearing",
-      "chamber": "House",
-      "committee": {
-        "systemCode": "hlzs00",
-        "url": "https://api.congress.gov/v3/committee/house/hlzs00?format=json"
-      },
-      "when": "2026-11-20T13:30:00Z",
-      "until": null,
-      "title": "Outproducing the CCP: Restoring American Manufacturing",
-      "summary": "[object Object] · Hearing · Rescheduled · Cannon House Office Building 210",
-      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119593",
-      "source": "Congress.gov committee meeting API",
-      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
-      "urgency": "upcoming",
-      "eventId": "119593",
-      "meetingType": "Hearing"
     },
     {
       "id": "scotus-2026-11-30-Oralargumentsessionbegin",
