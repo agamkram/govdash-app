@@ -1,9 +1,9 @@
 {
-  "fetchedAt": "2026-11-21T20:34:25.518Z",
+  "fetchedAt": "2026-11-22T20:45:00.198Z",
   "sources": {
     "senateFloor": {
       "ok": true,
-      "count": 2,
+      "count": 1,
       "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
     },
     "houseClerk": {
@@ -24,36 +24,36 @@
     "presidential": {
       "ok": true,
       "count": 4,
-      "since": "2026-11-07",
+      "since": "2026-11-08",
       "url": "https://www.federalregister.gov/presidential-documents"
     },
     "commentDeadlines": {
       "ok": true,
-      "count": 115,
-      "start": "2026-11-21",
-      "end": "2026-12-20",
+      "count": 128,
+      "start": "2026-11-22",
+      "end": "2026-12-21",
       "type": "PRORULE",
       "url": "https://www.federalregister.gov/"
     },
     "sunshine": {
       "ok": true,
       "count": 6,
-      "start": "2026-11-21",
-      "end": "2026-12-20",
+      "start": "2026-11-22",
+      "end": "2026-12-21",
       "url": "https://www.federalregister.gov/"
     },
     "senateHearings": {
       "ok": true,
       "count": 5,
-      "start": "2026-11-21",
-      "end": "2026-12-20",
+      "start": "2026-11-22",
+      "end": "2026-12-21",
       "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
     },
     "houseHearings": {
       "ok": true,
       "count": 0,
-      "start": "2026-11-21",
-      "end": "2026-12-20",
+      "start": "2026-11-22",
+      "end": "2026-12-21",
       "congress": 119,
       "calendarIds": 0,
       "skipped404": [],
@@ -62,25 +62,12 @@
     "scotus": {
       "ok": true,
       "count": 1,
-      "start": "2026-11-21",
-      "end": "2026-12-20",
+      "start": "2026-11-22",
+      "end": "2026-12-21",
       "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
     }
   },
   "events": [
-    {
-      "id": "senate-floor-2026-11-20T10:00:00-05:00",
-      "kind": "floor_session",
-      "chamber": "Senate",
-      "when": "2026-11-20T10:00:00-05:00",
-      "until": "2026-11-20T17:17:00-05:00",
-      "title": "Senate floor (recent)",
-      "summary": "Has adjourned",
-      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-      "source": "Senate.gov floor schedule XML",
-      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-      "urgency": "recent"
-    },
     {
       "id": "senate-next-2026-11-24T15:00:00-05:00",
       "kind": "floor_session",
@@ -2262,6 +2249,25 @@
       "documentType": "Presidential Document"
     },
     {
+      "id": "fr-comment-2026-23705",
+      "kind": "comment_deadline",
+      "when": "2026-12-21",
+      "until": "2026-12-21",
+      "title": "Petition for Rulemaking of Alden Graham",
+      "summary": "Federal Trade Commission",
+      "url": "http://www.regulations.gov/commenton/FTC-2026-1849-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/20/2026-23705/petition-for-rulemaking-of-alden-graham",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-20/pdf/2026-23705.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Federal Trade Commission"
+      ],
+      "documentNumber": "2026-23705",
+      "documentType": "Proposed Rule"
+    },
+    {
       "id": "fr-comment-2026-23521",
       "kind": "comment_deadline",
       "when": "2026-12-18",
@@ -2773,6 +2779,85 @@
       "documentType": "Proposed Rule"
     },
     {
+      "id": "fr-comment-2026-22667",
+      "kind": "comment_deadline",
+      "when": "2026-12-21",
+      "until": "2026-12-21",
+      "title": "Establishment of Class E Airspace, Shelter Cove Airport, Shelter Cove, CA",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-12541-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/06/2026-22667/establishment-of-class-e-airspace-shelter-cove-airport-shelter-cove-ca",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-06/pdf/2026-22667.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-22667",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-22665",
+      "kind": "comment_deadline",
+      "when": "2026-12-21",
+      "until": "2026-12-21",
+      "title": "Airworthiness Directives; Airbus SAS Airplanes",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-13801-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/06/2026-22665/airworthiness-directives-airbus-sas-airplanes",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-06/pdf/2026-22665.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-22665",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-22664",
+      "kind": "comment_deadline",
+      "when": "2026-12-21",
+      "until": "2026-12-21",
+      "title": "Airworthiness Directives; Dassault Aviation Airplanes",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-13803-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/06/2026-22664/airworthiness-directives-dassault-aviation-airplanes",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-06/pdf/2026-22664.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-22664",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-22650",
+      "kind": "comment_deadline",
+      "when": "2026-12-21",
+      "until": "2026-12-21",
+      "title": "Purchasing and Property Management",
+      "summary": "Legal Services Corporation",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-05/pdf/2026-22650.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/05/2026-22650/purchasing-and-property-management",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-05/pdf/2026-22650.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Legal Services Corporation"
+      ],
+      "documentNumber": "2026-22650",
+      "documentType": "Proposed Rule"
+    },
+    {
       "id": "fr-comment-2026-22615",
       "kind": "comment_deadline",
       "when": "2026-12-07",
@@ -2830,6 +2915,26 @@
       "documentType": "Proposed Rule"
     },
     {
+      "id": "fr-comment-2026-22587",
+      "kind": "comment_deadline",
+      "when": "2026-12-21",
+      "until": "2026-12-21",
+      "title": "Airworthiness Directives; Airbus SAS Airplanes",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-13800-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/05/2026-22587/airworthiness-directives-airbus-sas-airplanes",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-05/pdf/2026-22587.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-22587",
+      "documentType": "Proposed Rule"
+    },
+    {
       "id": "fr-comment-2026-22585",
       "kind": "comment_deadline",
       "when": "2026-12-07",
@@ -2884,6 +2989,66 @@
         "Federal Trade Commission"
       ],
       "documentNumber": "2026-22581",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-22564",
+      "kind": "comment_deadline",
+      "when": "2026-12-21",
+      "until": "2026-12-21",
+      "title": "Airworthiness Directives; Costruzioni Aeronautiche Tecnam S.P.A. Airplanes",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-13799-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/05/2026-22564/airworthiness-directives-costruzioni-aeronautiche-tecnam-spa-airplanes",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-05/pdf/2026-22564.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-22564",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-22496",
+      "kind": "comment_deadline",
+      "when": "2026-12-21",
+      "until": "2026-12-21",
+      "title": "Airworthiness Directives; Pilatus Aircraft Ltd",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-13798-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/04/2026-22496/airworthiness-directives-pilatus-aircraft-ltd",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-04/pdf/2026-22496.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-22496",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-22464",
+      "kind": "comment_deadline",
+      "when": "2026-12-21",
+      "until": "2026-12-21",
+      "title": "Amendment of Domestic Very High Frequency Omnidirectional Range (VOR) Federal Airways V-44, V-170, and V-312; Eastern United States",
+      "summary": "Transportation Department, Federal Aviation Administration",
+      "url": "http://www.regulations.gov/commenton/FAA-2026-14030-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/04/2026-22464/amendment-of-domestic-very-high-frequency-omnidirectional-range-vor-federal-airways-v-44-v-170-and",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-04/pdf/2026-22464.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Transportation Department",
+        "Federal Aviation Administration"
+      ],
+      "documentNumber": "2026-22464",
       "documentType": "Proposed Rule"
     },
     {
@@ -3318,26 +3483,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-21730",
-      "kind": "comment_deadline",
-      "when": "2026-11-21",
-      "until": "2026-11-21",
-      "title": "Part 572; Anthropomorphic Test Devices; Test Device for Human Occupant Restraint 50th Percentile Adult Male Dummy (THOR-50M); Extension of Comment Period",
-      "summary": "Transportation Department, National Highway Traffic Safety Administration",
-      "url": "http://www.regulations.gov/commenton/NHTSA-2023-0031-0037",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/23/2026-21730/part-572-anthropomorphic-test-devices-test-device-for-human-occupant-restraint-50th-percentile-adult",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-23/pdf/2026-21730.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "National Highway Traffic Safety Administration"
-      ],
-      "documentNumber": "2026-21730",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-21690",
       "kind": "comment_deadline",
       "when": "2026-11-23",
@@ -3434,6 +3579,63 @@
       "documentType": "Proposed Rule"
     },
     {
+      "id": "fr-comment-2026-21512",
+      "kind": "comment_deadline",
+      "when": "2026-12-21",
+      "until": "2026-12-21",
+      "title": "Notification to Members/Shareholders",
+      "summary": "National Credit Union Administration",
+      "url": "http://www.regulations.gov/commenton/NCUA-2026-1888-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/21/2026-21512/notification-to-membersshareholders",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21512.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Credit Union Administration"
+      ],
+      "documentNumber": "2026-21512",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-21509",
+      "kind": "comment_deadline",
+      "when": "2026-12-21",
+      "until": "2026-12-21",
+      "title": "Nonconforming Investment Special Reserve",
+      "summary": "National Credit Union Administration",
+      "url": "http://www.regulations.gov/commenton/NCUA-2026-1886-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/21/2026-21509/nonconforming-investment-special-reserve",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21509.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Credit Union Administration"
+      ],
+      "documentNumber": "2026-21509",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-21508",
+      "kind": "comment_deadline",
+      "when": "2026-12-21",
+      "until": "2026-12-21",
+      "title": "Conversion to State-Chartered Credit Union",
+      "summary": "National Credit Union Administration",
+      "url": "http://www.regulations.gov/commenton/NCUA-2026-1887-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/21/2026-21508/conversion-to-state-chartered-credit-union",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-21/pdf/2026-21508.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "National Credit Union Administration"
+      ],
+      "documentNumber": "2026-21508",
+      "documentType": "Proposed Rule"
+    },
+    {
       "id": "fr-comment-C1-2026-20360",
       "kind": "comment_deadline",
       "when": "2026-12-04",
@@ -3450,6 +3652,46 @@
         "Securities and Exchange Commission"
       ],
       "documentNumber": "C1-2026-20360",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-21443",
+      "kind": "comment_deadline",
+      "when": "2026-12-21",
+      "until": "2026-12-21",
+      "title": "Authorizations for Certain Activities at Liquefied Natural Gas Plants",
+      "summary": "Energy Department, Federal Energy Regulatory Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21443.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/20/2026-21443/authorizations-for-certain-activities-at-liquefied-natural-gas-plants",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21443.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Energy Department",
+        "Federal Energy Regulatory Commission"
+      ],
+      "documentNumber": "2026-21443",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-21433",
+      "kind": "comment_deadline",
+      "when": "2026-12-21",
+      "until": "2026-12-21",
+      "title": "Minimum Maturation Temperature for Beef and Ovine Meat From Regions Affected With Foot-and-Mouth Disease",
+      "summary": "Agriculture Department, Animal and Plant Health Inspection Service",
+      "url": "http://www.regulations.gov/commenton/APHIS-2023-0016-0001",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/20/2026-21433/minimum-maturation-temperature-for-beef-and-ovine-meat-from-regions-affected-with-foot-and-mouth",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21433.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Agriculture Department",
+        "Animal and Plant Health Inspection Service"
+      ],
+      "documentNumber": "2026-21433",
       "documentType": "Proposed Rule"
     },
     {

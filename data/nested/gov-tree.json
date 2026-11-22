@@ -80,16 +80,16 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-11-21T20:34:56.197Z",
-      "asOf": "2026-11-21T20:34:25.518Z",
+      "enrichedAt": "2026-11-22T20:45:19.900Z",
+      "asOf": "2026-11-22T20:45:00.198Z",
       "nodesWithHeat": 101,
       "nodesWithDirectHeat": 58,
-      "rawEventCount": 243,
+      "rawEventCount": 255,
       "matched": {
-        "chamber": 18,
+        "chamber": 17,
         "presidential": 4,
         "publicInspection": 77,
-        "commentDeadlines": 108,
+        "commentDeadlines": 121,
         "sunshine": 6,
         "hearings": 5,
         "scotus": 1
@@ -100,7 +100,7 @@
       "sources": {
         "senateFloor": {
           "ok": true,
-          "count": 2,
+          "count": 1,
           "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
         },
         "houseClerk": {
@@ -121,36 +121,36 @@
         "presidential": {
           "ok": true,
           "count": 4,
-          "since": "2026-11-07",
+          "since": "2026-11-08",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 115,
-          "start": "2026-11-21",
-          "end": "2026-12-20",
+          "count": 128,
+          "start": "2026-11-22",
+          "end": "2026-12-21",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
           "count": 6,
-          "start": "2026-11-21",
-          "end": "2026-12-20",
+          "start": "2026-11-22",
+          "end": "2026-12-21",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
           "count": 5,
-          "start": "2026-11-21",
-          "end": "2026-12-20",
+          "start": "2026-11-22",
+          "end": "2026-12-21",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
           "count": 0,
-          "start": "2026-11-21",
-          "end": "2026-12-20",
+          "start": "2026-11-22",
+          "end": "2026-12-21",
           "congress": 119,
           "calendarIds": 0,
           "skipped404": [],
@@ -159,8 +159,8 @@
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-11-21",
-          "end": "2026-12-20",
+          "start": "2026-11-22",
+          "end": "2026-12-21",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -208,95 +208,95 @@
       "note": "Synthetic root. Crosswalk branches attach under Parent=[Branch]."
     },
     "heat": {
-      "asOf": "2026-11-21T20:34:25.518Z",
-      "count": 204,
+      "asOf": "2026-11-22T20:45:00.198Z",
+      "count": 216,
       "rolledUp": true,
       "events": [
         {
-          "id": "fr-comment-2026-23450",
+          "id": "fr-comment-2026-21433",
           "kind": "comment_deadline",
-          "when": "2026-12-18",
-          "until": "2026-12-18",
+          "when": "2026-12-21",
+          "until": "2026-12-21",
           "filedAt": null,
           "signedAt": null,
-          "title": "Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to Military Readiness Activities in the Mariana Islands Training and Testing Study Area",
-          "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-2014-0001",
+          "title": "Minimum Maturation Temperature for Beef and Ovine Meat From Regions Affected With Foot-and-Mouth Disease",
+          "summary": "Agriculture Department, Animal and Plant Health Inspection Service (from lower in the map)",
+          "url": "http://www.regulations.gov/commenton/APHIS-2023-0016-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-21300",
+          "id": "fr-comment-2026-21443",
           "kind": "comment_deadline",
-          "when": "2026-12-18",
-          "until": "2026-12-18",
+          "when": "2026-12-21",
+          "until": "2026-12-21",
           "filedAt": null,
           "signedAt": null,
-          "title": "Gates of the Arctic National Park and Preserve; Use of Off-Road Vehicles for Subsistence Purposes by Residents of Anaktuvuk Pass",
-          "summary": "Interior Department, National Park Service (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/NPS-2026-0232-0001",
+          "title": "Authorizations for Certain Activities at Liquefied Natural Gas Plants",
+          "summary": "Energy Department, Federal Energy Regulatory Commission (from lower in the map)",
+          "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21443.pdf",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-22400",
+          "id": "fr-comment-2026-22667",
           "kind": "comment_deadline",
-          "when": "2026-12-18",
-          "until": "2026-12-18",
+          "when": "2026-12-21",
+          "until": "2026-12-21",
           "filedAt": null,
           "signedAt": null,
-          "title": "Airworthiness Directives; Airbus Helicopters",
+          "title": "Establishment of Class E Airspace, Shelter Cove Airport, Shelter Cove, CA",
           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-13795-0001",
+          "url": "http://www.regulations.gov/commenton/FAA-2026-12541-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-22383",
+          "id": "fr-comment-2026-22665",
           "kind": "comment_deadline",
-          "when": "2026-12-18",
-          "until": "2026-12-18",
+          "when": "2026-12-21",
+          "until": "2026-12-21",
           "filedAt": null,
           "signedAt": null,
-          "title": "Airworthiness Directives; The Boeing Company Airplanes",
+          "title": "Airworthiness Directives; Airbus SAS Airplanes",
           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-11821-0001",
+          "url": "http://www.regulations.gov/commenton/FAA-2026-13801-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-22382",
+          "id": "fr-comment-2026-22664",
           "kind": "comment_deadline",
-          "when": "2026-12-18",
-          "until": "2026-12-18",
+          "when": "2026-12-21",
+          "until": "2026-12-21",
           "filedAt": null,
           "signedAt": null,
-          "title": "Airworthiness Directives; Embraer S.A. (Type Certificate Previously Held by Yaborã Indústria Aeronáutica S.A.; Embraer S.A.) Airplanes",
+          "title": "Airworthiness Directives; Dassault Aviation Airplanes",
           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-11822-0001",
+          "url": "http://www.regulations.gov/commenton/FAA-2026-13803-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
         },
         {
-          "id": "fr-comment-2026-22373",
+          "id": "fr-comment-2026-22587",
           "kind": "comment_deadline",
-          "when": "2026-12-18",
-          "until": "2026-12-18",
+          "when": "2026-12-21",
+          "until": "2026-12-21",
           "filedAt": null,
           "signedAt": null,
-          "title": "Airworthiness Directives; MD Helicopters, LLC Helicopters",
+          "title": "Airworthiness Directives; Airbus SAS Airplanes",
           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-          "url": "http://www.regulations.gov/commenton/FAA-2026-11819-0001",
+          "url": "http://www.regulations.gov/commenton/FAA-2026-13800-0001",
           "source": "Federal Register proposed rule (comments close)",
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
@@ -355,95 +355,95 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-21T20:34:25.518Z",
-          "count": 128,
+          "asOf": "2026-11-22T20:45:00.198Z",
+          "count": 136,
           "rolledUp": true,
           "events": [
             {
-              "id": "fr-comment-2026-23450",
+              "id": "fr-comment-2026-21433",
               "kind": "comment_deadline",
-              "when": "2026-12-18",
-              "until": "2026-12-18",
+              "when": "2026-12-21",
+              "until": "2026-12-21",
               "filedAt": null,
               "signedAt": null,
-              "title": "Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to Military Readiness Activities in the Mariana Islands Training and Testing Study Area",
-              "summary": "Commerce Department, National Oceanic and Atmospheric Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/NOAA-NMFS-2026-2014-0001",
+              "title": "Minimum Maturation Temperature for Beef and Ovine Meat From Regions Affected With Foot-and-Mouth Disease",
+              "summary": "Agriculture Department, Animal and Plant Health Inspection Service (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/APHIS-2023-0016-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-21300",
+              "id": "fr-comment-2026-21443",
               "kind": "comment_deadline",
-              "when": "2026-12-18",
-              "until": "2026-12-18",
+              "when": "2026-12-21",
+              "until": "2026-12-21",
               "filedAt": null,
               "signedAt": null,
-              "title": "Gates of the Arctic National Park and Preserve; Use of Off-Road Vehicles for Subsistence Purposes by Residents of Anaktuvuk Pass",
-              "summary": "Interior Department, National Park Service (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/NPS-2026-0232-0001",
+              "title": "Authorizations for Certain Activities at Liquefied Natural Gas Plants",
+              "summary": "Energy Department, Federal Energy Regulatory Commission (from lower in the map)",
+              "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21443.pdf",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-22400",
+              "id": "fr-comment-2026-22667",
               "kind": "comment_deadline",
-              "when": "2026-12-18",
-              "until": "2026-12-18",
+              "when": "2026-12-21",
+              "until": "2026-12-21",
               "filedAt": null,
               "signedAt": null,
-              "title": "Airworthiness Directives; Airbus Helicopters",
+              "title": "Establishment of Class E Airspace, Shelter Cove Airport, Shelter Cove, CA",
               "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/FAA-2026-13795-0001",
+              "url": "http://www.regulations.gov/commenton/FAA-2026-12541-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-22383",
+              "id": "fr-comment-2026-22665",
               "kind": "comment_deadline",
-              "when": "2026-12-18",
-              "until": "2026-12-18",
+              "when": "2026-12-21",
+              "until": "2026-12-21",
               "filedAt": null,
               "signedAt": null,
-              "title": "Airworthiness Directives; The Boeing Company Airplanes",
+              "title": "Airworthiness Directives; Airbus SAS Airplanes",
               "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/FAA-2026-11821-0001",
+              "url": "http://www.regulations.gov/commenton/FAA-2026-13801-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-22382",
+              "id": "fr-comment-2026-22664",
               "kind": "comment_deadline",
-              "when": "2026-12-18",
-              "until": "2026-12-18",
+              "when": "2026-12-21",
+              "until": "2026-12-21",
               "filedAt": null,
               "signedAt": null,
-              "title": "Airworthiness Directives; Embraer S.A. (Type Certificate Previously Held by Yaborã Indústria Aeronáutica S.A.; Embraer S.A.) Airplanes",
+              "title": "Airworthiness Directives; Dassault Aviation Airplanes",
               "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/FAA-2026-11822-0001",
+              "url": "http://www.regulations.gov/commenton/FAA-2026-13803-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
               "bill": null
             },
             {
-              "id": "fr-comment-2026-22373",
+              "id": "fr-comment-2026-22587",
               "kind": "comment_deadline",
-              "when": "2026-12-18",
-              "until": "2026-12-18",
+              "when": "2026-12-21",
+              "until": "2026-12-21",
               "filedAt": null,
               "signedAt": null,
-              "title": "Airworthiness Directives; MD Helicopters, LLC Helicopters",
+              "title": "Airworthiness Directives; Airbus SAS Airplanes",
               "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/FAA-2026-11819-0001",
+              "url": "http://www.regulations.gov/commenton/FAA-2026-13800-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
@@ -2237,7 +2237,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -3225,10 +3225,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
-              "count": 6,
+              "asOf": "2026-11-22T20:45:00.198Z",
+              "count": 7,
               "rolledUp": true,
               "events": [
+                {
+                  "id": "fr-comment-2026-21433",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-21",
+                  "until": "2026-12-21",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Minimum Maturation Temperature for Beef and Ovine Meat From Regions Affected With Foot-and-Mouth Disease",
+                  "summary": "Agriculture Department, Animal and Plant Health Inspection Service (from lower in the map)",
+                  "url": "http://www.regulations.gov/commenton/APHIS-2023-0016-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-23086",
                   "kind": "comment_deadline",
@@ -3303,21 +3318,6 @@
                   "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                   "urgency": "upcoming",
                   "bill": null
-                },
-                {
-                  "id": "fr-pi-2026-23818",
-                  "kind": "public_inspection",
-                  "when": "2026-11-23",
-                  "until": null,
-                  "filedAt": "2026-11-20T08:45:00.000-05:00",
-                  "signedAt": null,
-                  "title": "Horse Protection Amendments; Extension of Postponement of Regulations",
-                  "summary": "Animal and Plant Health Inspection Service (from lower in the map)",
-                  "url": "https://public-inspection.federalregister.gov/2026-23818.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
                 }
               ]
             },
@@ -3372,10 +3372,25 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-21T20:34:25.518Z",
-                  "count": 6,
+                  "asOf": "2026-11-22T20:45:00.198Z",
+                  "count": 7,
                   "rolledUp": true,
                   "events": [
+                    {
+                      "id": "fr-comment-2026-21433",
+                      "kind": "comment_deadline",
+                      "when": "2026-12-21",
+                      "until": "2026-12-21",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Minimum Maturation Temperature for Beef and Ovine Meat From Regions Affected With Foot-and-Mouth Disease",
+                      "summary": "Agriculture Department, Animal and Plant Health Inspection Service (from lower in the map)",
+                      "url": "http://www.regulations.gov/commenton/APHIS-2023-0016-0001",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
                     {
                       "id": "fr-comment-2026-23086",
                       "kind": "comment_deadline",
@@ -3450,21 +3465,6 @@
                       "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                       "urgency": "upcoming",
                       "bill": null
-                    },
-                    {
-                      "id": "fr-pi-2026-23818",
-                      "kind": "public_inspection",
-                      "when": "2026-11-23",
-                      "until": null,
-                      "filedAt": "2026-11-20T08:45:00.000-05:00",
-                      "signedAt": null,
-                      "title": "Horse Protection Amendments; Extension of Postponement of Regulations",
-                      "summary": "Animal and Plant Health Inspection Service (from lower in the map)",
-                      "url": "https://public-inspection.federalregister.gov/2026-23818.pdf",
-                      "source": "Federal Register public inspection (PDF)",
-                      "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                      "urgency": "upcoming",
-                      "bill": null
                     }
                   ]
                 },
@@ -3493,10 +3493,25 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-21T20:34:25.518Z",
-                      "count": 6,
+                      "asOf": "2026-11-22T20:45:00.198Z",
+                      "count": 7,
                       "rolledUp": true,
                       "events": [
+                        {
+                          "id": "fr-comment-2026-21433",
+                          "kind": "comment_deadline",
+                          "when": "2026-12-21",
+                          "until": "2026-12-21",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Minimum Maturation Temperature for Beef and Ovine Meat From Regions Affected With Foot-and-Mouth Disease",
+                          "summary": "Agriculture Department, Animal and Plant Health Inspection Service (from lower in the map)",
+                          "url": "http://www.regulations.gov/commenton/APHIS-2023-0016-0001",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
                         {
                           "id": "fr-comment-2026-23086",
                           "kind": "comment_deadline",
@@ -3567,21 +3582,6 @@
                           "title": "Chronic Wasting Disease Herd Certification Program Standards",
                           "summary": "Animal and Plant Health Inspection Service (from lower in the map)",
                           "url": "https://public-inspection.federalregister.gov/2026-23768.pdf",
-                          "source": "Federal Register public inspection (PDF)",
-                          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                          "urgency": "upcoming",
-                          "bill": null
-                        },
-                        {
-                          "id": "fr-pi-2026-23818",
-                          "kind": "public_inspection",
-                          "when": "2026-11-23",
-                          "until": null,
-                          "filedAt": "2026-11-20T08:45:00.000-05:00",
-                          "signedAt": null,
-                          "title": "Horse Protection Amendments; Extension of Postponement of Regulations",
-                          "summary": "Animal and Plant Health Inspection Service (from lower in the map)",
-                          "url": "https://public-inspection.federalregister.gov/2026-23818.pdf",
                           "source": "Federal Register public inspection (PDF)",
                           "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                           "urgency": "upcoming",
@@ -4835,10 +4835,25 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-21T20:34:25.518Z",
-                          "count": 5,
+                          "asOf": "2026-11-22T20:45:00.198Z",
+                          "count": 6,
                           "rolledUp": true,
                           "events": [
+                            {
+                              "id": "fr-comment-2026-21433",
+                              "kind": "comment_deadline",
+                              "when": "2026-12-21",
+                              "until": "2026-12-21",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Minimum Maturation Temperature for Beef and Ovine Meat From Regions Affected With Foot-and-Mouth Disease",
+                              "summary": "Agriculture Department, Animal and Plant Health Inspection Service (from lower in the map)",
+                              "url": "http://www.regulations.gov/commenton/APHIS-2023-0016-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
                             {
                               "id": "fr-comment-2026-23086",
                               "kind": "comment_deadline",
@@ -4898,21 +4913,6 @@
                               "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
                               "urgency": "upcoming",
                               "bill": null
-                            },
-                            {
-                              "id": "fr-pi-2026-23818",
-                              "kind": "public_inspection",
-                              "when": "2026-11-23",
-                              "until": null,
-                              "filedAt": "2026-11-20T08:45:00.000-05:00",
-                              "signedAt": null,
-                              "title": "Horse Protection Amendments; Extension of Postponement of Regulations",
-                              "summary": "Animal and Plant Health Inspection Service (from lower in the map)",
-                              "url": "https://public-inspection.federalregister.gov/2026-23818.pdf",
-                              "source": "Federal Register public inspection (PDF)",
-                              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                              "urgency": "upcoming",
-                              "bill": null
                             }
                           ]
                         },
@@ -4941,7 +4941,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-21T20:34:25.518Z",
+                              "asOf": "2026-11-22T20:45:00.198Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -5041,10 +5041,25 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-21T20:34:25.518Z",
-                              "count": 4,
+                              "asOf": "2026-11-22T20:45:00.198Z",
+                              "count": 5,
                               "rolledUp": false,
                               "events": [
+                                {
+                                  "id": "fr-comment-2026-21433",
+                                  "kind": "comment_deadline",
+                                  "when": "2026-12-21",
+                                  "until": "2026-12-21",
+                                  "filedAt": null,
+                                  "signedAt": null,
+                                  "title": "Minimum Maturation Temperature for Beef and Ovine Meat From Regions Affected With Foot-and-Mouth Disease",
+                                  "summary": "Agriculture Department, Animal and Plant Health Inspection Service",
+                                  "url": "http://www.regulations.gov/commenton/APHIS-2023-0016-0001",
+                                  "source": "Federal Register proposed rule (comments close)",
+                                  "sourceUrl": "https://www.federalregister.gov/",
+                                  "urgency": "upcoming",
+                                  "bill": null
+                                },
                                 {
                                   "id": "fr-comment-2026-23086",
                                   "kind": "comment_deadline",
@@ -5213,7 +5228,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-21T20:34:25.518Z",
+                          "asOf": "2026-11-22T20:45:00.198Z",
                           "count": 1,
                           "rolledUp": true,
                           "events": [
@@ -5259,7 +5274,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-21T20:34:25.518Z",
+                              "asOf": "2026-11-22T20:45:00.198Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -6184,7 +6199,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 10,
               "rolledUp": true,
               "events": [
@@ -6305,7 +6320,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-21T20:34:25.518Z",
+                  "asOf": "2026-11-22T20:45:00.198Z",
                   "count": 10,
                   "rolledUp": true,
                   "events": [
@@ -6426,7 +6441,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-21T20:34:25.518Z",
+                      "asOf": "2026-11-22T20:45:00.198Z",
                       "count": 10,
                       "rolledUp": true,
                       "events": [
@@ -6547,7 +6562,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-21T20:34:25.518Z",
+                          "asOf": "2026-11-22T20:45:00.198Z",
                           "count": 10,
                           "rolledUp": true,
                           "events": [
@@ -7430,7 +7445,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-21T20:34:25.518Z",
+                              "asOf": "2026-11-22T20:45:00.198Z",
                               "count": 1,
                               "rolledUp": true,
                               "events": [
@@ -7528,7 +7543,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-11-21T20:34:25.518Z",
+                                  "asOf": "2026-11-22T20:45:00.198Z",
                                   "count": 1,
                                   "rolledUp": false,
                                   "events": [
@@ -7780,7 +7795,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-21T20:34:25.518Z",
+                              "asOf": "2026-11-22T20:45:00.198Z",
                               "count": 4,
                               "rolledUp": true,
                               "events": [
@@ -7931,7 +7946,7 @@
                                   }
                                 },
                                 "heat": {
-                                  "asOf": "2026-11-21T20:34:25.518Z",
+                                  "asOf": "2026-11-22T20:45:00.198Z",
                                   "count": 4,
                                   "rolledUp": false,
                                   "events": [
@@ -8235,7 +8250,7 @@
                               "usgm": null
                             },
                             "heat": {
-                              "asOf": "2026-11-21T20:34:25.518Z",
+                              "asOf": "2026-11-22T20:45:00.198Z",
                               "count": 5,
                               "rolledUp": true,
                               "events": [
@@ -8326,7 +8341,7 @@
                                   "usgm": null
                                 },
                                 "heat": {
-                                  "asOf": "2026-11-21T20:34:25.518Z",
+                                  "asOf": "2026-11-22T20:45:00.198Z",
                                   "count": 5,
                                   "rolledUp": true,
                                   "events": [
@@ -8519,7 +8534,7 @@
                                       }
                                     },
                                     "heat": {
-                                      "asOf": "2026-11-21T20:34:25.518Z",
+                                      "asOf": "2026-11-22T20:45:00.198Z",
                                       "count": 5,
                                       "rolledUp": false,
                                       "events": [
@@ -22787,10 +22802,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
-              "count": 3,
+              "asOf": "2026-11-22T20:45:00.198Z",
+              "count": 4,
               "rolledUp": true,
               "events": [
+                {
+                  "id": "fr-comment-2026-21443",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-21",
+                  "until": "2026-12-21",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Authorizations for Certain Activities at Liquefied Natural Gas Plants",
+                  "summary": "Energy Department, Federal Energy Regulatory Commission (from lower in the map)",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21443.pdf",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-pi-2026-23765",
                   "kind": "public_inspection",
@@ -22863,10 +22893,25 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-21T20:34:25.518Z",
-                  "count": 3,
+                  "asOf": "2026-11-22T20:45:00.198Z",
+                  "count": 4,
                   "rolledUp": true,
                   "events": [
+                    {
+                      "id": "fr-comment-2026-21443",
+                      "kind": "comment_deadline",
+                      "when": "2026-12-21",
+                      "until": "2026-12-21",
+                      "filedAt": null,
+                      "signedAt": null,
+                      "title": "Authorizations for Certain Activities at Liquefied Natural Gas Plants",
+                      "summary": "Energy Department, Federal Energy Regulatory Commission (from lower in the map)",
+                      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21443.pdf",
+                      "source": "Federal Register proposed rule (comments close)",
+                      "sourceUrl": "https://www.federalregister.gov/",
+                      "urgency": "upcoming",
+                      "bill": null
+                    },
                     {
                       "id": "fr-pi-2026-23765",
                       "kind": "public_inspection",
@@ -25484,10 +25529,25 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-21T20:34:25.518Z",
-                      "count": 3,
+                      "asOf": "2026-11-22T20:45:00.198Z",
+                      "count": 4,
                       "rolledUp": false,
                       "events": [
+                        {
+                          "id": "fr-comment-2026-21443",
+                          "kind": "comment_deadline",
+                          "when": "2026-12-21",
+                          "until": "2026-12-21",
+                          "filedAt": null,
+                          "signedAt": null,
+                          "title": "Authorizations for Certain Activities at Liquefied Natural Gas Plants",
+                          "summary": "Energy Department, Federal Energy Regulatory Commission",
+                          "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-20/pdf/2026-21443.pdf",
+                          "source": "Federal Register proposed rule (comments close)",
+                          "sourceUrl": "https://www.federalregister.gov/",
+                          "urgency": "upcoming",
+                          "bill": null
+                        },
                         {
                           "id": "fr-pi-2026-23765",
                           "kind": "public_inspection",
@@ -25786,7 +25846,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 19,
               "rolledUp": false,
               "events": [
@@ -25863,7 +25923,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-21T20:34:25.518Z",
+                  "asOf": "2026-11-22T20:45:00.198Z",
                   "count": 16,
                   "rolledUp": true,
                   "events": [
@@ -26009,7 +26069,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-21T20:34:25.518Z",
+                      "asOf": "2026-11-22T20:45:00.198Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -26345,7 +26405,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-21T20:34:25.518Z",
+                      "asOf": "2026-11-22T20:45:00.198Z",
                       "count": 4,
                       "rolledUp": false,
                       "events": [
@@ -27422,7 +27482,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-21T20:34:25.518Z",
+                      "asOf": "2026-11-22T20:45:00.198Z",
                       "count": 1,
                       "rolledUp": false,
                       "events": [
@@ -27635,7 +27695,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-21T20:34:25.518Z",
+                      "asOf": "2026-11-22T20:45:00.198Z",
                       "count": 2,
                       "rolledUp": false,
                       "events": [
@@ -27822,7 +27882,7 @@
                       }
                     },
                     "heat": {
-                      "asOf": "2026-11-21T20:34:25.518Z",
+                      "asOf": "2026-11-22T20:45:00.198Z",
                       "count": 8,
                       "rolledUp": false,
                       "events": [
@@ -28199,7 +28259,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 7,
               "rolledUp": true,
               "events": [
@@ -28320,7 +28380,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-21T20:34:25.518Z",
+                  "asOf": "2026-11-22T20:45:00.198Z",
                   "count": 7,
                   "rolledUp": true,
                   "events": [
@@ -28441,7 +28501,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-21T20:34:25.518Z",
+                      "asOf": "2026-11-22T20:45:00.198Z",
                       "count": 7,
                       "rolledUp": true,
                       "events": [
@@ -29969,7 +30029,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-21T20:34:25.518Z",
+                          "asOf": "2026-11-22T20:45:00.198Z",
                           "count": 3,
                           "rolledUp": false,
                           "events": [
@@ -30072,7 +30132,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-21T20:34:25.518Z",
+                          "asOf": "2026-11-22T20:45:00.198Z",
                           "count": 4,
                           "rolledUp": false,
                           "events": [
@@ -32459,7 +32519,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 3,
               "rolledUp": true,
               "events": [
@@ -32571,7 +32631,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-21T20:34:25.518Z",
+                  "asOf": "2026-11-22T20:45:00.198Z",
                   "count": 3,
                   "rolledUp": true,
                   "events": [
@@ -32647,7 +32707,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-21T20:34:25.518Z",
+                      "asOf": "2026-11-22T20:45:00.198Z",
                       "count": 3,
                       "rolledUp": true,
                       "events": [
@@ -34081,7 +34141,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-21T20:34:25.518Z",
+                          "asOf": "2026-11-22T20:45:00.198Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -34178,7 +34238,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-21T20:34:25.518Z",
+                          "asOf": "2026-11-22T20:45:00.198Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -34627,7 +34687,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 2,
               "rolledUp": true,
               "events": [
@@ -34688,7 +34748,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-21T20:34:25.518Z",
+                  "asOf": "2026-11-22T20:45:00.198Z",
                   "count": 2,
                   "rolledUp": true,
                   "events": [
@@ -34749,7 +34809,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-21T20:34:25.518Z",
+                      "asOf": "2026-11-22T20:45:00.198Z",
                       "count": 2,
                       "rolledUp": true,
                       "events": [
@@ -35333,7 +35393,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-21T20:34:25.518Z",
+                          "asOf": "2026-11-22T20:45:00.198Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -36327,7 +36387,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-21T20:34:25.518Z",
+                          "asOf": "2026-11-22T20:45:00.198Z",
                           "count": 1,
                           "rolledUp": false,
                           "events": [
@@ -38865,7 +38925,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 9,
               "rolledUp": true,
               "events": [
@@ -38986,7 +39046,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-21T20:34:25.518Z",
+                  "asOf": "2026-11-22T20:45:00.198Z",
                   "count": 9,
                   "rolledUp": true,
                   "events": [
@@ -39107,7 +39167,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-21T20:34:25.518Z",
+                      "asOf": "2026-11-22T20:45:00.198Z",
                       "count": 9,
                       "rolledUp": true,
                       "events": [
@@ -39228,7 +39288,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-21T20:34:25.518Z",
+                          "asOf": "2026-11-22T20:45:00.198Z",
                           "count": 7,
                           "rolledUp": true,
                           "events": [
@@ -39431,7 +39491,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-21T20:34:25.518Z",
+                              "asOf": "2026-11-22T20:45:00.198Z",
                               "count": 3,
                               "rolledUp": false,
                               "events": [
@@ -39564,7 +39624,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-21T20:34:25.518Z",
+                              "asOf": "2026-11-22T20:45:00.198Z",
                               "count": 4,
                               "rolledUp": false,
                               "events": [
@@ -40027,7 +40087,7 @@
                           "usgm": null
                         },
                         "heat": {
-                          "asOf": "2026-11-21T20:34:25.518Z",
+                          "asOf": "2026-11-22T20:45:00.198Z",
                           "count": 2,
                           "rolledUp": true,
                           "events": [
@@ -40169,7 +40229,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-21T20:34:25.518Z",
+                              "asOf": "2026-11-22T20:45:00.198Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -40254,7 +40314,7 @@
                               }
                             },
                             "heat": {
-                              "asOf": "2026-11-21T20:34:25.518Z",
+                              "asOf": "2026-11-22T20:45:00.198Z",
                               "count": 1,
                               "rolledUp": false,
                               "events": [
@@ -41356,7 +41416,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 5,
               "rolledUp": true,
               "events": [
@@ -41447,7 +41507,7 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-21T20:34:25.518Z",
+                  "asOf": "2026-11-22T20:45:00.198Z",
                   "count": 5,
                   "rolledUp": true,
                   "events": [
@@ -41590,7 +41650,7 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-21T20:34:25.518Z",
+                      "asOf": "2026-11-22T20:45:00.198Z",
                       "count": 5,
                       "rolledUp": true,
                       "events": [
@@ -42981,7 +43041,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-21T20:34:25.518Z",
+                          "asOf": "2026-11-22T20:45:00.198Z",
                           "count": 5,
                           "rolledUp": false,
                           "events": [
@@ -43445,65 +43505,65 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
-              "count": 33,
+              "asOf": "2026-11-22T20:45:00.198Z",
+              "count": 39,
               "rolledUp": true,
               "events": [
                 {
-                  "id": "fr-comment-2026-22400",
+                  "id": "fr-comment-2026-22667",
                   "kind": "comment_deadline",
-                  "when": "2026-12-18",
-                  "until": "2026-12-18",
+                  "when": "2026-12-21",
+                  "until": "2026-12-21",
                   "filedAt": null,
                   "signedAt": null,
-                  "title": "Airworthiness Directives; Airbus Helicopters",
+                  "title": "Establishment of Class E Airspace, Shelter Cove Airport, Shelter Cove, CA",
                   "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FAA-2026-13795-0001",
+                  "url": "http://www.regulations.gov/commenton/FAA-2026-12541-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
                 },
                 {
-                  "id": "fr-comment-2026-22383",
+                  "id": "fr-comment-2026-22665",
                   "kind": "comment_deadline",
-                  "when": "2026-12-18",
-                  "until": "2026-12-18",
+                  "when": "2026-12-21",
+                  "until": "2026-12-21",
                   "filedAt": null,
                   "signedAt": null,
-                  "title": "Airworthiness Directives; The Boeing Company Airplanes",
+                  "title": "Airworthiness Directives; Airbus SAS Airplanes",
                   "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FAA-2026-11821-0001",
+                  "url": "http://www.regulations.gov/commenton/FAA-2026-13801-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
                 },
                 {
-                  "id": "fr-comment-2026-22382",
+                  "id": "fr-comment-2026-22664",
                   "kind": "comment_deadline",
-                  "when": "2026-12-18",
-                  "until": "2026-12-18",
+                  "when": "2026-12-21",
+                  "until": "2026-12-21",
                   "filedAt": null,
                   "signedAt": null,
-                  "title": "Airworthiness Directives; Embraer S.A. (Type Certificate Previously Held by Yaborã Indústria Aeronáutica S.A.; Embraer S.A.) Airplanes",
+                  "title": "Airworthiness Directives; Dassault Aviation Airplanes",
                   "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FAA-2026-11822-0001",
+                  "url": "http://www.regulations.gov/commenton/FAA-2026-13803-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
                   "bill": null
                 },
                 {
-                  "id": "fr-comment-2026-22373",
+                  "id": "fr-comment-2026-22587",
                   "kind": "comment_deadline",
-                  "when": "2026-12-18",
-                  "until": "2026-12-18",
+                  "when": "2026-12-21",
+                  "until": "2026-12-21",
                   "filedAt": null,
                   "signedAt": null,
-                  "title": "Airworthiness Directives; MD Helicopters, LLC Helicopters",
+                  "title": "Airworthiness Directives; Airbus SAS Airplanes",
                   "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                  "url": "http://www.regulations.gov/commenton/FAA-2026-11819-0001",
+                  "url": "http://www.regulations.gov/commenton/FAA-2026-13800-0001",
                   "source": "Federal Register proposed rule (comments close)",
                   "sourceUrl": "https://www.federalregister.gov/",
                   "urgency": "upcoming",
@@ -43566,65 +43626,65 @@
                   "usgm": null
                 },
                 "heat": {
-                  "asOf": "2026-11-21T20:34:25.518Z",
-                  "count": 33,
+                  "asOf": "2026-11-22T20:45:00.198Z",
+                  "count": 39,
                   "rolledUp": true,
                   "events": [
                     {
-                      "id": "fr-comment-2026-22400",
+                      "id": "fr-comment-2026-22667",
                       "kind": "comment_deadline",
-                      "when": "2026-12-18",
-                      "until": "2026-12-18",
+                      "when": "2026-12-21",
+                      "until": "2026-12-21",
                       "filedAt": null,
                       "signedAt": null,
-                      "title": "Airworthiness Directives; Airbus Helicopters",
+                      "title": "Establishment of Class E Airspace, Shelter Cove Airport, Shelter Cove, CA",
                       "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAA-2026-13795-0001",
+                      "url": "http://www.regulations.gov/commenton/FAA-2026-12541-0001",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
                       "bill": null
                     },
                     {
-                      "id": "fr-comment-2026-22383",
+                      "id": "fr-comment-2026-22665",
                       "kind": "comment_deadline",
-                      "when": "2026-12-18",
-                      "until": "2026-12-18",
+                      "when": "2026-12-21",
+                      "until": "2026-12-21",
                       "filedAt": null,
                       "signedAt": null,
-                      "title": "Airworthiness Directives; The Boeing Company Airplanes",
+                      "title": "Airworthiness Directives; Airbus SAS Airplanes",
                       "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAA-2026-11821-0001",
+                      "url": "http://www.regulations.gov/commenton/FAA-2026-13801-0001",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
                       "bill": null
                     },
                     {
-                      "id": "fr-comment-2026-22382",
+                      "id": "fr-comment-2026-22664",
                       "kind": "comment_deadline",
-                      "when": "2026-12-18",
-                      "until": "2026-12-18",
+                      "when": "2026-12-21",
+                      "until": "2026-12-21",
                       "filedAt": null,
                       "signedAt": null,
-                      "title": "Airworthiness Directives; Embraer S.A. (Type Certificate Previously Held by Yaborã Indústria Aeronáutica S.A.; Embraer S.A.) Airplanes",
+                      "title": "Airworthiness Directives; Dassault Aviation Airplanes",
                       "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAA-2026-11822-0001",
+                      "url": "http://www.regulations.gov/commenton/FAA-2026-13803-0001",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
                       "bill": null
                     },
                     {
-                      "id": "fr-comment-2026-22373",
+                      "id": "fr-comment-2026-22587",
                       "kind": "comment_deadline",
-                      "when": "2026-12-18",
-                      "until": "2026-12-18",
+                      "when": "2026-12-21",
+                      "until": "2026-12-21",
                       "filedAt": null,
                       "signedAt": null,
-                      "title": "Airworthiness Directives; MD Helicopters, LLC Helicopters",
+                      "title": "Airworthiness Directives; Airbus SAS Airplanes",
                       "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                      "url": "http://www.regulations.gov/commenton/FAA-2026-11819-0001",
+                      "url": "http://www.regulations.gov/commenton/FAA-2026-13800-0001",
                       "source": "Federal Register proposed rule (comments close)",
                       "sourceUrl": "https://www.federalregister.gov/",
                       "urgency": "upcoming",
@@ -43687,65 +43747,65 @@
                       "usgm": null
                     },
                     "heat": {
-                      "asOf": "2026-11-21T20:34:25.518Z",
-                      "count": 33,
+                      "asOf": "2026-11-22T20:45:00.198Z",
+                      "count": 39,
                       "rolledUp": true,
                       "events": [
                         {
-                          "id": "fr-comment-2026-22400",
+                          "id": "fr-comment-2026-22667",
                           "kind": "comment_deadline",
-                          "when": "2026-12-18",
-                          "until": "2026-12-18",
+                          "when": "2026-12-21",
+                          "until": "2026-12-21",
                           "filedAt": null,
                           "signedAt": null,
-                          "title": "Airworthiness Directives; Airbus Helicopters",
+                          "title": "Establishment of Class E Airspace, Shelter Cove Airport, Shelter Cove, CA",
                           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/FAA-2026-13795-0001",
+                          "url": "http://www.regulations.gov/commenton/FAA-2026-12541-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
                           "bill": null
                         },
                         {
-                          "id": "fr-comment-2026-22383",
+                          "id": "fr-comment-2026-22665",
                           "kind": "comment_deadline",
-                          "when": "2026-12-18",
-                          "until": "2026-12-18",
+                          "when": "2026-12-21",
+                          "until": "2026-12-21",
                           "filedAt": null,
                           "signedAt": null,
-                          "title": "Airworthiness Directives; The Boeing Company Airplanes",
+                          "title": "Airworthiness Directives; Airbus SAS Airplanes",
                           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/FAA-2026-11821-0001",
+                          "url": "http://www.regulations.gov/commenton/FAA-2026-13801-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
                           "bill": null
                         },
                         {
-                          "id": "fr-comment-2026-22382",
+                          "id": "fr-comment-2026-22664",
                           "kind": "comment_deadline",
-                          "when": "2026-12-18",
-                          "until": "2026-12-18",
+                          "when": "2026-12-21",
+                          "until": "2026-12-21",
                           "filedAt": null,
                           "signedAt": null,
-                          "title": "Airworthiness Directives; Embraer S.A. (Type Certificate Previously Held by Yaborã Indústria Aeronáutica S.A.; Embraer S.A.) Airplanes",
+                          "title": "Airworthiness Directives; Dassault Aviation Airplanes",
                           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/FAA-2026-11822-0001",
+                          "url": "http://www.regulations.gov/commenton/FAA-2026-13803-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
                           "bill": null
                         },
                         {
-                          "id": "fr-comment-2026-22373",
+                          "id": "fr-comment-2026-22587",
                           "kind": "comment_deadline",
-                          "when": "2026-12-18",
-                          "until": "2026-12-18",
+                          "when": "2026-12-21",
+                          "until": "2026-12-21",
                           "filedAt": null,
                           "signedAt": null,
-                          "title": "Airworthiness Directives; MD Helicopters, LLC Helicopters",
+                          "title": "Airworthiness Directives; Airbus SAS Airplanes",
                           "summary": "Transportation Department, Federal Aviation Administration (from lower in the map)",
-                          "url": "http://www.regulations.gov/commenton/FAA-2026-11819-0001",
+                          "url": "http://www.regulations.gov/commenton/FAA-2026-13800-0001",
                           "source": "Federal Register proposed rule (comments close)",
                           "sourceUrl": "https://www.federalregister.gov/",
                           "urgency": "upcoming",
@@ -44078,7 +44138,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-21T20:34:25.518Z",
+                          "asOf": "2026-11-22T20:45:00.198Z",
                           "count": 2,
                           "rolledUp": false,
                           "events": [
@@ -44416,8 +44476,8 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-21T20:34:25.518Z",
-                          "count": 3,
+                          "asOf": "2026-11-22T20:45:00.198Z",
+                          "count": 2,
                           "rolledUp": false,
                           "events": [
                             {
@@ -44445,21 +44505,6 @@
                               "title": "Federal Motor Vehicle Safety Standards; Modernization of FMVSS No. 108 To Accommodate ADS-Equipped Vehicles",
                               "summary": "Transportation Department, National Highway Traffic Safety Administration",
                               "url": "http://www.regulations.gov/commenton/NHTSA-2026-1519-0001",
-                              "source": "Federal Register proposed rule (comments close)",
-                              "sourceUrl": "https://www.federalregister.gov/",
-                              "urgency": "upcoming",
-                              "bill": null
-                            },
-                            {
-                              "id": "fr-comment-2026-21730",
-                              "kind": "comment_deadline",
-                              "when": "2026-11-21",
-                              "until": "2026-11-21",
-                              "filedAt": null,
-                              "signedAt": null,
-                              "title": "Part 572; Anthropomorphic Test Devices; Test Device for Human Occupant Restraint 50th Percentile Adult Male Dummy (THOR-50M); Extension of Comment Period",
-                              "summary": "Transportation Department, National Highway Traffic Safety Administration",
-                              "url": "http://www.regulations.gov/commenton/NHTSA-2023-0031-0037",
                               "source": "Federal Register proposed rule (comments close)",
                               "sourceUrl": "https://www.federalregister.gov/",
                               "urgency": "upcoming",
@@ -44902,10 +44947,115 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-21T20:34:25.518Z",
-                          "count": 25,
+                          "asOf": "2026-11-22T20:45:00.198Z",
+                          "count": 32,
                           "rolledUp": false,
                           "events": [
+                            {
+                              "id": "fr-comment-2026-22667",
+                              "kind": "comment_deadline",
+                              "when": "2026-12-21",
+                              "until": "2026-12-21",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Establishment of Class E Airspace, Shelter Cove Airport, Shelter Cove, CA",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-12541-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-22665",
+                              "kind": "comment_deadline",
+                              "when": "2026-12-21",
+                              "until": "2026-12-21",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Airworthiness Directives; Airbus SAS Airplanes",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-13801-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-22664",
+                              "kind": "comment_deadline",
+                              "when": "2026-12-21",
+                              "until": "2026-12-21",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Airworthiness Directives; Dassault Aviation Airplanes",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-13803-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-22587",
+                              "kind": "comment_deadline",
+                              "when": "2026-12-21",
+                              "until": "2026-12-21",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Airworthiness Directives; Airbus SAS Airplanes",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-13800-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-22564",
+                              "kind": "comment_deadline",
+                              "when": "2026-12-21",
+                              "until": "2026-12-21",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Airworthiness Directives; Costruzioni Aeronautiche Tecnam S.P.A. Airplanes",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-13799-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-22496",
+                              "kind": "comment_deadline",
+                              "when": "2026-12-21",
+                              "until": "2026-12-21",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Airworthiness Directives; Pilatus Aircraft Ltd",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-13798-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
+                            {
+                              "id": "fr-comment-2026-22464",
+                              "kind": "comment_deadline",
+                              "when": "2026-12-21",
+                              "until": "2026-12-21",
+                              "filedAt": null,
+                              "signedAt": null,
+                              "title": "Amendment of Domestic Very High Frequency Omnidirectional Range (VOR) Federal Airways V-44, V-170, and V-312; Eastern United States",
+                              "summary": "Transportation Department, Federal Aviation Administration",
+                              "url": "http://www.regulations.gov/commenton/FAA-2026-14030-0001",
+                              "source": "Federal Register proposed rule (comments close)",
+                              "sourceUrl": "https://www.federalregister.gov/",
+                              "urgency": "upcoming",
+                              "bill": null
+                            },
                             {
                               "id": "fr-comment-2026-22400",
                               "kind": "comment_deadline",
@@ -45441,7 +45591,7 @@
                           }
                         },
                         "heat": {
-                          "asOf": "2026-11-21T20:34:25.518Z",
+                          "asOf": "2026-11-22T20:45:00.198Z",
                           "count": 3,
                           "rolledUp": false,
                           "events": [
@@ -47793,7 +47943,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 16,
               "rolledUp": false,
               "events": [
@@ -49865,7 +50015,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 9,
               "rolledUp": false,
               "events": [
@@ -51165,7 +51315,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -51928,7 +52078,7 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-21T20:34:25.518Z",
+          "asOf": "2026-11-22T20:45:00.198Z",
           "count": 1,
           "rolledUp": true,
           "events": [
@@ -52537,7 +52687,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -53639,8 +53789,8 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-21T20:34:25.518Z",
-          "count": 20,
+          "asOf": "2026-11-22T20:45:00.198Z",
+          "count": 19,
           "rolledUp": true,
           "events": [
             {
@@ -54312,8 +54462,8 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
-              "count": 19,
+              "asOf": "2026-11-22T20:45:00.198Z",
+              "count": 18,
               "rolledUp": true,
               "events": [
                 {
@@ -54543,7 +54693,7 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-11-21T20:34:25.518Z",
+                  "asOf": "2026-11-22T20:45:00.198Z",
                   "count": 12,
                   "rolledUp": false,
                   "events": [
@@ -54859,8 +55009,8 @@
                   }
                 },
                 "heat": {
-                  "asOf": "2026-11-21T20:34:25.518Z",
-                  "count": 7,
+                  "asOf": "2026-11-22T20:45:00.198Z",
+                  "count": 6,
                   "rolledUp": false,
                   "events": [
                     {
@@ -54951,21 +55101,6 @@
                       "source": "Senate.gov floor schedule XML",
                       "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
                       "urgency": "upcoming",
-                      "bill": null
-                    },
-                    {
-                      "id": "senate-floor-2026-11-20T10:00:00-05:00",
-                      "kind": "floor_session",
-                      "when": "2026-11-20T10:00:00-05:00",
-                      "until": "2026-11-20T17:17:00-05:00",
-                      "filedAt": null,
-                      "signedAt": null,
-                      "title": "Senate floor (recent)",
-                      "summary": "Has adjourned",
-                      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-                      "source": "Senate.gov floor schedule XML",
-                      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-                      "urgency": "recent",
                       "bill": null
                     }
                   ]
@@ -55791,7 +55926,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -55930,10 +56065,70 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-21T20:34:25.518Z",
-          "count": 49,
+          "asOf": "2026-11-22T20:45:00.198Z",
+          "count": 53,
           "rolledUp": true,
           "events": [
+            {
+              "id": "fr-comment-2026-23705",
+              "kind": "comment_deadline",
+              "when": "2026-12-21",
+              "until": "2026-12-21",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Petition for Rulemaking of Alden Graham",
+              "summary": "Federal Trade Commission (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/FTC-2026-1849-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-21512",
+              "kind": "comment_deadline",
+              "when": "2026-12-21",
+              "until": "2026-12-21",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Notification to Members/Shareholders",
+              "summary": "National Credit Union Administration (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/NCUA-2026-1888-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-21509",
+              "kind": "comment_deadline",
+              "when": "2026-12-21",
+              "until": "2026-12-21",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Nonconforming Investment Special Reserve",
+              "summary": "National Credit Union Administration (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/NCUA-2026-1886-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
+            {
+              "id": "fr-comment-2026-21508",
+              "kind": "comment_deadline",
+              "when": "2026-12-21",
+              "until": "2026-12-21",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Conversion to State-Chartered Credit Union",
+              "summary": "National Credit Union Administration (from lower in the map)",
+              "url": "http://www.regulations.gov/commenton/NCUA-2026-1887-0001",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
             {
               "id": "fr-sun-2026-23787-2026-12-15",
               "kind": "sunshine_meeting",
@@ -55959,66 +56154,6 @@
               "title": "Investigation Into Conditions Affecting Shipping in the Foreign Trade and Denial of Entry of Vessels Into Spanish Ports and Proposed Remedies To Meet or Adjust the Unfavorable Conditions",
               "summary": "Federal Maritime Commission (from lower in the map)",
               "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-15/pdf/2026-21067.pdf",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-21089",
-              "kind": "comment_deadline",
-              "when": "2026-12-14",
-              "until": "2026-12-14",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Central Liquidity Facility",
-              "summary": "National Credit Union Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/NCUA-2026-1889-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-21088",
-              "kind": "comment_deadline",
-              "when": "2026-12-14",
-              "until": "2026-12-14",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Powers of Federal Credit Unions",
-              "summary": "National Credit Union Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/NCUA-2026-1883-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-21087",
-              "kind": "comment_deadline",
-              "when": "2026-12-14",
-              "until": "2026-12-14",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Corporate Credit Unions; Fidelity Bond and Insurance Coverage for Federally Insured Credit Unions",
-              "summary": "National Credit Union Administration (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/NCUA-2026-1882-0001",
-              "source": "Federal Register proposed rule (comments close)",
-              "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-comment-2026-20888",
-              "kind": "comment_deadline",
-              "when": "2026-12-14",
-              "until": "2026-12-14",
-              "filedAt": null,
-              "signedAt": null,
-              "title": "Regulation Crypto Asset Transactions and Regulation Crypto Asset Markets",
-              "summary": "Commodity Futures Trading Commission (from lower in the map)",
-              "url": "http://www.regulations.gov/commenton/CFTC-2026-2179-0001",
               "source": "Federal Register proposed rule (comments close)",
               "sourceUrl": "https://www.federalregister.gov/",
               "urgency": "upcoming",
@@ -57274,7 +57409,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 6,
               "rolledUp": false,
               "events": [
@@ -58122,7 +58257,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -58593,7 +58728,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -59014,10 +59149,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
-              "count": 2,
+              "asOf": "2026-11-22T20:45:00.198Z",
+              "count": 3,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-23705",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-21",
+                  "until": "2026-12-21",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Petition for Rulemaking of Alden Graham",
+                  "summary": "Federal Trade Commission",
+                  "url": "http://www.regulations.gov/commenton/FTC-2026-1849-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-22581",
                   "kind": "comment_deadline",
@@ -59771,7 +59921,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -60630,10 +60780,55 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
-              "count": 3,
+              "asOf": "2026-11-22T20:45:00.198Z",
+              "count": 6,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-21512",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-21",
+                  "until": "2026-12-21",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Notification to Members/Shareholders",
+                  "summary": "National Credit Union Administration",
+                  "url": "http://www.regulations.gov/commenton/NCUA-2026-1888-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-21509",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-21",
+                  "until": "2026-12-21",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Nonconforming Investment Special Reserve",
+                  "summary": "National Credit Union Administration",
+                  "url": "http://www.regulations.gov/commenton/NCUA-2026-1886-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
+                {
+                  "id": "fr-comment-2026-21508",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-21",
+                  "until": "2026-12-21",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Conversion to State-Chartered Credit Union",
+                  "summary": "National Credit Union Administration",
+                  "url": "http://www.regulations.gov/commenton/NCUA-2026-1887-0001",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-comment-2026-21089",
                   "kind": "comment_deadline",
@@ -60864,7 +61059,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -61260,7 +61455,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -62556,7 +62751,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -63090,7 +63285,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -63339,7 +63534,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -63558,7 +63753,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -63874,7 +64069,7 @@
               "usgm": null
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 3,
               "rolledUp": false,
               "events": [
@@ -64550,7 +64745,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 4,
               "rolledUp": false,
               "events": [
@@ -64845,7 +65040,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -65081,7 +65276,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -65767,7 +65962,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -66249,7 +66444,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 12,
               "rolledUp": false,
               "events": [
@@ -67128,10 +67323,25 @@
           "usgm": null
         },
         "heat": {
-          "asOf": "2026-11-21T20:34:25.518Z",
-          "count": 6,
+          "asOf": "2026-11-22T20:45:00.198Z",
+          "count": 7,
           "rolledUp": true,
           "events": [
+            {
+              "id": "fr-comment-2026-22650",
+              "kind": "comment_deadline",
+              "when": "2026-12-21",
+              "until": "2026-12-21",
+              "filedAt": null,
+              "signedAt": null,
+              "title": "Purchasing and Property Management",
+              "summary": "Legal Services Corporation (from lower in the map)",
+              "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-05/pdf/2026-22650.pdf",
+              "source": "Federal Register proposed rule (comments close)",
+              "sourceUrl": "https://www.federalregister.gov/",
+              "urgency": "upcoming",
+              "bill": null
+            },
             {
               "id": "fr-comment-2026-23064",
               "kind": "comment_deadline",
@@ -67204,21 +67414,6 @@
               "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-18/pdf/2026-23527.pdf",
               "source": "Federal Register Sunshine Act meeting",
               "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-pi-2026-23737",
-              "kind": "public_inspection",
-              "when": "2026-11-23",
-              "until": null,
-              "filedAt": "2026-11-20T08:45:00.000-05:00",
-              "signedAt": null,
-              "title": "Product Change: Priority Mail and USPS Ground Advantage Negotiated Service Agreements; Priority Mail, USPS Ground Advantage, and Parcel Select Negotiated Service Agreements",
-              "summary": "Postal Service (from lower in the map)",
-              "url": "https://public-inspection.federalregister.gov/2026-23737.pdf",
-              "source": "Federal Register public inspection (PDF)",
-              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
               "urgency": "upcoming",
               "bill": null
             }
@@ -67757,7 +67952,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 1,
               "rolledUp": false,
               "events": [
@@ -68101,7 +68296,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -68831,10 +69026,25 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
-              "count": 1,
+              "asOf": "2026-11-22T20:45:00.198Z",
+              "count": 2,
               "rolledUp": false,
               "events": [
+                {
+                  "id": "fr-comment-2026-22650",
+                  "kind": "comment_deadline",
+                  "when": "2026-12-21",
+                  "until": "2026-12-21",
+                  "filedAt": null,
+                  "signedAt": null,
+                  "title": "Purchasing and Property Management",
+                  "summary": "Legal Services Corporation",
+                  "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-05/pdf/2026-22650.pdf",
+                  "source": "Federal Register proposed rule (comments close)",
+                  "sourceUrl": "https://www.federalregister.gov/",
+                  "urgency": "upcoming",
+                  "bill": null
+                },
                 {
                   "id": "fr-sun-2026-23527-2026-11-23",
                   "kind": "sunshine_meeting",
@@ -70842,7 +71052,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-21T20:34:25.518Z",
+              "asOf": "2026-11-22T20:45:00.198Z",
               "count": 2,
               "rolledUp": false,
               "events": [
