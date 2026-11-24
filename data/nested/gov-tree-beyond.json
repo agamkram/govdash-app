@@ -41,22 +41,22 @@
     },
     "heat": {
       "kind": "events",
-      "enrichedAt": "2026-11-22T20:45:20.600Z",
-      "asOf": "2026-11-22T20:45:00.198Z",
-      "nodesWithHeat": 4,
-      "nodesWithDirectHeat": 2,
-      "rawEventCount": 255,
+      "enrichedAt": "2026-11-24T01:43:40.753Z",
+      "asOf": "2026-11-24T01:43:16.670Z",
+      "nodesWithHeat": 3,
+      "nodesWithDirectHeat": 1,
+      "rawEventCount": 289,
       "matched": {
         "chamber": 0,
         "presidential": 0,
-        "publicInspection": 1,
+        "publicInspection": 0,
         "commentDeadlines": 1,
         "sunshine": 1,
         "hearings": 0,
         "scotus": 0
       },
-      "unmatchedPublicInspection": 93,
-      "unmatchedCommentDeadlines": 127,
+      "unmatchedPublicInspection": 126,
+      "unmatchedCommentDeadlines": 129,
       "unmatchedSunshine": 5,
       "sources": {
         "senateFloor": {
@@ -76,42 +76,42 @@
         },
         "publicInspection": {
           "ok": true,
-          "count": 94,
+          "count": 126,
           "url": "https://www.federalregister.gov/api/v1/public-inspection-documents/current.json"
         },
         "presidential": {
           "ok": true,
           "count": 4,
-          "since": "2026-11-08",
+          "since": "2026-11-10",
           "url": "https://www.federalregister.gov/presidential-documents"
         },
         "commentDeadlines": {
           "ok": true,
-          "count": 128,
-          "start": "2026-11-22",
-          "end": "2026-12-21",
+          "count": 130,
+          "start": "2026-11-23",
+          "end": "2026-12-22",
           "type": "PRORULE",
           "url": "https://www.federalregister.gov/"
         },
         "sunshine": {
           "ok": true,
           "count": 6,
-          "start": "2026-11-22",
-          "end": "2026-12-21",
+          "start": "2026-11-23",
+          "end": "2026-12-22",
           "url": "https://www.federalregister.gov/"
         },
         "senateHearings": {
           "ok": true,
           "count": 5,
-          "start": "2026-11-22",
-          "end": "2026-12-21",
+          "start": "2026-11-23",
+          "end": "2026-12-22",
           "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
         },
         "houseHearings": {
           "ok": true,
           "count": 0,
-          "start": "2026-11-22",
-          "end": "2026-12-21",
+          "start": "2026-11-23",
+          "end": "2026-12-22",
           "congress": 119,
           "calendarIds": 0,
           "skipped404": [],
@@ -120,8 +120,8 @@
         "scotus": {
           "ok": true,
           "count": 1,
-          "start": "2026-11-22",
-          "end": "2026-12-21",
+          "start": "2026-11-23",
+          "end": "2026-12-22",
           "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
         }
       },
@@ -141,8 +141,8 @@
       "note": "Second map (∞): federally chartered bodies and international orgs kept off the constitutional four-door map. State/local stay out."
     },
     "heat": {
-      "asOf": "2026-11-22T20:45:00.198Z",
-      "count": 3,
+      "asOf": "2026-11-24T01:43:16.670Z",
+      "count": 2,
       "rolledUp": true,
       "events": [
         {
@@ -174,21 +174,6 @@
           "sourceUrl": "https://www.federalregister.gov/",
           "urgency": "upcoming",
           "bill": null
-        },
-        {
-          "id": "fr-pi-2026-23738",
-          "kind": "public_inspection",
-          "when": "2026-11-23",
-          "until": null,
-          "filedAt": "2026-11-20T08:45:00.000-05:00",
-          "signedAt": null,
-          "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Generic Clearance for the Collection of Qualitative Feedback on Agency Service Delivery",
-          "summary": "National Endowment for the Arts (from lower in the map)",
-          "url": "https://public-inspection.federalregister.gov/2026-23738.pdf",
-          "source": "Federal Register public inspection (PDF)",
-          "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-          "urgency": "upcoming",
-          "bill": null
         }
       ]
     },
@@ -206,8 +191,8 @@
           "note": "∞ map door: Crosswalk Industry nonprofits / federally chartered bodies. GSEs live on the main map under Agencies → Corporations."
         },
         "heat": {
-          "asOf": "2026-11-22T20:45:00.198Z",
-          "count": 3,
+          "asOf": "2026-11-24T01:43:16.670Z",
+          "count": 2,
           "rolledUp": true,
           "events": [
             {
@@ -237,21 +222,6 @@
               "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-18/pdf/2026-23527.pdf",
               "source": "Federal Register Sunshine Act meeting",
               "sourceUrl": "https://www.federalregister.gov/",
-              "urgency": "upcoming",
-              "bill": null
-            },
-            {
-              "id": "fr-pi-2026-23738",
-              "kind": "public_inspection",
-              "when": "2026-11-23",
-              "until": null,
-              "filedAt": "2026-11-20T08:45:00.000-05:00",
-              "signedAt": null,
-              "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Generic Clearance for the Collection of Qualitative Feedback on Agency Service Delivery",
-              "summary": "National Endowment for the Arts (from lower in the map)",
-              "url": "https://public-inspection.federalregister.gov/2026-23738.pdf",
-              "source": "Federal Register public inspection (PDF)",
-              "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
               "urgency": "upcoming",
               "bill": null
             }
@@ -1092,7 +1062,7 @@
               }
             },
             "heat": {
-              "asOf": "2026-11-22T20:45:00.198Z",
+              "asOf": "2026-11-24T01:43:16.670Z",
               "count": 2,
               "rolledUp": false,
               "events": [
@@ -1153,28 +1123,7 @@
               "sam": null,
               "usgm": null
             },
-            "heat": {
-              "asOf": "2026-11-22T20:45:00.198Z",
-              "count": 1,
-              "rolledUp": false,
-              "events": [
-                {
-                  "id": "fr-pi-2026-23738",
-                  "kind": "public_inspection",
-                  "when": "2026-11-23",
-                  "until": null,
-                  "filedAt": "2026-11-20T08:45:00.000-05:00",
-                  "signedAt": null,
-                  "title": "Agency Information Collection Activities; Proposals, Submissions, and Approvals: Generic Clearance for the Collection of Qualitative Feedback on Agency Service Delivery",
-                  "summary": "National Endowment for the Arts",
-                  "url": "https://public-inspection.federalregister.gov/2026-23738.pdf",
-                  "source": "Federal Register public inspection (PDF)",
-                  "sourceUrl": "https://www.federalregister.gov/public-inspection/current",
-                  "urgency": "upcoming",
-                  "bill": null
-                }
-              ]
-            },
+            "heat": null,
             "children": []
           },
           {
