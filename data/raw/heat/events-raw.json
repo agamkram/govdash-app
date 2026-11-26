@@ -1,9 +1,9 @@
 {
-  "fetchedAt": "2026-11-25T23:08:19.761Z",
+  "fetchedAt": "2026-11-26T23:03:08.396Z",
   "sources": {
     "senateFloor": {
       "ok": true,
-      "count": 2,
+      "count": 1,
       "url": "https://www.senate.gov/legislative/schedule/floor_schedule.xml"
     },
     "houseClerk": {
@@ -23,64 +23,51 @@
     },
     "presidential": {
       "ok": true,
-      "count": 6,
-      "since": "2026-11-11",
+      "count": 7,
+      "since": "2026-11-12",
       "url": "https://www.federalregister.gov/presidential-documents"
     },
     "commentDeadlines": {
       "ok": true,
-      "count": 116,
-      "start": "2026-11-25",
-      "end": "2026-12-24",
+      "count": 115,
+      "start": "2026-11-26",
+      "end": "2026-12-25",
       "type": "PRORULE",
       "url": "https://www.federalregister.gov/"
     },
     "sunshine": {
       "ok": true,
-      "count": 4,
-      "start": "2026-11-25",
-      "end": "2026-12-24",
+      "count": 6,
+      "start": "2026-11-26",
+      "end": "2026-12-25",
       "url": "https://www.federalregister.gov/"
     },
     "senateHearings": {
       "ok": true,
-      "count": 13,
-      "start": "2026-11-25",
-      "end": "2026-12-24",
+      "count": 15,
+      "start": "2026-11-26",
+      "end": "2026-12-25",
       "url": "https://www.senate.gov/general/committee_schedules/hearings.xml"
     },
     "houseHearings": {
       "ok": true,
-      "count": 10,
-      "start": "2026-11-25",
-      "end": "2026-12-24",
+      "count": 11,
+      "start": "2026-11-26",
+      "end": "2026-12-25",
       "congress": 119,
-      "calendarIds": 12,
+      "calendarIds": 13,
       "skipped404": [],
       "url": "https://api.congress.gov/v3/committee-meeting/119/house"
     },
     "scotus": {
       "ok": true,
       "count": 1,
-      "start": "2026-11-25",
-      "end": "2026-12-24",
+      "start": "2026-11-26",
+      "end": "2026-12-25",
       "url": "https://www.supremecourt.gov/oral_arguments/calendarsandlists.aspx"
     }
   },
   "events": [
-    {
-      "id": "senate-floor-2026-11-24T15:00:01-05:00",
-      "kind": "floor_session",
-      "chamber": "Senate",
-      "when": "2026-11-24T15:00:01-05:00",
-      "until": "2026-11-24T15:00:37-05:00",
-      "title": "Senate floor (recent)",
-      "summary": "Has adjourned",
-      "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
-      "source": "Senate.gov floor schedule XML",
-      "sourceUrl": "https://www.senate.gov/legislative/schedule/floor_schedule.xml",
-      "urgency": "recent"
-    },
     {
       "id": "senate-next-2026-11-27T12:00:00-05:00",
       "kind": "floor_session",
@@ -101,7 +88,7 @@
       "when": "2026-11-27T17:00:00.000Z",
       "until": null,
       "title": "House next session",
-      "summary": "November 27th, 2026 at 12:00 PM",
+      "summary": "Tomorrow at 12:00 PM",
       "url": "https://clerk.house.gov/",
       "source": "Office of the Clerk, U.S. House",
       "sourceUrl": "https://clerk.house.gov/",
@@ -3159,6 +3146,22 @@
       "documentType": "Presidential Document"
     },
     {
+      "id": "fr-pres-2026-24236",
+      "kind": "presidential_doc",
+      "when": "2026-11-27",
+      "until": null,
+      "signedAt": null,
+      "title": "Expeditious Enforcement of Capital Sentences and the Pursuit of Justice for Victims of Heinous Crimes",
+      "summary": "Presidential Document",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-27/pdf/2026-24236.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/27/2026-24236/expeditious-enforcement-of-capital-sentences-and-the-pursuit-of-justice-for-victims-of-heinous",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-27/pdf/2026-24236.pdf",
+      "source": "Federal Register presidential documents (PDF)",
+      "sourceUrl": "https://www.federalregister.gov/presidential-documents",
+      "urgency": "recent",
+      "documentType": "Presidential Document"
+    },
+    {
       "id": "fr-pres-2026-24113",
       "kind": "presidential_doc",
       "when": "2026-11-25",
@@ -3237,6 +3240,45 @@
       "sourceUrl": "https://www.federalregister.gov/presidential-documents",
       "urgency": "recent",
       "documentType": "Presidential Document"
+    },
+    {
+      "id": "fr-comment-2026-24143",
+      "kind": "comment_deadline",
+      "when": "2026-12-11",
+      "until": "2026-12-11",
+      "title": "Agricultural Foreign Investment Disclosure Act of 1978",
+      "summary": "Agriculture Department",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-27/pdf/2026-24143.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/27/2026-24143/agricultural-foreign-investment-disclosure-act-of-1978",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-27/pdf/2026-24143.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Agriculture Department"
+      ],
+      "documentNumber": "2026-24143",
+      "documentType": "Proposed Rule"
+    },
+    {
+      "id": "fr-comment-2026-24129",
+      "kind": "comment_deadline",
+      "when": "2026-12-11",
+      "until": "2026-12-11",
+      "title": "Locatable Minerals",
+      "summary": "Agriculture Department, Forest Service",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-27/pdf/2026-24129.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/27/2026-24129/locatable-minerals",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-27/pdf/2026-24129.pdf",
+      "source": "Federal Register proposed rule (comments close)",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Agriculture Department",
+        "Forest Service"
+      ],
+      "documentNumber": "2026-24129",
+      "documentType": "Proposed Rule"
     },
     {
       "id": "fr-comment-2026-23859",
@@ -4472,64 +4514,6 @@
       "documentType": "Proposed Rule"
     },
     {
-      "id": "fr-comment-2026-21820",
-      "kind": "comment_deadline",
-      "when": "2026-11-25",
-      "until": "2026-11-25",
-      "title": "Modernizing the Ability of Consumers To Control Robocalls",
-      "summary": "Federal Communications Commission",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21820.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/26/2026-21820/modernizing-the-ability-of-consumers-to-control-robocalls",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21820.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Federal Communications Commission"
-      ],
-      "documentNumber": "2026-21820",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-21818",
-      "kind": "comment_deadline",
-      "when": "2026-11-25",
-      "until": "2026-11-25",
-      "title": "Space Modernization for the 21st Century",
-      "summary": "Federal Communications Commission",
-      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21818.pdf",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/26/2026-21818/space-modernization-for-the-21st-century",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21818.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Federal Communications Commission"
-      ],
-      "documentNumber": "2026-21818",
-      "documentType": "Proposed Rule"
-    },
-    {
-      "id": "fr-comment-2026-21794",
-      "kind": "comment_deadline",
-      "when": "2026-11-25",
-      "until": "2026-11-25",
-      "title": "Federal Motor Vehicle Safety Standards; Modernization of FMVSS No. 108 To Accommodate ADS-Equipped Vehicles",
-      "summary": "Transportation Department, National Highway Traffic Safety Administration",
-      "url": "http://www.regulations.gov/commenton/NHTSA-2026-1519-0001",
-      "htmlUrl": "https://www.federalregister.gov/documents/2026/10/26/2026-21794/federal-motor-vehicle-safety-standards-modernization-of-fmvss-no-108-to-accommodate-ads-equipped",
-      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-10-26/pdf/2026-21794.pdf",
-      "source": "Federal Register proposed rule (comments close)",
-      "sourceUrl": "https://www.federalregister.gov/",
-      "urgency": "upcoming",
-      "agencies": [
-        "Transportation Department",
-        "National Highway Traffic Safety Administration"
-      ],
-      "documentNumber": "2026-21794",
-      "documentType": "Proposed Rule"
-    },
-    {
       "id": "fr-comment-2026-21786",
       "kind": "comment_deadline",
       "when": "2026-12-07",
@@ -5509,6 +5493,42 @@
       "documentType": "Proposed Rule"
     },
     {
+      "id": "fr-sun-2026-24202-2026-12-03",
+      "kind": "sunshine_meeting",
+      "when": "2026-12-03",
+      "until": "2026-12-03",
+      "title": "Sunshine Act Meetings",
+      "summary": "Securities and Exchange Commission",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-27/pdf/2026-24202.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/27/2026-24202/sunshine-act-meetings",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-27/pdf/2026-24202.pdf",
+      "source": "Federal Register Sunshine Act meeting",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Securities and Exchange Commission"
+      ],
+      "documentNumber": "2026-24202"
+    },
+    {
+      "id": "fr-sun-2026-24050-2026-12-08",
+      "kind": "sunshine_meeting",
+      "when": "2026-12-08",
+      "until": "2026-12-08",
+      "title": "Sunshine Act Meetings",
+      "summary": "Railroad Retirement Board",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-11-27/pdf/2026-24050.pdf",
+      "htmlUrl": "https://www.federalregister.gov/documents/2026/11/27/2026-24050/sunshine-act-meetings",
+      "pdfUrl": "https://www.govinfo.gov/content/pkg/FR-2026-11-27/pdf/2026-24050.pdf",
+      "source": "Federal Register Sunshine Act meeting",
+      "sourceUrl": "https://www.federalregister.gov/",
+      "urgency": "upcoming",
+      "agencies": [
+        "Railroad Retirement Board"
+      ],
+      "documentNumber": "2026-24050"
+    },
+    {
       "id": "fr-sun-2026-23858-2026-12-03",
       "kind": "sunshine_meeting",
       "when": "2026-12-03",
@@ -5637,6 +5657,20 @@
       "urgency": "upcoming"
     },
     {
+      "id": "senate-hearing-338909",
+      "kind": "hearing",
+      "chamber": "Senate",
+      "committee": "Energy and Natural Resources",
+      "when": "2026-12-01",
+      "until": null,
+      "title": "Business meeting to consider S.462, to provide for economic development and conservation in Washoe County, Nevada, S.791, to establish the Justice Thurgood Marshall National Historic Site in the State of Maryland as an affiliated area of the National Park System, S.1005, to provide for conservation and economic development in the State of Nevada, S.1195, to promote conservation, improve public land management, and provide for sensible development in Pershing County, Nevada, S.2644, to require the Secretary of the Interior to conduct a special resource study to assess the suitability and feasibility of establishing the Camden Battlefield area in the State of South Carolina as a unit of the National Park System, S.2968, to ensure access to certain public land, S.3409, to reaffirm that the Bureau of Reclamation retains exclusive ownership, operational control, and financial responsibility for the Lower Yellowstone Fish Bypass Channel, ensuring long-term conservation of the endangered pallid sturgeon and other native aquatic species in the Yellowstone River while protecting the Lower Yellowstone Irrigation Project and District from undue financial and operational burdens, S.3501, to amend the John D. Dingell, Jr. Conservation, Management, and Recreation Act to designate as a component of the National Heritage Area System the Calumet National Heritage Area in the States of Indiana and Illinois, S.3542, to amend the Wild and Scenic Rivers Act to designate the Upper Raritan River Watershed in the State of New Jersey for study for potential addition to the National Wild and Scenic Rivers System, S.4103, and H.R.2709, bills to improve the health and resiliency of giant sequoias, S.4200, to promote conservation, improve public land, and provide for sensible development in Douglas County, Nevada, S.4489, to authorize the Dry-Redwater Regional Water Authority System in the State of Montana, S.4561, to modernize and streamline the permitting process for broadband infrastructure on Federal land, S.4595, to amend the Wild and Scenic Rivers Act to designate the Mullica River watershed in New Jersey for study for potential designation as a wild and scenic river, S.4767, to extend the authorization of the African American Civil Rights Network, S.5608, to extend the Secure Rural Schools and Community Self-Determination Act of 2000, H.R.900, to direct the Director of the United States Geological Survey to establish a program to map zones that are at greater risk of sinkhole formation, H.R.1682, to amend the Federal Lands Recreation Enhancement Act to provide for lifetime National Parks and Federal Recreational Lands Passes for family members of members of the Armed Forces who lost their lives while serving their country, H.R.2317, to provide for transfer of ownership of certain Federal lands in northern Nevada, to authorize the disposal of certain Federal lands in northern Nevada for economic development, to promote conservation in northern Nevada, and the nominations of Dennis Kirk, of Virginia, to be Inspector General, Department of the Interior, and Toby Deen, of Colorado, to be an Assistant Secretary of Energy (Hydrocarbons and Geothermal Energy).",
+      "summary": "Energy and Natural Resources · Open Business Meeting · 11:00 AM · SD-366",
+      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+      "source": "Senate.gov committee hearings XML",
+      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+      "urgency": "upcoming"
+    },
+    {
       "id": "senate-hearing-338901",
       "kind": "hearing",
       "chamber": "Senate",
@@ -5701,6 +5735,20 @@
       "until": null,
       "title": "Hearings to examine preventing the next ground stop, focusing on modernizing America's air traffic control system.",
       "summary": "Commerce, Science, and Transportation · Open Hearing · 10:00 AM · SR-253",
+      "url": "https://www.senate.gov/committees/hearings_meetings.htm",
+      "source": "Senate.gov committee hearings XML",
+      "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
+      "urgency": "upcoming"
+    },
+    {
+      "id": "senate-hearing-338908",
+      "kind": "hearing",
+      "chamber": "Senate",
+      "committee": "Health, Education, Labor, and Pensions",
+      "when": "2026-12-02",
+      "until": null,
+      "title": "Hearings to examine the nomination of Matthew Zandi, of California, to be a Member of the Equal Employment Opportunity Commission.",
+      "summary": "Health, Education, Labor, and Pensions · Open Hearing · 10:00 AM · SD-430",
       "url": "https://www.senate.gov/committees/hearings_meetings.htm",
       "source": "Senate.gov committee hearings XML",
       "sourceUrl": "https://www.senate.gov/general/committee_schedules/hearings.xml",
@@ -5905,6 +5953,22 @@
       "urgency": "upcoming",
       "eventId": "119614",
       "meetingType": "Meeting"
+    },
+    {
+      "id": "house-hearing-119618",
+      "kind": "hearing",
+      "chamber": "House",
+      "committee": "House Foreign Affairs Subcommittee on Europe",
+      "when": "2026-12-02T19:00:00Z",
+      "until": null,
+      "title": "The War in Ukraine: Lessons Learned and Future Threats",
+      "summary": "House Foreign Affairs Subcommittee on Europe · Hearing · Scheduled · Rayburn House Office Building 2200",
+      "url": "https://docs.house.gov/Committee/Calendar/ByEvent.aspx?EventID=119618",
+      "source": "Congress.gov committee meeting API",
+      "sourceUrl": "https://api.congress.gov/v3/committee-meeting",
+      "urgency": "upcoming",
+      "eventId": "119618",
+      "meetingType": "Hearing"
     },
     {
       "id": "house-hearing-119622",
